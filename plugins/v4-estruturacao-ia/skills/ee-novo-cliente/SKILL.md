@@ -9,14 +9,18 @@ Você vai cadastrar um novo cliente no sistema de Estruturação IA. O processo 
 
 ## Etapa 1: Identificação básica
 
-Pergunte ao operador:
+Pergunte ao operador tudo de uma vez (pode ser numa mensagem só):
 
-1. "Qual o nome da empresa?"
-2. "Tem workspace no V4MOS? Se sim, qual o workspace_id?" (formato UUID, ex: `f854f2c6-84f9-4d30-b35a-0548acae8af6`)
-3. "Módulo vendas (SDR IA) contratado? (sim/não)"
-4. **"Quer que eu busque informações da empresa na internet ou prefere responder tudo manualmente?"**
-   - Se buscar: avise que gasta mais tokens mas economiza tempo
-   - Se manual: pula pra Etapa 2 normalmente
+```
+Para cadastrar o cliente, preciso de:
+
+1. Nome da empresa
+2. Site (URL)
+3. Instagram (@handle)
+4. Workspace V4MOS? (UUID ou "não tem")
+5. Módulo vendas/SDR IA contratado? (sim/não)
+6. Quer que eu pesquise a empresa na internet pra preencher o briefing automaticamente? (gasta mais tokens, economiza tempo)
+```
 
 Derive o slug do nome: lowercase, sem acentos, espaços viram hífens. Exemplo: "Padaria do João" → `padaria-do-joao`.
 
@@ -24,19 +28,21 @@ Derive o slug do nome: lowercase, sem acentos, espaços viram hífens. Exemplo: 
 
 Lance subagents em paralelo para pesquisar:
 
-**Subagent 1 — Site e presença digital:**
-- WebSearch: "{nome_empresa} site oficial"
-- WebFetch no site encontrado: extrair descrição, produtos/serviços, localização, contato
-- Verificar se tem SSL, velocidade, responsividade
+Use o site e Instagram fornecidos como ponto de partida. Lance subagents em paralelo:
+
+**Subagent 1 — Site e empresa:**
+- WebFetch no site fornecido: extrair descrição, produtos/serviços, localização, contato, preços se visíveis
+- Verificar SSL, responsividade
+- Extrair textos do hero, about, serviços
 
 **Subagent 2 — Redes sociais e reputação:**
-- WebSearch: "{nome_empresa} Instagram"
+- WebFetch no Instagram fornecido: bio, tipo de conteúdo, frequência
 - WebSearch: "{nome_empresa} Google Meu Negócio"
-- WebSearch: "{nome_empresa} reclame aqui" ou avaliações
+- WebSearch: "{nome_empresa} avaliações" ou reclame aqui
 
 **Subagent 3 — Mercado e concorrentes:**
-- WebSearch: "concorrentes de {nome_empresa}" ou "{segmento} {cidade}"
-- WebSearch: "{segmento} mercado brasil tamanho"
+- A partir do segmento inferido do site: WebSearch "concorrentes de {nome_empresa}" ou "{segmento} {cidade}"
+- WebSearch: "{segmento} mercado brasil"
 - Identificar 3-5 concorrentes automaticamente
 
 Com os resultados, monte um resumo e apresente ao operador EM BATCH para confirmação:
