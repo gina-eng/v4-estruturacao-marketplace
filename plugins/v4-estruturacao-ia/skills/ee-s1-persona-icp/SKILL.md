@@ -35,23 +35,13 @@ Se `client.json` (seção `connectors`) existir e tiver `workspace.marketingProf
 
 ---
 
-## Execução — Geração Completa em Uma Passada
-
-### Passo 1: Carregar dados e auto-validar inputs
+## Geração
 
 Carregue todos os dados do `client.json` (seção `briefing`) e conectores.
 
-**Auto-validação de inputs (execute internamente, NÃO pare para perguntar):**
-- Se `identification.segment` está vazio → marque como "[FALTANDO — perguntar ao operador]"
-- Se `product.main_product` está vazio → marque como "[FALTANDO — perguntar ao operador]"
-- Se `icp.best_customers` está vazio ou tem < 20 caracteres → marque como "[INSUFICIENTE — pedir detalhes]"
-- Se todos os campos críticos estão preenchidos → prossiga sem parar
+Se algum campo crítico estiver faltando (`identification.segment`, `product.main_product`, `icp.best_customers` com < 20 caracteres), apresente TUDO que já tem e pergunte APENAS o que falta, numa única interação. Não faça uma pergunta por vez. Se todos os campos críticos estão preenchidos, prossiga sem parar.
 
-Se algum campo crítico está faltando, apresente TUDO que já tem e pergunte APENAS o que falta, numa única interação. Não faça uma pergunta por vez.
-
-### Passo 2: Gerar output COMPLETO
-
-Gere TUDO de uma vez — ICP, Persona, Canais, e Mensagens-chave. Consulte `references/jtbd-framework.md` para aplicar o framework corretamente. Consulte `references/exemplos-bom-vs-ruim.md` para calibrar especificidade.
+Gere o output COMPLETO de uma vez — ICP, Persona, Canais, e Mensagens-chave. Consulte `references/jtbd-framework.md` para aplicar o framework corretamente. Consulte `references/exemplos-bom-vs-ruim.md` para calibrar especificidade.
 
 O output completo inclui:
 
@@ -111,60 +101,44 @@ Para cada opção:
 - Por que essa abordagem funciona para este ICP
 - Em que contexto usar (anúncios, bio Instagram, headline do site, etc.)
 
-### Passo 3: Auto-validação antes de apresentar
+## Auto-validação
 
-Antes de mostrar ao operador, execute estas validações internamente:
+Antes de mostrar ao operador, verifique:
 
-- [ ] Cada dor tem > 20 caracteres e usa linguagem do cliente (não jargão)
-- [ ] Jobs-to-be-Done seguem formato "Quando [situação], eu quero [motivação], para que [resultado]"
-- [ ] Nenhum item genérico (se trocar o nome do cliente e ainda servir, refaça)
-- [ ] Persona tem frase-citação que soa como fala real (não corporativês)
-- [ ] Canais são específicos (não "redes sociais" nem "Google")
-- [ ] Mensagens-chave têm <= 15 palavras cada
-- [ ] Cada mensagem é diferente das outras (funcional vs emocional vs social)
+- [ ] Mencionou o cliente pelo nome?
+- [ ] Usou dados reais do client.json (não inventou)?
+- [ ] Nenhum item genérico (ex: "quer crescer", "qualidade e compromisso")?
+- [ ] Schema da skill validou?
+- [ ] Consistente com outputs anteriores (se houver)?
+- [ ] Cada dor tem > 20 caracteres e usa linguagem do cliente (não jargão)?
+- [ ] Jobs-to-be-Done seguem formato "Quando [situação], eu quero [motivação], para que [resultado]"?
+- [ ] Nenhum item genérico — se trocar o nome do cliente e ainda servir, refaça?
+- [ ] Persona tem frase-citação que soa como fala real (não corporativês)?
+- [ ] Canais são específicos (não "redes sociais" nem "Google")?
+- [ ] Mensagens-chave têm <= 15 palavras cada?
+- [ ] Cada mensagem é diferente das outras (funcional vs emocional vs social)?
 
-Se alguma validação falhar, corrija ANTES de apresentar. Não mostre output com problemas.
+Se falhou → regenere silenciosamente. Não avise o operador.
 
----
+## Apresentação e decisões
 
-## Apresentação ao Operador — Decisões Necessárias
+Apresente o output COMPLETO ao operador de uma vez.
 
-Apresente o output COMPLETO ao operador de uma vez. Marque claramente os pontos de decisão:
+**DECISÃO 1:** Mensagem-chave — qual direção?
+- Opção A: "[mensagem funcional]" — foco no resultado prático
+- Opção B: "[mensagem emocional]" — foco no sentimento
+- Opção C: "[mensagem social]" — foco na percepção
 
-```
-══════════════════════════════════════════════════
-ICP E PERSONA COMPLETOS — [NOME_CLIENTE]
-══════════════════════════════════════════════════
+**RECOMENDAÇÃO:** Opção [X]. [Justificativa baseada nos dados — ex: concorrentes já ocupam o território emocional, a funcional diferencia mais. Explique por que as outras são mais fracas.]
 
-[... todo o conteúdo gerado: ICP, persona, canais, mensagens ...]
+**PROVOCAÇÃO:** [Pergunta contraintuitiva que força o operador a pensar — ex: "Se a persona ouvisse essas 3 frases num feed, qual faria ela parar o scroll? E o cliente tem coragem de bancar essa promessa?"]
 
-══════════════════════════════════════════════════
-DECISÕES NECESSÁRIAS
-══════════════════════════════════════════════════
-
-DECISÃO 1: Mensagem-chave — qual direção?
-
-A) "[mensagem funcional]" — foco no resultado prático
-B) "[mensagem emocional]" — foco no sentimento
-C) "[mensagem social]" — foco na percepção
-
-MINHA RECOMENDAÇÃO: Opção [X].
-Razão: [justificativa baseada nos dados — ex: concorrentes já ocupam
-o território emocional, a funcional diferencia mais].
-Por que as outras são mais fracas: [explicação concreta].
-
-Provocação: [pergunta contraintuitiva que força o operador a pensar
-— ex: "Se a persona ouvisse essas 3 frases num feed, qual faria ela
-parar o scroll? E o cliente tem coragem de bancar essa promessa?"]
-
-DECISÃO 2: Ajustes no ICP/Persona
-
+**DECISÃO 2:** Ajustes no ICP/Persona
 - O ICP faz sentido com o que você conhece deste cliente?
 - As dores são dolorosas de verdade? O cliente se reconheceria?
 - A persona parece real? Você consegue imaginar conversando com ela?
 - Os canais onde encontrá-la fazem sentido?
 - Algum canal ou comunidade que você sabe que esse público frequenta?
-```
 
 Aguarde o operador responder. Ele pode:
 - Escolher uma mensagem e aprovar tudo
@@ -173,18 +147,11 @@ Aguarde o operador responder. Ele pode:
 
 Incorpore todos os ajustes e gere a versão final.
 
----
-
 ## Finalização
 
-Após aprovação do operador:
-
-1. **Salve o output estruturado** em `clientes/{slug}/semana-1/ee-s1-persona-icp.json` seguindo o schema.json da skill
-2. **Registre a decisão** — appende em `client.json` (seção `history`):
-   ```json
-   {"ts":"[ISO]","skill":"ee-s1-persona-icp","checkpoint":4,"decision":"ICP e persona aprovados. Mensagem-chave: [mensagem escolhida]"}
-   ```
-3. **Atualize client.json (progress)** — marque `ee-s1-persona-icp` como `completed`
-4. **Informe próximos passos:**
+Operador aprova (com ou sem ajustes).
+1. Salve em `clientes/{slug}/outputs/ee-s1-persona-icp.json` (com campo `summary` no topo)
+2. Atualize `client.json`: progress.skills → completed, version++, append em history[]
+3. Sugira próxima skill do dependency_graph
    - "ICP e Persona salvos. Este output será usado por: ee-s1-auditoria-comunicacao, ee-s2-pesquisa-mercado, ee-s2-posicionamento, e todas as skills de produção."
    - Sugira a próxima skill da semana 1 (ex: ee-s1-diagnostico-maturidade ou ee-s1-auditoria-comunicacao)

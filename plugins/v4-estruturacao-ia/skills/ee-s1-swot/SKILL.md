@@ -18,7 +18,7 @@ Você é um estrategista de negócios sênior. Vai criar uma Matriz SWOT que NÃ
 Leia os seguintes arquivos do diretório do cliente:
 
 1. `client.json` (seção `briefing`) — dados base do cliente (OBRIGATÓRIO)
-2. `semana-1/ee-s1-diagnostico-maturidade.json` — scores e análise de maturidade (OBRIGATÓRIO — é dependência)
+2. `outputs/ee-s1-diagnostico-maturidade.json` — scores e análise de maturidade (OBRIGATÓRIO — é dependência)
 3. `client.json` (seção `connectors`) — dados V4MOS se disponíveis
 4. `client.json` (seção `history`) — decisões anteriores relevantes
 
@@ -38,46 +38,18 @@ Do diagnóstico de maturidade, extraia:
 - `priorities` → prioridades já identificadas
 - `sector_benchmark` → posição vs. setor
 
----
-
-## CHECKPOINT 1: Validação de Inputs + Concorrência
-
-**Objetivo:** Garantir que temos dados suficientes e coletar informações adicionais sobre concorrência.
-
-1. Mostre ao operador um resumo dos dados carregados:
-   ```
-   DADOS PARA SWOT DE [NOME_CLIENTE]:
-
-   DO BRIEFING:
-   - Setor: [valor]
-   - Tempo de mercado: [valor]
-   - Produtos: [valor]
-   - Diferenciais declarados: [valor]
-   - Concorrentes mapeados: [lista]
-
-   DO DIAGNÓSTICO DIGITAL:
-   - Score geral: [X]/100 ([classificação])
-   - Pilar mais forte: [nome] ([score])
-   - Pilar mais fraco: [nome] ([score])
-   - Top prioridade: [ação #1]
-   ```
-
-2. Pergunte ao operador para complementar a análise competitiva:
-   - "Dos concorrentes listados, qual é o mais perigoso e por quê?"
-   - "Tem algum concorrente que faz algo melhor que o cliente? O quê?"
-   - "O cliente tem alguma vantagem que os concorrentes não conseguem copiar facilmente? (localização, tecnologia, relacionamento, marca)"
-   - "Existe alguma tendência do mercado que pode impactar esse negócio nos próximos 6-12 meses? (regulação, tecnologia, comportamento do consumidor)"
-   - "O cliente depende muito de algum canal ou fornecedor? (ex: 80% das vendas vêm do iFood, ou toda mídia é no Meta)"
-
-3. Se o operador trouxer informações adicionais, incorpore ao contexto.
-
-**Critério de aprovação:** Operador confirma os dados e complementa com informações competitivas.
+Se não encontrar informações sobre concorrência no client.json, pergunte ao operador de uma vez:
+- "Dos concorrentes listados, qual é o mais perigoso e por quê?"
+- "Tem algum concorrente que faz algo melhor que o cliente? O quê?"
+- "O cliente tem alguma vantagem que os concorrentes não conseguem copiar facilmente?"
+- "Existe alguma tendência do mercado que pode impactar esse negócio nos próximos 6-12 meses?"
+- "O cliente depende muito de algum canal ou fornecedor?"
 
 ---
 
-## CHECKPOINT 2: SWOT Draft — 4-6 Itens por Quadrante
+## Geração
 
-**Objetivo:** Gerar SWOT específica e acionável.
+Gere o output COMPLETO de uma vez usando os dados de `client.json` (briefing, connectors) e outputs de skills dependentes em `outputs/`.
 
 Consulte `references/exemplos-ee-s1-swot-bom-vs-ruim.md` para calibrar a especificidade.
 
@@ -132,22 +104,6 @@ Para cada ameaça:
 - **Descrição:** evidência de que essa ameaça é real
 - **Implicação estratégica:** como se proteger ou mitigar
 
-Apresente a SWOT completa ao operador em formato visual claro (tabela ou lista organizada por quadrante).
-
-**Pergunte ao operador:**
-- "Algum item está genérico demais? (lembre: se serve pra qualquer empresa do setor, está genérico)"
-- "Falta alguma força ou fraqueza que você enxerga no dia a dia?"
-- "Alguma oportunidade ou ameaça que eu não considerei?"
-- "A ordem dos itens faz sentido? (mais importante primeiro)"
-
-**Critério de aprovação:** Operador valida que todos os itens são específicos e realistas.
-
----
-
-## CHECKPOINT 3: Síntese Estratégica + Ações Prioritárias
-
-**Objetivo:** Transformar a SWOT em direcionamento estratégico concreto.
-
 ### Síntese Estratégica (2-3 parágrafos)
 
 Cruze os quadrantes para responder: "Qual é a jogada mais inteligente que este negócio pode fazer AGORA?"
@@ -167,27 +123,39 @@ Derive ações concretas da SWOT. Para cada:
 4. **Prazo sugerido** — semana 1/2/3 da estruturação
 5. **Dependência** — se depende de alguma outra ação ou skill
 
-Apresente ao operador.
+## Auto-validação
 
-**Pergunte ao operador:**
+Antes de mostrar ao operador, verifique:
+
+- [ ] Mencionou o cliente pelo nome?
+- [ ] Usou dados reais do client.json (não inventou)?
+- [ ] Nenhum item genérico (ex: "quer crescer", "qualidade e compromisso")?
+- [ ] Schema da skill validou?
+- [ ] Consistente com outputs anteriores (diagnóstico de maturidade)?
+- [ ] Cada item da SWOT é específico — se trocar o nome da empresa, NÃO serve para outro negócio do setor?
+- [ ] Síntese cruza quadrantes (não é apenas resumo)?
+- [ ] Ações derivam dos quadrantes (referência F/W/O/T explícita)?
+
+Se falhou → regenere silenciosamente. Não avise o operador.
+
+## Apresentação e decisões
+
+Apresente o output COMPLETO ao operador em formato visual claro (tabela ou lista organizada por quadrante).
+
+Revise o output. O que está errado, exagerado ou faltando?
+
+- "Algum item está genérico demais? (lembre: se serve pra qualquer empresa do setor, está genérico)"
+- "Falta alguma força ou fraqueza que você enxerga no dia a dia?"
+- "Alguma oportunidade ou ameaça que eu não considerei?"
 - "A síntese captura a essência do que o cliente precisa fazer?"
 - "As ações fazem sentido no contexto do que será trabalhado nas próximas semanas?"
 - "Quer ajustar a priorização?"
 
-**Critério de aprovação:** Operador valida a síntese estratégica e prioridades.
-
----
-
 ## Finalização
 
-Após os 3 checkpoints aprovados:
-
-1. **Salve o output estruturado** em `clientes/{slug}/semana-1/ee-s1-swot.json` seguindo o schema.json da skill
-2. **Registre a decisão** — appende em `client.json` (seção `history`):
-   ```json
-   {"ts":"[ISO]","skill":"ee-s1-swot","checkpoint":3,"decision":"SWOT aprovada. Estratégia principal: [resumo em 1 frase]. Top ação: [ação #1]"}
-   ```
-3. **Atualize client.json (progress)** — marque `ee-s1-swot` como `completed`
-4. **Informe próximos passos:**
+Operador aprova (com ou sem ajustes).
+1. Salve em `clientes/{slug}/outputs/ee-s1-swot.json` (com campo `summary` no topo)
+2. Atualize `client.json`: progress.skills → completed, version++, append em history[]
+3. Sugira próxima skill do dependency_graph
    - "SWOT salva. Este output será usado pela skill ee-s2-posicionamento (semana 2) e como referência para todas as skills de produção."
    - Sugira a próxima skill da semana 1 (ee-s1-auditoria-comunicacao ou ee-s1-persona-icp se ainda não feita)

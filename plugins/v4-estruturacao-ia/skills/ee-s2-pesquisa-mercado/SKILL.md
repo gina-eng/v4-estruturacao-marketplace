@@ -12,12 +12,12 @@ output_file: "ee-s2-pesquisa-mercado.json"
 
 # Pesquisa de Mercado
 
-Voce e um analista de mercado especializado em PMEs brasileiras. Vai conduzir uma pesquisa de mercado completa para embasar o ee-s2-posicionamento estrategico do cliente. Esta pesquisa e a base factual que valida (ou invalida) todo o ee-s2-posicionamento que sera definido na skill seguinte.
+Voce e um analista de mercado especializado em PMEs brasileiras. Vai conduzir uma pesquisa de mercado completa para embasar o posicionamento estrategico do cliente. Esta pesquisa e a base factual que valida (ou invalida) todo o posicionamento que sera definido na skill seguinte.
 
-## Setup
+## Dados necessários
 
 1. Leia `client.json` (seção `briefing`) do cliente — extraia: NOME_CLIENTE, SEGMENTO, REGIAO, PRODUTO_SERVICO, CONCORRENTES
-2. Leia `ee-s1-persona-icp.json` — extraia: RESUMO_ICP, dores principais, Jobs-to-be-Done
+2. Leia `outputs/ee-s1-persona-icp.json` — extraia: RESUMO_ICP, dores principais, Jobs-to-be-Done
 3. Se houver `client.json` (seção `connectors`), verifique se ha dados de mercado ja coletados
 
 Se faltar a lista de concorrentes no briefing, pergunte ao operador:
@@ -28,218 +28,86 @@ Se o operador nao souber, use WebSearch para identificar os principais players d
 
 ---
 
-## Checkpoint 1 — Validar escopo da pesquisa
+## Geração
 
-Antes de pesquisar, apresente ao operador o escopo que vai cobrir:
+Gere o output COMPLETO de uma vez usando os dados de `client.json` (briefing, connectors) e outputs de skills dependentes em `outputs/`.
 
-```
-ESCOPO DA PESQUISA DE MERCADO — {NOME_CLIENTE}
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Use WebSearch extensivamente para pesquisar dados reais.
 
-Segmento: {SEGMENTO}
-Regiao: {REGIAO}
-Produto/servico: {PRODUTO_SERVICO}
+### TAM/SAM/SOM com fontes
 
-Concorrentes a analisar:
-  1. {CONCORRENTE_1}
-  2. {CONCORRENTE_2}
-  3. {CONCORRENTE_3}
-  [...]
+Consulte o framework em `references/framework-tam-sam-som.md` para a metodologia de estimativa. Busque dados reais de mercado: relatórios SEBRAE, IBGE, ABComm, Statista, etc.
 
-Dimensoes da pesquisa:
-  [x] Sizing de mercado (TAM/SAM/SOM)
-  [x] Analise de concorrentes (ee-s2-posicionamento, canais, preco, presenca digital)
-  [x] Tendencias e ameacas do setor
-  [x] Jobs-to-be-Done do mercado
-  [x] Diferenciais competitivos reais
+Para cada nível (TAM, SAM, SOM):
+- Valor em R$
+- Descrição
+- Fonte com link
+- Premissas (para SOM)
 
-Fontes: WebSearch (Perplexity/pesquisa web), dados publicos, Meta Ads Library
-```
+Valores marcados com [E] sao estimativas. Demais tem fonte publica.
 
-Pergunte:
+### Analise de concorrentes
 
-> O escopo esta correto? Quer adicionar ou remover algum concorrente? Alguma dimensao especifica que importa mais para este cliente?
+Para CADA concorrente da lista, faca análise profunda. Use WebSearch para visitar sites, redes sociais, e Meta Ads Library. Consulte `references/template-analise-concorrente.md`.
 
-**So avance apos aprovacao do operador.**
+Para cada concorrente:
+- Posicionamento (PUV, mensagem principal)
+- Canais de aquisicao
+- Pontos fortes e fracos
+- Estimativa de preco/ticket
+- Presenca digital (score 1-10: site, Instagram, Google, anúncios)
 
----
+Gere o Mapa Competitivo 2x2 (posicionando todos os concorrentes e sugerindo posição para o cliente).
 
-## Checkpoint 2 — TAM/SAM/SOM com fontes
+### Tendencias, JTBD e diferenciais reais
 
-Use WebSearch para pesquisar dados reais de mercado. Busque:
-- Tamanho do mercado de {SEGMENTO} no Brasil (relatorios SEBRAE, IBGE, ABComm, Statista, etc.)
-- Numero de empresas no segmento na regiao do cliente
-- Ticket medio do setor
-- Taxa de crescimento anual
+Use WebSearch para pesquisar tendencias recentes do setor:
+- Tendencias em crescimento (3, com evidencia)
+- Ameacas para os proximos 12 meses (2, com impacto)
+- Oportunidade nao explorada pelos concorrentes
 
-Consulte o framework em `references/framework-tam-sam-som.md` para a metodologia de estimativa.
+Jobs-to-be-Done do mercado:
+- Solucao principal (como a maioria resolve)
+- Alternativas diretas e indiretas
+- Custo de inacao
 
-Apresente o resultado:
+Diferenciais competitivos reais:
+- O que o cliente TEM hoje (com justificativa para o ICP)
+- O que PODERIA ter (com ação necessária)
+- ALERTA DE HONESTIDADE: se nao ha diferencial claro, diga aqui
 
-```
-SIZING DE MERCADO — {NOME_CLIENTE}
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+## Auto-validação
 
-TAM (Mercado Total Disponivel):
-  R$ {valor} — {descricao}
-  Fonte: {fonte_com_link}
+Antes de mostrar ao operador, verifique:
 
-SAM (Mercado Enderecavel):
-  R$ {valor} — {descricao}
-  Filtros aplicados: {regiao}, {perfil_cliente}, {restricoes}
-  Fonte: {fonte_com_link}
+- [ ] Mencionou o cliente pelo nome?
+- [ ] Usou dados reais do client.json (não inventou)?
+- [ ] Nenhum item genérico (ex: "quer crescer", "qualidade e compromisso")?
+- [ ] Schema da skill validou?
+- [ ] Consistente com outputs anteriores (ICP, posicionamento)?
+- [ ] TAM/SAM/SOM tem fontes citadas (não apenas estimativas)?
+- [ ] Análise de concorrentes é baseada em pesquisa real (não suposições)?
+- [ ] Diferenciais são honestos (não aspiracionais vendidos como reais)?
 
-SOM (Mercado Obtenivel — 12 meses):
-  R$ {valor} — {descricao}
-  Premissas: {premissas_realistas}
-  Fonte: {calculo_explicado}
+Se falhou → regenere silenciosamente. Não avise o operador.
 
-Metodologia: {top-down / bottom-up / mista}
+## Apresentação e decisões
 
-NOTA: Valores marcados com [E] sao estimativas. Demais tem fonte publica.
-```
+Apresente o output COMPLETO ao operador.
 
-Pergunte ao operador:
+Revise o output. O que está errado, exagerado ou faltando?
 
-> Os numeros fazem sentido para a realidade do cliente? O SOM parece realista ou otimista demais? Quer ajustar alguma premissa?
+- "Os numeros de sizing fazem sentido para a realidade do cliente? O SOM parece realista ou otimista demais?"
+- "A analise de concorrentes esta precisa? Alguma informacao que voce sabe e que esta diferente?"
+- "Onde {NOME_CLIENTE} deveria se posicionar no mapa competitivo?"
+- "Os diferenciais listados sao reais ou algum e mais aspiracional do que factual?"
+- "Alguma tendencia que voce ja percebeu no dia a dia e que nao apareceu aqui?"
 
-**So avance apos aprovacao do operador.**
+## Finalização
 
----
-
-## Checkpoint 3 — Analise de concorrentes
-
-Para CADA concorrente da lista, faca uma analise profunda. Use WebSearch para visitar sites, redes sociais, e Meta Ads Library.
-
-Consulte `references/template-analise-concorrente.md` para o framework de analise.
-
-Para cada concorrente, apresente:
-
-```
-CONCORRENTE: {NOME}
-━━━━━━━━━━━━━━━━━━━
-
-Posicionamento: {como se posiciona no mercado — PUV, mensagem principal}
-Canais de aquisicao: {Google Ads, Meta Ads, organico, indicacao, etc.}
-Pontos fortes:
-  - {ponto_forte_1}
-  - {ponto_forte_2}
-Pontos fracos:
-  - {ponto_fraco_1}
-  - {ponto_fraco_2}
-Estimativa de preco/ticket: R$ {valor} {mensal/projeto/unitario}
-Presenca digital (score 1-10): {score}
-  - Site: {avaliacao_curta}
-  - Instagram: {seguidores + avaliacao_curta}
-  - Google: {avaliacao_curta}
-  - Anuncios ativos: {sim/nao + observacao}
-```
-
-Apos apresentar TODOS os concorrentes, faca uma sintese comparativa:
-
-```
-MAPA COMPETITIVO
-━━━━━━━━━━━━━━━━
-
-                    PREMIUM
-                       |
-  {Concorrente A}      |      {Concorrente B}
-                       |
-  GENERALISTA ─────────┼──────── ESPECIALISTA
-                       |
-  {Concorrente C}      |      {NOME_CLIENTE}?
-                       |
-                    ACESSIVEL
-
-Espacos nao ocupados: {onde nenhum concorrente esta}
-Espaco mais disputado: {onde ha aglomeracao}
-```
-
-Pergunte ao operador:
-
-> A analise de concorrentes esta precisa? Alguma informacao que voce sabe e que esta diferente? Onde {NOME_CLIENTE} deveria se posicionar neste mapa?
-
-**So avance apos aprovacao do operador.**
-
----
-
-## Checkpoint 4 — Tendencias, JTBD e diferenciais reais
-
-Use WebSearch para pesquisar tendencias recentes do setor. Busque noticias, relatorios, e movimentos do ultimo ano.
-
-Apresente:
-
-```
-TENDENCIAS DO SETOR — {SEGMENTO}
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-Tendencias em crescimento:
-  1. {tendencia_1} — {evidencia}
-  2. {tendencia_2} — {evidencia}
-  3. {tendencia_3} — {evidencia}
-
-Ameacas para os proximos 12 meses:
-  1. {ameaca_1} — {impacto_potencial}
-  2. {ameaca_2} — {impacto_potencial}
-
-Oportunidade nao explorada pelos concorrentes:
-  {descricao_da_oportunidade}
-  Por que ninguem esta fazendo: {motivo}
-  Viabilidade para {NOME_CLIENTE}: {alta/media/baixa}
-
-JOBS-TO-BE-DONE DO MERCADO
-━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-Como o mercado resolve hoje o problema de {NOME_CLIENTE}:
-  - Solucao principal: {como a maioria resolve}
-  - Alternativas diretas: {concorrentes e substitutos}
-  - Alternativas indiretas: {solucoes improvisadas, DIY, nao fazer nada}
-  - Custo de inacao: {o que acontece se o cliente nao resolver}
-
-DIFERENCIAIS COMPETITIVOS REAIS
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-Diferenciais que {NOME_CLIENTE} TEM hoje:
-  - {diferencial_real_1} — Por que importa para o ICP: {justificativa}
-  - {diferencial_real_2} — Por que importa para o ICP: {justificativa}
-
-Diferenciais que {NOME_CLIENTE} PODERIA ter (mas ainda nao tem):
-  - {diferencial_potencial} — O que precisaria: {acao}
-
-ALERTA DE HONESTIDADE:
-  {Se nao ha diferencial claro, diga aqui. E melhor saber agora do que
-   construir ee-s2-posicionamento em cima de ar.}
-```
-
-Pergunte ao operador:
-
-> Os diferenciais listados sao reais ou voce sabe que algum e mais aspiracional do que factual? Alguma tendencia que voce ja percebeu no dia a dia e que nao apareceu aqui?
-
-**So avance apos aprovacao do operador.**
-
----
-
-## Finalizacao
-
-Apos todos os checkpoints aprovados:
-
-1. **Salve o JSON estruturado** em `clientes/{cliente}/ee-s2-pesquisa-mercado.json` seguindo o schema
-2. **Atualize client.json (progress)** — marque `ee-s2-pesquisa-mercado` como `completed`
-3. **Appende em client.json (history)** as decisoes tomadas em cada checkpoint
-4. **Apresente o resumo final:**
-
-```
-PESQUISA DE MERCADO CONCLUIDA — {NOME_CLIENTE}
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-TAM: R$ {valor} | SAM: R$ {valor} | SOM: R$ {valor}
-Concorrentes analisados: {numero}
-Tendencias mapeadas: {numero}
-Diferenciais reais identificados: {numero}
-Oportunidade principal: {resumo_curto}
-
-Proximo passo recomendado: /ee-s2-posicionamento
-(Usa esta pesquisa como base para definir PUV, canvas 4P e territorio de marca)
-```
-
-Pergunte: "Quer seguir para o ee-s2-posicionamento agora ou prefere pausar?"
+Operador aprova (com ou sem ajustes).
+1. Salve em `clientes/{slug}/outputs/ee-s2-pesquisa-mercado.json` (com campo `summary` no topo)
+2. Atualize `client.json`: progress.skills → completed, version++, append em history[]
+3. Sugira próxima skill do dependency_graph
+   - "Pesquisa concluída. TAM: R$ {valor} | SAM: R$ {valor} | SOM: R$ {valor}. Concorrentes analisados: {numero}. Diferenciais reais identificados: {numero}."
+   - "Proximo passo recomendado: /ee-s2-posicionamento (Usa esta pesquisa como base para definir PUV, canvas 4P e territorio de marca)"

@@ -16,184 +16,99 @@ Voce e um especialista em SEO local e Google Business Profile. Vai construir, ju
 
 ## Dados necessarios
 
-Leia os seguintes arquivos do diretorio do cliente:
-
 1. `client.json` (seção `briefing`) — dados base do cliente (OBRIGATORIO)
-2. `ee-s1-persona-icp.json` — ICP e persona (OBRIGATORIO — depende da skill ee-s1-persona-icp)
+2. `outputs/ee-s1-persona-icp.json` — ICP e persona (OBRIGATORIO)
 
 Extraia do briefing:
-- `identification.name` → nome do cliente
-- `identification.segment` → segmento/setor
-- `identification.region` → localizacao (cidade/estado)
-- `product.main_product` → produto/servico principal
-- `product.ticket` → ticket medio
-- `product.all_products` → lista completa de produtos/servicos
-- `contact.whatsapp` → link do WhatsApp (para CTA)
-- `contact.website` → site do cliente
-- `contact.address` → endereco fisico
-- `contact.hours` → horario de funcionamento
+- `identification.name`, `identification.segment`, `identification.region`
+- `product.main_product`, `product.ticket`, `product.all_products`
+- `contact.whatsapp`, `contact.website`, `contact.address`, `contact.hours`
 
 Extraia do ee-s1-persona-icp.json:
-- `where_to_find.keywords` → palavras-chave que o ICP busca no Google
-- `icp.pains` → dores do ICP (para Q&As)
+- `where_to_find.keywords` → palavras-chave do ICP
+- `icp.pains` → dores (para Q&As)
 - `icp.jobs.functional` → job funcional (para descricao)
-- `persona.name` → nome da persona (para contextualizar posts)
-- `key_message.chosen_message` → mensagem-chave (para alinhar tom)
+- `key_message.chosen_message` → mensagem-chave
 
-Consulte `references/seo-local-gmb.md` para boas praticas de otimizacao.
+Consulte `references/seo-local-gmb.md` para boas praticas.
 
 ---
 
-## CHECKPOINT 1: Descricao SEO + Categorias + Servicos
+## Geração
 
-**Objetivo:** Gerar a descricao otimizada para SEO local, selecionar categorias e listar servicos com keywords.
+Gere o output COMPLETO de uma vez usando os dados de `client.json` (briefing) e outputs de skills dependentes em `outputs/`.
 
-### 1.1 Descricao do Perfil (max 750 caracteres)
+### Descricao SEO do perfil (max 750 caracteres)
 
-Gere uma descricao que:
-- Inclua as palavras-chave mais relevantes para `{segmento}` em `{cidade/estado}` de forma natural
-- Diga claramente o que a empresa faz e para quem
-- Mencione os diferenciais principais
-- Termine com CTA (WhatsApp, visita, agendamento)
-- NAO use emojis, hashtags, links ou linguagem promocional exagerada (Google penaliza)
+Inclua palavras-chave relevantes para {segmento} em {cidade/estado} de forma natural. Diga o que a empresa faz e para quem. Mencione diferenciais. Termine com CTA. NAO use emojis, hashtags, links ou linguagem promocional (Google penaliza). Apresente com contagem de caracteres.
 
-Apresente a descricao com contagem de caracteres.
+### Categorias
 
-### 1.2 Categorias
+- **Categoria principal:** a mais específica possível
+- **Categorias secundárias (até 9):** complementares que ampliem visibilidade
 
-- **Categoria principal:** A mais especifica possivel que descreva o core do negocio
-- **Categorias secundarias (ate 9):** Complementares que ampliem a visibilidade em buscas relacionadas
+### Atributos
 
-> Dica: Use categorias do Google (nao invente). A categoria principal define em quais buscas o perfil aparece com prioridade.
+Relevantes para o segmento (acessibilidade, estacionamento, pagamento, etc.).
 
-### 1.3 Atributos
+### Lista de serviços
 
-Liste os atributos relevantes para ativar no perfil:
-- Acessibilidade, estacionamento, Wi-Fi, formas de pagamento, etc.
-- Atributos especificos do segmento (ex: "aceita agendamento", "entrega delivery")
+Para cada produto/serviço: nome (como o cliente buscaria no Google), descrição (1-2 frases com keywords), preço (se aplicável).
 
-### 1.4 Lista de Servicos
+### Posts para 30 dias (4 posts)
 
-Para cada produto/servico do cliente, gere:
-- **Nome do servico:** Como o cliente buscaria no Google (linguagem natural, com keyword)
-- **Descricao:** 1-2 frases com palavras-chave naturais
-- **Preco:** Se aplicavel (ou "A partir de R$X" / "Sob consulta")
+Distribuição: apresentação, oferta, educativo, prova social.
+Para cada: título, texto (até 1.500 chars), CTA (botão), tipo (novidade/oferta/evento).
 
-Apresente tudo ao operador.
+### Q&As (5 perguntas e respostas)
 
-**Pergunte ao operador:**
+Baseadas nas dores e objeções do ICP. Linguagem coloquial. Respostas completas com CTAs e keywords.
+
+### Checklist de implementação
+
+**Perfil Básico:** nome, endereço, telefone, site, horário, WhatsApp
+**Descrição e Categorias:** descrição publicada, categorias configuradas, atributos ativados
+**Serviços:** todos cadastrados
+**Fotos (mínimo 10):** capa, logo, fachada, interior, equipe, produtos (specs: JPG/PNG, 720x720px+)
+**Posts e Q&As:** publicados/agendados
+**Extras:** solicitar avaliações, resposta padrão para reviews, mensagens ativadas, verificação
+
+## Auto-validação
+
+Antes de mostrar ao operador, verifique:
+
+- [ ] Mencionou o cliente pelo nome?
+- [ ] Usou dados reais do client.json (não inventou)?
+- [ ] Nenhum item genérico (ex: "quer crescer", "qualidade e compromisso")?
+- [ ] Schema da skill validou?
+- [ ] Consistente com outputs anteriores (ICP)?
+- [ ] Descrição tem <= 750 caracteres?
+- [ ] Posts têm tom alinhado com a mensagem-chave?
+- [ ] Q&As endereçam as 5 principais dúvidas/objeções do ICP?
+
+Se falhou → regenere silenciosamente. Não avise o operador.
+
+## Apresentação e decisões
+
+Apresente o output COMPLETO ao operador.
+
+Revise o output. O que está errado, exagerado ou faltando?
+
 - "A descricao representa bem o negocio? Algum diferencial que faltou?"
-- "As categorias estao corretas? Alguma que nao faca sentido?"
-- "A lista de servicos esta completa? Falta algum produto/servico?"
-
-**Criterio de aprovacao:** Operador valida descricao, categorias e servicos.
-
----
-
-## CHECKPOINT 2: Posts para 30 dias + Q&As
-
-**Objetivo:** Gerar 4 posts para os primeiros 30 dias e 5 Q&As pre-populadas.
-
-### 2.1 Posts (4 para 30 dias)
-
-Gere 4 posts com intervalo de ~7 dias, variando os tipos:
-
-Para cada post:
-- **Titulo:** Curto, chamativo, com keyword quando possivel
-- **Texto:** Ate 1.500 caracteres. Tom alinhado com a mensagem-chave do cliente. Foque em valor para o ICP, nao em autopromoção
-- **CTA:** Botao de acao (Saiba mais / Ligar / Reservar / Comprar)
-- **Tipo:** `novidade` | `oferta` | `evento`
-
-Distribuicao sugerida:
-1. **Post de apresentacao** (novidade) — quem somos, o que fazemos, por que nos escolher
-2. **Post de oferta** (oferta) — destaque de produto/servico com condicao especial
-3. **Post educativo** (novidade) — dica ou informacao util para o ICP
-4. **Post de prova social** (novidade) — case, depoimento, ou resultado de cliente
-
-### 2.2 Perguntas e Respostas (5 Q&As)
-
-Gere 5 perguntas que o ICP mais faria sobre este tipo de negocio:
-- Use as dores e objections do ee-s1-persona-icp.json como base
-- Escreva as perguntas como o cliente perguntaria (linguagem coloquial)
-- Respostas devem ser completas, profissionais e incluir CTA quando apropriado
-- Inclua keywords naturais nas respostas
-
-Apresente posts e Q&As ao operador.
-
-**Pergunte ao operador:**
+- "As categorias estao corretas?"
+- "A lista de servicos esta completa?"
 - "Os posts tem o tom certo para este cliente?"
 - "As perguntas sao as que os clientes realmente fazem?"
-- "Algum ajuste no CTA ou nas ofertas?"
-
-**Criterio de aprovacao:** Operador valida posts e Q&As.
-
----
-
-## CHECKPOINT 3: Checklist de Implementacao
-
-**Objetivo:** Entregar ao operador um guia completo para configurar tudo no Google Business Profile.
-
-Gere o checklist com os seguintes itens (o operador executa no GMB):
-
-### Perfil Basico
-- [ ] Nome do negocio correto (exatamente como na fachada/CNPJ)
-- [ ] Endereco completo e pin no mapa correto
-- [ ] Telefone principal (preferencialmente WhatsApp Business)
-- [ ] Site do cliente configurado
-- [ ] Horario de funcionamento atualizado (incluindo feriados se aplicavel)
-- [ ] Link do WhatsApp configurado como mensagem
-
-### Descricao e Categorias
-- [ ] Descricao SEO publicada (copiar texto gerado no Checkpoint 1)
-- [ ] Categoria principal configurada
-- [ ] Categorias secundarias adicionadas
-- [ ] Atributos ativados
-
-### Servicos
-- [ ] Todos os servicos cadastrados com nome, descricao e preco
-
-### Fotos (minimo 10)
-Oriente o operador sobre quais fotos pedir ao cliente:
-- [ ] Foto de capa (a mais impactante — fachada ou produto hero)
-- [ ] Logo (formato quadrado, fundo limpo)
-- [ ] Fachada externa (para o cliente reconhecer ao chegar)
-- [ ] Interior do estabelecimento (2-3 fotos — ambiente, organizacao)
-- [ ] Equipe (1-2 fotos — humaniza o negocio)
-- [ ] Produtos/servicos em destaque (3-4 fotos — os mais vendidos)
-- [ ] Especificacoes: JPG/PNG, minimo 720x720px, sem texto sobreposto, sem filtros exagerados
-
-### Posts e Q&As
-- [ ] 4 posts publicados/agendados (copiar do Checkpoint 2)
-- [ ] 5 Q&As publicadas (operador publica como proprietario)
-
-### Extras
-- [ ] Solicitar avaliacoes dos primeiros 5-10 clientes satisfeitos
-- [ ] Configurar resposta padrao para avaliacoes (positivas e negativas)
-- [ ] Ativar mensagens pelo perfil
-- [ ] Verificar perfil (se ainda nao verificado)
-
-Apresente o checklist ao operador.
-
-**Pergunte ao operador:**
 - "O cliente ja tem acesso ao Google Meu Negocio?"
-- "Ja tem fotos disponiveis ou precisa solicitar ao cliente?"
-- "Alguma ee-duvida sobre como executar algum item?"
+- "Ja tem fotos disponiveis ou precisa solicitar?"
 
-**Criterio de aprovacao:** Operador confirma que entendeu o checklist e vai executar.
+**Próximo passo (semi-manual):** Operador executa o checklist de implementação no Google Business Profile.
 
----
+## Finalização
 
-## Finalizacao
-
-Apos os 3 checkpoints aprovados:
-
-1. **Salve o output estruturado** em `clientes/{slug}/semana-3/ee-s3-gmb-otimizacao.json` seguindo o schema.json da skill
-2. **Registre a decisao** — appende em `client.json` (seção `history`):
-   ```json
-   {"ts":"[ISO]","skill":"ee-s3-gmb-otimizacao","checkpoint":3,"decision":"Perfil GMB otimizado. Descricao aprovada, 4 posts + 5 Q&As gerados, checklist entregue ao operador."}
-   ```
-3. **Atualize client.json (progress)** — marque `ee-s3-gmb-otimizacao` como `completed`
-4. **Informe proximos passos:**
-   - "Conteudo GMB gerado e checklist entregue. O operador deve executar a configuracao no Google Business Profile."
+Operador aprova (com ou sem ajustes).
+1. Salve em `clientes/{slug}/outputs/ee-s3-gmb-otimizacao.json` (com campo `summary` no topo)
+2. Atualize `client.json`: progress.skills → completed, version++, append em history[]
+3. Sugira próxima skill do dependency_graph
+   - "Conteúdo GMB gerado e checklist entregue. O operador deve executar a configuração."
    - "Acompanhar: verificar em 7 dias se o perfil atingiu 100% de completude."
-   - Sugira a proxima skill da semana 3 (ex: ee-s3-crm-setup ou ee-s3-landing-page)

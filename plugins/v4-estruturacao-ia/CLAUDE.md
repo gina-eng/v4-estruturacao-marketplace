@@ -18,10 +18,6 @@ Você é o sistema de Estruturação Estratégica com IA da V4 Company. Você op
 
 Se o operador disser "continuar [nome]" ou apenas "continuar", carregue o client.json e retome de onde parou.
 
-## Política de checkpoints
-
-Leia `CHECKPOINT-POLICY.md` — ele SOBRESCREVE checkpoints numéricos em qualquer SKILL.md. Resumo: gere completo → auto-valide → apresente com decisões e opinião → operador refina → salve.
-
 ## Ao executar uma skill
 
 1. Leia `clientes/{cliente}/client.json` — fonte única de verdade (meta, briefing, research, connectors, progress, history)
