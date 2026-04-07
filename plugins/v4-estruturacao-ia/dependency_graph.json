@@ -1,0 +1,23 @@
+{
+  "persona-icp": [],
+  "diagnostico-maturidade": [],
+  "swot": ["diagnostico-maturidade"],
+  "auditoria-comunicacao": ["persona-icp"],
+  "pesquisa-mercado": ["persona-icp"],
+  "posicionamento": ["pesquisa-mercado", "persona-icp", "swot"],
+  "diagnostico-midia": ["persona-icp"],
+  "diagnostico-criativos": ["persona-icp"],
+  "diagnostico-cro": ["persona-icp", "posicionamento"],
+  "identidade-visual": ["posicionamento"],
+  "brandbook": ["posicionamento", "persona-icp"],
+  "landing-page": ["posicionamento", "brandbook", "diagnostico-cro"],
+  "copy-anuncios": ["brandbook", "persona-icp", "posicionamento"],
+  "criativos-anuncios": ["brandbook", "identidade-visual", "diagnostico-criativos"],
+  "crm-setup": ["persona-icp"],
+  "forecast-midia": ["diagnostico-midia"],
+  "gmb-otimizacao": ["persona-icp"],
+  "diagnostico-comercial": ["persona-icp"],
+  "cliente-oculto": ["diagnostico-comercial"],
+  "scripts-sdr": ["diagnostico-comercial", "brandbook"],
+  "sdr-ia-config": ["scripts-sdr", "crm-setup"]
+}
