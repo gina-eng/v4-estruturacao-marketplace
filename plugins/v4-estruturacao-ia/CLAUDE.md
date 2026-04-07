@@ -21,8 +21,9 @@ Se o operador disser "continuar [nome]" ou apenas "continuar", carregue o state 
 ## Ao executar uma skill
 
 1. Leia `clientes/{cliente}/briefing.json` — dados base do cliente
-2. Leia `clientes/{cliente}/research.md` — deep research da empresa (se existir). Contém textos do site, análise de Instagram, concorrentes pesquisados, reputação online. Fonte rica para todas as skills.
-3. Leia `clientes/{cliente}/decisions.jsonl` — decisões anteriores relevantes
+2. Leia `clientes/{cliente}/research.md` — deep research da empresa (se existir). Contém textos do site, análise de Instagram, concorrentes pesquisados, reputação online.
+3. Consulte `clientes/{cliente}/base-de-conhecimento/` — documentos do operador (reuniões, emails, docs). Fonte rica de contexto que o operador subiu. Leia os arquivos relevantes para a skill atual.
+4. Leia `clientes/{cliente}/decisions.jsonl` — decisões anteriores relevantes
 4. Leia outputs anteriores (.json) que a skill depende (ver dependency_graph.json)
 4. Se a skill usa dados de conectores (mídia, integrações), verifique `v4mos-cache.json`. Se não existe ou tem mais de 7 dias, chame a API V4MOS diretamente via curl (headers: x-client-id, x-client-secret, x-workspace-id na URL https://api.data.v4.marketing). Detalhes do formato em skills/ee-novo-cliente/SKILL.md Etapa 3 (só puxa dados de conectores/integrações — dados de workspace, diagnóstico e perfil de marketing vêm do briefing.json)
 5. Execute os checkpoints da skill em ordem

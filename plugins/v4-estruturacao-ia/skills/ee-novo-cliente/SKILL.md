@@ -210,12 +210,13 @@ Com o slug confirmado, crie:
 ```
 clientes/{slug}/
   state.json
-  decisions.jsonl     ← arquivo vazio
-  briefing.json       ← será preenchido na Etapa 4
+  decisions.jsonl          ← arquivo vazio
+  briefing.json            ← será preenchido na Etapa 5
+  base-de-conhecimento/    ← operador sobe docs, reuniões, emails aqui
   semana-1/
   semana-2/
   semana-3/
-  semana-4-5/         ← só criar se módulo vendas = sim
+  semana-4-5/              ← só criar se módulo vendas = sim
 ```
 
 Inicialize `state.json` com todas as skills em "pending":
@@ -323,19 +324,95 @@ Inicialize `decisions.jsonl` como arquivo vazio (sem conteúdo).
 
 **Se não tem workspace_id:**
 
-Avise: "Sem integração V4MOS. O briefing será 100% manual — vou te perguntar tudo." e prossiga para a Etapa 4.
+Avise: "Sem integração V4MOS." e prossiga para a Etapa 4.
 
-## Etapa 4: Briefing complementar interativo
+## Etapa 4: Base de Conhecimento
+
+Antes de fazer perguntas, convide o operador a subir contexto existente:
+
+```
+ANTES DE COMEÇAR O BRIEFING
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Você tem documentos, reuniões, emails ou anotações sobre esse cliente?
+Quanto mais contexto você subir, menos perguntas eu faço.
+
+Exemplos do que aceito:
+  - Transcrições de reuniões (kick-off, alinhamento, etc.)
+  - Emails com briefing ou proposta comercial
+  - Documentos de apresentação do cliente
+  - Anotações suas sobre o cliente
+  - Screenshots de dashboards ou relatórios
+
+Como fazer:
+  1. Cole o conteúdo aqui que eu salvo automaticamente
+  2. Ou use /ee-adicionar-base a qualquer momento pra adicionar mais
+
+Quando terminar de subir, diga "pronto" que eu processo tudo e monto o briefing.
+Se não tem nada, diga "não tenho" que eu pergunto tudo do zero.
+```
+
+### Se o operador subir conteúdo:
+
+Para cada conteúdo recebido:
+1. Identifique tipo (reunião, doc, email, anotação)
+2. Salve em `clientes/{slug}/base-de-conhecimento/{YYYY-MM-DD}-{tipo}-{assunto}.md`
+3. Preserve o conteúdo original na íntegra
+4. Extraia dados relevantes pro briefing
+5. Diga: "Salvo. Mais algum conteúdo ou posso processar?"
+
+### Quando operador disser "pronto":
+
+Leia TODOS os arquivos em `clientes/{slug}/base-de-conhecimento/` e cruze com os campos do briefing.
+
+Para cada campo do briefing (ver `references/briefing-fields.md`):
+- Se encontrou na base de conhecimento → marca como "encontrado" com confiança
+- Se não encontrou → marca como "perguntar"
+
+Apresente em batch:
+```
+DADOS ENCONTRADOS NA SUA BASE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Com base nos {N} documentos que você subiu, encontrei:
+
+  Segmento: Marketing digital (reunião kick-off)       ✅ correto?
+  Produto: Gestão de tráfego pago (proposta comercial)  ✅ correto?
+  Ticket: R$3.000/mês (proposta comercial)              ✅ correto?
+  Concorrente: AgênciaX (mencionado em reunião)         ✅ correto?
+  Tom de voz: Profissional (inferido do site)            ✅ correto?
+  ...
+
+DADOS NÃO ENCONTRADOS (vou perguntar):
+  - Quem é o melhor cliente deles
+  - Razões de churn
+  - Restrições visuais
+  - ...
+
+Confirme os dados encontrados e eu pergunto só o que falta.
+```
+
+### Se operador disser "não tenho":
+
+Siga direto pro briefing manual (Etapa 5).
+
+## Etapa 5: Briefing complementar interativo
 
 Consulte `references/briefing-fields.md` para a lista completa de campos por seção.
 
+**Fontes de dados (em ordem de prioridade):**
+1. **Base de conhecimento** (`base-de-conhecimento/`) — já confirmados na Etapa 4
+2. **Research automático** (`research.md`) — pesquisa da internet, confirmada na Etapa 1
+3. **Conectores V4MOS** (`v4mos-cache.json`) — dados de integrações
+4. **Perguntas ao operador** — só o que não foi encontrado nas fontes acima
+
 Regras do fluxo:
-- Para cada campo marcado como fonte "V4MOS" em briefing-fields.md: se o dado existe no `v4mos-cache.json`, mostre o valor e peça confirmação ("O V4MOS diz que o segmento é X. Correto?")
-- Para cada campo marcado como fonte "manual": pergunte ao operador
-- Pergunte UM campo por vez, de forma conversacional. Não despeje um formulário
-- Agrupe campos relacionados quando fizer sentido (ex: "Sobre o produto principal — qual é e qual o ticket médio?")
+- Campos já confirmados nas etapas anteriores: NÃO pergunte de novo, só inclua no briefing
+- Campos encontrados mas não confirmados: confirme rapidamente ("Na reunião de kick-off você mencionou X. Correto?")
+- Campos não encontrados em nenhuma fonte: pergunte ao operador
+- Agrupe campos relacionados quando fizer sentido
 - Se o operador não sabe um campo opcional, registre como null e siga
-- Se o operador não sabe um campo obrigatório, insista gentilmente: "Esse dado é importante para as análises. Consegue uma estimativa?"
+- Se o operador não sabe um campo obrigatório, insista gentilmente
 
 Ordem das seções:
 1. **Identificação** — nome, responsável, setor, faturamento, etc.
