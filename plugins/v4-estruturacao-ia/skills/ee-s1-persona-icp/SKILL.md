@@ -152,6 +152,7 @@ Incorpore todos os ajustes e gere a versão final.
 Operador aprova (com ou sem ajustes).
 1. Salve em `clientes/{slug}/outputs/ee-s1-persona-icp.json` (com campo `summary` no topo)
 2. Atualize `client.json`: progress.skills → completed, version++, append em history[]
-3. Sugira próxima skill do dependency_graph
+3. Execute `render_portal.sh clientes/{slug}` para atualizar o portal de entregas do cliente
+4. Sugira próxima skill do dependency_graph
    - "ICP e Persona salvos. Este output será usado por: ee-s1-auditoria-comunicacao, ee-s2-pesquisa-mercado, ee-s2-posicionamento, e todas as skills de produção."
    - Sugira a próxima skill da semana 1 (ex: ee-s1-diagnostico-maturidade ou ee-s1-auditoria-comunicacao)

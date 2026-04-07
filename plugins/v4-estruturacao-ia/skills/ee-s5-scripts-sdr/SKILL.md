@@ -141,6 +141,7 @@ Valide também:
 Operador aprova (com ou sem ajustes).
 1. Salve em `clientes/{slug}/outputs/ee-s5-scripts-sdr.json` (com campo `summary` no topo)
 2. Atualize `client.json`: progress.skills → completed, version++, append em history[]
-3. Sugira próxima skill do dependency_graph
+3. Execute `render_portal.sh clientes/{slug}` para atualizar o portal de entregas do cliente
+4. Sugira próxima skill do dependency_graph
    - "Scripts SDR IA salvos. Agente: {nome}. {N} perguntas de qualificação. {N} objeções tratadas."
    - Sugira: `/ee-s5-sdr-ia-config` para configurar no Patagon e integrar com Kommo

@@ -123,6 +123,7 @@ Revise o output. O que está errado, exagerado ou faltando?
 Operador aprova (com ou sem ajustes).
 1. Salve em `clientes/{slug}/outputs/ee-s4-diagnostico-comercial.json` (com campo `summary` no topo)
 2. Atualize `client.json`: progress.skills → completed, version++, append em history[]
-3. Sugira próxima skill do dependency_graph
+3. Execute `render_portal.sh clientes/{slug}` para atualizar o portal de entregas do cliente
+4. Sugira próxima skill do dependency_graph
    - "Diagnostico comercial salvo. Este output sera usado por: ee-s4-cliente-oculto, ee-s5-scripts-sdr, ee-s5-sdr-ia-config."
    - Sugira: `/ee-s4-cliente-oculto` (testar o processo antes de automatizar)

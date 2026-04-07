@@ -127,7 +127,8 @@ Valide também:
 Operador aprova (com ou sem ajustes).
 1. Salve em `clientes/{slug}/outputs/ee-s2-posicionamento.json` (com campo `summary` no topo)
 2. Atualize `client.json`: progress.skills → completed, version++, append em history[]
-3. Sugira próxima skill do dependency_graph
+3. Execute `render_portal.sh clientes/{slug}` para atualizar o portal de entregas do cliente
+4. Sugira próxima skill do dependency_graph
    - "Posicionamento concluído. PUV: '{puv}'. Tagline: '{tagline}'. Território: {3 palavras}."
    - "Este posicionamento será usado por: /ee-s3-brandbook, /ee-s3-landing-page, /ee-s3-copy-anuncios, /ee-s3-criativos-anuncios, /ee-s3-identidade-visual"
    - "Proximo passo recomendado: /ee-s2-diagnostico-midia ou /ee-s2-diagnostico-criativos"

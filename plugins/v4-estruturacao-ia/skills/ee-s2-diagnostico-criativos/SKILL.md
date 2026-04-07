@@ -107,7 +107,8 @@ Revise o output. O que está errado, exagerado ou faltando?
 Operador aprova (com ou sem ajustes).
 1. Salve em `clientes/{slug}/outputs/ee-s2-diagnostico-criativos.json` (com campo `summary` no topo)
 2. Atualize `client.json`: progress.skills → completed, version++, append em history[]
-3. Sugira próxima skill do dependency_graph
+3. Execute `render_portal.sh clientes/{slug}` para atualizar o portal de entregas do cliente
+4. Sugira próxima skill do dependency_graph
    - "Diagnóstico concluído. Criativos analisados: {numero}. Manter: {n} | Otimizar: {n} | Eliminar: {n}."
    - "Este diagnostico alimenta: /ee-s3-criativos-anuncios, /ee-s3-copy-anuncios"
    - "Proximo passo recomendado: /ee-s2-diagnostico-cro"

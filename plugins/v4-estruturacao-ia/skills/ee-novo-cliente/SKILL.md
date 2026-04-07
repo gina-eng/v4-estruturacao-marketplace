@@ -530,7 +530,7 @@ Salve tudo em `clientes/{slug}/client.json (briefing)` com a estrutura:
 
 Se `modulo_vendas` = false, o campo `sales_module` deve ser `null`.
 
-## Etapa 6: Confirmar e gerar dashboard
+## Etapa 6: Confirmar e gerar portal
 
 1. Mostre ao operador um resumo formatado do briefing:
    ```
@@ -547,9 +547,10 @@ Se `modulo_vendas` = false, o campo `sales_module` deve ser `null`.
 
 2. Pergunte: "Quer ajustar algum campo antes de salvar definitivamente?"
 3. Se sim, ajuste e salve novamente
-4. Gere `clientes/{slug}/dashboard.html` com o estado inicial (todas skills pending)
-5. Atualize `dashboard-geral.html` com o novo cliente
-6. Appende em `clientes/{slug}/client.json (history)`:
+4. Execute `render_portal.sh clientes/{slug}` para gerar o portal inicial de entregas (todas skills pendentes)
+5. Gere `clientes/{slug}/dashboard.html` com o estado inicial (todas skills pending)
+6. Atualize `dashboard-geral.html` com o novo cliente
+7. Appende em `clientes/{slug}/client.json (history)`:
    ```json
    {"ts":"YYYY-MM-DDTHH:MM:SSZ","skill":"ee-novo-cliente","checkpoint":0,"decision":"Cliente cadastrado. Briefing completo."}
    ```
@@ -561,6 +562,7 @@ Cliente {nome} cadastrado com sucesso!
 
 Pasta: clientes/{slug}/
 Briefing: clientes/{slug}/client.json (briefing)
+Portal: clientes/{slug}/portal.html
 Dashboard: clientes/{slug}/dashboard.html
 
 Para começar a semana 1, diga: ee-continuar {nome}

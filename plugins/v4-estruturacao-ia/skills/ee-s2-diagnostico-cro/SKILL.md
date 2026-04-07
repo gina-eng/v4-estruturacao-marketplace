@@ -119,7 +119,8 @@ Revise o output. O que está errado, exagerado ou faltando?
 Operador aprova (com ou sem ajustes).
 1. Salve em `clientes/{slug}/outputs/ee-s2-diagnostico-cro.json` (com campo `summary` no topo)
 2. Atualize `client.json`: progress.skills → completed, version++, append em history[]
-3. Sugira próxima skill do dependency_graph
+3. Execute `render_portal.sh clientes/{slug}` para atualizar o portal de entregas do cliente
+4. Sugira próxima skill do dependency_graph
    - "Diagnóstico CRO concluído. PageSpeed mobile: {score}/100. Score de confiança: {X}/10. Hipóteses: {numero}."
    - "Este diagnostico alimenta DIRETAMENTE: /ee-s3-landing-page"
    - "Semana 2 completa! Próximo passo: Semana 3 — Produção. Comece por: /ee-s3-identidade-visual ou /ee-s3-brandbook"

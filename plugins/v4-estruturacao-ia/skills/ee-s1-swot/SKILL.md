@@ -156,6 +156,7 @@ Revise o output. O que está errado, exagerado ou faltando?
 Operador aprova (com ou sem ajustes).
 1. Salve em `clientes/{slug}/outputs/ee-s1-swot.json` (com campo `summary` no topo)
 2. Atualize `client.json`: progress.skills → completed, version++, append em history[]
-3. Sugira próxima skill do dependency_graph
+3. Execute `render_portal.sh clientes/{slug}` para atualizar o portal de entregas do cliente
+4. Sugira próxima skill do dependency_graph
    - "SWOT salva. Este output será usado pela skill ee-s2-posicionamento (semana 2) e como referência para todas as skills de produção."
    - Sugira a próxima skill da semana 1 (ee-s1-auditoria-comunicacao ou ee-s1-persona-icp se ainda não feita)

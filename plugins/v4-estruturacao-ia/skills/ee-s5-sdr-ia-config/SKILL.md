@@ -137,8 +137,9 @@ Se todos os testes passaram → go-live. Se houver falhas → debug e reteste.
 Operador aprova (todos os testes passam).
 1. Salve em `clientes/{slug}/outputs/ee-s5-sdr-ia-config.json` (com campo `summary` no topo)
 2. Atualize `client.json`: progress.skills → completed, version++, append em history[]
-3. **Ative o agente no Patagon** (com aprovação do operador e do cliente)
-4. Informe:
+3. Execute `render_portal.sh clientes/{slug}` para atualizar o portal de entregas do cliente
+4. **Ative o agente no Patagon** (com aprovação do operador e do cliente)
+5. Informe:
    - "SDR IA configurado, testado e no ar!"
    - "Recomendações pós go-live:"
    - "  1. Monitorar os primeiros 20 leads reais (ajustar scoring se necessário)"

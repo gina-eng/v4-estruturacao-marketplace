@@ -108,7 +108,8 @@ Revise o output. O que está errado, exagerado ou faltando?
 Operador aprova (com ou sem ajustes).
 1. Salve em `clientes/{slug}/outputs/ee-s3-copy-anuncios.json` (com campo `summary` no topo, incluindo link Sheets)
 2. Atualize `client.json`: progress.skills → completed, version++, append em history[]
-3. Sugira próxima skill do dependency_graph
+3. Execute `render_portal.sh clientes/{slug}` para atualizar o portal de entregas do cliente
+4. Sugira próxima skill do dependency_graph
 
 ## Formato do output (ee-s3-copy-anuncios.json)
 
