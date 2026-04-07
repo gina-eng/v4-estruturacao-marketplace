@@ -12,7 +12,7 @@ Você vai cadastrar um novo cliente no sistema de Estruturação IA. O processo 
 Pergunte ao operador, uma pergunta por vez:
 
 1. "Qual o nome da empresa?"
-2. "Tem workspace no V4MOS? Se sim, qual o workspace_id?" (formato: `ws-xxxx`)
+2. "Tem workspace no V4MOS? Se sim, qual o workspace_id?" (formato UUID, ex: `f854f2c6-84f9-4d30-b35a-0548acae8af6`)
 3. "Módulo vendas (SDR IA) contratado? (sim/não)"
 
 Derive o slug do nome: lowercase, sem acentos, espaços viram hífens. Exemplo: "Padaria do João" → `padaria-do-joao`.
@@ -47,7 +47,7 @@ Inicialize `state.json` com todas as skills em "pending":
 ```json
 {
   "client": "Nome Real da Empresa",
-  "workspace_id": "ws-xxx",
+  "workspace_id": "workspace-uuid",
   "started_at": "YYYY-MM-DD",
   "current_week": 1,
   "modulo_vendas": true,

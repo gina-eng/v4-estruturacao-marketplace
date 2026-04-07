@@ -38,7 +38,7 @@ Se o operador disser "ee-continuar [nome]" ou apenas "ee-continuar", carregue o 
 ```json
 {
   "client": "Nome do Cliente",
-  "workspace_id": "ws-xxx",
+  "workspace_id": "workspace-uuid",
   "started_at": "2026-04-06",
   "current_week": 1,
   "skills": {

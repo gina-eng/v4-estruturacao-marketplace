@@ -230,7 +230,7 @@ Se o operador disser "continuar [nome]" ou apenas "continuar", carregue o state 
 ```json
 {
   "client": "Nome do Cliente",
-  "workspace_id": "ws-xxx",
+  "workspace_id": "workspace-uuid",
   "started_at": "2026-04-06",
   "current_week": 1,
   "skills": {
@@ -696,7 +696,7 @@ Pergunte ao operador:
 Formato do clients.json:
 ```json
 {
-  "ws-abc123": {
+  "f854f2c6-exemplo-uuid": {
     "client_id": "xxx",
     "client_secret": "yyy",
     "client_name": "Padaria Silva"
@@ -777,7 +777,7 @@ Inicialize state.json com todas as skills em "pending":
 ```json
 {
   "client": "Nome Real",
-  "workspace_id": "ws-xxx",
+  "workspace_id": "workspace-uuid",
   "started_at": "YYYY-MM-DD",
   "current_week": 1,
   "modulo_vendas": true/false,

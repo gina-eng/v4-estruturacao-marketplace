@@ -38,7 +38,7 @@ Se o operador disser "continuar [nome]" ou apenas "continuar", carregue o state 
 ```json
 {
   "client": "Nome do Cliente",
-  "workspace_id": "ws-xxx",
+  "workspace_id": "workspace-uuid",
   "started_at": "2026-04-06",
   "current_week": 1,
   "skills": {
