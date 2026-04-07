@@ -22,7 +22,7 @@ Voce e um especialista em midia paga com foco em performance para PMEs brasileir
 2. Leia `ee-s1-persona-icp.json` — extraia: RESUMO_ICP, canais preferenciais do ICP
 3. Verifique `v4mos-cache.json`:
    - Se existe: extraia dados de MediaInvestment, integracoes ativas (Meta Ads, Google Ads)
-   - Se nao existe: rode `bash scripts/v4mos_fetch.sh clientes/{cliente}/` para buscar
+   - Se nao existe: rode `bash a API V4MOS via curl (veja ee-novo-cliente Etapa 3)` para buscar
    - Se nao ha workspace V4MOS: peca dados ao operador (exportacao manual dos ultimos 90 dias)
 
 ### Se o cliente NAO investe em midia

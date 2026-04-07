@@ -105,6 +105,6 @@ Quando o operador confirmar qual skill trabalhar:
    - Não carregue os JSONs completos, apenas o summary
 4. Se existe `v4mos-cache.json`, verifique a data em `fetched_at`:
    - Se tem mais de 7 dias: sugira refresh ("Dados V4MOS de {data}. Quer atualizar?")
-   - Se o operador concordar, rode `bash scripts/v4mos_fetch.sh clientes/{slug}/`
+   - Se o operador concordar, rode `bash a API V4MOS via curl (veja ee-novo-cliente Etapa 3)`
 
 Inicie a skill no checkpoint indicado pelo state.json.

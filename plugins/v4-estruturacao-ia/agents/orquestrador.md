@@ -44,8 +44,8 @@ Em cada checkpoint:
 2. Apresente o resultado ao operador
 3. Peça validação: "Aprovado? Quer ajustar algo?"
 4. Após aprovação:
-   - Appende decisão em decisions.jsonl via `bash scripts/append_decision.sh`
-   - Atualiza checkpoint no state.json via `bash scripts/update_state.sh`
+   - Appende decisão em `decisions.jsonl` (uma linha JSON: `{"ts":"ISO","skill":"nome","checkpoint":N,"decision":"texto"}`)
+   - Atualiza state.json: skill status e checkpoint via jq ou Write direto
 5. Avance para o próximo checkpoint
 
 Se o operador quiser interromper:
@@ -62,8 +62,8 @@ Se o operador quiser interromper:
    - Se reprovado → mostre os issues ao operador, ajuste, re-submeta
 3. Renderize o entregável (HTML ou Sheets conforme a skill)
 4. Atualize state.json: skill → `completed`
-5. Gere dashboard: `bash scripts/render_dashboard.sh clientes/{slug}/`
-6. Atualize dashboard geral: `bash scripts/render_dashboard.sh . --general`
+5. Gere/atualize `clientes/{slug}/dashboard.html` com o progresso atualizado (gere o HTML diretamente)
+6. Atualize `dashboard-geral.html` com dados de todos os clientes
 7. Sugira o próximo passo: "Próxima skill disponível: {X}. Quer ee-continuar?"
 
 ### 6. Ao trocar de semana
@@ -120,7 +120,7 @@ Ao carregar o contexto de um cliente, siga esta ordem:
 ### 5. V4MOS cache (se existir)
 - `clientes/{slug}/v4mos-cache.json` → dados da API V4MOS
 - Verifique `fetched_at`: se tem mais de 7 dias, sugira refresh
-- Se o operador concordar: `bash scripts/v4mos_fetch.sh clientes/{slug}/`
+- Se o operador concordar: `bash a API V4MOS via curl (veja ee-novo-cliente Etapa 3)`
 
 ## Mapa de semanas e skills
 

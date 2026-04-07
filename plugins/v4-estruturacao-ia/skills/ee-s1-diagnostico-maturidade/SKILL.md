@@ -22,10 +22,11 @@ Leia `clientes/{slug}/v4mos-cache.json`. Se o arquivo existir, extraia:
   - Quais plataformas estão conectadas e ativas
   - Isso indica maturidade em mídia paga e CRM
 
-Se o arquivo não existir, tente rodar:
+Se o arquivo não existir, busque via curl:
 ```bash
-scripts/v4mos_fetch.sh clientes/{slug}/
+curl -s -H "x-client-id: {CLIENT_ID}" -H "x-client-secret: {CLIENT_SECRET}" -H "x-workspace-id: {WORKSPACE_ID}" "https://api.data.v4.marketing/workspaces/{WORKSPACE_ID}/integrations/status"
 ```
+Credenciais estão em `.credentials/clients.json`. Se a chamada falhar, siga sem dados V4MOS (cenário B abaixo).
 
 ### Fonte principal: Briefing + Operador
 Leia `clientes/{slug}/briefing.json`. Extraia:

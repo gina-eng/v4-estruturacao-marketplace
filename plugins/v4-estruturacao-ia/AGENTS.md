@@ -23,7 +23,7 @@ Se o operador disser "ee-continuar [nome]" ou apenas "ee-continuar", carregue o 
 1. Leia `clientes/{cliente}/briefing.json` — dados base do cliente
 2. Leia `clientes/{cliente}/decisions.jsonl` — decisões anteriores relevantes
 3. Leia outputs anteriores (.json) que o módulo depende (ver dependency_graph.json)
-4. Se o módulo precisa de dados V4MOS, rode o script `scripts/v4mos_fetch.sh`
+4. Se o módulo precisa de dados V4MOS, rode o script `API V4MOS via curl (x-client-id + x-client-secret + x-workspace-id)`
 5. Execute os checkpoints do módulo em ordem
 6. Em cada checkpoint:
    a. Mostre o que gerou

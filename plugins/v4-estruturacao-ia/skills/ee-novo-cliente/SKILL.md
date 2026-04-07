@@ -290,16 +290,36 @@ Inicialize `decisions.jsonl` como arquivo vazio (sem conteúdo).
      }
      ```
    - IMPORTANTE: cada cliente tem seu próprio Service Account vinculado ao workspace dele. Não reutilize credenciais entre clientes.
-3. Rode: `bash scripts/v4mos_fetch.sh clientes/{slug}/`
-4. Mostre ao operador um resumo dos dados obtidos:
+
+4. **Buscar dados de conectores via API V4MOS:**
+
+   Faça a chamada diretamente (NÃO dependa de scripts externos):
+
+   ```bash
+   curl -s \
+     -H "x-client-id: {CLIENT_ID}" \
+     -H "x-client-secret: {CLIENT_SECRET}" \
+     -H "x-workspace-id: {WORKSPACE_ID}" \
+     -H "Content-Type: application/json" \
+     "https://api.data.v4.marketing/workspaces/{WORKSPACE_ID}/integrations/status"
+   ```
+
+   **Autenticação:** headers `x-client-id` + `x-client-secret` + `x-workspace-id`. NÃO é OAuth. NÃO é Bearer token.
+
+   **Se retornar 200:** extraia a lista de conectores e salve em `clientes/{slug}/v4mos-cache.json`
+   **Se retornar 401/403:** credenciais erradas — peça ao operador pra verificar em Settings > Data API
+   **Se retornar 404:** endpoint pode não estar disponível pra esse workspace — siga sem dados V4MOS
+
+5. Mostre ao operador um resumo:
    ```
    CONECTORES V4MOS — {nome}
    ━━━━━━━━━━━━━━━━━━━━━━━━
    Conectores ativos: Meta Ads, Google Ads, Kommo (exemplo)
    Conectores com problema: Google Analytics (warning)
    ```
-   Nota: A API V4MOS só fornece dados de conectores/integrações. Dados de workspace, diagnóstico e perfil de marketing são coletados no briefing abaixo.
-5. Dados de conectores serão usados nas skills de diagnóstico de mídia e maturidade
+   Nota: A API V4MOS só fornece dados de conectores/integrações.
+   
+6. Dados de conectores serão usados nas skills de diagnóstico de mídia e maturidade
 
 **Se não tem workspace_id:**
 
@@ -444,11 +464,11 @@ Se `modulo_vendas` = false, o campo `sales_module` deve ser `null`.
 
 2. Pergunte: "Quer ajustar algum campo antes de salvar definitivamente?"
 3. Se sim, ajuste e salve novamente
-4. Gere o dashboard do cliente: `bash scripts/render_dashboard.sh clientes/{slug}/`
-5. Gere o dashboard geral: `bash scripts/render_dashboard.sh . --general`
-6. Registre a decisão:
-   ```bash
-   bash scripts/append_decision.sh clientes/{slug}/ "ee-novo-cliente" 0 "Cliente cadastrado. Briefing completo."
+4. Gere `clientes/{slug}/dashboard.html` com o estado inicial (todas skills pending)
+5. Atualize `dashboard-geral.html` com o novo cliente
+6. Appende em `clientes/{slug}/decisions.jsonl`:
+   ```json
+   {"ts":"YYYY-MM-DDTHH:MM:SSZ","skill":"ee-novo-cliente","checkpoint":0,"decision":"Cliente cadastrado. Briefing completo."}
    ```
 
 Mensagem final:
