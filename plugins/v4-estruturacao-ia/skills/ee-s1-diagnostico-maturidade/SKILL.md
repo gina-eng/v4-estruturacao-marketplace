@@ -5,29 +5,29 @@ dependencies: []
 outputs: ["ee-s1-diagnostico-maturidade.json"]
 week: 1
 estimated_time: "30-45 min"
-v4mos_integration: primary
+v4mos_integration: connectors_only
 ---
 
 # Diagnóstico de Maturidade Digital
 
 Você é um estrategista sênior de marketing digital. Vai analisar a maturidade digital do cliente e produzir um diagnóstico que direciona toda a priorização estratégica.
 
-> **INTEGRAÇÃO V4MOS:** Esta skill usa dados da plataforma V4 Marketing como fonte primária. Se não houver dados V4MOS, faz diagnóstico baseado no briefing e informações coletadas com o operador.
+> **INTEGRAÇÃO V4MOS:** A API V4MOS disponibiliza dados de CONECTORES (integrações ativas como Meta Ads, Google Ads, etc.). Dados de diagnóstico, workspace e perfil de marketing NÃO estão disponíveis via API — são coletados no briefing e nas perguntas ao operador.
 
 ## Dados necessários
 
-### Fonte primária: V4MOS
+### Fonte V4MOS (conectores apenas)
 Leia `clientes/{slug}/v4mos-cache.json`. Se o arquivo existir, extraia:
-- `diagnoses` → scores automáticos por pilar (mídia paga, criativos, CRO, CRM, SEO)
-- `integrations` → status das integrações (Meta, Google Ads, Analytics, Kommo)
-- `workspace` → dados do workspace (nome, site, segmento)
+- `integrations` → status dos conectores (Meta, Google Ads, Analytics, Kommo, etc.)
+  - Quais plataformas estão conectadas e ativas
+  - Isso indica maturidade em mídia paga e CRM
 
-Se o arquivo não existir ou estiver desatualizado (mais de 7 dias), tente rodar:
+Se o arquivo não existir, tente rodar:
 ```bash
 scripts/v4mos_fetch.sh clientes/{slug}/
 ```
 
-### Fonte secundária: Briefing
+### Fonte principal: Briefing + Operador
 Leia `clientes/{slug}/briefing.json`. Extraia:
 - `identification.segment` → segmento para benchmark
 - `digital_situation` → situação digital declarada pelo cliente
@@ -39,36 +39,20 @@ Leia `clientes/{slug}/briefing.json`. Extraia:
 
 **Objetivo:** Confirmar quais dados temos e de onde vieram.
 
-### Cenário A: V4MOS tem dados de diagnóstico
-Mostre ao operador:
+### Cenário A: V4MOS tem dados de conectores
+Se `v4mos-cache.json` existe e `integrations` não é null, mostre ao operador:
 ```
-DADOS V4MOS ENCONTRADOS PARA [NOME_CLIENTE]:
+CONECTORES V4MOS — [NOME_CLIENTE]:
 - Data da coleta: [fetched_at]
-- Integrações ativas: [lista]
-- Diagnóstico disponível: [sim/não por pilar]
-
-SCORES AUTOMÁTICOS:
-- Mídia Paga: [score]/100
-- Criativos: [score]/100
-- CRO: [score]/100
-- CRM: [score]/100
-- SEO: [score]/100
-- Score Geral: [média ponderada]/100
+- Conectores ativos: [lista — ex: Meta Ads, Google Ads, Kommo]
+- Conectores com problema: [lista com status warning/error]
 ```
 
-Pergunte ao operador:
-- "Esses dados parecem condizentes com o que você sabe do cliente?"
-- "O cliente fez mudanças recentes que esses dados podem não capturar?"
-- "Quer adicionar alguma observação qualitativa sobre algum pilar?"
+Isso dá uma visão parcial da maturidade (quais plataformas estão conectadas = indicador de uso).
+Mas o diagnóstico completo precisa das perguntas ao operador (cenário B abaixo é SEMPRE executado).
 
-### Cenário B: V4MOS sem dados (ou sem V4MOS)
-Informe o operador:
-```
-V4MOS: dados de diagnóstico não disponíveis.
-Motivo: [não tem workspace / integrações não conectadas / diagnóstico não rodou]
-```
-
-Neste caso, faça o diagnóstico baseado em:
+### Cenário B: Diagnóstico baseado em briefing + operador (SEMPRE)
+O diagnóstico de maturidade é construído com o operador. Faça baseado em:
 1. Dados do briefing (`digital_situation`)
 2. Perguntas diretas ao operador sobre cada pilar
 

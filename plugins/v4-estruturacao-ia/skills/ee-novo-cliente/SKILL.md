@@ -117,14 +117,13 @@ Inicialize `decisions.jsonl` como arquivo vazio (sem conteúdo).
 3. Rode: `bash scripts/v4mos_fetch.sh clientes/{slug}/`
 4. Mostre ao operador um resumo dos dados obtidos:
    ```
-   DADOS V4MOS — {nome}
-   ━━━━━━━━━━━━━━━━━━━
-   Integrações ativas: Meta Ads, Google Ads, Kommo (exemplo)
-   Diagnóstico de maturidade: Sim/Não (score X se existir)
-   Site: {url}
-   Segmento: {segmento}
+   CONECTORES V4MOS — {nome}
+   ━━━━━━━━━━━━━━━━━━━━━━━━
+   Conectores ativos: Meta Ads, Google Ads, Kommo (exemplo)
+   Conectores com problema: Google Analytics (warning)
    ```
-5. Esses dados serão usados para pré-preencher o briefing na Etapa 4
+   Nota: A API V4MOS só fornece dados de conectores/integrações. Dados de workspace, diagnóstico e perfil de marketing são coletados no briefing abaixo.
+5. Dados de conectores serão usados nas skills de diagnóstico de mídia e maturidade
 
 **Se não tem workspace_id:**
 
