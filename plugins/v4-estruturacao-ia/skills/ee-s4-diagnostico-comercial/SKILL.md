@@ -206,8 +206,8 @@ CRITERIOS DE QUALIFICACAO — {NOME_CLIENTE}
   Exemplo de lead 1-2★: "{descricao}"
 
 REGRA DE OURO:
-  Na ee-s0-duvida entre 3★ e 4★, classifique como {3★ ou 4★ — justifique a escolha}.
-  Na ee-s0-duvida entre 2★ e 3★, classifique como {2★ ou 3★ — justifique}.
+  Na ee-duvida entre 3★ e 4★, classifique como {3★ ou 4★ — justifique a escolha}.
+  Na ee-duvida entre 2★ e 3★, classifique como {2★ ou 3★ — justifique}.
 ```
 
 Pergunte ao operador:

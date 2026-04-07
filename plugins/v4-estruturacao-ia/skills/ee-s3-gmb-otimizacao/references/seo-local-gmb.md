@@ -190,7 +190,7 @@ A secao de Q&As e subestimada pela maioria dos negocios. Qualquer pessoa pode fa
 
 - **Controle narrativo:** Se voce nao responde, qualquer pessoa pode responder (e pode responder errado)
 - **SEO:** O Google indexa Q&As e pode mostra-las em resultados de busca
-- **Reducao de atrito:** Responde ee-s0-duvidas antes do cliente precisar ligar
+- **Reducao de atrito:** Responde ee-duvidas antes do cliente precisar ligar
 - **Keywords:** Oportunidade extra de incluir termos de busca nas respostas
 
 ### Como Escolher as 5 Perguntas
@@ -238,7 +238,7 @@ Avaliacoes sao o fator de proeminencia mais forte. Negocios com mais de 4.0 de m
 
 **Avaliacoes negativas:**
 - Responda rapidamente (ideal: menos de 24h)
-- Agradeca o ee-s0-feedback
+- Agradeca o ee-feedback
 - Nao seja defensivo
 - Reconheca o problema
 - Ofereca solucao offline ("Por favor, entre em contato pelo WhatsApp para resolvermos")

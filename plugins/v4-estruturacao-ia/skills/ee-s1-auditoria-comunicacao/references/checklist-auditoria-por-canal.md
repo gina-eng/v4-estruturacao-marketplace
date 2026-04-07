@@ -252,7 +252,7 @@ Checklist detalhado para auditar cada ponto de contato digital. Use como base pa
 | 9 | Tom de atendimento | Profissional e alinhado com o tom de voz da marca? | Alto |
 | 10 | Script de qualificacao | Tem perguntas padrao para qualificar o lead? | Alto |
 | 11 | Follow-up | Faz follow-up se o lead nao responde? Em quanto tempo? | Alto |
-| 12 | Encerramento | Fecha o atendimento de forma profissional? Pede ee-s0-feedback? | Baixo |
+| 12 | Encerramento | Fecha o atendimento de forma profissional? Pede ee-feedback? | Baixo |
 
 ### 5.3 Integracao
 

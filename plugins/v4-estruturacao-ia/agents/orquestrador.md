@@ -51,7 +51,7 @@ Em cada checkpoint:
 Se o operador quiser interromper:
 - Salve o checkpoint atual no state.json
 - Registre em decisions.jsonl: "Skill pausada no checkpoint {N} por decisão do operador"
-- Na próxima sessão, `/ee-s0-continuar` retoma daqui
+- Na próxima sessão, `/ee-continuar` retoma daqui
 
 ### 5. Ao finalizar uma skill
 
@@ -64,7 +64,7 @@ Se o operador quiser interromper:
 4. Atualize state.json: skill → `completed`
 5. Gere dashboard: `bash scripts/render_dashboard.sh clientes/{slug}/`
 6. Atualize dashboard geral: `bash scripts/render_dashboard.sh . --general`
-7. Sugira o próximo passo: "Próxima skill disponível: {X}. Quer ee-s0-continuar?"
+7. Sugira o próximo passo: "Próxima skill disponível: {X}. Quer ee-continuar?"
 
 ### 6. Ao trocar de semana
 

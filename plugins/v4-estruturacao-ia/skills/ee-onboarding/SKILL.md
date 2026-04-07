@@ -1,6 +1,6 @@
 ---
-name: ee-s0-onboarding
-description: "Setup inicial da workspace de estruturação IA. Configura diretórios, credenciais, e ensina o operador a usar o sistema. Use quando o operador disser /ee-s0-onboarding ou 'configurar workspace' ou 'primeiro uso'."
+name: ee-onboarding
+description: "Setup inicial da workspace de estruturação IA. Configura diretórios, credenciais, e ensina o operador a usar o sistema. Use quando o operador disser /ee-onboarding ou 'configurar workspace' ou 'primeiro uso'."
 ---
 
 # Onboarding — Setup da Workspace
@@ -94,13 +94,13 @@ COMO USAR O SISTEMA DE ESTRUTURAÇÃO IA
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 Comandos principais:
-  /ee-s0-novo-cliente      → Cadastrar um novo cliente (cria pasta, briefing, etc.)
-  ee-s0-continuar          → Retomar trabalho (mostra panorama de clientes + próximo passo)
-  /ee-s0-duvida [pergunta] → Tirar dúvida sobre o sistema
-  /ee-s0-feedback          → Reportar problema ou sugerir melhoria
+  /ee-novo-cliente      → Cadastrar um novo cliente (cria pasta, briefing, etc.)
+  ee-continuar          → Retomar trabalho (mostra panorama de clientes + próximo passo)
+  /ee-duvida [pergunta] → Tirar dúvida sobre o sistema
+  /ee-feedback          → Reportar problema ou sugerir melhoria
 
 Fluxo de trabalho:
-  1. Cadastre o cliente com /ee-s0-novo-cliente
+  1. Cadastre o cliente com /ee-novo-cliente
   2. O sistema guia semana a semana (diagnóstico → pesquisa → produção → vendas)
   3. Cada skill tem checkpoints — você valida antes de avançar
   4. Entregáveis são gerados como HTML (deploy Vercel) ou Google Sheets
@@ -149,12 +149,12 @@ Apresente a mensagem final:
 ```
 Workspace configurada com sucesso!
 
-Próximo passo: cadastre seu primeiro cliente com /ee-s0-novo-cliente
+Próximo passo: cadastre seu primeiro cliente com /ee-novo-cliente
 
-Se tiver dúvidas a qualquer momento, diga /ee-s0-duvida [sua pergunta].
+Se tiver dúvidas a qualquer momento, diga /ee-duvida [sua pergunta].
 ```
 
 Pergunte: "Quer cadastrar o primeiro cliente agora?"
 
-Se sim, inicie a skill `/ee-s0-novo-cliente`.
+Se sim, inicie a skill `/ee-novo-cliente`.
 Se não, encerre normalmente.

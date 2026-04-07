@@ -138,7 +138,7 @@ Princípio: Medo de perder (FOMO) é mais forte que desejo de ganhar. Mas APENAS
 
 ### Fórmula 1: Vagas limitadas (real)
 **Estrutura:** "Últimas [número] vagas para [oferta]"
-- "Últimas 5 vagas para ee-s0-onboarding em abril"
+- "Últimas 5 vagas para ee-onboarding em abril"
 - "Aceitamos apenas 3 novos clientes por mês"
 - "Turma de abril: 2 vagas restantes"
 

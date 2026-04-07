@@ -1,18 +1,18 @@
 ---
-name: ee-s0-feedback
-description: "Reporta problema ou sugestão sobre uma skill. Cria GitHub Issue estruturada. Use quando o operador disser /ee-s0-feedback, 'problema', 'bug na skill', 'isso deveria ser diferente'."
+name: ee-feedback
+description: "Reporta problema ou sugestão sobre uma skill. Cria GitHub Issue estruturada. Use quando o operador disser /ee-feedback, 'problema', 'bug na skill', 'isso deveria ser diferente'."
 ---
 
 # Feedback — Reportar Problema
 
-Você vai coletar ee-s0-feedback estruturado do operador e criar uma GitHub Issue no repositório do marketplace.
+Você vai coletar ee-feedback estruturado do operador e criar uma GitHub Issue no repositório do marketplace.
 
 ## Fluxo
 
 Faça 3 perguntas, uma por vez, de forma conversacional:
 
 ### Pergunta 1: Contexto
-"Sobre qual skill é o ee-s0-feedback?"
+"Sobre qual skill é o ee-feedback?"
 
 Se não ficou claro pelo contexto da conversa, pergunte. Se ficou claro (ex: o operador acabou de rodar uma skill e reclamou de algo), confirme: "Entendi que é sobre a skill {nome}. Correto?"
 
@@ -33,7 +33,7 @@ Se o operador não tiver sugestão, registre como "Operador não sugeriu soluç�
 
 ## Classificação automática
 
-Com base nas respostas, classifique o ee-s0-feedback em duas dimensões:
+Com base nas respostas, classifique o ee-feedback em duas dimensões:
 
 **Tipo** (escolha 1):
 - `qualidade-output` — Output gerado era genérico, errado, ou baixa qualidade
@@ -69,7 +69,7 @@ Use o `gh` CLI para criar a issue:
 gh issue create \
   --repo v4company/v4-estruturacao-marketplace \
   --title "Feedback: {skill} — {resumo em max 50 chars}" \
-  --label "ee-s0-feedback,skill:{skill-name},{severidade}" \
+  --label "ee-feedback,skill:{skill-name},{severidade}" \
   --body "$(cat <<'EOF'
 ## Skill
 **Nome:** {skill}
@@ -93,7 +93,7 @@ gh issue create \
 - Dados relevantes do briefing: {se aplicável}
 
 ---
-*Reportado via /ee-s0-feedback por operador em {data}*
+*Reportado via /ee-feedback por operador em {data}*
 EOF
 )"
 ```
@@ -111,10 +111,10 @@ Após criar a issue, mostre ao operador:
 ```
 Issue criada: {URL da issue}
 
-Obrigado pelo ee-s0-feedback! A equipe vai analisar.
-Quer ee-s0-continuar trabalhando ou tem mais algo para reportar?
+Obrigado pelo ee-feedback! A equipe vai analisar.
+Quer ee-continuar trabalhando ou tem mais algo para reportar?
 ```
 
 Se o `gh` CLI não estiver autenticado ou der erro:
-1. Salve o conteúdo da issue em `ee-s0-feedback-{timestamp}.md` na raiz da workspace
+1. Salve o conteúdo da issue em `ee-feedback-{timestamp}.md` na raiz da workspace
 2. Avise: "Não consegui criar a issue no GitHub (gh não autenticado). Salvei em {arquivo}. Quando puder, rode `gh auth login` e me diga que eu crio a issue."

@@ -1,6 +1,6 @@
 ---
-name: ee-s0-novo-cliente
-description: "Cadastra um novo cliente no sistema. Cria pasta, puxa dados do V4MOS, faz briefing complementar interativo. Use quando o operador disser /ee-s0-novo-cliente, 'novo cliente', 'cadastrar cliente', ou 'começar projeto'."
+name: ee-novo-cliente
+description: "Cadastra um novo cliente no sistema. Cria pasta, puxa dados do V4MOS, faz briefing complementar interativo. Use quando o operador disser /ee-novo-cliente, 'novo cliente', 'cadastrar cliente', ou 'começar projeto'."
 ---
 
 # Novo Cliente — Cadastro e Briefing
@@ -249,7 +249,7 @@ Se `modulo_vendas` = false, o campo `sales_module` deve ser `null`.
 5. Gere o dashboard geral: `bash scripts/render_dashboard.sh . --general`
 6. Registre a decisão:
    ```bash
-   bash scripts/append_decision.sh clientes/{slug}/ "ee-s0-novo-cliente" 0 "Cliente cadastrado. Briefing completo."
+   bash scripts/append_decision.sh clientes/{slug}/ "ee-novo-cliente" 0 "Cliente cadastrado. Briefing completo."
    ```
 
 Mensagem final:
@@ -261,5 +261,5 @@ Pasta: clientes/{slug}/
 Briefing: clientes/{slug}/briefing.json
 Dashboard: clientes/{slug}/dashboard.html
 
-Para começar a semana 1, diga: ee-s0-continuar {nome}
+Para começar a semana 1, diga: ee-continuar {nome}
 ```

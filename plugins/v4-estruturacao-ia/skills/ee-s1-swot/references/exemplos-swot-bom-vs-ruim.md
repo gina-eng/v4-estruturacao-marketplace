@@ -88,7 +88,7 @@ Para cada item da SWOT, aplique este teste:
 | RUIM | BOM |
 |------|-----|
 | "Muita concorrência" | "Growth Supplements captou R$15M em investimento e está subsidiando frete grátis + cupom de primeira compra agressivamente. Market share deles cresceu 8pp no último ano" |
-| "Mudanças no mercado" | "CPM médio no Meta para e-commerce fitness subiu 42% em 2025. Com ROAS já em queda, margem líquida pode ficar abaixo de 8% em 6 meses se tendência ee-s0-continuar" |
+| "Mudanças no mercado" | "CPM médio no Meta para e-commerce fitness subiu 42% em 2025. Com ROAS já em queda, margem líquida pode ficar abaixo de 8% em 6 meses se tendência ee-continuar" |
 | "Regulação" | "ANVISA publicou consulta pública sobre rotulagem de suplementos esportivos. Se aprovada, obrigaria reformulação de 12 dos 47 SKUs (custo estimado R$200k + 4 meses)" |
 | "Economia" | "Câmbio acima de R$6.00 impacta matéria-prima importada (whey WPC/WPI vem dos EUA). Cada R$0.50 de alta no dólar comprime R$2.30/kg no custo — margem bruta cai 3pp" |
 

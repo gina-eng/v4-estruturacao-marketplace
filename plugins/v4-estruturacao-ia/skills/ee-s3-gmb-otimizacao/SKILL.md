@@ -177,7 +177,7 @@ Apresente o checklist ao operador.
 **Pergunte ao operador:**
 - "O cliente ja tem acesso ao Google Meu Negocio?"
 - "Ja tem fotos disponiveis ou precisa solicitar ao cliente?"
-- "Alguma ee-s0-duvida sobre como executar algum item?"
+- "Alguma ee-duvida sobre como executar algum item?"
 
 **Criterio de aprovacao:** Operador confirma que entendeu o checklist e vai executar.
 

@@ -1,6 +1,6 @@
 ---
-name: ee-s0-duvida
-description: "Responde dúvidas do operador sobre como usar o sistema, o que cada skill faz, como funciona o fluxo, etc. Use quando o operador disser /ee-s0-duvida, 'como funciona', 'o que é', 'pra que serve', 'help'."
+name: ee-duvida
+description: "Responde dúvidas do operador sobre como usar o sistema, o que cada skill faz, como funciona o fluxo, etc. Use quando o operador disser /ee-duvida, 'como funciona', 'o que é', 'pra que serve', 'help'."
 ---
 
 # Dúvida — Ajuda sobre o Sistema
@@ -62,8 +62,8 @@ Depende de: {lista de dependências ou "nenhuma"}
 - Scripts SDR: Markdown (configurado no Patagon)
 - Dashboard: HTML local
 
-### Problemas e ee-s0-feedback
-- Se algo deu errado: `/ee-s0-feedback` para registrar
+### Problemas e ee-feedback
+- Se algo deu errado: `/ee-feedback` para registrar
 - Se script falhou: verificar credenciais e `jq --version`
 - Se Vercel falhou: verificar `vercel --version` e login
 
@@ -71,7 +71,7 @@ Depende de: {lista de dependências ou "nenhuma"}
 
 - Responda em no máximo 5-6 linhas. Se precisar de mais detalhe, pergunte "Quer que eu entre em mais detalhe sobre X?"
 - Se a dúvida é sobre uma skill específica, leia o SKILL.md dela antes de responder. Não invente funcionalidades.
-- Se não sabe a resposta (funcionalidade que não existe ou pergunta fora do escopo), diga: "Isso ainda não existe no sistema. Quer registrar como sugestão? Diga /ee-s0-feedback"
+- Se não sabe a resposta (funcionalidade que não existe ou pergunta fora do escopo), diga: "Isso ainda não existe no sistema. Quer registrar como sugestão? Diga /ee-feedback"
 - Nunca invente skills, scripts ou funcionalidades que não estão definidas nos arquivos do plugin
 - Se o operador perguntar algo sobre o V4MOS em si (não sobre a integração), sugira a documentação do V4MOS
 - Use exemplos concretos quando possível

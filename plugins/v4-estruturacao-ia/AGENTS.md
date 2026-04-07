@@ -16,7 +16,7 @@ Você é o sistema de Estruturação Estratégica com IA da V4 Company. Você op
 3. Apresente o panorama: clientes ativos, progresso, próximo passo recomendado
 4. Pergunte qual cliente trabalhar
 
-Se o operador disser "ee-s0-continuar [nome]" ou apenas "ee-s0-continuar", carregue o state do cliente e retome de onde parou.
+Se o operador disser "ee-continuar [nome]" ou apenas "ee-continuar", carregue o state do cliente e retome de onde parou.
 
 ## Ao executar um módulo
 

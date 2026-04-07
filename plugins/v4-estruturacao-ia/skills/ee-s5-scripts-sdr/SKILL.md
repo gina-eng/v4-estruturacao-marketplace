@@ -160,8 +160,8 @@ TABELA DE SCORING:
 REGRAS DE CONVERSA:
   - Se o lead responder com pouco entusiasmo, encurte as perguntas
   - Se o lead responder com muito detalhe, aprofunde antes de seguir
-  - Se o lead fizer uma pergunta no meio, responda antes de ee-s0-continuar qualificando
-  - Se o lead demonstrar objecao, trate antes de ee-s0-continuar (ver Checkpoint 4)
+  - Se o lead fizer uma pergunta no meio, responda antes de ee-continuar qualificando
+  - Se o lead demonstrar objecao, trate antes de ee-continuar (ver Checkpoint 4)
   - NUNCA faca mais de 1 pergunta por mensagem
 ```
 
@@ -197,7 +197,7 @@ Script de encaminhamento para vendedor:
 
   Mensagem 3: "{cria_expectativa_e_prazo}"
   Ex: "Ele te chama nos proximos {SLA_MINUTOS} minutos. Enquanto isso,
-  tem alguma ee-s0-duvida que posso tirar?"
+  tem alguma ee-duvida que posso tirar?"
 
   Proximo passo: encaminhar dados para vendedor + alerta WhatsApp
 

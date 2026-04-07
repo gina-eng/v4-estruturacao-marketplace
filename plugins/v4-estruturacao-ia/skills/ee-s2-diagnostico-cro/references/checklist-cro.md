@@ -120,7 +120,7 @@ A ordem importa. Cada secao leva o visitante um passo mais perto da conversao.
 | 4 | Como funciona | Reduzir incerteza (passo a passo) | Visitante tem medo de contratar |
 | 5 | Prova social | Gerar confianca (outros ja fizeram) | Visitante nao acredita |
 | 6 | Beneficios / diferenciais | Reforcar por que voce e diferente | Visitante compara com concorrente |
-| 7 | FAQ | Eliminar objecoes | Visitante sai com ee-s0-duvida |
+| 7 | FAQ | Eliminar objecoes | Visitante sai com ee-duvida |
 | 8 | CTA final | Fechar a conversao | Visitante nao converte |
 
 ### Checklist por secao

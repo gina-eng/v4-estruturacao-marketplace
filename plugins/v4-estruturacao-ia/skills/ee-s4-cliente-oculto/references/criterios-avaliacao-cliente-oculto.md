@@ -105,7 +105,7 @@ Framework completo para avaliacao de mystery shopping em PMEs brasileiras. Cada 
 
 | Nota | Descricao | Sinais |
 |------|-----------|--------|
-| 9-10 | Reconheceu a objecao, demonstrou valor antes de falar em preco, usou ROI ou comparacao. | "Entendo a preocupacao. Olha, o Joao tinha a mesma ee-s0-duvida e em 2 meses recuperou o investimento porque [resultado]." |
+| 9-10 | Reconheceu a objecao, demonstrou valor antes de falar em preco, usou ROI ou comparacao. | "Entendo a preocupacao. Olha, o Joao tinha a mesma ee-duvida e em 2 meses recuperou o investimento porque [resultado]." |
 | 7-8 | Boa resposta, demonstrou valor, mas poderia ser mais especifica. | "O valor reflete [beneficio], e a maioria dos clientes veem retorno em [prazo]." |
 | 5-6 | Tentou justificar, mas ficou na superficie. Ou foi direto para desconto. | "O preco e justo pelo que oferecemos" ou "posso ver um desconto" |
 | 3-4 | Ficou defensivo ou desconfortavel com a objecao. | "E esse o preco, nao tem como mudar" ou silencio constrangedor |
@@ -131,7 +131,7 @@ Framework completo para avaliacao de mystery shopping em PMEs brasileiras. Cada 
 | 9-10 | Propoe proximo passo claro e especifico, com data/horario. | "Que tal a gente marcar uma conversa de 15 minutos amanha as 14h pra eu entender melhor e montar uma proposta personalizada?" |
 | 7-8 | Propoe proximo passo, mas sem data especifica. | "Vou te mandar uma proposta, pode ser?" |
 | 5-6 | Tentativa timida de avancar. | "Se quiser, posso te mandar mais informacoes." |
-| 3-4 | Nao propoe proximo passo. Deixa na mao do lead. | "Qualquer ee-s0-duvida, estou a disposicao." |
+| 3-4 | Nao propoe proximo passo. Deixa na mao do lead. | "Qualquer ee-duvida, estou a disposicao." |
 | 1-2 | Encerra a conversa sem CTA. | "Ok, obrigado pelo contato." |
 | 0 | Conversa morreu sem conclusao. | Atendente parou de responder |
 

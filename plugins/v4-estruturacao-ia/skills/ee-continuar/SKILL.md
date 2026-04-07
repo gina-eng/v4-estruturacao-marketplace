@@ -1,6 +1,6 @@
 ---
-name: ee-s0-continuar
-description: "Retoma o trabalho com um cliente. Mostra panorama de todos os clientes e propõe próximo passo. Use quando o operador disser /ee-s0-continuar, 'ee-s0-continuar', 'retomar', 'voltar', ou simplesmente cumprimentar sem contexto."
+name: ee-continuar
+description: "Retoma o trabalho com um cliente. Mostra panorama de todos os clientes e propõe próximo passo. Use quando o operador disser /ee-continuar, 'ee-continuar', 'retomar', 'voltar', ou simplesmente cumprimentar sem contexto."
 ---
 
 # Continuar — Retomar Trabalho
@@ -8,13 +8,13 @@ description: "Retoma o trabalho com um cliente. Mostra panorama de todos os clie
 ## Ao ser invocado
 
 1. Leia todos os `clientes/*/state.json` no diretório de trabalho
-2. Se nenhum cliente existe: diga "Nenhum cliente cadastrado. Quer cadastrar? Diga /ee-s0-novo-cliente" e encerre
+2. Se nenhum cliente existe: diga "Nenhum cliente cadastrado. Quer cadastrar? Diga /ee-novo-cliente" e encerre
 3. Se existe 1 cliente: carregue direto (pule para "Ao selecionar um cliente")
 4. Se existem múltiplos: mostre panorama e pergunte qual
 
 ## Se o operador deu o nome no comando
 
-Ex: "ee-s0-continuar Padaria Silva" — resolva o slug (lowercase, hifenizado, sem acento) e tente encontrar `clientes/{slug}/state.json`. Se encontrou, carregue direto sem mostrar panorama. Se não encontrou, faça busca parcial no nome dos clientes disponíveis e sugira.
+Ex: "ee-continuar Padaria Silva" — resolva o slug (lowercase, hifenizado, sem acento) e tente encontrar `clientes/{slug}/state.json`. Se encontrou, carregue direto sem mostrar panorama. Se não encontrou, faça busca parcial no nome dos clientes disponíveis e sugira.
 
 ## Panorama (múltiplos clientes)
 
@@ -91,7 +91,7 @@ Bloqueadas:
 
 Última decisão: "Tom mais informal, foco em donas de casa 35-50" (06/04)
 
-Recomendo ee-s0-continuar ee-s1-auditoria-comunicacao (checkpoint 2). Quer seguir ou prefere outra skill?
+Recomendo ee-continuar ee-s1-auditoria-comunicacao (checkpoint 2). Quer seguir ou prefere outra skill?
 ```
 
 ## Contexto a carregar ao retomar uma skill

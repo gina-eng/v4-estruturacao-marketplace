@@ -34,7 +34,7 @@ Se alguma dependencia nao estiver completa, avise:
 
 > BLOQUEIO: A skill {NOME_SKILL} precisa estar completa antes de configurar o SDR IA.
 > Status atual: {status}
-> Acao: execute `/ee-s5-scripts-sdr` (ou `/ee-s3-crm-setup`) antes de ee-s0-continuar.
+> Acao: execute `/ee-s5-scripts-sdr` (ou `/ee-s3-crm-setup`) antes de ee-continuar.
 
 Confirme com o operador:
 
@@ -46,7 +46,7 @@ Confirme com o operador:
 > - Scripts foram aprovados pelo cliente? [sim/nao]
 > - Quem e o vendedor que vai receber os alertas de leads quentes? Nome e WhatsApp?
 >
-> Se algum item for "nao", precisamos resolver antes de ee-s0-continuar.
+> Se algum item for "nao", precisamos resolver antes de ee-continuar.
 
 ---
 
@@ -287,7 +287,7 @@ PASSO 4: Configurar escalamento
   Se ninguem responder em {ESCALATION_MINUTES} minutos:
     → Enviar mensagem automatica ao lead: "{mensagem_de_espera}"
     Ex: "Oi, [nome]! Nosso especialista esta finalizando outro atendimento
-    e ja vai te chamar. Enquanto isso, tem alguma ee-s0-duvida que posso tirar?"
+    e ja vai te chamar. Enquanto isso, tem alguma ee-duvida que posso tirar?"
 
 PASSO 5: Configurar relatorio diario (opcional)
   Relatorio automatico diario as {HORARIO}:
@@ -420,7 +420,7 @@ Apos os 4 checkpoints aprovados:
    - "SDR IA configurado, testado e no ar!"
    - "Recomendacoes pos go-live:"
    - "  1. Monitorar os primeiros 20 leads reais (ajustar scoring se necessario)"
-   - "  2. Coletar ee-s0-feedback do vendedor sobre qualidade dos leads"
+   - "  2. Coletar ee-feedback do vendedor sobre qualidade dos leads"
    - "  3. Revisar metricas apos 7 dias: taxa de qualificacao, SLA cumprido, conversao"
    - "  4. Ajustar scripts com base nos dados reais"
 

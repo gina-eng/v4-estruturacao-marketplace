@@ -123,7 +123,7 @@ O Google combina seus títulos e descrições automaticamente. Por isso:
 2. **Resultado com número** — "340 restaurantes já economizam R$ 3.000/mês"
 3. **Curiosidade/pergunta** — "Você sabia que 73% dos leads não recebem resposta em 24h?"
 4. **Prova social** — "Avaliado com 4.9★ por +200 clientes"
-5. **Urgência real** — "Últimas 5 vagas para ee-s0-onboarding em abril"
+5. **Urgência real** — "Últimas 5 vagas para ee-onboarding em abril"
 6. **Oferta direta** — "Diagnóstico gratuito: descubra por que seus anúncios não convertem"
 
 ### 2. Fórmulas de copy comprovadas
