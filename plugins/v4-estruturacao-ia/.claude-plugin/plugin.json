@@ -3,5 +3,8 @@
   "version": "0.1.0",
   "description": "Estruturação estratégica com IA para clientes V4. Skills interativas, integração V4MOS, entregáveis em HTML/Sheets.",
   "skills": ["./skills/"],
-  "agents": ["./agents/"]
+  "agents": [
+    "./agents/orquestrador.md",
+    "./agents/revisor-qualidade.md"
+  ]
 }
