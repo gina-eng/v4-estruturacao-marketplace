@@ -26,60 +26,154 @@ Derive o slug do nome: lowercase, sem acentos, espaços viram hífens. Exemplo: 
 
 ### Se o operador escolheu BUSCA AUTOMÁTICA:
 
-Lance subagents em paralelo para pesquisar:
-
-Use o site e Instagram fornecidos como ponto de partida. Lance subagents em paralelo:
+Lance subagents em paralelo para pesquisar. Use o site e Instagram fornecidos como ponto de partida:
 
 **Subagent 1 — Site e empresa:**
-- WebFetch no site fornecido: extrair descrição, produtos/serviços, localização, contato, preços se visíveis
-- Verificar SSL, responsividade
-- Extrair textos do hero, about, serviços
+- WebFetch no site fornecido: extrair TUDO — hero text, about, serviços, preços, depoimentos, FAQ, rodapé (CNPJ, endereço)
+- Navegar páginas internas se existirem: /sobre, /servicos, /contato
+- Verificar SSL, responsividade, PageSpeed básico
 
 **Subagent 2 — Redes sociais e reputação:**
-- WebFetch no Instagram fornecido: bio, tipo de conteúdo, frequência
-- WebSearch: "{nome_empresa} Google Meu Negócio"
+- WebFetch no Instagram fornecido: bio completa, tipo de conteúdo, frequência, destaques
+- WebSearch: "{nome_empresa} Google Meu Negócio" — extrair avaliações, horários, fotos
 - WebSearch: "{nome_empresa} avaliações" ou reclame aqui
 
 **Subagent 3 — Mercado e concorrentes:**
 - A partir do segmento inferido do site: WebSearch "concorrentes de {nome_empresa}" ou "{segmento} {cidade}"
-- WebSearch: "{segmento} mercado brasil"
-- Identificar 3-5 concorrentes automaticamente
+- WebSearch: "{segmento} mercado brasil tamanho"
+- Para cada concorrente encontrado: WebFetch no site deles (hero, proposta de valor, preços)
+- Identificar 3-5 concorrentes com diferenciais percebidos
 
-Com os resultados, monte um resumo e apresente ao operador EM BATCH para confirmação:
+### Salvar pesquisa como artefato permanente
+
+**ANTES de mostrar o resumo ao operador**, salve TODA a pesquisa bruta em `clientes/{slug}/research.md`.
+
+Este arquivo é o deep research do cliente — fonte de verdade pra todas as skills downstream. Formato:
+
+```markdown
+# Deep Research — {nome_empresa}
+**Data:** {YYYY-MM-DD}
+**Fontes:** site ({url}), Instagram ({handle}), Google, GMB
+
+---
+
+## 1. Site — Análise Completa
+
+### Textos extraídos
+**Hero:** {texto do hero}
+**Sobre:** {texto da página sobre}
+**Serviços:** {lista de serviços com descrições}
+**Depoimentos:** {depoimentos encontrados}
+**FAQ:** {perguntas e respostas se existirem}
+**Rodapé:** {CNPJ, endereço, contatos}
+
+### Dados técnicos
+- SSL: {sim/não}
+- Mobile-friendly: {sim/não}
+- PageSpeed estimado: {rápido/médio/lento}
+- Tecnologia: {WordPress, Wix, custom, etc.}
+
+---
+
+## 2. Instagram — @{handle}
+
+### Bio
+{bio completa}
+
+### Conteúdo
+- Tipo predominante: {fotos/carrossel/reels/stories}
+- Frequência estimada: {X posts/semana}
+- Tom de voz observado: {formal/casual/etc}
+- Temas recorrentes: {lista}
+- Engajamento: {alto/médio/baixo}
+
+---
+
+## 3. Google Meu Negócio
+
+- Status: {ativo/não encontrado}
+- Avaliações: {X estrelas, Y avaliações}
+- Categoria: {categoria}
+- Fotos: {quantidade}
+- Posts recentes: {sim/não}
+
+---
+
+## 4. Reputação Online
+
+- Reclame Aqui: {encontrado/não}
+- Avaliações Google: {resumo}
+- Menções relevantes: {links}
+
+---
+
+## 5. Mercado e Concorrentes
+
+### Tamanho do mercado
+{dados encontrados sobre TAM/segmento}
+
+### Concorrentes identificados
+
+#### {Concorrente 1}
+- Site: {url}
+- Proposta de valor: {hero text deles}
+- Diferencial percebido: {o que parece diferente}
+- Preço/ticket: {se visível}
+
+#### {Concorrente 2}
+[mesmo formato]
+
+#### {Concorrente 3}
+[mesmo formato]
+
+### Posicionamento comparativo
+{análise breve de como o cliente se posiciona vs concorrentes}
+
+---
+
+## 6. Dados inferidos (a confirmar com operador)
+
+| Campo | Valor inferido | Confiança | Fonte |
+|-------|---------------|-----------|-------|
+| Segmento | {x} | alta/média/baixa | site |
+| Localização | {x} | alta | rodapé site |
+| Tempo de mercado | {x} | baixa | estimativa |
+| Produto principal | {x} | alta | site |
+| Ticket médio | {x} | baixa | estimativa |
+```
+
+### Apresentar resumo ao operador
+
+Depois de salvar o research.md, mostre um resumo compacto para confirmação EM BATCH:
 
 ```
-PESQUISA AUTOMÁTICA — {nome}
-━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PESQUISA SALVA — {nome}
+━━━━━━━━━━━━━━━━━━━━━━
 
-Encontrei o seguinte. Confirme ou corrija cada item:
+Pesquisa completa em: clientes/{slug}/research.md
+
+Confirme ou corrija os dados principais:
 
 EMPRESA:
-  Nome completo: {nome encontrado}              ✅ correto? 
-  Segmento: {segmento inferido}                  ✅ correto?
-  Localização: {cidade/estado}                   ✅ correto?
-  Tempo de mercado: {anos estimados}             ✅ correto?
-  Site: {url}                                    ✅ correto?
-  Instagram: {handle}                            ✅ correto?
+  Nome: {nome}                    ✅ correto?
+  Segmento: {segmento}            ✅ correto?
+  Localização: {cidade}           ✅ correto?
+  Produto: {produto}              ✅ correto?
 
-PRODUTO:
-  Principal: {produto/serviço inferido}          ✅ correto?
-  Ticket médio estimado: {range}                 ✅ correto?
-
-CONCORRENTES IDENTIFICADOS:
-  1. {concorrente 1} — {diferencial percebido}   ✅ correto?
-  2. {concorrente 2} — {diferencial percebido}   ✅ correto?
-  3. {concorrente 3} — {diferencial percebido}   ✅ correto?
+CONCORRENTES:
+  1. {nome} — {diferencial}       ✅ correto?
+  2. {nome} — {diferencial}       ✅ correto?
+  3. {nome} — {diferencial}       ✅ correto?
 
 PRESENÇA DIGITAL:
-  Site ativo: {sim/não}
-  Instagram: {seguidores estimados}
-  Google Meu Negócio: {ativo/não encontrado}
-  Anúncios Meta: {encontrados/não}
+  Site: {status}
+  Instagram: {status}
+  GMB: {status}
 
 O que está errado ou faltando?
 ```
 
-O operador corrige o que precisa. Itens confirmados vão direto pro briefing.json. Itens que a pesquisa não encontrou serão perguntados manualmente na Etapa 4.
+O operador corrige. Itens confirmados vão pro briefing.json. research.md permanece como fonte de consulta para todas as skills.
 
 **IMPORTANTE:** Campos que NUNCA podem ser inferidos (sempre perguntar manualmente):
 - Descrição dos 3 melhores clientes

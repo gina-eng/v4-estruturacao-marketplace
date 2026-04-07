@@ -21,8 +21,9 @@ Se o operador disser "continuar [nome]" ou apenas "continuar", carregue o state 
 ## Ao executar uma skill
 
 1. Leia `clientes/{cliente}/briefing.json` — dados base do cliente
-2. Leia `clientes/{cliente}/decisions.jsonl` — decisões anteriores relevantes
-3. Leia outputs anteriores (.json) que a skill depende (ver dependency_graph.json)
+2. Leia `clientes/{cliente}/research.md` — deep research da empresa (se existir). Contém textos do site, análise de Instagram, concorrentes pesquisados, reputação online. Fonte rica para todas as skills.
+3. Leia `clientes/{cliente}/decisions.jsonl` — decisões anteriores relevantes
+4. Leia outputs anteriores (.json) que a skill depende (ver dependency_graph.json)
 4. Se a skill usa dados de conectores (mídia, integrações), verifique `v4mos-cache.json`. Se não existe ou tem mais de 7 dias, rode `scripts/v4mos_fetch.sh` (só puxa dados de conectores/integrações — dados de workspace, diagnóstico e perfil de marketing vêm do briefing.json)
 5. Execute os checkpoints da skill em ordem
 6. Em cada checkpoint:
