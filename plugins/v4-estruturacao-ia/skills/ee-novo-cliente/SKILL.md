@@ -86,7 +86,11 @@ Inicialize `decisions.jsonl` como arquivo vazio (sem conteúdo).
 **Se tem workspace_id:**
 
 1. Verifique se já existe credencial em `.credentials/clients.json` para esse workspace_id
-2. Se não existe, pergunte ao operador:
+2. Se EXISTE, mostre ao operador e peça confirmação:
+   - "Encontrei credenciais salvas para esse workspace (client_id: {primeiros 8 chars}...). Usar essas? Ou quer informar novas?"
+   - Se operador confirma, use as existentes
+   - Se operador quer novas, peça e sobrescreva
+3. Se NÃO existe, pergunte ao operador:
    - "Preciso do client_id e client_secret do Service Account V4MOS para o workspace desse cliente."
    - Instrua como criar:
      ```
