@@ -18,7 +18,7 @@ Voce e um especialista em SEO local e Google Business Profile. Vai construir, ju
 
 Leia os seguintes arquivos do diretorio do cliente:
 
-1. `briefing.json` — dados base do cliente (OBRIGATORIO)
+1. `client.json` (seção `briefing`) — dados base do cliente (OBRIGATORIO)
 2. `ee-s1-persona-icp.json` — ICP e persona (OBRIGATORIO — depende da skill ee-s1-persona-icp)
 
 Extraia do briefing:
@@ -188,11 +188,11 @@ Apresente o checklist ao operador.
 Apos os 3 checkpoints aprovados:
 
 1. **Salve o output estruturado** em `clientes/{slug}/semana-3/ee-s3-gmb-otimizacao.json` seguindo o schema.json da skill
-2. **Registre a decisao** — appende em `decisions.jsonl`:
+2. **Registre a decisao** — appende em `client.json` (seção `history`):
    ```json
    {"ts":"[ISO]","skill":"ee-s3-gmb-otimizacao","checkpoint":3,"decision":"Perfil GMB otimizado. Descricao aprovada, 4 posts + 5 Q&As gerados, checklist entregue ao operador."}
    ```
-3. **Atualize state.json** — marque `ee-s3-gmb-otimizacao` como `completed`
+3. **Atualize client.json (progress)** — marque `ee-s3-gmb-otimizacao` como `completed`
 4. **Informe proximos passos:**
    - "Conteudo GMB gerado e checklist entregue. O operador deve executar a configuracao no Google Business Profile."
    - "Acompanhar: verificar em 7 dias se o perfil atingiu 100% de completude."

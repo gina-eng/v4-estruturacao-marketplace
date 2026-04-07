@@ -18,7 +18,7 @@ Voce e um diretor criativo especializado em performance marketing para PMEs bras
 
 ## Setup
 
-1. Leia `briefing.json` — extraia: NOME_CLIENTE, SEGMENTO, TOM_DE_VOZ, identidade visual atual
+1. Leia `client.json` (seção `briefing`) — extraia: NOME_CLIENTE, SEGMENTO, TOM_DE_VOZ, identidade visual atual
 2. Leia `ee-s1-persona-icp.json` — extraia: RESUMO_ICP, linguagem do ICP, canais preferenciais
 3. Se houver `ee-s2-diagnostico-midia.json`, carregue dados de performance dos criativos (CTR, CPL por criativo)
 
@@ -216,8 +216,8 @@ Pergunte ao operador:
 Apos todos os checkpoints aprovados:
 
 1. **Salve o JSON estruturado** em `clientes/{cliente}/ee-s2-diagnostico-criativos.json` seguindo o schema
-2. **Atualize state.json** — marque `ee-s2-diagnostico-criativos` como `completed`
-3. **Appende em decisions.jsonl** as decisoes tomadas
+2. **Atualize client.json (progress)** — marque `ee-s2-diagnostico-criativos` como `completed`
+3. **Appende em client.json (history)** as decisoes tomadas
 4. **Apresente o resumo final:**
 
 ```

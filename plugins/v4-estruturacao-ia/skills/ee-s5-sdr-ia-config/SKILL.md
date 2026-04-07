@@ -24,7 +24,7 @@ Voce e um guia tecnico para configuracao do agente SDR IA no Patagon com integra
 
 ## Setup
 
-1. Leia `briefing.json` do cliente — extraia: NOME_CLIENTE, PRODUTO_SERVICO
+1. Leia `client.json` (seção `briefing`) do cliente — extraia: NOME_CLIENTE, PRODUTO_SERVICO
 2. Leia `ee-s5-scripts-sdr.json` — extraia: TODOS os scripts, perguntas, fluxos, objecoes
 3. Leia `ee-s4-diagnostico-comercial.json` — extraia: criterios de qualificacao 1-5 estrelas, SLA
 4. Leia `ee-s3-brandbook.json` — extraia: TOM_DE_VOZ, nome do agente
@@ -410,11 +410,11 @@ Pergunte ao operador:
 Apos os 4 checkpoints aprovados:
 
 1. **Salve o JSON estruturado** em `clientes/{slug}/semana-5/ee-s5-sdr-ia-config.json` seguindo o schema.json da skill
-2. **Registre a decisao** — appende em `decisions.jsonl`:
+2. **Registre a decisao** — appende em `client.json` (seção `history`):
    ```json
    {"ts":"[ISO]","skill":"ee-s5-sdr-ia-config","checkpoint":4,"decision":"SDR IA configurado e testado. 5/5 testes passaram. Agente: [nome]. Integracao Kommo ativa. Go-live aprovado."}
    ```
-3. **Atualize state.json** — marque `ee-s5-sdr-ia-config` como `completed`
+3. **Atualize client.json (progress)** — marque `ee-s5-sdr-ia-config` como `completed`
 4. **Ative o agente no Patagon** (com aprovacao do operador e do cliente)
 5. **Informe proximos passos:**
    - "SDR IA configurado, testado e no ar!"

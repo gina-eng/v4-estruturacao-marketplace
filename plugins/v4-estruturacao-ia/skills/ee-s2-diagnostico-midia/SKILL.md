@@ -18,9 +18,9 @@ Voce e um especialista em midia paga com foco em performance para PMEs brasileir
 
 ## Setup
 
-1. Leia `briefing.json` — extraia: NOME_CLIENTE, SEGMENTO, BUDGET_MENSAL, OBJETIVO_MIDIA
+1. Leia `client.json` (seção `briefing`) — extraia: NOME_CLIENTE, SEGMENTO, BUDGET_MENSAL, OBJETIVO_MIDIA
 2. Leia `ee-s1-persona-icp.json` — extraia: RESUMO_ICP, canais preferenciais do ICP
-3. Verifique `v4mos-cache.json`:
+3. Verifique `client.json` (seção `connectors`):
    - Se existe: extraia dados de MediaInvestment, integracoes ativas (Meta Ads, Google Ads)
    - Se nao existe: rode `bash a API V4MOS via curl (veja ee-novo-cliente Etapa 3)` para buscar
    - Se nao ha workspace V4MOS: peca dados ao operador (exportacao manual dos ultimos 90 dias)
@@ -199,8 +199,8 @@ Pergunte ao operador:
 Apos todos os checkpoints aprovados:
 
 1. **Salve o JSON estruturado** em `clientes/{cliente}/ee-s2-diagnostico-midia.json` seguindo o schema
-2. **Atualize state.json** — marque `ee-s2-diagnostico-midia` como `completed`
-3. **Appende em decisions.jsonl** as decisoes tomadas
+2. **Atualize client.json (progress)** — marque `ee-s2-diagnostico-midia` como `completed`
+3. **Appende em client.json (history)** as decisoes tomadas
 4. **Apresente o resumo final:**
 
 ```

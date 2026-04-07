@@ -39,10 +39,10 @@ Depende de: {lista de dependências ou "nenhuma"}
 ```
 
 ### State management
-- Como funciona o state.json (progresso por skill)
-- Como funciona o decisions.jsonl (histórico de decisões)
-- Como funciona o briefing.json (dados do cliente)
-- O que é o v4mos-cache.json (cache de dados da API)
+- Como funciona o client.json (progress) (progresso por skill)
+- Como funciona o client.json (history) (histórico de decisões)
+- Como funciona o client.json (briefing) (dados do cliente)
+- O que é o client.json (connectors) (cache de dados da API)
 
 ### Dashboards
 - Como ver o progresso: `clientes/{nome}/dashboard.html` (por cliente)
@@ -53,7 +53,7 @@ Depende de: {lista de dependências ou "nenhuma"}
 - Credenciais ficam em `.credentials/clients.json`
 - Cada workspace tem client_id + client_secret
 - Service Account criado em V4MOS > Settings > Data API
-- Dados cacheados em `v4mos-cache.json` (refresh a cada 7 dias)
+- Dados cacheados em `client.json` (seção `connectors`) (refresh a cada 7 dias)
 
 ### Entregáveis
 - Diagnósticos/relatórios: HTML deployado na Vercel (operador compartilha link)

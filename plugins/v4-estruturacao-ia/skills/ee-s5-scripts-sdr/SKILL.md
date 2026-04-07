@@ -24,7 +24,7 @@ Voce e um especialista em scripts de vendas conversacionais para WhatsApp. Vai c
 
 ## Setup
 
-1. Leia `briefing.json` do cliente — extraia: NOME_CLIENTE, PRODUTO_SERVICO, TICKET_MEDIO
+1. Leia `client.json` (seção `briefing`) do cliente — extraia: NOME_CLIENTE, PRODUTO_SERVICO, TICKET_MEDIO
 2. Leia `ee-s1-persona-icp.json` — extraia: RESUMO_ICP, dores, comportamento, canais
 3. Leia `ee-s4-diagnostico-comercial.json` — extraia: criterios de qualificacao 1-5 estrelas, objecoes mapeadas, SLA
 4. Leia `ee-s3-brandbook.json` — extraia: TOM_DE_VOZ, personalidade da marca, vocabulario, palavras proibidas
@@ -375,11 +375,11 @@ Pergunte ao operador:
 Apos os 5 checkpoints aprovados:
 
 1. **Salve o JSON estruturado** em `clientes/{slug}/semana-5/ee-s5-scripts-sdr.json` seguindo o schema.json da skill
-2. **Registre a decisao** — appende em `decisions.jsonl`:
+2. **Registre a decisao** — appende em `client.json` (seção `history`):
    ```json
    {"ts":"[ISO]","skill":"ee-s5-scripts-sdr","checkpoint":5,"decision":"Scripts SDR IA aprovados. Agente: [nome]. X perguntas de qualificacao. Y objecoes tratadas. Pronto para configurar no Patagon."}
    ```
-3. **Atualize state.json** — marque `ee-s5-scripts-sdr` como `completed`
+3. **Atualize client.json (progress)** — marque `ee-s5-scripts-sdr` como `completed`
 4. **Informe proximos passos:**
    - "Scripts do SDR IA salvos. Proximo passo: `/ee-s5-sdr-ia-config` para configurar tudo no Patagon e integrar com Kommo."
    - "IMPORTANTE: estes scripts devem ser aprovados pelo CLIENTE antes de configurar. Sugiro que o operador compartilhe com o cliente para validacao final."

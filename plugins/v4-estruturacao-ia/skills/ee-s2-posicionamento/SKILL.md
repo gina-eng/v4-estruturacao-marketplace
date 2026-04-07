@@ -19,7 +19,7 @@ Voce e um brand strategist senior especializado em ee-s2-posicionamento para PME
 
 ## Setup
 
-1. Leia `briefing.json` — extraia: NOME_CLIENTE, SEGMENTO, PRODUTO_SERVICO, marca_valores
+1. Leia `client.json` (seção `briefing`) — extraia: NOME_CLIENTE, SEGMENTO, PRODUTO_SERVICO, marca_valores
 2. Leia `ee-s1-persona-icp.json` — extraia: RESUMO_ICP, dores, desejos, linguagem, Jobs-to-be-Done
 3. Leia `ee-s2-pesquisa-mercado.json` — extraia: DIFERENCIAIS_REAIS, POSICIONAMENTOS_CONCORRENTES, mapa_competitivo, oportunidade_inexplorada
 4. Leia `ee-s1-swot.json` — extraia: RESUMO_SWOT (forcas + oportunidades prioritarias)
@@ -305,8 +305,8 @@ Pergunte:
 Apos aprovacao final:
 
 1. **Salve o JSON estruturado** em `clientes/{cliente}/ee-s2-posicionamento.json` seguindo o schema
-2. **Atualize state.json** — marque `ee-s2-posicionamento` como `completed`
-3. **Appende em decisions.jsonl** as decisoes de cada checkpoint (direcao escolhida, PUV, tagline)
+2. **Atualize client.json (progress)** — marque `ee-s2-posicionamento` como `completed`
+3. **Appende em client.json (history)** as decisoes de cada checkpoint (direcao escolhida, PUV, tagline)
 4. **Apresente o resumo final:**
 
 ```

@@ -18,8 +18,8 @@ Você é o revisor de qualidade do sistema de Estruturação IA. Você é invoca
 
 1. **Output JSON** — o arquivo que está sendo revisado (ex: `ee-s1-persona-icp.json`)
 2. **Schema** — `skills/{skill-name}/schema.json` (se existir)
-3. **Briefing** — `clientes/{slug}/briefing.json`
-4. **Decisions** — `clientes/{slug}/decisions.jsonl` (filtrado para a skill)
+3. **Briefing** — `clientes/{slug}/client.json (briefing)`
+4. **Decisions** — `clientes/{slug}/client.json (history)` (filtrado para a skill)
 5. **Outputs de dependências** — JSONs das skills dependentes (para verificar consistência)
 
 ## Checklist de revisão
@@ -50,7 +50,7 @@ Se existem outputs de skills anteriores, verifique cruzamentos:
 - [ ] Se usa PUV/ee-s2-posicionamento → bate com `ee-s2-posicionamento.json` (proposta de valor, território)
 - [ ] Se usa tom de voz → bate com `ee-s3-brandbook.json` (se existir) ou `briefing.brand.voice_tone`
 - [ ] Se referencia diagnósticos → dados batem com os diagnósticos gerados
-- [ ] Decisões do operador registradas em `decisions.jsonl` foram respeitadas
+- [ ] Decisões do operador registradas em `client.json` (seção `history`) foram respeitadas
 
 Exemplo de inconsistência: ee-s1-persona-icp definiu "donas de casa 35-50" mas ee-s3-copy-anuncios fala para "jovens empreendedores 25-35". Isso é uma falha grave.
 
@@ -162,7 +162,7 @@ Se `approved: false`:
   Recomendo ajustar os itens acima antes de exportar. Quer que eu corrija?
   ```
 - Se o operador aprovar as correções: aplique, re-valide, e prossiga
-- Se o operador quiser exportar mesmo assim: permita, mas registre em decisions.jsonl: "Output exportado com {N} issues pendentes por decisão do operador"
+- Se o operador quiser exportar mesmo assim: permita, mas registre em client.json (history): "Output exportado com {N} issues pendentes por decisão do operador"
 
 ## Regras
 

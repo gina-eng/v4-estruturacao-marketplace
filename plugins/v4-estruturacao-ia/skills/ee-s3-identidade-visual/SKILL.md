@@ -4,7 +4,7 @@ description: "Cria o conceito estratégico de identidade visual: paleta de cores
 dependencies:
   - ee-s2-posicionamento
 inputs:
-  - briefing.json
+  - client.json (briefing)
   - ee-s2-posicionamento.json
 output: ee-s3-identidade-visual.json
 week: 3
@@ -20,9 +20,9 @@ Você é um diretor de arte com 15 anos de experiência em branding para PMEs br
 
 Antes de iniciar, carregue:
 
-1. `briefing.json` — nome, segmento, concorrentes
+1. `client.json` (seção `briefing`) — nome, segmento, concorrentes
 2. `ee-s2-posicionamento.json` — PUV, ee-s2-posicionamento, território de marca, tom de voz
-3. `decisions.jsonl` — decisões anteriores relevantes (especialmente sobre persona e ee-s2-posicionamento)
+3. `client.json` (seção `history`) — decisões anteriores relevantes (especialmente sobre persona e ee-s2-posicionamento)
 
 Se algum desses arquivos não existir, avise o operador e sugira rodar as dependências primeiro.
 
@@ -82,8 +82,8 @@ Consulte `references/exemplos-paleta-por-segmento.md` para referência de paleta
 ### Ao aprovar
 
 Salve o JSON parcial com `creative_concept`, `color_palette[]`, `typography{}` e `shape_guidelines`.
-Atualize `state.json` → checkpoint: 1.
-Appende decisão em `decisions.jsonl`.
+Atualize `client.json` (seção `progress`) → checkpoint: 1.
+Appende decisão em `client.json` (seção `history`).
 
 ---
 
@@ -135,8 +135,8 @@ Prompt: [prompt completo em inglês]
 ### Ao aprovar
 
 Salve os `logo_prompts[3]` no JSON.
-Atualize `state.json` → checkpoint: 2.
-Appende decisão em `decisions.jsonl`.
+Atualize `client.json` (seção `progress`) → checkpoint: 2.
+Appende decisão em `client.json` (seção `history`).
 
 ---
 
@@ -169,8 +169,8 @@ Após o operador gerar os logos e informar a direção escolhida, organize o **r
 ### Ao aprovar
 
 Salve o `ee-s3-identidade-visual.json` completo com todas as seções.
-Atualize `state.json` → status: "completed", checkpoint: 3.
-Appende decisão final em `decisions.jsonl`.
+Atualize `client.json` (seção `progress`) → status: "completed", checkpoint: 3.
+Appende decisão final em `client.json` (seção `history`).
 Atualize o dashboard.
 
 ---

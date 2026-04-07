@@ -5,7 +5,7 @@ dependencies:
   - ee-s2-posicionamento
   - ee-s1-persona-icp
 inputs:
-  - briefing.json
+  - client.json (briefing)
   - ee-s2-posicionamento.json
   - ee-s1-persona-icp.json
 output: ee-s3-brandbook.json
@@ -22,10 +22,10 @@ Você é um brand strategist e copywriter sênior com experiência em branding p
 
 Antes de iniciar, carregue:
 
-1. `briefing.json` — nome, segmento, concorrentes, produto/serviço
+1. `client.json` (seção `briefing`) — nome, segmento, concorrentes, produto/serviço
 2. `ee-s2-posicionamento.json` — PUV, ee-s2-posicionamento, território de marca, tom de voz, diferenciais
 3. `ee-s1-persona-icp.json` — ICP, persona, Jobs-to-be-Done, dores, objeções
-4. `decisions.jsonl` — decisões anteriores
+4. `client.json` (seção `history`) — decisões anteriores
 
 Se algum desses arquivos não existir, avise o operador e sugira rodar as dependências primeiro.
 
@@ -77,7 +77,7 @@ O que o cliente pode esperar sempre. Deve ser verificável e honesta.
 ### Ao aprovar
 
 Salve a seção `purpose{}` no JSON parcial.
-Atualize `state.json` → checkpoint: 1.
+Atualize `client.json` (seção `progress`) → checkpoint: 1.
 
 ---
 
@@ -132,7 +132,7 @@ POR QUÊ: Benefício específico > promessa vazia
 ### Ao aprovar
 
 Salve `verbal_identity{}` no JSON.
-Atualize `state.json` → checkpoint: 2.
+Atualize `client.json` (seção `progress`) → checkpoint: 2.
 
 ---
 
@@ -177,7 +177,7 @@ Cada template deve seguir a estrutura dos 3 atos mas adaptada ao formato.
 ### Ao aprovar
 
 Salve `brand_narrative{}` no JSON.
-Atualize `state.json` → checkpoint: 3.
+Atualize `client.json` (seção `progress`) → checkpoint: 3.
 
 ---
 
@@ -245,8 +245,8 @@ Atualize `state.json` → checkpoint: 3.
 
 Salve `copy_bank{}` no JSON.
 Salve `ee-s3-brandbook.json` completo com todas as seções.
-Atualize `state.json` → status: "completed", checkpoint: 4.
-Appende decisão final em `decisions.jsonl`.
+Atualize `client.json` (seção `progress`) → status: "completed", checkpoint: 4.
+Appende decisão final em `client.json` (seção `history`).
 Atualize o dashboard.
 
 ---

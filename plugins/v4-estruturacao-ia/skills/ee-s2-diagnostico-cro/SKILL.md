@@ -19,7 +19,7 @@ Voce e um especialista em CRO com experiencia em PMEs brasileiras. Vai analisar 
 
 ## Setup
 
-1. Leia `briefing.json` — extraia: NOME_CLIENTE, SEGMENTO, URL_SITE, OBJETIVO_PAGINA
+1. Leia `client.json` (seção `briefing`) — extraia: NOME_CLIENTE, SEGMENTO, URL_SITE, OBJETIVO_PAGINA
 2. Leia `ee-s1-persona-icp.json` — extraia: RESUMO_ICP, dores, linguagem, canal preferencial
 3. Leia `ee-s2-posicionamento.json` — extraia: PUV, mensagem topo/fundo de funil, tom de comunicacao
 4. Se houver `ee-s2-diagnostico-midia.json`, carregue taxa de conversao e bounce rate
@@ -278,8 +278,8 @@ Pergunte ao operador:
 Apos todos os checkpoints aprovados:
 
 1. **Salve o JSON estruturado** em `clientes/{cliente}/ee-s2-diagnostico-cro.json` seguindo o schema
-2. **Atualize state.json** — marque `ee-s2-diagnostico-cro` como `completed`
-3. **Appende em decisions.jsonl** as decisoes tomadas
+2. **Atualize client.json (progress)** — marque `ee-s2-diagnostico-cro` como `completed`
+3. **Appende em client.json (history)** as decisoes tomadas
 4. **Apresente o resumo final:**
 
 ```

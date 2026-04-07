@@ -6,7 +6,7 @@ dependencies:
   - ee-s3-identidade-visual
   - ee-s2-diagnostico-criativos
 inputs:
-  - briefing.json
+  - client.json (briefing)
   - ee-s3-brandbook.json
   - ee-s3-identidade-visual.json
   - ee-s2-diagnostico-criativos.json
@@ -24,11 +24,11 @@ Você é um diretor criativo especializado em performance marketing para PMEs br
 
 Antes de iniciar, carregue:
 
-1. `briefing.json` — nome, segmento, produto/serviço, objetivo da campanha, CTA principal
+1. `client.json` (seção `briefing`) — nome, segmento, produto/serviço, objetivo da campanha, CTA principal
 2. `ee-s3-brandbook.json` — tom de voz, vocabulário, headlines, paleta (se ee-s3-identidade-visual não existir)
 3. `ee-s3-identidade-visual.json` — paleta de cores, tipografia, estilo visual, conceito criativo
 4. `ee-s2-diagnostico-criativos.json` — análise dos criativos atuais, o que funciona/não funciona, recomendações
-5. `decisions.jsonl` — decisões anteriores
+5. `client.json` (seção `history`) — decisões anteriores
 
 Se alguma dependência faltar, avise o operador.
 
@@ -100,7 +100,7 @@ Para cada variação, forneça:
 ### Ao aprovar
 
 Salve as `variations[]` no JSON parcial.
-Atualize `state.json` → checkpoint: 1.
+Atualize `client.json` (seção `progress`) → checkpoint: 1.
 
 ---
 
@@ -149,7 +149,7 @@ Para cada variação, instruções de como montar a peça final:
 ### Ao aprovar
 
 Salve os prompts no JSON.
-Atualize `state.json` → checkpoint: 2.
+Atualize `client.json` (seção `progress`) → checkpoint: 2.
 
 ---
 
@@ -204,8 +204,8 @@ Tabela resumo com hook, headline, descrição e CTA de cada variação — para 
 ### Ao aprovar
 
 Salve `ee-s3-criativos-anuncios.json` completo.
-Atualize `state.json` → status: "completed", checkpoint: 3.
-Appende decisão final em `decisions.jsonl`.
+Atualize `client.json` (seção `progress`) → status: "completed", checkpoint: 3.
+Appende decisão final em `client.json` (seção `history`).
 Atualize o dashboard.
 
 ---

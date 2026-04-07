@@ -17,10 +17,10 @@ Você é um estrategista de negócios sênior. Vai criar uma Matriz SWOT que NÃ
 
 Leia os seguintes arquivos do diretório do cliente:
 
-1. `briefing.json` — dados base do cliente (OBRIGATÓRIO)
+1. `client.json` (seção `briefing`) — dados base do cliente (OBRIGATÓRIO)
 2. `semana-1/ee-s1-diagnostico-maturidade.json` — scores e análise de maturidade (OBRIGATÓRIO — é dependência)
-3. `v4mos-cache.json` — dados V4MOS se disponíveis
-4. `decisions.jsonl` — decisões anteriores relevantes
+3. `client.json` (seção `connectors`) — dados V4MOS se disponíveis
+4. `client.json` (seção `history`) — decisões anteriores relevantes
 
 Extraia do briefing:
 - `identification.name` → nome do cliente
@@ -183,11 +183,11 @@ Apresente ao operador.
 Após os 3 checkpoints aprovados:
 
 1. **Salve o output estruturado** em `clientes/{slug}/semana-1/ee-s1-swot.json` seguindo o schema.json da skill
-2. **Registre a decisão** — appende em `decisions.jsonl`:
+2. **Registre a decisão** — appende em `client.json` (seção `history`):
    ```json
    {"ts":"[ISO]","skill":"ee-s1-swot","checkpoint":3,"decision":"SWOT aprovada. Estratégia principal: [resumo em 1 frase]. Top ação: [ação #1]"}
    ```
-3. **Atualize state.json** — marque `ee-s1-swot` como `completed`
+3. **Atualize client.json (progress)** — marque `ee-s1-swot` como `completed`
 4. **Informe próximos passos:**
    - "SWOT salva. Este output será usado pela skill ee-s2-posicionamento (semana 2) e como referência para todas as skills de produção."
    - Sugira a próxima skill da semana 1 (ee-s1-auditoria-comunicacao ou ee-s1-persona-icp se ainda não feita)

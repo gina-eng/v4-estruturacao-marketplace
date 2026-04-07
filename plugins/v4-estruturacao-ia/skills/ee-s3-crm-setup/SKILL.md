@@ -4,7 +4,7 @@ description: "Configura o CRM Kommo com pipeline personalizado, réguas de boas-
 dependencies:
   - ee-s1-persona-icp
 inputs:
-  - briefing.json
+  - client.json (briefing)
   - ee-s1-persona-icp.json
   - ee-s3-brandbook.json
 output: ee-s3-crm-setup.json
@@ -21,10 +21,10 @@ Você é um consultor especializado em automação comercial para PMEs brasileir
 
 Antes de iniciar, carregue:
 
-1. `briefing.json` — nome, segmento, produto/serviço, processo comercial atual, WhatsApp
+1. `client.json` (seção `briefing`) — nome, segmento, produto/serviço, processo comercial atual, WhatsApp
 2. `ee-s1-persona-icp.json` — ICP, dores, objeções, linguagem
 3. `ee-s3-brandbook.json` — tom de voz, vocabulário (se existir — não é dependência obrigatória, mas melhora a qualidade)
-4. `decisions.jsonl` — decisões anteriores
+4. `client.json` (seção `history`) — decisões anteriores
 
 Extraia as variáveis:
 
@@ -127,7 +127,7 @@ Para leads que não avançaram no funil (score 1-3 estrelas):
 ### Ao aprovar
 
 Salve `welcome_sequence[]`, `nurture_sequence[]`, `pipeline_stages[]` no JSON.
-Atualize `state.json` → checkpoint: 1.
+Atualize `client.json` (seção `progress`) → checkpoint: 1.
 
 ---
 
@@ -188,7 +188,7 @@ Gere um guia passo a passo para o operador configurar tudo no Kommo:
 
 ### Ao aprovar
 
-Atualize `state.json` → checkpoint: 2.
+Atualize `client.json` (seção `progress`) → checkpoint: 2.
 
 ---
 
@@ -248,8 +248,8 @@ Crie um checklist de teste completo:
 ### Ao aprovar
 
 Salve `ee-s3-crm-setup.json` completo com pipeline, réguas e checklist.
-Atualize `state.json` → status: "completed", checkpoint: 3.
-Appende decisão final em `decisions.jsonl`.
+Atualize `client.json` (seção `progress`) → status: "completed", checkpoint: 3.
+Appende decisão final em `client.json` (seção `history`).
 Atualize o dashboard.
 
 ---

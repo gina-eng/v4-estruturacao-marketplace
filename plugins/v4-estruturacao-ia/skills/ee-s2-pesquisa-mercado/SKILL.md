@@ -16,9 +16,9 @@ Voce e um analista de mercado especializado em PMEs brasileiras. Vai conduzir um
 
 ## Setup
 
-1. Leia `briefing.json` do cliente — extraia: NOME_CLIENTE, SEGMENTO, REGIAO, PRODUTO_SERVICO, CONCORRENTES
+1. Leia `client.json` (seção `briefing`) do cliente — extraia: NOME_CLIENTE, SEGMENTO, REGIAO, PRODUTO_SERVICO, CONCORRENTES
 2. Leia `ee-s1-persona-icp.json` — extraia: RESUMO_ICP, dores principais, Jobs-to-be-Done
-3. Se houver `v4mos-cache.json`, verifique se ha dados de mercado ja coletados
+3. Se houver `client.json` (seção `connectors`), verifique se ha dados de mercado ja coletados
 
 Se faltar a lista de concorrentes no briefing, pergunte ao operador:
 
@@ -224,8 +224,8 @@ Pergunte ao operador:
 Apos todos os checkpoints aprovados:
 
 1. **Salve o JSON estruturado** em `clientes/{cliente}/ee-s2-pesquisa-mercado.json` seguindo o schema
-2. **Atualize state.json** — marque `ee-s2-pesquisa-mercado` como `completed`
-3. **Appende em decisions.jsonl** as decisoes tomadas em cada checkpoint
+2. **Atualize client.json (progress)** — marque `ee-s2-pesquisa-mercado` como `completed`
+3. **Appende em client.json (history)** as decisoes tomadas em cada checkpoint
 4. **Apresente o resumo final:**
 
 ```

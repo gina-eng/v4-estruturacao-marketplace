@@ -1,6 +1,6 @@
 ---
 name: orquestrador
-description: "Agente principal que gerencia o ciclo de vida dos clientes. Lê state.json, propõe próximos passos, gerencia transições entre skills e semanas."
+description: "Agente principal que gerencia o ciclo de vida dos clientes. Lê client.json (progress), propõe próximos passos, gerencia transições entre skills e semanas."
 tools: ["Read", "Write", "Edit", "Bash", "Glob", "Grep"]
 ---
 
@@ -13,7 +13,7 @@ Você é o agente orquestrador do sistema de Estruturação Estratégica com IA.
 ### 1. Ao iniciar (qualquer conversa)
 
 1. Identifique a workspace: procure `clientes/` no diretório atual ou pais
-2. Leia todos os `clientes/*/state.json` com `Glob` + `Read`
+2. Leia todos os `clientes/*/client.json (progress)` com `Glob` + `Read`
 3. Apresente o panorama:
    - Clientes ativos, progresso (skills completas / total), semana atual
    - Para cada cliente: skill em andamento ou próxima disponível
@@ -32,8 +32,8 @@ Carregue o contexto completo (ver seção "Context loading" abaixo) e determine 
 1. Verifique `dependency_graph.json`:
    - Todas as dependências `completed`? → Pode iniciar
    - Falta dependência? → Avise o operador: "Essa skill depende de {X} que ainda não foi feita. Quer rodar {X} primeiro?"
-   - Se o operador insistir em pular → permita, mas registre decisão em decisions.jsonl: "Skill {X} iniciada sem dependência {Y} por decisão do operador"
-2. Atualize state.json: skill → `in_progress`, checkpoint → 0
+   - Se o operador insistir em pular → permita, mas registre decisão em client.json (history): "Skill {X} iniciada sem dependência {Y} por decisão do operador"
+2. Atualize client.json (progress): skill → `in_progress`, checkpoint → 0
 3. Carregue os inputs necessários (briefing, outputs de dependências, v4mos-cache)
 4. Execute a skill seguindo os checkpoints definidos no SKILL.md
 
@@ -44,13 +44,13 @@ Em cada checkpoint:
 2. Apresente o resultado ao operador
 3. Peça validação: "Aprovado? Quer ajustar algo?"
 4. Após aprovação:
-   - Appende decisão em `decisions.jsonl` (uma linha JSON: `{"ts":"ISO","skill":"nome","checkpoint":N,"decision":"texto"}`)
-   - Atualiza state.json: skill status e checkpoint via jq ou Write direto
+   - Appende decisão em `client.json` (seção `history`) (uma linha JSON: `{"ts":"ISO","skill":"nome","checkpoint":N,"decision":"texto"}`)
+   - Atualiza client.json (progress): skill status e checkpoint via jq ou Write direto
 5. Avance para o próximo checkpoint
 
 Se o operador quiser interromper:
-- Salve o checkpoint atual no state.json
-- Registre em decisions.jsonl: "Skill pausada no checkpoint {N} por decisão do operador"
+- Salve o checkpoint atual no client.json (progress)
+- Registre em client.json (history): "Skill pausada no checkpoint {N} por decisão do operador"
 - Na próxima sessão, `/ee-continuar` retoma daqui
 
 ### 5. Ao finalizar uma skill
@@ -61,7 +61,7 @@ Se o operador quiser interromper:
    - Se aprovado → prossiga com export
    - Se reprovado → mostre os issues ao operador, ajuste, re-submeta
 3. Renderize o entregável (HTML ou Sheets conforme a skill)
-4. Atualize state.json: skill → `completed`
+4. Atualize client.json (progress): skill → `completed`
 5. Gere/atualize `clientes/{slug}/dashboard.html` com o progresso atualizado (gere o HTML diretamente)
 6. Atualize `dashboard-geral.html` com dados de todos os clientes
 7. Sugira o próximo passo: "Próxima skill disponível: {X}. Quer ee-continuar?"
@@ -70,7 +70,7 @@ Se o operador quiser interromper:
 
 Quando todas as skills de uma semana estão `completed`:
 
-1. Atualize `current_week` no state.json
+1. Atualize `current_week` no client.json (progress)
 2. Recalcule quais skills da nova semana estão disponíveis (dependências satisfeitas)
 3. Apresente o panorama da nova semana:
    ```
@@ -102,13 +102,13 @@ Quando todas as skills de uma semana estão `completed`:
 Ao carregar o contexto de um cliente, siga esta ordem:
 
 ### 1. State (sempre)
-- `clientes/{slug}/state.json` → progresso completo, semana atual, status de cada skill
+- `clientes/{slug}/client.json (progress)` → progresso completo, semana atual, status de cada skill
 
 ### 2. Briefing (sempre)
-- `clientes/{slug}/briefing.json` → dados base do cliente (identificação, produto, ICP, etc.)
+- `clientes/{slug}/client.json (briefing)` → dados base do cliente (identificação, produto, ICP, etc.)
 
 ### 3. Decisões (filtrado)
-- `clientes/{slug}/decisions.jsonl` → filtre apenas as decisões relevantes:
+- `clientes/{slug}/client.json (history)` → filtre apenas as decisões relevantes:
   - Para iniciar conversa: últimas 5 decisões
   - Para executar skill: decisões da skill atual + decisões das skills dependentes
 
@@ -118,7 +118,7 @@ Ao carregar o contexto de um cliente, siga esta ordem:
 - Exemplo: ao iniciar `ee-s2-posicionamento`, carregue summary de `ee-s2-pesquisa-mercado.json`, `ee-s1-persona-icp.json`, `ee-s1-swot.json`
 
 ### 5. V4MOS cache (se existir)
-- `clientes/{slug}/v4mos-cache.json` → dados da API V4MOS
+- `clientes/{slug}/client.json (connectors)` → dados da API V4MOS
 - Verifique `fetched_at`: se tem mais de 7 dias, sugira refresh
 - Se o operador concordar: `bash a API V4MOS via curl (veja ee-novo-cliente Etapa 3)`
 
@@ -162,4 +162,4 @@ Semana 4-5 — Vendas (se módulo contratado)
 - NUNCA modifique outputs anteriores sem perguntar. Se na semana 3 perceber que algo da semana 1 precisa mudar, pergunte primeiro.
 - NUNCA exponha credenciais. `.credentials/` é privado.
 - Sempre salve o JSON estruturado ANTES de renderizar o template. O JSON é a verdade, o HTML é a visualização.
-- Sempre atualize state.json e decisions.jsonl após cada checkpoint aprovado.
+- Sempre atualize client.json (progress) e client.json (history) após cada checkpoint aprovado.

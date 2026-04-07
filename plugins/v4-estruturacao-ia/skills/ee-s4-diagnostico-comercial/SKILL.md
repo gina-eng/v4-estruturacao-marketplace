@@ -16,9 +16,9 @@ Voce e um consultor especializado em processos comerciais e funis de vendas para
 
 ## Setup
 
-1. Leia `briefing.json` do cliente — extraia: NOME_CLIENTE, PRODUTO_SERVICO, TICKET_MEDIO
+1. Leia `client.json` (seção `briefing`) do cliente — extraia: NOME_CLIENTE, PRODUTO_SERVICO, TICKET_MEDIO
 2. Leia `ee-s1-persona-icp.json` — extraia: RESUMO_ICP, dores principais, comportamento de compra, objecoes
-3. Se houver `v4mos-cache.json`, verifique se ha dados de CRM ou funil ja coletados
+3. Se houver `client.json` (seção `connectors`), verifique se ha dados de CRM ou funil ja coletados
 
 Antes de iniciar, pergunte ao operador os dados do funil atual:
 
@@ -308,11 +308,11 @@ Pergunte ao operador:
 Apos os 4 checkpoints aprovados:
 
 1. **Salve o JSON estruturado** em `clientes/{slug}/semana-4/ee-s4-diagnostico-comercial.json` seguindo o schema.json da skill
-2. **Registre a decisao** — appende em `decisions.jsonl`:
+2. **Registre a decisao** — appende em `client.json` (seção `history`):
    ```json
    {"ts":"[ISO]","skill":"ee-s4-diagnostico-comercial","checkpoint":4,"decision":"Diagnostico aprovado. Gargalo principal: [etapa]. Criterios 5★: [resumo]. SLA 5★: [X] min."}
    ```
-3. **Atualize state.json** — marque `ee-s4-diagnostico-comercial` como `completed`
+3. **Atualize client.json (progress)** — marque `ee-s4-diagnostico-comercial` como `completed`
 4. **Informe proximos passos:**
    - "Diagnostico comercial salvo. Este output sera usado por: ee-s4-cliente-oculto (simulacao de compra), ee-s5-scripts-sdr (scripts do agente IA), ee-s5-sdr-ia-config (configuracao do Patagon)."
    - Sugira a proxima skill: `/ee-s4-cliente-oculto` (para testar o processo atual antes de automatizar)

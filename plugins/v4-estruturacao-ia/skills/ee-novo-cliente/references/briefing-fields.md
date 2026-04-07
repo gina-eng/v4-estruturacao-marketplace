@@ -104,13 +104,13 @@ Lista de todos os campos do briefing, organizados por seção. Para cada campo:
 | `gmb` | Tem acesso ao Google Meu Negócio? (true/false) | V4MOS | Não |
 | `whatsapp_business` | Tem acesso ao WhatsApp Business? (true/false) | Manual | Não |
 
-Os campos com fonte "V4MOS" podem ser pré-preenchidos verificando o status de integrações no `v4mos-cache.json`. Se a integração existe e está ativa, marque como true.
+Os campos com fonte "V4MOS" podem ser pré-preenchidos verificando o status de integrações no `client.json` (seção `connectors`). Se a integração existe e está ativa, marque como true.
 
 ---
 
 ## 8. Módulo Vendas (`sales_module`)
 
-Seção coletada APENAS se o módulo vendas (SDR IA) foi contratado. Se não foi contratado, todo o campo `sales_module` deve ser `null` no briefing.json.
+Seção coletada APENAS se o módulo vendas (SDR IA) foi contratado. Se não foi contratado, todo o campo `sales_module` deve ser `null` no client.json (briefing).
 
 | Campo | Descrição | Fonte | Obrigatório |
 |---|---|---|---|

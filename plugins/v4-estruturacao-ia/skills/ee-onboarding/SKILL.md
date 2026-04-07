@@ -38,7 +38,7 @@ dashboard-geral.html ← arquivo vazio por enquanto
 Conteúdo do `.gitignore`:
 ```
 .credentials/
-clientes/*/v4mos-cache.json
+clientes/*/client.json (connectors)
 dashboard-geral.html
 *.tmp
 ```

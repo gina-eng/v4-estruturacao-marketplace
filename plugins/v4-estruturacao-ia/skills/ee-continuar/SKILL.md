@@ -7,14 +7,14 @@ description: "Retoma o trabalho com um cliente. Mostra panorama de todos os clie
 
 ## Ao ser invocado
 
-1. Leia todos os `clientes/*/state.json` no diretório de trabalho
+1. Leia todos os `clientes/*/client.json (progress)` no diretório de trabalho
 2. Se nenhum cliente existe: diga "Nenhum cliente cadastrado. Quer cadastrar? Diga /ee-novo-cliente" e encerre
 3. Se existe 1 cliente: carregue direto (pule para "Ao selecionar um cliente")
 4. Se existem múltiplos: mostre panorama e pergunte qual
 
 ## Se o operador deu o nome no comando
 
-Ex: "ee-continuar Padaria Silva" — resolva o slug (lowercase, hifenizado, sem acento) e tente encontrar `clientes/{slug}/state.json`. Se encontrou, carregue direto sem mostrar panorama. Se não encontrou, faça busca parcial no nome dos clientes disponíveis e sugira.
+Ex: "ee-continuar Padaria Silva" — resolva o slug (lowercase, hifenizado, sem acento) e tente encontrar `clientes/{slug}/client.json (progress)`. Se encontrou, carregue direto sem mostrar panorama. Se não encontrou, faça busca parcial no nome dos clientes disponíveis e sugira.
 
 ## Panorama (múltiplos clientes)
 
@@ -40,14 +40,14 @@ Calcule o progresso:
 - Completas = skills com `status: "completed"`
 - Em andamento = skills com `status: "in_progress"`
 
-Para a última decisão, leia a última linha de `clientes/{slug}/decisions.jsonl`. Se vazio, mostre "Nenhuma decisão registrada".
+Para a última decisão, leia a última linha de `clientes/{slug}/client.json (history)`. Se vazio, mostre "Nenhuma decisão registrada".
 
 Pergunte: "Qual cliente quer trabalhar?"
 
 ## Ao selecionar um cliente
 
-1. Leia `clientes/{slug}/state.json` — progresso completo
-2. Leia `clientes/{slug}/decisions.jsonl` — últimas 5 decisões
+1. Leia `clientes/{slug}/client.json (progress)` — progresso completo
+2. Leia `clientes/{slug}/client.json (history)` — últimas 5 decisões
 3. Leia `dependency_graph.json` — do diretório raiz do plugin
 
 Determine o próximo passo, seguindo esta prioridade:
@@ -63,7 +63,7 @@ Encontre a primeira skill com `status: "pending"` cujas dependências (definidas
 - Semana 4-5: ee-s4-diagnostico-comercial, ee-s4-cliente-oculto, ee-s5-scripts-sdr, ee-s5-sdr-ia-config
 
 **Prioridade 3 — Avanço de semana:**
-Se todas as skills da semana atual estão `completed`, atualize `current_week` no state.json e encontre a próxima skill disponível.
+Se todas as skills da semana atual estão `completed`, atualize `current_week` no client.json (progress) e encontre a próxima skill disponível.
 
 **Prioridade 4 — Todas completas:**
 Se todas as skills estão `completed`, parabenize o operador e sugira gerar/revisar os dashboards finais.
@@ -98,13 +98,13 @@ Recomendo ee-continuar ee-s1-auditoria-comunicacao (checkpoint 2). Quer seguir o
 
 Quando o operador confirmar qual skill trabalhar:
 
-1. Carregue `clientes/{slug}/briefing.json` — dados do cliente
-2. Carregue `clientes/{slug}/decisions.jsonl` — filtre apenas decisões da skill atual
+1. Carregue `clientes/{slug}/client.json (briefing)` — dados do cliente
+2. Carregue `clientes/{slug}/client.json (history)` — filtre apenas decisões da skill atual
 3. Verifique outputs de skills dependentes:
    - Leia o campo `summary` de cada output JSON das dependências (ex: `ee-s1-persona-icp.json` → campo `summary`)
    - Não carregue os JSONs completos, apenas o summary
-4. Se existe `v4mos-cache.json`, verifique a data em `fetched_at`:
+4. Se existe `client.json` (seção `connectors`), verifique a data em `fetched_at`:
    - Se tem mais de 7 dias: sugira refresh ("Dados V4MOS de {data}. Quer atualizar?")
    - Se o operador concordar, rode `bash a API V4MOS via curl (veja ee-novo-cliente Etapa 3)`
 
-Inicie a skill no checkpoint indicado pelo state.json.
+Inicie a skill no checkpoint indicado pelo client.json (progress).

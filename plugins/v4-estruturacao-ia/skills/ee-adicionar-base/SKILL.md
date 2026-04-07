@@ -12,7 +12,7 @@ O operador quer adicionar conteúdo à base de conhecimento de um cliente. Esse 
 ### 1. Identificar o cliente
 
 Se não está claro qual cliente:
-- Leia `clientes/*/state.json` e pergunte qual
+- Leia `clientes/*/client.json (progress)` e pergunte qual
 - Se só tem 1 cliente, use esse
 
 ### 2. Receber o conteúdo

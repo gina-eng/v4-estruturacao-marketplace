@@ -17,7 +17,7 @@ Você é um estrategista sênior de marketing digital. Vai analisar a maturidade
 ## Dados necessários
 
 ### Fonte V4MOS (conectores apenas)
-Leia `clientes/{slug}/v4mos-cache.json`. Se o arquivo existir, extraia:
+Leia `clientes/{slug}/client.json (connectors)`. Se o arquivo existir, extraia:
 - `integrations` → status dos conectores (Meta, Google Ads, Analytics, Kommo, etc.)
   - Quais plataformas estão conectadas e ativas
   - Isso indica maturidade em mídia paga e CRM
@@ -29,7 +29,7 @@ curl -s -H "x-client-id: {CLIENT_ID}" -H "x-client-secret: {CLIENT_SECRET}" -H "
 Credenciais estão em `.credentials/clients.json`. Se a chamada falhar, siga sem dados V4MOS (cenário B abaixo).
 
 ### Fonte principal: Briefing + Operador
-Leia `clientes/{slug}/briefing.json`. Extraia:
+Leia `clientes/{slug}/client.json (briefing)`. Extraia:
 - `identification.segment` → segmento para benchmark
 - `digital_situation` → situação digital declarada pelo cliente
 - `accesses` → quais acessos o operador já tem
@@ -41,7 +41,7 @@ Leia `clientes/{slug}/briefing.json`. Extraia:
 **Objetivo:** Confirmar quais dados temos e de onde vieram.
 
 ### Cenário A: V4MOS tem dados de conectores
-Se `v4mos-cache.json` existe e `integrations` não é null, mostre ao operador:
+Se `client.json` (seção `connectors`) existe e `integrations` não é null, mostre ao operador:
 ```
 CONECTORES V4MOS — [NOME_CLIENTE]:
 - Data da coleta: [fetched_at]
@@ -171,11 +171,11 @@ Mostre:
 Após os 3 checkpoints aprovados:
 
 1. **Salve o output estruturado** em `clientes/{slug}/semana-1/ee-s1-diagnostico-maturidade.json` seguindo o schema.json da skill
-2. **Registre a decisão** — appende em `decisions.jsonl`:
+2. **Registre a decisão** — appende em `client.json` (seção `history`):
    ```json
    {"ts":"[ISO]","skill":"ee-s1-diagnostico-maturidade","checkpoint":3,"decision":"Diagnóstico aprovado. Score geral: [X]/100. Prioridade #1: [ação]"}
    ```
-3. **Atualize state.json** — marque `ee-s1-diagnostico-maturidade` como `completed`
+3. **Atualize client.json (progress)** — marque `ee-s1-diagnostico-maturidade` como `completed`
 4. **Informe próximos passos:**
    - "Diagnóstico salvo. Este output será usado pela skill SWOT para gerar a análise estratégica."
    - Se dados V4MOS estavam disponíveis, sugira as skills de diagnóstico detalhado (ee-s2-diagnostico-midia, ee-s2-diagnostico-criativos, ee-s2-diagnostico-cro) para semana 2

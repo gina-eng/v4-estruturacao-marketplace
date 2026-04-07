@@ -6,7 +6,7 @@ dependencies:
   - ee-s3-brandbook
   - ee-s2-diagnostico-cro
 inputs:
-  - briefing.json
+  - client.json (briefing)
   - ee-s2-posicionamento.json
   - ee-s3-brandbook.json
   - ee-s2-diagnostico-cro.json
@@ -24,12 +24,12 @@ Você é um copywriter especializado em landing pages de conversão para PMEs br
 
 Antes de iniciar, carregue:
 
-1. `briefing.json` — nome, segmento, produto/serviço, WhatsApp, site atual
+1. `client.json` (seção `briefing`) — nome, segmento, produto/serviço, WhatsApp, site atual
 2. `ee-s2-posicionamento.json` — PUV, ee-s2-posicionamento, diferenciais
 3. `ee-s3-brandbook.json` — tom de voz, paleta, tipografia, vocabulário, headlines aprovadas, CTAs
 4. `ee-s2-diagnostico-cro.json` — análise de conversão, problemas identificados no site atual, wireframe sugerido
 5. `ee-s3-identidade-visual.json` — se existir, usar paleta e tipografia de lá
-6. `decisions.jsonl` — decisões anteriores
+6. `client.json` (seção `history`) — decisões anteriores
 
 Se ee-s3-brandbook ou ee-s2-posicionamento não existirem, avise e sugira rodar antes.
 
@@ -106,7 +106,7 @@ As 5 objeções mais comuns do ICP (identificadas na persona) com respostas que 
 ### Ao aprovar
 
 Salve `sections[]`, `faq[]`, `social_proof{}`, `meta{}` no JSON parcial.
-Atualize `state.json` → checkpoint: 1.
+Atualize `client.json` (seção `progress`) → checkpoint: 1.
 
 ---
 
@@ -166,7 +166,7 @@ Apresente a copy completa em formato de preview (simulando a LP):
 ### Ao aprovar
 
 Confirme que a copy está finalizada.
-Atualize `state.json` → checkpoint: 2.
+Atualize `client.json` (seção `progress`) → checkpoint: 2.
 
 ---
 
@@ -234,7 +234,7 @@ landing-{slug}/
 ### Ao aprovar
 
 Salve todos os arquivos do projeto.
-Atualize `state.json` → checkpoint: 3.
+Atualize `client.json` (seção `progress`) → checkpoint: 3.
 
 ---
 
@@ -276,8 +276,8 @@ vercel domains add {dominio}
 ### Ao aprovar
 
 Salve `ee-s3-landing-page.json` completo com URL de deploy.
-Atualize `state.json` → status: "completed", checkpoint: 4.
-Appende decisão final em `decisions.jsonl`.
+Atualize `client.json` (seção `progress`) → status: "completed", checkpoint: 4.
+Appende decisão final em `client.json` (seção `history`).
 Atualize o dashboard.
 
 ---

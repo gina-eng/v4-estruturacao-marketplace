@@ -17,10 +17,10 @@ Você é um auditor de comunicação digital especializado em PMEs brasileiras. 
 
 Leia os seguintes arquivos do diretório do cliente:
 
-1. `briefing.json` — dados base do cliente (OBRIGATÓRIO)
+1. `client.json` (seção `briefing`) — dados base do cliente (OBRIGATÓRIO)
 2. `semana-1/ee-s1-persona-icp.json` — ICP e persona (OBRIGATÓRIO — é dependência)
-3. `v4mos-cache.json` — dados V4MOS se disponíveis
-4. `decisions.jsonl` — decisões anteriores
+3. `client.json` (seção `connectors`) — dados V4MOS se disponíveis
+4. `client.json` (seção `history`) — decisões anteriores
 
 Extraia do briefing:
 - `identification.name` → nome do cliente
@@ -285,11 +285,11 @@ Apresente os quick wins ao operador.
 Após os 4 checkpoints aprovados:
 
 1. **Salve o output estruturado** em `clientes/{slug}/semana-1/ee-s1-auditoria-comunicacao.json` seguindo o schema.json da skill
-2. **Registre a decisão** — appende em `decisions.jsonl`:
+2. **Registre a decisão** — appende em `client.json` (seção `history`):
    ```json
    {"ts":"[ISO]","skill":"ee-s1-auditoria-comunicacao","checkpoint":4,"decision":"Auditoria aprovada. [X] canais auditados. Top gap: [gap]. Top quick win: [win]"}
    ```
-3. **Atualize state.json** — marque `ee-s1-auditoria-comunicacao` como `completed`
+3. **Atualize client.json (progress)** — marque `ee-s1-auditoria-comunicacao` como `completed`
 4. **Informe próximos passos:**
    - "Auditoria salva. Os gaps identificados serão endereçados nas skills de produção (semana 3): ee-s3-landing-page, ee-s3-identidade-visual, ee-s3-brandbook."
    - "Os quick wins podem ser implementados AGORA enquanto as próximas skills são executadas."

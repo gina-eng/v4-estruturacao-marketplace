@@ -16,10 +16,10 @@ Voce e um especialista em avaliacao de experiencia de compra e mystery shopping.
 
 ## Setup
 
-1. Leia `briefing.json` do cliente — extraia: NOME_CLIENTE, PRODUTO_SERVICO, CANAL_CONTATO
+1. Leia `client.json` (seção `briefing`) do cliente — extraia: NOME_CLIENTE, PRODUTO_SERVICO, CANAL_CONTATO
 2. Leia `ee-s1-persona-icp.json` — extraia: RESUMO_ICP, perfil demografico, comportamento de compra
 3. Leia `ee-s4-diagnostico-comercial.json` — extraia: objecoes mapeadas, gargalos do funil, SLA definido
-4. Se houver `v4mos-cache.json`, verifique dados adicionais de canais
+4. Se houver `client.json` (seção `connectors`), verifique dados adicionais de canais
 
 Antes de iniciar, confirme com o operador:
 
@@ -252,11 +252,11 @@ Pergunte ao operador:
 Apos os 3 checkpoints aprovados:
 
 1. **Salve o JSON estruturado** em `clientes/{slug}/semana-4/ee-s4-cliente-oculto.json` seguindo o schema.json da skill
-2. **Registre a decisao** — appende em `decisions.jsonl`:
+2. **Registre a decisao** — appende em `client.json` (seção `history`):
    ```json
    {"ts":"[ISO]","skill":"ee-s4-cliente-oculto","checkpoint":3,"decision":"Cliente oculto executado. Nota geral: [X]/10. Pontos criticos: [lista]. Impacto SDR IA estimado: +R$[valor]/mes."}
    ```
-3. **Atualize state.json** — marque `ee-s4-cliente-oculto` como `completed`
+3. **Atualize client.json (progress)** — marque `ee-s4-cliente-oculto` como `completed`
 4. **Informe proximos passos:**
    - "Cliente oculto concluido. Os pontos criticos identificados vao ser resolvidos nos scripts do SDR IA."
    - Sugira a proxima skill: `/ee-s5-scripts-sdr` (para criar os scripts que corrigem os problemas encontrados)

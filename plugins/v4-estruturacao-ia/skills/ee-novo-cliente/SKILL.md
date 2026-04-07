@@ -173,7 +173,7 @@ PRESENÇA DIGITAL:
 O que está errado ou faltando?
 ```
 
-O operador corrige. Itens confirmados vão pro briefing.json. research.md permanece como fonte de consulta para todas as skills.
+O operador corrige. Itens confirmados vão pro client.json (briefing). research.md permanece como fonte de consulta para todas as skills.
 
 **IMPORTANTE:** Campos que NUNCA podem ser inferidos (sempre perguntar manualmente):
 - Descrição dos 3 melhores clientes
@@ -209,26 +209,32 @@ Com o slug confirmado, crie:
 
 ```
 clientes/{slug}/
-  state.json
-  decisions.jsonl          ← arquivo vazio
-  briefing.json            ← será preenchido na Etapa 5
+  client.json              ← fonte única de verdade (meta, briefing, research, connectors, progress, history)
   base-de-conhecimento/    ← operador sobe docs, reuniões, emails aqui
+  outputs/                 ← outputs das skills (versionados)
   semana-1/
   semana-2/
   semana-3/
   semana-4-5/              ← só criar se módulo vendas = sim
 ```
 
-Inicialize `state.json` com todas as skills em "pending":
+Inicialize `client.json` com a estrutura completa:
 
 ```json
 {
-  "client": "Nome Real da Empresa",
-  "workspace_id": "workspace-uuid",
-  "started_at": "YYYY-MM-DD",
-  "current_week": 1,
-  "modulo_vendas": true,
-  "skills": {
+  "meta": {
+    "name": "Nome Real da Empresa",
+    "slug": "slug",
+    "workspace_id": "workspace-uuid",
+    "created_at": "YYYY-MM-DD",
+    "modulo_vendas": true
+  },
+  "briefing": {},
+  "research": {"fetched_at": null},
+  "connectors": {"fetched_at": null, "integrations": null},
+  "progress": {
+    "current_week": 1,
+    "skills": {
     "ee-s1-diagnostico-maturidade": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
     "ee-s1-swot": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
     "ee-s1-persona-icp": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
@@ -249,14 +255,14 @@ Inicialize `state.json` com todas as skills em "pending":
     "ee-s4-diagnostico-comercial": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
     "ee-s4-cliente-oculto": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
     "ee-s5-scripts-sdr": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
-    "ee-s5-sdr-ia-config": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null}
-  }
+    "ee-s5-sdr-ia-config": {"status": "pending", "version": 0, "started_at": null, "completed_at": null}
+    }
+  },
+  "history": []
 }
 ```
 
-Se `modulo_vendas` = false, remova as 4 skills de semana 4-5 (ee-s4-diagnostico-comercial, ee-s4-cliente-oculto, ee-s5-scripts-sdr, ee-s5-sdr-ia-config) do state.json e não crie a pasta `semana-4-5/`.
-
-Inicialize `decisions.jsonl` como arquivo vazio (sem conteúdo).
+Se `modulo_vendas` = false, remova as 4 skills de semana 4-5 do progress.skills e não crie a pasta `semana-4-5/`.
 
 ## Etapa 3: Puxar dados V4MOS
 
@@ -307,7 +313,7 @@ Inicialize `decisions.jsonl` como arquivo vazio (sem conteúdo).
 
    **Autenticação:** headers `x-client-id` + `x-client-secret` + `x-workspace-id`. NÃO é OAuth. NÃO é Bearer token.
 
-   **Se retornar 200:** extraia a lista de conectores e salve em `clientes/{slug}/v4mos-cache.json`
+   **Se retornar 200:** extraia a lista de conectores e salve em `clientes/{slug}/client.json (connectors)`
    **Se retornar 401/403:** credenciais erradas — peça ao operador pra verificar em Settings > Data API
    **Se retornar 404:** endpoint pode não estar disponível pra esse workspace — siga sem dados V4MOS
 
@@ -402,8 +408,8 @@ Consulte `references/briefing-fields.md` para a lista completa de campos por se�
 
 **Fontes de dados (em ordem de prioridade):**
 1. **Base de conhecimento** (`base-de-conhecimento/`) — já confirmados na Etapa 4
-2. **Research automático** (`research.md`) — pesquisa da internet, confirmada na Etapa 1
-3. **Conectores V4MOS** (`v4mos-cache.json`) — dados de integrações
+2. **Research automático** (`client.json` (seção `research`) + `base-de-conhecimento/`) — pesquisa da internet, confirmada na Etapa 1
+3. **Conectores V4MOS** (`client.json` (seção `connectors`)) — dados de integrações
 4. **Perguntas ao operador** — só o que não foi encontrado nas fontes acima
 
 Regras do fluxo:
@@ -440,7 +446,7 @@ Campos que SEMPRE precisam ser coletados manualmente (não existem no V4MOS):
 
 ## Etapa 5: Salvar briefing
 
-Salve tudo em `clientes/{slug}/briefing.json` com a estrutura:
+Salve tudo em `clientes/{slug}/client.json (briefing)` com a estrutura:
 
 ```json
 {
@@ -543,7 +549,7 @@ Se `modulo_vendas` = false, o campo `sales_module` deve ser `null`.
 3. Se sim, ajuste e salve novamente
 4. Gere `clientes/{slug}/dashboard.html` com o estado inicial (todas skills pending)
 5. Atualize `dashboard-geral.html` com o novo cliente
-6. Appende em `clientes/{slug}/decisions.jsonl`:
+6. Appende em `clientes/{slug}/client.json (history)`:
    ```json
    {"ts":"YYYY-MM-DDTHH:MM:SSZ","skill":"ee-novo-cliente","checkpoint":0,"decision":"Cliente cadastrado. Briefing completo."}
    ```
@@ -554,7 +560,7 @@ Mensagem final:
 Cliente {nome} cadastrado com sucesso!
 
 Pasta: clientes/{slug}/
-Briefing: clientes/{slug}/briefing.json
+Briefing: clientes/{slug}/client.json (briefing)
 Dashboard: clientes/{slug}/dashboard.html
 
 Para começar a semana 1, diga: ee-continuar {nome}

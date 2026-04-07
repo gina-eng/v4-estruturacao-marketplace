@@ -4,7 +4,7 @@ description: "Cria o forecast de mídia de 3 meses: modelagem financeira, distri
 dependencies:
   - ee-s2-diagnostico-midia
 inputs:
-  - briefing.json
+  - client.json (briefing)
   - ee-s2-diagnostico-midia.json
   - ee-s1-persona-icp.json
   - ee-s2-posicionamento.json
@@ -23,11 +23,11 @@ Você é um especialista em planejamento de mídia paga para PMEs brasileiras. V
 
 Antes de iniciar, carregue:
 
-1. `briefing.json` — nome, segmento, budget disponível, ticket médio, objetivo de negócio
+1. `client.json` (seção `briefing`) — nome, segmento, budget disponível, ticket médio, objetivo de negócio
 2. `ee-s2-diagnostico-midia.json` — análise de mídia paga atual, CPL atual, ROAS atual, problemas identificados, benchmarks
 3. `ee-s1-persona-icp.json` — ICP, canais preferidos
 4. `ee-s2-posicionamento.json` — PUV, diferenciais
-5. `decisions.jsonl` — decisões anteriores
+5. `client.json` (seção `history`) — decisões anteriores
 
 Consulte `references/benchmarks-forecast.md` para benchmarks de CPL/ROAS por segmento.
 
@@ -102,7 +102,7 @@ Crie a modelagem financeira com premissas explícitas:
 ### Ao aprovar
 
 Salve `financial_model[]` e `assumptions[]` no JSON parcial.
-Atualize `state.json` → checkpoint: 1.
+Atualize `client.json` (seção `progress`) → checkpoint: 1.
 
 ---
 
@@ -164,7 +164,7 @@ Regras:
 ### Ao aprovar
 
 Salve `platform_distribution[]` e `funnel_distribution[]` no JSON.
-Atualize `state.json` → checkpoint: 2.
+Atualize `client.json` (seção `progress`) → checkpoint: 2.
 
 ---
 
@@ -267,8 +267,8 @@ Tabela de pausas e escala
 Todas as premissas usadas e variáveis de risco
 
 Salve `ee-s3-forecast-midia.json` completo com link da planilha.
-Atualize `state.json` → status: "completed", checkpoint: 3.
-Appende decisão final em `decisions.jsonl`.
+Atualize `client.json` (seção `progress`) → status: "completed", checkpoint: 3.
+Appende decisão final em `client.json` (seção `history`).
 Atualize o dashboard.
 
 ---

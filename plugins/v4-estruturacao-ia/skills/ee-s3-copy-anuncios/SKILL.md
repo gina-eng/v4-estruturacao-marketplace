@@ -6,7 +6,7 @@ dependencies:
   - ee-s1-persona-icp
   - ee-s2-posicionamento
 inputs:
-  - briefing.json
+  - client.json (briefing)
   - ee-s3-brandbook.json
   - ee-s1-persona-icp.json
   - ee-s2-posicionamento.json
@@ -25,11 +25,11 @@ Você é um copywriter especializado em mídia paga para PMEs brasileiras. Vai c
 
 Antes de iniciar, carregue:
 
-1. `briefing.json` — nome, segmento, produto/serviço, oferta, plataformas de mídia
+1. `client.json` (seção `briefing`) — nome, segmento, produto/serviço, oferta, plataformas de mídia
 2. `ee-s3-brandbook.json` — tom de voz, vocabulário, headlines aprovadas, CTAs, do's/don'ts
 3. `ee-s1-persona-icp.json` — ICP, dores, desejos, objeções, linguagem
 4. `ee-s2-posicionamento.json` — PUV, diferenciais, ee-s2-posicionamento
-5. `decisions.jsonl` — decisões anteriores
+5. `client.json` (seção `history`) — decisões anteriores
 
 Extraia as variáveis:
 
@@ -122,7 +122,7 @@ Liste as 5 principais regras de copy aplicadas neste conjunto, para que o consul
 ### Ao aprovar
 
 Salve `funnel_stages[]` no JSON.
-Atualize `state.json` → checkpoint: 1.
+Atualize `client.json` (seção `progress`) → checkpoint: 1.
 
 ---
 
@@ -162,7 +162,7 @@ Destaque em vermelho qualquer variação que ultrapasse o limite de caracteres.
 ### Ao aprovar
 
 Confirme as variações finais.
-Atualize `state.json` → checkpoint: 2.
+Atualize `client.json` (seção `progress`) → checkpoint: 2.
 
 ---
 
@@ -216,8 +216,8 @@ Coluna "Status" vazia para o consultor marcar como "Aprovada", "Rejeitada" ou "E
 ### Ao aprovar
 
 Salve `ee-s3-copy-anuncios.json` completo com link da planilha.
-Atualize `state.json` → status: "completed", checkpoint: 3.
-Appende decisão final em `decisions.jsonl`.
+Atualize `client.json` (seção `progress`) → status: "completed", checkpoint: 3.
+Appende decisão final em `client.json` (seção `history`).
 Atualize o dashboard.
 
 ---
