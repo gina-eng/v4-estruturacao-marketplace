@@ -27,7 +27,7 @@ if [ -z "$CLIENT_ID" ] || [ -z "$CLIENT_SECRET" ]; then
   exit 1
 fi
 
-V4MOS_BASE_URL="${V4MOS_BASE_URL:-https://api.v4.marketing}"
+V4MOS_BASE_URL="${V4MOS_BASE_URL:-https://api.data.v4.marketing}"
 
 # Fetch integrations status
 INTEGRATIONS=$(curl -s -H "x-client-id: $CLIENT_ID" \

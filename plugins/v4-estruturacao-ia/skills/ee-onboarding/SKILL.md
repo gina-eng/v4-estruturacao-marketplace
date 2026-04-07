@@ -1,24 +1,27 @@
 ---
 name: ee-onboarding
-description: "Setup inicial da workspace de estruturação IA. Configura diretórios, credenciais, e ensina o operador a usar o sistema. Use quando o operador disser /ee-onboarding ou 'configurar workspace' ou 'primeiro uso'."
+description: "Setup inicial da workspace de estruturação IA. Configura diretórios e ensina o operador a usar o sistema. Use quando o operador disser /ee-onboarding ou 'configurar workspace' ou 'primeiro uso'."
 ---
 
 # Onboarding — Setup da Workspace
 
-Você está configurando a workspace de estruturação IA para um novo operador. Siga cada etapa em ordem, confirmando o resultado antes de avançar.
+Você está configurando a workspace de estruturação IA para um novo operador. Siga cada etapa em ordem.
+
+**IMPORTANTE:** NÃO peça credenciais do V4MOS aqui. Cada cliente tem seu próprio workspace no V4MOS com seu próprio Service Account. Credenciais são coletadas por cliente, durante o /ee-novo-cliente.
 
 ## Pré-requisitos
 
-Verifique se o operador tem as ferramentas necessárias. Rode os comandos abaixo e reporte o status de cada um:
+Verifique se o operador tem as ferramentas necessárias:
 
 | Ferramenta | Comando de verificação | Se não tiver |
 |---|---|---|
-| Claude Code | Já está rodando (é onde estamos) | — |
+| Claude Code | Já está rodando | — |
 | GOG CLI | `gog --version` | `npm install -g @nicecode/gog` |
 | Vercel CLI | `vercel --version` | `npm install -g vercel` |
 | jq | `jq --version` | Mac: `brew install jq` / Linux: `apt install jq` / Windows: `choco install jq` |
+| gh (GitHub CLI) | `gh --version` | Mac: `brew install gh` / Linux: `apt install gh` / Windows: `choco install gh` |
 
-Se alguma ferramenta estiver faltando, instrua a instalação e aguarde confirmação antes de prosseguir. Se o operador não precisar de deploy (Vercel) ou integração Google (GOG) no momento, registre como pendente mas continue.
+Se alguma ferramenta estiver faltando, instrua a instalação. Se o operador não precisar de Vercel ou GOG agora, registre como pendente e continue.
 
 ## Etapa 1: Criar estrutura de diretórios
 
@@ -27,7 +30,7 @@ No diretório atual do operador, crie:
 ```
 .credentials/
   clients.json       ← inicializar com {}
-clientes/
+clientes/            ← pasta raiz dos clientes
 dashboard-geral.html ← arquivo vazio por enquanto
 .gitignore
 ```
@@ -40,121 +43,66 @@ dashboard-geral.html
 *.tmp
 ```
 
-Após criar, confirme ao operador:
-
+Confirme ao operador:
 ```
 Estrutura criada:
-  .credentials/clients.json  ← credenciais V4MOS (privado, no .gitignore)
-  clientes/                  ← pasta de clientes (cada cliente terá sua subpasta)
-  dashboard-geral.html       ← dashboard de progresso geral
+  .credentials/clients.json  ← credenciais V4MOS por cliente (privado)
+  clientes/                  ← cada cliente terá sua subpasta aqui
+  dashboard-geral.html       ← visão geral de todos os clientes
   .gitignore                 ← protege credenciais e caches
 ```
 
-## Etapa 2: Configurar credenciais V4MOS
+## Etapa 2: Tutorial rápido
 
-Pergunte ao operador:
-
-> Você já tem um Service Account no V4MOS para algum cliente?
-
-**Se sim:**
-1. Peça: `client_id`, `client_secret`, `workspace_id` e nome do cliente
-2. Salve em `.credentials/clients.json`:
-
-```json
-{
-  "ws-abc123": {
-    "client_id": "xxx",
-    "client_secret": "yyy",
-    "client_name": "Nome do Cliente"
-  }
-}
-```
-
-Pode haver múltiplos workspaces no mesmo arquivo. Cada chave é um `workspace_id`.
-
-**Se não:**
-Explique o passo a passo:
-
-> Para integrar com o V4MOS, você precisa de um Service Account:
-> 1. Acesse V4MOS > Settings > Data API
-> 2. Clique em "Create Service Account"
-> 3. Copie o client_id e client_secret gerados
-> 4. Anote o workspace_id (aparece na URL: v4.marketing/workspaces/{workspace_id})
->
-> Quando tiver, me diz que eu configuro. Ou podemos pular por agora e configurar quando cadastrar o primeiro cliente.
-
-Se o operador quiser pular, registre que a configuração ficou pendente e siga para a próxima etapa.
-
-## Etapa 3: Tutorial rápido
-
-Apresente ao operador o guia de uso diário:
+Apresente ao operador:
 
 ```
 COMO USAR O SISTEMA DE ESTRUTURAÇÃO IA
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 Comandos principais:
-  /ee-novo-cliente      → Cadastrar um novo cliente (cria pasta, briefing, etc.)
-  ee-continuar          → Retomar trabalho (mostra panorama de clientes + próximo passo)
+  /ee-novo-cliente      → Cadastrar novo cliente (coleta credenciais V4MOS + briefing)
+  /ee-continuar         → Retomar trabalho (panorama de clientes + próximo passo)
   /ee-duvida [pergunta] → Tirar dúvida sobre o sistema
-  /ee-feedback          → Reportar problema ou sugerir melhoria
+  /ee-feedback          → Reportar problema ou sugestão
 
 Fluxo de trabalho:
   1. Cadastre o cliente com /ee-novo-cliente
-  2. O sistema guia semana a semana (diagnóstico → pesquisa → produção → vendas)
-  3. Cada skill tem checkpoints — você valida antes de avançar
-  4. Entregáveis são gerados como HTML (deploy Vercel) ou Google Sheets
+     → O sistema pede o workspace_id do V4MOS
+     → Puxa dados automaticamente (integrações, diagnóstico, métricas)
+     → Faz briefing complementar interativo (só o que falta)
+  2. O sistema guia semana a semana com checkpoints
+  3. Você co-cria cada entregável — valida antes de avançar
+  4. Entregáveis são HTML (deploy Vercel) ou Google Sheets (via GOG)
 
-Progresso:
-  Abra clientes/{nome}/dashboard.html no browser para ver progresso do cliente
-  Abra dashboard-geral.html para ver todos os clientes
+Sobre o V4MOS:
+  Cada cliente tem um workspace no V4MOS (v4.marketing)
+  O sistema puxa dados de lá automaticamente (Service Account)
+  Credenciais são configuradas POR CLIENTE, não globalmente
 
 Semanas do processo:
-  Semana 1 — Diagnóstico (maturidade, SWOT, ICP, auditoria)
-  Semana 2 — Pesquisa e Posicionamento (mercado, PUV, mídia, criativos, CRO)
-  Semana 3 — Produção (identidade, ee-s3-brandbook, landing page, copy, CRM, forecast)
-  Semana 4-5 — Vendas (diagnóstico comercial, cliente oculto, scripts, SDR IA)
+  S1 — Diagnóstico (maturidade, SWOT, ICP, auditoria)
+  S2 — Pesquisa e Posicionamento (mercado, PUV, mídia, criativos, CRO)
+  S3 — Produção (identidade, brandbook, LP, copy, CRM, forecast)
+  S4-5 — Vendas (diagnóstico comercial, cliente oculto, scripts, SDR IA)
 ```
 
-## Etapa 4: Teste de conexão
+## Etapa 3: Verificação final
 
-Se o operador configurou credenciais na Etapa 2:
+Confirme:
+- [ ] Diretório `.credentials/` existe com `clients.json` vazio
+- [ ] Diretório `clientes/` existe
+- [ ] `.gitignore` protege credenciais
 
-1. Crie um diretório temporário: `clientes/_teste/`
-2. Crie um `state.json` mínimo com o workspace_id informado:
-   ```json
-   {
-     "client": "_teste",
-     "workspace_id": "ws-xxx",
-     "started_at": "2026-01-01",
-     "current_week": 0,
-     "skills": {}
-   }
-   ```
-3. Rode: `bash scripts/v4mos_fetch.sh clientes/_teste/`
-4. Verifique o resultado:
-   - Se gerou `v4mos-cache.json` com dados: "Conexão com V4MOS funcionando."
-   - Se deu erro de autenticação: debug da credencial (client_id/secret errados?)
-   - Se deu erro de rede: verificar URL base e conectividade
-5. Remova o diretório de teste: `rm -rf clientes/_teste/`
-
-Se o operador não configurou credenciais, pule esta etapa e avise:
-
-> Teste de conexão pulado (sem credenciais configuradas). Quando cadastrar o primeiro cliente com workspace V4MOS, o sistema vai pedir.
-
-## Finalização
-
-Apresente a mensagem final:
-
+Apresente:
 ```
-Workspace configurada com sucesso!
+Workspace configurada!
 
 Próximo passo: cadastre seu primeiro cliente com /ee-novo-cliente
+O sistema vai pedir o workspace_id do V4MOS e configurar tudo automaticamente.
 
-Se tiver dúvidas a qualquer momento, diga /ee-duvida [sua pergunta].
+Dúvidas: /ee-duvida [pergunta]
 ```
 
 Pergunte: "Quer cadastrar o primeiro cliente agora?"
-
-Se sim, inicie a skill `/ee-novo-cliente`.
-Se não, encerre normalmente.
+Se sim, inicie `/ee-novo-cliente`.

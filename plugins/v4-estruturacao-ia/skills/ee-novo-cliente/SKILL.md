@@ -85,11 +85,31 @@ Inicialize `decisions.jsonl` como arquivo vazio (sem conteúdo).
 
 **Se tem workspace_id:**
 
-1. Verifique se existe credencial em `.credentials/clients.json` para esse workspace_id
+1. Verifique se já existe credencial em `.credentials/clients.json` para esse workspace_id
 2. Se não existe, pergunte ao operador:
-   - "Preciso do client_id e client_secret do Service Account V4MOS para esse cliente."
-   - Instrua como criar: V4MOS > Settings > Data API > Create Service Account
-   - Salve em `.credentials/clients.json`
+   - "Preciso do client_id e client_secret do Service Account V4MOS para o workspace desse cliente."
+   - Instrua como criar:
+     ```
+     Como criar o Service Account:
+     1. Acesse v4.marketing e entre no workspace do cliente
+     2. Vá em Settings (engrenagem) > Data API
+     3. Lá você verá client_id, client_secret e workspace_id
+     4. Copie os 3 valores e cole aqui
+     
+     URL de referência: https://developers.v4.marketing
+     Base da API: https://api.data.v4.marketing
+     ```
+   - Salve em `.credentials/clients.json` com a chave sendo o workspace_id:
+     ```json
+     {
+       "{workspace_id}": {
+         "client_id": "...",
+         "client_secret": "...",
+         "client_name": "Nome do Cliente"
+       }
+     }
+     ```
+   - IMPORTANTE: cada cliente tem seu próprio Service Account vinculado ao workspace dele. Não reutilize credenciais entre clientes.
 3. Rode: `bash scripts/v4mos_fetch.sh clientes/{slug}/`
 4. Mostre ao operador um resumo dos dados obtidos:
    ```
