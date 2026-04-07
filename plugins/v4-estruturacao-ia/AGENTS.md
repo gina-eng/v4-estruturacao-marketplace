@@ -16,7 +16,7 @@ Você é o sistema de Estruturação Estratégica com IA da V4 Company. Você op
 3. Apresente o panorama: clientes ativos, progresso, próximo passo recomendado
 4. Pergunte qual cliente trabalhar
 
-Se o operador disser "continuar [nome]" ou apenas "continuar", carregue o state do cliente e retome de onde parou.
+Se o operador disser "ee-s0-continuar [nome]" ou apenas "ee-s0-continuar", carregue o state do cliente e retome de onde parou.
 
 ## Ao executar um módulo
 
@@ -56,7 +56,7 @@ Se o operador disser "continuar [nome]" ou apenas "continuar", carregue o state 
 
 Uma linha JSON por decisão, append-only:
 ```json
-{"ts":"2026-04-06T10:30","skill":"persona-icp","checkpoint":2,"decision":"Tom mais informal, foco em donas de casa 35-50","operator":"nome"}
+{"ts":"2026-04-06T10:30","skill":"ee-s1-persona-icp","checkpoint":2,"decision":"Tom mais informal, foco em donas de casa 35-50","operator":"nome"}
 ```
 
 ## Dependency graph
@@ -74,33 +74,33 @@ Antes de iniciar um módulo, verifique dependency_graph.json. Se o módulo depen
 ## Módulos disponíveis
 
 ### Semana 1 — Diagnóstico
-- `diagnostico-maturidade` — Análise de maturidade digital (dados V4MOS)
-- `swot` — Matriz SWOT acionável
-- `persona-icp` — ICP + Persona com Jobs-to-be-Done
-- `auditoria-comunicacao` — Auditoria de touchpoints digitais
+- `ee-s1-diagnostico-maturidade` — Análise de maturidade digital (dados V4MOS)
+- `ee-s1-swot` — Matriz SWOT acionável
+- `ee-s1-persona-icp` — ICP + Persona com Jobs-to-be-Done
+- `ee-s1-auditoria-comunicacao` — Auditoria de touchpoints digitais
 
 ### Semana 2 — Pesquisa e Posicionamento
-- `pesquisa-mercado` — TAM/SAM/SOM + concorrentes + tendências
-- `posicionamento` — PUV + Canvas 4P + território de marca
-- `diagnostico-midia` — Análise de mídia paga (dados V4MOS)
-- `diagnostico-criativos` — Avaliação de criativos (multimodal)
-- `diagnostico-cro` — Análise de conversão + wireframe
+- `ee-s2-pesquisa-mercado` — TAM/SAM/SOM + concorrentes + tendências
+- `ee-s2-posicionamento` — PUV + Canvas 4P + território de marca
+- `ee-s2-diagnostico-midia` — Análise de mídia paga (dados V4MOS)
+- `ee-s2-diagnostico-criativos` — Avaliação de criativos (multimodal)
+- `ee-s2-diagnostico-cro` — Análise de conversão + wireframe
 
 ### Semana 3 — Produção e Implementação
-- `identidade-visual` — Conceito + paleta + tipografia + logo
-- `brandbook` — Manual de copy + tom de voz + narrativa
-- `landing-page` — Copy + código + deploy Vercel
-- `copy-anuncios` — 30+ variações por funil (Google Sheets)
-- `criativos-anuncios` — Briefing criativo + prompts Midjourney
-- `crm-setup` — Pipeline Kommo + réguas de automação
-- `forecast-midia` — Modelagem 3 meses (Google Sheets)
-- `gmb-otimizacao` — Google Meu Negócio otimizado
+- `ee-s3-identidade-visual` — Conceito + paleta + tipografia + logo
+- `ee-s3-brandbook` — Manual de copy + tom de voz + narrativa
+- `ee-s3-landing-page` — Copy + código + deploy Vercel
+- `ee-s3-copy-anuncios` — 30+ variações por funil (Google Sheets)
+- `ee-s3-criativos-anuncios` — Briefing criativo + prompts Midjourney
+- `ee-s3-crm-setup` — Pipeline Kommo + réguas de automação
+- `ee-s3-forecast-midia` — Modelagem 3 meses (Google Sheets)
+- `ee-s3-gmb-otimizacao` — Google Meu Negócio otimizado
 
 ### Semana 4-5 — Vendas (opcional)
-- `diagnostico-comercial` — Análise do funil + critérios de qualificação
-- `cliente-oculto` — Simulação + relatório
-- `scripts-sdr` — Scripts de qualificação WhatsApp
-- `sdr-ia-config` — Configuração Patagon + integração Kommo
+- `ee-s4-diagnostico-comercial` — Análise do funil + critérios de qualificação
+- `ee-s4-cliente-oculto` — Simulação + relatório
+- `ee-s5-scripts-sdr` — Scripts de qualificação WhatsApp
+- `ee-s5-sdr-ia-config` — Configuração Patagon + integração Kommo
 
 ## Regras críticas
 

@@ -51,7 +51,7 @@ Em cada checkpoint:
 Se o operador quiser interromper:
 - Salve o checkpoint atual no state.json
 - Registre em decisions.jsonl: "Skill pausada no checkpoint {N} por decisão do operador"
-- Na próxima sessão, `/continuar` retoma daqui
+- Na próxima sessão, `/ee-s0-continuar` retoma daqui
 
 ### 5. Ao finalizar uma skill
 
@@ -64,7 +64,7 @@ Se o operador quiser interromper:
 4. Atualize state.json: skill → `completed`
 5. Gere dashboard: `bash scripts/render_dashboard.sh clientes/{slug}/`
 6. Atualize dashboard geral: `bash scripts/render_dashboard.sh . --general`
-7. Sugira o próximo passo: "Próxima skill disponível: {X}. Quer continuar?"
+7. Sugira o próximo passo: "Próxima skill disponível: {X}. Quer ee-s0-continuar?"
 
 ### 6. Ao trocar de semana
 
@@ -115,7 +115,7 @@ Ao carregar o contexto de um cliente, siga esta ordem:
 ### 4. Outputs de dependências (apenas summary)
 - Para cada skill dependente que está `completed`, leia o JSON de output e extraia APENAS o campo `summary`
 - Não carregue JSONs completos — eles podem ser grandes
-- Exemplo: ao iniciar `posicionamento`, carregue summary de `pesquisa-mercado.json`, `persona-icp.json`, `swot.json`
+- Exemplo: ao iniciar `ee-s2-posicionamento`, carregue summary de `ee-s2-pesquisa-mercado.json`, `ee-s1-persona-icp.json`, `ee-s1-swot.json`
 
 ### 5. V4MOS cache (se existir)
 - `clientes/{slug}/v4mos-cache.json` → dados da API V4MOS
@@ -126,33 +126,33 @@ Ao carregar o contexto de um cliente, siga esta ordem:
 
 ```
 Semana 1 — Diagnóstico
-  diagnostico-maturidade (sem dependências)
-  persona-icp (sem dependências)
-  swot (depende: diagnostico-maturidade)
-  auditoria-comunicacao (depende: persona-icp)
+  ee-s1-diagnostico-maturidade (sem dependências)
+  ee-s1-persona-icp (sem dependências)
+  ee-s1-swot (depende: ee-s1-diagnostico-maturidade)
+  ee-s1-auditoria-comunicacao (depende: ee-s1-persona-icp)
 
 Semana 2 — Pesquisa e Posicionamento
-  pesquisa-mercado (depende: persona-icp)
-  posicionamento (depende: pesquisa-mercado, persona-icp, swot)
-  diagnostico-midia (depende: persona-icp)
-  diagnostico-criativos (depende: persona-icp)
-  diagnostico-cro (depende: persona-icp, posicionamento)
+  ee-s2-pesquisa-mercado (depende: ee-s1-persona-icp)
+  ee-s2-posicionamento (depende: ee-s2-pesquisa-mercado, ee-s1-persona-icp, ee-s1-swot)
+  ee-s2-diagnostico-midia (depende: ee-s1-persona-icp)
+  ee-s2-diagnostico-criativos (depende: ee-s1-persona-icp)
+  ee-s2-diagnostico-cro (depende: ee-s1-persona-icp, ee-s2-posicionamento)
 
 Semana 3 — Produção e Implementação
-  identidade-visual (depende: posicionamento)
-  brandbook (depende: posicionamento, persona-icp)
-  landing-page (depende: posicionamento, brandbook, diagnostico-cro)
-  copy-anuncios (depende: brandbook, persona-icp, posicionamento)
-  criativos-anuncios (depende: brandbook, identidade-visual, diagnostico-criativos)
-  crm-setup (depende: persona-icp)
-  forecast-midia (depende: diagnostico-midia)
-  gmb-otimizacao (depende: persona-icp)
+  ee-s3-identidade-visual (depende: ee-s2-posicionamento)
+  ee-s3-brandbook (depende: ee-s2-posicionamento, ee-s1-persona-icp)
+  ee-s3-landing-page (depende: ee-s2-posicionamento, ee-s3-brandbook, ee-s2-diagnostico-cro)
+  ee-s3-copy-anuncios (depende: ee-s3-brandbook, ee-s1-persona-icp, ee-s2-posicionamento)
+  ee-s3-criativos-anuncios (depende: ee-s3-brandbook, ee-s3-identidade-visual, ee-s2-diagnostico-criativos)
+  ee-s3-crm-setup (depende: ee-s1-persona-icp)
+  ee-s3-forecast-midia (depende: ee-s2-diagnostico-midia)
+  ee-s3-gmb-otimizacao (depende: ee-s1-persona-icp)
 
 Semana 4-5 — Vendas (se módulo contratado)
-  diagnostico-comercial (depende: persona-icp)
-  cliente-oculto (depende: diagnostico-comercial)
-  scripts-sdr (depende: diagnostico-comercial, brandbook)
-  sdr-ia-config (depende: scripts-sdr, crm-setup)
+  ee-s4-diagnostico-comercial (depende: ee-s1-persona-icp)
+  ee-s4-cliente-oculto (depende: ee-s4-diagnostico-comercial)
+  ee-s5-scripts-sdr (depende: ee-s4-diagnostico-comercial, ee-s3-brandbook)
+  ee-s5-sdr-ia-config (depende: ee-s5-scripts-sdr, ee-s3-crm-setup)
 ```
 
 ## Regras críticas

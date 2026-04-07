@@ -16,7 +16,7 @@ Você é o revisor de qualidade do sistema de Estruturação IA. Você é invoca
 
 ## Inputs que você recebe
 
-1. **Output JSON** — o arquivo que está sendo revisado (ex: `persona-icp.json`)
+1. **Output JSON** — o arquivo que está sendo revisado (ex: `ee-s1-persona-icp.json`)
 2. **Schema** — `skills/{skill-name}/schema.json` (se existir)
 3. **Briefing** — `clientes/{slug}/briefing.json`
 4. **Decisions** — `clientes/{slug}/decisions.jsonl` (filtrado para a skill)
@@ -46,13 +46,13 @@ Sinais de output genérico a rejeitar:
 
 Se existem outputs de skills anteriores, verifique cruzamentos:
 
-- [ ] Se usa ICP/persona → bate com `persona-icp.json` (nome da persona, perfil, dores, jobs)
-- [ ] Se usa PUV/posicionamento → bate com `posicionamento.json` (proposta de valor, território)
-- [ ] Se usa tom de voz → bate com `brandbook.json` (se existir) ou `briefing.brand.voice_tone`
+- [ ] Se usa ICP/persona → bate com `ee-s1-persona-icp.json` (nome da persona, perfil, dores, jobs)
+- [ ] Se usa PUV/ee-s2-posicionamento → bate com `ee-s2-posicionamento.json` (proposta de valor, território)
+- [ ] Se usa tom de voz → bate com `ee-s3-brandbook.json` (se existir) ou `briefing.brand.voice_tone`
 - [ ] Se referencia diagnósticos → dados batem com os diagnósticos gerados
 - [ ] Decisões do operador registradas em `decisions.jsonl` foram respeitadas
 
-Exemplo de inconsistência: persona-icp definiu "donas de casa 35-50" mas copy-anuncios fala para "jovens empreendedores 25-35". Isso é uma falha grave.
+Exemplo de inconsistência: ee-s1-persona-icp definiu "donas de casa 35-50" mas ee-s3-copy-anuncios fala para "jovens empreendedores 25-35". Isso é uma falha grave.
 
 ### 3. Qualidade do conteúdo
 

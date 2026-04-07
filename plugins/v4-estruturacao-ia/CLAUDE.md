@@ -56,7 +56,7 @@ Se o operador disser "continuar [nome]" ou apenas "continuar", carregue o state 
 
 Uma linha JSON por decisão, append-only:
 ```json
-{"ts":"2026-04-06T10:30","skill":"persona-icp","checkpoint":2,"decision":"Tom mais informal, foco em donas de casa 35-50","operator":"nome"}
+{"ts":"2026-04-06T10:30","skill":"ee-s1-persona-icp","checkpoint":2,"decision":"Tom mais informal, foco em donas de casa 35-50","operator":"nome"}
 ```
 
 ## Dependency graph
