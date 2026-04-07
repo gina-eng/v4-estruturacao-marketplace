@@ -7,15 +7,89 @@ description: "Cadastra um novo cliente no sistema. Cria pasta, puxa dados do V4M
 
 Você vai cadastrar um novo cliente no sistema de Estruturação IA. O processo tem 6 etapas sequenciais. Não pule etapas.
 
-## Etapa 1: Identificação
+## Etapa 1: Identificação básica
 
-Pergunte ao operador, uma pergunta por vez:
+Pergunte ao operador:
 
 1. "Qual o nome da empresa?"
 2. "Tem workspace no V4MOS? Se sim, qual o workspace_id?" (formato UUID, ex: `f854f2c6-84f9-4d30-b35a-0548acae8af6`)
 3. "Módulo vendas (SDR IA) contratado? (sim/não)"
+4. **"Quer que eu busque informações da empresa na internet ou prefere responder tudo manualmente?"**
+   - Se buscar: avise que gasta mais tokens mas economiza tempo
+   - Se manual: pula pra Etapa 2 normalmente
 
 Derive o slug do nome: lowercase, sem acentos, espaços viram hífens. Exemplo: "Padaria do João" → `padaria-do-joao`.
+
+### Se o operador escolheu BUSCA AUTOMÁTICA:
+
+Lance subagents em paralelo para pesquisar:
+
+**Subagent 1 — Site e presença digital:**
+- WebSearch: "{nome_empresa} site oficial"
+- WebFetch no site encontrado: extrair descrição, produtos/serviços, localização, contato
+- Verificar se tem SSL, velocidade, responsividade
+
+**Subagent 2 — Redes sociais e reputação:**
+- WebSearch: "{nome_empresa} Instagram"
+- WebSearch: "{nome_empresa} Google Meu Negócio"
+- WebSearch: "{nome_empresa} reclame aqui" ou avaliações
+
+**Subagent 3 — Mercado e concorrentes:**
+- WebSearch: "concorrentes de {nome_empresa}" ou "{segmento} {cidade}"
+- WebSearch: "{segmento} mercado brasil tamanho"
+- Identificar 3-5 concorrentes automaticamente
+
+Com os resultados, monte um resumo e apresente ao operador EM BATCH para confirmação:
+
+```
+PESQUISA AUTOMÁTICA — {nome}
+━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Encontrei o seguinte. Confirme ou corrija cada item:
+
+EMPRESA:
+  Nome completo: {nome encontrado}              ✅ correto? 
+  Segmento: {segmento inferido}                  ✅ correto?
+  Localização: {cidade/estado}                   ✅ correto?
+  Tempo de mercado: {anos estimados}             ✅ correto?
+  Site: {url}                                    ✅ correto?
+  Instagram: {handle}                            ✅ correto?
+
+PRODUTO:
+  Principal: {produto/serviço inferido}          ✅ correto?
+  Ticket médio estimado: {range}                 ✅ correto?
+
+CONCORRENTES IDENTIFICADOS:
+  1. {concorrente 1} — {diferencial percebido}   ✅ correto?
+  2. {concorrente 2} — {diferencial percebido}   ✅ correto?
+  3. {concorrente 3} — {diferencial percebido}   ✅ correto?
+
+PRESENÇA DIGITAL:
+  Site ativo: {sim/não}
+  Instagram: {seguidores estimados}
+  Google Meu Negócio: {ativo/não encontrado}
+  Anúncios Meta: {encontrados/não}
+
+O que está errado ou faltando?
+```
+
+O operador corrige o que precisa. Itens confirmados vão direto pro briefing.json. Itens que a pesquisa não encontrou serão perguntados manualmente na Etapa 4.
+
+**IMPORTANTE:** Campos que NUNCA podem ser inferidos (sempre perguntar manualmente):
+- Descrição dos 3 melhores clientes
+- Quem NÃO é cliente ideal
+- 3 problemas que clientes têm antes de contratar
+- 3 resultados que clientes alcançam
+- Razões de churn
+- Diferencial REAL vs concorrentes (não o percebido)
+- Tom de voz desejado
+- 3 adjetivos de personalidade da marca
+- Restrições visuais
+- Dados de vendas (ciclo, conversão, objeções)
+
+Esses campos são subjetivos e só o operador/cliente sabe.
+
+### Se o operador escolheu MANUAL:
 
 Confirme com o operador:
 ```
@@ -26,6 +100,8 @@ Módulo Vendas: {sim/não}
 
 Correto?
 ```
+
+E siga para Etapa 2.
 
 ## Etapa 2: Criar estrutura
 
