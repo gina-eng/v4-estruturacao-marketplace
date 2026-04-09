@@ -8,7 +8,7 @@ Sistema de estruturação estratégica com IA para operadores V4.
 
 No Claude Code:
 ```
-/plugin marketplace add v4company/v4-estruturacao-marketplace
+/plugin marketplace add guilhermelippert/v4-estruturacao-marketplace
 ```
 
 ### 2. Instalar o plugin

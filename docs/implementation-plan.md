@@ -26,8 +26,8 @@
 - [ ] **Step 1: Create GitHub repo**
 
 ```bash
-gh repo create v4company/v4-estruturacao-marketplace --private --description "Marketplace de skills para estruturação estratégica com IA - V4 Company"
-git clone git@github.com:v4company/v4-estruturacao-marketplace.git
+gh repo create guilhermelippert/v4-estruturacao-marketplace --private --description "Marketplace de skills para estruturação estratégica com IA - V4 Company"
+git clone git@github.com:guilhermelippert/v4-estruturacao-marketplace.git
 cd v4-estruturacao-marketplace
 ```
 
@@ -94,7 +94,7 @@ Sistema de estruturação estratégica com IA para operadores V4.
 
 No Claude Code:
 ```
-/plugin marketplace add v4company/v4-estruturacao-marketplace
+/plugin marketplace add guilhermelippert/v4-estruturacao-marketplace
 ```
 
 ### 2. Instalar o plugin
@@ -967,7 +967,7 @@ Use o gh CLI:
 
 ```bash
 gh issue create \
-  --repo v4company/v4-estruturacao-marketplace \
+  --repo guilhermelippert/v4-estruturacao-marketplace \
   --title "Feedback: {skill} — {resumo curto}" \
   --label "feedback,skill:{skill-name},{severidade}" \
   --body "$(cat <<'EOF'

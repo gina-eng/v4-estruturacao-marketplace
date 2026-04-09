@@ -67,7 +67,7 @@ Use o `gh` CLI para criar a issue:
 
 ```bash
 gh issue create \
-  --repo v4company/v4-estruturacao-marketplace \
+  --repo guilhermelippert/v4-estruturacao-marketplace \
   --title "Feedback: {skill} — {resumo em max 50 chars}" \
   --label "ee-feedback,skill:{skill-name},{severidade}" \
   --body "$(cat <<'EOF'

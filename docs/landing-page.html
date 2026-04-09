@@ -7,7 +7,7 @@
     <meta name="description" content="Sistema de IA que transforma 5 semanas de trabalho manual em entregáveis profissionais de marketing estratégico.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&family=Syne:wght@600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
         /* ═══════════════════════════════════════
            VARIABLES & RESET
@@ -31,8 +31,8 @@
             --green-soft: rgba(34, 197, 94, 0.12);
             --yellow: #eab308;
             --yellow-soft: rgba(234, 179, 8, 0.12);
-            --font-display: 'Playfair Display', Georgia, serif;
-            --font-heading: 'Syne', system-ui, sans-serif;
+            --font-display: 'Bebas Neue', sans-serif;
+            --font-heading: 'Bebas Neue', sans-serif;
             --font-body: 'DM Sans', system-ui, sans-serif;
             --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
             --nav-h: 64px;
@@ -64,11 +64,11 @@
         /* ═══════════════════════════════════════
            TYPOGRAPHY
            ═══════════════════════════════════════ */
-        h1, h2, h3, h4 { color: var(--white); line-height: 1.2; }
-        h1 { font-family: var(--font-display); font-weight: 800; font-size: clamp(2.5rem, 6vw, 4.5rem); letter-spacing: -0.02em; }
-        h2 { font-family: var(--font-heading); font-weight: 800; font-size: clamp(1.5rem, 3vw, 2rem); text-transform: uppercase; letter-spacing: 0.02em; }
-        h3 { font-family: var(--font-heading); font-weight: 700; font-size: 1.125rem; }
-        h4 { font-family: var(--font-heading); font-weight: 600; font-size: 0.875rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; }
+        h1, h2, h3, h4 { color: var(--white); line-height: 1.0; text-transform: uppercase; }
+        h1 { font-family: var(--font-display); font-weight: 400; font-size: clamp(3rem, 7vw, 5.5rem); letter-spacing: 0.04em; }
+        h2 { font-family: var(--font-heading); font-weight: 400; font-size: clamp(1.75rem, 3.5vw, 2.5rem); letter-spacing: 0.06em; }
+        h3 { font-family: var(--font-heading); font-weight: 400; font-size: 1.25rem; letter-spacing: 0.05em; }
+        h4 { font-family: var(--font-heading); font-weight: 400; font-size: 0.875rem; color: var(--text-muted); letter-spacing: 0.1em; }
         p { font-size: 1rem; max-width: 65ch; }
         a { color: var(--red); text-decoration: none; transition: opacity 0.2s; }
         a:hover { opacity: 0.8; }
@@ -140,7 +140,7 @@
         @keyframes pulseDot { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
         .hero h1 { margin-bottom: 1.5rem; }
         .hero h1 em {
-            font-style: italic;
+            font-style: normal;
             background: linear-gradient(135deg, var(--red), #ff6b6b);
             -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
         }
@@ -1098,7 +1098,7 @@
                     <p>Registra o marketplace da V4 no seu Claude Code. Como adicionar uma "loja" de plugins.</p>
                     <div class="code-block">
                         <button class="copy-btn">Copiar</button>
-                        <code>/plugin marketplace add v4company/v4-estruturacao-marketplace</code>
+                        <code>/plugin marketplace add guilhermelippert/v4-estruturacao-marketplace</code>
                     </div>
                     <div class="info-box">
                         Execute esse comando dentro do Claude Code (após digitar <strong>claude</strong> no terminal).
