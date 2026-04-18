@@ -3,7 +3,13 @@
   "title": "Landing Page",
   "description": "Output estruturado da landing page: copy por seção, FAQ, prova social, meta tags e URL de deploy.",
   "type": "object",
-  "required": ["sections", "faq", "social_proof", "meta"],
+  "required": [
+    "summary",
+    "sections",
+    "faq",
+    "social_proof",
+    "meta"
+  ],
   "properties": {
     "sections": {
       "type": "array",
@@ -11,11 +17,20 @@
       "minItems": 6,
       "items": {
         "type": "object",
-        "required": ["name"],
+        "required": [
+          "name"
+        ],
         "properties": {
           "name": {
             "type": "string",
-            "enum": ["hero", "problem", "solution", "how_it_works", "deliverables", "final_cta"],
+            "enum": [
+              "hero",
+              "problem",
+              "solution",
+              "how_it_works",
+              "deliverables",
+              "final_cta"
+            ],
             "description": "Identificador da seção"
           },
           "headline": {
@@ -43,10 +58,17 @@
             "description": "Cards de dor (seção problem)",
             "items": {
               "type": "object",
-              "required": ["title", "body"],
+              "required": [
+                "title",
+                "body"
+              ],
               "properties": {
-                "title": { "type": "string" },
-                "body": { "type": "string" }
+                "title": {
+                  "type": "string"
+                },
+                "body": {
+                  "type": "string"
+                }
               }
             }
           },
@@ -55,11 +77,22 @@
             "description": "Benefícios com ícone (seção solution)",
             "items": {
               "type": "object",
-              "required": ["icon", "title", "body"],
+              "required": [
+                "icon",
+                "title",
+                "body"
+              ],
               "properties": {
-                "icon": { "type": "string", "description": "Nome do ícone sugerido (Lucide/Heroicons)" },
-                "title": { "type": "string" },
-                "body": { "type": "string" }
+                "icon": {
+                  "type": "string",
+                  "description": "Nome do ícone sugerido (Lucide/Heroicons)"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "body": {
+                  "type": "string"
+                }
               }
             }
           },
@@ -68,11 +101,21 @@
             "description": "Passos do como funciona",
             "items": {
               "type": "object",
-              "required": ["number", "title", "body"],
+              "required": [
+                "number",
+                "title",
+                "body"
+              ],
               "properties": {
-                "number": { "type": "integer" },
-                "title": { "type": "string" },
-                "body": { "type": "string" }
+                "number": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "body": {
+                  "type": "string"
+                }
               }
             }
           },
@@ -81,10 +124,17 @@
             "description": "Itens de entregáveis",
             "items": {
               "type": "object",
-              "required": ["title", "benefit"],
+              "required": [
+                "title",
+                "benefit"
+              ],
               "properties": {
-                "title": { "type": "string" },
-                "benefit": { "type": "string" }
+                "title": {
+                  "type": "string"
+                },
+                "benefit": {
+                  "type": "string"
+                }
               }
             }
           }
@@ -97,27 +147,49 @@
       "minItems": 5,
       "items": {
         "type": "object",
-        "required": ["question", "answer"],
+        "required": [
+          "question",
+          "answer"
+        ],
         "properties": {
-          "question": { "type": "string" },
-          "answer": { "type": "string" }
+          "question": {
+            "type": "string"
+          },
+          "answer": {
+            "type": "string"
+          }
         }
       }
     },
     "social_proof": {
       "type": "object",
-      "required": ["testimonials", "stats"],
+      "required": [
+        "testimonials",
+        "stats"
+      ],
       "properties": {
         "testimonials": {
           "type": "array",
           "description": "Depoimentos de clientes (reais ou placeholders).",
           "items": {
             "type": "object",
-            "required": ["name", "role", "text"],
+            "required": [
+              "name",
+              "role",
+              "text"
+            ],
             "properties": {
-              "name": { "type": "string" },
-              "role": { "type": "string", "description": "Cargo ou contexto da pessoa" },
-              "text": { "type": "string", "description": "Texto do depoimento" }
+              "name": {
+                "type": "string"
+              },
+              "role": {
+                "type": "string",
+                "description": "Cargo ou contexto da pessoa"
+              },
+              "text": {
+                "type": "string",
+                "description": "Texto do depoimento"
+              }
             }
           }
         },
@@ -126,10 +198,19 @@
           "description": "Números de impacto (clientes, anos, resultados).",
           "items": {
             "type": "object",
-            "required": ["number", "label"],
+            "required": [
+              "number",
+              "label"
+            ],
             "properties": {
-              "number": { "type": "string", "description": "Número formatado (ex: '500+')" },
-              "label": { "type": "string", "description": "Descrição do número" }
+              "number": {
+                "type": "string",
+                "description": "Número formatado (ex: '500+')"
+              },
+              "label": {
+                "type": "string",
+                "description": "Descrição do número"
+              }
             }
           }
         }
@@ -137,7 +218,13 @@
     },
     "meta": {
       "type": "object",
-      "required": ["title", "description", "og_title", "og_description", "og_type"],
+      "required": [
+        "title",
+        "description",
+        "og_title",
+        "og_description",
+        "og_type"
+      ],
       "properties": {
         "title": {
           "type": "string",
@@ -149,11 +236,17 @@
           "maxLength": 155,
           "description": "Meta description para SEO"
         },
-        "og_title": { "type": "string" },
-        "og_description": { "type": "string" },
+        "og_title": {
+          "type": "string"
+        },
+        "og_description": {
+          "type": "string"
+        },
         "og_type": {
           "type": "string",
-          "enum": ["website"],
+          "enum": [
+            "website"
+          ],
           "default": "website"
         }
       }
@@ -166,6 +259,10 @@
     "whatsapp_link": {
       "type": "string",
       "description": "Link completo do WhatsApp com mensagem pré-formatada"
+    },
+    "summary": {
+      "type": "string",
+      "description": "Resumo de 1-2 frases da landing page. Inclui proposta central da página e número de seções criadas."
     }
   }
 }

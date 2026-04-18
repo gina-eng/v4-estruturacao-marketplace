@@ -112,3 +112,13 @@ Operador aprova (com ou sem ajustes).
 4. Sugira próxima skill do dependency_graph
    - "Pesquisa concluída. TAM: R$ {valor} | SAM: R$ {valor} | SOM: R$ {valor}. Concorrentes analisados: {numero}. Diferenciais reais identificados: {numero}."
    - "Proximo passo recomendado: /ee-s2-posicionamento (Usa esta pesquisa como base para definir PUV, canvas 4P e territorio de marca)"
+
+
+## Campo obrigatório: summary
+
+Sempre inclua no JSON de saída:
+```json
+"summary": "Resumo de 1-2 frases do pesquisa de mercado: oportunidade principal e diferencial real do cliente. Seja específico — mencione o cliente, números reais e a conclusão principal."
+```
+
+Este campo alimenta o Resumo Executivo do portal de entregas. Deve ser objetivo, com dados reais, sem genéricos.

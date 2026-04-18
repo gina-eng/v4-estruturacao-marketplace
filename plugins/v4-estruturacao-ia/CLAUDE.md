@@ -23,7 +23,12 @@ Se o operador disser "continuar [nome]" ou apenas "continuar", carregue o client
 1. Leia `clientes/{cliente}/client.json` — fonte única de verdade (meta, briefing, research, connectors, progress, history)
 2. Consulte `clientes/{cliente}/base-de-conhecimento/` — documentos do operador (reuniões, emails, docs). Leia os relevantes para a skill atual.
 3. Leia outputs anteriores em `clientes/{cliente}/outputs/` que a skill depende (ver `dependency_graph.json`)
-4. Se a skill usa dados de conectores, verifique `client.json.connectors`. Se `fetched_at` tem mais de 7 dias, puxe via API V4MOS (curl com headers x-client-id, x-client-secret, x-workspace-id em https://api.data.v4.marketing)
+4. Se a skill usa dados de conectores, verifique `client.json.connectors`. Se `fetched_at` tem mais de 7 dias, puxe via API V4MOS:
+   - Base URL: `https://api.data.v4.marketing/v1`
+   - Auth: headers `x-client-id` + `x-client-secret`
+   - `workspaceId` é QUERY PARAMETER (não path): `?workspaceId={id}&limit=500&page=1`
+   - Endpoints: `GET /v1/google/ads/campaigns` · `GET /v1/facebook/ads/campaigns`
+   - Documentação completa: https://developers.v4.marketing
 5. Gere o output COMPLETO da skill de uma vez
 6. Auto-valide antes de apresentar:
    - Mencionou o cliente pelo nome? Se não → regenere
@@ -68,7 +73,9 @@ Fonte ÚNICA de verdade por cliente. Substitui state.json, briefing.json, decisi
   },
   "connectors": {
     "fetched_at": null,
-    "integrations": null
+    "period": { "start": "YYYY-MM-DD", "end": "YYYY-MM-DD" },
+    "google_ads": { "total_campaigns": 0, "total_cost": 0, "avg_cpa": null, "campaigns": [] },
+    "facebook_ads": { "total_campaigns": 0, "total_spend": 0, "avg_cpm": 0, "campaigns": [] }
   },
   "progress": {
     "current_week": 1,

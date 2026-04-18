@@ -120,7 +120,7 @@ Ao carregar o contexto de um cliente, siga esta ordem:
 ### 5. V4MOS cache (se existir)
 - `clientes/{slug}/client.json (connectors)` → dados da API V4MOS
 - Verifique `fetched_at`: se tem mais de 7 dias, sugira refresh
-- Se o operador concordar: `bash a API V4MOS via curl (veja ee-novo-cliente Etapa 3)`
+- Se o operador concordar: `bash scripts/v4mos_fetch.sh clientes/{slug}`
 
 ## Mapa de semanas e skills
 

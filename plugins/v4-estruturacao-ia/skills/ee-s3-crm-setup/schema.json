@@ -3,7 +3,14 @@
   "title": "CRM Setup",
   "description": "Output estruturado da configuração de CRM Kommo: pipeline, tags, réguas de automação e checklist de teste.",
   "type": "object",
-  "required": ["pipeline_stages", "tags", "welcome_sequence", "nurture_sequence", "test_checklist"],
+  "required": [
+    "summary",
+    "pipeline_stages",
+    "tags",
+    "welcome_sequence",
+    "nurture_sequence",
+    "test_checklist"
+  ],
   "properties": {
     "pipeline_stages": {
       "type": "array",
@@ -11,7 +18,11 @@
       "minItems": 4,
       "items": {
         "type": "object",
-        "required": ["order", "name", "description"],
+        "required": [
+          "order",
+          "name",
+          "description"
+        ],
         "properties": {
           "order": {
             "type": "integer",
@@ -27,7 +38,9 @@
           },
           "auto_actions": {
             "type": "array",
-            "items": { "type": "string" },
+            "items": {
+              "type": "string"
+            },
             "description": "Ações automáticas disparadas nesta etapa"
           }
         }
@@ -35,26 +48,39 @@
     },
     "tags": {
       "type": "object",
-      "required": ["origin", "score", "products", "temperature"],
+      "required": [
+        "origin",
+        "score",
+        "products",
+        "temperature"
+      ],
       "properties": {
         "origin": {
           "type": "array",
-          "items": { "type": "string" },
+          "items": {
+            "type": "string"
+          },
           "description": "Tags de origem do lead"
         },
         "score": {
           "type": "array",
-          "items": { "type": "string" },
+          "items": {
+            "type": "string"
+          },
           "description": "Níveis de score SDR"
         },
         "products": {
           "type": "array",
-          "items": { "type": "string" },
+          "items": {
+            "type": "string"
+          },
           "description": "Produtos/serviços de interesse"
         },
         "temperature": {
           "type": "array",
-          "items": { "type": "string" },
+          "items": {
+            "type": "string"
+          },
           "description": "Temperatura do lead"
         }
       }
@@ -66,7 +92,12 @@
       "maxItems": 3,
       "items": {
         "type": "object",
-        "required": ["order", "timing", "channel", "message"],
+        "required": [
+          "order",
+          "timing",
+          "channel",
+          "message"
+        ],
         "properties": {
           "order": {
             "type": "integer",
@@ -78,7 +109,11 @@
           },
           "channel": {
             "type": "string",
-            "enum": ["whatsapp", "email", "whatsapp + email"],
+            "enum": [
+              "whatsapp",
+              "email",
+              "whatsapp + email"
+            ],
             "description": "Canal de envio"
           },
           "message": {
@@ -95,7 +130,11 @@
       "maxItems": 4,
       "items": {
         "type": "object",
-        "required": ["week", "channel", "message_type"],
+        "required": [
+          "week",
+          "channel",
+          "message_type"
+        ],
         "properties": {
           "week": {
             "type": "integer",
@@ -103,12 +142,21 @@
           },
           "channel": {
             "type": "string",
-            "enum": ["whatsapp", "email", "whatsapp + email"],
+            "enum": [
+              "whatsapp",
+              "email",
+              "whatsapp + email"
+            ],
             "description": "Canal de envio"
           },
           "message_type": {
             "type": "string",
-            "enum": ["conteudo_de_valor", "caso_de_sucesso", "diferencial_produto", "oferta_cta"],
+            "enum": [
+              "conteudo_de_valor",
+              "caso_de_sucesso",
+              "diferencial_produto",
+              "oferta_cta"
+            ],
             "description": "Tipo de conteúdo do touchpoint"
           },
           "whatsapp_message": {
@@ -132,7 +180,10 @@
       "minItems": 5,
       "items": {
         "type": "object",
-        "required": ["test", "steps"],
+        "required": [
+          "test",
+          "steps"
+        ],
         "properties": {
           "test": {
             "type": "string",
@@ -140,15 +191,24 @@
           },
           "steps": {
             "type": "array",
-            "items": { "type": "string" },
+            "items": {
+              "type": "string"
+            },
             "description": "Passos do teste"
           },
           "passed": {
-            "type": ["boolean", "null"],
+            "type": [
+              "boolean",
+              "null"
+            ],
             "description": "Se o teste passou (preenchido pelo operador)"
           }
         }
       }
+    },
+    "summary": {
+      "type": "string",
+      "description": "Resumo de 1-2 frases do setup do CRM. Inclui número de etapas do pipeline e réguas configuradas."
     }
   }
 }

@@ -4,6 +4,7 @@
   "description": "Output estruturado do diagnostico de criativos: matriz de avaliacao, padroes, analise de concorrentes e briefing de producao.",
   "type": "object",
   "required": [
+    "summary",
     "client_name",
     "segment",
     "creative_matrix",
@@ -55,7 +56,16 @@
           },
           "type": {
             "type": "string",
-            "enum": ["feed", "story", "carrossel", "video_curto", "video_longo", "banner", "reels", "outro"],
+            "enum": [
+              "feed",
+              "story",
+              "carrossel",
+              "video_curto",
+              "video_longo",
+              "banner",
+              "reels",
+              "outro"
+            ],
             "description": "Tipo/formato do criativo"
           },
           "description": {
@@ -120,7 +130,11 @@
           },
           "verdict": {
             "type": "string",
-            "enum": ["manter", "otimizar", "eliminar"],
+            "enum": [
+              "manter",
+              "otimizar",
+              "eliminar"
+            ],
             "description": "Veredicto: manter (20-25), otimizar (13-19), eliminar (<13)"
           },
           "verdict_reason": {
@@ -131,40 +145,46 @@
             "type": "object",
             "description": "Dados de performance se disponiveis",
             "properties": {
-              "ctr": { "type": ["number", "null"] },
-              "cpl": { "type": ["number", "null"] },
-              "impressions": { "type": ["integer", "null"] },
-              "clicks": { "type": ["integer", "null"] }
+              "ctr": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "cpl": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "impressions": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "clicks": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              }
             }
           }
         }
       },
       "description": "Matriz de avaliacao de cada criativo"
     },
-    "summary": {
-      "type": "object",
-      "description": "Resumo da avaliacao",
-      "properties": {
-        "keep_count": {
-          "type": "integer",
-          "description": "Quantidade de criativos para manter"
-        },
-        "optimize_count": {
-          "type": "integer",
-          "description": "Quantidade de criativos para otimizar"
-        },
-        "eliminate_count": {
-          "type": "integer",
-          "description": "Quantidade de criativos para eliminar"
-        }
-      }
-    },
     "patterns_identified": {
       "type": "array",
       "minItems": 1,
       "items": {
         "type": "object",
-        "required": ["pattern", "affected_creatives", "example"],
+        "required": [
+          "pattern",
+          "affected_creatives",
+          "example"
+        ],
         "properties": {
           "pattern": {
             "type": "string",
@@ -172,7 +192,9 @@
           },
           "affected_creatives": {
             "type": "array",
-            "items": { "type": "integer" },
+            "items": {
+              "type": "integer"
+            },
             "description": "Numeros dos criativos afetados"
           },
           "example": {
@@ -187,7 +209,11 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["element", "seen_in", "reason"],
+        "required": [
+          "element",
+          "seen_in",
+          "reason"
+        ],
         "properties": {
           "element": {
             "type": "string",
@@ -195,7 +221,9 @@
           },
           "seen_in": {
             "type": "array",
-            "items": { "type": "integer" },
+            "items": {
+              "type": "integer"
+            },
             "description": "Numeros dos criativos onde aparece"
           },
           "reason": {
@@ -210,7 +238,10 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["competitor", "creative_pattern"],
+        "required": [
+          "competitor",
+          "creative_pattern"
+        ],
         "properties": {
           "competitor": {
             "type": "string",
@@ -252,12 +283,21 @@
         },
         "hook_examples": {
           "type": "array",
-          "items": { "type": "string" },
+          "items": {
+            "type": "string"
+          },
           "description": "Exemplos de hooks recomendados"
         },
         "priority_format": {
           "type": "string",
-          "enum": ["stories_vertical", "feed_quadrado", "carrossel", "video_curto", "video_longo", "reels"],
+          "enum": [
+            "stories_vertical",
+            "feed_quadrado",
+            "carrossel",
+            "video_curto",
+            "video_longo",
+            "reels"
+          ],
           "description": "Formato prioritario para novos criativos"
         },
         "format_justification": {
@@ -266,12 +306,16 @@
         },
         "visual_elements": {
           "type": "array",
-          "items": { "type": "string" },
+          "items": {
+            "type": "string"
+          },
           "description": "Elementos visuais a incluir nos novos criativos"
         },
         "avoid_elements": {
           "type": "array",
-          "items": { "type": "string" },
+          "items": {
+            "type": "string"
+          },
           "description": "Elementos a evitar nos novos criativos"
         },
         "copy_guidelines": {
@@ -279,7 +323,11 @@
           "properties": {
             "length": {
               "type": "string",
-              "enum": ["short_15_words", "medium_30_words", "long_50_plus"],
+              "enum": [
+                "short_15_words",
+                "medium_30_words",
+                "long_50_plus"
+              ],
               "description": "Comprimento recomendado"
             },
             "tone": {
@@ -292,7 +340,9 @@
             },
             "icp_keywords": {
               "type": "array",
-              "items": { "type": "string" },
+              "items": {
+                "type": "string"
+              },
               "description": "Palavras-chave que o ICP usa"
             }
           },
@@ -313,6 +363,28 @@
       "type": "string",
       "format": "date-time",
       "description": "Data/hora de conclusao"
+    },
+    "counts": {
+      "type": "object",
+      "description": "Resumo da avaliacao",
+      "properties": {
+        "keep_count": {
+          "type": "integer",
+          "description": "Quantidade de criativos para manter"
+        },
+        "optimize_count": {
+          "type": "integer",
+          "description": "Quantidade de criativos para otimizar"
+        },
+        "eliminate_count": {
+          "type": "integer",
+          "description": "Quantidade de criativos para eliminar"
+        }
+      }
+    },
+    "summary": {
+      "type": "string",
+      "description": "Resumo de 1-2 frases do diagnóstico de criativos. Inclui principais padrões encontrados e ação prioritária."
     }
   }
 }

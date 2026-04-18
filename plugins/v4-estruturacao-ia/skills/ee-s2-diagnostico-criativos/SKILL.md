@@ -112,3 +112,13 @@ Operador aprova (com ou sem ajustes).
    - "Diagnóstico concluído. Criativos analisados: {numero}. Manter: {n} | Otimizar: {n} | Eliminar: {n}."
    - "Este diagnostico alimenta: /ee-s3-criativos-anuncios, /ee-s3-copy-anuncios"
    - "Proximo passo recomendado: /ee-s2-diagnostico-cro"
+
+
+## Campo obrigatório: summary
+
+Sempre inclua no JSON de saída:
+```json
+"summary": "Resumo de 1-2 frases do diagnóstico de criativos: principais padrões encontrados e ação prioritária. Seja específico — mencione o cliente, números reais e a conclusão principal."
+```
+
+Este campo alimenta o Resumo Executivo do portal de entregas. Deve ser objetivo, com dados reais, sem genéricos.

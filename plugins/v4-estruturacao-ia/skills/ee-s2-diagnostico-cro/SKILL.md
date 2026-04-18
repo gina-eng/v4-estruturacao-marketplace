@@ -124,3 +124,13 @@ Operador aprova (com ou sem ajustes).
    - "Diagnóstico CRO concluído. PageSpeed mobile: {score}/100. Score de confiança: {X}/10. Hipóteses: {numero}."
    - "Este diagnostico alimenta DIRETAMENTE: /ee-s3-landing-page"
    - "Semana 2 completa! Próximo passo: Semana 3 — Produção. Comece por: /ee-s3-identidade-visual ou /ee-s3-brandbook"
+
+
+## Campo obrigatório: summary
+
+Sempre inclua no JSON de saída:
+```json
+"summary": "Resumo de 1-2 frases do diagnóstico de CRO: principal gap de conversão identificado e ação prioritária. Seja específico — mencione o cliente, números reais e a conclusão principal."
+```
+
+Este campo alimenta o Resumo Executivo do portal de entregas. Deve ser objetivo, com dados reais, sem genéricos.

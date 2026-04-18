@@ -298,35 +298,42 @@ Se `modulo_vendas` = false, remova as 4 skills de semana 4-5 do progress.skills 
      ```
    - IMPORTANTE: cada cliente tem seu próprio Service Account vinculado ao workspace dele. Não reutilize credenciais entre clientes.
 
-4. **Buscar dados de conectores via API V4MOS:**
+4. **Buscar dados de mídia via API V4MOS:**
 
-   Faça a chamada diretamente (NÃO dependa de scripts externos):
-
+   Use o script (que lida com paginação e agrega os dados):
    ```bash
-   curl -s \
-     -H "x-client-id: {CLIENT_ID}" \
-     -H "x-client-secret: {CLIENT_SECRET}" \
-     -H "x-workspace-id: {WORKSPACE_ID}" \
-     -H "Content-Type: application/json" \
-     "https://api.data.v4.marketing/workspaces/{WORKSPACE_ID}/integrations/status"
+   bash scripts/v4mos_fetch.sh clientes/{slug}
    ```
 
-   **Autenticação:** headers `x-client-id` + `x-client-secret` + `x-workspace-id`. NÃO é OAuth. NÃO é Bearer token.
+   Ou, se precisar buscar manualmente (atenção: `workspaceId` é QUERY PARAMETER, não path):
+   ```bash
+   # Google Ads
+   curl -s "https://api.data.v4.marketing/v1/google/ads/campaigns?workspaceId={WORKSPACE_ID}&limit=500" \
+     -H "x-client-id: {CLIENT_ID}" -H "x-client-secret: {CLIENT_SECRET}"
 
-   **Se retornar 200:** extraia a lista de conectores e salve em `clientes/{slug}/client.json (connectors)`
-   **Se retornar 401/403:** credenciais erradas — peça ao operador pra verificar em Settings > Data API
-   **Se retornar 404:** endpoint pode não estar disponível pra esse workspace — siga sem dados V4MOS
+   # Facebook Ads
+   curl -s "https://api.data.v4.marketing/v1/facebook/ads/campaigns?workspaceId={WORKSPACE_ID}&limit=500" \
+     -H "x-client-id: {CLIENT_ID}" -H "x-client-secret: {CLIENT_SECRET}"
+   ```
+
+   **Auth:** apenas `x-client-id` + `x-client-secret`. Sem `x-workspace-id`. Sem Bearer token.
+   **Documentação:** https://developers.v4.marketing
+
+   **Se retornar 200:** dados salvos em `client.json.connectors` pelo script
+   **Se retornar 401:** credenciais erradas — verifique em Configurações > API de Dados no V4MOS
+   **Se retornar 400 "workspaceId obrigatório":** faltou o query param (erro de chamada)
+   **Se workspace_id for null:** cliente sem V4MOS — siga com dados do briefing
 
 5. Mostre ao operador um resumo:
    ```
-   CONECTORES V4MOS — {nome}
-   ━━━━━━━━━━━━━━━━━━━━━━━━
-   Conectores ativos: Meta Ads, Google Ads, Kommo (exemplo)
-   Conectores com problema: Google Analytics (warning)
+   DADOS V4MOS — {nome}
+   ━━━━━━━━━━━━━━━━━━━━
+   Google Ads: {N} campanhas | R${X} gasto | CPA médio R${Y}
+   Facebook Ads: {N} campanhas | R${X} gasto | CPM médio R${Y}
+   Período: {start} → {end}
    ```
-   Nota: A API V4MOS só fornece dados de conectores/integrações.
-   
-6. Dados de conectores serão usados nas skills de diagnóstico de mídia e maturidade
+
+6. Dados de mídia serão usados nas skills de diagnóstico de mídia e maturidade
 
 **Se não tem workspace_id:**
 

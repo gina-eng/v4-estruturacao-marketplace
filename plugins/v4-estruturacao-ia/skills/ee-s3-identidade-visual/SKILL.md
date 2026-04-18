@@ -161,3 +161,13 @@ Operador aprova (com ou sem ajustes).
   }
 }
 ```
+
+
+## Campo obrigatório: summary
+
+Sempre inclua no JSON de saída:
+```json
+"summary": "Resumo de 1-2 frases do identidade visual: conceito criativo central e paleta de cores principal. Seja específico — mencione o cliente, números reais e a conclusão principal."
+```
+
+Este campo alimenta o Resumo Executivo do portal de entregas. Deve ser objetivo, com dados reais, sem genéricos.

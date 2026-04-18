@@ -18,7 +18,11 @@
       "monthly_revenue_goal": "R$ 90.000,00",
       "years_in_market": null,
       "location": "Americana, SP",
-      "coverage_cities": ["Americana", "Santa Bárbara d'Oeste", "Nova Odessa"],
+      "coverage_cities": [
+        "Americana",
+        "Santa Bárbara d'Oeste",
+        "Nova Odessa"
+      ],
       "website": "https://clinicazenvet.com.br",
       "instagram": "@clinicazenvet",
       "whatsapp": "(19) 99579-5483",
@@ -62,8 +66,18 @@
         "age": "36 anos",
         "class": "Classe média a média alta",
         "behavior": "Busca prevenção, não apenas urgência. Valoriza confiança técnica e atendimento humanizado e especializado.",
-        "channels": ["Instagram", "Facebook", "WhatsApp", "Google"],
-        "objections": ["preço total do tratamento", "medo de exames desnecessários", "receio de demora", "insegurança sobre especialização da clínica"]
+        "channels": [
+          "Instagram",
+          "Facebook",
+          "WhatsApp",
+          "Google"
+        ],
+        "objections": [
+          "preço total do tratamento",
+          "medo de exames desnecessários",
+          "receio de demora",
+          "insegurança sobre especialização da clínica"
+        ]
       },
       "problems_before": null,
       "results_after": null,
@@ -71,11 +85,26 @@
     },
     "competition": {
       "competitors": [
-        {"name": "Dois hospitais veterinários 24h (mesma avenida)", "perceived_differential": "Consulta isca R$ 70, domínio do Google local, retenção forçada do animal até pagamento"},
-        {"name": "Cantinho do Mascote", "perceived_differential": "Concorrente regional direto"},
-        {"name": "LM Hospital Veterinário", "perceived_differential": "Hospital — maior estrutura"},
-        {"name": "Shopdog", "perceived_differential": "Pet shop com serviços agregados"},
-        {"name": "Xodog", "perceived_differential": "Concorrente regional"}
+        {
+          "name": "Dois hospitais veterinários 24h (mesma avenida)",
+          "perceived_differential": "Consulta isca R$ 70, domínio do Google local, retenção forçada do animal até pagamento"
+        },
+        {
+          "name": "Cantinho do Mascote",
+          "perceived_differential": "Concorrente regional direto"
+        },
+        {
+          "name": "LM Hospital Veterinário",
+          "perceived_differential": "Hospital — maior estrutura"
+        },
+        {
+          "name": "Shopdog",
+          "perceived_differential": "Pet shop com serviços agregados"
+        },
+        {
+          "name": "Xodog",
+          "perceived_differential": "Concorrente regional"
+        }
       ],
       "real_differential": null,
       "why_choose_us": null,
@@ -91,7 +120,10 @@
     },
     "digital_situation": {
       "paid_traffic": true,
-      "platforms": ["google_ads", "meta_ads"],
+      "platforms": [
+        "google_ads",
+        "meta_ads"
+      ],
       "monthly_investment_total": "R$ 3.200,00",
       "monthly_investment_google": "R$ 2.400,00",
       "monthly_investment_meta": "R$ 800,00",
@@ -103,7 +135,11 @@
       "biggest_pain": "Falta de leads qualificados, ausência de rastreamento (sem pixel/tags), LP sem conversão, sem CRM, agência anterior sem transparência",
       "monthly_posts_frequency": "Várias vezes por semana",
       "content_type": "Conteúdo educativo",
-      "active_channels": ["Instagram", "Facebook", "Google Meu Negócio"]
+      "active_channels": [
+        "Instagram",
+        "Facebook",
+        "Google Meu Negócio"
+      ]
     },
     "accesses": {
       "meta_business": false,
@@ -119,39 +155,206 @@
     "sales_module": {
       "active_sellers": "1 (Loíse — recepcionista/comercial)",
       "sales_process": "Atendimento reativo via WhatsApp. Qualificação automática inicial: cão ou gato? Domicílio ou clínica?",
-      "objections": ["Preço vs concorrência", "Lead some sem retorno"],
+      "objections": [
+        "Preço vs concorrência",
+        "Lead some sem retorno"
+      ],
       "conversion_rate": "16,6% lead → agendamento / ~100% agendamento → atendimento",
       "sales_cycle": "Imediato (mesmo dia ou próximos dias)",
       "has_scripts": false,
       "needs": "Treinamento consultivo para Loíse, CRM, script por tipo de serviço, follow-up estruturado"
     }
   },
-  "research": {"fetched_at": null},
-  "connectors": {"fetched_at": null, "integrations": null},
+  "research": {
+    "fetched_at": null
+  },
+  "connectors": {
+    "fetched_at": "2026-04-18T15:30:00Z",
+    "period": { "start": "2025-01-01", "end": "2026-04-18" },
+    "google_ads": {
+      "integration_name": "VET519 - Clínica Zen Vet",
+      "total_campaigns": 15,
+      "total_cost": 13975.10,
+      "total_clicks": 11008,
+      "total_impressions": 300869,
+      "total_conversions": 1225.0,
+      "avg_cpa": 11.41,
+      "avg_ctr": 3.66,
+      "campaigns": [
+        { "name": "[Sc] - [Pesquisa] - [13/03]", "type": "SEARCH", "status": "ENABLED", "budget_daily": 80.0, "cost": 1675.51, "clicks": 389, "impressions": 5946, "conversions": 63.0, "ctr": 6.54, "cpa": 26.60 },
+        { "name": "flyvet.search - Geral", "type": "SEARCH", "status": "PAUSED", "budget_daily": 78.0, "cost": 6212.79, "clicks": 2254, "impressions": 46663, "conversions": 473.54, "ctr": 4.83, "cpa": 13.12 },
+        { "name": "flyvet.pmax - Geral Nova", "type": "PERFORMANCE_MAX", "status": "PAUSED", "budget_daily": 5.0, "cost": 352.47, "clicks": 1344, "impressions": 44879, "conversions": 198.96, "ctr": 2.99, "cpa": 1.77 },
+        { "name": "flyvet.gdm - vacinação", "type": "DEMAND_GEN", "status": "PAUSED", "budget_daily": 5.0, "cost": 917.48, "clicks": 1752, "impressions": 66043, "conversions": 266.98, "ctr": 2.65, "cpa": 3.44 },
+        { "name": "flyvet.search - Serviços", "type": "SEARCH", "status": "PAUSED", "budget_daily": 12.0, "cost": 1426.97, "clicks": 412, "impressions": 7812, "conversions": 83.5, "ctr": 5.27, "cpa": 17.09 },
+        { "name": "C01 - CONSULTIVA | SEARCH [21/03/2025] MAX CLIQUES", "type": "SEARCH", "status": "PAUSED", "budget_daily": 30.0, "cost": 1386.77, "clicks": 1006, "impressions": 29349, "conversions": 44.0, "ctr": 3.43, "cpa": 31.52 },
+        { "name": "[OFF_ROS] Veterinária em Americana", "type": "SMART", "status": "PAUSED", "budget_daily": 40.0, "cost": 938.10, "clicks": 2542, "impressions": 71439, "conversions": 23.0, "ctr": 3.56, "cpa": 40.79 },
+        { "name": "[OFF] C02 - CONSULTIVA | PMAX - CATEGORIZADA", "type": "PERFORMANCE_MAX", "status": "PAUSED", "budget_daily": 5.0, "cost": 371.47, "clicks": 886, "impressions": 18206, "conversions": 59.0, "ctr": 4.87, "cpa": 6.30 },
+        { "name": "flyvet.search - Serviços Nova", "type": "SEARCH", "status": "PAUSED", "budget_daily": 10.0, "cost": 107.40, "clicks": 85, "impressions": 1527, "conversions": 1.0, "ctr": 5.57, "cpa": 107.40 },
+        { "name": "flyvet.search - Nova Institucional", "type": "SEARCH", "status": "PAUSED", "budget_daily": 5.0, "cost": 172.07, "clicks": 113, "impressions": 1279, "conversions": 5.0, "ctr": 8.84, "cpa": 34.41 },
+        { "name": "flyvet.search - felinos", "type": "SEARCH", "status": "PAUSED", "budget_daily": 5.0, "cost": 106.08, "clicks": 42, "impressions": 661, "conversions": 0.0, "ctr": 6.35, "cpa": null },
+        { "name": "flyvet.gdm - Reconhecimento", "type": "DEMAND_GEN", "status": "PAUSED", "budget_daily": 5.0, "cost": 44.36, "clicks": 30, "impressions": 1734, "conversions": 2.02, "ctr": 1.73, "cpa": 21.96 },
+        { "name": "flyvet.pmax - Geral", "type": "PERFORMANCE_MAX", "status": "PAUSED", "budget_daily": 5.0, "cost": 79.92, "clicks": 67, "impressions": 2854, "conversions": 1.0, "ctr": 2.35, "cpa": 79.92 },
+        { "name": "flyvet.search - Institucional", "type": "SEARCH", "status": "PAUSED", "budget_daily": 5.0, "cost": 92.43, "clicks": 54, "impressions": 1905, "conversions": 4.0, "ctr": 2.83, "cpa": 23.11 },
+        { "name": "[OFF] C03 - CONSULTIVA | SEARCH - CATEGORIZADA", "type": "SEARCH", "status": "PAUSED", "budget_daily": 5.0, "cost": 91.28, "clicks": 32, "impressions": 572, "conversions": 0.0, "ctr": 5.59, "cpa": null }
+      ]
+    },
+    "facebook_ads": {
+      "integration_name": "Nathália H. Alves",
+      "total_campaigns": 15,
+      "total_spend": 3472.63,
+      "total_impressions": 343910,
+      "total_clicks": 2603,
+      "total_reach": 270330,
+      "avg_cpm": 10.10,
+      "avg_ctr": 0.76,
+      "campaigns": [
+        { "name": "[SC] - [Engajamento_Mensagens] - [13/03]", "objective": "OUTCOME_ENGAGEMENT", "spend": 974.37, "impressions": 95436, "clicks": 1262, "reach": 58923, "cpm": 10.21 },
+        { "name": "[OFF] C01 [04/04/2025] - CONSULTIVA | ENGAJAMENTO - WHATSAPP", "objective": "OUTCOME_ENGAGEMENT", "spend": 747.78, "impressions": 43877, "clicks": 365, "reach": 31116, "cpm": 17.04 },
+        { "name": "Publicação do Instagram: Conheça um pouco mais...", "objective": "MESSAGES", "spend": 547.74, "impressions": 33576, "clicks": 248, "reach": 28397, "cpm": 16.31 },
+        { "name": "Publicação do Instagram: Primeira dose da vacina...", "objective": "MESSAGES", "spend": 250.94, "impressions": 13928, "clicks": 154, "reach": 10724, "cpm": 18.02 },
+        { "name": "Post do Instagram: 💜🐾 Seu pet merece...", "objective": "MESSAGES", "spend": 192.37, "impressions": 12653, "clicks": 85, "reach": 11137, "cpm": 15.20 },
+        { "name": "Publicação do Instagram: 💜🐾 Seu pet merece...", "objective": "MESSAGES", "spend": 146.07, "impressions": 6692, "clicks": 76, "reach": 6261, "cpm": 21.83 },
+        { "name": "Instagram post: 💜🐾 Seu pet merece...", "objective": "MESSAGES", "spend": 139.65, "impressions": 8257, "clicks": 73, "reach": 6159, "cpm": 16.91 },
+        { "name": "[OFF] C03 [14/05/2024] - AQUISIÇÃO | RECONHECIMENTO - IG", "objective": "OUTCOME_AWARENESS", "spend": 121.96, "impressions": 105081, "clicks": 81, "reach": 98549, "cpm": 1.16 },
+        { "name": "Instagram post: Um novo conceito em atendimento...", "objective": "MESSAGES", "spend": 95.22, "impressions": 5726, "clicks": 50, "reach": 4540, "cpm": 16.63 },
+        { "name": "Publicação do Instagram: A Dra. Nathalia Alves é...", "objective": "MESSAGES", "spend": 71.04, "impressions": 4618, "clicks": 20, "reach": 3156, "cpm": 15.38 },
+        { "name": "[OFF] C04 [24/05/2025] - CONSULTIVA | LEADS - NATIVO", "objective": "OUTCOME_LEADS", "spend": 65.92, "impressions": 3985, "clicks": 43, "reach": 3327, "cpm": 16.54 },
+        { "name": "Atendimento a domicílio", "objective": "OUTCOME_ENGAGEMENT", "spend": 49.91, "impressions": 3855, "clicks": 56, "reach": 2979, "cpm": 12.95 },
+        { "name": "[SC] - [CBO] Mensagens [13/04]", "objective": "OUTCOME_ENGAGEMENT", "spend": 35.76, "impressions": 3263, "clicks": 49, "reach": 2436, "cpm": 10.96 },
+        { "name": "Publicação do Instagram: Sem estresse! Evite o...", "objective": "MESSAGES", "spend": 19.98, "impressions": 1304, "clicks": 11, "reach": 1084, "cpm": 15.32 },
+        { "name": "[OFF] C02 [11/04/2025] - AQUISIÇÃO | TRAFEGO - IG", "objective": "LINK_CLICKS", "spend": 13.92, "impressions": 1659, "clicks": 30, "reach": 1542, "cpm": 8.39 }
+      ]
+    }
+  },
   "progress": {
     "current_week": 1,
     "skills": {
-      "ee-s1-diagnostico-maturidade": {"status": "completed", "checkpoint": 1, "started_at": "2026-04-16", "completed_at": "2026-04-16"},
-      "ee-s1-swot": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
-      "ee-s1-persona-icp": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
-      "ee-s1-auditoria-comunicacao": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
-      "ee-s2-pesquisa-mercado": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
-      "ee-s2-posicionamento": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
-      "ee-s2-diagnostico-midia": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
-      "ee-s2-diagnostico-criativos": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
-      "ee-s2-diagnostico-cro": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
-      "ee-s3-identidade-visual": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
-      "ee-s3-brandbook": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
-      "ee-s3-landing-page": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
-      "ee-s3-copy-anuncios": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
-      "ee-s3-criativos-anuncios": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
-      "ee-s3-crm-setup": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
-      "ee-s3-forecast-midia": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
-      "ee-s3-gmb-otimizacao": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
-      "ee-s4-diagnostico-comercial": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
-      "ee-s4-cliente-oculto": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
-      "ee-s5-scripts-sdr": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
-      "ee-s5-sdr-ia-config": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null}
+      "ee-s1-diagnostico-maturidade": {
+        "status": "completed",
+        "checkpoint": 1,
+        "started_at": "2026-04-16",
+        "completed_at": "2026-04-16"
+      },
+      "ee-s1-swot": {
+        "status": "pending",
+        "checkpoint": 0,
+        "started_at": null,
+        "completed_at": null
+      },
+      "ee-s1-persona-icp": {
+        "status": "pending",
+        "checkpoint": 0,
+        "started_at": null,
+        "completed_at": null
+      },
+      "ee-s1-auditoria-comunicacao": {
+        "status": "pending",
+        "checkpoint": 0,
+        "started_at": null,
+        "completed_at": null
+      },
+      "ee-s2-pesquisa-mercado": {
+        "status": "pending",
+        "checkpoint": 0,
+        "started_at": null,
+        "completed_at": null
+      },
+      "ee-s2-posicionamento": {
+        "status": "pending",
+        "checkpoint": 0,
+        "started_at": null,
+        "completed_at": null
+      },
+      "ee-s2-diagnostico-midia": {
+        "status": "pending",
+        "checkpoint": 0,
+        "started_at": null,
+        "completed_at": null
+      },
+      "ee-s2-diagnostico-criativos": {
+        "status": "pending",
+        "checkpoint": 0,
+        "started_at": null,
+        "completed_at": null
+      },
+      "ee-s2-diagnostico-cro": {
+        "status": "pending",
+        "checkpoint": 0,
+        "started_at": null,
+        "completed_at": null
+      },
+      "ee-s3-identidade-visual": {
+        "status": "pending",
+        "checkpoint": 0,
+        "started_at": null,
+        "completed_at": null
+      },
+      "ee-s3-brandbook": {
+        "status": "pending",
+        "checkpoint": 0,
+        "started_at": null,
+        "completed_at": null
+      },
+      "ee-s3-landing-page": {
+        "status": "pending",
+        "checkpoint": 0,
+        "started_at": null,
+        "completed_at": null
+      },
+      "ee-s3-copy-anuncios": {
+        "status": "pending",
+        "checkpoint": 0,
+        "started_at": null,
+        "completed_at": null
+      },
+      "ee-s3-criativos-anuncios": {
+        "status": "pending",
+        "checkpoint": 0,
+        "started_at": null,
+        "completed_at": null
+      },
+      "ee-s3-crm-setup": {
+        "status": "pending",
+        "checkpoint": 0,
+        "started_at": null,
+        "completed_at": null
+      },
+      "ee-s3-forecast-midia": {
+        "status": "pending",
+        "checkpoint": 0,
+        "started_at": null,
+        "completed_at": null
+      },
+      "ee-s3-gmb-otimizacao": {
+        "status": "pending",
+        "checkpoint": 0,
+        "started_at": null,
+        "completed_at": null
+      },
+      "ee-s4-diagnostico-comercial": {
+        "status": "pending",
+        "checkpoint": 0,
+        "started_at": null,
+        "completed_at": null
+      },
+      "ee-s4-cliente-oculto": {
+        "status": "pending",
+        "checkpoint": 0,
+        "started_at": null,
+        "completed_at": null
+      },
+      "ee-s5-scripts-sdr": {
+        "status": "pending",
+        "checkpoint": 0,
+        "started_at": null,
+        "completed_at": null
+      },
+      "ee-s5-sdr-ia-config": {
+        "status": "pending",
+        "checkpoint": 0,
+        "started_at": null,
+        "completed_at": null
+      }
     }
   },
   "history": [

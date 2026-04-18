@@ -329,6 +329,218 @@
     @keyframes fadeIn { from{opacity:0;transform:translateY(8px)} to{opacity:1;transform:translateY(0)} }
     .fade-in { animation: fadeIn 0.5s ease both; }
 
+    /* ===== Presentation Mode ===== */
+    .pres-overlay {
+      display: none; position: fixed; inset: 0; z-index: 9000;
+      background: var(--bg-base); overflow: hidden;
+    }
+    .pres-mode .pres-overlay { display: block; }
+
+    .pres-slides { position: absolute; inset: 0; }
+
+    .pres-slide {
+      position: absolute; inset: 0; overflow: hidden;
+      transform: translateY(100%);
+      transition: transform 0.52s cubic-bezier(0.16,1,0.3,1);
+      background: var(--bg-base);
+      display: flex; flex-direction: column;
+    }
+    .pres-slide--active { transform: translateY(0); }
+    .pres-slide--prev  { transform: translateY(-100%); }
+
+    /* Bounded slide layout — header fixo + conteúdo scroll interno */
+    .pres-slide-inner { display: flex; flex-direction: column; height: 100%; }
+
+    .pres-slide-header {
+      flex-shrink: 0; background: var(--bg-surface);
+      border-bottom: 1px solid var(--border);
+    }
+    .pres-slide-header-inner {
+      max-width: 1000px; margin: 0 auto;
+      padding: 1.5rem clamp(1rem,3vw,1.5rem) 1.25rem;
+    }
+    .pres-slide-breadcrumb {
+      font-size: 0.625rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.1em; color: var(--accent); margin-bottom: 0.5rem;
+    }
+    .pres-skill-head { display: flex; align-items: center; gap: 0.875rem; flex-wrap: wrap; }
+    .pres-skill-name {
+      font-size: clamp(1.125rem,2.5vw,1.5rem); font-weight: 700;
+      color: var(--text-primary); letter-spacing: -0.02em; flex: 1;
+    }
+    .pres-slide-content {
+      flex: 1; overflow-y: auto; overflow-x: hidden;
+      scrollbar-width: thin; scrollbar-color: var(--border-mid) transparent;
+    }
+    .pres-slide-content-inner {
+      max-width: 1000px; margin: 0 auto;
+      padding: 1.5rem clamp(1rem,3vw,1.5rem) 5rem;
+    }
+    .pres-empty {
+      display: flex; flex-direction: column; align-items: center;
+      justify-content: center; min-height: 50vh; gap: 0.75rem;
+    }
+    .pres-empty__icon { font-size: 2.5rem; opacity: 0.3; }
+    .pres-empty__text { font-size: 0.9375rem; color: var(--text-muted); }
+
+    /* Summary slide (slide 0) — único que rola */
+    .pres-slide--summary { overflow-y: auto; display: block; }
+    .pres-summary-hero {
+      background: var(--brand-primary); text-align: center;
+      padding: clamp(3rem,6vw,5.5rem) clamp(1.5rem,4vw,3rem) clamp(2.5rem,5vw,4rem);
+      position: relative; overflow: hidden;
+    }
+    .pres-summary-hero::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 50% 0%, rgba(251,46,10,0.35) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .pres-summary-client {
+      font-size: clamp(2.25rem,5vw,4rem); font-weight: 700; color: #fff;
+      letter-spacing: -0.02em; margin-bottom: 0.375rem; position: relative; z-index: 1; line-height: 1.1;
+    }
+    .pres-summary-subtitle {
+      font-size: 0.8125rem; color: rgba(255,255,255,0.6);
+      text-transform: uppercase; letter-spacing: 0.12em; font-weight: 600;
+      margin-bottom: 2.5rem; position: relative; z-index: 1;
+    }
+    .pres-summary-stat {
+      max-width: 400px; margin: 0 auto 2.5rem; position: relative; z-index: 1;
+    }
+    .pres-summary-stat-bar { height: 3px; background: rgba(255,255,255,0.2); border-radius: 2px; overflow: hidden; margin-bottom: 0.75rem; }
+    .pres-summary-stat-fill { height: 100%; background: #fff; border-radius: 2px; }
+    .pres-summary-stat-label { font-size: 0.875rem; color: rgba(255,255,255,0.7); font-weight: 500; }
+    .pres-summary-cta {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3);
+      color: #fff; font-family: inherit; font-size: 0.8125rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      padding: 0.75rem 1.5rem; border-radius: var(--radius-pill);
+      cursor: pointer; transition: background 0.2s; position: relative; z-index: 1;
+    }
+    .pres-summary-cta:hover { background: rgba(255,255,255,0.25); }
+
+    .pres-summary-weeks {
+      max-width: 1000px; margin: 0 auto;
+      padding: 2rem clamp(1rem,3vw,1.5rem) 6rem;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(160px,1fr)); gap: 0.75rem;
+    }
+    .pres-summary-week-card {
+      background: var(--bg-surface); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 1.25rem;
+      cursor: pointer; transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .pres-summary-week-card:hover { border-color: rgba(251,46,10,0.25); box-shadow: 0 4px 16px rgba(251,46,10,0.07); }
+    .pres-summary-week-card--current { border-color: rgba(251,46,10,0.3); box-shadow: 0 0 0 1px rgba(251,46,10,0.1); }
+    .pres-summary-week-tag { font-size: 0.625rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 0.25rem; }
+    .pres-summary-week-title { font-size: 0.9375rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.875rem; line-height: 1.3; }
+    .pres-summary-week-bar { height: 3px; background: var(--border-mid); border-radius: 2px; overflow: hidden; margin-bottom: 0.5rem; }
+    .pres-summary-week-fill { height: 100%; background: var(--accent); border-radius: 2px; }
+    .pres-summary-week-count { font-size: 0.75rem; color: var(--text-muted); font-weight: 500; }
+
+    /* Diagnósticos no resumo executivo */
+    .pres-summary-diag {
+      max-width: 1000px; margin: 0 auto;
+      padding: 0 clamp(1rem,3vw,1.5rem) 6rem;
+    }
+    .pres-summary-diag-heading {
+      font-size: 0.625rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 1rem;
+      padding-top: 0.25rem; border-top: 1px solid var(--border);
+    }
+    .pres-summary-diag-card {
+      background: var(--bg-surface); border: 1px solid var(--border);
+      border-left: 3px solid var(--accent); border-radius: var(--radius);
+      padding: 1.25rem 1.375rem; margin-bottom: 0.75rem;
+      display: grid; grid-template-columns: 1fr auto; gap: 0.75rem 1.25rem; align-items: start;
+    }
+    .pres-summary-diag-card:last-child { margin-bottom: 0; }
+    .pres-summary-diag-tag {
+      font-size: 0.5625rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.1em; color: var(--accent); margin-bottom: 0.25rem;
+      grid-column: 1;
+    }
+    .pres-summary-diag-name {
+      font-size: 0.9375rem; font-weight: 700; color: var(--text-primary);
+      margin-bottom: 0.5rem; grid-column: 1;
+    }
+    .pres-summary-diag-text {
+      font-size: 0.875rem; color: var(--text-secondary); line-height: 1.65;
+      grid-column: 1;
+    }
+    .pres-summary-diag-metric {
+      grid-column: 2; grid-row: 1 / 4;
+      display: flex; flex-direction: column; align-items: center;
+      justify-content: center; text-align: center;
+      background: var(--bg-elevated); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 0.75rem 1rem; min-width: 72px;
+    }
+    .pres-summary-diag-metric-val {
+      font-size: 1.625rem; font-weight: 800; line-height: 1; margin-bottom: 0.125rem;
+    }
+    .pres-summary-diag-metric-val--red    { color: var(--accent); }
+    .pres-summary-diag-metric-val--yellow { color: var(--warning); }
+    .pres-summary-diag-metric-val--green  { color: var(--success); }
+    .pres-summary-diag-metric-lbl {
+      font-size: 0.5625rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.08em; color: var(--text-muted);
+    }
+    @media (max-width: 600px) {
+      .pres-summary-diag-card { grid-template-columns: 1fr; }
+      .pres-summary-diag-metric { grid-column: 1; grid-row: auto; flex-direction: row; gap: 0.5rem; justify-content: flex-start; }
+    }
+
+    .pres-bar {
+      display: none; position: fixed; bottom: 0; left: 0; right: 0;
+      height: 58px; z-index: 9100;
+      background: rgba(255,255,255,0.96); backdrop-filter: blur(10px);
+      border-top: 1px solid var(--border);
+      align-items: center; justify-content: center; gap: 0.875rem; padding: 0 1.5rem;
+    }
+    .pres-mode .pres-bar { display: flex; }
+
+    .pres-nav-btn {
+      width: 34px; height: 34px; border-radius: 50%;
+      border: 1px solid var(--border-mid); background: var(--bg-surface);
+      color: var(--text-primary); cursor: pointer; font-size: 0.9375rem;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+      transition: background 0.15s, border-color 0.15s;
+    }
+    .pres-nav-btn:hover:not(:disabled) { background: var(--bg-hover); border-color: var(--border-strong); }
+    .pres-nav-btn:disabled { opacity: 0.2; cursor: not-allowed; }
+
+    .pres-dots { display: flex; gap: 0.3125rem; align-items: center; }
+    .pres-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--border-strong); border: none; padding: 0;
+      cursor: pointer; transition: background 0.2s, width 0.2s, border-radius 0.2s;
+    }
+    .pres-dot--active { width: 18px; border-radius: 3px; background: var(--accent); }
+    .pres-dot--summary { border-radius: 3px; width: 10px; }
+    .pres-dot--summary.pres-dot--active { width: 18px; }
+
+    .pres-info {
+      font-size: 0.8125rem; font-weight: 600; color: var(--text-secondary);
+      min-width: 130px; text-align: center;
+    }
+
+    .pres-exit-btn {
+      font-size: 0.6875rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.06em; color: var(--text-muted); cursor: pointer;
+      border: none; background: none; padding: 0.375rem 0.5rem;
+      font-family: inherit; transition: color 0.15s; margin-left: 0.5rem;
+    }
+    .pres-exit-btn:hover { color: var(--accent); }
+
+    .tl-pres-btn { margin-left: auto; }
+    .tl-pres-btn .tl-label { color: rgba(255,255,255,0.8); }
+    .tl-pres-btn:hover .tl-label { color: #FDFF87; }
+    .tl-pres-icon { font-size: 0.5rem; opacity: 0.8; }
+
+    /* Evita flash do portal antes do modo apresentação */
+    body:not(.pres-ready) > :not(.pres-overlay):not(.pres-bar) { visibility: hidden; }
+    body.pres-ready > :not(.pres-overlay):not(.pres-bar) { visibility: visible; }
+
     @media print {
       body { background: #fff; }
       #progress-bar, .timeline { display: none; }
@@ -356,6 +568,20 @@
 
   <nav class="timeline" id="timeline"></nav>
   <main class="weeks" id="weeks"></main>
+
+  <!-- Presentation Mode Overlay -->
+  <div class="pres-overlay" id="presOverlay">
+    <div class="pres-slides" id="presSlides"></div>
+  </div>
+
+  <!-- Presentation Controls Bar -->
+  <div class="pres-bar" id="presBar">
+    <button class="pres-nav-btn" id="presPrev" onclick="PRES.prev()" title="Anterior (←)">&#8592;</button>
+    <div class="pres-dots" id="presDots"></div>
+    <span class="pres-info" id="presInfo"></span>
+    <button class="pres-nav-btn" id="presNext" onclick="PRES.next()" title="Próximo (→)">&#8594;</button>
+    <button class="pres-exit-btn" onclick="PRES.exit()">&#215; Sair</button>
+  </div>
 
   <footer class="footer">
     <div class="footer__brand">Gerado por <span>V4 Estruturação IA</span></div>
@@ -665,6 +891,7 @@ const R = {
 
 'ee-s2-pesquisa-mercado'(d) {
   let h = '';
+  if (d.summary) h += sm(d.summary);
   if (d.tam_sam_som) {
     const t = d.tam_sam_som;
     h += '<div class="gr gr--3">'+mt(BRL(t.tam?.value_brl),'TAM','red')+mt(BRL(t.sam?.value_brl),'SAM','yellow')+mt(BRL(t.som?.value_brl),'SOM','green')+'</div>';
@@ -693,6 +920,7 @@ const R = {
 
 'ee-s2-posicionamento'(d) {
   let h = '';
+  if (d.summary) h += sm(d.summary);
   if (d.puv) {
     h += '<div class="sum" style="border-left-color:var(--success)"><div class="sum__tag" style="color:var(--success)">Proposta Única de Valor</div>'
       +'<p class="sum__text" style="font-size:1.125rem;font-style:italic">'+E(d.puv)+'</p></div>';
@@ -725,6 +953,7 @@ const R = {
 
 'ee-s2-diagnostico-midia'(d) {
   let h = '';
+  if (d.summary) h += sm(d.summary);
   const cm = d.current_metrics||{}, bm = d.benchmarks||{};
   h += '<div class="gr gr--5">'
     +mt(cm.cpl!=null?BRL(cm.cpl):'—','CPL',cm.cpl&&bm.cpl?(cm.cpl<=bm.cpl?'green':'red'):'')
@@ -761,11 +990,13 @@ const R = {
 
 'ee-s2-diagnostico-criativos'(d) {
   let h = '';
+  if (d.summary) h += sm(d.summary);
+  const counts = d.counts || d.summary_counts || {};
   if (d.total_creatives_analyzed || d.average_score) {
     h += '<div class="gr gr--3">'
       +mt(d.total_creatives_analyzed||'—','Criativos Analisados','')
       +mt(d.average_score!=null?(d.average_score+'/25'):'—','Score Médio',d.average_score>=20?'green':d.average_score>=13?'yellow':'red')
-      +(d.summary?mt(d.summary.keep_count||0,'Manter','green'):'')
+      +(counts.keep_count!=null?mt(counts.keep_count,'Manter','green'):'')
       +'</div>';
   }
   if (d.creative_matrix?.length) {
@@ -789,6 +1020,7 @@ const R = {
 
 'ee-s2-diagnostico-cro'(d) {
   let h = '';
+  if (d.summary) h += sm(d.summary);
   if (d.technical_diagnosis) {
     const t = d.technical_diagnosis;
     h += '<div class="gr gr--4">'
@@ -823,6 +1055,7 @@ const R = {
 
 'ee-s3-identidade-visual'(d) {
   let h = '';
+  if (d.summary) h += sm(d.summary);
   if (d.creative_concept) h += co(d.creative_concept);
   if (d.color_palette?.length) {
     const safeHex = hex => /^#[0-9A-Fa-f]{6}$/.test(hex) ? hex : '#333';
@@ -861,6 +1094,7 @@ const R = {
 
 'ee-s3-brandbook'(d) {
   let h = '';
+  if (d.summary) h += sm(d.summary);
   if (d.purpose) {
     const p = d.purpose;
     h += sc('Propósito', '<div class="sum"><div class="sum__tag">Por que existimos</div><p class="sum__text" style="font-size:1.125rem;font-style:italic">'+E(p.why_we_exist)+'</p></div>'
@@ -895,6 +1129,7 @@ const R = {
 
 'ee-s3-landing-page'(d) {
   let h = '';
+  if (d.summary) h += sm(d.summary);
   if (d.deploy_url) {
     h += '<div class="sum" style="border-left-color:var(--success)"><div class="sum__tag" style="color:var(--success)">Landing Page Deployada</div>'
       +'<p class="sum__text"><a href="'+E(d.deploy_url)+'" target="_blank" style="font-size:1.125rem">'+E(d.deploy_url)+'</a></p></div>';
@@ -917,6 +1152,7 @@ const R = {
 
 'ee-s3-copy-anuncios'(d) {
   let h = '';
+  if (d.summary) h += sm(d.summary);
   if (d.total_variations) h += mt(d.total_variations,'Total de Variações','red');
   if (d.funnel_stages?.length) {
     const fn = {topo_de_funil:'Topo de Funil',meio_de_funil:'Meio de Funil',fundo_de_funil:'Fundo de Funil',remarketing:'Remarketing'};
@@ -938,6 +1174,7 @@ const R = {
 
 'ee-s3-criativos-anuncios'(d) {
   let h = '';
+  if (d.summary) h += sm(d.summary);
   if (d.total_pieces) h += '<div class="gr gr--2">'+mt(d.total_pieces,'Peças no Pack','red')+mt((d.variations||[]).length,'Variações de Hook','')+'</div>';
   if (d.variations?.length) {
     const hk = {dor:'danger',resultado:'green',curiosidade:'yellow',social_proof:'green',urgencia:'red'};
@@ -959,6 +1196,7 @@ const R = {
 
 'ee-s3-crm-setup'(d) {
   let h = '';
+  if (d.summary) h += sm(d.summary);
   if (d.pipeline_stages?.length) {
     h += sc('Pipeline de Vendas', '<div style="display:flex;gap:.375rem;flex-wrap:wrap;margin-bottom:1rem">'
       +d.pipeline_stages.map(s=>
@@ -984,6 +1222,7 @@ const R = {
 
 'ee-s3-forecast-midia'(d) {
   let h = '';
+  if (d.summary) h += sm(d.summary);
   if (d.financial_model?.length) {
     h += sc('Modelagem Financeira — 3 Meses', tb(['Mês','Label','Budget','CPL','Leads','Conv.','Vendas','Receita','ROAS'],
       d.financial_model.map(m=>[E(m.month),E(m.label),BRL(m.budget),BRL(m.cpl),E(m.leads),PCT(m.conversion_rate),E(m.sales),BRL(m.revenue),'<strong>'+N(m.roas)+'x</strong>'])));
@@ -1226,6 +1465,14 @@ function init() {
     nav.appendChild(btn);
   });
 
+  // Presentation mode button
+  const presBtn = document.createElement('button');
+  presBtn.className = 'tl-item tl-pres-btn';
+  presBtn.innerHTML = '<span class="tl-pres-icon">&#9654;</span><span class="tl-label">Apresentar</span>';
+  presBtn.title = 'Modo Apresentação — navega semana a semana';
+  presBtn.onclick = () => PRES.enter();
+  nav.appendChild(presBtn);
+
   // Weeks
   const main = document.getElementById('weeks');
   activeWeeks.forEach((week, wi) => {
@@ -1270,6 +1517,13 @@ function init() {
       });
     }
   });
+
+  // Entra em modo apresentação automaticamente ao carregar
+  requestAnimationFrame(() => {
+    PRES.build(activeWeeks, progress, outputs);
+    PRES.enter();
+    document.body.classList.add('pres-ready');
+  });
 }
 
 function renderSkill(skill, progress, outputs) {
@@ -1311,6 +1565,255 @@ function toggleWeek(n, forceOpen) {
     if (chev) chev.classList.add('week__chev--open');
   }
 }
+
+// ===== PRESENTATION MODE =====
+const PRES = {
+  slides: [], current: 0, active: false,
+
+  build(weeks, progress, outputs) {
+    const container = document.getElementById('presSlides');
+    if (!container) return;
+    container.innerHTML = '';
+    this.slides = [];
+
+    const badges = { completed: ['done','Concluído'], in_progress: ['wip','Em andamento'], pending: ['wait','Pendente'] };
+
+    // ── Slide 0: Resumo Executivo (único slide scrollável) ──
+    const allSkills = weeks.flatMap(w => w.skills);
+    const completedCount = allSkills.filter(s => (progress.skills?.[s.id]?.status) === 'completed').length;
+    const totalCount = allSkills.length;
+    const pctTotal = totalCount > 0 ? Math.round(completedCount / totalCount * 100) : 0;
+
+    const summarySlide = document.createElement('div');
+    summarySlide.className = 'pres-slide pres-slide--summary';
+
+    const heroDiv = document.createElement('div');
+    heroDiv.className = 'pres-summary-hero';
+    heroDiv.innerHTML =
+      '<div class="pres-summary-client">' + E(PORTAL_DATA.client?.name || 'Cliente') + '</div>'
+      + '<p class="pres-summary-subtitle">Estruturação Estratégica com IA</p>'
+      + '<div class="pres-summary-stat">'
+      +   '<div class="pres-summary-stat-bar"><div class="pres-summary-stat-fill" style="width:' + pctTotal + '%"></div></div>'
+      +   '<div class="pres-summary-stat-label">' + completedCount + ' de ' + totalCount + ' entregas &mdash; ' + pctTotal + '% concluído</div>'
+      + '</div>'
+      + '<button class="pres-summary-cta" onclick="PRES.next()">Ver Entregas &#8594;</button>';
+
+    const weeksGrid = document.createElement('div');
+    weeksGrid.className = 'pres-summary-weeks';
+
+    weeks.forEach(week => {
+      const done = week.skills.filter(s => (progress.skills?.[s.id]?.status) === 'completed').length;
+      const wip  = week.skills.filter(s => (progress.skills?.[s.id]?.status) === 'in_progress').length;
+      const pctW = week.skills.length > 0 ? Math.round(done / week.skills.length * 100) : 0;
+      const isCurrent = progress.current_week === week.n;
+      // First skill index for this week (will be offset by 1 because slide 0 is summary)
+      const weekFirstIdx = weeks.slice(0, weeks.indexOf(week)).reduce((acc, w) => acc + w.skills.length, 0) + 1;
+
+      const card = document.createElement('div');
+      card.className = 'pres-summary-week-card' + (isCurrent ? ' pres-summary-week-card--current' : '');
+      card.innerHTML =
+        '<div class="pres-summary-week-tag">Semana ' + week.n + '</div>'
+        + '<div class="pres-summary-week-title">' + E(week.title) + '</div>'
+        + '<div class="pres-summary-week-bar"><div class="pres-summary-week-fill" style="width:' + pctW + '%"></div></div>'
+        + '<div class="pres-summary-week-count">' + done + '/' + week.skills.length
+        + (wip > 0 ? ' &nbsp;&middot;&nbsp; <span style="color:var(--warning)">' + wip + ' em andamento</span>' : '')
+        + '</div>';
+      card.onclick = () => PRES.go(weekFirstIdx);
+      weeksGrid.appendChild(card);
+    });
+
+    // Cards de diagnósticos concluídos
+    const diagItems = [];
+    weeks.forEach(week => {
+      week.skills.forEach(skill => {
+        if ((progress.skills?.[skill.id]?.status) !== 'completed') return;
+        const data = outputs[skill.id];
+        if (!data) return;
+        const summaryText = typeof data.summary === 'string' ? data.summary
+          : typeof data.executive_summary === 'string' ? data.executive_summary : null;
+        if (!summaryText) return;
+        diagItems.push({ week, skill, data, summaryText });
+      });
+    });
+
+    if (diagItems.length > 0) {
+      const diagSection = document.createElement('div');
+      diagSection.className = 'pres-summary-diag';
+      diagSection.innerHTML = '<div class="pres-summary-diag-heading">Resumo dos Diagnósticos</div>';
+
+      const clsMap = { critical:'red', low:'red', medium:'yellow', good:'green', excellent:'green' };
+
+      diagItems.forEach(({ week, skill, data, summaryText }) => {
+        const card = document.createElement('div');
+        card.className = 'pres-summary-diag-card';
+
+        // Metric block (score or benchmark)
+        let metricHtml = '';
+        if (data.overall_score != null) {
+          const cls = clsMap[data.overall_classification] || 'gray';
+          const label = { critical:'Crítico', low:'Baixo', medium:'Médio', good:'Bom', excellent:'Excelente' }[data.overall_classification] || '';
+          metricHtml = '<div class="pres-summary-diag-metric">'
+            + '<div class="pres-summary-diag-metric-val pres-summary-diag-metric-val--' + cls + '">' + data.overall_score + '</div>'
+            + '<div class="pres-summary-diag-metric-lbl">' + (label || '/100') + '</div>'
+            + '</div>';
+        } else if (data.score != null) {
+          metricHtml = '<div class="pres-summary-diag-metric">'
+            + '<div class="pres-summary-diag-metric-val">' + data.score + '</div>'
+            + '<div class="pres-summary-diag-metric-lbl">Score</div>'
+            + '</div>';
+        }
+
+        card.innerHTML =
+          '<div class="pres-summary-diag-tag">Semana ' + week.n + ' &mdash; ' + E(week.title) + '</div>'
+          + '<div class="pres-summary-diag-name">' + E(skill.name) + '</div>'
+          + '<div class="pres-summary-diag-text">' + E(summaryText) + '</div>'
+          + metricHtml;
+
+        diagSection.appendChild(card);
+      });
+
+      summarySlide.appendChild(heroDiv);
+      summarySlide.appendChild(weeksGrid);
+      summarySlide.appendChild(diagSection);
+    } else {
+      summarySlide.appendChild(heroDiv);
+      summarySlide.appendChild(weeksGrid);
+    }
+
+    container.appendChild(summarySlide);
+    this.slides.push({ el: summarySlide, n: 0, title: 'Resumo', skillName: 'Resumo Executivo', isSummary: true });
+
+    // ── Slides 1..N: um por skill ──
+    weeks.forEach(week => {
+      week.skills.forEach(skill => {
+        const st = (progress.skills?.[skill.id]?.status) || 'pending';
+        const data = outputs[skill.id];
+        const [bc, bl] = badges[st] || badges.pending;
+
+        const slide = document.createElement('div');
+        slide.className = 'pres-slide';
+
+        // Inner wrapper (flex column, fills slide)
+        const inner = document.createElement('div');
+        inner.className = 'pres-slide-inner';
+
+        // Fixed header
+        const header = document.createElement('div');
+        header.className = 'pres-slide-header';
+        const headerInner = document.createElement('div');
+        headerInner.className = 'pres-slide-header-inner';
+        headerInner.innerHTML =
+          '<div class="pres-slide-breadcrumb">Semana ' + week.n + ' &mdash; ' + E(week.title) + '</div>'
+          + '<div class="pres-skill-head">'
+          +   '<span class="pres-skill-name">' + E(skill.name) + '</span>'
+          +   '<span class="skill__badge skill__badge--' + bc + '">' + E(bl) + '</span>'
+          + '</div>';
+        header.appendChild(headerInner);
+
+        // Scrollable content area (bounded to viewport)
+        const contentWrap = document.createElement('div');
+        contentWrap.className = 'pres-slide-content';
+        const contentInner = document.createElement('div');
+        contentInner.className = 'pres-slide-content-inner';
+
+        if (st === 'completed' && data && R[skill.id]) {
+          try { contentInner.innerHTML = R[skill.id](data); }
+          catch(e) { contentInner.innerHTML = '<p style="color:var(--danger)">Erro ao renderizar: ' + E(e.message) + '</p>'; }
+        } else if (st === 'in_progress') {
+          contentInner.innerHTML = '<div class="pres-empty"><div class="pres-empty__icon">&#9203;</div><div class="pres-empty__text">Entrega em desenvolvimento...</div></div>';
+        } else {
+          contentInner.innerHTML = '<div class="pres-empty"><div class="pres-empty__icon">&#128203;</div><div class="pres-empty__text">Esta entrega ainda não foi iniciada.</div></div>';
+        }
+
+        contentWrap.appendChild(contentInner);
+        inner.appendChild(header);
+        inner.appendChild(contentWrap);
+        slide.appendChild(inner);
+        container.appendChild(slide);
+
+        this.slides.push({ el: slide, n: week.n, title: week.title, skillName: skill.name });
+      });
+    });
+
+    this._updateUI();
+  },
+
+  enter() {
+    if (!this.slides.length) return;
+    this.active = true;
+    this.current = 0;
+    document.body.classList.add('pres-mode');
+    document.documentElement.style.overflow = 'hidden';
+    this.slides.forEach(s => s.el.classList.remove('pres-slide--active', 'pres-slide--prev'));
+    this.slides[0].el.classList.add('pres-slide--active');
+    this._updateUI();
+  },
+
+  exit() {
+    this.active = false;
+    document.body.classList.remove('pres-mode');
+    document.documentElement.style.overflow = '';
+  },
+
+  go(n) {
+    const total = this.slides.length;
+    if (n < 0 || n >= total || n === this.current) return;
+    const forward = n > this.current;
+    const oldEl = this.slides[this.current].el;
+    const newEl = this.slides[n].el;
+
+    oldEl.classList.remove('pres-slide--active');
+    oldEl.classList.toggle('pres-slide--prev', forward);
+
+    newEl.classList.remove('pres-slide--prev');
+    newEl.classList.add('pres-slide--active');
+    newEl.scrollTop = 0;
+
+    this.current = n;
+    this._updateUI();
+  },
+
+  next() { this.go(this.current + 1); },
+  prev() { this.go(this.current - 1); },
+
+  _updateUI() {
+    const n = this.current, total = this.slides.length;
+    const info = document.getElementById('presInfo');
+    if (info) {
+      const s = this.slides[n];
+      info.textContent = s?.isSummary ? 'Resumo Executivo' : (n) + ' / ' + (total - 1);
+    }
+    const prevBtn = document.getElementById('presPrev');
+    const nextBtn = document.getElementById('presNext');
+    if (prevBtn) prevBtn.disabled = n === 0;
+    if (nextBtn) nextBtn.disabled = n === total - 1;
+    const dotsEl = document.getElementById('presDots');
+    if (dotsEl) {
+      const parts = [];
+      // Dot 0: resumo executivo
+      parts.push('<button class="pres-dot pres-dot--summary' + (n === 0 ? ' pres-dot--active' : '') + '" onclick="PRES.go(0)" title="Resumo Executivo"></button>');
+      // Separator
+      parts.push('<span style="width:8px;display:inline-block"></span>');
+      // One dot per week
+      const seen = new Set();
+      const currentWeekN = this.slides[n]?.n;
+      this.slides.forEach((s, i) => {
+        if (s.isSummary || seen.has(s.n)) return;
+        seen.add(s.n);
+        const active = !this.slides[n]?.isSummary && s.n === currentWeekN;
+        parts.push('<button class="pres-dot' + (active ? ' pres-dot--active' : '') + '" onclick="PRES.go(' + i + ')" title="Semana ' + s.n + '"></button>');
+      });
+      dotsEl.innerHTML = parts.join('');
+    }
+  }
+};
+
+document.addEventListener('keydown', function(e) {
+  if (!PRES.active) return;
+  if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') { e.preventDefault(); PRES.next(); }
+  else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); PRES.prev(); }
+  else if (e.key === 'Escape') PRES.exit();
+});
 
 // Progress bar
 window.addEventListener('scroll', () => {

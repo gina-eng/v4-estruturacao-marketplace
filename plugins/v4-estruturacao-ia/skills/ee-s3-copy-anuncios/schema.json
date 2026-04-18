@@ -3,7 +3,12 @@
   "title": "Copy de Anúncios",
   "description": "Output estruturado de copy de anúncios: variações por fase de funil e plataforma, com limites de caracteres.",
   "type": "object",
-  "required": ["funnel_stages", "copy_rules_applied", "total_variations"],
+  "required": [
+    "summary",
+    "funnel_stages",
+    "copy_rules_applied",
+    "total_variations"
+  ],
   "properties": {
     "funnel_stages": {
       "type": "array",
@@ -11,11 +16,21 @@
       "minItems": 4,
       "items": {
         "type": "object",
-        "required": ["name", "objective", "tone", "platforms"],
+        "required": [
+          "name",
+          "objective",
+          "tone",
+          "platforms"
+        ],
         "properties": {
           "name": {
             "type": "string",
-            "enum": ["topo_de_funil", "meio_de_funil", "fundo_de_funil", "remarketing"],
+            "enum": [
+              "topo_de_funil",
+              "meio_de_funil",
+              "fundo_de_funil",
+              "remarketing"
+            ],
             "description": "Fase do funil"
           },
           "objective": {
@@ -31,11 +46,17 @@
             "description": "Plataformas de mídia com variações.",
             "items": {
               "type": "object",
-              "required": ["name", "variations"],
+              "required": [
+                "name",
+                "variations"
+              ],
               "properties": {
                 "name": {
                   "type": "string",
-                  "enum": ["meta_ads", "google_ads"],
+                  "enum": [
+                    "meta_ads",
+                    "google_ads"
+                  ],
                   "description": "Plataforma de mídia"
                 },
                 "variations": {
@@ -43,7 +64,9 @@
                   "description": "Variações de copy para esta plataforma.",
                   "items": {
                     "type": "object",
-                    "required": ["type"],
+                    "required": [
+                      "type"
+                    ],
                     "properties": {
                       "type": {
                         "type": "string",
@@ -67,21 +90,31 @@
                       },
                       "headlines": {
                         "type": "array",
-                        "items": { "type": "string" },
+                        "items": {
+                          "type": "string"
+                        },
                         "description": "Títulos para Google Ads responsivo"
                       },
                       "descriptions": {
                         "type": "array",
-                        "items": { "type": "string" },
+                        "items": {
+                          "type": "string"
+                        },
                         "description": "Descrições para Google Ads responsivo"
                       },
                       "char_count": {
                         "type": "object",
                         "description": "Contagem de caracteres por campo",
                         "properties": {
-                          "text": { "type": "integer" },
-                          "headline": { "type": "integer" },
-                          "description": { "type": "integer" }
+                          "text": {
+                            "type": "integer"
+                          },
+                          "headline": {
+                            "type": "integer"
+                          },
+                          "description": {
+                            "type": "integer"
+                          }
                         }
                       }
                     }
@@ -96,7 +129,9 @@
     "copy_rules_applied": {
       "type": "array",
       "description": "5 regras de copy aplicadas neste conjunto.",
-      "items": { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "minItems": 5
     },
     "total_variations": {
@@ -108,6 +143,10 @@
       "type": "string",
       "format": "uri",
       "description": "URL da planilha Google Sheets exportada"
+    },
+    "summary": {
+      "type": "string",
+      "description": "Resumo de 1-2 frases da copy de anúncios. Inclui número de variações geradas e principais ganchos usados."
     }
   }
 }

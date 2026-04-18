@@ -3,7 +3,14 @@
   "title": "Identidade Visual",
   "description": "Output estruturado do skill de identidade visual: conceito criativo, paleta de cores, tipografia, diretrizes de forma e prompts de logo.",
   "type": "object",
-  "required": ["creative_concept", "color_palette", "typography", "shape_guidelines", "logo_prompts"],
+  "required": [
+    "summary",
+    "creative_concept",
+    "color_palette",
+    "typography",
+    "shape_guidelines",
+    "logo_prompts"
+  ],
   "properties": {
     "creative_concept": {
       "type": "string",
@@ -18,7 +25,14 @@
       "maxItems": 6,
       "items": {
         "type": "object",
-        "required": ["name", "hex", "rgb", "cmyk", "role", "justification"],
+        "required": [
+          "name",
+          "hex",
+          "rgb",
+          "cmyk",
+          "role",
+          "justification"
+        ],
         "properties": {
           "name": {
             "type": "string",
@@ -39,7 +53,13 @@
           },
           "role": {
             "type": "string",
-            "enum": ["primary", "secondary", "accent", "neutral", "background"],
+            "enum": [
+              "primary",
+              "secondary",
+              "accent",
+              "neutral",
+              "background"
+            ],
             "description": "Papel da cor na paleta"
           },
           "justification": {
@@ -51,36 +71,84 @@
     },
     "typography": {
       "type": "object",
-      "required": ["title", "body", "highlight", "justification"],
+      "required": [
+        "title",
+        "body",
+        "highlight",
+        "justification"
+      ],
       "properties": {
         "title": {
           "type": "object",
-          "required": ["font", "weight", "size", "source"],
+          "required": [
+            "font",
+            "weight",
+            "size",
+            "source"
+          ],
           "properties": {
-            "font": { "type": "string", "description": "Nome da fonte (ex: 'Montserrat')" },
-            "weight": { "type": "string", "description": "Peso da fonte (ex: 'Bold 700')" },
-            "size": { "type": "string", "description": "Tamanho padrão (ex: '32px / 2rem')" },
-            "source": { "type": "string", "description": "Onde encontrar (ex: 'Google Fonts')" }
+            "font": {
+              "type": "string",
+              "description": "Nome da fonte (ex: 'Montserrat')"
+            },
+            "weight": {
+              "type": "string",
+              "description": "Peso da fonte (ex: 'Bold 700')"
+            },
+            "size": {
+              "type": "string",
+              "description": "Tamanho padrão (ex: '32px / 2rem')"
+            },
+            "source": {
+              "type": "string",
+              "description": "Onde encontrar (ex: 'Google Fonts')"
+            }
           }
         },
         "body": {
           "type": "object",
-          "required": ["font", "weight", "size", "source"],
+          "required": [
+            "font",
+            "weight",
+            "size",
+            "source"
+          ],
           "properties": {
-            "font": { "type": "string" },
-            "weight": { "type": "string" },
-            "size": { "type": "string" },
-            "source": { "type": "string" }
+            "font": {
+              "type": "string"
+            },
+            "weight": {
+              "type": "string"
+            },
+            "size": {
+              "type": "string"
+            },
+            "source": {
+              "type": "string"
+            }
           }
         },
         "highlight": {
           "type": "object",
-          "required": ["font", "weight", "size", "source"],
+          "required": [
+            "font",
+            "weight",
+            "size",
+            "source"
+          ],
           "properties": {
-            "font": { "type": "string" },
-            "weight": { "type": "string" },
-            "size": { "type": "string" },
-            "source": { "type": "string" }
+            "font": {
+              "type": "string"
+            },
+            "weight": {
+              "type": "string"
+            },
+            "size": {
+              "type": "string"
+            },
+            "source": {
+              "type": "string"
+            }
           }
         },
         "justification": {
@@ -91,21 +159,38 @@
     },
     "shape_guidelines": {
       "type": "object",
-      "required": ["shapes", "borders", "density", "icon_style"],
+      "required": [
+        "shapes",
+        "borders",
+        "density",
+        "icon_style"
+      ],
       "properties": {
         "shapes": {
           "type": "string",
-          "enum": ["geometric", "organic", "mixed"],
+          "enum": [
+            "geometric",
+            "organic",
+            "mixed"
+          ],
           "description": "Formas predominantes"
         },
         "borders": {
           "type": "string",
-          "enum": ["rounded", "sharp", "mixed"],
+          "enum": [
+            "rounded",
+            "sharp",
+            "mixed"
+          ],
           "description": "Padrão de bordas"
         },
         "density": {
           "type": "string",
-          "enum": ["minimalist", "balanced", "rich"],
+          "enum": [
+            "minimalist",
+            "balanced",
+            "rich"
+          ],
           "description": "Densidade visual geral"
         },
         "icon_style": {
@@ -121,7 +206,11 @@
       "maxItems": 3,
       "items": {
         "type": "object",
-        "required": ["direction", "concept", "prompt"],
+        "required": [
+          "direction",
+          "concept",
+          "prompt"
+        ],
         "properties": {
           "direction": {
             "type": "string",
@@ -144,21 +233,32 @@
     },
     "dos_and_donts": {
       "type": "object",
-      "required": ["dos", "donts"],
+      "required": [
+        "dos",
+        "donts"
+      ],
       "properties": {
         "dos": {
           "type": "array",
-          "items": { "type": "string" },
+          "items": {
+            "type": "string"
+          },
           "minItems": 5,
           "description": "5 regras de 'faça' para aplicação da marca"
         },
         "donts": {
           "type": "array",
-          "items": { "type": "string" },
+          "items": {
+            "type": "string"
+          },
           "minItems": 5,
           "description": "5 regras de 'não faça' para aplicação da marca"
         }
       }
+    },
+    "summary": {
+      "type": "string",
+      "description": "Resumo de 1-2 frases da identidade visual. Inclui conceito criativo central e paleta de cores principal."
     }
   }
 }

@@ -132,3 +132,13 @@ Operador aprova (com ou sem ajustes).
    - "Posicionamento concluído. PUV: '{puv}'. Tagline: '{tagline}'. Território: {3 palavras}."
    - "Este posicionamento será usado por: /ee-s3-brandbook, /ee-s3-landing-page, /ee-s3-copy-anuncios, /ee-s3-criativos-anuncios, /ee-s3-identidade-visual"
    - "Proximo passo recomendado: /ee-s2-diagnostico-midia ou /ee-s2-diagnostico-criativos"
+
+
+## Campo obrigatório: summary
+
+Sempre inclua no JSON de saída:
+```json
+"summary": "Resumo de 1-2 frases do posicionamento: PUV definida e território de marca escolhido. Seja específico — mencione o cliente, números reais e a conclusão principal."
+```
+
+Este campo alimenta o Resumo Executivo do portal de entregas. Deve ser objetivo, com dados reais, sem genéricos.

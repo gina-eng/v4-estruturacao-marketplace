@@ -16,17 +16,27 @@ Você é um estrategista sênior de marketing digital. Vai analisar a maturidade
 
 ## Dados necessários
 
-### Fonte V4MOS (conectores apenas)
-Leia `clientes/{slug}/client.json (connectors)`. Se o arquivo existir, extraia:
-- `integrations` → status dos conectores (Meta, Google Ads, Analytics, Kommo, etc.)
-  - Quais plataformas estão conectadas e ativas
-  - Isso indica maturidade em mídia paga e CRM
+### Fonte V4MOS (conectores)
+Leia `clientes/{slug}/client.json` (seção `connectors`). Se `fetched_at` existir e não for null, extraia:
+- `google_ads` → campanhas Google Ads (total_campaigns, total_cost, avg_cpa, lista de campanhas com status)
+- `facebook_ads` → campanhas Meta Ads (total_campaigns, total_spend, avg_cpm, lista de campanhas)
+- Quais plataformas estão conectadas = indicador de maturidade em mídia paga
 
-Se o arquivo não existir, busque via curl:
+Se `connectors.fetched_at` for null ou inexistente, busque via script:
 ```bash
-curl -s -H "x-client-id: {CLIENT_ID}" -H "x-client-secret: {CLIENT_SECRET}" -H "x-workspace-id: {WORKSPACE_ID}" "https://api.data.v4.marketing/workspaces/{WORKSPACE_ID}/integrations/status"
+bash scripts/v4mos_fetch.sh clientes/{slug}
 ```
-Credenciais estão em `.credentials/clients.json`. Se a chamada falhar, siga sem dados V4MOS.
+O script lê `.credentials/clients.json` e salva em `client.json.connectors`. Se falhar (sem workspace_id ou sem credenciais), siga com briefing apenas.
+
+**Formato atual dos connectors:**
+```json
+{
+  "fetched_at": "2026-04-18T15:30:00Z",
+  "period": { "start": "2025-01-01", "end": "2026-04-18" },
+  "google_ads": { "total_campaigns": 15, "total_cost": 13975, "avg_cpa": 11.41, "campaigns": [...] },
+  "facebook_ads": { "total_campaigns": 15, "total_spend": 3472, "avg_cpm": 10.10, "campaigns": [...] }
+}
+```
 
 ### Fonte principal: Briefing + Operador
 Leia `clientes/{slug}/client.json (briefing)`. Extraia:
@@ -41,12 +51,13 @@ Leia `clientes/{slug}/client.json (briefing)`. Extraia:
 Gere o output COMPLETO de uma vez usando os dados de `client.json` (briefing, connectors) e outputs de skills dependentes em `outputs/`.
 
 ### Cenário A: V4MOS tem dados de conectores
-Se `client.json` (seção `connectors`) existe e `integrations` não é null, incorpore no diagnóstico:
-- Data da coleta (`fetched_at`)
-- Conectores ativos (lista)
-- Conectores com problema (status warning/error)
+Se `client.json.connectors.fetched_at` não é null, incorpore no diagnóstico:
+- Período dos dados (`period.start` → `period.end`)
+- Google Ads: quantas campanhas, gasto total, CPA médio, status das campanhas (ENABLED/PAUSED)
+- Facebook Ads: quantas campanhas, gasto total, CPM médio, objetivos usados
+- Quais plataformas estão ausentes (ex: sem Google Analytics = gap de rastreamento)
 
-Isso dá uma visão parcial da maturidade (quais plataformas estão conectadas = indicador de uso).
+Isso dá uma visão real da maturidade — não só "tem mídia paga" mas "como está performando".
 
 ### Cenário B: Diagnóstico baseado em briefing + operador (SEMPRE executado)
 O diagnóstico completo sempre usa os dados do briefing (`digital_situation`) e as seguintes informações. Se não encontrar no client.json, pergunte ao operador TUDO de uma vez:

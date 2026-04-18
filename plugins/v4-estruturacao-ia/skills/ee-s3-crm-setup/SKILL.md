@@ -126,3 +126,13 @@ Operador aprova (com ou sem ajustes, após testes passarem).
   "test_checklist": [{ "test": "Pipeline", "steps": ["string"], "passed": null }]
 }
 ```
+
+
+## Campo obrigatório: summary
+
+Sempre inclua no JSON de saída:
+```json
+"summary": "Resumo de 1-2 frases do setup do CRM: número de etapas do pipeline e réguas configuradas. Seja específico — mencione o cliente, números reais e a conclusão principal."
+```
+
+Este campo alimenta o Resumo Executivo do portal de entregas. Deve ser objetivo, com dados reais, sem genéricos.

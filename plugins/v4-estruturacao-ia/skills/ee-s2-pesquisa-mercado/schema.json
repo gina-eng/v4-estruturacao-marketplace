@@ -4,6 +4,7 @@
   "description": "Output estruturado da pesquisa de mercado: TAM/SAM/SOM, concorrentes, tendencias, JTBD e diferenciais reais.",
   "type": "object",
   "required": [
+    "summary",
     "client_name",
     "segment",
     "region",
@@ -31,11 +32,20 @@
     "tam_sam_som": {
       "type": "object",
       "description": "Sizing de mercado com metodologia e fontes",
-      "required": ["tam", "sam", "som", "methodology", "sources"],
+      "required": [
+        "tam",
+        "sam",
+        "som",
+        "methodology",
+        "sources"
+      ],
       "properties": {
         "tam": {
           "type": "object",
-          "required": ["value_brl", "description"],
+          "required": [
+            "value_brl",
+            "description"
+          ],
           "properties": {
             "value_brl": {
               "type": "number",
@@ -49,7 +59,11 @@
         },
         "sam": {
           "type": "object",
-          "required": ["value_brl", "description", "filters"],
+          "required": [
+            "value_brl",
+            "description",
+            "filters"
+          ],
           "properties": {
             "value_brl": {
               "type": "number",
@@ -61,14 +75,20 @@
             },
             "filters": {
               "type": "array",
-              "items": { "type": "string" },
+              "items": {
+                "type": "string"
+              },
               "description": "Filtros aplicados para chegar ao SAM (regiao, perfil, etc.)"
             }
           }
         },
         "som": {
           "type": "object",
-          "required": ["value_brl", "description", "assumptions"],
+          "required": [
+            "value_brl",
+            "description",
+            "assumptions"
+          ],
           "properties": {
             "value_brl": {
               "type": "number",
@@ -80,21 +100,30 @@
             },
             "assumptions": {
               "type": "array",
-              "items": { "type": "string" },
+              "items": {
+                "type": "string"
+              },
               "description": "Premissas usadas para estimar o SOM"
             }
           }
         },
         "methodology": {
           "type": "string",
-          "enum": ["top-down", "bottom-up", "mixed"],
+          "enum": [
+            "top-down",
+            "bottom-up",
+            "mixed"
+          ],
           "description": "Metodologia usada para estimar o mercado"
         },
         "sources": {
           "type": "array",
           "items": {
             "type": "object",
-            "required": ["name", "url"],
+            "required": [
+              "name",
+              "url"
+            ],
             "properties": {
               "name": {
                 "type": "string",
@@ -140,17 +169,23 @@
           },
           "channels": {
             "type": "array",
-            "items": { "type": "string" },
+            "items": {
+              "type": "string"
+            },
             "description": "Canais de aquisicao usados (Google Ads, Meta, organico, etc.)"
           },
           "strengths": {
             "type": "array",
-            "items": { "type": "string" },
+            "items": {
+              "type": "string"
+            },
             "description": "Pontos fortes observados"
           },
           "weaknesses": {
             "type": "array",
-            "items": { "type": "string" },
+            "items": {
+              "type": "string"
+            },
             "description": "Pontos fracos observados"
           },
           "estimated_pricing": {
@@ -166,10 +201,18 @@
           "digital_details": {
             "type": "object",
             "properties": {
-              "website": { "type": "string" },
-              "instagram": { "type": "string" },
-              "google": { "type": "string" },
-              "active_ads": { "type": "string" }
+              "website": {
+                "type": "string"
+              },
+              "instagram": {
+                "type": "string"
+              },
+              "google": {
+                "type": "string"
+              },
+              "active_ads": {
+                "type": "string"
+              }
             }
           }
         }
@@ -193,8 +236,12 @@
           "items": {
             "type": "object",
             "properties": {
-              "name": { "type": "string" },
-              "quadrant": { "type": "string" }
+              "name": {
+                "type": "string"
+              },
+              "quadrant": {
+                "type": "string"
+              }
             }
           }
         },
@@ -213,7 +260,10 @@
       "minItems": 3,
       "items": {
         "type": "object",
-        "required": ["trend", "evidence"],
+        "required": [
+          "trend",
+          "evidence"
+        ],
         "properties": {
           "trend": {
             "type": "string",
@@ -232,7 +282,10 @@
       "minItems": 2,
       "items": {
         "type": "object",
-        "required": ["threat", "potential_impact"],
+        "required": [
+          "threat",
+          "potential_impact"
+        ],
         "properties": {
           "threat": {
             "type": "string",
@@ -248,7 +301,11 @@
     },
     "unexploited_opportunity": {
       "type": "object",
-      "required": ["description", "why_nobody_does_it", "feasibility"],
+      "required": [
+        "description",
+        "why_nobody_does_it",
+        "feasibility"
+      ],
       "properties": {
         "description": {
           "type": "string",
@@ -260,14 +317,21 @@
         },
         "feasibility": {
           "type": "string",
-          "enum": ["alta", "media", "baixa"],
+          "enum": [
+            "alta",
+            "media",
+            "baixa"
+          ],
           "description": "Viabilidade para o cliente"
         }
       }
     },
     "market_jtbd": {
       "type": "object",
-      "required": ["current_solutions", "alternatives"],
+      "required": [
+        "current_solutions",
+        "alternatives"
+      ],
       "properties": {
         "current_solutions": {
           "type": "string",
@@ -277,11 +341,19 @@
           "type": "array",
           "items": {
             "type": "object",
-            "required": ["type", "description"],
+            "required": [
+              "type",
+              "description"
+            ],
             "properties": {
               "type": {
                 "type": "string",
-                "enum": ["direct", "indirect", "diy", "inaction"],
+                "enum": [
+                  "direct",
+                  "indirect",
+                  "diy",
+                  "inaction"
+                ],
                 "description": "Tipo de alternativa"
               },
               "description": {
@@ -302,7 +374,11 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["differential", "status", "icp_relevance"],
+        "required": [
+          "differential",
+          "status",
+          "icp_relevance"
+        ],
         "properties": {
           "differential": {
             "type": "string",
@@ -310,7 +386,11 @@
           },
           "status": {
             "type": "string",
-            "enum": ["confirmed", "potential", "aspirational"],
+            "enum": [
+              "confirmed",
+              "potential",
+              "aspirational"
+            ],
             "description": "Se o diferencial ja existe, e potencial, ou aspiracional"
           },
           "icp_relevance": {
@@ -333,6 +413,10 @@
       "type": "string",
       "format": "date-time",
       "description": "Data/hora de conclusao"
+    },
+    "summary": {
+      "type": "string",
+      "description": "Resumo de 1-2 frases da pesquisa de mercado. Inclui oportunidade principal e diferencial real do cliente."
     }
   }
 }

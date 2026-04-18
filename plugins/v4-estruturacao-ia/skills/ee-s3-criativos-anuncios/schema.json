@@ -3,7 +3,12 @@
   "title": "Criativos de Anúncios",
   "description": "Output estruturado do pack de criativos: 5 variações com hooks diferentes, prompts de geração e guia de teste A/B.",
   "type": "object",
-  "required": ["variations", "ab_test_guide", "total_pieces"],
+  "required": [
+    "summary",
+    "variations",
+    "ab_test_guide",
+    "total_pieces"
+  ],
   "properties": {
     "variations": {
       "type": "array",
@@ -12,11 +17,27 @@
       "maxItems": 5,
       "items": {
         "type": "object",
-        "required": ["hook_type", "hook_text", "short_copy", "medium_copy", "headline", "description", "button_cta", "visual_concept", "recommended_format"],
+        "required": [
+          "hook_type",
+          "hook_text",
+          "short_copy",
+          "medium_copy",
+          "headline",
+          "description",
+          "button_cta",
+          "visual_concept",
+          "recommended_format"
+        ],
         "properties": {
           "hook_type": {
             "type": "string",
-            "enum": ["dor", "resultado", "curiosidade", "social_proof", "urgencia"],
+            "enum": [
+              "dor",
+              "resultado",
+              "curiosidade",
+              "social_proof",
+              "urgencia"
+            ],
             "description": "Tipo de hook testado nesta variação"
           },
           "hook_text": {
@@ -52,7 +73,12 @@
           },
           "recommended_format": {
             "type": "string",
-            "enum": ["feed_square", "feed_portrait", "stories", "carousel"],
+            "enum": [
+              "feed_square",
+              "feed_portrait",
+              "stories",
+              "carousel"
+            ],
             "description": "Formato visual recomendado"
           },
           "midjourney_prompt": {
@@ -72,18 +98,31 @@
     },
     "ab_test_guide": {
       "type": "object",
-      "required": ["combinations", "success_metrics", "test_duration", "cut_criteria"],
+      "required": [
+        "combinations",
+        "success_metrics",
+        "test_duration",
+        "cut_criteria"
+      ],
       "properties": {
         "combinations": {
           "type": "array",
-          "items": { "type": "string" },
+          "items": {
+            "type": "string"
+          },
           "description": "Combinações sugeridas de teste A/B"
         },
         "success_metrics": {
           "type": "object",
           "properties": {
-            "ctr_min": { "type": "string", "description": "CTR mínimo aceitável" },
-            "cpc_max": { "type": "string", "description": "CPC máximo aceitável" }
+            "ctr_min": {
+              "type": "string",
+              "description": "CTR mínimo aceitável"
+            },
+            "cpc_max": {
+              "type": "string",
+              "description": "CPC máximo aceitável"
+            }
           }
         },
         "test_duration": {
@@ -100,6 +139,10 @@
       "type": "integer",
       "description": "Total de peças no pack (variações × formatos)",
       "minimum": 15
+    },
+    "summary": {
+      "type": "string",
+      "description": "Resumo de 1-2 frases do briefing de criativos. Inclui número de variações e formato/gancho principal."
     }
   }
 }

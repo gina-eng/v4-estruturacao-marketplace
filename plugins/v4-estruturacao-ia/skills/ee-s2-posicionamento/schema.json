@@ -4,6 +4,7 @@
   "description": "Output estruturado do canvas de posicionamento estrategico: declaracoes, PUV, canvas 4P, territorio de marca e taglines.",
   "type": "object",
   "required": [
+    "summary",
     "client_name",
     "positioning_statements",
     "chosen_statement",
@@ -43,8 +44,12 @@
           "items": {
             "type": "object",
             "properties": {
-              "name": { "type": "string" },
-              "quadrant": { "type": "string" }
+              "name": {
+                "type": "string"
+              },
+              "quadrant": {
+                "type": "string"
+              }
             }
           }
         }
@@ -56,7 +61,10 @@
       "maxItems": 3,
       "items": {
         "type": "object",
-        "required": ["statement", "justification"],
+        "required": [
+          "statement",
+          "justification"
+        ],
         "properties": {
           "label": {
             "type": "string",
@@ -92,12 +100,21 @@
     },
     "canvas_4p": {
       "type": "object",
-      "required": ["product", "price", "place", "promotion"],
+      "required": [
+        "product",
+        "price",
+        "place",
+        "promotion"
+      ],
       "description": "Canvas de posicionamento estrategico nos 4Ps",
       "properties": {
         "product": {
           "type": "object",
-          "required": ["delivers", "transformation", "doesnt_deliver"],
+          "required": [
+            "delivers",
+            "transformation",
+            "doesnt_deliver"
+          ],
           "properties": {
             "delivers": {
               "type": "string",
@@ -115,11 +132,18 @@
         },
         "price": {
           "type": "object",
-          "required": ["positioning", "justification"],
+          "required": [
+            "positioning",
+            "justification"
+          ],
           "properties": {
             "positioning": {
               "type": "string",
-              "enum": ["premium", "mid-market", "value"],
+              "enum": [
+                "premium",
+                "mid-market",
+                "value"
+              ],
               "description": "Posicionamento de preco em relacao ao mercado"
             },
             "justification": {
@@ -134,7 +158,11 @@
         },
         "place": {
           "type": "object",
-          "required": ["main_channel", "support_channel", "avoid_channels"],
+          "required": [
+            "main_channel",
+            "support_channel",
+            "avoid_channels"
+          ],
           "properties": {
             "main_channel": {
               "type": "string",
@@ -152,10 +180,17 @@
               "type": "array",
               "items": {
                 "type": "object",
-                "required": ["channel", "reason"],
+                "required": [
+                  "channel",
+                  "reason"
+                ],
                 "properties": {
-                  "channel": { "type": "string" },
-                  "reason": { "type": "string" }
+                  "channel": {
+                    "type": "string"
+                  },
+                  "reason": {
+                    "type": "string"
+                  }
                 }
               },
               "description": "Canais a evitar e por que"
@@ -164,7 +199,11 @@
         },
         "promotion": {
           "type": "object",
-          "required": ["tone", "top_funnel_message", "bottom_funnel_message"],
+          "required": [
+            "tone",
+            "top_funnel_message",
+            "bottom_funnel_message"
+          ],
           "properties": {
             "tone": {
               "type": "string",
@@ -184,11 +223,17 @@
     },
     "brand_territory": {
       "type": "object",
-      "required": ["three_words", "description", "competitor_territories"],
+      "required": [
+        "three_words",
+        "description",
+        "competitor_territories"
+      ],
       "properties": {
         "three_words": {
           "type": "array",
-          "items": { "type": "string" },
+          "items": {
+            "type": "string"
+          },
           "minItems": 3,
           "maxItems": 3,
           "description": "3 palavras que definem o territorio de marca"
@@ -201,10 +246,17 @@
           "type": "array",
           "items": {
             "type": "object",
-            "required": ["competitor", "territory"],
+            "required": [
+              "competitor",
+              "territory"
+            ],
             "properties": {
-              "competitor": { "type": "string" },
-              "territory": { "type": "string" }
+              "competitor": {
+                "type": "string"
+              },
+              "territory": {
+                "type": "string"
+              }
             }
           },
           "description": "Territorios ja ocupados pelos concorrentes"
@@ -221,7 +273,10 @@
       "maxItems": 3,
       "items": {
         "type": "object",
-        "required": ["tagline", "justification"],
+        "required": [
+          "tagline",
+          "justification"
+        ],
         "properties": {
           "tagline": {
             "type": "string",
@@ -261,7 +316,9 @@
         },
         "positioning_restrictions": {
           "type": "array",
-          "items": { "type": "string" },
+          "items": {
+            "type": "string"
+          },
           "description": "O que o cliente NAO quer ser associado"
         },
         "desired_tone": {
@@ -274,6 +331,10 @@
       "type": "string",
       "format": "date-time",
       "description": "Data/hora de conclusao"
+    },
+    "summary": {
+      "type": "string",
+      "description": "Resumo de 1-2 frases do posicionamento estratégico. Inclui PUV definida e território de marca escolhido."
     }
   }
 }

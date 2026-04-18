@@ -4,6 +4,7 @@
   "description": "Output estruturado do diagnostico de midia paga: metricas, benchmarks, diagnostico por dimensao, problemas e plano de acao.",
   "type": "object",
   "required": [
+    "summary",
     "client_name",
     "segment",
     "data_source",
@@ -26,7 +27,12 @@
     },
     "data_source": {
       "type": "string",
-      "enum": ["v4mos_api", "manual_export", "operator_provided", "no_data"],
+      "enum": [
+        "v4mos_api",
+        "manual_export",
+        "operator_provided",
+        "no_data"
+      ],
       "description": "Origem dos dados de midia"
     },
     "data_period": {
@@ -39,7 +45,9 @@
     },
     "platforms_active": {
       "type": "array",
-      "items": { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "description": "Plataformas de midia paga ativas"
     },
     "integrations_status": {
@@ -48,60 +56,106 @@
       "properties": {
         "meta_ads": {
           "type": "string",
-          "enum": ["connected", "disconnected", "not_configured"]
+          "enum": [
+            "connected",
+            "disconnected",
+            "not_configured"
+          ]
         },
         "google_ads": {
           "type": "string",
-          "enum": ["connected", "disconnected", "not_configured"]
+          "enum": [
+            "connected",
+            "disconnected",
+            "not_configured"
+          ]
         },
         "google_analytics": {
           "type": "string",
-          "enum": ["connected", "disconnected", "not_configured"]
+          "enum": [
+            "connected",
+            "disconnected",
+            "not_configured"
+          ]
         }
       }
     },
     "current_metrics": {
       "type": "object",
-      "required": ["cpl", "ctr", "conversion_rate"],
+      "required": [
+        "cpl",
+        "ctr",
+        "conversion_rate"
+      ],
       "properties": {
         "cpl": {
-          "type": ["number", "null"],
+          "type": [
+            "number",
+            "null"
+          ],
           "description": "Custo por Lead em reais"
         },
         "ctr": {
-          "type": ["number", "null"],
+          "type": [
+            "number",
+            "null"
+          ],
           "description": "Taxa de clique em percentual"
         },
         "conversion_rate": {
-          "type": ["number", "null"],
+          "type": [
+            "number",
+            "null"
+          ],
           "description": "Taxa de conversao da landing page em percentual"
         },
         "roas": {
-          "type": ["number", "null"],
+          "type": [
+            "number",
+            "null"
+          ],
           "description": "Return on Ad Spend (multiplicador)"
         },
         "cpc": {
-          "type": ["number", "null"],
+          "type": [
+            "number",
+            "null"
+          ],
           "description": "Custo por clique em reais"
         },
         "total_investment": {
-          "type": ["number", "null"],
+          "type": [
+            "number",
+            "null"
+          ],
           "description": "Investimento total no periodo em reais"
         },
         "total_leads": {
-          "type": ["integer", "null"],
+          "type": [
+            "integer",
+            "null"
+          ],
           "description": "Total de leads gerados no periodo"
         },
         "total_clicks": {
-          "type": ["integer", "null"],
+          "type": [
+            "integer",
+            "null"
+          ],
           "description": "Total de cliques no periodo"
         },
         "impressions": {
-          "type": ["integer", "null"],
+          "type": [
+            "integer",
+            "null"
+          ],
           "description": "Total de impressoes no periodo"
         },
         "frequency": {
-          "type": ["number", "null"],
+          "type": [
+            "number",
+            "null"
+          ],
           "description": "Frequencia media dos anuncios"
         }
       }
@@ -111,23 +165,38 @@
       "description": "Benchmarks do setor para comparacao",
       "properties": {
         "cpl": {
-          "type": ["number", "null"],
+          "type": [
+            "number",
+            "null"
+          ],
           "description": "CPL benchmark do setor em reais"
         },
         "ctr": {
-          "type": ["number", "null"],
+          "type": [
+            "number",
+            "null"
+          ],
           "description": "CTR benchmark do setor em percentual"
         },
         "conversion_rate": {
-          "type": ["number", "null"],
+          "type": [
+            "number",
+            "null"
+          ],
           "description": "Taxa de conversao benchmark do setor"
         },
         "roas": {
-          "type": ["number", "null"],
+          "type": [
+            "number",
+            "null"
+          ],
           "description": "ROAS benchmark do setor"
         },
         "cpc": {
-          "type": ["number", "null"],
+          "type": [
+            "number",
+            "null"
+          ],
           "description": "CPC benchmark do setor em reais"
         },
         "source": {
@@ -138,15 +207,29 @@
     },
     "diagnosis_by_dimension": {
       "type": "object",
-      "required": ["account_structure", "creatives", "landing_pages", "audiences"],
+      "required": [
+        "account_structure",
+        "creatives",
+        "landing_pages",
+        "audiences"
+      ],
       "properties": {
         "account_structure": {
           "type": "object",
-          "required": ["organization", "segmentation", "budget_allocation", "observation"],
+          "required": [
+            "organization",
+            "segmentation",
+            "budget_allocation",
+            "observation"
+          ],
           "properties": {
             "organization": {
               "type": "string",
-              "enum": ["adequate", "fragmented", "nonexistent"],
+              "enum": [
+                "adequate",
+                "fragmented",
+                "nonexistent"
+              ],
               "description": "Organizacao de campanhas e conjuntos"
             },
             "segmentation": {
@@ -155,7 +238,11 @@
             },
             "budget_allocation": {
               "type": "string",
-              "enum": ["well_distributed", "concentrated", "dispersed"],
+              "enum": [
+                "well_distributed",
+                "concentrated",
+                "dispersed"
+              ],
               "description": "Distribuicao do budget entre campanhas"
             },
             "observation": {
@@ -166,7 +253,9 @@
         },
         "creatives": {
           "type": "object",
-          "required": ["evaluation"],
+          "required": [
+            "evaluation"
+          ],
           "properties": {
             "active_count": {
               "type": "integer",
@@ -185,7 +274,10 @@
               "description": "Se ha teste A/B ativo"
             },
             "average_frequency": {
-              "type": ["number", "null"],
+              "type": [
+                "number",
+                "null"
+              ],
               "description": "Frequencia media"
             },
             "fatigue_detected": {
@@ -200,7 +292,9 @@
         },
         "landing_pages": {
           "type": "object",
-          "required": ["evaluation"],
+          "required": [
+            "evaluation"
+          ],
           "properties": {
             "lp_count": {
               "type": "integer",
@@ -208,11 +302,18 @@
             },
             "coherence_with_ads": {
               "type": "string",
-              "enum": ["high", "medium", "low"],
+              "enum": [
+                "high",
+                "medium",
+                "low"
+              ],
               "description": "Coerencia entre anuncios e LPs"
             },
             "estimated_bounce_rate": {
-              "type": ["number", "null"],
+              "type": [
+                "number",
+                "null"
+              ],
               "description": "Taxa de rejeicao estimada"
             },
             "evaluation": {
@@ -223,18 +324,29 @@
         },
         "audiences": {
           "type": "object",
-          "required": ["evaluation"],
+          "required": [
+            "evaluation"
+          ],
           "properties": {
             "types_used": {
               "type": "array",
               "items": {
                 "type": "string",
-                "enum": ["broad", "interest", "lookalike", "retargeting", "custom"]
+                "enum": [
+                  "broad",
+                  "interest",
+                  "lookalike",
+                  "retargeting",
+                  "custom"
+                ]
               },
               "description": "Tipos de publico usados"
             },
             "overlap_detected": {
-              "type": ["boolean", "null"],
+              "type": [
+                "boolean",
+                "null"
+              ],
               "description": "Se ha sobreposicao de publicos"
             },
             "retargeting_active": {
@@ -255,7 +367,11 @@
       "maxItems": 3,
       "items": {
         "type": "object",
-        "required": ["problem", "data_evidence", "impact"],
+        "required": [
+          "problem",
+          "data_evidence",
+          "impact"
+        ],
         "properties": {
           "problem": {
             "type": "string",
@@ -271,7 +387,12 @@
           },
           "dimension": {
             "type": "string",
-            "enum": ["account_structure", "creatives", "landing_pages", "audiences"],
+            "enum": [
+              "account_structure",
+              "creatives",
+              "landing_pages",
+              "audiences"
+            ],
             "description": "Dimensao do problema"
           }
         }
@@ -282,7 +403,12 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["action", "priority", "expected_impact", "responsible"],
+        "required": [
+          "action",
+          "priority",
+          "expected_impact",
+          "responsible"
+        ],
         "properties": {
           "action": {
             "type": "string",
@@ -290,7 +416,11 @@
           },
           "priority": {
             "type": "string",
-            "enum": ["high", "medium", "normal"],
+            "enum": [
+              "high",
+              "medium",
+              "normal"
+            ],
             "description": "Prioridade da acao"
           },
           "expected_impact": {
@@ -311,14 +441,22 @@
     },
     "realistic_goal": {
       "type": "object",
-      "required": ["justification"],
+      "required": [
+        "justification"
+      ],
       "properties": {
         "target_cpl": {
-          "type": ["number", "null"],
+          "type": [
+            "number",
+            "null"
+          ],
           "description": "CPL alvo em 90 dias (em reais)"
         },
         "target_roas": {
-          "type": ["number", "null"],
+          "type": [
+            "number",
+            "null"
+          ],
           "description": "ROAS alvo em 90 dias (multiplicador)"
         },
         "justification": {
@@ -327,12 +465,16 @@
         },
         "assumptions": {
           "type": "array",
-          "items": { "type": "string" },
+          "items": {
+            "type": "string"
+          },
           "description": "Premissas para atingir a meta"
         },
         "risk_factors": {
           "type": "array",
-          "items": { "type": "string" },
+          "items": {
+            "type": "string"
+          },
           "description": "Fatores de risco que podem impedir a meta"
         }
       }
@@ -346,6 +488,10 @@
       "type": "string",
       "format": "date-time",
       "description": "Data/hora de conclusao"
+    },
+    "summary": {
+      "type": "string",
+      "description": "Resumo de 1-2 frases do diagnóstico de mídia. Inclui principal problema identificado e ROAS atual vs benchmark."
     }
   }
 }

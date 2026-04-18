@@ -4,6 +4,7 @@
   "description": "Output estruturado do diagnostico de CRO: analise tecnica, auditoria de copy, hipoteses de teste e wireframe de melhorias.",
   "type": "object",
   "required": [
+    "summary",
     "client_name",
     "segment",
     "url",
@@ -27,48 +28,77 @@
       "description": "URL do site/landing page analisada"
     },
     "current_conversion_rate": {
-      "type": ["number", "null"],
+      "type": [
+        "number",
+        "null"
+      ],
       "description": "Taxa de conversao atual em percentual (se disponivel)"
     },
     "current_bounce_rate": {
-      "type": ["number", "null"],
+      "type": [
+        "number",
+        "null"
+      ],
       "description": "Taxa de rejeicao atual em percentual (se disponivel)"
     },
     "avg_time_on_page": {
-      "type": ["string", "null"],
+      "type": [
+        "string",
+        "null"
+      ],
       "description": "Tempo medio na pagina (se disponivel)"
     },
     "technical_diagnosis": {
       "type": "object",
-      "required": ["pagespeed_mobile", "pagespeed_desktop"],
+      "required": [
+        "pagespeed_mobile",
+        "pagespeed_desktop"
+      ],
       "properties": {
         "pagespeed_mobile": {
-          "type": ["integer", "null"],
+          "type": [
+            "integer",
+            "null"
+          ],
           "minimum": 0,
           "maximum": 100,
           "description": "Score PageSpeed Insights mobile (0-100)"
         },
         "pagespeed_desktop": {
-          "type": ["integer", "null"],
+          "type": [
+            "integer",
+            "null"
+          ],
           "minimum": 0,
           "maximum": 100,
           "description": "Score PageSpeed Insights desktop (0-100)"
         },
         "lcp": {
-          "type": ["number", "null"],
+          "type": [
+            "number",
+            "null"
+          ],
           "description": "Largest Contentful Paint em segundos"
         },
         "cls": {
-          "type": ["number", "null"],
+          "type": [
+            "number",
+            "null"
+          ],
           "description": "Cumulative Layout Shift"
         },
         "inp": {
-          "type": ["number", "null"],
+          "type": [
+            "number",
+            "null"
+          ],
           "description": "Interaction to Next Paint em milissegundos"
         },
         "critical_issues": {
           "type": "array",
-          "items": { "type": "string" },
+          "items": {
+            "type": "string"
+          },
           "description": "Problemas criticos de velocidade identificados"
         },
         "estimated_conversion_loss": {
@@ -83,7 +113,10 @@
     },
     "copy_audit": {
       "type": "object",
-      "required": ["above_fold", "sections"],
+      "required": [
+        "above_fold",
+        "sections"
+      ],
       "properties": {
         "above_fold": {
           "type": "object",
@@ -136,7 +169,12 @@
           "type": "array",
           "items": {
             "type": "object",
-            "required": ["name", "exists", "evaluation", "main_problem"],
+            "required": [
+              "name",
+              "exists",
+              "evaluation",
+              "main_problem"
+            ],
             "properties": {
               "name": {
                 "type": "string",
@@ -162,25 +200,36 @@
         },
         "missing_sections": {
           "type": "array",
-          "items": { "type": "string" },
+          "items": {
+            "type": "string"
+          },
           "description": "Secoes criticas que deveriam existir e nao existem"
         },
         "unnecessary_sections": {
           "type": "array",
-          "items": { "type": "string" },
+          "items": {
+            "type": "string"
+          },
           "description": "Secoes que existem mas nao ajudam ou atrapalham"
         }
       }
     },
     "trust_analysis": {
       "type": "object",
-      "required": ["trust_signals", "ssl_active", "professional_appearance"],
+      "required": [
+        "trust_signals",
+        "ssl_active",
+        "professional_appearance"
+      ],
       "properties": {
         "trust_signals": {
           "type": "array",
           "items": {
             "type": "object",
-            "required": ["signal", "present"],
+            "required": [
+              "signal",
+              "present"
+            ],
             "properties": {
               "signal": {
                 "type": "string",
@@ -249,17 +298,29 @@
           },
           "expected_impact": {
             "type": "string",
-            "enum": ["high", "medium", "low"],
+            "enum": [
+              "high",
+              "medium",
+              "low"
+            ],
             "description": "Impacto esperado na conversao"
           },
           "difficulty": {
             "type": "string",
-            "enum": ["easy", "medium", "hard"],
+            "enum": [
+              "easy",
+              "medium",
+              "hard"
+            ],
             "description": "Dificuldade de implementacao"
           },
           "priority": {
             "type": "string",
-            "enum": ["P1", "P2", "P3"],
+            "enum": [
+              "P1",
+              "P2",
+              "P3"
+            ],
             "description": "Prioridade (P1 = alto impacto + facil)"
           },
           "success_metric": {
@@ -279,7 +340,11 @@
       "minItems": 5,
       "items": {
         "type": "object",
-        "required": ["section_number", "name", "content_description"],
+        "required": [
+          "section_number",
+          "name",
+          "content_description"
+        ],
         "properties": {
           "section_number": {
             "type": "integer",
@@ -332,13 +397,20 @@
       }
     },
     "target_conversion_rate": {
-      "type": ["number", "null"],
+      "type": [
+        "number",
+        "null"
+      ],
       "description": "Meta de taxa de conversao apos melhorias"
     },
     "completed_at": {
       "type": "string",
       "format": "date-time",
       "description": "Data/hora de conclusao"
+    },
+    "summary": {
+      "type": "string",
+      "description": "Resumo de 1-2 frases do diagnóstico de CRO. Inclui principal gap de conversão e ação prioritária."
     }
   }
 }

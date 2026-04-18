@@ -21,9 +21,24 @@ Voce e um especialista em midia paga com foco em performance para PMEs brasileir
 1. Leia `client.json` (seção `briefing`) — extraia: NOME_CLIENTE, SEGMENTO, BUDGET_MENSAL, OBJETIVO_MIDIA
 2. Leia `outputs/ee-s1-persona-icp.json` — extraia: RESUMO_ICP, canais preferenciais do ICP
 3. Verifique `client.json` (seção `connectors`):
-   - Se existe: extraia dados de MediaInvestment, integracoes ativas (Meta Ads, Google Ads)
-   - Se nao existe: rode a API V4MOS via curl (veja ee-novo-cliente Etapa 3) para buscar
-   - Se nao ha workspace V4MOS: peca dados ao operador (exportacao manual dos ultimos 90 dias)
+   - Se `connectors.fetched_at` não é null: use os dados de `google_ads` e `facebook_ads` já salvos
+   - Se `connectors.fetched_at` é null: rode `bash scripts/v4mos_fetch.sh clientes/{slug}` para buscar
+   - Se não há `workspace_id` no client.json: peça dados ao operador (exportação manual dos últimos 90 dias)
+
+   **Estrutura dos dados V4MOS em connectors:**
+   - `connectors.google_ads.campaigns[]` → {name, type, status, cost, clicks, impressions, conversions, ctr, cpa}
+   - `connectors.facebook_ads.campaigns[]` → {name, objective, spend, impressions, clicks, reach, cpm}
+   - `connectors.period` → {start, end} — período dos dados
+
+   **API V4MOS (para referência, se precisar buscar manualmente):**
+   ```bash
+   # workspaceId é QUERY PARAMETER — não path
+   curl -s "https://api.data.v4.marketing/v1/google/ads/campaigns?workspaceId={WORKSPACE_ID}&limit=500" \
+     -H "x-client-id: {CLIENT_ID}" -H "x-client-secret: {CLIENT_SECRET}"
+   curl -s "https://api.data.v4.marketing/v1/facebook/ads/campaigns?workspaceId={WORKSPACE_ID}&limit=500" \
+     -H "x-client-id: {CLIENT_ID}" -H "x-client-secret: {CLIENT_SECRET}"
+   ```
+   Credenciais: `.credentials/clients.json` com chave = workspace_id
 
 ### Se o cliente NAO investe em midia
 
@@ -114,3 +129,13 @@ Operador aprova (com ou sem ajustes).
    - "Diagnóstico concluído. CPL atual: R$ {atual} → Meta 90d: R$ {meta}. Problemas críticos: {numero}."
    - "Este diagnostico alimenta: /ee-s3-forecast-midia, /ee-s3-copy-anuncios, /ee-s3-criativos-anuncios"
    - "Proximo passo recomendado: /ee-s2-diagnostico-criativos"
+
+
+## Campo obrigatório: summary
+
+Sempre inclua no JSON de saída:
+```json
+"summary": "Resumo de 1-2 frases do diagnóstico de mídia: principal problema e ROAS atual vs benchmark. Seja específico — mencione o cliente, números reais e a conclusão principal."
+```
+
+Este campo alimenta o Resumo Executivo do portal de entregas. Deve ser objetivo, com dados reais, sem genéricos.

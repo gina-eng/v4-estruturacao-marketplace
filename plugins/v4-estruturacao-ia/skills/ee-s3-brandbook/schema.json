@@ -3,11 +3,23 @@
   "title": "Brandbook",
   "description": "Output estruturado do Brandbook: propósito, identidade verbal, narrativa da marca e banco de copy.",
   "type": "object",
-  "required": ["purpose", "verbal_identity", "brand_narrative", "copy_bank"],
+  "required": [
+    "summary",
+    "purpose",
+    "verbal_identity",
+    "brand_narrative",
+    "copy_bank"
+  ],
   "properties": {
     "purpose": {
       "type": "object",
-      "required": ["why_we_exist", "for_whom", "not_for_whom", "positioning", "promise"],
+      "required": [
+        "why_we_exist",
+        "for_whom",
+        "not_for_whom",
+        "positioning",
+        "promise"
+      ],
       "properties": {
         "why_we_exist": {
           "type": "string",
@@ -40,7 +52,11 @@
     },
     "verbal_identity": {
       "type": "object",
-      "required": ["tone_adjectives", "writing_style", "donts"],
+      "required": [
+        "tone_adjectives",
+        "writing_style",
+        "donts"
+      ],
       "properties": {
         "tone_adjectives": {
           "type": "array",
@@ -49,25 +65,67 @@
           "maxItems": 4,
           "items": {
             "type": "object",
-            "required": ["adjective", "opposite", "explanation"],
+            "required": [
+              "adjective",
+              "opposite",
+              "explanation"
+            ],
             "properties": {
-              "adjective": { "type": "string", "description": "Adjetivo positivo (ex: 'Direto')" },
-              "opposite": { "type": "string", "description": "O que NÃO é (ex: 'rude')" },
-              "explanation": { "type": "string", "description": "Como esse traço se manifesta na prática" }
+              "adjective": {
+                "type": "string",
+                "description": "Adjetivo positivo (ex: 'Direto')"
+              },
+              "opposite": {
+                "type": "string",
+                "description": "O que NÃO é (ex: 'rude')"
+              },
+              "explanation": {
+                "type": "string",
+                "description": "Como esse traço se manifesta na prática"
+              }
             }
           }
         },
         "writing_style": {
           "type": "object",
-          "required": ["sentence_length", "emoji_usage", "humor_usage", "technical_language", "form_of_address", "preferred_format", "punctuation_style"],
+          "required": [
+            "sentence_length",
+            "emoji_usage",
+            "humor_usage",
+            "technical_language",
+            "form_of_address",
+            "preferred_format",
+            "punctuation_style"
+          ],
           "properties": {
-            "sentence_length": { "type": "string", "description": "Curtas/médias/longas e justificativa" },
-            "emoji_usage": { "type": "string", "description": "Sim/não/quando e quais" },
-            "humor_usage": { "type": "string", "description": "Sim/não/como com exemplos" },
-            "technical_language": { "type": "string", "description": "Nível e quando simplificar" },
-            "form_of_address": { "type": "string", "description": "Você/tu/senhor e justificativa" },
-            "preferred_format": { "type": "string", "description": "Listas/parágrafos/misto" },
-            "punctuation_style": { "type": "string", "description": "Regras sobre reticências, exclamações, caps, etc." }
+            "sentence_length": {
+              "type": "string",
+              "description": "Curtas/médias/longas e justificativa"
+            },
+            "emoji_usage": {
+              "type": "string",
+              "description": "Sim/não/quando e quais"
+            },
+            "humor_usage": {
+              "type": "string",
+              "description": "Sim/não/como com exemplos"
+            },
+            "technical_language": {
+              "type": "string",
+              "description": "Nível e quando simplificar"
+            },
+            "form_of_address": {
+              "type": "string",
+              "description": "Você/tu/senhor e justificativa"
+            },
+            "preferred_format": {
+              "type": "string",
+              "description": "Listas/parágrafos/misto"
+            },
+            "punctuation_style": {
+              "type": "string",
+              "description": "Regras sobre reticências, exclamações, caps, etc."
+            }
           }
         },
         "donts": {
@@ -76,11 +134,24 @@
           "minItems": 5,
           "items": {
             "type": "object",
-            "required": ["do", "dont", "reason"],
+            "required": [
+              "do",
+              "dont",
+              "reason"
+            ],
             "properties": {
-              "do": { "type": "string", "description": "Exemplo correto de comunicação" },
-              "dont": { "type": "string", "description": "Exemplo incorreto de comunicação" },
-              "reason": { "type": "string", "description": "Por que a versão correta é melhor" }
+              "do": {
+                "type": "string",
+                "description": "Exemplo correto de comunicação"
+              },
+              "dont": {
+                "type": "string",
+                "description": "Exemplo incorreto de comunicação"
+              },
+              "reason": {
+                "type": "string",
+                "description": "Por que a versão correta é melhor"
+              }
             }
           }
         }
@@ -88,7 +159,12 @@
     },
     "brand_narrative": {
       "type": "object",
-      "required": ["before", "different", "after", "templates"],
+      "required": [
+        "before",
+        "different",
+        "after",
+        "templates"
+      ],
       "properties": {
         "before": {
           "type": "string",
@@ -107,39 +183,71 @@
         },
         "templates": {
           "type": "object",
-          "required": ["social_post", "ad", "presentation", "about_page"],
+          "required": [
+            "social_post",
+            "ad",
+            "presentation",
+            "about_page"
+          ],
           "properties": {
-            "social_post": { "type": "string", "description": "Template de narrativa para post (150 palavras)" },
-            "ad": { "type": "string", "description": "Template de narrativa para anúncio (50 palavras)" },
-            "presentation": { "type": "string", "description": "Template de narrativa para apresentação comercial (300 palavras)" },
-            "about_page": { "type": "string", "description": "Template de narrativa para about page (200 palavras)" }
+            "social_post": {
+              "type": "string",
+              "description": "Template de narrativa para post (150 palavras)"
+            },
+            "ad": {
+              "type": "string",
+              "description": "Template de narrativa para anúncio (50 palavras)"
+            },
+            "presentation": {
+              "type": "string",
+              "description": "Template de narrativa para apresentação comercial (300 palavras)"
+            },
+            "about_page": {
+              "type": "string",
+              "description": "Template de narrativa para about page (200 palavras)"
+            }
           }
         }
       }
     },
     "copy_bank": {
       "type": "object",
-      "required": ["headlines", "ctas", "key_phrases", "vocabulary"],
+      "required": [
+        "headlines",
+        "ctas",
+        "key_phrases",
+        "vocabulary"
+      ],
       "properties": {
         "headlines": {
           "type": "object",
-          "required": ["top_funnel", "authority", "sales_page"],
+          "required": [
+            "top_funnel",
+            "authority",
+            "sales_page"
+          ],
           "properties": {
             "top_funnel": {
               "type": "array",
-              "items": { "type": "string" },
+              "items": {
+                "type": "string"
+              },
               "minItems": 10,
               "description": "10 headlines de topo de funil (consciência do problema)"
             },
             "authority": {
               "type": "array",
-              "items": { "type": "string" },
+              "items": {
+                "type": "string"
+              },
               "minItems": 10,
               "description": "10 headlines de autoridade (meio de funil)"
             },
             "sales_page": {
               "type": "array",
-              "items": { "type": "string" },
+              "items": {
+                "type": "string"
+              },
               "minItems": 10,
               "description": "10 headlines de página de vendas (fundo de funil)"
             }
@@ -147,34 +255,84 @@
         },
         "ctas": {
           "type": "object",
-          "required": ["request_quote", "follow_social", "download_material", "schedule_demo", "whatsapp"],
+          "required": [
+            "request_quote",
+            "follow_social",
+            "download_material",
+            "schedule_demo",
+            "whatsapp"
+          ],
           "properties": {
-            "request_quote": { "type": "array", "items": { "type": "string" }, "minItems": 5 },
-            "follow_social": { "type": "array", "items": { "type": "string" }, "minItems": 5 },
-            "download_material": { "type": "array", "items": { "type": "string" }, "minItems": 5 },
-            "schedule_demo": { "type": "array", "items": { "type": "string" }, "minItems": 5 },
-            "whatsapp": { "type": "array", "items": { "type": "string" }, "minItems": 5 }
+            "request_quote": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 5
+            },
+            "follow_social": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 5
+            },
+            "download_material": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 5
+            },
+            "schedule_demo": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 5
+            },
+            "whatsapp": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 5
+            }
           }
         },
         "key_phrases": {
           "type": "array",
-          "items": { "type": "string" },
+          "items": {
+            "type": "string"
+          },
           "minItems": 5,
           "maxItems": 7,
           "description": "5-7 frases-chave que sintetizam o posicionamento"
         },
         "vocabulary": {
           "type": "object",
-          "required": ["always_use", "never_use", "call_customers", "call_product"],
+          "required": [
+            "always_use",
+            "never_use",
+            "call_customers",
+            "call_product"
+          ],
           "properties": {
             "always_use": {
               "type": "array",
               "items": {
                 "type": "object",
-                "required": ["word", "context"],
+                "required": [
+                  "word",
+                  "context"
+                ],
                 "properties": {
-                  "word": { "type": "string" },
-                  "context": { "type": "string" }
+                  "word": {
+                    "type": "string"
+                  },
+                  "context": {
+                    "type": "string"
+                  }
                 }
               },
               "minItems": 10,
@@ -184,20 +342,37 @@
               "type": "array",
               "items": {
                 "type": "object",
-                "required": ["word", "use_instead"],
+                "required": [
+                  "word",
+                  "use_instead"
+                ],
                 "properties": {
-                  "word": { "type": "string" },
-                  "use_instead": { "type": "string" }
+                  "word": {
+                    "type": "string"
+                  },
+                  "use_instead": {
+                    "type": "string"
+                  }
                 }
               },
               "minItems": 10,
               "description": "Palavras que a marca evita, com substitutas"
             },
-            "call_customers": { "type": "string", "description": "Como chamamos nossos clientes" },
-            "call_product": { "type": "string", "description": "Como chamamos nosso produto/serviço" }
+            "call_customers": {
+              "type": "string",
+              "description": "Como chamamos nossos clientes"
+            },
+            "call_product": {
+              "type": "string",
+              "description": "Como chamamos nosso produto/serviço"
+            }
           }
         }
       }
+    },
+    "summary": {
+      "type": "string",
+      "description": "Resumo de 1-2 frases do brandbook. Inclui propósito da marca, tom de voz e principal diferencial verbal."
     }
   }
 }
