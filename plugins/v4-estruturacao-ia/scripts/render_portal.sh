@@ -84,3 +84,18 @@ print(f"Portal gerado: {output_path}")
 PYEOF
 
 echo "✓ Portal atualizado: $OUTPUT_FILE"
+
+# Deploy para Vercel se existir vercel-project.json no diretório do cliente
+VERCEL_CFG="$CLIENT_DIR/vercel-project.json"
+if [ -f "$VERCEL_CFG" ] && command -v vercel >/dev/null 2>&1; then
+  PROJECT_NAME=$(python3 -c "import json,sys; print(json.load(open(sys.argv[1])).get('projectName',''))" "$VERCEL_CFG")
+  DEPLOY_DIR=$(mktemp -d)
+  cp "$OUTPUT_FILE" "$DEPLOY_DIR/index.html"
+  mkdir -p "$DEPLOY_DIR/.vercel"
+  cp "$VERCEL_CFG" "$DEPLOY_DIR/.vercel/project.json"
+  echo "🚀 Deployando para Vercel ($PROJECT_NAME)..."
+  cd "$DEPLOY_DIR"
+  vercel --prod --yes --scope v4-company 2>&1 | grep -E "Production:|Error|✓" || true
+  rm -rf "$DEPLOY_DIR"
+  echo "✓ Deploy concluído: https://${PROJECT_NAME}.vercel.app"
+fi

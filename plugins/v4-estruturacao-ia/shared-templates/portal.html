@@ -251,6 +251,7 @@
     .pb__fill--red { background: var(--accent); }
     .pb__fill--green { background: var(--success); }
     .pb__fill--yellow { background: var(--warning); }
+    .pb__fill--danger { background: var(--danger); }
 
     .co { background: var(--bg-elevated); border-left: 3px solid var(--accent); padding: 0.875rem 1rem; margin-bottom: 1rem; border-radius: 0 var(--radius) var(--radius) 0; }
     .co p { margin: 0; font-size: 0.875rem; font-style: italic; color: var(--text-secondary); }
@@ -489,6 +490,78 @@
       .pres-summary-diag-metric { grid-column: 1; grid-row: auto; flex-direction: row; gap: 0.5rem; justify-content: flex-start; }
     }
 
+    /* ===== Transition & Final Slides ===== */
+    .pres-slide--transition {
+      background: var(--brand-primary);
+      align-items: center; justify-content: center;
+      color: #fff;
+    }
+    .pres-slide--transition::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 50% 30%, rgba(251,46,10,0.45) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .pres-trans-inner {
+      width: 100%; max-width: 640px; position: relative; z-index: 1;
+      padding: clamp(2rem,5vw,3.5rem) clamp(1.5rem,4vw,2rem);
+      display: flex; flex-direction: column; gap: 2rem;
+    }
+    .pres-trans-label {
+      font-size: 0.625rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.1em; color: rgba(255,255,255,0.75); margin-bottom: 0.375rem;
+    }
+    .pres-trans-heading {
+      font-size: clamp(1.25rem,2.5vw,1.625rem); font-weight: 700;
+      color: #fff; letter-spacing: -0.02em; margin-bottom: 1rem; line-height: 1.2;
+    }
+    .pres-trans-divider { height: 1px; background: rgba(255,255,255,0.25); }
+    .pres-trans-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+    .pres-trans-item { display: flex; align-items: flex-start; gap: 0.625rem; font-size: 0.9375rem; }
+    .pres-trans-item--done { color: #fff; font-weight: 500; }
+    .pres-trans-item--pending { color: rgba(255,255,255,0.6); }
+    .pres-trans-icon { flex-shrink: 0; width: 18px; text-align: center; font-size: 0.8125rem; margin-top: 2px; }
+    .pres-trans-icon--done { color: #FDFF87; }
+    .pres-trans-icon--next { color: rgba(255,255,255,0.9); }
+    .pres-trans-icon--pending { color: rgba(255,255,255,0.45); }
+
+    .pres-slide--final {
+      background: var(--brand-primary);
+      align-items: center; justify-content: center;
+    }
+    .pres-slide--final::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 50% 30%, rgba(251,46,10,0.45) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .pres-final-inner {
+      text-align: center; position: relative; z-index: 1;
+      padding: clamp(2rem,5vw,4rem) clamp(1.5rem,4vw,3rem);
+      display: flex; flex-direction: column; align-items: center; gap: 0.75rem;
+    }
+    .pres-final-badge {
+      font-size: 0.625rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em;
+      color: rgba(255,255,255,0.75); border: 1px solid rgba(255,255,255,0.3);
+      border-radius: var(--radius-pill); padding: 0.375rem 1.125rem; margin-bottom: 0.75rem;
+    }
+    .pres-final-congrats {
+      font-size: clamp(3rem,7vw,5.5rem); font-weight: 700; color: #fff;
+      letter-spacing: -0.035em; line-height: 1; margin-bottom: 0.25rem;
+    }
+    .pres-final-sub {
+      font-size: clamp(1rem,2.5vw,1.375rem); color: rgba(255,255,255,0.9); font-weight: 400;
+    }
+    .pres-final-title {
+      font-size: clamp(1.375rem,3vw,2rem); font-weight: 700; color: #fff; letter-spacing: -0.02em;
+    }
+    .pres-final-powered {
+      font-size: clamp(0.75rem,1.5vw,0.9375rem); font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.14em; color: #FDFF87;
+    }
+    .pres-final-vaas {
+      margin-top: 2rem; font-size: clamp(0.9375rem,2vw,1.125rem); color: rgba(255,255,255,0.8);
+    }
+    .pres-final-vaas strong { color: #fff; font-weight: 700; }
+
     .pres-bar {
       display: flex; position: fixed; bottom: 0; left: 0; right: 0;
       height: 58px; z-index: 9100;
@@ -674,9 +747,10 @@ const R = {
   if (bm?.key_insight) h += co(bm.key_insight);
   if (d.pillar_scores?.length) {
     const names = {midia_paga:'Mídia Paga',criativos:'Criativos',cro:'CRO',crm:'CRM',seo:'SEO'};
+    const scColor = c => (c==='critical'||c==='low') ? 'var(--danger)' : 'var(--text-primary)';
     h += sc('Scores por Pilar', d.pillar_scores.map(p => {
       let pi = '<div class="pillar"><div class="pillar__row"><span class="pillar__name">'+E(names[p.pillar]||p.pillar)+'</span>'
-        +'<span class="pillar__score" style="color:var(--'+(cc(p.classification)||'accent')+')">'
+        +'<span class="pillar__score" style="color:'+scColor(p.classification)+'">'
         +N(p.score)+'/100 '+tg(CLS[p.classification]||'',cc(p.classification))+(p.estimated?' '+tg('Estimado','gray'):'')+'</span></div>'
         +pb(p.score,cc(p.classification)||'red')
         +(p.highlight?'<p style="font-size:.8125rem;color:var(--text-muted);margin:.25rem 0 0">'+E(p.highlight)+'</p>':'');
@@ -1576,8 +1650,8 @@ const PRES = {
     container.appendChild(summarySlide);
     this.slides.push({ el: summarySlide, n: 0, title: 'Resumo', skillName: 'Resumo Executivo', isSummary: true });
 
-    // ── Slides 1..N: um por skill ──
-    weeks.forEach(week => {
+    // ── Slides 1..N: skills + transições entre semanas ──
+    weeks.forEach((week, wi) => {
       week.skills.forEach(skill => {
         const st = (progress.skills?.[skill.id]?.status) || 'pending';
         const data = outputs[skill.id];
@@ -1626,6 +1700,58 @@ const PRES = {
 
         this.slides.push({ el: slide, n: week.n, title: week.title, skillName: skill.name });
       });
+
+      // ── Slide de transição ou conclusão ──
+      const isLast = wi === weeks.length - 1;
+      const nextWeek = weeks[wi + 1];
+      const transEl = document.createElement('div');
+
+      if (!isLast) {
+        transEl.className = 'pres-slide pres-slide--transition';
+        transEl.innerHTML =
+          '<div class="pres-trans-inner">'
+          + '<div>'
+          +   '<div class="pres-trans-label">Semana ' + week.n + ' &mdash; ' + E(week.title) + '</div>'
+          +   '<div class="pres-trans-heading">O que concluímos</div>'
+          +   '<ul class="pres-trans-list">'
+          +     week.skills.map(s => {
+                  const st = (progress.skills?.[s.id]?.status) || 'pending';
+                  const done = st === 'completed';
+                  return '<li class="pres-trans-item pres-trans-item--' + (done ? 'done' : 'pending') + '">'
+                    + '<span class="pres-trans-icon pres-trans-icon--' + (done ? 'done' : 'pending') + '">' + (done ? '&#10003;' : '&#9675;') + '</span>'
+                    + E(s.name) + '</li>';
+                }).join('')
+          +   '</ul>'
+          + '</div>'
+          + '<div class="pres-trans-divider"></div>'
+          + '<div>'
+          +   '<div class="pres-trans-label">A seguir &middot; Semana ' + nextWeek.n + '</div>'
+          +   '<div class="pres-trans-heading">' + E(nextWeek.title) + '</div>'
+          +   '<ul class="pres-trans-list">'
+          +     nextWeek.skills.map(s =>
+                  '<li class="pres-trans-item">'
+                  + '<span class="pres-trans-icon pres-trans-icon--next">&#8594;</span>'
+                  + E(s.name) + '</li>'
+                ).join('')
+          +   '</ul>'
+          + '</div>'
+          + '</div>';
+        container.appendChild(transEl);
+        this.slides.push({ el: transEl, n: week.n, title: week.title, skillName: 'Próximos Passos', isTransition: true });
+      } else {
+        transEl.className = 'pres-slide pres-slide--final';
+        transEl.innerHTML =
+          '<div class="pres-final-inner">'
+          + '<div class="pres-final-badge">Estruturação Estratégica com IA</div>'
+          + '<div class="pres-final-congrats">Parabéns!</div>'
+          + '<div class="pres-final-sub">Você encerrou a</div>'
+          + '<div class="pres-final-title">Estruturação Estratégica</div>'
+          + '<div class="pres-final-powered">AI Powered</div>'
+          + '<div class="pres-final-vaas">Está pronto para atuar no modelo <strong>VAAS</strong></div>'
+          + '</div>';
+        container.appendChild(transEl);
+        this.slides.push({ el: transEl, n: week.n, title: 'Fim', skillName: 'Conclusão', isFinal: true });
+      }
     });
 
     this._updateUI();
