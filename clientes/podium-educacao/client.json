@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "name": "Podium Educação",
+    "slug": "podium-educacao",
+    "workspace_id": "2544fb75-df56-4689-a683-a2733cd50011",
+    "created_at": "2026-04-10",
+    "modulo_vendas": false
+  },
+  "briefing": {},
+  "research": {
+    "fetched_at": "2026-04-10",
+    "site": "https://podiumeducacao.com.br/",
+    "instagram": "@podiumeducacao",
+    "founder": "Lincohn Agner",
+    "cnpj": "47.094.192/0001-06",
+    "razao_social": "GRUPO PODIUM LTDA",
+    "address": "Rua Padre Ladislau Kula, 800, Curitiba, Paraná, CEP 82010210",
+    "phone": "+5541996377146",
+    "segment": "Educação empreendedora para barbearias",
+    "location": "Curitiba, PR",
+    "hero_text": "FATURAR ALTO É APENAS O COMEÇO; A VERDADEIRA GESTÃO É O QUE REVOLUCIONA!",
+    "mission": "Transformar a realidade econômica das barbearias do Brasil através da educação empreendedora e tecnologia",
+    "products": [
+      {
+        "name": "Fórmula Shelby",
+        "type": "metodologia/programa",
+        "price": "~R$5.000",
+        "audience": "Donos de barbearias R$5k-R$50k+/mês",
+        "url": "shelby.lincohnagner.com.br"
+      },
+      {
+        "name": "Podium Academy",
+        "type": "curso online",
+        "price": "R$1.997 (12x R$197)",
+        "audience": "Barbeiros profissionais",
+        "url": "podiumacademy.com.br"
+      },
+      {
+        "name": "Cash Barber",
+        "type": "software SaaS",
+        "price": "a confirmar",
+        "audience": "Barbearias em geral",
+        "url": "sistemacashbarber.com.br"
+      },
+      {
+        "name": "Podium Club",
+        "type": "comunidade/programa",
+        "price": "a confirmar",
+        "audience": "Donos de barbearias",
+        "url": "podium.lincohnagner.com.br"
+      }
+    ],
+    "impact_claims": {
+      "entrepreneurs_trained": "2.500+",
+      "revenue_generated": "R$250M+",
+      "barbershops_software": "1.400+",
+      "revenue_students": "R$100M+ (2024)"
+    },
+    "tech_stack": "WordPress + Elementor Pro + WP Rocket + GTM",
+    "competitors": [
+      {"name": "La Mafia Barber School", "founder": "Marcos Messa", "differential": "Rede própria com 7 anos de experiência"},
+      {"name": "The Barber Academy", "founder": "Luiz Fagundes", "differential": "1.000+ alunos, fundada 2022"},
+      {"name": "Barber Day Business", "founder": null, "differential": "Foco em gestão, curso mais acessível"}
+    ],
+    "market_data": {
+      "male_beauty_market_brazil": "R$78,6 bilhões (2023)",
+      "barbershop_growth": "+16% abertura de novos negócios",
+      "brazil_global_share": "13% do mercado global de cosméticos masculinos"
+    }
+  },
+  "connectors": {
+    "fetched_at": "2026-04-10",
+    "status": "endpoint_not_found",
+    "note": "API V4MOS retornou 404 para /integrations/status e /connectors. Endpoint pode não estar disponível para este workspace.",
+    "integrations": null
+  },
+  "progress": {
+    "current_week": 1,
+    "skills": {
+      "ee-s1-diagnostico-maturidade": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s1-swot": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s1-persona-icp": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s1-auditoria-comunicacao": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s2-pesquisa-mercado": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s2-posicionamento": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s2-diagnostico-midia": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s2-diagnostico-criativos": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s2-diagnostico-cro": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s3-identidade-visual": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s3-brandbook": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s3-landing-page": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s3-copy-anuncios": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s3-criativos-anuncios": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s3-crm-setup": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s3-forecast-midia": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s3-gmb-otimizacao": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s4-diagnostico-comercial": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s4-cliente-oculto": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null}
+    }
+  },
+  "history": [
+    {
+      "ts": "2026-04-10T00:00:00Z",
+      "skill": "ee-novo-cliente",
+      "checkpoint": 0,
+      "decision": "Cliente cadastrado. Research automático realizado. Briefing complementar pendente."
+    }
+  ]
+}

@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diagnóstico de Maturidade Digital — Zenvet</title>
+  <style>
+    :root {
+      --red: #EF4444;
+      --orange: #F97316;
+      --yellow: #EAB308;
+      --green: #22C55E;
+      --blue: #3B82F6;
+      --dark: #0F172A;
+      --slate: #1E293B;
+      --muted: #64748B;
+      --border: #334155;
+      --bg: #0F172A;
+      --card: #1E293B;
+      --text: #F1F5F9;
+      --subtext: #94A3B8;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+
+    .header {
+      background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 40px 48px;
+    }
+    .header-meta { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+    .badge { background: #EF444420; color: #EF4444; border: 1px solid #EF444440; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; }
+    .badge.week { background: #3B82F620; color: #3B82F6; border-color: #3B82F640; }
+    .header h1 { font-size: 32px; font-weight: 700; margin-bottom: 6px; }
+    .header h1 span { color: #3B82F6; }
+    .header-sub { color: var(--subtext); font-size: 15px; }
+    .header-date { color: var(--subtext); font-size: 13px; margin-top: 8px; }
+
+    .container { max-width: 1100px; margin: 0 auto; padding: 48px; }
+
+    /* SCORE GERAL */
+    .score-hero {
+      background: linear-gradient(135deg, #1E293B, #0F172A);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 40px;
+      margin-bottom: 32px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .score-circle {
+      width: 140px; height: 140px;
+      border-radius: 50%;
+      background: conic-gradient(#EF4444 0% 21%, #334155 21% 100%);
+      display: flex; align-items: center; justify-content: center;
+      position: relative;
+      flex-shrink: 0;
+    }
+    .score-circle::before {
+      content: '';
+      position: absolute;
+      width: 104px; height: 104px;
+      background: var(--dark);
+      border-radius: 50%;
+    }
+    .score-circle-inner { position: relative; z-index: 1; text-align: center; }
+    .score-number { font-size: 36px; font-weight: 800; color: #EF4444; display: block; }
+    .score-max { font-size: 14px; color: var(--subtext); }
+    .score-hero-text h2 { font-size: 22px; font-weight: 700; margin-bottom: 8px; }
+    .score-hero-text .classification { color: #EF4444; font-weight: 600; font-size: 16px; margin-bottom: 12px; display: block; }
+    .score-hero-text p { color: var(--subtext); font-size: 15px; line-height: 1.7; }
+
+    /* PILARES */
+    .section-title { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--subtext); margin-bottom: 20px; }
+
+    .pillars-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 32px; }
+    .pillar-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+    }
+    .pillar-card .pillar-name { font-size: 13px; color: var(--subtext); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .pillar-card .pillar-score { font-size: 32px; font-weight: 800; margin-bottom: 4px; }
+    .pillar-card .pillar-class { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 12px; }
+    .pillar-card .pillar-bar { height: 6px; background: #334155; border-radius: 3px; overflow: hidden; }
+    .pillar-card .pillar-bar-fill { height: 100%; border-radius: 3px; }
+    .pillar-card .pillar-note { font-size: 13px; color: var(--subtext); margin-top: 10px; line-height: 1.5; }
+
+    .score-critico { color: #EF4444; }
+    .bar-critico { background: #EF4444; }
+    .score-baixo { color: #F97316; }
+    .bar-baixo { background: #F97316; }
+    .score-medio { color: #EAB308; }
+    .bar-medio { background: #EAB308; }
+    .score-bom { color: #22C55E; }
+    .bar-bom { background: #22C55E; }
+
+    /* RESUMO EXECUTIVO */
+    .executive-summary {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 32px;
+      margin-bottom: 32px;
+    }
+    .executive-summary p { color: #CBD5E1; font-size: 15px; line-height: 1.8; margin-bottom: 16px; }
+    .executive-summary p:last-child { margin-bottom: 0; }
+    .executive-summary strong { color: var(--text); }
+
+    /* BENCHMARK */
+    .benchmark-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 32px;
+      margin-bottom: 32px;
+    }
+    .benchmark-row {
+      display: grid;
+      grid-template-columns: 1fr auto auto auto;
+      gap: 16px;
+      align-items: center;
+      padding: 14px 0;
+      border-bottom: 1px solid #334155;
+    }
+    .benchmark-row:last-child { border-bottom: none; }
+    .benchmark-label { font-size: 14px; color: var(--text); }
+    .benchmark-val { font-size: 14px; font-weight: 700; text-align: right; min-width: 60px; }
+    .benchmark-ref { font-size: 13px; color: var(--subtext); text-align: right; min-width: 80px; }
+    .benchmark-gap { font-size: 13px; font-weight: 600; text-align: right; min-width: 100px; }
+    .gap-neg { color: #EF4444; }
+    .benchmark-header .benchmark-label,
+    .benchmark-header .benchmark-val,
+    .benchmark-header .benchmark-ref,
+    .benchmark-header .benchmark-gap { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--subtext); }
+
+    /* PRIORIDADES */
+    .priorities { margin-bottom: 32px; }
+    .priority-item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 12px;
+      display: grid;
+      grid-template-columns: 48px 1fr auto;
+      gap: 20px;
+      align-items: start;
+    }
+    .priority-rank {
+      width: 48px; height: 48px;
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px; font-weight: 800;
+      flex-shrink: 0;
+    }
+    .rank-1 { background: #EF444420; color: #EF4444; }
+    .rank-2 { background: #EF444415; color: #EF4444; }
+    .rank-3 { background: #F9731620; color: #F97316; }
+    .rank-4 { background: #EAB30820; color: #EAB308; }
+    .rank-5 { background: #3B82F620; color: #3B82F6; }
+    .priority-content h3 { font-size: 15px; font-weight: 600; margin-bottom: 6px; }
+    .priority-content p { font-size: 14px; color: var(--subtext); margin-bottom: 8px; }
+    .priority-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+    .tag { padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+    .tag-esforco-baixo { background: #22C55E15; color: #22C55E; }
+    .tag-esforco-medio { background: #EAB30815; color: #EAB308; }
+    .tag-esforco-alto { background: #EF444415; color: #EF4444; }
+    .tag-timeline { background: #3B82F615; color: #3B82F6; }
+    .priority-impact { text-align: right; font-size: 13px; color: var(--subtext); white-space: nowrap; padding-top: 4px; }
+
+    /* ACHADOS */
+    .findings {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 32px;
+      margin-bottom: 32px;
+    }
+    .finding-item {
+      display: flex; gap: 12px; align-items: flex-start;
+      padding: 10px 0;
+      border-bottom: 1px solid #334155;
+      font-size: 14px; color: #CBD5E1;
+    }
+    .finding-item:last-child { border-bottom: none; }
+    .finding-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+
+    /* FOOTER */
+    .footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--subtext);
+      font-size: 13px;
+    }
+    .footer-logo { font-weight: 700; color: var(--text); }
+
+    @media (max-width: 768px) {
+      .container { padding: 24px; }
+      .header { padding: 24px; }
+      .pillars-grid { grid-template-columns: 1fr 1fr; }
+      .score-hero { grid-template-columns: 1fr; text-align: center; }
+      .priority-item { grid-template-columns: 40px 1fr; }
+      .priority-impact { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-meta">
+    <span class="badge week">Semana 1</span>
+    <span class="badge">Diagnóstico de Maturidade</span>
+  </div>
+  <h1>Clínica Veterinária <span>Zenvet</span></h1>
+  <div class="header-sub">Diagnóstico de Maturidade Digital — Estruturação IA V4</div>
+  <div class="header-date">Gerado em 16 de abril de 2026</div>
+</div>
+
+<div class="container">
+
+  <!-- SCORE GERAL -->
+  <div class="score-hero">
+    <div class="score-circle">
+      <div class="score-circle-inner">
+        <span class="score-number">21</span>
+        <span class="score-max">/100</span>
+      </div>
+    </div>
+    <div class="score-hero-text">
+      <h2>Score Geral de Maturidade Digital</h2>
+      <span class="classification">🔴 Crítico — 17 a 28 pontos abaixo do mercado comparável</span>
+      <p>O digital da Zenvet destrói valor ativamente em vez de gerá-lo. O negócio fatura R$ 653k/ano por causa do produto forte, da especialização em felinos e da base de indicações — não por causa dos anúncios. Com a nova sede e os custos fixos maiores, corrigir o digital não é otimização: é sobrevivência.</p>
+    </div>
+  </div>
+
+  <!-- PILARES -->
+  <div class="section-title">Score por Pilar</div>
+  <div class="pillars-grid">
+
+    <div class="pillar-card">
+      <div class="pillar-name">Mídia Paga</div>
+      <div class="pillar-score score-critico">18</div>
+      <div class="pillar-class score-critico">🔴 Crítico</div>
+      <div class="pillar-bar"><div class="pillar-bar-fill bar-critico" style="width:18%"></div></div>
+      <div class="pillar-note">Meta 100% desperdiçado (links quebrados). Google invisível para termos locais. ROAS 1,52x vs mínimo 3x.</div>
+    </div>
+
+    <div class="pillar-card">
+      <div class="pillar-name">Criativos</div>
+      <div class="pillar-score score-baixo">32</div>
+      <div class="pillar-class score-baixo">🟠 Baixo</div>
+      <div class="pillar-bar"><div class="pillar-bar-fill bar-baixo" style="width:32%"></div></div>
+      <div class="pillar-note">Frequência boa. Retenção: 0% dos vídeos passa dos 3s. Criativo de felinos tem maior potencial comprovado.</div>
+    </div>
+
+    <div class="pillar-card">
+      <div class="pillar-name">CRO</div>
+      <div class="pillar-score score-critico">12</div>
+      <div class="pillar-class score-critico">🔴 Crítico</div>
+      <div class="pillar-bar"><div class="pillar-bar-fill bar-critico" style="width:12%"></div></div>
+      <div class="pillar-note">Sem Pixel, sem Google Tag, LP "precária" declarada pela cliente. CTA único (WhatsApp). Nenhum dado de comportamento.</div>
+    </div>
+
+    <div class="pillar-card">
+      <div class="pillar-name">CRM</div>
+      <div class="pillar-score score-critico">14</div>
+      <div class="pillar-class score-critico">🔴 Crítico</div>
+      <div class="pillar-bar"><div class="pillar-bar-fill bar-critico" style="width:14%"></div></div>
+      <div class="pillar-note">1.700 pacientes ociosos no sistema clínico. Sem CRM de vendas, sem follow-up, atendimento 100% reativo.</div>
+    </div>
+
+    <div class="pillar-card">
+      <div class="pillar-name">SEO / Presença Local</div>
+      <div class="pillar-score score-baixo">30</div>
+      <div class="pillar-class score-baixo">🟠 Baixo</div>
+      <div class="pillar-bar"><div class="pillar-bar-fill bar-baixo" style="width:30%"></div></div>
+      <div class="pillar-note">GMB ativo com avaliações — único ponto forte. Sem site, sem blog, zero ranqueamento orgânico local.</div>
+    </div>
+
+    <div class="pillar-card" style="border-color: #EF444460; background: #EF444408;">
+      <div class="pillar-name">GERAL</div>
+      <div class="pillar-score score-critico">21</div>
+      <div class="pillar-class score-critico">🔴 Crítico</div>
+      <div class="pillar-bar"><div class="pillar-bar-fill bar-critico" style="width:21%"></div></div>
+      <div class="pillar-note">Benchmark do setor: 38-49/100. Gap de 17-28 pontos. Concorrentes equivalentes adquirem clientes 2-3x mais eficientemente.</div>
+    </div>
+
+  </div>
+
+  <!-- RESUMO EXECUTIVO -->
+  <div class="section-title">Resumo Executivo</div>
+  <div class="executive-summary">
+    <p>A Zenvet fatura R$ 653k/ano com 1.700 pacientes cadastrados e taxa de show próxima de 100% — sinais inequívocos de um negócio com <strong>produto forte, atendimento diferenciado e reputação real</strong>. O problema não é o que acontece dentro da clínica: é que o digital está ativamente destruindo valor em vez de gerá-lo. Com R$ 3.200/mês em mídia paga, a Zenvet produz apenas 12 agendamentos originados de anúncios, a um CAC de R$ 266 — num modelo onde o ticket médio é R$ 500. Isso não é escalar com margem ruim; é <strong>queimar caixa num momento em que a clínica acabou de aumentar custo fixo</strong> com a nova sede.</p>
+    <p>Os dois gaps que estão custando resultado agora: os <strong>anúncios Meta estão rodando com links quebrados (erro 404)</strong> há semanas — R$ 800/mês integralmente desperdiçados, sem um lead sequer gerado. No Google, a clínica não aparece para nenhum termo local básico — os dois hospitais concorrentes da mesma avenida dominam o topo. Segundo gap: <strong>não existe nenhuma camada de rastreamento instalada</strong> (sem Pixel do Meta, sem Google Tag) — sem dados de comportamento na LP, sem remarketing, sem base para otimização. A Zenvet está pagando para trazer pessoas até a porta, mas não tem câmera nem recepcionista — não sabe quem entrou, quem saiu, quem olhou e foi embora.</p>
+    <p>Os dois pontos fortes a acelerar imediatamente: a <strong>base de 1.700 pacientes cadastrados é o maior ativo ocioso da empresa</strong> — com réguas de retenção estruturadas (vacinas vencidas, retorno pós-cirurgia, check-up felino, aniversário do pet), essa base pode gerar R$ 15-25k/mês adicionais a CAC zero. E a <strong>especialização em felinos é uma vantagem competitiva regional genuína</strong> — ticket 2x maior (até R$ 1.000), público preventivo, sem concorrente direto posicionado. A Zenvet pode ser sinônimo de "referência em gatos em Americana" — mas precisa construir isso explicitamente.</p>
+  </div>
+
+  <!-- BENCHMARK -->
+  <div class="section-title">Benchmark do Setor</div>
+  <div class="benchmark-card">
+    <div class="benchmark-row benchmark-header">
+      <div class="benchmark-label">Pilar</div>
+      <div class="benchmark-val">Zenvet</div>
+      <div class="benchmark-ref">Setor SP Interior</div>
+      <div class="benchmark-gap">Gap</div>
+    </div>
+    <div class="benchmark-row">
+      <div class="benchmark-label">Mídia Paga</div>
+      <div class="benchmark-val score-critico">18</div>
+      <div class="benchmark-ref">45–55</div>
+      <div class="benchmark-gap gap-neg">−27 a −37</div>
+    </div>
+    <div class="benchmark-row">
+      <div class="benchmark-label">Criativos</div>
+      <div class="benchmark-val score-baixo">32</div>
+      <div class="benchmark-ref">40–50</div>
+      <div class="benchmark-gap gap-neg">−8 a −18</div>
+    </div>
+    <div class="benchmark-row">
+      <div class="benchmark-label">CRO</div>
+      <div class="benchmark-val score-critico">12</div>
+      <div class="benchmark-ref">35–45</div>
+      <div class="benchmark-gap gap-neg">−23 a −33</div>
+    </div>
+    <div class="benchmark-row">
+      <div class="benchmark-label">CRM</div>
+      <div class="benchmark-val score-critico">14</div>
+      <div class="benchmark-ref">30–40</div>
+      <div class="benchmark-gap gap-neg">−16 a −26</div>
+    </div>
+    <div class="benchmark-row">
+      <div class="benchmark-label">SEO / Presença Local</div>
+      <div class="benchmark-val score-baixo">30</div>
+      <div class="benchmark-ref">40–55</div>
+      <div class="benchmark-gap gap-neg">−10 a −25</div>
+    </div>
+    <div class="benchmark-row" style="border-top: 1px solid #334155; margin-top: 4px;">
+      <div class="benchmark-label" style="font-weight:700; color: var(--text);">GERAL</div>
+      <div class="benchmark-val score-critico" style="font-size:18px;">21</div>
+      <div class="benchmark-ref" style="font-weight:600; color: var(--text);">38–49</div>
+      <div class="benchmark-gap gap-neg" style="font-weight:700;">−17 a −28</div>
+    </div>
+  </div>
+
+  <!-- PRIORIDADES -->
+  <div class="section-title">5 Prioridades de Ação</div>
+  <div class="priorities">
+
+    <div class="priority-item">
+      <div class="priority-rank rank-1">1</div>
+      <div class="priority-content">
+        <h3>Instalar Pixel Meta + Google Tag na LP</h3>
+        <p>Configurar eventos de conversão: visualização LP, clique no WhatsApp, início de conversa. Criar públicos de remarketing de visitantes.</p>
+        <div class="priority-tags">
+          <span class="tag tag-esforco-baixo">Esforço Baixo</span>
+          <span class="tag tag-timeline">0–7 dias</span>
+        </div>
+      </div>
+      <div class="priority-impact">Pré-requisito para<br>toda otimização futura</div>
+    </div>
+
+    <div class="priority-item">
+      <div class="priority-rank rank-2">2</div>
+      <div class="priority-content">
+        <h3>Corrigir Meta Ads — pausar anúncios com links quebrados</h3>
+        <p>Recriar campanhas com links e segmentação corretos. Configurar objetivo de conversão (mensagem), raio 15km, público tutores de pets.</p>
+        <div class="priority-tags">
+          <span class="tag tag-esforco-baixo">Esforço Baixo</span>
+          <span class="tag tag-timeline">0–7 dias</span>
+        </div>
+      </div>
+      <div class="priority-impact">Resgata R$ 800/mês<br>desperdiçado hoje</div>
+    </div>
+
+    <div class="priority-item">
+      <div class="priority-rank rank-3">3</div>
+      <div class="priority-content">
+        <h3>Reconfigurar Google Ads para intenção local</h3>
+        <p>Campanhas de busca para "clínica veterinária americana", "veterinário felinos americana", marca própria. Separar grupos por serviço âncora.</p>
+        <div class="priority-tags">
+          <span class="tag tag-esforco-medio">Esforço Médio</span>
+          <span class="tag tag-timeline">7–21 dias</span>
+        </div>
+      </div>
+      <div class="priority-impact">Captura demanda local<br>que vai p/ concorrentes</div>
+    </div>
+
+    <div class="priority-item">
+      <div class="priority-rank rank-4">4</div>
+      <div class="priority-content">
+        <h3>Régua de reativação da base de 1.700 pacientes</h3>
+        <p>Segmentar por última visita, tipo de serviço e espécie. Fluxos de WhatsApp: vacinas vencidas, retorno pós-cirurgia, check-up felino, aniversário do pet.</p>
+        <div class="priority-tags">
+          <span class="tag tag-esforco-medio">Esforço Médio</span>
+          <span class="tag tag-timeline">7–30 dias</span>
+        </div>
+      </div>
+      <div class="priority-impact">Potencial R$ 30–40k/mês<br>a CAC zero</div>
+    </div>
+
+    <div class="priority-item">
+      <div class="priority-rank rank-5">5</div>
+      <div class="priority-content">
+        <h3>LP dedicada para consulta de especialista em felinos</h3>
+        <p>Proposta de valor da especialização, depoimentos de tutores de gatos, CTA para agendamento, FAQ de objeções. Campanha segmentada com tracking.</p>
+        <div class="priority-tags">
+          <span class="tag tag-esforco-medio">Esforço Médio-Alto</span>
+          <span class="tag tag-timeline">14–30 dias</span>
+        </div>
+      </div>
+      <div class="priority-impact">Maior ticket + maior<br>diferencial da Zenvet</div>
+    </div>
+
+  </div>
+
+  <!-- ACHADOS CHAVE -->
+  <div class="section-title">Achados Chave</div>
+  <div class="findings">
+    <div class="finding-item"><span class="finding-icon">🔴</span> Meta Ads com todos os 5 anúncios ativos em erro 404 — R$ 800/mês 100% desperdiçado sem nenhum lead gerado</div>
+    <div class="finding-item"><span class="finding-icon">🔴</span> Google Ads invisível para "clínica veterinária americana" e termos de intenção básicos — concorrentes dominam o topo</div>
+    <div class="finding-item"><span class="finding-icon">🔴</span> Sem Pixel Meta e sem Google Tag instalados — impossível rastrear, otimizar por conversão ou fazer remarketing</div>
+    <div class="finding-item"><span class="finding-icon">🔴</span> CAC atual R$ 266 vs benchmark R$ 80–200 — 33-233% acima do setor com ticket de R$ 500</div>
+    <div class="finding-item"><span class="finding-icon">🔴</span> ROAS 1,52x — abaixo do ponto de breakeven (3x mínimo) — canal pago opera no prejuízo</div>
+    <div class="finding-item"><span class="finding-icon">🟡</span> 1.700 pacientes cadastrados no sistema clínico sem nenhuma régua de reativação — maior ativo ocioso da empresa</div>
+    <div class="finding-item"><span class="finding-icon">🟡</span> Conversão lead → agendamento: 16,6% vs benchmark 30–45% para clínicas com CRM estruturado</div>
+    <div class="finding-item"><span class="finding-icon">🟡</span> 0% dos vídeos retêm audiência além de 3s — problema crítico de hook nos criativos</div>
+    <div class="finding-item"><span class="finding-icon">🟢</span> Especialização em felinos: vantagem competitiva regional genuína, ticket 2x, sem concorrente direto posicionado</div>
+    <div class="finding-item"><span class="finding-icon">🟢</span> Taxa de show ~100%: quem agenda, comparece e compra — produto e atendimento são fortes</div>
+    <div class="finding-item"><span class="finding-icon">🟢</span> GMB ativo com avaliações + indicação espontânea frequente — reputação real sendo construída</div>
+    <div class="finding-item"><span class="finding-icon">🟢</span> ~50% do faturamento histórico veio de orgânico/indicação — base sólida independente do pago</div>
+  </div>
+
+</div>
+
+<div class="footer">
+  <div>
+    <div class="footer-logo">V4 Company — Estruturação IA</div>
+    <div>Clínica Veterinária Zenvet · Semana 1 · Diagnóstico de Maturidade Digital</div>
+  </div>
+  <div>Gerado em 16/04/2026</div>
+</div>
+
+</body>
+</html>

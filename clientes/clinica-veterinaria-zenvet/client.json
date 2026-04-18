@@ -1,0 +1,171 @@
+{
+  "meta": {
+    "name": "Clínica Veterinária Zenvet",
+    "slug": "clinica-veterinaria-zenvet",
+    "workspace_id": "0ba48cbc-b33f-48c8-b1b1-f505c21c5689",
+    "created_at": "2026-04-16",
+    "modulo_vendas": true
+  },
+  "briefing": {
+    "identification": {
+      "name": "Clínica Veterinária Zenvet",
+      "contact_name": "Nathalia Alves",
+      "contact_role": "Proprietária e Veterinária",
+      "contact_financial": "Kelly (irmã)",
+      "segment": "Saúde Animal & Pet Care",
+      "annual_revenue": "R$ 653.051,74",
+      "monthly_revenue_last": "R$ 81.657,01",
+      "monthly_revenue_goal": "R$ 90.000,00",
+      "years_in_market": null,
+      "location": "Americana, SP",
+      "coverage_cities": ["Americana", "Santa Bárbara d'Oeste", "Nova Odessa"],
+      "website": "https://clinicazenvet.com.br",
+      "instagram": "@clinicazenvet",
+      "whatsapp": "(19) 99579-5483",
+      "gmb": true,
+      "contract_value": "R$ 18.546,00 (6x boleto)",
+      "contract_start": "2026-04-15",
+      "v4_team": {
+        "closer": "Wellington Elias da Silva",
+        "executor": "Rafael Corazza",
+        "diagnostico": "Leonardo Rosa"
+      }
+    },
+    "product": {
+      "main_product": "Consultas veterinárias (rotina, especialista em felinos, dermatológicas), exames hematológicos, vacinas, internação, ultrassom abdominal, radiografia, cirurgias e venda de medicações",
+      "ticket": "R$ 500,00 (felinos/especializada pode chegar a R$ 1.000,00)",
+      "billing_model": "unico",
+      "sales_cycle": "imediato (agendamento no mesmo dia)",
+      "active_customers": "1.186 ativos / 1.700 pacientes cadastrados",
+      "most_profitable": "Consulta especialista em felinos, internação e cirurgias",
+      "growth_potential": "Consulta felinos premium + expansão tutores de cães",
+      "mix_atual": "70% tutores de gatos / 30% tutores de cães",
+      "services": [
+        "Consultas veterinárias de rotina",
+        "Consultas especializadas em felinos",
+        "Consultas dermatológicas",
+        "Exames hematológicos",
+        "Vacinação e prevenção",
+        "Ultrassom abdominal e radiografia",
+        "Internação veterinária",
+        "Cirurgias veterinárias",
+        "Venda de medicações"
+      ]
+    },
+    "icp": {
+      "best_customers": null,
+      "not_customers": null,
+      "current_profile": "Tutores de pets, majoritariamente classe média, 70% gatos 30% cães",
+      "desired_profile": "Classe média a alta, maior consciência sobre medicina preventiva e cuidados contínuos",
+      "persona": {
+        "name": "Mariana",
+        "age": "36 anos",
+        "class": "Classe média a média alta",
+        "behavior": "Busca prevenção, não apenas urgência. Valoriza confiança técnica e atendimento humanizado e especializado.",
+        "channels": ["Instagram", "Facebook", "WhatsApp", "Google"],
+        "objections": ["preço total do tratamento", "medo de exames desnecessários", "receio de demora", "insegurança sobre especialização da clínica"]
+      },
+      "problems_before": null,
+      "results_after": null,
+      "churn_reasons": "Concorrência (foram para outro) e lead sumiu sem retorno"
+    },
+    "competition": {
+      "competitors": [
+        {"name": "Dois hospitais veterinários 24h (mesma avenida)", "perceived_differential": "Consulta isca R$ 70, domínio do Google local, retenção forçada do animal até pagamento"},
+        {"name": "Cantinho do Mascote", "perceived_differential": "Concorrente regional direto"},
+        {"name": "LM Hospital Veterinário", "perceived_differential": "Hospital — maior estrutura"},
+        {"name": "Shopdog", "perceived_differential": "Pet shop com serviços agregados"},
+        {"name": "Xodog", "perceived_differential": "Concorrente regional"}
+      ],
+      "real_differential": null,
+      "why_choose_us": null,
+      "competitive_advantage_observed": "Atendimento humanizado para felinos (especialização difícil de replicar), Nathalia especialista em gatos, clientes dos concorrentes buscam segunda opinião na Zenvet, acompanhamento pós-atendimento ativo"
+    },
+    "brand": {
+      "adjectives": null,
+      "voice_tone": null,
+      "admired_brands": null,
+      "current_colors": null,
+      "has_logo": true,
+      "restrictions": null
+    },
+    "digital_situation": {
+      "paid_traffic": true,
+      "platforms": ["google_ads", "meta_ads"],
+      "monthly_investment_total": "R$ 3.200,00",
+      "monthly_investment_google": "R$ 2.400,00",
+      "monthly_investment_meta": "R$ 800,00",
+      "current_results": "72 leads → 12 agendamentos (16,6% conversão). Taxa de show ~100%. CAC atual: R$ 266,00.",
+      "issues": "Meta Ads com links quebrados (erro 404). Google Ads invisível para termos-chave. Sem Pixel Facebook. Sem Google Tag.",
+      "crm": null,
+      "lead_sources": "Indicação de clientes atuais, anúncios pagos (Google e Meta), redes sociais orgânicas",
+      "conversion_rate": "16,6% (lead → agendamento)",
+      "biggest_pain": "Falta de leads qualificados, ausência de rastreamento (sem pixel/tags), LP sem conversão, sem CRM, agência anterior sem transparência",
+      "monthly_posts_frequency": "Várias vezes por semana",
+      "content_type": "Conteúdo educativo",
+      "active_channels": ["Instagram", "Facebook", "Google Meu Negócio"]
+    },
+    "accesses": {
+      "meta_business": false,
+      "google_ads": false,
+      "google_analytics": false,
+      "google_search_console": false,
+      "instagram_admin": false,
+      "website_admin": false,
+      "crm": false,
+      "gmb": true,
+      "whatsapp_business": true
+    },
+    "sales_module": {
+      "active_sellers": "1 (Loíse — recepcionista/comercial)",
+      "sales_process": "Atendimento reativo via WhatsApp. Qualificação automática inicial: cão ou gato? Domicílio ou clínica?",
+      "objections": ["Preço vs concorrência", "Lead some sem retorno"],
+      "conversion_rate": "16,6% lead → agendamento / ~100% agendamento → atendimento",
+      "sales_cycle": "Imediato (mesmo dia ou próximos dias)",
+      "has_scripts": false,
+      "needs": "Treinamento consultivo para Loíse, CRM, script por tipo de serviço, follow-up estruturado"
+    }
+  },
+  "research": {"fetched_at": null},
+  "connectors": {"fetched_at": null, "integrations": null},
+  "progress": {
+    "current_week": 1,
+    "skills": {
+      "ee-s1-diagnostico-maturidade": {"status": "completed", "checkpoint": 1, "started_at": "2026-04-16", "completed_at": "2026-04-16"},
+      "ee-s1-swot": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s1-persona-icp": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s1-auditoria-comunicacao": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s2-pesquisa-mercado": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s2-posicionamento": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s2-diagnostico-midia": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s2-diagnostico-criativos": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s2-diagnostico-cro": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s3-identidade-visual": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s3-brandbook": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s3-landing-page": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s3-copy-anuncios": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s3-criativos-anuncios": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s3-crm-setup": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s3-forecast-midia": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s3-gmb-otimizacao": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s4-diagnostico-comercial": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s4-cliente-oculto": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s5-scripts-sdr": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s5-sdr-ia-config": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null}
+    }
+  },
+  "history": [
+    {
+      "ts": "2026-04-16T00:00:00Z",
+      "skill": "ee-novo-cliente",
+      "checkpoint": 0,
+      "decision": "Cliente cadastrado. Briefing extraído da documentação completa (formulário V4MOS, diagnóstico, rollout, plano de ROI e kickoff). Campos de marca e ICP qualitativo (adjetivos, tom de voz, melhores clientes, restrições) ficaram null — operador não tem as informações. Coletar com Nathalia durante Semana 1."
+    },
+    {
+      "ts": "2026-04-16T00:00:00Z",
+      "skill": "ee-s1-diagnostico-maturidade",
+      "checkpoint": 1,
+      "decision": "Score geral 21/100 (Crítico). Digital ativamente destrói valor. 5 prioridades definidas: tracking, Meta Ads, Google Ads, régua de reativação base 1.700 pacientes, LP felinos. Aprovado pelo operador."
+    }
+  ]
+}
