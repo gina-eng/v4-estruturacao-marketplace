@@ -50,7 +50,7 @@
       background: var(--bg-base);
       color: var(--text-primary);
       line-height: 1.5;
-      min-height: 100vh;
+      overflow: hidden;
     }
 
     /* ===== Progress Bar ===== */
@@ -331,10 +331,9 @@
 
     /* ===== Presentation Mode ===== */
     .pres-overlay {
-      display: none; position: fixed; inset: 0; z-index: 9000;
+      display: block; position: fixed; inset: 0; z-index: 9000;
       background: var(--bg-base); overflow: hidden;
     }
-    .pres-mode .pres-overlay { display: block; }
 
     .pres-slides { position: absolute; inset: 0; }
 
@@ -491,13 +490,12 @@
     }
 
     .pres-bar {
-      display: none; position: fixed; bottom: 0; left: 0; right: 0;
+      display: flex; position: fixed; bottom: 0; left: 0; right: 0;
       height: 58px; z-index: 9100;
       background: rgba(255,255,255,0.96); backdrop-filter: blur(10px);
       border-top: 1px solid var(--border);
       align-items: center; justify-content: center; gap: 0.875rem; padding: 0 1.5rem;
     }
-    .pres-mode .pres-bar { display: flex; }
 
     .pres-nav-btn {
       width: 34px; height: 34px; border-radius: 50%;
@@ -537,10 +535,6 @@
     .tl-pres-btn:hover .tl-label { color: #FDFF87; }
     .tl-pres-icon { font-size: 0.5rem; opacity: 0.8; }
 
-    /* Evita flash do portal antes do modo apresentação */
-    body:not(.pres-ready) > :not(.pres-overlay):not(.pres-bar) { visibility: hidden; }
-    body.pres-ready > :not(.pres-overlay):not(.pres-bar) { visibility: visible; }
-
     @media print {
       body { background: #fff; }
       #progress-bar, .timeline { display: none; }
@@ -554,21 +548,6 @@
 </head>
 <body>
 
-  <div id="progress-bar"></div>
-
-  <header class="hero">
-    <canvas class="hero__canvas" id="heroCanvas"></canvas>
-    <h1 class="hero__client" id="heroClient">Portal de Entregas</h1>
-    <p class="hero__subtitle">Estruturação Estratégica com IA</p>
-    <div class="hero__progress">
-      <div class="hero__bar"><div class="hero__fill" id="heroFill"></div></div>
-      <span class="hero__label" id="heroLabel">Carregando...</span>
-    </div>
-  </header>
-
-  <nav class="timeline" id="timeline"></nav>
-  <main class="weeks" id="weeks"></main>
-
   <!-- Presentation Mode Overlay -->
   <div class="pres-overlay" id="presOverlay">
     <div class="pres-slides" id="presSlides"></div>
@@ -580,13 +559,8 @@
     <div class="pres-dots" id="presDots"></div>
     <span class="pres-info" id="presInfo"></span>
     <button class="pres-nav-btn" id="presNext" onclick="PRES.next()" title="Próximo (→)">&#8594;</button>
-    <button class="pres-exit-btn" onclick="PRES.exit()">&#215; Sair</button>
+    <button class="pres-exit-btn" onclick="PRES.go(0)" title="Voltar ao início">&#8962; Início</button>
   </div>
-
-  <footer class="footer">
-    <div class="footer__brand">Gerado por <span>V4 Estruturação IA</span></div>
-    <div class="footer__info" id="footerInfo">Documento confidencial</div>
-  </footer>
 
 <script>
 /* ==========================================================================
@@ -1424,7 +1398,11 @@ const R = {
 // ===== ENGINE =====
 function init() {
   const data = PORTAL_DATA;
-  if (!data || !data.client) { document.getElementById('weeks').innerHTML = '<p style="text-align:center;padding:4rem;color:var(--text-muted)">Nenhum dado de portal encontrado.<br>Execute <code>render_portal.sh</code> para gerar.</p>'; return; }
+  if (!data || !data.client) {
+    const container = document.getElementById('presSlides');
+    if (container) container.innerHTML = '<div class="pres-empty" style="height:100vh"><div class="pres-empty__icon">&#128203;</div><div class="pres-empty__text">Nenhum dado de portal encontrado. Execute render_portal.sh para gerar.</div></div>';
+    return;
+  }
 
   const client = data.client;
   const progress = data.progress || {};
@@ -1432,97 +1410,12 @@ function init() {
   const hasSales = client.modulo_vendas !== false;
 
   document.title = 'Portal — ' + (client.name || 'Cliente') + ' | V4';
-  document.getElementById('heroClient').textContent = client.name || 'Cliente';
-  document.getElementById('footerInfo').textContent = 'Documento confidencial — ' + (client.name||'') + ' — ' + (client.created_at||new Date().toISOString().slice(0,10));
 
   const activeWeeks = WEEKS.filter(w => !w.sales || hasSales);
-  const allSkills = activeWeeks.flatMap(w => w.skills);
-  const completed = allSkills.filter(s => progress.skills?.[s.id]?.status === 'completed').length;
-  const total = allSkills.length;
-  const pct = total > 0 ? Math.round(completed / total * 100) : 0;
 
-  requestAnimationFrame(() => {
-    document.getElementById('heroFill').style.width = pct + '%';
-    document.getElementById('heroLabel').textContent = completed + '/' + total + ' entregas (' + pct + '%)';
-  });
-
-  // Timeline
-  const nav = document.getElementById('timeline');
-  activeWeeks.forEach(week => {
-    const ws = week.skills;
-    const done = ws.filter(s => progress.skills?.[s.id]?.status === 'completed').length;
-    const wip = ws.filter(s => progress.skills?.[s.id]?.status === 'in_progress').length;
-    const isCurrent = progress.current_week === week.n;
-    const dotCls = done === ws.length ? 'tl-dot--done' : isCurrent ? 'tl-dot--current' : done > 0 || wip > 0 ? 'tl-dot--has-progress' : '';
-
-    const btn = document.createElement('button');
-    btn.className = 'tl-item' + (isCurrent ? ' tl-item--active' : '');
-    btn.innerHTML = '<span class="tl-dot ' + dotCls + '"></span><span class="tl-label">Semana ' + week.n + '</span>';
-    btn.onclick = () => {
-      const target = document.getElementById('week-' + week.n);
-      if (target) { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); toggleWeek(week.n, true); }
-    };
-    nav.appendChild(btn);
-  });
-
-  // Presentation mode button
-  const presBtn = document.createElement('button');
-  presBtn.className = 'tl-item tl-pres-btn';
-  presBtn.innerHTML = '<span class="tl-pres-icon">&#9654;</span><span class="tl-label">Apresentar</span>';
-  presBtn.title = 'Modo Apresentação — navega semana a semana';
-  presBtn.onclick = () => PRES.enter();
-  nav.appendChild(presBtn);
-
-  // Weeks
-  const main = document.getElementById('weeks');
-  activeWeeks.forEach((week, wi) => {
-    const ws = week.skills;
-    const done = ws.filter(s => progress.skills?.[s.id]?.status === 'completed').length;
-    const isCurrent = progress.current_week === week.n;
-    const isOpen = isCurrent || (done > 0 && done < ws.length);
-
-    const section = document.createElement('section');
-    section.className = 'week' + (isCurrent ? ' week--current' : '');
-    section.id = 'week-' + week.n;
-    section.style.animationDelay = (wi * 0.08) + 's';
-    section.classList.add('fade-in');
-
-    const pctW = ws.length > 0 ? Math.round(done / ws.length * 100) : 0;
-
-    section.innerHTML =
-      '<button class="week__header" onclick="toggleWeek(' + week.n + ')">'
-      + '<span class="week__ghost">' + week.n + '</span>'
-      + '<div class="week__info">'
-      +   '<div class="week__tag">Semana ' + week.n + '</div>'
-      +   '<div class="week__title">' + E(week.title) + '</div>'
-      +   '<div class="week__desc">' + E(week.desc) + '</div>'
-      + '</div>'
-      + '<div class="week__meta">'
-      +   '<span class="week__count">' + done + '/' + ws.length + '</span>'
-      +   '<div class="week__minibar"><div class="week__minibar-fill" style="width:' + pctW + '%"></div></div>'
-      + '</div>'
-      + '<span class="week__chev' + (isOpen ? ' week__chev--open' : '') + '" id="chev-' + week.n + '">&#9660;</span>'
-      + '</button>'
-      + '<div class="week__body" id="body-' + week.n + '">'
-      + '<div class="week__content">'
-      + ws.map(skill => renderSkill(skill, progress, outputs)).join('')
-      + '</div></div>';
-
-    main.appendChild(section);
-
-    if (isOpen) {
-      requestAnimationFrame(() => {
-        const body = document.getElementById('body-' + week.n);
-        if (body) body.style.maxHeight = body.scrollHeight + 'px';
-      });
-    }
-  });
-
-  // Entra em modo apresentação automaticamente ao carregar
   requestAnimationFrame(() => {
     PRES.build(activeWeeks, progress, outputs);
     PRES.enter();
-    document.body.classList.add('pres-ready');
   });
 }
 
@@ -1742,17 +1635,13 @@ const PRES = {
     if (!this.slides.length) return;
     this.active = true;
     this.current = 0;
-    document.body.classList.add('pres-mode');
-    document.documentElement.style.overflow = 'hidden';
     this.slides.forEach(s => s.el.classList.remove('pres-slide--active', 'pres-slide--prev'));
     this.slides[0].el.classList.add('pres-slide--active');
     this._updateUI();
   },
 
   exit() {
-    this.active = false;
-    document.body.classList.remove('pres-mode');
-    document.documentElement.style.overflow = '';
+    this.go(0);
   },
 
   go(n) {
@@ -1812,88 +1701,8 @@ document.addEventListener('keydown', function(e) {
   if (!PRES.active) return;
   if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') { e.preventDefault(); PRES.next(); }
   else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); PRES.prev(); }
-  else if (e.key === 'Escape') PRES.exit();
 });
 
-// Progress bar
-window.addEventListener('scroll', () => {
-  const scrolled = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
-  const bar = document.getElementById('progress-bar');
-  if (bar) bar.style.width = Math.min(100, scrolled) + '%';
-});
-
-// Timeline glass on scroll
-window.addEventListener('scroll', () => {
-  const tl = document.getElementById('timeline');
-  if (tl) tl.classList.toggle('is-scrolled', window.scrollY > 80);
-});
-
-// Constellation canvas
-(function() {
-  const canvas = document.getElementById('heroCanvas');
-  if (!canvas) return;
-  const ctx = canvas.getContext('2d');
-  let particles = [], animating = false;
-  let mouse = { x: -999, y: -999 };
-
-  function resize() {
-    canvas.width = canvas.offsetWidth;
-    canvas.height = canvas.offsetHeight;
-  }
-
-  function createParticles() {
-    particles = [];
-    for (let i = 0; i < 60; i++) {
-      particles.push({
-        x: Math.random() * canvas.width, y: Math.random() * canvas.height,
-        vx: (Math.random()-0.5)*0.4, vy: (Math.random()-0.5)*0.4,
-        r: Math.random()*2+0.5, c: Math.random()
-      });
-    }
-  }
-
-  const colors = ['rgba(251,46,10,', 'rgba(253,255,135,', 'rgba(255,255,255,', 'rgba(220,120,80,'];
-
-  function draw() {
-    if (!animating) return;
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    particles.forEach((p, i) => {
-      const dx = p.x - mouse.x, dy = p.y - mouse.y;
-      const dist = Math.sqrt(dx*dx+dy*dy);
-      if (dist < 180 && dist > 0) { p.vx += dx/dist*0.12; p.vy += dy/dist*0.12; }
-      p.x += p.vx; p.y += p.vy; p.vx *= 0.996; p.vy *= 0.996;
-      if (p.x < 0) p.x = canvas.width;
-      if (p.x > canvas.width) p.x = 0;
-      if (p.y < 0) p.y = canvas.height;
-      if (p.y > canvas.height) p.y = 0;
-      const ci = Math.floor(p.c * colors.length);
-      ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI*2);
-      ctx.fillStyle = colors[ci]+'0.85)'; ctx.fill();
-      for (let j = i+1; j < particles.length; j++) {
-        const q = particles[j], ex = p.x-q.x, ey = p.y-q.y, ed = Math.sqrt(ex*ex+ey*ey);
-        if (ed < 130) {
-          ctx.beginPath(); ctx.moveTo(p.x,p.y); ctx.lineTo(q.x,q.y);
-          ctx.strokeStyle = 'rgba(255,255,255,'+(0.12*(1-ed/130))+')';
-          ctx.lineWidth = 0.5; ctx.stroke();
-        }
-      }
-    });
-    requestAnimationFrame(draw);
-  }
-
-  const observer = new IntersectionObserver(entries => {
-    animating = entries[0].isIntersecting;
-    if (animating) { resize(); createParticles(); draw(); }
-  });
-  observer.observe(canvas);
-
-  window.addEventListener('resize', () => { resize(); createParticles(); });
-  canvas.parentElement.addEventListener('mousemove', e => {
-    const rect = canvas.getBoundingClientRect();
-    mouse = { x: e.clientX-rect.left, y: e.clientY-rect.top };
-  });
-  canvas.parentElement.addEventListener('mouseleave', () => { mouse = {x:-999,y:-999}; });
-})();
 
 document.addEventListener('DOMContentLoaded', init);
 </script>
