@@ -177,7 +177,7 @@
           },
           "swot_basis": {
             "type": "string",
-            "description": "Quais quadrantes/itens essa ação endereça (ex: 'Alavanca F2, captura O3')."
+            "description": "Quais quadrantes/itens essa ação endereça (ex: 'Alavanca F2, captura O3, executa SO1')."
           },
           "impact": {
             "type": "string",
@@ -192,10 +192,87 @@
             "type": "array",
             "items": { "type": "string" },
             "description": "Dependências desta ação."
+          },
+          "financial_impact": {
+            "type": "object",
+            "description": "Impacto financeiro projetado da ação. Aceita nomenclatura com ou sem sufixo '_brl'.",
+            "properties": {
+              "investment": { "type": "number", "description": "Investimento em R$ (mensal ou único). Alternativa: 'investment_brl'." },
+              "investment_brl": { "type": "number", "description": "Alternativa a 'investment'." },
+              "expected_return_90d": { "type": "number", "description": "Retorno esperado em 90 dias em R$. Alternativa: 'monthly_return_brl' (será multiplicado por 3)." },
+              "monthly_return_brl": { "type": "number", "description": "Retorno mensal em R$. Se presente, retorno 90d = monthly × 3." },
+              "payback_days": { "type": "number", "description": "Dias até o payback." },
+              "roi_multiple": { "type": "number", "description": "Múltiplo de ROI (ex: 5.2 = 5.2x). Se ausente, calculado como retorno/investment." },
+              "note": { "type": "string", "description": "Observação textual opcional." }
+            }
+          },
+          "risk_adjusted_score": {
+            "description": "Score de priorização. Aceita dois formatos: número 0-100 OU objeto com dimensões avaliadas em escala 1-10. O renderer do portal ordena e exibe ambos.",
+            "oneOf": [
+              {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 100,
+                "description": "Score agregado 0-100."
+              },
+              {
+                "type": "object",
+                "required": ["score"],
+                "properties": {
+                  "impact": { "type": "number", "minimum": 1, "maximum": 10, "description": "Impacto esperado (1-10)." },
+                  "probability_of_success": { "type": "number", "minimum": 1, "maximum": 10, "description": "Probabilidade de sucesso (1-10)." },
+                  "reversibility": { "type": "number", "minimum": 1, "maximum": 10, "description": "Reversibilidade se der errado (1-10, maior = mais reversível)." },
+                  "score": { "type": "number", "description": "Score final agregado (1-10 ou 0-100)." }
+                }
+              }
+            ]
           }
         }
       },
-      "description": "Ações prioritárias derivadas do cruzamento SWOT."
+      "description": "Ações prioritárias derivadas do cruzamento SWOT/TOWS, ordenadas por risk_adjusted_score."
+    },
+    "tows_matrix": {
+      "type": "object",
+      "description": "Matriz TOWS: cruzamento estratégico dos quadrantes SWOT para derivar estratégias acionáveis.",
+      "properties": {
+        "description": { "type": "string", "description": "Breve explicação do que é a matriz." },
+        "so_strategies": {
+          "type": "array",
+          "description": "Estratégias Ofensivas (Forças × Oportunidades). Onde o cliente ataca.",
+          "items": { "$ref": "#/definitions/towsStrategy" }
+        },
+        "wo_strategies": {
+          "type": "array",
+          "description": "Estratégias de Reforço (Fraquezas × Oportunidades). Onde o cliente investe.",
+          "items": { "$ref": "#/definitions/towsStrategy" }
+        },
+        "st_strategies": {
+          "type": "array",
+          "description": "Estratégias Defensivas (Forças × Ameaças). Onde o cliente protege.",
+          "items": { "$ref": "#/definitions/towsStrategy" }
+        },
+        "wt_strategies": {
+          "type": "array",
+          "description": "Estratégias de Sobrevivência (Fraquezas × Ameaças). Onde o cliente minimiza dano.",
+          "items": { "$ref": "#/definitions/towsStrategy" }
+        }
+      }
+    },
+    "_deprecated_notes": {
+      "type": "string",
+      "description": "NÃO usar. Campos descontinuados que o renderer do portal ignora: 'scenarios', 'financial_summary_90d', 'risk_adjusted_ranking'. A projeção de cenários é feita em ee-s2-diagnostico-midia (budget_reallocation_scenarios); a consolidação financeira é redundante com priority_actions[].financial_impact."
+    }
+  },
+  "definitions": {
+    "towsStrategy": {
+      "type": "object",
+      "required": ["id", "strategy"],
+      "properties": {
+        "id": { "type": "string", "description": "Identificador (ex: SO1, WT2)." },
+        "strategy": { "type": "string", "description": "Ação específica de cruzamento." },
+        "rationale": { "type": "string", "description": "Por que essa estratégia funciona (cita a força/fraqueza e a oportunidade/ameaça)." },
+        "expected_outcome": { "type": "string", "description": "O que muda se executar (resultado tangível)." }
+      }
     }
   }
 }

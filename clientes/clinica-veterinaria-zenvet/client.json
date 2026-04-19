@@ -170,32 +170,200 @@
   },
   "connectors": {
     "fetched_at": "2026-04-18T15:30:00Z",
-    "period": { "start": "2025-01-01", "end": "2026-04-18" },
+    "period": {
+      "start": "2025-01-01",
+      "end": "2026-04-18"
+    },
     "google_ads": {
       "integration_name": "VET519 - Clínica Zen Vet",
       "total_campaigns": 15,
-      "total_cost": 13975.10,
+      "total_cost": 13975.1,
       "total_clicks": 11008,
       "total_impressions": 300869,
       "total_conversions": 1225.0,
       "avg_cpa": 11.41,
       "avg_ctr": 3.66,
       "campaigns": [
-        { "name": "[Sc] - [Pesquisa] - [13/03]", "type": "SEARCH", "status": "ENABLED", "budget_daily": 80.0, "cost": 1675.51, "clicks": 389, "impressions": 5946, "conversions": 63.0, "ctr": 6.54, "cpa": 26.60 },
-        { "name": "flyvet.search - Geral", "type": "SEARCH", "status": "PAUSED", "budget_daily": 78.0, "cost": 6212.79, "clicks": 2254, "impressions": 46663, "conversions": 473.54, "ctr": 4.83, "cpa": 13.12 },
-        { "name": "flyvet.pmax - Geral Nova", "type": "PERFORMANCE_MAX", "status": "PAUSED", "budget_daily": 5.0, "cost": 352.47, "clicks": 1344, "impressions": 44879, "conversions": 198.96, "ctr": 2.99, "cpa": 1.77 },
-        { "name": "flyvet.gdm - vacinação", "type": "DEMAND_GEN", "status": "PAUSED", "budget_daily": 5.0, "cost": 917.48, "clicks": 1752, "impressions": 66043, "conversions": 266.98, "ctr": 2.65, "cpa": 3.44 },
-        { "name": "flyvet.search - Serviços", "type": "SEARCH", "status": "PAUSED", "budget_daily": 12.0, "cost": 1426.97, "clicks": 412, "impressions": 7812, "conversions": 83.5, "ctr": 5.27, "cpa": 17.09 },
-        { "name": "C01 - CONSULTIVA | SEARCH [21/03/2025] MAX CLIQUES", "type": "SEARCH", "status": "PAUSED", "budget_daily": 30.0, "cost": 1386.77, "clicks": 1006, "impressions": 29349, "conversions": 44.0, "ctr": 3.43, "cpa": 31.52 },
-        { "name": "[OFF_ROS] Veterinária em Americana", "type": "SMART", "status": "PAUSED", "budget_daily": 40.0, "cost": 938.10, "clicks": 2542, "impressions": 71439, "conversions": 23.0, "ctr": 3.56, "cpa": 40.79 },
-        { "name": "[OFF] C02 - CONSULTIVA | PMAX - CATEGORIZADA", "type": "PERFORMANCE_MAX", "status": "PAUSED", "budget_daily": 5.0, "cost": 371.47, "clicks": 886, "impressions": 18206, "conversions": 59.0, "ctr": 4.87, "cpa": 6.30 },
-        { "name": "flyvet.search - Serviços Nova", "type": "SEARCH", "status": "PAUSED", "budget_daily": 10.0, "cost": 107.40, "clicks": 85, "impressions": 1527, "conversions": 1.0, "ctr": 5.57, "cpa": 107.40 },
-        { "name": "flyvet.search - Nova Institucional", "type": "SEARCH", "status": "PAUSED", "budget_daily": 5.0, "cost": 172.07, "clicks": 113, "impressions": 1279, "conversions": 5.0, "ctr": 8.84, "cpa": 34.41 },
-        { "name": "flyvet.search - felinos", "type": "SEARCH", "status": "PAUSED", "budget_daily": 5.0, "cost": 106.08, "clicks": 42, "impressions": 661, "conversions": 0.0, "ctr": 6.35, "cpa": null },
-        { "name": "flyvet.gdm - Reconhecimento", "type": "DEMAND_GEN", "status": "PAUSED", "budget_daily": 5.0, "cost": 44.36, "clicks": 30, "impressions": 1734, "conversions": 2.02, "ctr": 1.73, "cpa": 21.96 },
-        { "name": "flyvet.pmax - Geral", "type": "PERFORMANCE_MAX", "status": "PAUSED", "budget_daily": 5.0, "cost": 79.92, "clicks": 67, "impressions": 2854, "conversions": 1.0, "ctr": 2.35, "cpa": 79.92 },
-        { "name": "flyvet.search - Institucional", "type": "SEARCH", "status": "PAUSED", "budget_daily": 5.0, "cost": 92.43, "clicks": 54, "impressions": 1905, "conversions": 4.0, "ctr": 2.83, "cpa": 23.11 },
-        { "name": "[OFF] C03 - CONSULTIVA | SEARCH - CATEGORIZADA", "type": "SEARCH", "status": "PAUSED", "budget_daily": 5.0, "cost": 91.28, "clicks": 32, "impressions": 572, "conversions": 0.0, "ctr": 5.59, "cpa": null }
+        {
+          "name": "[Sc] - [Pesquisa] - [13/03]",
+          "type": "SEARCH",
+          "status": "ENABLED",
+          "budget_daily": 80.0,
+          "cost": 1675.51,
+          "clicks": 389,
+          "impressions": 5946,
+          "conversions": 63.0,
+          "ctr": 6.54,
+          "cpa": 26.6
+        },
+        {
+          "name": "flyvet.search - Geral",
+          "type": "SEARCH",
+          "status": "PAUSED",
+          "budget_daily": 78.0,
+          "cost": 6212.79,
+          "clicks": 2254,
+          "impressions": 46663,
+          "conversions": 473.54,
+          "ctr": 4.83,
+          "cpa": 13.12
+        },
+        {
+          "name": "flyvet.pmax - Geral Nova",
+          "type": "PERFORMANCE_MAX",
+          "status": "PAUSED",
+          "budget_daily": 5.0,
+          "cost": 352.47,
+          "clicks": 1344,
+          "impressions": 44879,
+          "conversions": 198.96,
+          "ctr": 2.99,
+          "cpa": 1.77
+        },
+        {
+          "name": "flyvet.gdm - vacinação",
+          "type": "DEMAND_GEN",
+          "status": "PAUSED",
+          "budget_daily": 5.0,
+          "cost": 917.48,
+          "clicks": 1752,
+          "impressions": 66043,
+          "conversions": 266.98,
+          "ctr": 2.65,
+          "cpa": 3.44
+        },
+        {
+          "name": "flyvet.search - Serviços",
+          "type": "SEARCH",
+          "status": "PAUSED",
+          "budget_daily": 12.0,
+          "cost": 1426.97,
+          "clicks": 412,
+          "impressions": 7812,
+          "conversions": 83.5,
+          "ctr": 5.27,
+          "cpa": 17.09
+        },
+        {
+          "name": "C01 - CONSULTIVA | SEARCH [21/03/2025] MAX CLIQUES",
+          "type": "SEARCH",
+          "status": "PAUSED",
+          "budget_daily": 30.0,
+          "cost": 1386.77,
+          "clicks": 1006,
+          "impressions": 29349,
+          "conversions": 44.0,
+          "ctr": 3.43,
+          "cpa": 31.52
+        },
+        {
+          "name": "[OFF_ROS] Veterinária em Americana",
+          "type": "SMART",
+          "status": "PAUSED",
+          "budget_daily": 40.0,
+          "cost": 938.1,
+          "clicks": 2542,
+          "impressions": 71439,
+          "conversions": 23.0,
+          "ctr": 3.56,
+          "cpa": 40.79
+        },
+        {
+          "name": "[OFF] C02 - CONSULTIVA | PMAX - CATEGORIZADA",
+          "type": "PERFORMANCE_MAX",
+          "status": "PAUSED",
+          "budget_daily": 5.0,
+          "cost": 371.47,
+          "clicks": 886,
+          "impressions": 18206,
+          "conversions": 59.0,
+          "ctr": 4.87,
+          "cpa": 6.3
+        },
+        {
+          "name": "flyvet.search - Serviços Nova",
+          "type": "SEARCH",
+          "status": "PAUSED",
+          "budget_daily": 10.0,
+          "cost": 107.4,
+          "clicks": 85,
+          "impressions": 1527,
+          "conversions": 1.0,
+          "ctr": 5.57,
+          "cpa": 107.4
+        },
+        {
+          "name": "flyvet.search - Nova Institucional",
+          "type": "SEARCH",
+          "status": "PAUSED",
+          "budget_daily": 5.0,
+          "cost": 172.07,
+          "clicks": 113,
+          "impressions": 1279,
+          "conversions": 5.0,
+          "ctr": 8.84,
+          "cpa": 34.41
+        },
+        {
+          "name": "flyvet.search - felinos",
+          "type": "SEARCH",
+          "status": "PAUSED",
+          "budget_daily": 5.0,
+          "cost": 106.08,
+          "clicks": 42,
+          "impressions": 661,
+          "conversions": 0.0,
+          "ctr": 6.35,
+          "cpa": null
+        },
+        {
+          "name": "flyvet.gdm - Reconhecimento",
+          "type": "DEMAND_GEN",
+          "status": "PAUSED",
+          "budget_daily": 5.0,
+          "cost": 44.36,
+          "clicks": 30,
+          "impressions": 1734,
+          "conversions": 2.02,
+          "ctr": 1.73,
+          "cpa": 21.96
+        },
+        {
+          "name": "flyvet.pmax - Geral",
+          "type": "PERFORMANCE_MAX",
+          "status": "PAUSED",
+          "budget_daily": 5.0,
+          "cost": 79.92,
+          "clicks": 67,
+          "impressions": 2854,
+          "conversions": 1.0,
+          "ctr": 2.35,
+          "cpa": 79.92
+        },
+        {
+          "name": "flyvet.search - Institucional",
+          "type": "SEARCH",
+          "status": "PAUSED",
+          "budget_daily": 5.0,
+          "cost": 92.43,
+          "clicks": 54,
+          "impressions": 1905,
+          "conversions": 4.0,
+          "ctr": 2.83,
+          "cpa": 23.11
+        },
+        {
+          "name": "[OFF] C03 - CONSULTIVA | SEARCH - CATEGORIZADA",
+          "type": "SEARCH",
+          "status": "PAUSED",
+          "budget_daily": 5.0,
+          "cost": 91.28,
+          "clicks": 32,
+          "impressions": 572,
+          "conversions": 0.0,
+          "ctr": 5.59,
+          "cpa": null
+        }
       ]
     },
     "facebook_ads": {
@@ -205,24 +373,144 @@
       "total_impressions": 343910,
       "total_clicks": 2603,
       "total_reach": 270330,
-      "avg_cpm": 10.10,
+      "avg_cpm": 10.1,
       "avg_ctr": 0.76,
       "campaigns": [
-        { "name": "[SC] - [Engajamento_Mensagens] - [13/03]", "objective": "OUTCOME_ENGAGEMENT", "spend": 974.37, "impressions": 95436, "clicks": 1262, "reach": 58923, "cpm": 10.21 },
-        { "name": "[OFF] C01 [04/04/2025] - CONSULTIVA | ENGAJAMENTO - WHATSAPP", "objective": "OUTCOME_ENGAGEMENT", "spend": 747.78, "impressions": 43877, "clicks": 365, "reach": 31116, "cpm": 17.04 },
-        { "name": "Publicação do Instagram: Conheça um pouco mais...", "objective": "MESSAGES", "spend": 547.74, "impressions": 33576, "clicks": 248, "reach": 28397, "cpm": 16.31 },
-        { "name": "Publicação do Instagram: Primeira dose da vacina...", "objective": "MESSAGES", "spend": 250.94, "impressions": 13928, "clicks": 154, "reach": 10724, "cpm": 18.02 },
-        { "name": "Post do Instagram: 💜🐾 Seu pet merece...", "objective": "MESSAGES", "spend": 192.37, "impressions": 12653, "clicks": 85, "reach": 11137, "cpm": 15.20 },
-        { "name": "Publicação do Instagram: 💜🐾 Seu pet merece...", "objective": "MESSAGES", "spend": 146.07, "impressions": 6692, "clicks": 76, "reach": 6261, "cpm": 21.83 },
-        { "name": "Instagram post: 💜🐾 Seu pet merece...", "objective": "MESSAGES", "spend": 139.65, "impressions": 8257, "clicks": 73, "reach": 6159, "cpm": 16.91 },
-        { "name": "[OFF] C03 [14/05/2024] - AQUISIÇÃO | RECONHECIMENTO - IG", "objective": "OUTCOME_AWARENESS", "spend": 121.96, "impressions": 105081, "clicks": 81, "reach": 98549, "cpm": 1.16 },
-        { "name": "Instagram post: Um novo conceito em atendimento...", "objective": "MESSAGES", "spend": 95.22, "impressions": 5726, "clicks": 50, "reach": 4540, "cpm": 16.63 },
-        { "name": "Publicação do Instagram: A Dra. Nathalia Alves é...", "objective": "MESSAGES", "spend": 71.04, "impressions": 4618, "clicks": 20, "reach": 3156, "cpm": 15.38 },
-        { "name": "[OFF] C04 [24/05/2025] - CONSULTIVA | LEADS - NATIVO", "objective": "OUTCOME_LEADS", "spend": 65.92, "impressions": 3985, "clicks": 43, "reach": 3327, "cpm": 16.54 },
-        { "name": "Atendimento a domicílio", "objective": "OUTCOME_ENGAGEMENT", "spend": 49.91, "impressions": 3855, "clicks": 56, "reach": 2979, "cpm": 12.95 },
-        { "name": "[SC] - [CBO] Mensagens [13/04]", "objective": "OUTCOME_ENGAGEMENT", "spend": 35.76, "impressions": 3263, "clicks": 49, "reach": 2436, "cpm": 10.96 },
-        { "name": "Publicação do Instagram: Sem estresse! Evite o...", "objective": "MESSAGES", "spend": 19.98, "impressions": 1304, "clicks": 11, "reach": 1084, "cpm": 15.32 },
-        { "name": "[OFF] C02 [11/04/2025] - AQUISIÇÃO | TRAFEGO - IG", "objective": "LINK_CLICKS", "spend": 13.92, "impressions": 1659, "clicks": 30, "reach": 1542, "cpm": 8.39 }
+        {
+          "name": "[SC] - [Engajamento_Mensagens] - [13/03]",
+          "objective": "OUTCOME_ENGAGEMENT",
+          "spend": 974.37,
+          "impressions": 95436,
+          "clicks": 1262,
+          "reach": 58923,
+          "cpm": 10.21
+        },
+        {
+          "name": "[OFF] C01 [04/04/2025] - CONSULTIVA | ENGAJAMENTO - WHATSAPP",
+          "objective": "OUTCOME_ENGAGEMENT",
+          "spend": 747.78,
+          "impressions": 43877,
+          "clicks": 365,
+          "reach": 31116,
+          "cpm": 17.04
+        },
+        {
+          "name": "Publicação do Instagram: Conheça um pouco mais...",
+          "objective": "MESSAGES",
+          "spend": 547.74,
+          "impressions": 33576,
+          "clicks": 248,
+          "reach": 28397,
+          "cpm": 16.31
+        },
+        {
+          "name": "Publicação do Instagram: Primeira dose da vacina...",
+          "objective": "MESSAGES",
+          "spend": 250.94,
+          "impressions": 13928,
+          "clicks": 154,
+          "reach": 10724,
+          "cpm": 18.02
+        },
+        {
+          "name": "Post do Instagram: 💜🐾 Seu pet merece...",
+          "objective": "MESSAGES",
+          "spend": 192.37,
+          "impressions": 12653,
+          "clicks": 85,
+          "reach": 11137,
+          "cpm": 15.2
+        },
+        {
+          "name": "Publicação do Instagram: 💜🐾 Seu pet merece...",
+          "objective": "MESSAGES",
+          "spend": 146.07,
+          "impressions": 6692,
+          "clicks": 76,
+          "reach": 6261,
+          "cpm": 21.83
+        },
+        {
+          "name": "Instagram post: 💜🐾 Seu pet merece...",
+          "objective": "MESSAGES",
+          "spend": 139.65,
+          "impressions": 8257,
+          "clicks": 73,
+          "reach": 6159,
+          "cpm": 16.91
+        },
+        {
+          "name": "[OFF] C03 [14/05/2024] - AQUISIÇÃO | RECONHECIMENTO - IG",
+          "objective": "OUTCOME_AWARENESS",
+          "spend": 121.96,
+          "impressions": 105081,
+          "clicks": 81,
+          "reach": 98549,
+          "cpm": 1.16
+        },
+        {
+          "name": "Instagram post: Um novo conceito em atendimento...",
+          "objective": "MESSAGES",
+          "spend": 95.22,
+          "impressions": 5726,
+          "clicks": 50,
+          "reach": 4540,
+          "cpm": 16.63
+        },
+        {
+          "name": "Publicação do Instagram: A Dra. Nathalia Alves é...",
+          "objective": "MESSAGES",
+          "spend": 71.04,
+          "impressions": 4618,
+          "clicks": 20,
+          "reach": 3156,
+          "cpm": 15.38
+        },
+        {
+          "name": "[OFF] C04 [24/05/2025] - CONSULTIVA | LEADS - NATIVO",
+          "objective": "OUTCOME_LEADS",
+          "spend": 65.92,
+          "impressions": 3985,
+          "clicks": 43,
+          "reach": 3327,
+          "cpm": 16.54
+        },
+        {
+          "name": "Atendimento a domicílio",
+          "objective": "OUTCOME_ENGAGEMENT",
+          "spend": 49.91,
+          "impressions": 3855,
+          "clicks": 56,
+          "reach": 2979,
+          "cpm": 12.95
+        },
+        {
+          "name": "[SC] - [CBO] Mensagens [13/04]",
+          "objective": "OUTCOME_ENGAGEMENT",
+          "spend": 35.76,
+          "impressions": 3263,
+          "clicks": 49,
+          "reach": 2436,
+          "cpm": 10.96
+        },
+        {
+          "name": "Publicação do Instagram: Sem estresse! Evite o...",
+          "objective": "MESSAGES",
+          "spend": 19.98,
+          "impressions": 1304,
+          "clicks": 11,
+          "reach": 1084,
+          "cpm": 15.32
+        },
+        {
+          "name": "[OFF] C02 [11/04/2025] - AQUISIÇÃO | TRAFEGO - IG",
+          "objective": "LINK_CLICKS",
+          "spend": 13.92,
+          "impressions": 1659,
+          "clicks": 30,
+          "reach": 1542,
+          "cpm": 8.39
+        }
       ]
     }
   },
@@ -236,22 +524,25 @@
         "completed_at": "2026-04-16"
       },
       "ee-s1-swot": {
-        "status": "pending",
-        "checkpoint": 0,
-        "started_at": null,
-        "completed_at": null
+        "status": "completed",
+        "checkpoint": 1,
+        "started_at": "2026-04-18",
+        "completed_at": "2026-04-18",
+        "version": 1
       },
       "ee-s1-persona-icp": {
-        "status": "pending",
+        "status": "completed",
         "checkpoint": 0,
         "started_at": null,
-        "completed_at": null
+        "completed_at": "2026-04-18",
+        "version": 1
       },
       "ee-s1-auditoria-comunicacao": {
-        "status": "pending",
-        "checkpoint": 0,
-        "started_at": null,
-        "completed_at": null
+        "status": "completed",
+        "checkpoint": 1,
+        "started_at": "2026-04-18",
+        "completed_at": "2026-04-18",
+        "version": 1
       },
       "ee-s2-pesquisa-mercado": {
         "status": "pending",
@@ -266,10 +557,11 @@
         "completed_at": null
       },
       "ee-s2-diagnostico-midia": {
-        "status": "pending",
-        "checkpoint": 0,
-        "started_at": null,
-        "completed_at": null
+        "status": "completed",
+        "checkpoint": 1,
+        "started_at": "2026-04-18",
+        "completed_at": "2026-04-18",
+        "version": 1
       },
       "ee-s2-diagnostico-criativos": {
         "status": "pending",
@@ -369,6 +661,30 @@
       "skill": "ee-s1-diagnostico-maturidade",
       "checkpoint": 1,
       "decision": "Score geral 21/100 (Crítico). Digital ativamente destrói valor. 5 prioridades definidas: tracking, Meta Ads, Google Ads, régua de reativação base 1.700 pacientes, LP felinos. Aprovado pelo operador."
+    },
+    {
+      "ts": "2026-04-18T20:00:00Z",
+      "skill": "ee-s1-persona-icp",
+      "action": "completed",
+      "note": "ICP e Persona aprovados. Segmento principal: tutoras de gatos 30-45 anos, classe média-alta, Americana/SBO/Nova Odessa. Mensagem-chave escolhida: opção emocional ('Seu gato merece uma veterinária que entende de felinos — não de bicho em geral.'). ICP secundário criado para tutores de cães com mensagem separada focada em agilidade e transparência."
+    },
+    {
+      "ts": "2026-04-18T21:00:00Z",
+      "skill": "ee-s1-swot",
+      "action": "completed",
+      "note": "SWOT aprovada. 6F + 6W + 6O + 5A. Jogada principal: ocupar território 'especialista em felinos de Americana' antes dos concorrentes, eliminando hemorragias digitais (tracking zero, Meta Ads link quebrado) e construindo ativos proprietários (CRM, conteúdo educativo, GMB). 7 ações prioritárias com Gantt roadmap S1-S5. Ações mais urgentes: tracking + Meta Ads corrigidos na S1."
+    },
+    {
+      "ts": "2026-04-18T22:00:00Z",
+      "skill": "ee-s1-auditoria-comunicacao",
+      "action": "completed",
+      "note": "Auditoria aprovada. Score médio 35/100 (Crítico). 3 hemorragias: Meta Ads 404 (R$800/mês destruídos), zero tracking, mensagem-chave felinos ausente em todos os canais. Instagram é o único ponto positivo (ativo, educativo). 5 Quick Wins definidos para execução imediata: corrigir link Meta, instalar Pixel/GTM, atualizar bio Instagram, post GMB, mensagem ausência WhatsApp."
+    },
+    {
+      "ts": "2026-04-18T23:00:00Z",
+      "skill": "ee-s2-diagnostico-midia",
+      "action": "completed",
+      "note": "Diagnóstico aprovado com dados V4MOS reais. CAC R$266 (alvo: R$120). Meta Ads 100% desperdiçado (links 404 + objetivo errado). Google com 14/15 campanhas pausadas incluindo 3 de CPA R$1,77–R$13. Audiência 56% feminina confirma ICP. Segunda e Sábado são dias de pico. Keywords de domicílio (CTR 14,3%) e felinos (CPA R$1,65) subexploradas. 8 ações priorizadas para 30 dias. Meta 90d: CPL R$44 → R$22, CAC R$266 → R$120."
     }
   ]
 }

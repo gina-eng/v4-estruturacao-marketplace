@@ -196,6 +196,136 @@
         }
       }
     },
+    "anti_persona": {
+      "type": "object",
+      "description": "Perfis que NÃO são cliente ideal. Define quando o time diz 'não'.",
+      "properties": {
+        "description": { "type": "string" },
+        "profiles": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 4,
+          "items": {
+            "type": "object",
+            "description": "Cada perfil tem um identificador (profile_name OU label), uma descrição (description OU who) e uma lista de sinais (signals OU red_flags). O renderer do portal aceita ambos os conjuntos.",
+            "properties": {
+              "profile_name": { "type": "string", "description": "Apelido descritivo (ex: 'Caçador de preço'). Alternativa: 'label'." },
+              "label": { "type": "string", "description": "Alternativa a 'profile_name'." },
+              "description": { "type": "string", "description": "Comportamento típico em 2-3 linhas. Alternativa: 'who'." },
+              "who": { "type": "string", "description": "Alternativa a 'description'." },
+              "why_not": { "type": "string", "description": "Por que não é cliente ideal." },
+              "signals": {
+                "type": "array",
+                "items": { "type": "string" },
+                "description": "Sinais concretos que o time usa para identificar esse perfil (3-6 itens). Alternativa: 'red_flags'."
+              },
+              "red_flags": {
+                "type": "array",
+                "items": { "type": "string" },
+                "description": "Alternativa a 'signals'."
+              },
+              "operational_rule": { "type": "string", "description": "Como o time identifica e o que faz." }
+            }
+          }
+        },
+        "operational_rule": { "type": "string", "description": "Regra-mãe que alinha o time." }
+      }
+    },
+    "buyer_journey": {
+      "type": "object",
+      "description": "Jornada de decisão da persona do gatilho ao pós-compra.",
+      "properties": {
+        "description": { "type": "string" },
+        "stages": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 7,
+          "items": {
+            "type": "object",
+            "required": ["stage", "mental_state", "dominant_question"],
+            "properties": {
+              "stage": { "type": "string" },
+              "trigger": { "type": "string", "description": "O que inicia esse estágio." },
+              "mental_state": { "type": "string", "description": "Estado mental dominante." },
+              "primary_channel": { "type": "string", "description": "Onde a persona busca informação." },
+              "dominant_question": { "type": "string", "description": "A pergunta que ela tenta responder." },
+              "client_intervention": { "type": "string", "description": "Como o cliente intervém nesse estágio." },
+              "friction_today": { "type": "string", "description": "Atrito/problema atual nesse estágio." },
+              "duration_estimate": { "type": "string", "description": "Tempo típico (horas/dias/semanas)." }
+            }
+          }
+        },
+        "critical_leakage_point": {
+          "description": "Estágio onde o cliente mais perde leads hoje. Aceita duas formas: (a) string livre com diagnóstico textual, ou (b) objeto estruturado com stage/evidence/estimated_loss_pct. A string é mais natural quando o vazamento é qualitativo; o objeto quando há número de perda.",
+          "oneOf": [
+            {
+              "type": "string",
+              "description": "Diagnóstico livre do ponto de vazamento (1-3 frases)."
+            },
+            {
+              "type": "object",
+              "properties": {
+                "stage": { "type": "string" },
+                "evidence": { "type": "string" },
+                "estimated_loss_pct": { "type": "number" }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "willingness_to_pay": {
+      "type": "object",
+      "description": "Faixas de preço que a persona aceita por serviço/produto principal.",
+      "properties": {
+        "description": { "type": "string" },
+        "services": {
+          "type": "array",
+          "description": "Cada serviço tem faixa atual, faixa justa percebida e teto premium. Shape preferido: 'current_ticket_range' + 'perceived_fair_range' + 'premium_ceiling' (strings como 'R$180-250' ou 'R$400'). O shape legado (current_price/fair_range/premium_range) ainda é aceito pelo renderer.",
+          "items": {
+            "type": "object",
+            "required": ["service"],
+            "properties": {
+              "service": { "type": "string", "description": "Nome do serviço precificado." },
+              "current_ticket_range": { "type": "string", "description": "PREFERIDO. Faixa de ticket atual praticada (ex: 'R$180-250')." },
+              "perceived_fair_range": { "type": "string", "description": "PREFERIDO. Faixa que a persona percebe como justa (ex: 'R$180-300')." },
+              "premium_ceiling": { "type": "string", "description": "PREFERIDO. Teto premium que a persona aceita pagar com justificativa (ex: 'R$400 com exame incluso')." },
+              "current_price": { "type": ["number", "string"], "description": "LEGADO. Alternativa a current_ticket_range." },
+              "fair_range": { "type": "string", "description": "LEGADO. Alternativa a perceived_fair_range." },
+              "premium_range": { "type": "string", "description": "LEGADO. Alternativa a premium_ceiling." },
+              "elasticity": {
+                "type": "string",
+                "description": "Elasticidade de preço. Pode ser palavra única (alta/média/baixa) ou frase com nuance separada por '—' ou ':' (ex: 'baixa — aceita pagar mais se entender o porquê'). O portal usa a primeira palavra como tag e o restante como nota explicativa."
+              },
+              "pricing_lever": { "type": "string", "description": "O que justifica cobrar mais (especialização, garantia, bundle, experiência)." }
+            }
+          }
+        }
+      }
+    },
+    "objection_library": {
+      "type": "object",
+      "description": "Catálogo de objeções reais da persona com respostas testadas.",
+      "properties": {
+        "description": { "type": "string" },
+        "objections": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 8,
+          "items": {
+            "type": "object",
+            "required": ["objection", "subtext", "good_response"],
+            "properties": {
+              "objection": { "type": "string", "description": "Como ela diz, na linguagem do cliente." },
+              "subtext": { "type": "string", "description": "O que ela realmente está dizendo." },
+              "bad_response": { "type": "string", "description": "Resposta automática que NÃO funciona." },
+              "good_response": { "type": "string", "description": "Resposta que funciona." },
+              "when_to_use": { "type": "string", "description": "Canal/momento de uso." }
+            }
+          }
+        }
+      }
+    },
     "key_message": {
       "type": "object",
       "required": ["chosen_message", "approach", "alternatives"],

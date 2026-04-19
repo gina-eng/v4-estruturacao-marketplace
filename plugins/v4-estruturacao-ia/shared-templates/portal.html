@@ -206,7 +206,10 @@
     .cd__body { font-size: 0.875rem; color: var(--text-secondary); line-height: 1.5; }
     .cd__meta { font-size: 0.75rem; color: var(--text-muted); margin-top: 0.375rem; }
 
-    .gr { display: grid; gap: 0.75rem; }
+    .gr { display: grid; gap: 0.75rem; grid-auto-rows: 1fr; align-items: stretch; }
+    .gr > * { min-width: 0; }
+    .gr > .cd, .gr > .mt { height: 100%; margin-bottom: 0; box-sizing: border-box; overflow: hidden; }
+    .cd .tg { white-space: normal; word-break: break-word; max-width: 100%; }
     .gr--2 { grid-template-columns: 1fr; }
     .gr--3 { grid-template-columns: 1fr; }
     .gr--4 { grid-template-columns: repeat(2,1fr); }
@@ -278,8 +281,10 @@
     .cl__icon--pending { color: var(--text-muted); }
     .cl__icon--blocked { color: var(--danger); }
 
-    .sc { margin-bottom: 1.5rem; }
+    .sc { margin-bottom: 1.5rem; width: 100%; box-sizing: border-box; }
     .sc:last-child { margin-bottom: 0; }
+    .sum, .persona { width: 100%; box-sizing: border-box; }
+    .chart-wrap { width: 100%; box-sizing: border-box; }
     h3 { font-size: 0.9375rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.75rem; letter-spacing: -0.01em; }
     h4 { font-size: 0.875rem; font-weight: 600; color: var(--text-secondary); margin-bottom: 0.5rem; }
     p { margin-bottom: 0.75rem; color: var(--text-secondary); font-size: 0.9375rem; }
@@ -291,9 +296,9 @@
     .pillar__name { font-size: 0.875rem; font-weight: 600; color: var(--text-primary); }
     .pillar__score { font-size: 0.875rem; font-weight: 700; }
 
-    .swot { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 1.5rem; }
+    .swot { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 1.5rem; align-items: start; }
     @media (max-width: 639px) { .swot { grid-template-columns: 1fr; } }
-    .swot__quad { border-radius: var(--radius); padding: 1rem; }
+    .swot__quad { border-radius: var(--radius); padding: 1rem; min-width: 0; overflow: hidden; }
     .swot__quad--s { background: rgba(22,163,74,0.05); border: 1px solid rgba(22,163,74,0.15); }
     .swot__quad--w { background: rgba(220,38,38,0.05); border: 1px solid rgba(220,38,38,0.15); }
     .swot__quad--o { background: rgba(59,130,246,0.05); border: 1px solid rgba(59,130,246,0.15); }
@@ -303,9 +308,10 @@
     .swot__quad--w .swot__title { color: var(--danger); }
     .swot__quad--o .swot__title { color: #3b82f6; }
     .swot__quad--t .swot__title { color: var(--warning); }
-    .swot__item { margin-bottom: 0.625rem; }
-    .swot__item-title { font-size: 0.8125rem; font-weight: 600; color: var(--text-primary); }
-    .swot__item-desc { font-size: 0.8125rem; color: var(--text-secondary); }
+    .swot__item { margin-bottom: 0.75rem; padding-bottom: 0.625rem; border-bottom: 1px dashed rgba(0,0,0,0.08); }
+    .swot__item:last-child { border-bottom: 0; margin-bottom: 0; padding-bottom: 0; }
+    .swot__item-title { font-size: 0.8125rem; font-weight: 600; color: var(--text-primary); line-height: 1.35; margin-bottom: 0.25rem; overflow-wrap: break-word; word-wrap: break-word; }
+    .swot__item-desc { font-size: 0.75rem; color: var(--text-secondary); line-height: 1.45; overflow-wrap: break-word; word-wrap: break-word; }
 
     .persona {
       background: var(--brand-primary);
@@ -730,6 +736,351 @@ function checklist(items, statusKey) {
 
 function sc(title, html) { return '<div class="sc"><h3>'+E(title)+'</h3>'+html+'</div>'; }
 
+function renderGantt(actions) {
+  if (!actions || !actions.length) return '';
+  const maxWeek = Math.max(...actions.map(a => a.week_end || a.week_start || 1), 5);
+  const LW = 33;
+  const BW = ((100 - LW) / maxWeek).toFixed(2);
+  const cols = LW + '% ' + Array(maxWeek).fill(BW + '%').join(' ');
+  const IC = {alto:'var(--danger)',alto2:'var(--danger)','médio':'var(--warning)',medio:'var(--warning)',baixo:'#94a3b8'};
+  const getColor = imp => IC[(imp||'baixo').toLowerCase().replace(/\u00e9/g,'e')] || '#94a3b8';
+
+  let h = '<div style="margin-top:.25rem">';
+  // Header row
+  h += '<div style="display:grid;grid-template-columns:'+cols+';gap:2px;margin-bottom:.375rem">';
+  h += '<div></div>';
+  for (let w = 1; w <= maxWeek; w++) h += '<div style="font-size:.625rem;font-weight:700;text-align:center;color:var(--text-muted);text-transform:uppercase;letter-spacing:.05em">S'+w+'</div>';
+  h += '</div>';
+
+  // Group by track
+  const tracks = [];
+  actions.forEach(a => { const t = a.track || 'Geral'; if (!tracks.includes(t)) tracks.push(t); });
+
+  tracks.forEach(track => {
+    h += '<div style="font-size:.5625rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--text-muted);padding:.5rem 0 .25rem;border-top:1px solid var(--border)">'+E(track)+'</div>';
+    actions.filter(a => (a.track || 'Geral') === track).forEach(a => {
+      const s = Math.max(1, a.week_start || 1);
+      const e = Math.min(maxWeek, a.week_end || s);
+      const color = getColor(a.impact);
+      h += '<div style="display:grid;grid-template-columns:'+cols+';gap:2px;margin-bottom:3px;align-items:center">';
+      h += '<div style="font-size:.7rem;color:var(--text-secondary);overflow:hidden;white-space:nowrap;text-overflow:ellipsis;padding-right:.375rem" title="'+E(a.action)+'">'+E(a.action)+'</div>';
+      for (let w = 1; w <= maxWeek; w++) {
+        if (w >= s && w <= e) {
+          const br = (s===e) ? '3px' : (w===s) ? '3px 0 0 3px' : (w===e) ? '0 3px 3px 0' : '0';
+          h += '<div style="height:20px;background:'+color+';border-radius:'+br+';opacity:.82" title="'+E(a.action)+' (S'+s+'–S'+e+')"></div>';
+        } else {
+          h += '<div style="height:20px;background:var(--surface);border-radius:3px"></div>';
+        }
+      }
+      h += '</div>';
+    });
+  });
+
+  // Legend
+  h += '<div style="display:flex;gap:.75rem;align-items:center;margin-top:.625rem;padding-top:.5rem;border-top:1px solid var(--border)">';
+  h += '<span style="font-size:.6875rem;color:var(--text-muted)">Impacto:</span>';
+  [['Alto','var(--danger)'],['Médio','var(--warning)'],['Baixo','#94a3b8']].forEach(function(pair) {
+    h += '<div style="display:flex;align-items:center;gap:.25rem"><div style="width:10px;height:10px;background:'+pair[1]+';border-radius:2px;opacity:.82"></div><span style="font-size:.6875rem;color:var(--text-secondary)">'+pair[0]+'</span></div>';
+  });
+  h += '</div>';
+
+  h += '</div>';
+  return h;
+}
+
+// ===== SVG CHART LIBRARY =====
+// Paleta semântica consistente
+const CX = {
+  red:'#dc2626', danger:'#b91c1c', orange:'#f97316', yellow:'#eab308',
+  green:'#16a34a', emerald:'#059669', blue:'#2563eb', purple:'#7c3aed',
+  gray:'#94a3b8', muted:'#64748b', line:'#e2e8f0', bg:'#f8fafc', text:'#0f172a'
+};
+const chartColor = (tone) => CX[tone] || CX.gray;
+
+// insight(): wraps a chart with an auto-insight bullet (leitura estratégica do gráfico)
+function insight(chartHtml, insightText, tone) {
+  const borderColor = tone==='bad' ? CX.red : tone==='good' ? CX.green : tone==='warn' ? CX.yellow : CX.blue;
+  return '<div class="chart-wrap" style="margin-bottom:.75rem">'
+    +'<div style="padding:.25rem 0 .5rem">'+chartHtml+'</div>'
+    +(insightText ? '<div style="margin-top:.25rem;padding:.5rem .75rem;border-left:3px solid '+borderColor+';background:var(--surface);border-radius:3px;font-size:.75rem;color:var(--text-secondary);line-height:1.45"><strong style="color:'+borderColor+';font-size:.6875rem;text-transform:uppercase;letter-spacing:.08em;display:block;margin-bottom:.15rem">Leitura</strong>'+E(insightText)+'</div>' : '')
+    +'</div>';
+}
+
+// chartTitle: subtítulo de gráfico
+function chartTitle(t) {
+  return '<div style="font-size:.6875rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--text-muted);margin-bottom:.375rem">'+E(t)+'</div>';
+}
+
+// BAR HORIZONTAL: comparar valores lado a lado
+// items: [{label, value, tone, subtext}]
+function chartHBar(items, opts) {
+  opts = opts || {};
+  if (!items?.length) return '';
+  const max = opts.max || Math.max(...items.map(i=>i.value||0));
+  if (!max) return '';
+  const fmt = opts.fmt || (v=>v);
+  const lw = opts.labelWidth || 120;
+  return (opts.title?chartTitle(opts.title):'')
+    +'<div style="display:flex;flex-direction:column;gap:.375rem">'+items.map(it=>{
+      const pct = ((it.value||0)/max*100).toFixed(1);
+      const col = chartColor(it.tone||'blue');
+      return '<div style="display:grid;grid-template-columns:'+lw+'px 1fr 70px;gap:.5rem;align-items:center">'
+        +'<div style="font-size:.75rem;color:var(--text-secondary);overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="'+E(it.label)+'">'+E(it.label)+'</div>'
+        +'<div style="height:18px;background:var(--surface);border-radius:3px;overflow:hidden;position:relative">'
+        +'<div style="height:100%;width:'+pct+'%;background:'+col+';border-radius:3px;opacity:.85"></div>'
+        +(it.subtext?'<div style="position:absolute;top:50%;transform:translateY(-50%);left:8px;font-size:.6875rem;color:white;font-weight:600;text-shadow:0 1px 2px rgba(0,0,0,.4)">'+E(it.subtext)+'</div>':'')
+        +'</div>'
+        +'<div style="font-size:.75rem;font-weight:700;color:'+col+';text-align:right">'+E(String(fmt(it.value)))+'</div>'
+        +'</div>';
+    }).join('')+'</div>';
+}
+
+// DONUT: distribuição percentual
+// slices: [{label, value, tone}]
+function chartDonut(slices, opts) {
+  opts = opts || {};
+  if (!slices?.length) return '';
+  const total = slices.reduce((s,x)=>s+(x.value||0),0);
+  if (!total) return '';
+  const size = opts.size || 160;
+  const cx = size/2, cy = size/2, r = size*0.4, ir = size*0.26;
+  let angle = -Math.PI/2;
+  const paths = slices.map(s=>{
+    const frac = (s.value||0)/total;
+    const a2 = angle + frac*Math.PI*2;
+    const large = frac > 0.5 ? 1 : 0;
+    const x1 = cx+r*Math.cos(angle), y1 = cy+r*Math.sin(angle);
+    const x2 = cx+r*Math.cos(a2),   y2 = cy+r*Math.sin(a2);
+    const x3 = cx+ir*Math.cos(a2),  y3 = cy+ir*Math.sin(a2);
+    const x4 = cx+ir*Math.cos(angle), y4 = cy+ir*Math.sin(angle);
+    const d = 'M '+x1+' '+y1+' A '+r+' '+r+' 0 '+large+' 1 '+x2+' '+y2+' L '+x3+' '+y3+' A '+ir+' '+ir+' 0 '+large+' 0 '+x4+' '+y4+' Z';
+    angle = a2;
+    return '<path d="'+d+'" fill="'+chartColor(s.tone||'blue')+'" opacity=".85"><title>'+E(s.label)+': '+(frac*100).toFixed(1)+'%</title></path>';
+  }).join('');
+  const legend = slices.map(s=>{
+    const pct = ((s.value||0)/total*100).toFixed(1);
+    return '<div style="display:flex;align-items:center;gap:.375rem;font-size:.75rem;margin-bottom:.2rem">'
+      +'<div style="width:10px;height:10px;background:'+chartColor(s.tone||'blue')+';border-radius:2px;flex-shrink:0"></div>'
+      +'<div style="flex:1;color:var(--text-secondary)">'+E(s.label)+'</div>'
+      +'<div style="font-weight:700;color:var(--text-primary)">'+pct+'%</div>'
+      +'</div>';
+  }).join('');
+  const centerLabel = opts.center || '';
+  return (opts.title?chartTitle(opts.title):'')
+    +'<div style="display:grid;grid-template-columns:'+size+'px 1fr;gap:1rem;align-items:center">'
+    +'<svg viewBox="0 0 '+size+' '+size+'" width="'+size+'" height="'+size+'">'+paths
+    +(centerLabel?'<text x="'+cx+'" y="'+(cy-4)+'" text-anchor="middle" font-size="14" font-weight="700" fill="'+CX.text+'">'+E(centerLabel.split('|')[0])+'</text>'
+      +'<text x="'+cx+'" y="'+(cy+12)+'" text-anchor="middle" font-size="9" fill="'+CX.muted+'" text-transform="uppercase">'+E(centerLabel.split('|')[1]||'')+'</text>':'')
+    +'</svg>'
+    +'<div>'+legend+'</div>'
+    +'</div>';
+}
+
+// GAUGE: métrica vs benchmark (semicírculo)
+// value: atual, benchmark: meta/média, max: teto da escala
+function chartGauge(value, benchmark, max, opts) {
+  opts = opts || {};
+  if (value == null || max == null) return '';
+  const w = opts.size || 220, h = w*0.72;
+  const cx = w/2, cy = h*0.78, r = w*0.40;
+  const pct = Math.min(1, Math.max(0, value/max));
+  const benchPct = benchmark!=null ? Math.min(1, Math.max(0, benchmark/max)) : null;
+  const angleStart = Math.PI, angleEnd = 0;
+  const valAngle = angleStart + (angleEnd-angleStart)*pct;
+  // Inverted logic: for CPL/CPA lower is better
+  const invert = opts.invert;
+  const isGood = invert ? (benchmark!=null && value <= benchmark) : (benchmark!=null && value >= benchmark);
+  const tone = isGood ? 'green' : (benchmark!=null ? 'red' : 'blue');
+  const col = chartColor(tone);
+
+  const arcPath = (a1, a2, rad) => {
+    const x1 = cx+rad*Math.cos(a1), y1 = cy+rad*Math.sin(a1);
+    const x2 = cx+rad*Math.cos(a2), y2 = cy+rad*Math.sin(a2);
+    const large = Math.abs(a2-a1) > Math.PI ? 1 : 0;
+    const sweep = a2 > a1 ? 1 : 0;
+    return 'M '+x1+' '+y1+' A '+rad+' '+rad+' 0 '+large+' '+sweep+' '+x2+' '+y2;
+  };
+  const bench = benchPct != null ? angleStart + (angleEnd-angleStart)*benchPct : null;
+  const benchX = bench != null ? cx+r*Math.cos(bench) : null;
+  const benchY = bench != null ? cy+r*Math.sin(bench) : null;
+  const benchXi = bench != null ? cx+(r-10)*Math.cos(bench) : null;
+  const benchYi = bench != null ? cy+(r-10)*Math.sin(bench) : null;
+
+  const fmt = opts.fmt || (v=>v);
+  return (opts.title?chartTitle(opts.title):'')
+    +'<svg viewBox="0 0 '+w+' '+h+'" width="100%" height="'+h+'" style="max-width:'+w+'px">'
+    +'<path d="'+arcPath(angleStart, angleEnd, r)+'" fill="none" stroke="'+CX.line+'" stroke-width="10" stroke-linecap="round"/>'
+    +'<path d="'+arcPath(angleStart, valAngle, r)+'" fill="none" stroke="'+col+'" stroke-width="10" stroke-linecap="round" opacity=".9"/>'
+    +(bench != null ? '<line x1="'+benchXi+'" y1="'+benchYi+'" x2="'+benchX+'" y2="'+benchY+'" stroke="'+CX.text+'" stroke-width="2"/><circle cx="'+benchX+'" cy="'+benchY+'" r="4" fill="'+CX.text+'"/>' : '')
+    +'<text x="'+cx+'" y="'+(cy-28)+'" text-anchor="middle" font-size="9" fill="'+CX.muted+'" text-transform="uppercase" letter-spacing=".05em">'+E(opts.metricLabel||'Atual')+'</text>'
+    +'<text x="'+cx+'" y="'+(cy-8)+'" text-anchor="middle" font-size="22" font-weight="800" fill="'+col+'">'+E(String(fmt(value)))+'</text>'
+    +'<text x="'+(cx-r+4)+'" y="'+(cy+12)+'" text-anchor="start" font-size="8" fill="'+CX.muted+'">0</text>'
+    +'<text x="'+(cx+r-4)+'" y="'+(cy+12)+'" text-anchor="end" font-size="8" fill="'+CX.muted+'">'+E(String(fmt(max)))+'</text>'
+    +(benchmark != null ? '<text x="'+cx+'" y="'+(cy+28)+'" text-anchor="middle" font-size="10" fill="'+CX.muted+'">Benchmark setor: '+E(String(fmt(benchmark)))+'</text>':'')
+    +'</svg>';
+}
+
+// FUNNEL: estágios com conversão entre níveis
+// stages: [{label, value, tone, subtext}]
+function chartFunnel(stages) {
+  if (!stages?.length) return '';
+  const max = stages[0].value || Math.max(...stages.map(s=>s.value||0));
+  if (!max) return '';
+  return '<div style="display:flex;flex-direction:column;gap:.25rem">'+stages.map((s,i)=>{
+    const pct = ((s.value||0)/max*100);
+    const col = chartColor(s.tone||'blue');
+    const prev = i>0 ? stages[i-1].value : null;
+    const drop = prev && prev > 0 ? (((prev - (s.value||0))/prev)*100).toFixed(0) : null;
+    return (drop!==null ? '<div style="text-align:center;font-size:.625rem;color:'+CX.red+';margin:-.1rem 0;font-weight:700">↓ vaza '+drop+'%</div>' : '')
+      +'<div style="display:grid;grid-template-columns:140px 1fr 80px;gap:.5rem;align-items:center">'
+      +'<div style="font-size:.75rem;font-weight:600;color:var(--text-primary)" title="'+E(s.label)+'">'+E(s.label)+'</div>'
+      +'<div style="height:28px;background:var(--surface);border-radius:3px;overflow:hidden;position:relative">'
+      +'<div style="height:100%;width:'+pct.toFixed(1)+'%;background:'+col+';border-radius:3px;opacity:.85;min-width:20px"></div>'
+      +'<div style="position:absolute;inset:0;display:flex;align-items:center;padding:0 .5rem;font-size:.6875rem;color:'+(pct>40?'white':'var(--text-primary)')+';font-weight:700;text-shadow:'+(pct>40?'0 1px 2px rgba(0,0,0,.4)':'none')+'">'+E(s.subtext||'')+'</div>'
+      +'</div>'
+      +'<div style="font-size:.8125rem;font-weight:700;text-align:right;color:'+col+'">'+(typeof s.value==='number'?N(s.value):E(String(s.value||'—')))+'</div>'
+      +'</div>';
+  }).join('')+'</div>';
+}
+
+// RADAR: comparar scores multi-dimensionais (ex: pilares, competitor)
+// axes: [{name, value, benchmark}]
+function chartRadar(axes, opts) {
+  opts = opts || {};
+  if (!axes?.length || axes.length < 3) return '';
+  const size = opts.size || 260;
+  const cx = size/2, cy = size/2, maxR = size*0.37;
+  const max = opts.max || 100;
+  const n = axes.length;
+  const pt = (i, val) => {
+    const a = -Math.PI/2 + (i/n)*Math.PI*2;
+    const rad = maxR * (val/max);
+    return (cx+rad*Math.cos(a))+','+(cy+rad*Math.sin(a));
+  };
+  const axisLine = axes.map((_,i)=>{
+    const a = -Math.PI/2 + (i/n)*Math.PI*2;
+    return '<line x1="'+cx+'" y1="'+cy+'" x2="'+(cx+maxR*Math.cos(a))+'" y2="'+(cy+maxR*Math.sin(a))+'" stroke="'+CX.line+'" stroke-width="1"/>';
+  }).join('');
+  const rings = [0.25,0.5,0.75,1].map(f=>{
+    const pts = axes.map((_,i)=>{
+      const a = -Math.PI/2 + (i/n)*Math.PI*2;
+      return (cx+maxR*f*Math.cos(a))+','+(cy+maxR*f*Math.sin(a));
+    }).join(' ');
+    return '<polygon points="'+pts+'" fill="none" stroke="'+CX.line+'" stroke-width="1" opacity=".6"/>';
+  }).join('');
+  const valPoly = '<polygon points="'+axes.map((a,i)=>pt(i,a.value||0)).join(' ')+'" fill="'+chartColor(opts.tone||'blue')+'" fill-opacity=".28" stroke="'+chartColor(opts.tone||'blue')+'" stroke-width="2"/>';
+  const benchPoly = axes[0].benchmark!=null ? '<polygon points="'+axes.map((a,i)=>pt(i,a.benchmark||0)).join(' ')+'" fill="none" stroke="'+CX.muted+'" stroke-width="1.5" stroke-dasharray="4 3"/>':'';
+  const labels = axes.map((a,i)=>{
+    const ang = -Math.PI/2 + (i/n)*Math.PI*2;
+    const lr = maxR + 18;
+    const lx = cx+lr*Math.cos(ang), ly = cy+lr*Math.sin(ang);
+    const anchor = Math.cos(ang) > 0.3 ? 'start' : Math.cos(ang) < -0.3 ? 'end' : 'middle';
+    return '<text x="'+lx+'" y="'+(ly+3)+'" font-size="10" font-weight="600" fill="'+CX.text+'" text-anchor="'+anchor+'">'+E(a.name)+'</text>'
+      +'<text x="'+lx+'" y="'+(ly+14)+'" font-size="9" fill="'+chartColor(opts.tone||'blue')+'" font-weight="700" text-anchor="'+anchor+'">'+(a.value||0)+(a.benchmark!=null?'/'+a.benchmark:'')+'</text>';
+  }).join('');
+  return (opts.title?chartTitle(opts.title):'')
+    +'<svg viewBox="0 0 '+size+' '+size+'" width="100%" height="'+size+'" style="max-width:'+size+'px;display:block;margin:0 auto">'
+    +rings+axisLine+benchPoly+valPoly+labels
+    +'</svg>'
+    +(axes[0].benchmark!=null?'<div style="display:flex;gap:.75rem;justify-content:center;margin-top:.25rem;font-size:.6875rem;color:var(--text-muted)"><span><span style="display:inline-block;width:10px;height:10px;background:'+chartColor(opts.tone||'blue')+';opacity:.5;margin-right:.25rem;vertical-align:middle"></span>Atual</span><span><span style="display:inline-block;width:10px;height:2px;background:'+CX.muted+';margin-right:.25rem;vertical-align:middle"></span>Benchmark</span></div>':'');
+}
+
+// WATERFALL: cenários com entradas e saídas progressivas
+// items: [{label, value, tone}] — o valor pode ser positivo ou negativo
+function chartWaterfall(items, opts) {
+  opts = opts || {};
+  if (!items?.length) return '';
+  const w = opts.width || 480, h = opts.height || 180;
+  const lab = 20, right = 20, top = 20, bottom = 30;
+  const cw = (w-lab-right)/items.length;
+  let running = 0;
+  const running_ = items.map(it=>{ const from = running; running += (it.value||0); return {from, to: running}; });
+  const allVals = running_.flatMap(r=>[r.from,r.to]);
+  const maxV = Math.max(...allVals, 0), minV = Math.min(...allVals, 0);
+  const yScale = v => top + (h-top-bottom) * (1 - (v-minV)/Math.max(1,maxV-minV));
+  const bars = items.map((it,i)=>{
+    const r = running_[i];
+    const col = chartColor(it.tone || (it.value>=0?'green':'red'));
+    const y0 = yScale(r.from), y1 = yScale(r.to);
+    const yTop = Math.min(y0,y1), hh = Math.max(2, Math.abs(y1-y0));
+    const x = lab + i*cw + cw*0.15;
+    const bw = cw*0.7;
+    return '<rect x="'+x+'" y="'+yTop+'" width="'+bw+'" height="'+hh+'" fill="'+col+'" opacity=".85"/>'
+      +'<text x="'+(x+bw/2)+'" y="'+(yTop-4)+'" text-anchor="middle" font-size="10" font-weight="700" fill="'+CX.text+'">'+(it.value>=0?'+':'')+(opts.fmt?opts.fmt(it.value):it.value)+'</text>'
+      +'<text x="'+(x+bw/2)+'" y="'+(h-bottom+14)+'" text-anchor="middle" font-size="9" fill="'+CX.muted+'">'+E(it.label)+'</text>';
+  }).join('');
+  const baseline = '<line x1="'+lab+'" y1="'+yScale(0)+'" x2="'+(w-right)+'" y2="'+yScale(0)+'" stroke="'+CX.line+'" stroke-width="1"/>';
+  return (opts.title?chartTitle(opts.title):'')
+    +'<svg viewBox="0 0 '+w+' '+h+'" width="100%" height="'+h+'" preserveAspectRatio="xMidYMid meet">'
+    +baseline+bars
+    +'</svg>';
+}
+
+// GROUPED BARS: 2-3 series side by side (ex: cenários A/B/C em 3 métricas)
+// series: [{name, tone, values:[v1,v2,...]}], categories: [label1, ...]
+function chartGroupedBars(categories, series, opts) {
+  opts = opts || {};
+  if (!categories?.length || !series?.length) return '';
+  const w = opts.width || 520, h = opts.height || 200;
+  const pad = {l:40,r:20,t:30,b:40};
+  const cw = (w-pad.l-pad.r)/categories.length;
+  const bw = (cw*0.7)/series.length;
+  const all = series.flatMap(s=>s.values);
+  const max = Math.max(...all, 0);
+  const yScale = v => pad.t + (h-pad.t-pad.b) * (1 - v/Math.max(1,max));
+  const groups = categories.map((cat,i)=>{
+    const gx = pad.l + i*cw + cw*0.15;
+    return series.map((s,si)=>{
+      const x = gx + si*bw;
+      const val = s.values[i]||0;
+      const y = yScale(val);
+      const barH = (h-pad.b) - y;
+      const col = chartColor(s.tone||'blue');
+      return '<rect x="'+x+'" y="'+y+'" width="'+(bw-2)+'" height="'+Math.max(0,barH)+'" fill="'+col+'" opacity=".85"/>'
+        +'<text x="'+(x+bw/2)+'" y="'+(y-3)+'" text-anchor="middle" font-size="9" font-weight="700" fill="'+CX.text+'">'+(opts.fmt?opts.fmt(val):val)+'</text>';
+    }).join('')
+    +'<text x="'+(gx+cw*0.35)+'" y="'+(h-pad.b+14)+'" text-anchor="middle" font-size="10" font-weight="600" fill="'+CX.text+'">'+E(cat)+'</text>';
+  }).join('');
+  const legend = '<div style="display:flex;gap:.75rem;justify-content:center;margin-top:.25rem;font-size:.6875rem">'
+    +series.map(s=>'<span><span style="display:inline-block;width:10px;height:10px;background:'+chartColor(s.tone||'blue')+';opacity:.85;margin-right:.25rem;vertical-align:middle"></span>'+E(s.name)+'</span>').join('')
+    +'</div>';
+  const yAxis = opts.yLabel ? '<text x="8" y="'+(pad.t+(h-pad.t-pad.b)/2)+'" transform="rotate(-90 8 '+(pad.t+(h-pad.t-pad.b)/2)+')" text-anchor="middle" font-size="9" font-weight="600" fill="'+CX.muted+'" text-transform="uppercase" letter-spacing=".05em">'+E(opts.yLabel)+'</text>' : '';
+  const xAxis = opts.xLabel ? '<text x="'+(pad.l+(w-pad.l-pad.r)/2)+'" y="'+(h-4)+'" text-anchor="middle" font-size="9" font-weight="600" fill="'+CX.muted+'" text-transform="uppercase" letter-spacing=".05em">'+E(opts.xLabel)+'</text>' : '';
+  return (opts.title?chartTitle(opts.title):'')
+    +'<svg viewBox="0 0 '+w+' '+h+'" width="100%" height="'+h+'" preserveAspectRatio="xMidYMid meet">'
+    +'<line x1="'+pad.l+'" y1="'+(h-pad.b)+'" x2="'+(w-pad.r)+'" y2="'+(h-pad.b)+'" stroke="'+CX.line+'" stroke-width="1"/>'
+    +'<line x1="'+pad.l+'" y1="'+pad.t+'" x2="'+pad.l+'" y2="'+(h-pad.b)+'" stroke="'+CX.line+'" stroke-width="1"/>'
+    +yAxis+xAxis
+    +groups
+    +'</svg>'+legend;
+}
+
+// SPARKLINE: linha temporal compacta
+function chartSparkline(values, opts) {
+  opts = opts || {};
+  if (!values?.length) return '';
+  const w = opts.width||200, h = opts.height||40;
+  const max = Math.max(...values), min = Math.min(...values);
+  const span = max-min || 1;
+  const step = (w-4)/(values.length-1||1);
+  const pts = values.map((v,i)=>(2+i*step)+','+(h-2-((v-min)/span)*(h-4))).join(' ');
+  const col = chartColor(opts.tone||'blue');
+  const last = values[values.length-1], first = values[0];
+  const trendCol = last>=first ? (opts.invert?CX.red:CX.green) : (opts.invert?CX.green:CX.red);
+  return '<svg viewBox="0 0 '+w+' '+h+'" width="'+w+'" height="'+h+'">'
+    +'<polyline points="'+pts+'" fill="none" stroke="'+col+'" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>'
+    +'<circle cx="'+(2+(values.length-1)*step)+'" cy="'+(h-2-((last-min)/span)*(h-4))+'" r="3" fill="'+trendCol+'"/>'
+    +'</svg>';
+}
+
+// heatCell: célula colorida pra scores 0-100
+function heatCell(val, opts) {
+  opts = opts || {};
+  if (val == null) return '<span style="color:var(--text-muted)">—</span>';
+  const t = val>=70?'green':val>=50?'yellow':val>=30?'orange':'red';
+  return '<span style="display:inline-block;min-width:40px;padding:.1rem .4rem;background:'+chartColor(t)+';color:white;font-size:.75rem;font-weight:700;border-radius:3px;text-align:center">'+N(val)+(opts.suffix||'')+'</span>';
+}
+
 // ===== RENDERERS (keyed by skill ID) =====
 const R = {
 
@@ -748,6 +1099,21 @@ const R = {
   if (d.pillar_scores?.length) {
     const names = {midia_paga:'Mídia Paga',criativos:'Criativos',cro:'CRO',crm:'CRM',seo:'SEO'};
     const scColor = c => (c==='critical'||c==='low') ? 'var(--danger)' : 'var(--text-primary)';
+
+    // RADAR de pilares vs benchmark
+    const bmMap = {};
+    (bm?.pillar_comparison||[]).forEach(p=>{ bmMap[p.pillar] = p.sector_average; });
+    const radarAxes = d.pillar_scores.map(p=>({name: names[p.pillar]||p.pillar, value: p.score, benchmark: bmMap[p.pillar]}));
+    const weakest = [...d.pillar_scores].sort((a,b)=>a.score-b.score)[0];
+    const strongest = [...d.pillar_scores].sort((a,b)=>b.score-a.score)[0];
+    const radarInsight = weakest && strongest
+      ? 'Pilar mais fraco: '+(names[weakest.pillar]||weakest.pillar)+' ('+weakest.score+'/100). Mais forte: '+(names[strongest.pillar]||strongest.pillar)+' ('+strongest.score+'/100). '
+        +'Gap de '+(strongest.score-weakest.score)+' pontos concentra o maior espaço para ganho rápido.'
+      : '';
+    h += sc('Visão Geral — Pilares vs Setor',
+      insight(chartRadar(radarAxes,{title:'Radar de Maturidade Digital', tone: d.overall_score>=60?'green':d.overall_score>=40?'yellow':'red'}),
+        radarInsight, weakest?.score<40?'bad':weakest?.score<60?'warn':'good'));
+
     h += sc('Scores por Pilar', d.pillar_scores.map(p => {
       let pi = '<div class="pillar"><div class="pillar__row"><span class="pillar__name">'+E(names[p.pillar]||p.pillar)+'</span>'
         +'<span class="pillar__score" style="color:'+scColor(p.classification)+'">'
@@ -807,14 +1173,81 @@ const R = {
       +(d.strategic_synthesis.protection?cd('Proteção — Fraquezas × Ameaças',E(d.strategic_synthesis.protection),'danger'):'')
       +(d.strategic_synthesis.recommended_strategy?co(d.strategic_synthesis.recommended_strategy):''));
   }
+  // TOWS Matrix
+  if (d.tows_matrix) {
+    const tm = d.tows_matrix;
+    const cellsSpec = [
+      ['so_strategies','Ofensivas — Forças × Oportunidades','green'],
+      ['wo_strategies','Reforço — Fraquezas × Oportunidades','yellow'],
+      ['st_strategies','Defensivas — Forças × Ameaças','red'],
+      ['wt_strategies','Sobrevivência — Fraquezas × Ameaças','danger'],
+    ];
+    const towsHtml = cellsSpec.map(spec => {
+      const items = tm[spec[0]] || [];
+      if (!items.length) return '';
+      return cd(spec[1],
+        items.map(s =>
+          '<div style="margin-bottom:.5rem">'
+          +'<div style="font-size:.75rem;font-weight:700;color:var(--accent)">'+E(s.id||'')+'</div>'
+          +'<div style="font-size:.8125rem;font-weight:600">'+E(s.strategy||'')+'</div>'
+          +(s.rationale?'<div style="font-size:.75rem;color:var(--text-muted);margin-top:.125rem"><em>'+E(s.rationale)+'</em></div>':'')
+          +(s.expected_outcome?'<div style="font-size:.75rem;color:var(--text-secondary);margin-top:.125rem">→ '+E(s.expected_outcome)+'</div>':'')
+          +'</div>'
+        ).join(''),
+        spec[2]);
+    }).join('');
+    if (towsHtml) h += sc('Matriz TOWS — Estratégias Cruzadas', '<div class="gr gr--2">'+towsHtml+'</div>');
+  }
+
   if (d.priority_actions?.length) {
-    h += sc('Ações Prioritárias', tb(['Ação','Base SWOT','Impacto','Prazo'],
-      d.priority_actions.map(a=>[
-        E(a.action), E(a.swot_basis),
-        tg(IMP[a.impact]||a.impact,IMC[a.impact]),
-        E(a.suggested_timeline)
-        +(a.dependencies?.length?'<div style="font-size:.75rem;color:var(--text-muted);margin-top:.25rem">Depende: '+a.dependencies.map(dep=>E(dep)).join(', ')+'</div>':'')
-      ])));
+    // risk_adjusted_score pode vir como número (0-100) ou objeto {impact, probability_of_success, reversibility, score}
+    const getScore = a => {
+      const r = a.risk_adjusted_score;
+      if (r == null) return null;
+      if (typeof r === 'number') return r;
+      if (typeof r === 'object' && r.score != null) return r.score;
+      return null;
+    };
+    // Normaliza escala: se valor é <=10 (escala 1-10), multiplica por 10 para virar 0-100
+    const normScore = v => v == null ? null : (v <= 10 ? v * 10 : v);
+    // financial_impact: aceita {investment, expected_return_90d, roi_multiple, payback_days} OU {investment_brl, monthly_return_brl, payback_days}
+    const fiInv = fi => fi ? (fi.investment ?? fi.investment_brl) : null;
+    const fiRet = fi => {
+      if (!fi) return null;
+      if (fi.expected_return_90d != null) return fi.expected_return_90d;
+      if (fi.monthly_return_brl != null) return fi.monthly_return_brl * 3;
+      return null;
+    };
+    const fiRoi = fi => {
+      if (!fi) return null;
+      if (fi.roi_multiple != null) return fi.roi_multiple;
+      const inv = fiInv(fi), ret = fiRet(fi);
+      return inv && inv > 0 && ret != null ? ret / inv : null;
+    };
+    const fiPay = fi => fi?.payback_days ?? null;
+
+    const hasEnriched = d.priority_actions.some(a=>a.financial_impact || getScore(a) != null);
+    if (hasEnriched) {
+      h += sc('Detalhamento das Ações Prioritárias', tb(
+        ['Ação','Base SWOT','Impacto','Invest.','Retorno 90d','ROI','Payback','Score'],
+        d.priority_actions.map(a=>{
+          const fi = a.financial_impact||{};
+          const inv = fiInv(fi), ret = fiRet(fi), roi = fiRoi(fi), pay = fiPay(fi);
+          const sc100 = normScore(getScore(a));
+          return [
+            '<span style="font-size:.8125rem;font-weight:600">'+E(a.action)+'</span>',
+            '<span style="font-size:.6875rem;color:var(--text-muted)">'+E(a.swot_basis||'—')+'</span>',
+            tg(IMP[a.impact]||a.impact||'—',IMC[a.impact]||'gray'),
+            inv!=null?BRL(inv):'—',
+            ret!=null?BRL(ret):'—',
+            roi!=null?tg(roi.toFixed(1)+'x','green'):'—',
+            pay!=null?pay+'d':'—',
+            sc100!=null?tg(sc100.toFixed(0),sc100>=70?'green':sc100>=40?'yellow':'red'):'—',
+          ];
+        })));
+    } else {
+      h += sc('Ações Prioritárias — Roadmap', renderGantt(d.priority_actions));
+    }
   }
   return h;
 },
@@ -867,6 +1300,159 @@ const R = {
       +cd('Comunidades',(w.communities||[]).join(', '))
       +'</div>');
   }
+  // Anti-persona — aceita {profile_name, description} OU {label, who, signals[]}
+  if (d.anti_persona?.profiles?.length) {
+    const ap = d.anti_persona;
+    h += sc('Anti-Persona — Quem NÃO é cliente',
+      (ap.description?'<p style="font-size:.8125rem;color:var(--text-muted);margin:0 0 .5rem">'+E(ap.description)+'</p>':'')
+      +ap.profiles.map(p=>{
+        const title = p.profile_name || p.label || '—';
+        const descr = p.description || p.who || '';
+        const signals = p.signals || p.red_flags || [];
+        const body = (descr?'<p style="margin:0 0 .5rem;font-size:.8125rem">'+E(descr)+'</p>':'')
+          +(signals.length?'<div style="margin-bottom:.5rem"><div style="font-size:.6875rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--text-muted);margin-bottom:.25rem">Sinais</div>'
+            +signals.map(s=>'<div style="font-size:.75rem;margin-bottom:.15rem;color:var(--text-secondary)">• '+E(s)+'</div>').join('')+'</div>':'')
+          +(p.why_not?'<div style="font-size:.75rem;color:var(--danger);margin-bottom:.25rem"><strong>Por quê não:</strong> '+E(p.why_not)+'</div>':'')
+          +(p.operational_rule?'<div style="font-size:.75rem;color:var(--text-muted)"><strong>Regra:</strong> '+E(p.operational_rule)+'</div>':'');
+        return cd(title, body, 'danger');
+      }).join('')
+      +(ap.operational_rule?co('Regra-mãe: '+ap.operational_rule):''));
+  }
+
+  // Buyer journey — com funil visual se há volumes implícitos
+  if (d.buyer_journey?.stages?.length) {
+    const bj = d.buyer_journey;
+    // Funil decrescente ilustrativo (cada estágio 100%, 75%, 55%, 40%, 28%, 20%... padrão)
+    // Se há critical_leakage_point, o estágio crítico vira vermelho
+    const criticalStage = bj.critical_leakage_point?.stage;
+    const lossPct = bj.critical_leakage_point?.estimated_loss_pct;
+    const n = bj.stages.length;
+    const funnelItems = bj.stages.map((s,i)=>{
+      const isCritical = criticalStage && (s.stage||'').toLowerCase().includes((criticalStage||'').toLowerCase().split(' ')[0]);
+      // decaimento sugestivo: 100 → 20 em n passos
+      const vol = Math.round(100*Math.pow(0.68, i));
+      return {
+        label: s.stage,
+        value: vol,
+        tone: isCritical ? 'red' : (i<=n/3?'blue':i<=2*n/3?'yellow':'orange'),
+        subtext: s.duration_estimate||'',
+      };
+    });
+    const funnelInsight = bj.critical_leakage_point
+      ? 'Vazamento crítico em "'+E(criticalStage||'?')+'"'+(lossPct!=null?' — estima-se '+lossPct+'% de perda':'')+'. '
+        +(bj.critical_leakage_point.evidence||'').substring(0,140)
+      : 'Funil ilustrativo — decaimento típico entre estágios. Use o mapa real de conversões da skill de auditoria para calibrar.';
+    h += sc('Jornada de Compra — Visualização',
+      insight(chartFunnel(funnelItems), funnelInsight, bj.critical_leakage_point?'bad':'warn'));
+    h += sc('Detalhamento da Jornada',
+      tb(['Estágio','Gatilho','Estado mental','Canal','Pergunta dominante','Intervenção','Fricção atual','Duração'],
+        bj.stages.map(s=>[
+          '<strong>'+E(s.stage)+'</strong>',
+          E(s.trigger||'—'),
+          E(s.mental_state||'—'),
+          E(s.primary_channel||'—'),
+          '<em>'+E(s.dominant_question||'—')+'</em>',
+          E(s.client_intervention||'—'),
+          '<span style="color:var(--danger)">'+E(s.friction_today||'—')+'</span>',
+          E(s.duration_estimate||'—'),
+        ]))
+      +(bj.critical_leakage_point?cd('Vazamento crítico',
+        (typeof bj.critical_leakage_point === 'string'
+          ? '<div style="font-size:.8125rem;line-height:1.5">'+E(bj.critical_leakage_point)+'</div>'
+          : '<div style="font-size:.875rem;font-weight:700;color:var(--danger)">'+E(bj.critical_leakage_point.stage||'—')+'</div>'
+            +(bj.critical_leakage_point.evidence?'<div style="font-size:.8125rem;margin-top:.25rem">'+E(bj.critical_leakage_point.evidence)+'</div>':'')
+            +(bj.critical_leakage_point.estimated_loss_pct!=null?'<div style="margin-top:.25rem">'+tg('Perda estimada: '+bj.critical_leakage_point.estimated_loss_pct+'%','danger')+'</div>':'')),
+        'danger'):''));
+  }
+
+  // Willingness to pay — barras comparativas + tabela
+  if (d.willingness_to_pay?.services?.length) {
+    // Extrai valor numérico médio de uma faixa textual tipo "R$ 180-240"
+    const parseRange = r => {
+      if (typeof r === 'number') return r;
+      if (!r) return null;
+      const nums = (String(r).match(/\d+[\.,]?\d*/g)||[]).map(x=>parseFloat(x.replace(',','.')));
+      if (!nums.length) return null;
+      return nums.reduce((a,b)=>a+b,0)/nums.length;
+    };
+    // Suporte tanto o esquema antigo (current_price, fair_range, premium_range)
+    // quanto o novo (current_ticket_range, perceived_fair_range, premium_ceiling)
+    const getCur = s => parseRange(s.current_price ?? s.current_ticket_range);
+    const getFair = s => parseRange(s.fair_range ?? s.perceived_fair_range);
+    const getPrem = s => parseRange(s.premium_range ?? s.premium_ceiling);
+    const getCurLabel = s => s.current_price!=null ? (typeof s.current_price==='number'?BRL(s.current_price):s.current_price) : (s.current_ticket_range || '—');
+    const getFairLabel = s => s.fair_range || s.perceived_fair_range || '—';
+    const getPremLabel = s => s.premium_range || s.premium_ceiling || '—';
+
+    const underpriced = d.willingness_to_pay.services.filter(s=>{
+      const c = getCur(s), f = getFair(s);
+      return c!=null && f!=null && c < f*0.9;
+    });
+    const wtpInsight = underpriced.length
+      ? underpriced.length+' de '+d.willingness_to_pay.services.length+' serviços estão precificados ABAIXO da faixa justa percebida — espaço para ajuste de preço sem perder conversão. '
+        +'Começar pelo "'+(underpriced[0].service||'primeiro')+'" tem o maior ganho direto.'
+      : 'Precificação alinhada à percepção de valor — foco em alavancas (bundle, garantia, experiência) para justificar premium.';
+    const maxPrice = Math.max(...d.willingness_to_pay.services.map(s=>
+      Math.max(getCur(s)||0, getFair(s)||0, getPrem(s)||0)));
+    const wtpHeader = '<div style="display:grid;grid-template-columns:minmax(140px,24%) minmax(70px,10%) 1fr minmax(70px,10%) minmax(70px,12%);gap:.75rem;align-items:center;padding:0 0 .5rem;border-bottom:1px solid var(--border);font-size:.6875rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.05em;font-weight:600">'
+      +'<div>Serviço</div><div style="text-align:right">Atual</div><div>Faixa justa → teto</div><div style="text-align:right">Teto</div><div style="text-align:right">Elasticidade</div></div>';
+    const wtpBars = d.willingness_to_pay.services.map(s=>{
+      const cur = getCur(s), fair = getFair(s), prem = getPrem(s);
+      const curPct = cur?((cur/maxPrice)*100).toFixed(1):0;
+      const fairPct = fair?((fair/maxPrice)*100).toFixed(1):0;
+      const premPct = prem?((prem/maxPrice)*100).toFixed(1):0;
+      const underFair = cur!=null && fair!=null && cur < fair*0.9;
+      return '<div style="display:grid;grid-template-columns:minmax(140px,24%) minmax(70px,10%) 1fr minmax(70px,10%) minmax(70px,12%);gap:.75rem;align-items:center;padding:.5rem 0;border-bottom:1px solid var(--border)">'
+        +'<div style="font-size:.75rem;font-weight:600;line-height:1.3" title="'+E(s.service)+'">'+E(s.service)+'</div>'
+        +'<div style="font-size:.75rem;font-weight:700;text-align:right;color:'+(underFair?CX.red:'var(--text)')+'">'+(cur?BRL(cur):'—')+'</div>'
+        +'<div style="position:relative;height:18px;background:var(--surface);border-radius:2px;overflow:hidden">'
+        +(prem?'<div style="position:absolute;left:0;top:0;height:100%;width:'+premPct+'%;background:'+CX.yellow+';opacity:.22"></div>':'')
+        +(fair?'<div style="position:absolute;left:0;top:0;height:100%;width:'+fairPct+'%;background:'+CX.green+';opacity:.45"></div>':'')
+        +(cur?'<div style="position:absolute;left:calc('+curPct+'% - 1px);top:0;width:2px;height:100%;background:'+CX.red+'"></div>':'')
+        +'</div>'
+        +'<div style="font-size:.6875rem;color:var(--text-muted);text-align:right">'+(prem?BRL(prem):'—')+'</div>'
+        +'<div style="text-align:right">'+(s.elasticity?tg(String(s.elasticity).split(/[—\-]/)[0].trim(),{high:'red',alta:'red',media:'yellow','média':'yellow',medium:'yellow',baixa:'green',low:'green'}[String(s.elasticity).toLowerCase().split(/[—\-]/)[0].trim()]||'gray'):'—')+'</div>'
+        +'</div>';
+    }).join('');
+    const wtpLegend = '<div style="display:flex;gap:1.25rem;font-size:.6875rem;margin-top:.75rem;flex-wrap:wrap;color:var(--text-muted)">'
+      +'<span><span style="display:inline-block;width:14px;height:10px;background:'+CX.green+';opacity:.5;margin-right:.3rem;vertical-align:middle;border-radius:2px"></span>Faixa justa percebida</span>'
+      +'<span><span style="display:inline-block;width:14px;height:10px;background:'+CX.yellow+';opacity:.32;margin-right:.3rem;vertical-align:middle;border-radius:2px"></span>Teto premium</span>'
+      +'<span><span style="display:inline-block;width:2px;height:12px;background:'+CX.red+';margin-right:.3rem;vertical-align:middle"></span>Preço atual</span>'
+      +'<span>· escala: 0 a '+BRL(Math.ceil(maxPrice/50)*50)+'</span></div>';
+    h += sc('Disposição a Pagar (WTP)',
+      insight(chartTitle('Preço atual × faixa percebida × teto premium — por serviço')+wtpHeader+wtpBars+wtpLegend,
+        wtpInsight, underpriced.length?'warn':'good')
+      +(d.willingness_to_pay.context?'<p style="font-size:.8125rem;color:var(--text-muted);margin:0 0 .5rem;font-style:italic">'+E(d.willingness_to_pay.context)+'</p>':'')
+      +tb(['Serviço','Preço atual','Faixa justa','Teto premium','Elasticidade','Alavanca'],
+        d.willingness_to_pay.services.map(s=>{
+          const elasRaw = s.elasticity ? String(s.elasticity) : '';
+          const elasShort = elasRaw.split(/[—\-:]/)[0].trim();
+          const elasNote = elasRaw.slice(elasShort.length).replace(/^[\s—\-:]+/,'').trim();
+          const elasColor = {high:'red',alta:'red',media:'yellow','média':'yellow',medium:'yellow',baixa:'green',low:'green'}[elasShort.toLowerCase()]||'gray';
+          return [
+            '<strong>'+E(s.service)+'</strong>',
+            E(getCurLabel(s)),
+            E(getFairLabel(s)),
+            E(getPremLabel(s)),
+            elasShort ? tg(elasShort, elasColor) + (elasNote?'<div style="font-size:.6875rem;color:var(--text-muted);margin-top:.25rem;line-height:1.3">'+E(elasNote)+'</div>':'') : '—',
+            '<span style="font-size:.75rem;color:var(--text-muted)">'+E(s.pricing_lever||'—')+'</span>',
+          ];
+        })));
+  }
+
+  // Objection library
+  if (d.objection_library?.objections?.length) {
+    h += sc('Biblioteca de Objeções',
+      d.objection_library.objections.map(o=>
+        cd('“'+E(o.objection)+'”',
+          (o.subtext?'<div style="font-size:.75rem;color:var(--text-muted);font-style:italic;margin-bottom:.375rem">Subtexto: '+E(o.subtext)+'</div>':'')
+          +(o.bad_response?'<div style="font-size:.8125rem;color:var(--danger);margin-bottom:.25rem">✗ '+E(o.bad_response)+'</div>':'')
+          +(o.good_response?'<div style="font-size:.8125rem;color:var(--success)">✓ '+E(o.good_response)+'</div>':'')
+          +(o.when_to_use?'<div style="font-size:.6875rem;color:var(--text-muted);margin-top:.375rem">Uso: '+E(o.when_to_use)+'</div>':''),
+          'yellow')
+      ).join(''));
+  }
+
   if (d.key_message?.chosen_message) {
     h += '<div class="sum" style="border-left-color:var(--success)"><div class="sum__tag" style="color:var(--success)">Mensagem-Chave</div>'
       +'<p class="sum__text" style="font-size:1.125rem;font-style:italic">'+E(d.key_message.chosen_message)+'</p>'
@@ -886,54 +1472,326 @@ const R = {
 'ee-s1-auditoria-comunicacao'(d) {
   let h = '';
   if (d.summary) h += sm(d.summary);
-  if (d.executive_summary) {
-    const es = d.executive_summary;
-    const scoreColor = es.communication_score >= 70 ? 'good' : es.communication_score >= 40 ? 'medium' : 'critical';
-    if (es.communication_score != null) {
-      h += '<div class="gr gr--3">'+mt(es.communication_score,'Score de Comunicação',CLC[scoreColor])+'</div>';
-    }
-    if (es.overall_assessment) h += co(es.overall_assessment);
-    if (es.top_problems?.length) {
-      h += sc('Top 3 Problemas Críticos', es.top_problems.map(p=>
-        cd(p.problem,
-          '<strong>Evidência:</strong> '+E(p.evidence||'')+'<br>'
-          +'<strong>Impacto:</strong> '+E(p.impact||'')+'<br>'
-          +'<strong>Ação:</strong> '+E(p.action||''),
-          'danger')
-      ).join(''));
-    }
+
+  // Score geral + scores por canal
+  const sc_clr = v => v >= 70 ? 'good' : v >= 40 ? 'medium' : 'critical';
+  const IPC = {alto:'danger',médio:'warning',medio:'warning',baixo:'text-muted'};
+  const ipc = imp => IPC[(imp||'').toLowerCase().replace(/\u00e9/g,'e')] || 'text-muted';
+
+  if (d.overall_score != null) {
+    const cls = d.overall_classification || sc_clr(d.overall_score);
+    const scoreRow = '<div class="gr gr--3">'+mt(d.overall_score+'/100','Score Médio Geral',CLC[cls]||'red')+'</div>';
+    h += scoreRow;
   }
-  if (d.channels_audited?.length) {
-    h += sc('Canais Auditados', '<div class="gr gr--2">'+d.channels_audited.map(ch=>{
-      let cHtml = '<div class="cd">'
-        +'<div class="cd__title">'+E(ch.name)
-        +(ch.url_or_handle?'<span style="font-size:.75rem;color:var(--text-muted);font-weight:400;margin-left:.375rem">'+E(ch.url_or_handle)+'</span>':'')
-        +'</div>'
-        +'<div class="pillar__row" style="margin-bottom:.375rem">'
-        +'<span class="pillar__score" style="color:var(--'+(CLC[ch.classification]||'accent')+')">'+N(ch.score)+'/100</span>'
-        +tg(CLS[ch.classification]||'—',CLC[ch.classification])+'</div>'
-        +pb(ch.score,CLC[ch.classification]||'red');
-      if (ch.gaps?.length) {
-        cHtml += '<div style="margin-top:.625rem">'
-          +ch.gaps.map(g=>'<div style="font-size:.8125rem;margin-bottom:.2rem;color:var(--'+(g.impact==='high'?'danger':g.impact==='medium'?'warning':'text-muted')+')">&#9679; '+E(g.gap)+'</div>').join('')
-          +'</div>';
-      }
-      return cHtml+'</div>';
+
+  // Canal scores em linha
+  const chScores = d.channel_scores || (d.channels ? d.channels.map(c=>({channel_name:c.channel_name,score:c.score,classification:c.classification})) : []);
+  if (chScores.length) {
+    h += sc('Scores por Canal', '<div class="gr gr--3">'+chScores.map(ch=>{
+      const cls = ch.classification || sc_clr(ch.score);
+      return '<div class="pillar"><div class="pillar__row"><span class="pillar__name">'+E(ch.channel_name||ch.channel)+'</span>'
+        +'<span class="pillar__score" style="color:var(--'+(CLC[cls]||'danger')+')">'+N(ch.score)+'/100 '+tg(CLS[cls]||'',CLC[cls])+'</span></div>'
+        +pb(ch.score, CLC[cls]||'red')+'</div>';
     }).join('')+'</div>');
   }
-  if (d.quick_wins?.length) {
-    h += sc('Quick Wins', tb(['Ação','Canal','Tempo','Impacto'],
-      d.quick_wins.map(q=>[E(q.action),E(q.channel),E(q.time_estimate),E(q.expected_impact)])));
+
+  // Top 3 problemas críticos
+  if (d.top_problems?.length) {
+    h += sc('Top 3 Problemas Críticos', d.top_problems.map(p=>
+      cd(p.problem,
+        (p.data_evidence||p.evidence?'<p style="margin:0 0 .375rem"><strong>Evidência:</strong> '+E(p.data_evidence||p.evidence)+'</p>':'')
+        +(p.impact?'<p style="margin:0 0 .25rem;color:var(--text-secondary)">'+E(p.impact)+'</p>':'')
+        +(p.action?'<div style="margin-top:.25rem">'+tg('Ação: '+p.action,'gray')+'</div>':''),
+        'danger')
+    ).join(''));
   }
-  if (d.gap_matrix?.length) {
-    h += sc('Matriz de Gaps', tb(['#','Canal','Gap','Impacto','Esforço','Ação'],
-      d.gap_matrix.slice(0,8).map(g=>[
-        E(g.rank),E(g.channel),E(g.gap),
-        tg(IMP[g.impact]||'',IMC[g.impact]),
-        tg(IMP[g.effort]||'',{low:'green',medium:'yellow',high:'red'}[g.effort]),
-        E(g.recommended_action)+(g.quadrant?' '+tg({quick_win:'Quick Win',strategic_project:'Estratégico',fill_time:'Preenche tempo',deprioritize:'Despriorizar'}[g.quadrant]||g.quadrant,'gray'):'')
+
+  // Canais — detalhe por canal
+  const channels = d.channels || [];
+  if (channels.length) {
+    channels.forEach(ch => {
+      const cls = ch.classification || sc_clr(ch.score);
+      let cHtml = '<div class="pillar__row" style="margin-bottom:.375rem">'
+        +'<span class="pillar__score" style="color:var(--'+(CLC[cls]||'danger')+')">'+N(ch.score)+'/100</span>'
+        +tg(CLS[cls]||'—', CLC[cls])+'</div>'
+        +pb(ch.score, CLC[cls]||'red');
+
+      if (ch.strengths?.length) {
+        cHtml += '<div style="margin-top:.625rem">'
+          +ch.strengths.map(s=>'<div style="font-size:.8125rem;margin-bottom:.2rem;color:var(--success)">&#10003; '+E(s)+'</div>').join('')
+          +'</div>';
+      }
+      if (ch.top_problems?.length) {
+        cHtml += '<div style="margin-top:.5rem">'
+          +ch.top_problems.map(p=>'<div style="font-size:.8125rem;margin-bottom:.25rem;color:var(--danger)">&#9650; '+E(p)+'</div>').join('')
+          +'</div>';
+      }
+      if (ch.gaps?.length) {
+        cHtml += '<div style="margin-top:.5rem;border-top:1px solid var(--border);padding-top:.5rem">'
+          +ch.gaps.map(g=>{
+            const col = ipc(g.impact);
+            return '<div style="margin-bottom:.375rem">'
+              +'<div style="font-size:.8125rem;color:var(--'+col+')">&#9679; '+E(g.gap)+'</div>'
+              +(g.evidence?'<div style="font-size:.75rem;color:var(--text-muted);margin-left:.75rem;margin-top:.1rem">'+E(g.evidence)+'</div>':'')
+              +'</div>';
+          }).join('')
+          +'</div>';
+      }
+      h += sc(E(ch.channel_name||ch.channel), cHtml);
+    });
+  }
+
+  // Quick wins
+  if (d.quick_wins?.length) {
+    h += sc('Quick Wins — Executar Agora', tb(['Ação','Canal','Tempo','Impacto','Quem'],
+      d.quick_wins.map(q=>[
+        E(q.action),
+        E(q.channel),
+        q.time_hours != null ? (q.time_hours < 1 ? Math.round(q.time_hours*60)+'min' : q.time_hours+'h') : E(q.time_estimate||'—'),
+        E(q.impact||q.expected_impact||'—'),
+        E(q.who||'—')
       ])));
   }
+
+  // Matriz de gaps
+  if (d.gap_matrix?.length) {
+    const EC = {baixo:'green',médio:'yellow',medio:'yellow',alto:'red'};
+    h += sc('Matriz de Gaps', tb(['#','Canal','Gap','Impacto','Esforço','Ação'],
+      d.gap_matrix.map(g=>[
+        E(g.rank),
+        E(g.channel),
+        E(g.gap),
+        tg(g.impact, EC[g.impact]||'gray'),
+        tg(g.effort, EC[g.effort]||'gray'),
+        E(g.action||g.recommended_action||'—')
+      ])));
+  }
+
+  // Coerência entre canais
+  if (d.coherence_gaps?.length) {
+    h += sc('Coerência entre Canais', d.coherence_gaps.map(cg=>
+      '<div style="font-size:.8125rem;color:var(--danger);margin-bottom:.375rem">&#9650; '+E(cg)+'</div>'
+    ).join(''));
+  }
+
+  // Competitor benchmark — radar + tabela
+  // Aceita: {client_score, best_in_class_score, opportunity_for_client, best_practice_observed}
+  //    ou: {zenvet_score, competitor_avg_score, immediate_win, evidence}
+  if (d.competitor_benchmark?.benchmark_by_channel?.length) {
+    const cb = d.competitor_benchmark;
+    const cbClient = b => b.client_score ?? b.zenvet_score ?? 0;
+    const cbBench  = b => b.best_in_class_score ?? b.competitor_avg_score ?? 0;
+    const cbBest   = b => b.best_practice_observed ?? b.evidence ?? '';
+    const cbOpp    = b => b.opportunity_for_client ?? b.immediate_win ?? '';
+    // gap vem do JSON mas recalcula se ausente (negativo = atrás do grupo)
+    const cbGap    = b => b.gap != null ? b.gap : (cbClient(b) - cbBench(b));
+
+    const radarAxes = cb.benchmark_by_channel.map(b=>({
+      name: b.channel,
+      value: cbClient(b),
+      benchmark: cbBench(b),
+    }));
+    // Maior gap negativo = cliente mais atrás
+    const biggestGap = [...cb.benchmark_by_channel].sort((a,b)=>cbGap(a)-cbGap(b))[0];
+    const radarInsight = biggestGap
+      ? 'Maior gap vs melhor do grupo está em "'+(biggestGap.channel||'?')+'" ('+cbGap(biggestGap)+' pontos). '
+        +String(cbOpp(biggestGap)||'').substring(0,140)
+      : '';
+    let grpHtml = '';
+    if (cb.groups?.length) {
+      grpHtml = '<div class="gr gr--2">'+cb.groups.map(g=>
+        cd(g.name||'—',
+          (g.members?'<div style="font-size:.75rem;color:var(--text-muted);margin-bottom:.25rem">'+(g.members||[]).map(E).join(' · ')+'</div>':'')
+          +(g.positioning?'<div style="font-size:.8125rem">'+E(g.positioning)+'</div>':''),
+          'gray')
+      ).join('')+'</div>';
+    }
+    h += sc('Benchmark vs Concorrência',
+      insight(chartRadar(radarAxes, {title:'Cliente vs Melhor do Grupo (por canal)', tone:'red'}),
+        radarInsight, biggestGap?.gap>30?'bad':'warn')
+      +grpHtml
+      +tb(['Canal','Cliente','Melhor do grupo','Gap','Best practice / evidência','Oportunidade / quick win'],
+        cb.benchmark_by_channel.map(r=>{
+          const cli = cbClient(r), ben = cbBench(r), gap = cbGap(r);
+          return [
+            '<strong>'+E(r.channel)+'</strong>',
+            tg(N(cli)+'/100',sc_clr(cli)),
+            ben!=null?tg(N(ben)+'/100','green'):'—',
+            gap!=null?'<span style="color:var('+(gap<0?'--danger':'--success')+');font-weight:700">'+(gap>=0?'+':'')+N(gap)+'</span>':'—',
+            '<span style="font-size:.75rem;color:var(--text-secondary)">'+E(cbBest(r)||'—')+'</span>',
+            '<span style="font-size:.75rem;color:var(--success)">'+E(cbOpp(r)||'—')+'</span>',
+          ];
+        }))
+      +(cb.strategic_read?co(cb.strategic_read):''));
+  }
+
+  // Journey friction map — funil visual + tabela
+  if (d.journey_friction_map?.stages?.length) {
+    const jm = d.journey_friction_map;
+    // Funil: tenta usar current_volume se numérico, senão distribui proporcionalmente pelos leakages
+    const stagesNums = jm.stages.map((s,i,arr)=>{
+      const v = typeof s.current_volume === 'number' ? s.current_volume : (typeof s.current_volume==='string' && /^[\d.,]+$/.test(s.current_volume.replace(/\./g,'').replace(',','.')) ? parseFloat(s.current_volume.replace(/\./g,'').replace(',','.')) : null);
+      return v;
+    });
+    const hasRealNums = stagesNums.filter(v=>v!=null).length >= 2;
+    let funnelItems;
+    if (hasRealNums) {
+      funnelItems = jm.stages.map((s,i)=>({
+        label: s.stage,
+        value: stagesNums[i] || 0,
+        tone: (s.leakage_pct||0)>=50?'red':(s.leakage_pct||0)>=30?'orange':(s.leakage_pct||0)>=15?'yellow':'green',
+        subtext: s.leakage_pct!=null?'vaza '+s.leakage_pct+'%':'',
+      }));
+    } else {
+      // Simula queda com base no leakage_pct de cada estágio
+      let running = 1000;
+      funnelItems = jm.stages.map((s,i)=>{
+        const drop = s.leakage_pct||0;
+        if (i>0) running = Math.round(running*(1-drop/100));
+        return {
+          label: s.stage,
+          value: running,
+          tone: drop>=50?'red':drop>=30?'orange':drop>=15?'yellow':'green',
+          subtext: drop?'vaza '+drop+'%':'',
+        };
+      });
+    }
+    const worstStage = [...jm.stages].sort((a,b)=>(b.leakage_pct||0)-(a.leakage_pct||0))[0];
+    const funnelInsight = worstStage
+      ? 'Maior vazamento: "'+(worstStage.stage||'?')+'" com '+(worstStage.leakage_pct||'?')+'% de perda. '
+        +'Causa-raiz: '+(worstStage.root_cause||'?').substring(0,100)+'. Fix '+(worstStage.fix_effort||'?')+'.'
+      : '';
+    h += sc('Mapa de Fricção do Funil',
+      insight(chartFunnel(funnelItems), funnelInsight, worstStage?.leakage_pct>=40?'bad':'warn')
+      +tb(['Estágio','Volume atual','Vazamento','Causa-raiz','Esforço','Impacto da correção'],
+        jm.stages.map(s=>[
+          '<strong>'+E(s.stage)+'</strong>',
+          s.current_volume!=null?E(String(s.current_volume)):'—',
+          s.leakage_pct!=null?tg(s.leakage_pct+'%', s.leakage_pct>=50?'danger':s.leakage_pct>=30?'red':s.leakage_pct>=15?'yellow':'green'):'—',
+          '<span style="font-size:.75rem;color:var(--text-secondary)">'+E(s.root_cause||'—')+'</span>',
+          s.fix_effort?tg(IMP[s.fix_effort]||s.fix_effort,{low:'green',medium:'yellow',high:'red'}[s.fix_effort]):'—',
+          '<span style="font-size:.75rem;color:var(--success)">'+E(s.fix_impact_estimate||'—')+'</span>',
+        ]))
+      +(jm.biggest_leakage_summary?cd('Maior vazamento hoje',E(jm.biggest_leakage_summary),'danger'):'')
+      +(jm.projected_funnel_90d_realistic?cd('Projeção 90d (realista)',E(jm.projected_funnel_90d_realistic),'green'):''));
+  }
+
+  // Tone-of-voice analysis
+  if (d.tone_of_voice_analysis?.channel_drift?.length) {
+    const tv = d.tone_of_voice_analysis;
+    let pillars = '';
+    if (tv.brand_voice_target?.pillars?.length) {
+      pillars += '<div style="margin-bottom:.5rem"><strong style="font-size:.75rem;color:var(--success)">Voz desejada:</strong> '
+        +(tv.brand_voice_target.pillars||[]).map(p=>'<span class="tg tg--green" style="margin:0 .25rem .25rem 0">'+E(p)+'</span>').join('')
+        +'</div>';
+    }
+    if (tv.brand_voice_target?.avoid?.length) {
+      pillars += '<div><strong style="font-size:.75rem;color:var(--danger)">Evitar:</strong> '
+        +(tv.brand_voice_target.avoid||[]).map(p=>'<span class="tg tg--red" style="margin:0 .25rem .25rem 0">'+E(p)+'</span>').join('')
+        +'</div>';
+    }
+    // Aceita: {actual_tone, alignment_score, drift_notes, example}
+    //    ou: {current_tone, target_alignment, gap, fix, priority}
+    const alignMap = {alinhado:100,aligned:100,bom:80,boa:80,good:80,parcial:55,partial:55,media:55,'média':55,medium:55,baixa:25,baixo:25,low:25,desalinhado:20,misaligned:20,critico:10,'crítico':10,nenhum:0,none:0,nao:0,'não':0};
+    const tvTone = c => c.actual_tone ?? c.current_tone ?? '';
+    const tvExample = c => c.example ?? '';
+    const tvNotes = c => c.drift_notes ?? c.gap ?? c.fix ?? '';
+    const tvScore = c => {
+      if (c.alignment_score != null) return c.alignment_score;
+      if (c.target_alignment) return alignMap[String(c.target_alignment).toLowerCase()] ?? null;
+      return null;
+    };
+
+    const alignRows = tv.channel_drift.map(c=>{
+      const v = tvScore(c);
+      if (v == null) return null;
+      const tone = v>=70?'green':v>=40?'yellow':'red';
+      const col = chartColor(tone);
+      const pct = Math.min(100, Math.max(0, v));
+      const statusLabel = v>=70?'Alinhado':v>=40?'Parcial':v>=20?'Baixo':'Crítico';
+      return '<div style="display:grid;grid-template-columns:minmax(110px,18%) 1fr minmax(70px,10%) minmax(80px,12%);gap:.75rem;align-items:center;padding:.5rem 0;border-bottom:1px solid var(--border)">'
+        +'<div style="font-size:.8125rem;font-weight:600">'+E(c.channel)+'</div>'
+        +'<div style="position:relative;height:14px;background:var(--surface);border-radius:2px;overflow:hidden">'
+        +'<div style="position:absolute;left:0;top:0;height:100%;width:'+pct+'%;background:'+col+';opacity:.85;border-radius:2px"></div>'
+        +'<div style="position:absolute;left:70%;top:-2px;height:18px;width:1px;background:'+CX.muted+';opacity:.45"></div>'
+        +'</div>'
+        +'<div style="font-size:.8125rem;font-weight:700;text-align:right;color:'+col+'">'+v+'<span style="font-size:.625rem;color:var(--text-muted);font-weight:500">/100</span></div>'
+        +'<div style="text-align:right">'+tg(statusLabel,tone)+'</div>'
+        +'</div>';
+    }).filter(Boolean);
+    const alignHeader = '<div style="display:grid;grid-template-columns:minmax(110px,18%) 1fr minmax(70px,10%) minmax(80px,12%);gap:.75rem;align-items:center;padding:0 0 .5rem;border-bottom:1px solid var(--border);font-size:.6875rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.05em;font-weight:600">'
+      +'<div>Canal</div><div>Alinhamento (0 → 100) · meta: 70</div><div style="text-align:right">Score</div><div style="text-align:right">Status</div></div>';
+    const alignChart = alignRows.length
+      ? chartTitle('Alinhamento por Canal (0-100)')+alignHeader+alignRows.join('')
+        +'<div style="display:flex;gap:1.25rem;font-size:.6875rem;margin-top:.75rem;flex-wrap:wrap;color:var(--text-muted)">'
+        +'<span><span style="display:inline-block;width:14px;height:10px;background:'+chartColor('green')+';opacity:.85;margin-right:.3rem;vertical-align:middle;border-radius:2px"></span>Alinhado (≥70)</span>'
+        +'<span><span style="display:inline-block;width:14px;height:10px;background:'+chartColor('yellow')+';opacity:.85;margin-right:.3rem;vertical-align:middle;border-radius:2px"></span>Parcial (40-69)</span>'
+        +'<span><span style="display:inline-block;width:14px;height:10px;background:'+chartColor('red')+';opacity:.85;margin-right:.3rem;vertical-align:middle;border-radius:2px"></span>Crítico (&lt;40)</span>'
+        +'<span>· linha tracejada = meta setorial (70)</span></div>'
+      : '';
+    const worstCh = [...tv.channel_drift].sort((a,b)=>(tvScore(a)??100)-(tvScore(b)??100))[0];
+    const toneInsight = worstCh
+      ? 'Canal com maior desvio: "'+(worstCh.channel||'?')+'" ('+(tvScore(worstCh)??'?')+'/100). '
+        +String(tvNotes(worstCh)||'').substring(0,140)
+      : '';
+    const gaugeBlock = (()=>{
+      if (tv.coherence_score == null) return '';
+      const v = tv.coherence_score, bench = 70;
+      const tone = v>=70?'green':v>=40?'yellow':'red';
+      const col = chartColor(tone);
+      const vPct = Math.min(100, Math.max(0, v));
+      const benchPct = Math.min(100, Math.max(0, bench));
+      const status = v>=70?'Alinhado':v>=40?'Atenção':'Crítico';
+      const bar = chartTitle('Coerência Geral do Tom')
+        +'<div style="display:grid;grid-template-columns:minmax(120px,16%) 1fr minmax(90px,14%);gap:1rem;align-items:center">'
+        +'<div><div style="font-size:.6875rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.05em;font-weight:600;margin-bottom:.25rem">Score atual</div>'
+        +'<div style="font-size:1.75rem;font-weight:800;color:'+col+';line-height:1"><span>'+v+'</span><span style="font-size:.875rem;color:var(--text-muted);font-weight:500">/100</span></div></div>'
+        +'<div style="position:relative;padding:1.25rem 0 1.5rem">'
+        +'<div style="position:relative;height:16px;background:var(--surface);border-radius:3px;overflow:visible">'
+        +'<div style="position:absolute;left:0;top:0;height:100%;width:'+vPct+'%;background:'+col+';opacity:.85;border-radius:3px"></div>'
+        +'<div style="position:absolute;left:calc('+benchPct+'% - 1px);top:-6px;height:28px;width:2px;background:'+CX.text+';opacity:.75"></div>'
+        +'<div style="position:absolute;left:'+benchPct+'%;top:-20px;transform:translateX(-50%);font-size:.625rem;color:var(--text-muted);white-space:nowrap;font-weight:600">Meta: '+bench+'</div>'
+        +'<div style="position:absolute;left:calc('+vPct+'% - 1px);bottom:-6px;height:28px;width:2px;background:'+col+'"></div>'
+        +'<div style="position:absolute;left:'+vPct+'%;bottom:-20px;transform:translateX(-50%);font-size:.625rem;color:'+col+';white-space:nowrap;font-weight:700">Atual: '+v+'</div>'
+        +'</div>'
+        +'<div style="display:flex;justify-content:space-between;font-size:.625rem;color:var(--text-muted);margin-top:.25rem"><span>0</span><span>40</span><span>70</span><span>100</span></div>'
+        +'</div>'
+        +'<div style="text-align:right">'+tg(status,tone)+'</div>'
+        +'</div>';
+      return '<div style="margin:.5rem 0 1rem">'+insight(bar,
+        'Coerência geral: '+v+'/100. '+(v>=70?'Boa — foco em manter consistência.':v>=40?'Atenção — desvios entre canais erodem autoridade.':'CRÍTICO — priorizar editorial imediatamente.'),
+        v>=70?'good':v>=40?'warn':'bad')+'</div>';
+    })();
+    h += sc('Coerência do Tom de Voz',
+      (pillars?cd('Brand Voice Target',pillars):'')
+      +gaugeBlock
+      +(alignRows.length?insight(alignChart, toneInsight, (worstCh && tvScore(worstCh)!=null && tvScore(worstCh)<40)?'bad':'warn'):'')
+      +tb(['Canal','Tom atual','Exemplo','Alinhamento','Gap / ajuste sugerido'],
+        tv.channel_drift.map(c=>{
+          const sc100 = tvScore(c);
+          const alignLabel = c.target_alignment ? String(c.target_alignment) + (sc100!=null?' ('+sc100+'/100)':'') : (sc100!=null?sc100+'/100':'—');
+          return [
+            '<strong>'+E(c.channel)+'</strong>',
+            '<span style="font-size:.75rem">'+E(tvTone(c)||'—')+'</span>',
+            tvExample(c)?'<em style="font-size:.75rem;color:var(--text-muted)">"'+E(tvExample(c))+'"</em>':'—',
+            sc100!=null?tg(alignLabel,sc100>=70?'green':sc100>=40?'yellow':'red'):E(alignLabel),
+            '<span style="font-size:.75rem;color:var(--text-muted)">'+E(tvNotes(c)||'—')+'</span>',
+          ];
+        }))
+      +(tv.coherence_score!=null?'<div style="margin-top:.75rem">'+mt(tv.coherence_score+'/100','Coerência geral',tv.coherence_score>=70?'green':tv.coherence_score>=40?'yellow':'red')+'</div>':''));
+  }
+
+  // URL audit
+  if (d.url_audit?.urls?.length) {
+    h += sc('Auditoria de URLs',
+      d.url_audit.urls.map(u=>
+        cd(u.url||'—',
+          (u.purpose?'<div style="font-size:.8125rem;margin-bottom:.25rem"><strong>Finalidade:</strong> '+E(u.purpose)+'</div>':'')
+          +(u.status_expected?'<div style="font-size:.75rem;color:var(--text-muted);margin-bottom:.375rem">Status esperado: '+E(u.status_expected)+'</div>':'')
+          +(u.verify_checklist?.length?'<ul class="cl">'+u.verify_checklist.map(i=>'<li><span class="cl__icon cl__icon--pending">&#9675;</span>'+E(i)+'</li>').join('')+'</ul>':''))
+      ).join(''));
+  }
+
   return h;
 },
 
@@ -943,8 +1801,38 @@ const R = {
   if (d.tam_sam_som) {
     const t = d.tam_sam_som;
     h += '<div class="gr gr--3">'+mt(BRL(t.tam?.value_brl),'TAM','red')+mt(BRL(t.sam?.value_brl),'SAM','yellow')+mt(BRL(t.som?.value_brl),'SOM','green')+'</div>';
+    // Funil TAM→SAM→SOM
+    if (t.tam?.value_brl && t.sam?.value_brl && t.som?.value_brl) {
+      const funnelStages = [
+        {name:'TAM — Mercado Total', volume: t.tam.value_brl},
+        {name:'SAM — Endereçável', volume: t.sam.value_brl},
+        {name:'SOM — Atingível', volume: t.som.value_brl},
+      ];
+      const somPct = (t.som.value_brl/t.tam.value_brl*100);
+      const funnelInsight = 'SOM representa '+somPct.toFixed(1)+'% do TAM — '
+        +(somPct>=5?'mercado endereçável confortável para os próximos 12-24 meses.':'fatia pequena; o desafio é capturar o SAM gradualmente.');
+      h += sc('Mercado: TAM × SAM × SOM',
+        insight(chartFunnel(funnelStages, {title:'Afunilamento de Mercado', fmt:v=>BRL(v)}),
+          funnelInsight, somPct>=5?'good':'warn'));
+    }
   }
   if (d.competitors?.length) {
+    // Barras horizontais comparando digital_score
+    const compBars = d.competitors.filter(c=>c.digital_score!=null).map(c=>({
+      label: c.name,
+      value: c.digital_score,
+      tone: c.digital_score>=7?'green':c.digital_score>=4?'yellow':'red',
+      subtext: c.estimated_pricing || '',
+    }));
+    if (compBars.length >= 2) {
+      const avg = compBars.reduce((s,x)=>s+x.value,0)/compBars.length;
+      const strongest = [...compBars].sort((a,b)=>b.value-a.value)[0];
+      const compInsight = 'Líder digital: '+strongest.label+' ('+strongest.value+'/10). Média do grupo: '+avg.toFixed(1)+'/10. '
+        +(avg<5?'Concorrência digital fraca — janela de oportunidade.':avg<7?'Competição média — diferenciação é chave.':'Concorrência forte — foco em nicho e prova social.');
+      h += sc('Scorecard Digital dos Concorrentes',
+        insight(chartHBar(compBars, {title:'Score Digital (0-10)', fmt:v=>v+'/10', labelWidth:140}),
+          compInsight, avg<5?'good':avg<7?'warn':'bad'));
+    }
     h += sc('Concorrentes', '<div class="gr gr--2">'+d.competitors.map(c=>
       '<div class="cd"><div class="cd__title">'+E(c.name)+' '+tg(c.digital_score+'/10',c.digital_score>=7?'green':c.digital_score>=4?'yellow':'red')+'</div>'
       +'<div class="cd__body">'+E(c.positioning)
@@ -1000,39 +1888,557 @@ const R = {
 },
 
 'ee-s2-diagnostico-midia'(d) {
+  // Helper: trend arrow + % change between two values
+  function trend(curr, prev, invertBad) {
+    if (!prev || prev === 0) return '';
+    const pct = ((curr - prev) / Math.abs(prev) * 100);
+    const up = pct >= 0;
+    // For CPA/CPL, going up is bad; for clicks/leads, going up is good
+    const isGood = invertBad ? !up : up;
+    const col = isGood ? 'var(--success)' : 'var(--danger)';
+    const arrow = up ? '▲' : '▼';
+    return ' <span style="color:'+col+';font-size:.6875rem;font-weight:700">'+arrow+Math.abs(pct).toFixed(0)+'%</span>';
+  }
+
+  // Helper: monthly evolution table
+  function evTable(rows, cols) {
+    if (!rows?.length) return '';
+    const headers = ['Mês'].concat(cols.map(c=>c.label));
+    const trows = rows.map((r, i) => {
+      const prev = rows[i-1];
+      return [E(r.month)].concat(cols.map(c => {
+        const val = r[c.key];
+        const prevVal = prev ? prev[c.key] : null;
+        let formatted = val==null ? '—' : (c.fmt ? c.fmt(val) : String(val));
+        let tr = prevVal!=null ? trend(val, prevVal, c.badUp||false) : '';
+        let cls = c.colorFn ? c.colorFn(val, prev ? prev[c.key] : null) : '';
+        return (cls ? tg(formatted, cls) : formatted) + tr;
+      }));
+    });
+    return tb(headers, trows);
+  }
+
   let h = '';
+
+  // Period header
+  if (d.data_period) {
+    h += '<div style="display:inline-flex;align-items:center;gap:.5rem;background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:.375rem .75rem;margin-bottom:.75rem">'
+      +'<span style="font-size:.6875rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--text-muted)">Período analisado</span>'
+      +'<span style="font-size:.8125rem;font-weight:700;color:var(--accent)">'+E(d.data_period)+'</span>'
+      +(d.data_period_months ? '<span style="font-size:.75rem;color:var(--text-muted)">('+d.data_period_months+' meses)</span>' : '')
+      +'</div>';
+  }
+
   if (d.summary) h += sm(d.summary);
-  const cm = d.current_metrics||{}, bm = d.benchmarks||{};
-  h += '<div class="gr gr--5">'
-    +mt(cm.cpl!=null?BRL(cm.cpl):'—','CPL',cm.cpl&&bm.cpl?(cm.cpl<=bm.cpl?'green':'red'):'')
-    +mt(cm.ctr!=null?PCT(cm.ctr):'—','CTR',cm.ctr&&bm.ctr?(cm.ctr>=bm.ctr?'green':'red'):'')
-    +mt(cm.conversion_rate!=null?PCT(cm.conversion_rate):'—','Conversão','')
-    +mt(cm.roas!=null?N(cm.roas)+'x':'—','ROAS',cm.roas&&bm.roas?(cm.roas>=bm.roas?'green':'red'):'')
-    +mt(cm.cpc!=null?BRL(cm.cpc):'—','CPC','')
-    +'</div>';
-  if (d.diagnosis_by_dimension) {
-    const dd = d.diagnosis_by_dimension;
-    h += sc('Diagnóstico por Dimensão', '<div class="gr gr--2">'
-      +cd('Estrutura de Conta',E(dd.account_structure?.observation)+' '+tg(dd.account_structure?.organization||'','gray'))
-      +cd('Criativos',E(dd.creatives?.evaluation)+(dd.creatives?.fatigue_detected?' '+tg('Fadiga detectada','danger'):''))
-      +cd('Landing Pages',E(dd.landing_pages?.evaluation)+' '+tg('Coerência: '+(dd.landing_pages?.coherence_with_ads||'—'),{high:'green',medium:'yellow',low:'red'}[dd.landing_pages?.coherence_with_ads]))
-      +cd('Audiências',E(dd.audiences?.evaluation)+(dd.audiences?.retargeting_active?' '+tg('Retargeting ativo','green'):' '+tg('Sem retargeting','danger')))
-      +'</div>');
+
+  // Overview metrics
+  const om = d.overall_metrics||{};
+  if (om.cac || om.cpl_real) {
+    h += '<div class="gr gr--4">'
+      +mt(om.cpl_real!=null?BRL(om.cpl_real):'—','CPL Real','red')
+      +mt(om.leads_month!=null?N(om.leads_month):'—','Leads/mês','')
+      +mt(om.agendamentos_month!=null?N(om.agendamentos_month):'—','Agendamentos/mês','')
+      +mt(om.cac!=null?BRL(om.cac):'—','CAC Total','red')
+      +'</div>';
   }
+
+  // CPL Gauge vs Benchmark
+  const bench = d.benchmarks || {};
+  if (om.cpl_real!=null && bench.cpl!=null) {
+    const cplMax = Math.max(om.cpl_real, bench.cpl) * 1.5;
+    const gap = ((om.cpl_real - bench.cpl) / bench.cpl * 100);
+    const cplTone = om.cpl_real <= bench.cpl ? 'good' : om.cpl_real <= bench.cpl*1.3 ? 'warn' : 'bad';
+    const cplInsight = gap > 0
+      ? 'CPL atual ('+BRL(om.cpl_real)+') está '+gap.toFixed(0)+'% acima do benchmark ('+BRL(bench.cpl)+') — cada lead custa '+BRL(om.cpl_real - bench.cpl)+' a mais do que deveria.'
+      : 'CPL ('+BRL(om.cpl_real)+') está '+Math.abs(gap).toFixed(0)+'% abaixo do benchmark — aproveitar para escalar budget.';
+    h += sc('CPL vs Benchmark do Setor',
+      insight(chartGauge(om.cpl_real, bench.cpl, cplMax, {title:'CPL Real vs Benchmark', fmt:v=>BRL(v), invert:true}),
+        cplInsight, cplTone));
+  }
+
+  // ── GOOGLE ADS ──
+  const ga = d.google_ads;
+  if (ga) {
+    // Divisor forte antes da seção Google Ads
+    h += '<div style="margin:2rem 0 1rem;padding:1rem 1.25rem;background:linear-gradient(90deg, rgba(59,130,246,0.08), transparent);border-left:4px solid #3b82f6;border-radius:4px">'
+      +'<div style="font-size:.6875rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#3b82f6;margin-bottom:.125rem">Canal 1</div>'
+      +'<div style="font-size:1.25rem;font-weight:800;color:var(--text-primary);letter-spacing:-.01em">Google Ads</div>'
+      +(ga.budget_monthly?'<div style="font-size:.75rem;color:var(--text-muted);margin-top:.125rem">Investimento atual: '+BRL(ga.budget_monthly)+'/mês · '+(ga.active_campaigns||0)+' campanha'+(ga.active_campaigns!==1?'s':'')+' ativa'+(ga.active_campaigns!==1?'s':'')+' de '+(ga.total_campaigns||0)+' total</div>':'')
+      +'</div>';
+    const gClsColor = ga.score >= 70?'success':ga.score>=40?'warning':'danger';
+    let gaHead = '';
+
+    // Monthly evolution table
+    let gaEvol = '';
+    if (ga.monthly_evolution?.length) {
+      gaEvol = evTable(ga.monthly_evolution, [
+        {key:'cost',   label:'Custo',        fmt: v=>'R$'+v.toFixed(0), badUp:true,  colorFn:(v,p)=>p&&v>p*1.1?'red':p&&v<p*0.9?'green':''},
+        {key:'clicks', label:'Clicks',       fmt: v=>N(v),              badUp:false, colorFn:(v,p)=>p&&v<p*0.9?'red':p&&v>p*1.1?'green':''},
+        {key:'impressions',label:'Impressões',fmt:v=>N(v),              badUp:false, colorFn:(v,p)=>p&&v<p*0.9?'red':''},
+        {key:'ctr',    label:'CTR',          fmt: v=>v.toFixed(2)+'%',  badUp:false},
+        {key:'cpa',    label:'CPA',          fmt: v=>'R$'+v.toFixed(2), badUp:true,  colorFn:(v,p)=>v>30?'red':v>15?'yellow':'green'},
+        {key:'conversions',label:'Conv.',    fmt: v=>N(v),              badUp:false},
+      ]);
+    }
+
+    // Gender breakdown bars
+    let gaGender = '';
+    if (ga.gender_breakdown?.length) {
+      const maxPct = Math.max(...ga.gender_breakdown.map(g=>g.pct_clicks));
+      gaGender = '<div style="margin-bottom:.25rem;font-size:.6875rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--text-muted)">Distribuição por Gênero</div>';
+      ga.gender_breakdown.forEach(g => {
+        const barW = (g.pct_clicks/maxPct*100).toFixed(1);
+        const col = g.gender==='Feminino'?'var(--danger)':g.gender==='Masculino'?'#3b82f6':'var(--border-strong)';
+        gaGender += '<div style="display:grid;grid-template-columns:90px 1fr 60px 70px;gap:.375rem;align-items:center;margin-bottom:.375rem">'
+          +'<div style="font-size:.75rem;color:var(--text-secondary)">'+E(g.gender)+'</div>'
+          +'<div style="height:16px;background:var(--surface);border-radius:3px;overflow:hidden">'
+          +  '<div style="height:100%;width:'+barW+'%;background:'+col+';border-radius:3px;opacity:.8"></div>'
+          +'</div>'
+          +'<div style="font-size:.75rem;font-weight:700;color:var(--text-primary)">'+g.pct_clicks.toFixed(1)+'%</div>'
+          +'<div style="font-size:.6875rem;color:var(--text-muted)">CPA R$'+g.cpa.toFixed(2)+'</div>'
+          +'</div>';
+      });
+    }
+
+    // Day of week bars
+    let gaDow = '';
+    if (ga.day_of_week?.length) {
+      const maxPct = Math.max(...ga.day_of_week.map(dw=>dw.pct));
+      gaDow = '<div style="margin-bottom:.25rem;font-size:.6875rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--text-muted)">Volume por Dia da Semana</div>';
+      ga.day_of_week.forEach(dw => {
+        const barW = (dw.pct/maxPct*100).toFixed(1);
+        const isBest = dw.ctr === Math.max(...ga.day_of_week.map(x=>x.ctr));
+        const isTop = dw.pct >= 15.0;
+        const col = isBest ? 'var(--warning)' : isTop ? 'var(--danger)' : 'var(--accent)';
+        gaDow += '<div style="display:grid;grid-template-columns:70px 1fr 48px 60px;gap:.375rem;align-items:center;margin-bottom:.3rem">'
+          +'<div style="font-size:.75rem;color:var(--text-secondary)">'+E(dw.day)+(isBest?' 🔥':'')+'</div>'
+          +'<div style="height:14px;background:var(--surface);border-radius:2px;overflow:hidden">'
+          +  '<div style="height:100%;width:'+barW+'%;background:'+col+';border-radius:2px;opacity:.75"></div>'
+          +'</div>'
+          +'<div style="font-size:.75rem;font-weight:700;color:var(--text-primary)">'+dw.pct.toFixed(1)+'%</div>'
+          +'<div style="font-size:.6875rem;color:var(--text-muted)">CTR '+dw.ctr.toFixed(2)+'%</div>'
+          +'</div>';
+      });
+    }
+
+    // Keywords table — rich version
+    let gaKw = '';
+    if (ga.top_keywords?.length) {
+      gaKw = tb(
+        ['Keyword','Tipo','Impr.','Clicks','CTR','Custo','CPC','CPA','Conv.',''],
+        ga.top_keywords.map(k=>[
+          '<span style="font-weight:600;font-size:.8125rem">'+E(k.keyword)+'</span>'
+            +(k.insight&&k.insight.startsWith('🔥')||k.insight&&k.insight.startsWith('🐱')
+              ? '<div style="font-size:.6875rem;color:var(--text-muted);margin-top:.1rem">'+E(k.insight)+'</div>' : ''),
+          '<span style="font-size:.6875rem;color:var(--text-muted)">'+E(k.match_type||'')+'</span>',
+          '<span style="font-size:.8125rem">'+N(k.impressions||0)+'</span>',
+          '<span style="font-size:.8125rem;font-weight:600">'+N(k.clicks||0)+'</span>',
+          tg((k.ctr||0).toFixed(1)+'%', k.ctr>=15?'green':k.ctr>=8?'yellow':'gray'),
+          '<span style="font-size:.8125rem">R$'+(k.cost||0).toFixed(0)+'</span>',
+          k.cpc!=null ? '<span style="font-size:.8125rem">R$'+(k.cpc).toFixed(2)+'</span>' : '—',
+          k.cpa!=null ? tg('R$'+(k.cpa).toFixed(2), k.cpa<=14?'green':k.cpa<=25?'yellow':'red') : tg('—','gray'),
+          '<span style="font-size:.8125rem">'+(k.conversions||0)+'</span>',
+          k.tag ? tg(k.tag, k.tag==='felinos'?'yellow':k.tag==='domicílio'?'green':k.tag==='marca'?'green':'gray') : '',
+        ]));
+    }
+
+    // Missed keywords
+    let gaMissed = '';
+    if (ga.missed_keywords?.length) {
+      gaMissed = ga.missed_keywords.map(k=>
+        '<div style="margin-bottom:.375rem"><span style="font-size:.8125rem;font-weight:600;color:var(--danger)">'+E(k.keyword)+'</span>'
+        +'<div style="font-size:.75rem;color:var(--text-muted);margin-top:.1rem">'+E(k.gap)+'</div></div>'
+      ).join('');
+    }
+
+    // Paused opportunity
+    let gaPaused = '';
+    if (ga.paused_campaigns_opportunity?.length) {
+      gaPaused = tb(['Campanha','CPA Histórico','Conversões','Nota'],
+        ga.paused_campaigns_opportunity.map(c=>[
+          E(c.name),
+          tg('R$'+c.cpa.toFixed(2),'green'),
+          N(c.conversions),
+          '<span style="font-size:.75rem;color:var(--text-muted)">'+E(c.note)+'</span>'
+        ]));
+    }
+
+    h += sc('Google Ads', gaHead
+      +(gaEvol ? '<div style="margin-bottom:.75rem"><div style="font-size:.6875rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--text-muted);margin-bottom:.375rem">Evolução Mensal</div>'+gaEvol+'</div>' : '')
+      +'<div class="gr gr--2">'
+      +cd('Gênero', gaGender)
+      +cd('Dias de Pico', gaDow)
+      +'</div>'
+      +(gaKw ? '<div style="margin-top:.75rem"><div style="font-size:.6875rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--text-muted);margin-bottom:.375rem">Análise de Keywords</div>'+gaKw+'</div>' : '')
+      +(gaMissed ? cd('Keywords Ausentes — Gap Crítico', gaMissed, 'danger') : '')
+      +(gaPaused ? '<div style="margin-top:.75rem"><div style="font-size:.6875rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--text-muted);margin-bottom:.375rem">Campanhas Pausadas com Alta Performance</div>'+gaPaused+'</div>' : '')
+    );
+  }
+
+  // ── META ADS ──
+  const ma = d.meta_ads;
+  if (ma) {
+    // Divisor forte antes da seção Meta Ads
+    h += '<div style="margin:2.5rem 0 1rem;padding:1rem 1.25rem;background:linear-gradient(90deg, rgba(59,130,246,0.08), transparent);border-left:4px solid #1877f2;border-radius:4px">'
+      +'<div style="font-size:.6875rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#1877f2;margin-bottom:.125rem">Canal 2</div>'
+      +'<div style="font-size:1.25rem;font-weight:800;color:var(--text-primary);letter-spacing:-.01em">Meta Ads (Facebook + Instagram)</div>'
+      +(ma.budget_monthly?'<div style="font-size:.75rem;color:var(--text-muted);margin-top:.125rem">Investimento atual: '+BRL(ma.budget_monthly)+'/mês · '+(ma.active_campaigns||0)+' campanha'+(ma.active_campaigns!==1?'s':'')+' ativa'+(ma.active_campaigns!==1?'s':'')+' de '+(ma.total_campaigns||0)+' total'+(ma.status==='broken'?' · ⚠ links quebrados detectados':'')+'</div>':'')
+      +'</div>';
+    const mClsColor = ma.score >= 40?'warning':'danger';
+    let maHead = '';
+
+    // Monthly evolution table for Meta
+    let maEvol = '';
+    if (ma.monthly_evolution?.length) {
+      maEvol = evTable(ma.monthly_evolution, [
+        {key:'spend',      label:'Gasto',       fmt: v=>'R$'+v.toFixed(0), badUp:true},
+        {key:'impressions',label:'Impressões',   fmt: v=>N(v),              badUp:false},
+        {key:'clicks',     label:'Clicks',       fmt: v=>N(v),              badUp:false},
+        {key:'reach',      label:'Alcance',      fmt: v=>N(v),              badUp:false},
+        {key:'cpm',        label:'CPM',          fmt: v=>'R$'+v.toFixed(2), badUp:true, colorFn:(v)=>v>15?'red':v>10?'yellow':'green'},
+        {key:'ctr',        label:'CTR',          fmt: v=>v.toFixed(2)+'%',  badUp:false, colorFn:(v)=>v<1?'red':v<2?'yellow':'green'},
+      ]);
+    }
+
+    let maCritical = '';
+    if (ma.critical_issues?.length) {
+      maCritical = ma.critical_issues.map(i=>
+        '<div style="font-size:.8125rem;color:var(--danger);margin-bottom:.3rem">&#9650; '+E(i)+'</div>'
+      ).join('');
+    }
+
+    let maBench = '';
+    if (ma.metrics_vs_benchmark?.length) {
+      maBench = tb(['Métrica','Atual','Benchmark','Status'],
+        ma.metrics_vs_benchmark.map(m=>[
+          E(m.metric), E(m.atual), E(m.benchmark),
+          tg(m.gap, m.status==='ok'?'green':m.status==='critical'?'danger':'yellow')
+        ]));
+    }
+
+    let maBest = '';
+    if (ma.best_historical?.length) {
+      maBest = ma.best_historical.map(c=>
+        '<div style="margin-bottom:.375rem"><div style="font-size:.8125rem;font-weight:600;color:var(--text-primary)">'+E(c.name)+'</div>'
+        +'<div style="font-size:.75rem;color:var(--text-muted)">CPM R$'+E(c.cpm)+' · '+N(c.impressions)+' impressões · '+E(c.note)+'</div></div>'
+      ).join('');
+    }
+
+    h += sc('Meta Ads', maHead
+      +(maEvol ? '<div style="margin-bottom:.75rem"><div style="font-size:.6875rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--text-muted);margin-bottom:.375rem">Evolução Mensal</div>'+maEvol+'</div>' : '')
+      +cd('Problemas Críticos', maCritical, 'danger')
+      +(maBench ? '<div style="margin-top:.75rem">'+maBench+'</div>' : '')
+      +(maBest ? cd('Histórico de Destaque', maBest) : '')
+    );
+  }
+
+  // Top problems
   if (d.top_problems?.length) {
-    h += sc('Problemas Críticos', d.top_problems.map(p=>cd(p.problem,'<strong>Evidência:</strong> '+E(p.data_evidence)+'<br><strong>Impacto:</strong> '+E(p.impact),'danger')).join(''));
+    h += sc('Top 3 Problemas Críticos', d.top_problems.map(p=>
+      cd(p.problem,
+        '<p style="margin:0 0 .375rem"><strong>Evidência:</strong> '+E(p.data_evidence)+'</p>'
+        +'<p style="margin:0;color:var(--text-secondary)">'+E(p.impact)+'</p>',
+        'danger')
+    ).join(''));
   }
+
+  // Action plan
   if (d.action_plan?.length) {
-    h += sc('Plano de Ação', tb(['Ação','Prioridade','Impacto','Responsável','Prazo'],
-      d.action_plan.map(a=>[E(a.action),tg(a.priority,PRI[a.priority]),E(a.expected_impact),E(a.responsible),E(a.deadline)])));
+    h += sc('Plano de Ação — 30 dias', tb(['#','Ação','Prioridade','Impacto','Prazo'],
+      d.action_plan.map(a=>[
+        E(a.rank),
+        E(a.action),
+        tg(a.priority, {P1:'red',P2:'yellow',P3:'gray'}[a.priority]||'gray'),
+        '<span style="font-size:.75rem;color:var(--text-muted)">'+E(a.expected_impact)+'</span>',
+        E(a.deadline)
+      ])));
   }
-  if (d.realistic_goal) {
-    const g = d.realistic_goal;
-    h += sc('Meta Realista (90 dias)', '<div class="gr gr--2">'
-      +(g.target_cpl!=null?mt(BRL(g.target_cpl),'CPL Alvo','green'):'')
-      +(g.target_roas!=null?mt(g.target_roas+'x','ROAS Alvo','green'):'')
-      +'</div>'+(g.justification?co(g.justification):''));
+
+  // Keyword clusters
+  if (d.keyword_clusters?.length) {
+    // Donut de distribuição de budget
+    const withBudget = d.keyword_clusters.filter(c=>c.budget_allocation_pct!=null);
+    let donutBlock = '';
+    if (withBudget.length >= 2) {
+      const donutData = withBudget.map((c,i)=>({
+        label: c.cluster,
+        value: c.budget_allocation_pct,
+        tone: ['blue','green','yellow','red','gray','blue'][i%6],
+      }));
+      const top = [...withBudget].sort((a,b)=>(b.budget_allocation_pct||0)-(a.budget_allocation_pct||0))[0];
+      const donutInsight = top
+        ? 'Cluster "'+top.cluster+'" concentra '+top.budget_allocation_pct+'% do budget — intent '+(top.intent||'?')+'. '
+          +(top.budget_allocation_pct>=40?'Concentração alta: revisar diversificação.':'Mix equilibrado entre intents.')
+        : '';
+      donutBlock = insight(chartDonut(donutData, {title:'Distribuição de Budget por Cluster'}),
+        donutInsight, top?.budget_allocation_pct>=50?'warn':'good');
+    }
+    h += sc('Clusters de Keywords', donutBlock + tb(
+      ['Cluster','Intenção','% Budget','CPC esperado','Bid strategy','Ângulo de copy','Risco'],
+      d.keyword_clusters.map(c=>[
+        '<strong>'+E(c.cluster)+'</strong>'
+          +(c.keywords?.length?'<div style="font-size:.6875rem;color:var(--text-muted);margin-top:.125rem">'+(c.keywords||[]).slice(0,6).map(E).join(' · ')+'</div>':''),
+        c.intent?tg(c.intent,{transactional:'green',commercial:'yellow',informational:'gray',navigational:'green'}[c.intent]):'—',
+        c.budget_allocation_pct!=null?tg(c.budget_allocation_pct+'%',c.budget_allocation_pct>=30?'red':c.budget_allocation_pct>=15?'yellow':'gray'):'—',
+        E(c.expected_cpc_range||'—'),
+        '<span style="font-size:.75rem">'+E(c.bid_strategy||'—')+'</span>',
+        '<span style="font-size:.75rem;color:var(--text-muted)">'+E(c.copy_angle||'—')+'</span>',
+        '<span style="font-size:.75rem;color:var(--danger)">'+E(c.risk||'—')+'</span>',
+      ])));
   }
+
+  // Budget reallocation scenarios
+  if (d.budget_reallocation_scenarios) {
+    const br = d.budget_reallocation_scenarios;
+    const sumAlloc = obj => obj ? Object.values(obj).reduce((s,v)=>s+(typeof v==='number'?v:0),0) : 0;
+    const scenTotal = s => (s.total_budget_monthly!=null)?s.total_budget_monthly:(sumAlloc(s.google_allocation)+sumAlloc(s.meta_allocation));
+    const scenLeads = s => s.expected_leads_monthly ?? s.projected_leads_month ?? null;
+    const scenCpl = s => s.expected_cpl ?? s.projected_cpl ?? null;
+    const scenName = s => s.name || s.label || '—';
+    const scenGoogle = s => s.google_split!=null?s.google_split:sumAlloc(s.google_allocation);
+    const scenMeta = s => s.meta_split!=null?s.meta_split:sumAlloc(s.meta_allocation);
+
+    const renderBs = (s, variant) => s ? cd(scenName(s),
+      '<div class="gr gr--2" style="gap:.375rem">'
+      +mt(BRL(scenTotal(s)),'Budget/mês','')
+      +(scenLeads(s)!=null?mt(N(scenLeads(s)),'Leads/mês',''):'')
+      +(scenCpl(s)!=null?mt(BRL(scenCpl(s)),'CPL projetado',''):'')
+      +(s.expected_roas!=null?mt(s.expected_roas.toFixed(1)+'x','ROAS',''):
+        s.delta_leads?mt(s.delta_leads,'Δ Leads',''):'')
+      +'</div>'
+      +'<div style="font-size:.75rem;color:var(--text-muted);margin-top:.25rem">'
+      +(scenGoogle(s)>0?'Google: '+BRL(scenGoogle(s))+' · ':'')
+      +(scenMeta(s)>0?'Meta: '+BRL(scenMeta(s)):'')
+      +'</div>'
+      +(s.effort_weeks!=null||s.confidence?('<div style="font-size:.75rem;color:var(--text-muted);margin-top:.25rem">'
+        +(s.effort_weeks!=null?'Esforço: '+s.effort_weeks+' sem · ':'')
+        +(s.confidence?'Confiança: '+E(s.confidence):'')
+        +'</div>'):'')
+      +(s.changes?.length?'<details style="margin-top:.375rem"><summary style="font-size:.75rem;cursor:pointer;color:var(--accent)">Mudanças ('+s.changes.length+')</summary>'
+        +'<ul style="font-size:.75rem;margin:.375rem 0 0;padding-left:1rem">'+s.changes.map(c=>'<li style="margin-bottom:.2rem">'+E(c)+'</li>').join('')+'</ul></details>':'')
+      +(s.campaigns_structure?.length?'<details style="margin-top:.375rem"><summary style="font-size:.75rem;cursor:pointer;color:var(--accent)">Estrutura ('+s.campaigns_structure.length+' campanhas)</summary>'
+        +'<div style="font-size:.75rem;margin-top:.375rem">'+s.campaigns_structure.map(c=>
+          '<div style="margin-bottom:.25rem">• <strong>'+E(c.campaign)+'</strong> ('+E(c.platform||'')+') — '+(c.budget_monthly!=null?BRL(c.budget_monthly):'—')+' — <em>'+E(c.objective||'')+'</em></div>'
+        ).join('')+'</div></details>':'')
+      +(s.prerequisites?.length?'<details style="margin-top:.375rem"><summary style="font-size:.75rem;cursor:pointer;color:var(--accent)">Pré-requisitos ('+s.prerequisites.length+')</summary>'
+        +'<ul style="font-size:.75rem;margin:.375rem 0 0;padding-left:1rem">'+s.prerequisites.map(c=>'<li>'+E(c)+'</li>').join('')+'</ul></details>':'')
+      +(s.risk_assessment?'<div style="font-size:.75rem;color:var(--text-muted);margin-top:.25rem">Risco: '+E(s.risk_assessment)+'</div>':''),
+      variant) : '';
+    // Scenario comparison — metrics as rows, scenarios as columns, inline bars per row
+    const scArr = [br.scenario_a_conservative, br.scenario_b_realistic, br.scenario_c_aggressive].filter(Boolean);
+    let scChart = '';
+    if (scArr.length >= 2) {
+      const recommendedIdx = 1; // realista
+      const best = scArr.reduce((b,x)=>((scenLeads(x)||0)>(scenLeads(b)||0)?x:b), scArr[0]);
+      const scInsightTxt = best
+        ? 'Cenário "'+scenName(best).split('—')[0].trim()+'" entrega '+N(scenLeads(best)||0)+' leads/mês a CPL '+BRL(scenCpl(best)||0)+' com budget de '+BRL(scenTotal(best))+'.'
+        : '';
+      const shortName = s => scenName(s).split('—')[0].trim();
+      // Column header
+      const colHeader = '<div style="display:grid;grid-template-columns:minmax(140px,20%) repeat('+scArr.length+',1fr);gap:.75rem;align-items:end;padding:0 0 .75rem;border-bottom:2px solid var(--border)">'
+        +'<div></div>'
+        +scArr.map((s,i)=>{
+          const isRec = i===recommendedIdx;
+          return '<div style="text-align:center">'
+            +(isRec?'<div style="font-size:.6875rem;font-weight:700;color:'+chartColor('green')+';text-transform:uppercase;letter-spacing:.05em;margin-bottom:.25rem">★ Recomendado</div>':'<div style="height:1rem"></div>')
+            +'<div style="font-size:.875rem;font-weight:700;color:'+(isRec?chartColor('green'):'var(--text)')+'">'+E(shortName(s))+'</div>'
+            +'<div style="font-size:.6875rem;color:var(--text-muted);margin-top:.15rem;line-height:1.3">'+E(scenName(s).split('—').slice(1).join('—').trim()||'')+'</div>'
+            +'</div>';
+        }).join('')+'</div>';
+      // Metric rows with inline bars (normalized per row)
+      const rows = [
+        {label:'Budget/mês', invert:false, values:scArr.map(s=>scenTotal(s)), fmt:v=>BRL(v)},
+        {label:'Leads projetados/mês', invert:false, values:scArr.map(s=>scenLeads(s)), fmt:v=>N(v)+' leads'},
+        {label:'CPL projetado', invert:true, values:scArr.map(s=>scenCpl(s)), fmt:v=>BRL(v), note:'menor = melhor'},
+        {label:'Δ vs atual', invert:false, values:scArr.map(s=>s.delta_leads||null), fmt:v=>v, isText:true},
+        {label:'Esforço', invert:true, values:scArr.map(s=>s.effort_weeks), fmt:v=>v+' sem', note:'menor = melhor'},
+        {label:'Confiança', invert:false, values:scArr.map(s=>s.confidence||null), fmt:v=>v, isText:true},
+      ].filter(r=>r.values.some(v=>v!=null && v!==0));
+      const rowsHtml = rows.map(r=>{
+        const numVals = r.values.map(v=>typeof v==='number'?v:null);
+        const maxV = Math.max(...numVals.filter(v=>v!=null));
+        const minV = Math.min(...numVals.filter(v=>v!=null));
+        const best = r.invert ? minV : maxV;
+        return '<div style="display:grid;grid-template-columns:minmax(140px,20%) repeat('+scArr.length+',1fr);gap:.75rem;align-items:center;padding:.625rem 0;border-bottom:1px solid var(--border)">'
+          +'<div><div style="font-size:.75rem;font-weight:600">'+E(r.label)+'</div>'
+          +(r.note?'<div style="font-size:.625rem;color:var(--text-muted)">'+E(r.note)+'</div>':'')+'</div>'
+          +r.values.map((v,i)=>{
+            const isRec = i===recommendedIdx;
+            if (v==null) return '<div style="text-align:center;font-size:.75rem;color:var(--text-muted)">—</div>';
+            const isBest = typeof v==='number' && v===best && numVals.filter(x=>x===best).length<numVals.filter(x=>x!=null).length;
+            const col = isBest?chartColor('green'):(isRec?chartColor('green'):'var(--text)');
+            if (r.isText) {
+              return '<div style="text-align:center"><div style="font-size:.8125rem;font-weight:'+(isRec?700:600)+';color:'+col+'">'+E(String(r.fmt(v)))+'</div></div>';
+            }
+            const pct = maxV>0 ? (v/maxV*100) : 0;
+            return '<div style="text-align:center">'
+              +'<div style="font-size:.8125rem;font-weight:'+(isRec||isBest?700:600)+';color:'+col+';margin-bottom:.2rem">'+E(String(r.fmt(v)))+(isBest?' <span style="font-size:.625rem">★</span>':'')+'</div>'
+              +'<div style="height:6px;background:var(--surface);border-radius:2px;overflow:hidden">'
+              +'<div style="height:100%;width:'+pct.toFixed(1)+'%;background:'+(isBest?chartColor('green'):isRec?chartColor('green'):CX.muted)+';opacity:'+(isBest||isRec?'.85':'.5')+';border-radius:2px"></div>'
+              +'</div></div>';
+          }).join('')
+          +'</div>';
+      }).join('');
+      scChart = insight(
+        chartTitle('Comparativo de Cenários — Trade-offs Lado a Lado')
+        +colHeader+rowsHtml,
+        scInsightTxt, 'good');
+    }
+    h += sc('Cenários de Realocação de Budget',
+      (br.description?'<p style="font-size:.8125rem;color:var(--text-muted);margin:0 0 .75rem">'+E(br.description)+'</p>':'')
+      +scChart
+      +'<div class="gr gr--3">'
+      +renderBs(br.scenario_a_conservative,'gray')
+      +renderBs(br.scenario_b_realistic,'green')
+      +renderBs(br.scenario_c_aggressive,'yellow')
+      +'</div>'
+      +(br.recommendation?co(br.recommendation):''));
+  }
+
+  // Creative testing hypotheses
+  if (d.creative_testing_hypotheses?.hypotheses?.length) {
+    const ct = d.creative_testing_hypotheses;
+    h += sc('Hipóteses de Teste de Criativos',
+      ct.hypotheses.map(hy=>
+        cd((hy.id?hy.id+' — ':'')+(hy.hypothesis||'—'),
+          '<div style="display:grid;grid-template-columns:1fr 1fr;gap:.5rem;font-size:.75rem">'
+          +(hy.angle?'<div><strong>Ângulo:</strong> '+E(hy.angle)+'</div>':'')
+          +(hy.format?'<div><strong>Formato:</strong> '+E(hy.format)+'</div>':'')
+          +(hy.target_audience?'<div><strong>Público:</strong> '+E(hy.target_audience)+'</div>':'')
+          +(hy.cta?'<div><strong>CTA:</strong> '+E(hy.cta)+'</div>':'')
+          +'</div>'
+          +(hy.hook?'<div style="font-size:.8125rem;margin-top:.375rem"><strong>Hook:</strong> <em>"'+E(hy.hook)+'"</em></div>':'')
+          +(hy.body?'<div style="font-size:.75rem;margin-top:.25rem;color:var(--text-secondary)">'+E(hy.body)+'</div>':'')
+          +(hy.success_criteria?'<div style="font-size:.75rem;margin-top:.375rem;color:var(--success)"><strong>Sucesso:</strong> '+E(hy.success_criteria)+'</div>':'')
+          +'<div style="margin-top:.375rem;display:flex;gap:.375rem">'
+          +(hy.testing_budget!=null?tg(BRL(hy.testing_budget),'gray'):'')
+          +(hy.testing_duration_days!=null?tg(hy.testing_duration_days+' dias','gray'):'')
+          +'</div>',
+          'yellow')
+      ).join('')
+      +(ct.testing_budget_total_week_1!=null?co('Budget total semana 1 de testes: '+BRL(ct.testing_budget_total_week_1)):''));
+  }
+
+  // Daypart optimization
+  if (d.daypart_optimization?.adjustments?.length) {
+    h += sc('Otimização por Dia/Hora',
+      tb(['Janela','Ajuste de lance','Rationale'],
+        d.daypart_optimization.adjustments.map(a=>[
+          '<strong>'+E(a.day_time)+'</strong>',
+          a.bid_adjustment_pct!=null?tg((a.bid_adjustment_pct>=0?'+':'')+a.bid_adjustment_pct+'%',a.bid_adjustment_pct>=0?'green':'red'):'—',
+          '<span style="font-size:.75rem;color:var(--text-secondary)">'+E(a.rationale||'—')+'</span>',
+        ])));
+  }
+
+  // Forecast sensitivity
+  if (d.forecast_sensitivity_analysis) {
+    const fs = d.forecast_sensitivity_analysis;
+    const bcLeads = bc => bc.leads_monthly ?? bc.leads_month_90d ?? null;
+    const bcCpl = bc => bc.cpl ?? bc.cpl_90d_brl ?? null;
+    const bcCac = bc => bc.cac ?? bc.cac_90d_brl ?? null;
+    let bcHtml = '';
+    if (fs.base_case) {
+      const bc = fs.base_case;
+      bcHtml = (bc.description?'<p style="font-size:.8125rem;color:var(--text-muted);margin:0 0 .5rem"><strong>Caso base:</strong> '+E(bc.description)+'</p>':'')
+        +'<div class="gr gr--4">'
+        +(bcLeads(bc)!=null?mt(N(bcLeads(bc)),'Leads/mês',''):'')
+        +(bcCpl(bc)!=null?mt(BRL(bcCpl(bc)),'CPL',''):'')
+        +(bcCac(bc)!=null?mt(BRL(bcCac(bc)),'CAC','green'):'')
+        +(bc.revenue_monthly!=null?mt(BRL(bc.revenue_monthly),'Receita/mês','green'):'')
+        +(bc.roas!=null?mt(bc.roas.toFixed(1)+'x','ROAS','green'):'')
+        +'</div>';
+    }
+    let varHtml = '';
+    let sensChart = '';
+    if (fs.variations?.length) {
+      // Support both new (delta_vs_base_pct) and old field shapes
+      const parsePct = s => {
+        if (s==null) return null;
+        if (typeof s === 'number') return s;
+        const m = String(s).match(/([+-]?\d+(?:\.\d+)?)\s*%/);
+        return m ? parseFloat(m[1]) : null;
+      };
+      const getPct = v => (typeof v.delta_vs_base_pct === 'number' ? v.delta_vs_base_pct
+        : parsePct(v.impact_on_leads) ?? parsePct(v.impact_on_revenue));
+      const getName = v => v.scenario || v.scenario_name || '—';
+      const getLeads = v => v.impact_on_leads_month_90d ?? v.impact_on_leads ?? null;
+      const getCpl = v => v.impact_on_cpl_brl ?? v.impact_on_cpl ?? null;
+
+      const baseLeads = fs.base_case ? bcLeads(fs.base_case) : null;
+      const sorted = [...fs.variations].sort((a,b)=>(getPct(a)??0)-(getPct(b)??0));
+      const maxAbs = Math.max(...sorted.map(v=>Math.abs(getPct(v)??0)), 1);
+      if (sorted.length) {
+        const worst = sorted[0];
+        const worstPct = getPct(worst) ?? 0;
+        const sensInsight = 'Cada linha é um cenário "e se" de risco aplicado sobre o caso base. Maior ameaça: "'
+          +getName(worst).split('(')[0].trim()+'" derruba '+Math.abs(worstPct).toFixed(0)+'% dos leads. Monitore o gatilho e acione mitigação antes do impacto se materializar.';
+        const header = '<div style="display:grid;grid-template-columns:minmax(180px,32%) minmax(90px,12%) 1fr minmax(70px,10%);gap:.75rem;align-items:end;padding:0 0 .5rem;border-bottom:1px solid var(--border);font-size:.6875rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.05em;font-weight:600">'
+          +'<div>Cenário de risco</div>'
+          +'<div style="text-align:right">Leads/mês</div>'
+          +'<div>Perda vs base'+(baseLeads!=null?' (base: '+N(baseLeads)+' leads)':'')+'</div>'
+          +'<div style="text-align:right">Δ %</div></div>';
+        const rows = sorted.map(v=>{
+          const pct = getPct(v) ?? 0;
+          const leads = getLeads(v);
+          const col = pct<=-25?chartColor('red'):pct<=-10?chartColor('yellow'):chartColor('gray');
+          const barPct = Math.min(100, (Math.abs(pct)/maxAbs*100));
+          return '<div style="display:grid;grid-template-columns:minmax(180px,32%) minmax(90px,12%) 1fr minmax(70px,10%);gap:.75rem;align-items:center;padding:.5rem 0;border-bottom:1px solid var(--border)">'
+            +'<div style="font-size:.75rem;font-weight:600;line-height:1.35">'+E(getName(v))+'</div>'
+            +'<div style="text-align:right"><div style="font-size:.8125rem;font-weight:700;color:'+col+'">'+(leads!=null?N(leads):'—')+'</div>'
+            +(leads!=null&&baseLeads!=null?'<div style="font-size:.625rem;color:var(--text-muted)">'+(leads-baseLeads>0?'+':'')+N(leads-baseLeads)+' vs base</div>':'')+'</div>'
+            +'<div style="position:relative;height:14px;background:var(--surface);border-radius:2px;overflow:hidden">'
+            +'<div style="position:absolute;left:0;top:0;height:100%;width:'+barPct.toFixed(1)+'%;background:'+col+';opacity:.8;border-radius:2px"></div>'
+            +'</div>'
+            +'<div style="text-align:right;font-size:.8125rem;font-weight:700;color:'+col+'">'+(pct>=0?'+':'')+pct.toFixed(0)+'%</div>'
+            +'</div>';
+        }).join('');
+        const legend = '<div style="display:flex;gap:1.25rem;font-size:.6875rem;margin-top:.75rem;flex-wrap:wrap;color:var(--text-muted)">'
+          +'<span><span style="display:inline-block;width:14px;height:10px;background:'+chartColor('red')+';opacity:.8;margin-right:.3rem;vertical-align:middle;border-radius:2px"></span>Crítico (≤-25%)</span>'
+          +'<span><span style="display:inline-block;width:14px;height:10px;background:'+chartColor('yellow')+';opacity:.8;margin-right:.3rem;vertical-align:middle;border-radius:2px"></span>Moderado (-10% a -25%)</span>'
+          +'<span><span style="display:inline-block;width:14px;height:10px;background:'+chartColor('gray')+';opacity:.8;margin-right:.3rem;vertical-align:middle;border-radius:2px"></span>Leve (&gt;-10%)</span>'
+          +'<span>· ordenado do maior ao menor impacto</span></div>';
+        sensChart = insight(
+          chartTitle('O que acontece se cada risco se materializar')
+          +header+rows+legend,
+          sensInsight, worstPct<-15?'bad':'warn');
+      }
+      // Detailed table: scenario, cause, leads, cpl, delta, mitigation
+      varHtml = '<div style="margin-top:.5rem;font-size:.6875rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--text-muted);margin-bottom:.375rem">Cenários detalhados</div>'
+        +fs.variations.map(v => {
+          const pct = getPct(v);
+          const toneColor = (pct??0)<-15?'danger':(pct??0)<0?'yellow':'gray';
+          return cd(getName(v),
+            (v.cause?'<div style="font-size:.75rem;color:var(--text-muted);margin-bottom:.375rem"><strong>Causa:</strong> '+E(v.cause)+'</div>':'')
+            +'<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem;margin-bottom:.375rem">'
+            +(getLeads(v)!=null?'<div><div style="font-size:.625rem;color:var(--text-muted);text-transform:uppercase">Leads/mês</div><div style="font-size:.875rem;font-weight:700">'+N(getLeads(v))+'</div></div>':'')
+            +(getCpl(v)!=null?'<div><div style="font-size:.625rem;color:var(--text-muted);text-transform:uppercase">CPL</div><div style="font-size:.875rem;font-weight:700">'+BRL(getCpl(v))+'</div></div>':'')
+            +(pct!=null?'<div><div style="font-size:.625rem;color:var(--text-muted);text-transform:uppercase">Δ vs base</div><div style="font-size:.875rem;font-weight:700;color:var(--'+(pct<0?'danger':'success')+')">'+(pct>=0?'+':'')+pct.toFixed(0)+'%</div></div>':'')
+            +'</div>'
+            +(v.impact_on_lifetime_value?'<div style="font-size:.75rem;color:var(--text-muted);margin-bottom:.25rem">LTV: '+E(v.impact_on_lifetime_value)+'</div>':'')
+            +(v.mitigation?'<div style="font-size:.75rem;padding:.375rem .5rem;background:var(--surface);border-left:2px solid var(--success);border-radius:3px"><strong style="color:var(--success)">Mitigação:</strong> '+E(v.mitigation)+'</div>':''),
+            toneColor);
+        }).join('');
+    }
+    h += sc('Análise de Sensibilidade do Forecast',
+      (fs.description?'<p style="font-size:.8125rem;color:var(--text-muted);margin:0 0 .75rem">'+E(fs.description)+'</p>':'')
+      +bcHtml+varHtml);
+  }
+
+  // 90-day goal
+  const g90 = d.realistic_goal_90d || d.realistic_goal;
+  if (g90) {
+    h += sc('Meta Realista — 90 Dias',
+      '<div class="gr gr--4">'
+      +(g90.target_cpl!=null?mt(BRL(g90.target_cpl),'CPL Alvo','green'):'')
+      +(g90.target_cac!=null?mt(BRL(g90.target_cac),'CAC Alvo','green'):'')
+      +(g90.target_leads_month!=null?mt(N(g90.target_leads_month),'Leads/mês Alvo','green'):'')
+      +(g90.target_agendamentos_month!=null?mt(N(g90.target_agendamentos_month),'Agendamentos Alvo','green'):'')
+      +'</div>'
+      +(g90.premissas?.length?cd('Premissas',g90.premissas.map(p=>'<div style="font-size:.8125rem;margin-bottom:.2rem">&#9675; '+E(p)+'</div>').join('')):'')
+      +(g90.alert?cd('Atenção',E(g90.alert),'danger'):'')
+    );
+  }
+
   return h;
 },
 
@@ -1049,6 +2455,25 @@ const R = {
   }
   if (d.creative_matrix?.length) {
     const vc = {manter:'green',otimizar:'yellow',eliminar:'danger'};
+    // Donut de veredictos
+    const verdictCount = {};
+    d.creative_matrix.forEach(c => { verdictCount[c.verdict] = (verdictCount[c.verdict]||0) + 1; });
+    const verdictLabels = {manter:'Manter',otimizar:'Otimizar',eliminar:'Eliminar'};
+    const verdictTone = {manter:'green',otimizar:'yellow',eliminar:'red'};
+    const donutData = Object.keys(verdictCount).map(k=>({
+      label: verdictLabels[k]||k, value: verdictCount[k], tone: verdictTone[k]||'gray',
+    }));
+    const total = d.creative_matrix.length;
+    const elimPct = Math.round(((verdictCount.eliminar||0)/total)*100);
+    const manterPct = Math.round(((verdictCount.manter||0)/total)*100);
+    const verdictInsight = elimPct >= 40
+      ? elimPct+'% dos criativos precisam ser eliminados — revisar briefing de produção antes de nova leva.'
+      : manterPct >= 60
+        ? manterPct+'% dos criativos estão saudáveis — base sólida para escalar.'
+        : 'Mix equilibrado: '+manterPct+'% manter, '+elimPct+'% eliminar — priorizar otimização dos intermediários.';
+    h += sc('Veredicto do Pack Atual',
+      insight(chartDonut(donutData, {title:'Distribuição de Veredictos'}),
+        verdictInsight, elimPct>=40?'bad':manterPct>=60?'good':'warn'));
     h += sc('Matriz de Avaliação', tb(['#','Tipo','Hook','Clareza','ICP','CTA','Visual','Total','Veredicto'],
       d.creative_matrix.map(c=>[E(c.number),E(c.type),E(c.hook_score),E(c.clarity_score),E(c.icp_coherence_score),E(c.cta_score),E(c.visual_score),
         '<strong>'+E(c.total_score)+'/25</strong>',tg(c.verdict,vc[c.verdict])])));
@@ -1090,7 +2515,17 @@ const R = {
   }
   if (d.trust_analysis) {
     const ta = d.trust_analysis;
-    h += sc('Confiança', mt(ta.trust_score??'—','Trust Score (0-10)',ta.trust_score>=7?'green':ta.trust_score>=4?'yellow':'red')
+    const trustTone = ta.trust_score>=7?'good':ta.trust_score>=4?'warn':'bad';
+    const trustInsight = ta.trust_score!=null
+      ? 'Trust score '+ta.trust_score+'/10. '
+        +(ta.trust_score>=7?'LP transmite confiança — manter e reforçar elementos fortes.'
+          :ta.trust_score>=4?'Brechas de confiança custam conversão — priorizar prova social e elementos de credibilidade.'
+          :'CRÍTICO: sem elementos mínimos de confiança a LP vai converter mal independente do tráfego.')
+      : '';
+    h += sc('Confiança',
+      (ta.trust_score!=null
+        ? insight(chartGauge(ta.trust_score, 7, 10, {title:'Trust Score', fmt:v=>v+'/10'}), trustInsight, trustTone)
+        : mt('—','Trust Score (0-10)','gray'))
       +(ta.biggest_trust_gap?co('Maior gap: '+ta.biggest_trust_gap):''));
   }
   if (d.test_hypotheses?.length) {
@@ -1204,6 +2639,21 @@ const R = {
   if (d.total_variations) h += mt(d.total_variations,'Total de Variações','red');
   if (d.funnel_stages?.length) {
     const fn = {topo_de_funil:'Topo de Funil',meio_de_funil:'Meio de Funil',fundo_de_funil:'Fundo de Funil',remarketing:'Remarketing'};
+    // Donut: distribuição de variações por estágio
+    const toneByStage = {topo_de_funil:'blue',meio_de_funil:'yellow',fundo_de_funil:'green',remarketing:'red'};
+    const stageData = d.funnel_stages.map(s=>{
+      const count = (s.platforms||[]).reduce((sum,p)=>sum+(p.variations?.length||0),0);
+      return {label: fn[s.name]||s.name, value: count, tone: toneByStage[s.name]||'gray'};
+    }).filter(x=>x.value>0);
+    if (stageData.length >= 2) {
+      const top = [...stageData].sort((a,b)=>b.value-a.value)[0];
+      const fund = stageData.find(x=>x.label.includes('Fundo'));
+      const distInsight = 'Maior volume em "'+top.label+'" ('+top.value+' variações). '
+        +(fund && fund.value < top.value/2 ? 'Atenção: fundo de funil sub-representado — leads quentes podem ficar sem copy dedicada.' : 'Mix coerente entre etapas.');
+      h += sc('Distribuição de Copy por Estágio',
+        insight(chartDonut(stageData, {title:'Variações por Funil'}),
+          distInsight, fund && fund.value < top.value/2 ? 'warn' : 'good'));
+    }
     d.funnel_stages.forEach(stage => {
       let rows = [];
       (stage.platforms||[]).forEach(plat => {
@@ -1226,6 +2676,22 @@ const R = {
   if (d.total_pieces) h += '<div class="gr gr--2">'+mt(d.total_pieces,'Peças no Pack','red')+mt((d.variations||[]).length,'Variações de Hook','')+'</div>';
   if (d.variations?.length) {
     const hk = {dor:'danger',resultado:'green',curiosidade:'yellow',social_proof:'green',urgencia:'red'};
+    // Donut de hooks
+    const hookCount = {};
+    d.variations.forEach(v=>{ hookCount[v.hook_type] = (hookCount[v.hook_type]||0)+1; });
+    const hookLabel = {dor:'Dor',resultado:'Resultado',curiosidade:'Curiosidade',social_proof:'Prova Social',urgencia:'Urgência'};
+    const hookToneMap = {dor:'red',resultado:'green',curiosidade:'yellow',social_proof:'blue',urgencia:'red'};
+    const hookData = Object.keys(hookCount).map(k=>({
+      label: hookLabel[k]||k, value: hookCount[k], tone: hookToneMap[k]||'gray',
+    }));
+    if (hookData.length >= 2) {
+      const top = [...hookData].sort((a,b)=>b.value-a.value)[0];
+      const hookInsight = 'Hook dominante: "'+top.label+'" ('+top.value+' criativos). '
+        +(top.value > d.variations.length * 0.6 ? 'Concentração alta — diversificar ângulos para mitigar fadiga criativa.' : 'Diversidade de ângulos saudável para teste A/B.');
+      h += sc('Diversidade de Hooks',
+        insight(chartDonut(hookData, {title:'Hooks do Pack'}),
+          hookInsight, top.value > d.variations.length * 0.6 ? 'warn' : 'good'));
+    }
     h += sc('Variações', d.variations.map(v=>
       '<div class="cd cd--'+(hk[v.hook_type]||'red')+'"><div class="cd__title">'+tg(v.hook_type,hk[v.hook_type])+' '+E(v.hook_text)+'</div>'
       +'<div class="cd__body"><p>'+E(v.short_copy)+'</p>'
@@ -1246,7 +2712,16 @@ const R = {
   let h = '';
   if (d.summary) h += sm(d.summary);
   if (d.pipeline_stages?.length) {
-    h += sc('Pipeline de Vendas', '<div style="display:flex;gap:.375rem;flex-wrap:wrap;margin-bottom:1rem">'
+    // Funnel simulado para representar progressão
+    const simStages = d.pipeline_stages.map((s,i)=>({
+      name: s.name, volume: Math.round(100 * Math.pow(0.65, i)),
+    }));
+    const pipeInsight = 'Pipeline de '+d.pipeline_stages.length+' etapas. '
+      +'Assumindo taxa média de 65% entre estágios, '+Math.round(100*Math.pow(0.65,d.pipeline_stages.length-1))+'% dos leads chegam ao fim do funil.';
+    h += sc('Pipeline de Vendas',
+      insight(chartFunnel(simStages, {title:'Estágios (simulação de retenção)', fmt:v=>v+'%'}),
+        pipeInsight, 'info')
+      +'<div style="display:flex;gap:.375rem;flex-wrap:wrap;margin-bottom:1rem">'
       +d.pipeline_stages.map(s=>
         '<div style="background:var(--bg-elevated);border:1px solid var(--border);border-radius:var(--radius);padding:.625rem .875rem;flex:1;min-width:120px;text-align:center">'
         +'<div style="font-size:.625rem;color:var(--accent);font-weight:700">'+E(s.order)+'</div>'
@@ -1272,12 +2747,46 @@ const R = {
   let h = '';
   if (d.summary) h += sm(d.summary);
   if (d.financial_model?.length) {
-    h += sc('Modelagem Financeira — 3 Meses', tb(['Mês','Label','Budget','CPL','Leads','Conv.','Vendas','Receita','ROAS'],
+    // Grouped bars — evolução mensal
+    const months = d.financial_model.map(m=>m.label||m.month);
+    const leadsVals = d.financial_model.map(m=>m.leads||0);
+    const revVals = d.financial_model.map(m=>Math.round((m.revenue||0)/1000));
+    const roasVals = d.financial_model.map(m=>(m.roas||0)*10); // scale for visibility
+    const first = d.financial_model[0];
+    const last = d.financial_model[d.financial_model.length-1];
+    const growth = first && last && first.revenue ? ((last.revenue-first.revenue)/first.revenue*100) : 0;
+    const modelInsight = first && last
+      ? 'Progressão: receita sai de '+BRL(first.revenue||0)+' (mês 1) para '+BRL(last.revenue||0)+' (mês '+last.month+') — crescimento de '+growth.toFixed(0)+'%. ROAS final: '+(last.roas||'?')+'x.'
+      : '';
+    h += sc('Modelagem Financeira — 3 Meses',
+      insight(chartGroupedBars(months,
+        [
+          {name:'Leads', tone:'blue', values:leadsVals},
+          {name:'Receita (k R$)', tone:'green', values:revVals},
+          {name:'ROAS × 10', tone:'yellow', values:roasVals},
+        ],
+        {title:'Evolução Mês a Mês', height:220}),
+        modelInsight, growth>=50?'good':growth>=20?'warn':'bad')
+      +tb(['Mês','Label','Budget','CPL','Leads','Conv.','Vendas','Receita','ROAS'],
       d.financial_model.map(m=>[E(m.month),E(m.label),BRL(m.budget),BRL(m.cpl),E(m.leads),PCT(m.conversion_rate),E(m.sales),BRL(m.revenue),'<strong>'+N(m.roas)+'x</strong>'])));
   }
   if (d.platform_distribution?.length) {
-    h += sc('Distribuição por Plataforma', '<div class="gr gr--'+Math.min(4,d.platform_distribution.length)+'">'
-      +d.platform_distribution.map(p=>mt(PCT(p.percentage),E(p.platform),'red')+'<div style="text-align:center;font-size:.75rem;color:var(--text-muted)">'+BRL(p.monthly_value)+'/mês</div>').join('')+'</div>');
+    const platData = d.platform_distribution.map((p,i)=>({
+      label: p.platform, value: p.percentage,
+      tone: ['blue','red','green','yellow'][i%4],
+    }));
+    if (platData.length >= 2) {
+      const top = [...platData].sort((a,b)=>b.value-a.value)[0];
+      const platInsight = 'Maior fatia: '+top.label+' ('+top.value+'%). '
+        +(top.value>=70?'Concentração alta — avaliar diversificação para reduzir risco de plataforma.':'Mix balanceado entre plataformas.');
+      h += sc('Distribuição por Plataforma',
+        insight(chartDonut(platData, {title:'% do Budget'}), platInsight, top.value>=70?'warn':'good')
+        +'<div class="gr gr--'+Math.min(4,d.platform_distribution.length)+'">'
+        +d.platform_distribution.map(p=>mt(PCT(p.percentage),E(p.platform),'red')+'<div style="text-align:center;font-size:.75rem;color:var(--text-muted)">'+BRL(p.monthly_value)+'/mês</div>').join('')+'</div>');
+    } else {
+      h += sc('Distribuição por Plataforma', '<div class="gr gr--'+Math.min(4,d.platform_distribution.length)+'">'
+        +d.platform_distribution.map(p=>mt(PCT(p.percentage),E(p.platform),'red')+'<div style="text-align:center;font-size:.75rem;color:var(--text-muted)">'+BRL(p.monthly_value)+'/mês</div>').join('')+'</div>');
+    }
   }
   if (d.alerts?.length) {
     h += sc('Alertas de Pausa', tb(['Métrica','Limite','Ação'],
@@ -1317,7 +2826,22 @@ const R = {
   let h = '';
   if (d.summary) h += sm(d.summary);
   if (d.funnel_diagnosis?.length) {
-    h += sc('Funil de Vendas', tb(['Etapa','Taxa Atual','Benchmark','Gap','Status','Gargalo'],
+    // Funnel: simular volume decaindo com base em current_rate
+    let simVol = 100;
+    const funnelStages = d.funnel_diagnosis.map((f,i)=>{
+      const stage = {name: f.stage, volume: Math.round(simVol), highlight: f.status==='critical'||f.status==='low'};
+      if (f.current_rate!=null) simVol = simVol * f.current_rate;
+      return stage;
+    });
+    // Pior gap
+    const worst = [...d.funnel_diagnosis].filter(f=>f.gap!=null).sort((a,b)=>a.gap-b.gap)[0];
+    const funnelInsight = worst
+      ? 'Maior gargalo: "'+worst.stage+'" com gap de '+worst.gap.toFixed(1)+'pp vs benchmark. '+(worst.bottleneck||'').substring(0,100)
+      : '';
+    h += sc('Funil de Vendas',
+      insight(chartFunnel(funnelStages, {title:'Afunilamento (% retenção)', fmt:v=>v+'%'}),
+        funnelInsight, worst && worst.gap<-10?'bad':worst && worst.gap<0?'warn':'good')
+      +tb(['Etapa','Taxa Atual','Benchmark','Gap','Status','Gargalo'],
       d.funnel_diagnosis.map(f=>[E(f.stage),PCT(f.current_rate),PCT(f.benchmark),
         '<span style="color:var(--'+(f.gap>=0?'success':'danger')+')">'+((f.gap>=0?'+':'')+N(f.gap))+'pp</span>',
         tg(CLS[f.status]||f.status,CLC[f.status]),E(f.bottleneck)])));
@@ -1356,6 +2880,13 @@ const R = {
       +mt(CLS[d.evaluation.classification]||d.evaluation.classification||'—','Classificação','')
       +(d.simulation_metadata?.total_duration_minutes?mt(d.simulation_metadata.total_duration_minutes+'min','Duração',''):'')
       +'</div>';
+    // Gauge da nota geral vs benchmark 7/10
+    const ocTone = s>=7?'good':s>=4?'warn':'bad';
+    const ocInsight = 'Nota '+s.toFixed(1)+'/10. '
+      +(s>=7?'Atendimento saudável — refinar scripts para escalar consistência.'
+        :s>=4?'Atendimento inconsistente — gaps em qualificação e follow-up custam conversão.'
+        :'CRÍTICO: prejuízo direto em conversão. Intervenção de processo imediata.');
+    h += insight(chartGauge(s, 7, 10, {title:'Nota do Atendimento', fmt:v=>v.toFixed(1)+'/10'}), ocInsight, ocTone);
   }
   if (d.buyer_profile) {
     const b = d.buyer_profile;
@@ -1365,10 +2896,25 @@ const R = {
       +'<strong>Objeção:</strong> '+E(b.main_objection),'red'));
   }
   if (d.evaluation?.criteria_scores?.length) {
-    h += sc('Scores por Critério', '<div class="gr gr--2">'+d.evaluation.criteria_scores.map(c=>
-      '<div class="cd"><div class="cd__title">'+E(c.criterion)+' <span style="color:var(--'+(c.score>=7?'success':c.score>=4?'warning':'danger')+')">'+c.score+'/10</span></div>'
-      +'<div class="cd__body">'+E(c.observation)+'</div></div>'
-    ).join('')+'</div>');
+    const critBars = d.evaluation.criteria_scores.map(c=>({
+      label: c.criterion,
+      value: c.score,
+      tone: c.score>=7?'green':c.score>=4?'yellow':'red',
+    }));
+    const critInsight = (() => {
+      const weakest = [...critBars].sort((a,b)=>a.value-b.value)[0];
+      const avg = critBars.reduce((s,x)=>s+x.value,0)/critBars.length;
+      return weakest
+        ? 'Critério mais fraco: "'+weakest.label+'" ('+weakest.value+'/10). Média geral: '+avg.toFixed(1)+'/10 — focar aqui primeiro para puxar a nota geral.'
+        : '';
+    })();
+    h += sc('Scores por Critério',
+      insight(chartHBar(critBars, {title:'Avaliação por Dimensão', fmt:v=>v+'/10', labelWidth:160}),
+        critInsight, critBars.some(x=>x.value<4)?'bad':critBars.some(x=>x.value<7)?'warn':'good')
+      +'<div class="gr gr--2">'+d.evaluation.criteria_scores.map(c=>
+        '<div class="cd"><div class="cd__title">'+E(c.criterion)+' <span style="color:var(--'+(c.score>=7?'success':c.score>=4?'warning':'danger')+')">'+c.score+'/10</span></div>'
+        +'<div class="cd__body">'+E(c.observation)+'</div></div>'
+      ).join('')+'</div>');
   }
   if (d.evaluation?.strengths?.length || d.evaluation?.critical_improvements?.length) {
     h += sc('Pontos Fortes & Melhorias', '<div class="gr gr--2">'
@@ -1454,7 +3000,26 @@ const R = {
   }
   if (d.test_results?.length) {
     const sc2 = {pass:'green',fail:'danger',partial:'yellow'};
-    h += sc('Resultados dos Testes', tb(['#','Perfil','Score','Kommo','Alerta','Tempo','Tom','Status'],
+    // Donut do status dos testes
+    const statusCount = {};
+    d.test_results.forEach(t=>{ statusCount[t.status] = (statusCount[t.status]||0)+1; });
+    const statusLabel = {pass:'Passou',partial:'Parcial',fail:'Falhou'};
+    const statusTone = {pass:'green',partial:'yellow',fail:'red'};
+    const statusData = Object.keys(statusCount).map(k=>({
+      label: statusLabel[k]||k, value: statusCount[k], tone: statusTone[k]||'gray',
+    }));
+    const passPct = Math.round(((statusCount.pass||0)/d.test_results.length)*100);
+    const testInsight = passPct>=80
+      ? passPct+'% dos testes passaram — configuração SDR pronta para produção.'
+      : passPct>=50
+        ? passPct+'% de aprovação — ajustes pontuais antes de ir ao ar.'
+        : 'Apenas '+passPct+'% aprovados — config precisa ser refinada antes de expor a leads reais.';
+    h += sc('Resultados dos Testes',
+      (statusData.length >= 2
+        ? insight(chartDonut(statusData, {title:'Distribuição de Status'}),
+            testInsight, passPct>=80?'good':passPct>=50?'warn':'bad')
+        : '')
+      +tb(['#','Perfil','Score','Kommo','Alerta','Tempo','Tom','Status'],
       d.test_results.map(t=>[E(t.lead_number),E(t.profile_description||''),E(t.score),
         t.kommo_entry?tg('OK','green'):tg('Falha','danger'),
         t.alert_sent?tg('Enviado','green'):tg('—','gray'),

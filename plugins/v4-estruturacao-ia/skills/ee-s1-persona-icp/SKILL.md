@@ -90,7 +90,63 @@ Aplique o framework JTBD rigorosamente:
 - **Influenciadores/referências:** Perfis, podcasts, canais que acompanha
 - **Comunidades:** Grupos, fóruns, associações de classe, eventos
 
-**D) 3 Opções de Mensagem-Chave**
+**D-pre1) Anti-Persona (OBRIGATÓRIO — 2-3 perfis)**
+
+A persona define quem você QUER atender. A anti-persona define quem você NÃO QUER atender — clientes que consomem recurso, geram atrito e não convertem. Sem anti-persona definida, a equipe não sabe quando dizer "não".
+
+Para cada anti-persona (2-3):
+- **profile_name** (ou **label**): apelido descritivo (ex: "Caçador de preço", "Emergência única")
+- **description** (ou **who**): 2-3 linhas sobre o comportamento típico
+- **signals** (ou **red_flags**): lista de 3-6 sinais concretos que o time observa na triagem (ex: "pede desconto antes do diagnóstico", "pergunta só preço por WhatsApp sem contexto")
+- **why_not**: por que não é cliente ideal (custo de atendimento, ticket baixo, alta rotatividade, objeção que não resolve)
+- **operational_rule**: regra prática — como o time identifica e o que faz (ex: "Se pedir desconto antes do diagnóstico, encaminhar para tabela padrão")
+
+> Use **profile_name/description/signals** como padrão. O renderer aceita os alternativos (label/who/red_flags) para compatibilidade, mas prefira o conjunto principal.
+
+Feche com um `operational_rule` geral — a regra-mãe que alinha o time.
+
+**D-pre2) Buyer Journey (OBRIGATÓRIO — 5-6 estágios)**
+
+Mapeie a jornada de decisão da persona do gatilho ao pós-compra. Cada estágio com:
+- **Stage:** nome (ex: Gatilho, Pesquisa, Consideração, Decisão, Pós-compra, Recompra)
+- **Trigger:** o que inicia esse estágio (evento externo, interno, emocional)
+- **Mental state:** estado mental dominante (dúvida, ansiedade, urgência, cobrança social)
+- **Primary channel:** onde a persona busca informação neste estágio
+- **Dominant question:** a pergunta que ela está tentando responder
+- **[Cliente] intervention:** como o cliente intervém nesse estágio (conteúdo, anúncio, contato)
+- **Friction today:** qual o atrito/problema atual nesse estágio
+- **Duration estimate:** quanto tempo típico (horas, dias, semanas)
+
+Feche com `critical_leakage_point`: onde o cliente mais perde leads HOJE. Pode ser:
+- **String livre** (preferido quando o vazamento é qualitativo): ex. `"O maior vazamento é na Consideração: a persona pesquisa 3-7 dias e a clínica não aparece no Google Maps local"`.
+- **Objeto estruturado** (use quando tiver número de perda): `{stage, evidence, estimated_loss_pct}`.
+
+**D-pre3) Willingness-to-Pay (OBRIGATÓRIO — por serviço principal)**
+
+Para cada serviço/produto principal (3-5), use o SHAPE PREFERIDO (mais rico que o legado):
+- **service**: nome do serviço
+- **current_ticket_range**: faixa de ticket atual praticada (ex: `"R$180-250"`)
+- **perceived_fair_range**: faixa que a persona percebe como justa (ex: `"R$180-300"`)
+- **premium_ceiling**: teto premium aceito COM justificativa (ex: `"R$400 com exame complementar incluso"`)
+- **elasticity**: palavra-chave + nuance separada por `—` (ex: `"baixa — aceita pagar mais se entender o porquê"`). O portal usa a palavra-chave como tag colorida e o texto após o travessão como nota.
+- **pricing_lever**: o que justifica cobrar mais (especialização, tempo de consulta, garantia, bundle)
+
+> Os campos legados (`current_price`, `fair_range`, `premium_range`) ainda funcionam, mas **prefira** o shape novo — ele comunica range (não ponto) e o teto com justificativa, que é o que a análise realmente pede.
+
+Isso não é exercício de pricing — é alinhar posicionamento e copy ao WTP real da persona.
+
+**D-pre4) Objection Library (OBRIGATÓRIO — 5-7 objeções)**
+
+Catálogo de objeções reais da persona. Para cada:
+- **Objection:** como ela diz (linguagem do cliente)
+- **Subtext:** o que ela REALMENTE está dizendo (medo, dúvida, experiência anterior)
+- **Bad response:** resposta automática que NÃO funciona e por quê
+- **Good response:** resposta que funciona — pequena história, dado, reframe
+- **When to use:** em que canal/momento essa resposta é usada
+
+Essa library alimenta copy, SDR, scripts de atendimento e FAQs.
+
+**E) 3 Opções de Mensagem-Chave**
 
 1. **Opção funcional:** Foco no resultado prático/tangível
 2. **Opção emocional:** Foco no sentimento/transformação
@@ -117,6 +173,11 @@ Antes de mostrar ao operador, verifique:
 - [ ] Canais são específicos (não "redes sociais" nem "Google")?
 - [ ] Mensagens-chave têm <= 15 palavras cada?
 - [ ] Cada mensagem é diferente das outras (funcional vs emocional vs social)?
+- [ ] Anti-persona com 2-3 perfis e `operational_rule` clara para o time?
+- [ ] Buyer journey tem 5-6 estágios, cada um com trigger, mental_state, canal, pergunta dominante, intervenção e fricção atual?
+- [ ] `critical_leakage_point` identifica onde o cliente mais perde leads hoje COM evidência?
+- [ ] Willingness-to-pay cobre os serviços principais com preço atual, faixa justa, faixa premium, elasticidade e pricing_lever?
+- [ ] Objection library tem 5-7 objeções com subtext, bad_response e good_response (linguagem real, não corporativês)?
 
 Se falhou → regenere silenciosamente. Não avise o operador.
 

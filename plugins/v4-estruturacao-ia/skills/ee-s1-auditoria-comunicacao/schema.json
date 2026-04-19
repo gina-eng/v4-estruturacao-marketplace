@@ -242,6 +242,133 @@
         }
       }
     },
+    "competitor_benchmark": {
+      "type": "object",
+      "description": "Benchmark canal-a-canal contra grupos de concorrentes.",
+      "properties": {
+        "description": { "type": "string" },
+        "groups": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name"],
+            "properties": {
+              "name": { "type": "string" },
+              "members": { "type": "array", "items": { "type": "string" } },
+              "positioning": { "type": "string" }
+            }
+          }
+        },
+        "benchmark_by_channel": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["channel"],
+            "properties": {
+              "channel": { "type": "string" },
+              "client_score": { "type": "number", "minimum": 0, "maximum": 100, "description": "Score do cliente (0-100). Nome preferido." },
+              "best_in_class_score": { "type": "number", "description": "Score do melhor concorrente do grupo." },
+              "competitor_avg_score": { "type": "number", "description": "Alternativa: média dos concorrentes. O renderer aceita best_in_class_score OU competitor_avg_score." },
+              "gap": { "type": "number", "description": "Diferença entre best_in_class e client_score." },
+              "best_practice_observed": { "type": "string", "description": "O que o melhor concorrente faz (específico). Nome preferido." },
+              "evidence": { "type": "string", "description": "Alternativa a best_practice_observed — evidência concreta observada." },
+              "opportunity_for_client": { "type": "string", "description": "Como o cliente pode fechar o gap (específico, não genérico). Nome preferido." },
+              "immediate_win": { "type": "string", "description": "Alternativa a opportunity_for_client — ganho imediato possível." }
+            }
+          }
+        },
+        "strategic_read": { "type": "string" }
+      }
+    },
+    "journey_friction_map": {
+      "type": "object",
+      "description": "Mapa de fricção do funil real da persona, estágio a estágio.",
+      "properties": {
+        "description": { "type": "string" },
+        "stages": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["stage"],
+            "properties": {
+              "stage": { "type": "string" },
+              "current_volume": { "type": ["number", "string"] },
+              "leakage_pct": { "type": "number", "description": "% que vaza para o próximo estágio." },
+              "root_cause": { "type": "string" },
+              "fix_effort": { "type": "string", "enum": ["low", "medium", "high"] },
+              "fix_impact_estimate": { "type": "string" }
+            }
+          }
+        },
+        "biggest_leakage_summary": { "type": "string" },
+        "projected_funnel_90d_realistic": { "type": "string" }
+      }
+    },
+    "tone_of_voice_analysis": {
+      "type": "object",
+      "description": "Auditoria de coerência do tom de voz entre canais.",
+      "properties": {
+        "description": { "type": "string" },
+        "brand_voice_target": {
+          "type": "object",
+          "properties": {
+            "pillars": { "type": "array", "items": { "type": "string" } },
+            "avoid": { "type": "array", "items": { "type": "string" } }
+          }
+        },
+        "channel_drift": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["channel"],
+            "properties": {
+              "channel": { "type": "string" },
+              "actual_tone": { "type": "string", "description": "Como soa hoje (com exemplo citado). Nome preferido." },
+              "current_tone": { "type": "string", "description": "Alternativa a actual_tone." },
+              "alignment_score": { "type": "number", "minimum": 0, "maximum": 100, "description": "Score numérico 0-100. Opcional se target_alignment for usado." },
+              "target_alignment": {
+                "type": "string",
+                "enum": [
+                  "alinhado", "aligned",
+                  "bom", "boa", "good",
+                  "parcial", "partial", "media", "média", "medium",
+                  "baixa", "baixo", "low",
+                  "desalinhado", "misaligned",
+                  "critico", "crítico",
+                  "nenhum", "none", "nao", "não"
+                ],
+                "description": "Alinhamento qualitativo com a brand voice. O renderer do portal mapeia para score (alinhado=100, bom=80, parcial/média=55, baixa=25, desalinhado=20, crítico=10, nenhum=0). Preferido sobre alignment_score numérico por ser mais legível."
+              },
+              "drift_notes": { "type": "string", "description": "Onde desalinhou. Nome preferido." },
+              "gap": { "type": "string", "description": "Alternativa a drift_notes — descrição do gap observado." },
+              "fix": { "type": "string", "description": "Correção sugerida. Se presente, o renderer exibe como ação complementar ao drift_notes." },
+              "example": { "type": "string", "description": "Citação textual do canal que ilustra o drift." }
+            }
+          }
+        },
+        "coherence_score": { "type": "number", "minimum": 0, "maximum": 100 }
+      }
+    },
+    "url_audit": {
+      "type": "object",
+      "description": "Lista de URLs críticas a verificar pelo operador.",
+      "properties": {
+        "description": { "type": "string" },
+        "urls": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["url", "purpose"],
+            "properties": {
+              "url": { "type": "string" },
+              "purpose": { "type": "string" },
+              "status_expected": { "type": "string" },
+              "verify_checklist": { "type": "array", "items": { "type": "string" } }
+            }
+          }
+        }
+      }
+    },
     "quick_wins": {
       "type": "array",
       "minItems": 3,

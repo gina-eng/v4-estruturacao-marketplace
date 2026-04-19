@@ -114,6 +114,63 @@ Compile todos os gaps identificados:
 - Top 3 problemas de comunicação que mais custam conversão AGORA
 - Para cada: evidência + impacto estimado + ação
 
+### Competitor Benchmark (OBRIGATÓRIO — 2-3 grupos, 5 canais)
+
+Não basta auditar o cliente isoladamente. Compare canal a canal com 2-3 grupos de concorrentes (ex: "top local", "grandes nacionais"). Para cada:
+
+**Groups:** 2-3 grupos de concorrência com `name`, `members` (nomes reais), `positioning` (resumo do posicionamento dominante).
+
+**Benchmark by channel:** para cada canal (site, instagram, anúncios, GMB, WhatsApp):
+- `channel`: nome
+- `client_score`: score do cliente (0-100) — **nome preferido**
+- `best_in_class_score`: score do melhor do grupo — **nome preferido** (alternativa aceita: `competitor_avg_score`)
+- `gap`: diferença
+- `best_practice_observed`: o que o melhor faz (específico) — **nome preferido** (alternativa aceita: `evidence`)
+- `opportunity_for_client`: como o cliente pode fechar o gap (não genérico — específico) — **nome preferido** (alternativa aceita: `immediate_win`)
+
+> O renderer do portal aceita ambos os conjuntos de nomes. Priorize `client_score`/`best_in_class_score`/`best_practice_observed`/`opportunity_for_client`; use as alternativas apenas se o contexto exigir outra semântica.
+
+Feche com `strategic_read`: 1 parágrafo que interpreta os gaps — onde o cliente está muito atrás, onde está à frente, onde a competição é fraca.
+
+### Journey Friction Map (OBRIGATÓRIO — funil completo com leakage)
+
+Mapeie o funil real da persona do primeiro contato ao fechamento. Para cada estágio:
+- `stage`: nome (ex: "Exposição", "Clique", "LP", "WhatsApp click", "Resposta", "Agendamento", "Comparecimento")
+- `current_volume`: número real ou estimado (evidência se estimado)
+- `leakage_pct`: % que vaza para o próximo estágio
+- `root_cause`: por que vaza aqui
+- `fix_effort`: baixo/médio/alto
+- `fix_impact_estimate`: impacto estimado se fixar (leads a mais, % conversão a mais)
+
+Feche com:
+- `biggest_leakage_summary`: qual o estágio crítico, quanto vaza, quanto custa
+- `projected_funnel_90d_realistic`: projeção com quick wins aplicados
+
+### Tone-of-Voice Analysis (OBRIGATÓRIO — coerência entre canais)
+
+Comunicação quebra quando o tom muda de canal para canal. Audite:
+
+**Brand voice target:** o tom PROMETIDO pela marca.
+- `pillars`: 3-5 atributos declarados (ex: "acolhedor", "técnico", "sem jargão")
+- `avoid`: o que NÃO é (ex: "não é frio", "não é jocoso")
+
+**Channel drift:** para cada canal (site, instagram, anúncios, GMB, WhatsApp):
+- `channel`
+- `actual_tone`: como soa hoje (com exemplo citado) — **nome preferido** (alternativa: `current_tone`)
+- `target_alignment`: **CAMPO RECOMENDADO** — alinhamento qualitativo com a brand voice. Use um dos enums: `alinhado`, `bom`/`boa`, `parcial`/`media`, `baixa`, `desalinhado`, `crítico`, `nenhum`. O renderer do portal mapeia cada valor para uma barra visual no gráfico "Alinhamento por Canal" (alinhado=100, bom=80, parcial/média=55, baixa=25, desalinhado=20, crítico=10, nenhum=0). **Prefira este campo** em vez de `alignment_score` numérico — é mais legível e consistente.
+- `alignment_score`: 0-100 (opcional; use apenas se quiser sobrescrever o mapeamento do enum)
+- `drift_notes`: onde desalinhou — **nome preferido** (alternativa: `gap`)
+- `fix`: correção sugerida (opcional; renderiza como ação complementar ao drift)
+- `example`: citação textual do canal que ilustra o drift
+
+> **IMPORTANTE:** O gráfico "Alinhamento por Canal" no portal só renderiza canais que têm `target_alignment` (enum) ou `alignment_score` (numérico). Se ambos estiverem ausentes, o canal é omitido. **Sempre preencha `target_alignment`** para garantir visualização.
+
+Feche com `coherence_score`: média ponderada 0-100 que mede coerência geral da marca. Se <60, é prioridade editorial imediata. O renderer exibe esse score em uma barra horizontal com marcadores de Meta/Atual (escala 0/40/70/100).
+
+### URL Audit (OBRIGATÓRIO — lista de URLs a verificar)
+
+Lista com `url`, `purpose` (LP produto X, bio Instagram, etc.), `status_expected` (o que deveria estar lá), `verify_checklist` (3-5 pontos rápidos para QA do operador).
+
 ### Quick Wins (3-5 ações)
 
 Para cada quick win:
@@ -135,6 +192,11 @@ Antes de mostrar ao operador, verifique:
 - [ ] Cada gap tem evidência concreta (não opinião vaga)?
 - [ ] Quick wins são realmente executáveis em < 1 semana sem custo?
 - [ ] Scores por canal estão calibrados (nem tudo é 50/100)?
+- [ ] `competitor_benchmark` tem 2-3 grupos e tabela canal-a-canal com melhor prática observada e oportunidade específica?
+- [ ] `journey_friction_map` mapeia o funil completo com leakage_pct e root_cause para cada estágio?
+- [ ] `biggest_leakage_summary` identifica QUAL estágio é o maior buraco (com número)?
+- [ ] `tone_of_voice_analysis` compara brand voice declarada vs atual por canal, com coherence_score final?
+- [ ] `url_audit` lista todas as URLs críticas com verify_checklist?
 
 Se falhou → regenere silenciosamente. Não avise o operador.
 

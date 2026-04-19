@@ -90,6 +90,86 @@ Para cada: título, evidência nos dados, impacto estimado, dimensão afetada.
 | # | Acao | Prioridade | Impacto esperado | Responsavel | Prazo |
 |---|------|-----------|------------------|-------------|-------|
 
+### Keyword Clusters (OBRIGATÓRIO — search)
+
+Não trate keywords como lista única. Agrupe em 4-6 clusters estratégicos. Para cada:
+- `cluster`: nome (ex: "Marca", "Felinos", "Domicílio", "Genéricas")
+- `keywords`: exemplos (5-15)
+- `intent`: navegacional | informacional | transacional | comercial
+- `budget_allocation_pct`: % do budget de search para esse cluster
+- `expected_cpc_range`: faixa esperada (R$)
+- `bid_strategy`: estratégia (máx. conv., CPA alvo, manual)
+- `copy_angle`: ângulo da copy para esse cluster
+- `risk`: principal risco (ex: concorrência alta, baixa intenção, canibalização)
+
+### Budget Reallocation Scenarios (OBRIGATÓRIO — 3 cenários)
+
+Não entregue apenas uma recomendação de budget — gere 3 cenários para o operador escolher.
+- **A. Conservador:** mantém budget atual, reorganiza mix
+- **B. Realista (RECOMENDADO):** reorganização + leve aumento, mapeamento de campanhas — o renderer marca automaticamente o cenário do meio como "★ Recomendado"
+- **C. Agressivo:** aumento significativo para buscar teto de demanda
+
+Para cada cenário, gere os seguintes campos (os nomes **preferidos** são os primeiros; alternativas são aceitas pelo renderer):
+
+**Obrigatórios / estruturais:**
+- `name` (pref) ou `label` — nome do cenário
+- `total_budget_monthly` — budget total mensal. Se ausente, o renderer soma automaticamente os splits.
+- `google_split` (pref) ou `google_allocation{value|amount|brl, pct}` — valor em R$ no Google
+- `meta_split` (pref) ou `meta_allocation{value|amount|brl, pct}` — valor em R$ no Meta
+- `expected_leads_monthly` (pref) ou `projected_leads_month` — leads/mês esperados
+- `expected_cpl` (pref) ou `projected_cpl` — CPL esperado em R$
+- `expected_roas` — ROAS esperado
+- `risk_assessment` — avaliação do risco
+
+**Opcionais (enriquecem o card do cenário):**
+- `delta_leads` — variação vs. atual (número ou "+15%")
+- `effort_weeks` — semanas para implementar
+- `confidence` — high/medium/low (ou alta/média/baixa)
+- `campaigns_structure[]` — lista de campanhas com {campaign, platform, budget_monthly, objective}
+
+> **COMO O PORTAL RENDERIZA:** Tabela side-by-side com cenários como colunas e métricas (Budget, Google, Meta, Leads/mês, CPL, ROAS) como linhas. Cada linha tem barras normalizadas por métrica para comparação visual. **Não existe mais gráfico de barras agrupadas com escalas mistas** — escolha os campos acima e o renderer formata o resto.
+
+### Creative Testing Hypotheses (OBRIGATÓRIO — 4-6 hipóteses)
+
+Cada hipótese é um teste A/B real, não uma ideia vaga. Para cada (H1, H2, ...):
+- `hypothesis`: afirmação testável ("Se X, então Y, porque Z")
+- `angle`: ângulo de comunicação
+- `format`: formato (single image, carousel, reels, VSL)
+- `hook`: primeiras 3 segundos / headline
+- `body`: copy principal
+- `cta`: call to action
+- `target_audience`: público específico
+- `success_criteria`: métrica + threshold (ex: "CTR > 1.5% E CPL < R$20")
+- `testing_budget`: R$ do teste
+- `testing_duration_days`: dias
+
+Feche com `testing_budget_total_week_1`.
+
+### Daypart Optimization (OBRIGATÓRIO)
+
+Não basta "rodar o dia todo". Proponha ajustes de lance por dia/hora baseados no comportamento da persona. Para cada ajuste:
+- `day_time`: janela (ex: "Segunda-Sexta 9-12h", "Sábado 10-18h", "Domingo")
+- `bid_adjustment_pct`: +X% ou -X%
+- `rationale`: por que (dado de comportamento, padrão do segmento)
+
+### Forecast Sensitivity Analysis (OBRIGATÓRIO)
+
+Projeção não é um número — é um intervalo. Mostre como a meta se move com variações:
+- `base_case`: meta central. Campos aceitos:
+  - `leads_monthly` (pref) ou `leads_month_90d`
+  - `cpl` (pref) ou `cpl_90d_brl`
+  - `cac` (pref) ou `cac_90d_brl`
+  - `revenue_monthly`, `roas`
+- `variations`: 4-6 cenários "what-if" com mudança nas variáveis (CPC +10%, CTR -20%, LP conv +30%, etc.) e impacto no resultado. Campos aceitos por variação:
+  - `scenario` (pref) ou `scenario_name`
+  - `variable_change` — descrição da mudança
+  - `impact_on_leads` (pref) ou `impact_on_leads_month_90d`
+  - `impact_on_cpl` (pref) ou `impact_on_cpl_brl`
+  - `impact_on_revenue`
+  - `delta_vs_base_pct` — variação vs. base em % (ex: -15.5)
+
+> **IMPORTANTE — MUDANÇA NO RENDERER:** O portal NÃO exibe mais um gráfico de sensibilidade. Apenas os cards de detalhe (base_case + lista de variations) são renderizados. Continue gerando dados ricos — eles alimentam os cards e fazem parte do JSON para referência. Não gere gráficos no texto livre; o portal cuida da visualização.
+
 ### Meta realista — 90 dias
 
 CPL alvo e ROAS alvo com justificativa baseada nos dados e benchmarks. Premissas + alertas sobre fatores fora do controle.
@@ -106,6 +186,11 @@ Antes de mostrar ao operador, verifique:
 - [ ] Benchmarks são do segmento correto do cliente?
 - [ ] Plano de ação tem responsáveis e prazos realistas?
 - [ ] Meta de 90 dias é honesta (não promessa mágica)?
+- [ ] `keyword_clusters` (search) tem 4-6 clusters com intent, budget %, copy angle e risco?
+- [ ] `budget_reallocation_scenarios` tem 3 cenários (A/B/C) com estrutura de campanhas e projeção?
+- [ ] `creative_testing_hypotheses` tem 4-6 hipóteses testáveis com success_criteria numérico e budget?
+- [ ] `daypart_optimization` traz ajustes específicos por janela com rationale?
+- [ ] `forecast_sensitivity_analysis` mostra base_case + 4-6 variações "what-if"?
 
 Se falhou → regenere silenciosamente. Não avise o operador.
 

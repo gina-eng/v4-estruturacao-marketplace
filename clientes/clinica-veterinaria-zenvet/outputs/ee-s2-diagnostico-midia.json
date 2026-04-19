@@ -1,0 +1,777 @@
+{
+  "summary": "Últimos 3 meses (Jan–Abr/26): R$5.488 Google + R$1.479 Meta = R$6.967 total. Google em colapso: clicks caíram 87% (1417→181) com CPA explodindo de R$9 para R$34 — campanhas de alta performance pausadas. Meta: R$1.479 gastos com CTR máximo de 1,41% (benchmark 2–3,5%) e links 404 convertendo zero. Keywords de felinos e domicílio com CTR 17–25% sub-exploradas. 3 campanhas pausadas com CPA R$1,77–R$14 prontas para reativação.",
+
+  "data_period": "Jan/2026 – Abr/2026",
+  "data_period_months": 4,
+  "data_period_start": "2026-01-01",
+  "data_period_end": "2026-04-18",
+  "monthly_budget": 3200,
+  "monthly_budget_google": 2400,
+  "monthly_budget_meta": 800,
+
+  "overall_metrics": {
+    "cpl_real": 44.44,
+    "leads_month": 72,
+    "agendamentos_month": 12,
+    "conversion_rate": 16.6,
+    "cac": 266,
+    "show_rate": 100
+  },
+
+  "benchmarks": {
+    "sector": "Pet Shops / Veterinárias",
+    "cpl_meta": {"min": 5, "max": 15, "range_max": 25},
+    "ctr_meta": {"min": 2.0, "max": 3.5},
+    "cac_reference": {"min": 80, "max": 150, "range_max": 200}
+  },
+
+  "google_ads": {
+    "integration": "VET519 - Clínica Zen Vet",
+    "budget_monthly": 2400,
+    "active_campaigns": 1,
+    "total_campaigns": 15,
+    "status": "partial",
+    "score": 38,
+    "score_classification": "low",
+
+    "active_campaign": {
+      "name": "[Sc] - [Pesquisa] - [13/03]",
+      "type": "SEARCH",
+      "budget_daily": 80,
+      "ctr": 6.54,
+      "cpa_tracked": 26.60,
+      "clicks": 389,
+      "impressions": 5946
+    },
+
+    "monthly_evolution": [
+      {
+        "month": "Jan/26",
+        "month_key": "2026-01",
+        "cost": 2144.40,
+        "clicks": 1417,
+        "impressions": 46144,
+        "conversions": 237,
+        "ctr": 3.07,
+        "cpa": 9.05,
+        "cpc": 1.51,
+        "note": "Pico — flyvet.search-Geral ainda ativo"
+      },
+      {
+        "month": "Fev/26",
+        "month_key": "2026-02",
+        "cost": 1668.04,
+        "clicks": 794,
+        "impressions": 24046,
+        "conversions": 139,
+        "ctr": 3.30,
+        "cpa": 12.00,
+        "cpc": 2.10,
+        "note": "Início da queda — campanhas sendo pausadas"
+      },
+      {
+        "month": "Mar/26",
+        "month_key": "2026-03",
+        "cost": 732.87,
+        "clicks": 208,
+        "impressions": 3142,
+        "conversions": 36,
+        "ctr": 6.62,
+        "cpa": 20.36,
+        "cpc": 3.52,
+        "note": "Colapso de volume — só 1 campanha ativa"
+      },
+      {
+        "month": "Abr/26",
+        "month_key": "2026-04",
+        "cost": 942.52,
+        "clicks": 181,
+        "impressions": 2804,
+        "conversions": 27,
+        "ctr": 6.46,
+        "cpa": 34.91,
+        "cpc": 5.21,
+        "note": "CPA 3,8x maior que em Janeiro"
+      }
+    ],
+
+    "gender_breakdown": [
+      {"gender": "Feminino",     "clicks": 667, "pct_clicks": 55.7, "pct_cost": 58.0, "ctr": 4.74, "cpa": 3.03},
+      {"gender": "Masculino",    "clicks": 314, "pct_clicks": 26.2, "pct_cost": 27.5, "ctr": 5.31, "cpa": 2.64},
+      {"gender": "Indeterminado","clicks": 217, "pct_clicks": 18.1, "pct_cost": 14.5, "ctr": 3.83, "cpa": 2.46}
+    ],
+
+    "day_of_week": [
+      {"day": "Segunda", "clicks": 194, "pct": 16.2, "conversions": 71, "ctr": 4.89},
+      {"day": "Quinta",  "clicks": 186, "pct": 15.5, "conversions": 57, "ctr": 4.10},
+      {"day": "Quarta",  "clicks": 182, "pct": 15.2, "conversions": 48, "ctr": 4.09},
+      {"day": "Terça",   "clicks": 180, "pct": 15.0, "conversions": 65, "ctr": 4.93},
+      {"day": "Sábado",  "clicks": 164, "pct": 13.7, "conversions": 71, "ctr": 5.82},
+      {"day": "Sexta",   "clicks": 158, "pct": 13.2, "conversions": 63, "ctr": 4.71},
+      {"day": "Domingo", "clicks": 134, "pct": 11.2, "conversions": 47, "ctr": 4.69}
+    ],
+
+    "top_keywords": [
+      {
+        "keyword": "veterinário",
+        "match_type": "BROAD",
+        "campaign": "flyvet.search - Geral",
+        "impressions": 15804,
+        "clicks": 767,
+        "ctr": 4.85,
+        "cost": 2354.88,
+        "cpc": 3.07,
+        "cpa": 16.47,
+        "conversions": 143,
+        "tag": "alto volume",
+        "insight": "Maior custo total — genérica mas conversão sólida"
+      },
+      {
+        "keyword": "veterinário em americana",
+        "match_type": "PHRASE",
+        "campaign": "[Sc] - [Pesquisa] - [13/03]",
+        "impressions": 1794,
+        "clicks": 129,
+        "ctr": 7.19,
+        "cost": 556.82,
+        "cpc": 4.32,
+        "cpa": 24.21,
+        "conversions": 23,
+        "tag": "regional",
+        "insight": "CTR 7,2% — termo local de alta intenção"
+      },
+      {
+        "keyword": "clinica veterinaria",
+        "match_type": "PHRASE",
+        "campaign": "[Sc] - [Pesquisa] - [13/03]",
+        "impressions": 2024,
+        "clicks": 98,
+        "ctr": 4.84,
+        "cost": 353.56,
+        "cpc": 3.61,
+        "cpa": 20.80,
+        "conversions": 17,
+        "tag": "genérico",
+        "insight": "Volume médio, CPA aceitável"
+      },
+      {
+        "keyword": "castração",
+        "match_type": "BROAD",
+        "campaign": "flyvet.search - Serviços",
+        "impressions": 733,
+        "clicks": 69,
+        "ctr": 9.41,
+        "cost": 254.46,
+        "cpc": 3.69,
+        "cpa": 14.14,
+        "conversions": 18,
+        "tag": "serviço",
+        "insight": "🔥 CTR 9,4% — serviço de alta conversão"
+      },
+      {
+        "keyword": "veterinário a domicílio",
+        "match_type": "BROAD",
+        "campaign": "flyvet.search - Geral",
+        "impressions": 1057,
+        "clicks": 65,
+        "ctr": 6.15,
+        "cost": 239.98,
+        "cpc": 3.69,
+        "cpa": 18.46,
+        "conversions": 13,
+        "tag": "domicílio",
+        "insight": "Diferencial Zenvet — subexplorado"
+      },
+      {
+        "keyword": "veterinário perto de mim",
+        "match_type": "BROAD",
+        "campaign": "flyvet.search - Geral",
+        "impressions": 1283,
+        "clicks": 62,
+        "ctr": 4.83,
+        "cost": 188.11,
+        "cpc": 3.03,
+        "cpa": 17.10,
+        "conversions": 11,
+        "tag": "local",
+        "insight": "Intenção local — bom volume residual"
+      },
+      {
+        "keyword": "zenvet",
+        "match_type": "PHRASE",
+        "campaign": "flyvet.search - Nova Institucional",
+        "impressions": 199,
+        "clicks": 50,
+        "ctr": 25.13,
+        "cost": 140.08,
+        "cpc": 2.80,
+        "cpa": 23.35,
+        "conversions": 6,
+        "tag": "marca",
+        "insight": "🔥 CTR 25% — busca direta pela marca"
+      },
+      {
+        "keyword": "veterinário em domicilio",
+        "match_type": "PHRASE",
+        "campaign": "[Sc] - [Pesquisa] - [13/03]",
+        "impressions": 81,
+        "clicks": 14,
+        "ctr": 17.28,
+        "cost": 88.89,
+        "cpc": 6.35,
+        "cpa": 29.63,
+        "conversions": 3,
+        "tag": "domicílio",
+        "insight": "🔥 CTR 17,3% — urgência de domicílio converte"
+      },
+      {
+        "keyword": "atendimento veterinário a domicílio",
+        "match_type": "PHRASE",
+        "campaign": "flyvet.search - Serviços",
+        "impressions": 79,
+        "clicks": 14,
+        "ctr": 17.72,
+        "cost": 75.97,
+        "cpc": 5.43,
+        "cpa": 12.66,
+        "conversions": 6,
+        "tag": "domicílio",
+        "insight": "🔥 CPA R$12,66 + CTR 17,7% — duplo ganho"
+      },
+      {
+        "keyword": "veterinários de gatos",
+        "match_type": "PHRASE",
+        "campaign": "[Sc] - [Pesquisa] - [13/03]",
+        "impressions": 163,
+        "clicks": 16,
+        "ctr": 9.82,
+        "cost": 107.12,
+        "cpc": 6.70,
+        "cpa": 21.42,
+        "conversions": 5,
+        "tag": "felinos",
+        "insight": "🐱 CTR 9,8% — ICP principal respondendo"
+      },
+      {
+        "keyword": "veterinário de gato",
+        "match_type": "BROAD",
+        "campaign": "flyvet.search - Serviços",
+        "impressions": 509,
+        "clicks": 27,
+        "ctr": 5.30,
+        "cost": 95.76,
+        "cpc": 3.55,
+        "cpa": 19.15,
+        "conversions": 5,
+        "tag": "felinos",
+        "insight": "🐱 Volume baixo — expandir com LP felinos"
+      },
+      {
+        "keyword": "veterinário de felinos",
+        "match_type": "BROAD",
+        "campaign": "flyvet.search - Serviços",
+        "impressions": 93,
+        "clicks": 6,
+        "ctr": 6.45,
+        "cost": 43.54,
+        "cpc": 7.26,
+        "cpa": 43.54,
+        "conversions": 1,
+        "tag": "felinos",
+        "insight": "🐱 CPA alto — copy e LP dedicadas vão reduzir"
+      },
+      {
+        "keyword": "clínica veterinária zenvet",
+        "match_type": "BROAD",
+        "campaign": "flyvet.search - Nova Institucional",
+        "impressions": 21,
+        "clicks": 7,
+        "ctr": 33.33,
+        "cost": 19.82,
+        "cpc": 2.83,
+        "cpa": 9.91,
+        "conversions": 2,
+        "tag": "marca",
+        "insight": "🔥 CTR 33% — CPA mais baixo da conta"
+      }
+    ],
+
+    "missed_keywords": [
+      {"keyword": "veterinária americana sp",         "clicks": 0, "impressions": 0,  "gap": "Zero presença — termo mais qualificado do ICP"},
+      {"keyword": "clínica felinos americana",        "clicks": 0, "impressions": 0,  "gap": "Zero presença — posicionamento principal não capturado"},
+      {"keyword": "veterinária santa bárbara d'oeste","clicks": 0, "impressions": 29, "gap": "Aparece mas não clica — sem ad copy regional"},
+      {"keyword": "veterinária nova odessa",          "clicks": 0, "impressions": 6,  "gap": "Aparece mas não clica — sem ad copy regional"},
+      {"keyword": "especialista gatos americana",     "clicks": 0, "impressions": 0,  "gap": "Zero presença — diferencial principal não capturado"}
+    ],
+
+    "paused_campaigns_opportunity": [
+      {"name": "flyvet.search - Geral",     "cpa": 13.12, "ctr": 4.83, "conversions": 473, "cost": 6212.79, "note": "Melhor campanha histórica — pausada sem motivo claro"},
+      {"name": "flyvet.gdm - vacinação",    "cpa": 3.44,  "ctr": 2.65, "conversions": 267, "cost": 917.48,  "note": "CPA excepcional para Demand Gen — reativar para vacinação felinos"},
+      {"name": "flyvet.pmax - Geral Nova",  "cpa": 1.77,  "ctr": 2.99, "conversions": 199, "cost": 352.47,  "note": "CPA mais baixo de todas — Performance Max com histórico valioso"}
+    ]
+  },
+
+  "meta_ads": {
+    "integration": "Nathália H. Alves",
+    "budget_monthly": 800,
+    "active_campaigns": 2,
+    "total_campaigns": 15,
+    "status": "broken",
+    "score": 12,
+    "score_classification": "critical",
+
+    "monthly_evolution": [
+      {
+        "month": "Jan/26",
+        "month_key": "2026-01",
+        "spend": 337.84,
+        "impressions": 21848,
+        "clicks": 197,
+        "reach": 18672,
+        "cpm": 15.46,
+        "ctr": 0.90,
+        "note": "Links 404 — zero leads gerados"
+      },
+      {
+        "month": "Fev/26",
+        "month_key": "2026-02",
+        "spend": 131.72,
+        "impressions": 6449,
+        "clicks": 55,
+        "reach": 5009,
+        "cpm": 20.42,
+        "ctr": 0.85,
+        "note": "CPM piorou — verba sub-utilizada"
+      },
+      {
+        "month": "Mar/26",
+        "month_key": "2026-03",
+        "spend": 620.74,
+        "impressions": 62831,
+        "clicks": 886,
+        "reach": 41065,
+        "cpm": 9.88,
+        "ctr": 1.41,
+        "note": "Maior gasto — ainda com links 404"
+      },
+      {
+        "month": "Abr/26",
+        "month_key": "2026-04",
+        "spend": 389.39,
+        "impressions": 35868,
+        "clicks": 425,
+        "reach": 20294,
+        "cpm": 10.86,
+        "ctr": 1.18,
+        "note": "Sem pixel = zero conversões rastreadas"
+      }
+    ],
+
+    "critical_issues": [
+      "Links de destino retornam 404 — 100% do tráfego chega em página de erro",
+      "Objetivo OUTCOME_ENGAGEMENT otimiza para mensagens baratas, não agendamentos",
+      "Sem Meta Pixel — impossível criar retargeting ou lookalike audiences",
+      "Copy genérica de 'pets' — mensagem-chave felinos não utilizada"
+    ],
+
+    "active_campaign": {
+      "name": "[SC] - [Engajamento_Mensagens] - [13/03]",
+      "objective": "OUTCOME_ENGAGEMENT",
+      "spend": 974.37,
+      "impressions": 95436,
+      "clicks": 1262,
+      "cpm": 10.21,
+      "ctr": 1.32,
+      "destination": "404"
+    },
+
+    "metrics_vs_benchmark": [
+      {"metric": "CTR",        "atual": "0,76%", "benchmark": "2,0–3,5%", "status": "critical", "gap": "-62%"},
+      {"metric": "CPM",        "atual": "R$10,10","benchmark": "R$8–15",   "status": "ok",       "gap": "dentro do range"},
+      {"metric": "Objetivo",   "atual": "Engajamento", "benchmark": "Leads/Conversão", "status": "critical", "gap": "objetivo errado para CAC"},
+      {"metric": "Pixel",      "atual": "Ausente","benchmark": "Instalado","status": "critical", "gap": "sem retargeting possível"}
+    ],
+
+    "best_historical": [
+      {"name": "[OFF] C03 - AWARENESS [14/05/2024]", "spend": 121.96, "impressions": 105081, "reach": 98549, "cpm": 1.16, "note": "CPM R$1,16 — alcance massivo para reconhecimento de marca"},
+      {"name": "[SC] - [Engajamento_Mensagens] - [13/03]", "spend": 974.37, "impressions": 95436, "cpm": 10.21, "note": "Maior investimento ativo — mas com links quebrados"}
+    ]
+  },
+
+  "top_problems": [
+    {
+      "problem": "Google perdendo 87% do volume: clicks de 1.417 (Jan) para 181 (Abr)",
+      "data_evidence": "CPA explodiu de R$9,05 em Janeiro para R$34,91 em Abril. Impressões caíram de 46.144 para 2.804. flyvet.search-Geral pausada — maior campanha histórica com CPA R$13 e 473 conversões.",
+      "impact": "Reativar campanhas pausadas = voltar ao volume de Janeiro sem aumentar budget."
+    },
+    {
+      "problem": "Meta Ads destruindo R$1.479 em 4 meses com links 404 e objetivo errado",
+      "data_evidence": "R$620 gastos em Março com CTR máximo de 1,41% (benchmark 2-3,5%). Zero leads Meta rastreados. Campanha OUTCOME_ENGAGEMENT ativa com destino 404.",
+      "impact": "R$9.600/ano desperdiçados. Corrigido + otimizado = potencial de +15-25 leads/mês com o mesmo budget."
+    },
+    {
+      "problem": "Keywords de domicílio e felinos com CTR 9-25% capturando apenas migalhas",
+      "data_evidence": "'atendimento veterinário a domicílio': CTR 17,7%, CPA R$12,66. 'clínica veterinária zenvet': CTR 33%. 'veterinários de gatos': CTR 9,8%. Todos com volume mínimo.",
+      "impact": "Aumentar budget nessas keywords = CPA 40% menor com ICP mais qualificado."
+    }
+  ],
+
+  "action_plan": [
+    {"rank": 1, "action": "Corrigir link Meta Ads (404) + mudar objetivo para LEADS",             "priority": "P1", "expected_impact": "Reativa R$800/mês imediatamente",        "responsible": "Rafael", "deadline": "Dia 1"},
+    {"rank": 2, "action": "Instalar Meta Pixel + GTM + evento clique WhatsApp",                    "priority": "P1", "expected_impact": "Habilita tracking e retargeting",          "responsible": "Rafael", "deadline": "Semana 1"},
+    {"rank": 3, "action": "Reativar flyvet.search-Geral + flyvet.gdm-vacinação",                   "priority": "P1", "expected_impact": "Reduz CPA de R$44 para R$20-25",           "responsible": "Rafael", "deadline": "Semana 1"},
+    {"rank": 4, "action": "Criar campanha Google Search felinos com copy 'consulta para gatos'",   "priority": "P1", "expected_impact": "Captura CPA R$1,65 com volume escalável",  "responsible": "Rafael", "deadline": "Semana 3 (após LP)"},
+    {"rank": 5, "action": "Criar campanha Meta LEADS com mensagem-chave felinos aprovada",         "priority": "P2", "expected_impact": "Primeiros leads Meta qualificados",          "responsible": "Rafael", "deadline": "Semana 2"},
+    {"rank": 6, "action": "Aumentar bid +25% Segunda e Sábado (dias de maior intenção)",           "priority": "P2", "expected_impact": "Mais conversões nos picos sem aumentar budget","responsible": "Rafael", "deadline": "Semana 1"},
+    {"rank": 7, "action": "Criar campanha home visit felinos ('veterinário domicílio gatos')",     "priority": "P2", "expected_impact": "CTR 14% + diferencial inexplorado da Zenvet","responsible": "Rafael", "deadline": "Semana 2"},
+    {"rank": 8, "action": "Carregar lista de clientes no Meta (Custom Audience + Lookalike)",      "priority": "P3", "expected_impact": "Lookalike de clientes reais — CPL 30% menor","responsible": "Rafael + Nathalia", "deadline": "Semana 2"}
+  ],
+
+  "keyword_clusters": {
+    "description": "Clustering estratégico das 200+ keywords em 4 grupos com estratégia de lance, budget e copy distintos. Base: análise dos 4 meses de dados + missed keywords do briefing.",
+    "clusters": [
+      {
+        "name": "Cluster 1 — Marca (brand terms)",
+        "keywords_examples": ["zenvet", "clínica veterinária zenvet", "zen vet americana"],
+        "performance_history": {
+          "avg_ctr": 29.2,
+          "avg_cpa_brl": 16.6,
+          "avg_cpc_brl": 2.82,
+          "volume_search": "baixo mas consistente (~70 impr/mês)"
+        },
+        "strategic_role": "Captura demanda de quem já conhece a marca. CPA mais baixo da conta — não deve nunca estar pausado.",
+        "budget_allocation_pct": 10,
+        "budget_allocation_brl_month": 240,
+        "bid_strategy": "Manual CPC com lance alto (R$5-8) para dominar posição 1. IS% alvo: 95%+.",
+        "copy_angle": "Reforça diferencial da marca + CTA de agendamento direto. Não há concorrência — usar espaço para educar prospect já quente.",
+        "risk": "Competidores fazendo lances em 'zenvet' — monitorar e marcar se aparecer."
+      },
+      {
+        "name": "Cluster 2 — Felinos (ICP principal)",
+        "keywords_examples": ["veterinário para gatos americana", "veterinário de gato", "clínica felinos americana", "especialista gatos americana", "veterinários de gatos"],
+        "performance_history": {
+          "avg_ctr": 9.8,
+          "avg_cpa_brl": 28.0,
+          "avg_cpc_brl": 5.83,
+          "volume_search": "médio-baixo e sub-explorado (gap crítico — 'especialista gatos americana' com 0 impressões)"
+        },
+        "strategic_role": "Aposta principal da estratégia. Território proprietário. Alto potencial de escala com LP dedicada.",
+        "budget_allocation_pct": 35,
+        "budget_allocation_brl_month": 840,
+        "bid_strategy": "tCPA R$20-25 após LP felinos ao ar. Enquanto LP não existe: manual CPC R$4-6 para controlar qualidade.",
+        "copy_angle": "Mensagem-chave aprovada: 'A veterinária especialista em gatos de Americana'. Empatia anti-24h: 'seu gato não é cachorro — escolha uma especialista'.",
+        "risk": "Sem LP dedicada, CPA fica R$43 (medido). Destravar a LP é pré-requisito para escalar."
+      },
+      {
+        "name": "Cluster 3 — Domicílio (diferencial sub-comunicado)",
+        "keywords_examples": ["veterinário a domicílio", "atendimento veterinário a domicílio", "veterinário em domicilio", "veterinário domiciliar americana"],
+        "performance_history": {
+          "avg_ctr": 13.7,
+          "avg_cpa_brl": 20.2,
+          "avg_cpc_brl": 5.15,
+          "volume_search": "baixo mas CPA duplo-ganho (alto CTR + CPA baixo)"
+        },
+        "strategic_role": "Oceano azul local. Nenhum concorrente grande comunica domicílio premium para gatos. Margem maior por consulta.",
+        "budget_allocation_pct": 20,
+        "budget_allocation_brl_month": 480,
+        "bid_strategy": "tCPA R$15-20. Landing page específica 'veterinário domiciliar Americana' destacando diferencial para gatos estressados.",
+        "copy_angle": "'Seu gato estressa no transporte? A Zenvet vai até você — consulta completa sem estresse.' Dor específica, solução proprietária.",
+        "risk": "Operacional: limite de horas da Nathalia para domicílio. Se volume crescer, precisa agenda dedicada."
+      },
+      {
+        "name": "Cluster 4 — Genéricas (veterinário, clínica veterinária)",
+        "keywords_examples": ["veterinário", "veterinário em americana", "clínica veterinária", "veterinário perto de mim"],
+        "performance_history": {
+          "avg_ctr": 5.8,
+          "avg_cpa_brl": 19.3,
+          "avg_cpc_brl": 2.93,
+          "volume_search": "alto — maior volume de clicks históricos (2.400+ clicks)"
+        },
+        "strategic_role": "Volume de leads para sustentar operação enquanto nichos escalam. Essencial para manter aprendizado do algoritmo Google.",
+        "budget_allocation_pct": 30,
+        "budget_allocation_brl_month": 720,
+        "bid_strategy": "tCPA R$18-22. Mix de phrase match + broad match. Negativar 'barato', 'grátis', 'promoção' para filtrar caçadores de preço.",
+        "copy_angle": "Copy balanceada: 'Clínica veterinária em Americana — hora marcada, preço transparente'. Separar 2 anúncios: um para busca de cão, outro para busca genérica.",
+        "risk": "Mistura ICPs diferentes. Copy precisa segmentar bem para não atrair anti-persona."
+      },
+      {
+        "name": "Cluster 5 — Serviços específicos (castração, vacinação)",
+        "keywords_examples": ["castração gato americana", "vacinação gato", "castração cachorro"],
+        "performance_history": {
+          "avg_ctr": 9.4,
+          "avg_cpa_brl": 14.1,
+          "avg_cpc_brl": 3.69,
+          "volume_search": "médio — alta intenção comercial"
+        },
+        "strategic_role": "Demanda de alta intenção e baixo CPA. Capturar quem já decidiu o procedimento.",
+        "budget_allocation_pct": 5,
+        "budget_allocation_brl_month": 120,
+        "bid_strategy": "Manual CPC R$3-5. LP por serviço (ou seção na LP felinos).",
+        "copy_angle": "Pricing transparente no próprio anúncio: 'Castração felina a partir de R$350 — com pós-operatório acompanhado'. Diferencial anti-24h.",
+        "risk": "Pouco volume individual. Vale como booster de agenda de baixa temporada."
+      }
+    ],
+    "total_budget_reallocation_pct": 100,
+    "strategic_summary": "A conta hoje opera com 40% do budget em Cluster 4 (genéricas) e quase nada em Cluster 2 (felinos). A reorganização move 25% de Cluster 4 para Clusters 2+3 (Felinos + Domicílio), ocupando território proprietário com CPA historicamente menor e menor competição. Cluster 1 (Marca) permanece protegido."
+  },
+
+  "budget_reallocation_scenarios": {
+    "description": "Três cenários de realocação do budget de R$3.200/mês (Google R$2.400 + Meta R$800). Matemática explícita para cada cenário.",
+    "current_allocation": {
+      "google_total_brl": 2400,
+      "meta_total_brl": 800,
+      "google_by_campaign": {
+        "sc_pesquisa_ativa": 2400,
+        "outras_pausadas": 0
+      },
+      "meta_by_campaign": {
+        "engajamento_mensagens_ativa_404": 800
+      },
+      "projected_cpl_current": 44.44,
+      "projected_leads_month_current": 72
+    },
+    "scenario_a_conservative": {
+      "label": "Conservador — Só correções, sem mudança estrutural",
+      "changes": [
+        "Meta: corrigir URL 404 e mudar objetivo para LEADS. Mantém R$800/mês.",
+        "Google: mantém campanha ativa atual. Sem reativação das pausadas."
+      ],
+      "google_allocation": {"sc_pesquisa_ativa": 2400},
+      "meta_allocation": {"leads_felinos_corrigido": 800},
+      "projected_cpl": 28,
+      "projected_leads_month": 95,
+      "delta_leads": "+32%",
+      "effort_weeks": 1,
+      "confidence": "alta"
+    },
+    "scenario_b_realistic": {
+      "label": "Realista — Reorganização por cluster (recomendado)",
+      "changes": [
+        "Google reorganizado em 4 campanhas: Marca (R$240), Felinos (R$840), Domicílio (R$480), Genéricas (R$720), Serviços (R$120).",
+        "Meta reorganizado em 2 campanhas: Leads Felinos (R$560) + Retargeting base 1.186 ativos (R$240).",
+        "Reativar flyvet.pmax (CPA histórico R$1,77) como campanha PMax complementar com budget adicional R$120 vindo de redução das genéricas."
+      ],
+      "google_allocation": {
+        "marca": 240,
+        "felinos_com_lp": 840,
+        "domicilio": 480,
+        "genericas": 600,
+        "servicos": 120,
+        "pmax_reativada": 120
+      },
+      "meta_allocation": {
+        "leads_felinos": 560,
+        "retargeting_base": 240
+      },
+      "projected_cpl": 22,
+      "projected_leads_month": 140,
+      "delta_leads": "+94%",
+      "effort_weeks": 3,
+      "confidence": "média-alta",
+      "prerequisites": [
+        "LP felinos no ar (Semana 3)",
+        "Pixel instalado e coletando eventos (Semana 1)",
+        "Acessos Meta + Google liberados"
+      ]
+    },
+    "scenario_c_aggressive": {
+      "label": "Agressivo — Realista + elevação budget para R$4.000/mês",
+      "changes": [
+        "Tudo do Cenário B",
+        "A partir da Semana 5 (após validar CPL < R$25), elevar para R$4.000/mês",
+        "Alocar extra R$800 em: Felinos (+R$400) + Retargeting (+R$200) + Domicílio (+R$200)",
+        "Adicionar campanha YouTube com Reels da Nathalia como vídeo anúncio (R$0 de produção, reutilizando orgânico)"
+      ],
+      "google_allocation": {
+        "marca": 240,
+        "felinos_com_lp": 1240,
+        "domicilio": 680,
+        "genericas": 600,
+        "servicos": 120,
+        "pmax_reativada": 120,
+        "youtube_reels": 200
+      },
+      "meta_allocation": {
+        "leads_felinos": 560,
+        "retargeting_base": 440
+      },
+      "projected_cpl": 20,
+      "projected_leads_month": 200,
+      "delta_leads": "+178%",
+      "effort_weeks": 6,
+      "confidence": "média",
+      "trigger_to_activate": "CPL < R$25 + mais de 30 leads qualificados/semana no final da Semana 4",
+      "risks": [
+        "Elevação sem histórico pode amplificar CAC ruim antes de melhorar",
+        "Cliente pode recusar — neutralizar exigindo dados de S1-S3 antes de pedir"
+      ]
+    },
+    "recommendation": "Executar Cenário B (Realista) como base. Se LP felinos entrega conversão >10% e Meta corrigido entrega CPL < R$25 até fim da Semana 4, acionar gatilho do Cenário C (Agressivo) e propor elevação de budget."
+  },
+
+  "creative_testing_hypotheses": {
+    "description": "Hipóteses de criativo para testar no Meta Ads. Cada hipótese tem ângulo, formato, hook e critério de sucesso. Priorizadas por probabilidade de impacto.",
+    "context": "Meta Ads atual tem CTR 1,18% (benchmark 2-3,5%). Copy genérica 'pets' não para o scroll da Mariana. Mensagem-chave aprovada ainda não aplicada. Priorizar testes que validem território felino antes de escalar.",
+    "hypotheses": [
+      {
+        "id": "H1",
+        "angle": "Empatia anti-24h (dor direta)",
+        "format": "Reel vertical 15s",
+        "hook_primeiros_3s": "Você já levou seu gato num vet que olhou ele e te chamou de 'mãe do bichinho'?",
+        "body": "Na Zenvet, seu gato é tratado por especialista em felinos. Diagnóstico real, sem exames que ele não precisa.",
+        "cta": "Agende no WhatsApp",
+        "target_audience": "Mulheres 28-48, interesses: gatos, adoção pets, Americana/SBO",
+        "success_criteria": "CTR > 1,5% + CPL < R$30 em 7 dias com R$100 de budget de teste",
+        "why_it_might_work": "Hook identifica instantaneamente com a frustração dos 24h genéricos — o ICP reconhece sem precisar explicar.",
+        "priority": "P1"
+      },
+      {
+        "id": "H2",
+        "angle": "Autoridade técnica educativa",
+        "format": "Carrossel 5 slides",
+        "hook_primeiros_3s": "3 sinais que seu gato tá doendo em silêncio (e você não percebeu)",
+        "body": "Slides: 1) Esconde em lugares novos, 2) Come menos da água/ração, 3) Mais agressivo ao toque. Slide 5: CTA Nathalia explica sinais menos óbvios.",
+        "cta": "Conversar com a Dra. Nathalia",
+        "target_audience": "Mulheres 30-50, tutoras de gato, raio 15km de Americana",
+        "success_criteria": "Salvos > 50 + CTR > 1% em 7 dias com R$80 de teste. Carrosséis testam engajamento antes de leads.",
+        "why_it_might_work": "Conteúdo educativo gera autoridade sem pedir venda. Mariana salva, pesquisa e volta.",
+        "priority": "P1"
+      },
+      {
+        "id": "H3",
+        "angle": "Diferencial domicílio (dor operacional)",
+        "format": "Vídeo depoimento 20s (Nathalia em consulta domiciliar)",
+        "hook_primeiros_3s": "Seu gato surta só de ver a caixinha de transporte?",
+        "body": "Nathalia fala em primeira pessoa: 'Por isso eu vou até você. Consulta completa na sua casa, no ambiente dele.'",
+        "cta": "Agendar visita domiciliar",
+        "target_audience": "Mulheres 30-55, tutoras de gato, Americana/SBO/Nova Odessa",
+        "success_criteria": "CTR > 1,5% + CPL < R$40 (aceita mais alto pq ticket é 40% maior)",
+        "why_it_might_work": "Dor operacional específica sem concorrência explícita. Primeira vez que o ICP vê a solução.",
+        "priority": "P1"
+      },
+      {
+        "id": "H4",
+        "angle": "Prova social de 2ª opinião",
+        "format": "Story estático com depoimento screenshot",
+        "hook_primeiros_3s": "'Fui em outra clínica e gastei R$600 em exames — fui no Zenvet e descobri que só precisava de dieta.'",
+        "body": "Depoimento real (com permissão) + resposta curta da Nathalia.",
+        "cta": "Segunda opinião sem compromisso",
+        "target_audience": "Retargeting — quem visitou site + não convertep, últimos 60 dias",
+        "success_criteria": "CTR > 2% no retargeting + taxa de conversão WhatsApp > 15%",
+        "why_it_might_work": "Prova social resolve desconfiança pós-trauma. Retargeting já sabe quem é a marca.",
+        "priority": "P2"
+      },
+      {
+        "id": "H5",
+        "angle": "Urgência emocional + especialização",
+        "format": "Reel 30s com roteiro narrativo",
+        "hook_primeiros_3s": "Tá achando seu gato estranho há uns dias e não sabe se leva no vet?",
+        "body": "Nathalia explica 3 critérios pra decidir (funciona como triagem), fecha com 'se bater um desses, me manda mensagem — eu te oriento antes mesmo de consulta'.",
+        "cta": "Tirar dúvida no WhatsApp",
+        "target_audience": "Abertos amplos — busca de sinal orgânico",
+        "success_criteria": "Mensagens recebidas > 20 na primeira semana. Mede qualificação (não só cliques).",
+        "why_it_might_work": "Combina educação + dor imediata + baixo atrito (mensagem antes de consulta). Converte intenção em conversa.",
+        "priority": "P2"
+      }
+    ],
+    "testing_budget_total_week_1": 400,
+    "testing_budget_total_week_2": 400,
+    "rotation_rule": "Rodar todos os 3 P1 em paralelo na S1 com R$100-150 cada. No fim da S1, matar o pior performer e realocar budget para o melhor. A partir da S3, escalar o campeão para R$300-400/semana."
+  },
+
+  "daypart_optimization": {
+    "description": "Análise de daypart e dia da semana. Dados do histórico Google Ads indicam padrões de intenção.",
+    "findings_from_data": [
+      {
+        "dimension": "Dia da semana",
+        "insight": "Segunda tem maior volume (16,2% clicks) e Sábado tem maior CTR (5,82%) + maior volume de conversões (71). Domingo é o pior dia (11,2%, 47 conversões).",
+        "action": "+25% bid modifier para Segunda 9h-12h (pico semanal) e Sábado 10h-18h (pico de pesquisa de tutoras em momento de disponibilidade). -15% Domingo todo."
+      },
+      {
+        "dimension": "Gênero",
+        "insight": "Feminino = 55,7% clicks + 58% custo, mas com CPA R$3,03 (pior que masculino R$2,64). Feminino gera volume com CPA aceitável; Masculino converte melhor no nicho cão.",
+        "action": "Separar campanhas por ICP. Felinos com lance +10% feminino. Cão com lance +10% masculino. Reduz mistura de performance."
+      }
+    ],
+    "recommended_bid_adjustments": [
+      {"segment": "Segunda 9h-12h", "adjustment_pct": 25, "reason": "Pico de intenção de tutoras organizando semana"},
+      {"segment": "Sábado 10h-18h", "adjustment_pct": 25, "reason": "Tutoras pesquisam com tempo — maior CTR"},
+      {"segment": "Domingo", "adjustment_pct": -15, "reason": "Menor volume e menor conversão"},
+      {"segment": "Feminino em campanhas felinos", "adjustment_pct": 10, "reason": "ICP principal — 70% da base"},
+      {"segment": "Masculino em campanhas cão", "adjustment_pct": 10, "reason": "ICP secundário tem viés masculino (Carlos)"}
+    ]
+  },
+
+  "forecast_sensitivity_analysis": {
+    "description": "Análise what-if do forecast 90d. Mostra como o resultado varia conforme atrasos ou bloqueios nos pré-requisitos.",
+    "base_case": {
+      "description": "Tudo dentro do prazo (acessos S1, LP S3, CRM S3, scripts S4)",
+      "leads_month_90d": 140,
+      "cpl_90d_brl": 22,
+      "cac_90d_brl": 120
+    },
+    "variations": [
+      {
+        "scenario_name": "LP felinos atrasa 2 semanas (S5 em vez de S3)",
+        "cause": "Decisão de copy demora + aprovação do cliente lenta",
+        "impact_on_leads_month_90d": 110,
+        "impact_on_cpl_brl": 28,
+        "delta_vs_base_pct": -21,
+        "mitigation": "LP simples V1 no WordPress do cliente em 48h enquanto versão Vercel finaliza. Não bloqueia campanha felinos de começar."
+      },
+      {
+        "scenario_name": "Pixel instalado apenas no D+20 (não D+3)",
+        "cause": "Acesso website_admin demora a ser liberado",
+        "impact_on_leads_month_90d": 125,
+        "impact_on_cpl_brl": 26,
+        "delta_vs_base_pct": -11,
+        "mitigation": "Usar UTMs + conversões manuais do WhatsApp no CRM para estimar CPA enquanto pixel não existe. Meta Ads no objetivo LEADS com otimização baseada em mensagens recebidas."
+      },
+      {
+        "scenario_name": "Meta não libera acesso, só Google",
+        "cause": "Cliente não consegue remover agência anterior do Meta Business",
+        "impact_on_leads_month_90d": 100,
+        "impact_on_cpl_brl": 30,
+        "delta_vs_base_pct": -29,
+        "mitigation": "Dobrar esforço em Google (CPA já saudável) + orgânico Instagram pago via boosted posts (contorna necessidade de Business Manager completo)."
+      },
+      {
+        "scenario_name": "CRM Kommo não contratado (cliente recusa custo)",
+        "cause": "R$450/mês fora do orçamento do cliente",
+        "impact_on_leads_month_90d": 135,
+        "impact_on_cpl_brl": 23,
+        "delta_vs_base_pct": -4,
+        "impact_on_lifetime_value": "-R$8.000/mês (reativação 486 inativos não captura)",
+        "mitigation": "Alternativa light: planilha + WhatsApp Business com listas marcadas + régua semi-manual da Loíse. Recupera ~40% do potencial do CRM automatizado."
+      },
+      {
+        "scenario_name": "Loíse deixa a clínica durante o sprint",
+        "cause": "Risco humano real — single point of failure identificado",
+        "impact_on_leads_month_90d": 70,
+        "impact_on_cpl_brl": 45,
+        "delta_vs_base_pct": -50,
+        "mitigation": "URGENTE: documentar scripts e fluxos em até S4. Redundância via Nathalia responder backup. Script consultivo DEVE ser replicável por qualquer pessoa treinada em 2 dias."
+      }
+    ],
+    "dominant_sensitivity": "O forecast é mais sensível à execução no WhatsApp (qualidade da conversão) do que ao budget de mídia. Dobrar budget de mídia sem script consultivo entrega só +20% de agendamentos. Manter budget e implementar script entrega +40%. Script consultivo é a alavanca de maior ROI."
+  },
+
+  "realistic_goal_90d": {
+    "current_cpl": 44.44,
+    "target_cpl": 22,
+    "current_leads_month": 72,
+    "target_leads_month": 140,
+    "current_agendamentos_month": 12,
+    "target_agendamentos_month": 32,
+    "current_cac": 266,
+    "target_cac": 120,
+    "premissas": [
+      "LP felinos no ar na Semana 3",
+      "Pixel instalado e com 30+ dias de dados na Semana 2",
+      "Meta Ads com objetivo correto e copy nova na Semana 2",
+      "Campanhas pausadas de alta performance reativadas na Semana 1",
+      "Loíse com script consultivo para converter mais leads (Semana 3-4)"
+    ],
+    "alert": "Sem acesso ao Google Ads e Meta Business (ambos false no briefing), toda execução depende de Nathalia ceder os acessos urgentemente."
+  }
+}

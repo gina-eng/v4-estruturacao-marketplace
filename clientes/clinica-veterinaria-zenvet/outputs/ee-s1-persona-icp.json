@@ -1,0 +1,432 @@
+{
+  "summary": "ICP principal: tutoras de gatos 30-45 anos, classe média-alta, Americana/SBO/Nova Odessa. Job emocional central: encontrar veterinária que entende de felinos de verdade. Maior dor: medo de ser explorada com exames desnecessários (trauma com concorrentes 24h). Mensagem-chave escolhida: 'Seu gato merece uma veterinária que entende de felinos — não de bicho em geral.' ICP secundário: tutores de cães 35-55 anos, perfil mais prático, prioridade em agilidade e preço transparente.",
+
+  "icp": {
+    "segment_label": "Tutoras de gatos — 70% da base atual",
+    "demographics": {
+      "type": "B2C",
+      "age_range": "30–45 anos",
+      "income_or_revenue": "R$ 5.000–R$ 12.000/mês (classe média a média-alta)",
+      "location": "Americana, Santa Bárbara d'Oeste, Nova Odessa — SP",
+      "gender": "Majoritariamente feminino",
+      "civil_status": "Casada ou com relacionamento estável, sem filhos ou filhos crescidos",
+      "education": "Superior completo ou em andamento",
+      "decision_maker_role": "Decisão individual — não precisa de aprovação de terceiros",
+      "pet_relationship": "Gato humanizado — 'é o filho da casa'"
+    },
+    "behavior": {
+      "decision_process": "Emocional primeiro, racional depois. Pesquisa reviews no Google Maps, olha o Instagram da clínica por dias antes de ligar, pergunta em grupos de WhatsApp de tutores locais. Decisão individual.",
+      "research_channels": [
+        "Google Maps (reviews)",
+        "Instagram (feed + stories da clínica)",
+        "Grupos de WhatsApp de tutores locais",
+        "Indicação de amigas tutoras"
+      ],
+      "main_objections": [
+        "Será que esse veterinário entende de gatos de verdade ou vai tratar como cachorro?",
+        "Já fui em clínica que reteve o animal até pagar — nunca mais",
+        "Vão fazer exames desnecessários só pra cobrar mais caro?",
+        "Gato estessa muito no vet — precisa valer a pena ir"
+      ],
+      "switching_triggers": "Veterinário anterior não diferenciava gatos de cães, foi frio ou impessoal, ou quando uma amiga indica a Zenvet",
+      "purchase_frequency": "2–4x por ano (check-up, vacinas, emergências, acompanhamentos)"
+    },
+    "jobs": {
+      "functional": "Quando meu gato apresenta comportamento estranho ou precisa de vacina, eu quero encontrar uma veterinária que realmente entende de felinos, para que eu saia com diagnóstico claro e um plano de tratamento que consiga seguir em casa.",
+      "emotional": "Eu quero me sentir tranquila e confiante de que meu gato está sendo tratado por alguém que o vê como ele merece — não como mais um bicho numa fila.",
+      "social": "Eu quero ser reconhecida como tutora responsável e consciente, que leva o pet ao melhor lugar, não à veterinária mais barata da esquina."
+    },
+    "pains": [
+      {
+        "pain": "Tenho medo de levar num lugar que não entende de gato — veterinários generalistas erram o diagnóstico porque tratam felinos como cães",
+        "intensity": "critical",
+        "current_workaround": "Fica pesquisando reviews por horas antes de decidir. Pergunta em grupos de WhatsApp de tutoras."
+      },
+      {
+        "pain": "Já fui explorada — fizeram exames desnecessários e retiveram o animal até eu pagar. Nunca mais.",
+        "intensity": "high",
+        "current_workaround": "Evita hospitais 24h da região. Prefere clínicas menores que parecem mais honestas."
+      },
+      {
+        "pain": "Não sei se o preço é justo porque ninguém explica o que estou pagando",
+        "intensity": "high",
+        "current_workaround": "Pesquisa valores no Instagram antes de ir. Compara com amigas."
+      },
+      {
+        "pain": "Quando preciso com urgência, tenho medo de não conseguir atendimento rápido",
+        "intensity": "medium",
+        "current_workaround": "Salva contatos de mais de uma clínica. Manda mensagem no WhatsApp antes de ligar."
+      },
+      {
+        "pain": "Gatos estressam muito no vet — o atendimento foi corrido e frio e o Simba ficou traumatizado",
+        "intensity": "medium",
+        "current_workaround": "Pesquisa se a clínica tem estrutura adequada para felinos antes de agendar."
+      }
+    ],
+    "gains": [
+      {
+        "gain": "Sair da consulta sabendo exatamente o que o gato tem e o que fazer — sem jargão médico",
+        "type": "tangible"
+      },
+      {
+        "gain": "Sentir que a veterinária se lembra do gato pelo nome e pelo histórico",
+        "type": "intangible"
+      },
+      {
+        "gain": "Ter um lugar fixo de confiança — não ficar procurando clínica nova a cada consulta",
+        "type": "tangible"
+      },
+      {
+        "gain": "Receber acompanhamento pós-consulta: 'ela me mandou mensagem depois pra saber como ele estava'",
+        "type": "intangible"
+      },
+      {
+        "gain": "Pagar o justo e entender cada item da conta antes de aprovar",
+        "type": "tangible"
+      }
+    ]
+  },
+
+  "icp_secondary": {
+    "segment_label": "Tutores de cães — 30% da base, segmento de crescimento",
+    "demographics": {
+      "type": "B2C",
+      "age_range": "35–55 anos",
+      "income_or_revenue": "R$ 4.000–R$ 10.000/mês (classe média)",
+      "location": "Americana, Santa Bárbara d'Oeste, Nova Odessa — SP",
+      "gender": "Misto — mais equilibrado que o segmento felinos",
+      "civil_status": "Família com filhos jovens ou casal",
+      "decision_maker_role": "Decisão prática, às vezes compartilhada com cônjuge",
+      "pet_relationship": "Cão como companheiro familiar — afeto real mas decisão mais racional"
+    },
+    "behavior": {
+      "decision_process": "Mais prático e racional. Escolhe por proximidade, disponibilidade, indicação de vizinho ou familiar. Menos pesquisa prévia que o segmento felinos — age mais por urgência ou rotina.",
+      "research_channels": [
+        "Google (busca direta por 'veterinário americana')",
+        "Indicação boca-a-boca de vizinhos e familiares",
+        "Google Maps (localização + horário)"
+      ],
+      "main_objections": [
+        "Fila de espera longa — hospitais 24h demoram muito",
+        "Conta chegou muito mais cara do que esperava",
+        "Veterinário não explicou direito o que estava fazendo"
+      ],
+      "switching_triggers": "Experiência ruim com demora ou conta surpresa no concorrente. Indicação de conhecido.",
+      "purchase_frequency": "3–6x por ano (vacinas, check-ups, urgências)"
+    },
+    "jobs": {
+      "functional": "Quando meu cachorro precisa de vacina ou fica doente, eu quero uma clínica próxima e confiável que resolve rápido e de forma transparente, para que meu dia não pare e meu pet fique bem.",
+      "emotional": "Eu quero me sentir tranquilo que meu cachorro vai ser bem cuidado, sem surpresas na conta e sem esperar horas numa fila.",
+      "social": "Eu quero ser o dono que cuida de verdade do pet — não o que leva só quando a situação está crítica."
+    },
+    "pains": [
+      {
+        "pain": "Os hospitais 24h da avenida usam consulta isca de R$ 70 e depois enchem de exames — a conta explode sem avisar",
+        "intensity": "critical",
+        "current_workaround": "Evita hospitais grandes. Busca clínica de bairro com reputação."
+      },
+      {
+        "pain": "Fila de espera enorme — passei 3 horas esperando com o cachorro no colo",
+        "intensity": "high",
+        "current_workaround": "Liga antes para saber o tempo de espera. Prefere clínicas com agendamento."
+      },
+      {
+        "pain": "O veterinário receitou sem explicar nada — não sei se era necessário",
+        "intensity": "medium",
+        "current_workaround": "Pesquisa no Google depois da consulta para entender o que foi prescrito."
+      }
+    ],
+    "gains": [
+      {
+        "gain": "Ser atendido no mesmo dia ou no dia seguinte, sem espera longa",
+        "type": "tangible"
+      },
+      {
+        "gain": "Saber o valor estimado antes de aprovar qualquer procedimento",
+        "type": "tangible"
+      },
+      {
+        "gain": "Veterinário que explica o diagnóstico em linguagem clara",
+        "type": "intangible"
+      }
+    ],
+    "key_message_secondary": "Na Zenvet, seu cachorro é atendido com hora marcada, sem fila e sem surpresa na conta."
+  },
+
+  "persona": {
+    "name": "Mariana",
+    "age": "36 anos",
+    "location": "Americana, SP",
+    "occupation": "Professora do ensino fundamental",
+    "photo_description": "Mulher de 34–38 anos, cabelo cacheado preso no alto, sorrindo com naturalidade enquanto segura um gato SRD laranja no colo. Sala de casa, luz natural, camiseta de cor sólida. Expressão tranquila, carinhosa. Foto cotidiana, sem produção.",
+    "story": "Mariana é professora do ensino fundamental em Americana. Mora com o marido, não tem filhos — o Simba, gato SRD laranja que adotou há 4 anos, é o filho da casa. Ela pesquisa muito antes de confiar: ficou semanas olhando o Instagram da Zenvet antes de agendar a primeira consulta. Quando Nathalia chamou o Simba pelo nome na segunda visita e explicou cada detalhe do exame sem pressa, Mariana se tornou cliente fiel e passou a indicar para todas as amigas tutoras. Sua maior insegurança continua sendo levar o Simba num lugar que vai estressá-lo ou cobrar por exames que não precisam. Ela paga o que for preciso — desde que entenda por quê.",
+    "quote": "Eu não levo o Simba em qualquer lugar não. Gato não é cachorro, e tem muito veterinário que não entende isso."
+  },
+
+  "persona_secondary": {
+    "name": "Carlos",
+    "age": "43 anos",
+    "location": "Santa Bárbara d'Oeste, SP",
+    "occupation": "Gerente comercial em indústria local",
+    "photo_description": "Homem de 40–46 anos, camisa social com mangas dobradas, sorrindo com um labrador ao lado. Fundo de quintal ou calçada. Expressão descontraída, prática.",
+    "story": "Carlos mora com a esposa e dois filhos adolescentes em Santa Bárbara. O Thor, labrador de 5 anos, é da família inteira. Carlos não pesquisa muito antes de decidir — age por indicação ou necessidade. Quando a esposa ouviu de uma amiga que a Zenvet atende sem fila e explica tudo direitinho, agendaram e não mudaram mais. O que importa para Carlos: chegar, ser atendido rápido, saber o que está pagando e voltar para casa. Fidelidade vem pela praticidade e pela transparência, não pela emoção.",
+    "quote": "Veterinário bom é aquele que me diz o que o Thor tem, quanto vai custar e me manda embora rápido. Sem enrolação."
+  },
+
+  "where_to_find": {
+    "digital_channels": [
+      "Grupos do Facebook: 'Pets Americana SP', 'Tutores de Gatos Americana e Região', 'Cães e Gatos Nova Odessa'",
+      "Instagram: hashtags #gatosamericana #veterinarioamericana #felinossp #gatoSRD",
+      "Google Maps: buscas com intenção imediata ('veterinário gatos americana', 'clínica felinos americana sp')",
+      "YouTube: conteúdo educativo passivo ('gato vomitando o que fazer', 'vacinas gato quando tomar')",
+      "Grupos de WhatsApp de bairros de Americana, SBO e Nova Odessa"
+    ],
+    "keywords": [
+      "veterinário para gatos americana sp",
+      "clínica veterinária felinos americana",
+      "especialista gatos americana",
+      "veterinária americana sp gatos",
+      "clínica veterinária americana sp",
+      "veterinário americana",
+      "vacina gato americana"
+    ],
+    "influencers": [
+      "Veterinários com conteúdo educativo felino no Instagram",
+      "Perfis de comportamento felino no YouTube",
+      "Grupos de WhatsApp de tutores — influência peer-to-peer forte nessa região"
+    ],
+    "communities": [
+      "Grupos de WhatsApp de bairros e condomínios de Americana",
+      "Grupos do Facebook de pets locais",
+      "Rede de indicação orgânica entre tutoras — canal mais forte atualmente"
+    ]
+  },
+
+  "anti_persona": {
+    "description": "Perfil que NÃO deve ser atendido ativamente. Drena margem, gera churn, prejudica reputação ou exige política que quebra o posicionamento premium.",
+    "profiles": [
+      {
+        "label": "Caçador de preço — 'Consulta R$70'",
+        "who": "Tutor que compara exclusivamente por preço, chega via anúncio de consulta isca dos 24h e tenta replicar o mesmo valor na Zenvet.",
+        "signals": [
+          "Primeira pergunta no WhatsApp: 'Quanto custa a consulta?' sem contexto",
+          "Insiste em desconto antes de agendar",
+          "Compara explicitamente: 'Na VetX cobra R$70'"
+        ],
+        "why_not": "Ticket médio esperado de R$200-500 não é compatível com expectativa de R$70. Gera atrito, review ruim ('caro, não voltei') e normaliza pressão de preço no time.",
+        "redirect": "Loíse responde com valor sem descontar: 'Nossa consulta especialista começa em R$180 — o que inclui é diferente do plano R$70 dos hospitais 24h. Se puder me contar o que seu pet tem, posso te orientar se nossa abordagem faz sentido antes de você decidir.'"
+      },
+      {
+        "label": "Emergência única — sem intenção de vínculo",
+        "who": "Tutor em urgência 2h da manhã procurando qualquer clínica aberta. Não volta após o episódio resolvido.",
+        "signals": [
+          "Primeiro contato fora do horário",
+          "Urgência crítica: 'meu pet está passando mal AGORA'",
+          "Sem histórico prévio e sem interesse em cadastro"
+        ],
+        "why_not": "Zenvet não é 24h. Atender emergência fora do horário via Nathalia pessoal é custo alto sem retorno de LTV. Posicionamento confunde: não é essa a proposta.",
+        "redirect": "Mensagem automática fora do horário direciona para hospitais 24h parceiros, mantém relacionamento cordial. Segue com convite para check-up de rotina quando o pet estabilizar."
+      },
+      {
+        "label": "Tutor exigente de controle total — 'tratamento Dr. Google'",
+        "who": "Chega com diagnóstico pronto pesquisado na internet, recusa orientação técnica, quer apenas comprar o remédio/exame que decidiu.",
+        "signals": [
+          "Pede medicamento específico sem consulta",
+          "Questiona toda orientação com 'mas eu li que'",
+          "Recusa exames complementares argumentando 'não precisa'"
+        ],
+        "why_not": "Mina a autoridade técnica da Nathalia, que é o ativo principal do negócio. Alta probabilidade de review negativo quando o diagnóstico dele errar."
+      }
+    ],
+    "operational_rule": "Loíse sinaliza no WhatsApp quando detecta sinal de anti-persona (tag 'AP' no Kommo). Nathalia revê semanalmente — se repetido, desqualifica no SLA para priorizar ICP principal."
+  },
+
+  "buyer_journey": {
+    "description": "Jornada da Mariana do primeiro sinal de necessidade até advocacy. Cada estágio mapeia gatilho, canal preferido, dúvida dominante e intervenção ideal da Zenvet.",
+    "stages": [
+      {
+        "stage": "Gatilho — algo está errado com o Simba",
+        "trigger": "Comportamento atípico (come menos, esconde, vomita). Vacina vencida. Indicação de amiga com urgência.",
+        "mental_state": "Preocupação + culpa ('devia ter levado antes')",
+        "primary_channel": "Google (busca informativa), grupos de WhatsApp de tutoras",
+        "dominant_question": "É sério? Preciso ir agora? Qual veterinário é bom pra gato?",
+        "zenvet_intervention": "Conteúdo educativo SEO e Reels ('gato vomitando — quando é emergência') com Nathalia como autoridade. Aparecer antes de ela começar a pesquisar por clínicas.",
+        "friction_today": "Zenvet invisível nessa fase — conteúdo educativo felino é lacuna.",
+        "duration_estimate": "1-3 dias"
+      },
+      {
+        "stage": "Consideração — avaliando clínicas",
+        "trigger": "Mariana decidiu que precisa levar ao veterinário",
+        "mental_state": "Medo de escolher mal. Cautela elevada. Pesquisa ativa 2-5 dias.",
+        "primary_channel": "Google Maps (reviews), Instagram da clínica, grupos WhatsApp (pergunta qual indicam)",
+        "dominant_question": "Esse veterinário entende de GATOS? Vai cobrar exame que não precisa? Tem review de outras tutoras?",
+        "zenvet_intervention": "GMB com 'especialista em felinos' + fotos Nathalia atendendo gato + reviews que mencionem 'gato'. Instagram bio com mensagem-chave. Reviews estratégicos (pedir tutoras de gato para mencionar espécie no review).",
+        "friction_today": "Bio IG não menciona felinos. Reviews atuais falam de 'pet' genérico — não sinalizam especialização.",
+        "duration_estimate": "3-7 dias"
+      },
+      {
+        "stage": "Decisão — primeiro contato",
+        "trigger": "Mariana escolheu mentalmente a Zenvet, vai iniciar contato",
+        "mental_state": "Cautelosa mas decidida. Quer confirmar que a primeira interação bate com o que viu online.",
+        "primary_channel": "WhatsApp (preferido), ligação só se WhatsApp demorar",
+        "dominant_question": "Tem horário hoje/amanhã? Quanto custa? Vocês atendem gato mesmo ou é só pet em geral?",
+        "zenvet_intervention": "Loíse com script consultivo: saudação que reforça especialização ('Oi! Aqui é a Loíse da Zenvet, clínica especializada em gatos e cães em Americana. Quem é seu pet?'), qualificação felina, agendamento no mesmo contato.",
+        "friction_today": "Sem script. Resposta genérica. Em 16,6% converte — 83,4% não agendam.",
+        "duration_estimate": "mesmo dia ou 24h"
+      },
+      {
+        "stage": "Primeira visita — momento da verdade",
+        "trigger": "Dia do agendamento",
+        "mental_state": "Ansiosa pelo Simba. Avaliando cada detalhe: estrutura, postura da veterinária, conversa, conta.",
+        "primary_channel": "Presencial",
+        "dominant_question": "Ela escuta minha história? Trata o Simba com carinho? Explica o que está fazendo? A conta bate com o que esperava?",
+        "zenvet_intervention": "Ritual de primeira visita: Nathalia chama o gato pelo nome em 30s, senta na altura do gato (não o eleva), explica cada procedimento antes de executar, mostra a conta detalhada antes de finalizar.",
+        "friction_today": "Já é um ponto forte — Nathalia faz isso naturalmente. Oportunidade: formalizar como protocolo para escalar se aumentar time.",
+        "duration_estimate": "consulta de ~40 min"
+      },
+      {
+        "stage": "Pós-consulta — o momento que fideliza",
+        "trigger": "Simba em casa, Mariana observando evolução",
+        "mental_state": "Alívio misturado com ansiedade residual. Quer confirmação de que está fazendo certo.",
+        "primary_channel": "WhatsApp (mensagem da Nathalia)",
+        "dominant_question": "Ele está respondendo bem ao tratamento? Se piorar, posso voltar a falar com ela?",
+        "zenvet_intervention": "Mensagem D+1 da Nathalia (já faz manualmente) — sistematizar em régua CRM. Incluir pergunta aberta 'como ele está hoje?' para gerar engajamento.",
+        "friction_today": "Manual e dependente da agenda. Sistematizar com CRM sem perder a personalização.",
+        "duration_estimate": "1-3 dias após consulta"
+      },
+      {
+        "stage": "Retenção + advocacy — viraliza na tribo",
+        "trigger": "Mariana satisfeita + outra amiga pergunta sobre veterinário",
+        "mental_state": "Orgulho de ter encontrado. Quer ser útil para a amiga + reforçar status de tutora responsável.",
+        "primary_channel": "WhatsApp privado ou em grupo, indicação direta",
+        "dominant_question": "— (não é dúvida, é afirmação) 'Você precisa levar no Zenvet, a Nathalia é maravilhosa com gato'",
+        "zenvet_intervention": "Pedido de indicação no momento de pico emocional (pós-consulta positiva). Programa simples: 'se você indicar uma amiga, ambas ganham 15% na próxima consulta'. Reativação via CRM: lembretes de vacina + check-up anual.",
+        "friction_today": "Indicação ocorre organicamente mas sem sistematização. CRM ausente = sem régua de reativação.",
+        "duration_estimate": "contínuo após 1ª visita positiva"
+      }
+    ],
+    "critical_leakage_point": "O maior vazamento é na etapa de Consideração (duração 3-7 dias): Mariana pesquisa intensamente e a Zenvet não oferece sinais de especialização felina nos canais que ela verifica. Corrigir GMB + bio IG + reviews específicas fecha esse vazamento sem investir R$1 em mídia."
+  },
+
+  "willingness_to_pay": {
+    "description": "Disposição a pagar da Mariana por serviço. Cruzamento entre dados do mercado, sensibilidade de preço declarada no briefing e expectativa de valor da persona.",
+    "context": "Renda R$5-12K/mês + gato humanizado + disposição a pagar por qualidade demonstrada. Mariana NÃO é sensível a preço absoluto — é sensível a preço SEM EXPLICAÇÃO.",
+    "services": [
+      {
+        "service": "Consulta felinos especialista",
+        "current_ticket_range": "R$180-250",
+        "perceived_fair_range": "R$180-300",
+        "premium_ceiling": "R$400 (com exame complementar justificado)",
+        "elasticity": "baixa — aceita pagar mais se entender o porquê",
+        "pricing_lever": "Justificar via especialização + tempo de consulta (40 min vs. 15 min do 24h) no próprio material de comunicação."
+      },
+      {
+        "service": "Vacinação felina completa",
+        "current_ticket_range": "R$150-220",
+        "perceived_fair_range": "R$150-250",
+        "premium_ceiling": "R$300",
+        "elasticity": "média",
+        "pricing_lever": "Pacote anual (V4 + antirrábica + vermífugo + leucemia) com 10% vs. avulsos. Previsibilidade de receita + conveniência para Mariana."
+      },
+      {
+        "service": "Castração de gato",
+        "current_ticket_range": "R$350-600",
+        "perceived_fair_range": "R$400-700",
+        "premium_ceiling": "R$900 (fêmea com monitoramento)",
+        "elasticity": "baixa — procedimento único e alto medo do pós-operatório",
+        "pricing_lever": "Pacote castração + pós-operatório monitorado (Nathalia acompanha via WhatsApp 48h) cobra premium e reduz ansiedade."
+      },
+      {
+        "service": "Atendimento domiciliar felinos",
+        "current_ticket_range": "R$250-400 (consulta) + deslocamento",
+        "perceived_fair_range": "R$300-500",
+        "premium_ceiling": "R$700 (emergência com exame no local)",
+        "elasticity": "muito baixa — resolve dor crítica (gato estressa no transporte)",
+        "pricing_lever": "MAIOR alavanca de margem. Premium explícito para gatos que estressam. Comunicação proprietária da Zenvet — concorrentes não oferecem com qualidade."
+      },
+      {
+        "service": "Check-up anual gato senior",
+        "current_ticket_range": "R$400-600 (consulta + exames básicos)",
+        "perceived_fair_range": "R$400-700",
+        "premium_ceiling": "R$900",
+        "elasticity": "média",
+        "pricing_lever": "Educação via conteúdo: 'gatos com 7+ anos precisam de check-up'. Demanda que Mariana não sabe que tem — criar com conteúdo."
+      }
+    ],
+    "strategic_implication": "A Zenvet opera abaixo do teto de willingness-to-pay em todos os serviços. Oportunidade de revisão de preços com +15% gradual ao longo de 6 meses sem perda de volume, desde que acompanhada de comunicação de diferencial. Prioridade máxima: domicílio felinos (teto premium alto + baixa competição)."
+  },
+
+  "objection_library": {
+    "description": "Biblioteca de objeções com resposta consultiva pronta para a Loíse usar no WhatsApp. Cada resposta preserva posicionamento (não desconta, não compete em preço), valida a preocupação do tutor, e redireciona para valor.",
+    "objections": [
+      {
+        "objection": "Está muito caro comparado a [concorrente 24h]",
+        "subtext": "Não entendi o que estou pagando. Preciso de justificativa para aprovar mentalmente.",
+        "bad_response": "Podemos ver um desconto",
+        "good_response": "Entendo a comparação. A nossa consulta é com a Dra. Nathalia, que é a única especialista em felinos da região — isso significa diagnóstico em 40 min de conversa aprofundada, sem exames de tela. Os R$70 do [concorrente] incluem só a consulta básica — quando precisa exame, soma rápido. Posso te mandar 2 reviews de tutoras que vieram de lá pra você avaliar?",
+        "when_to_use": "Primeira menção de preço do concorrente. NÃO usar se o tutor for anti-persona (caçador de preço) — ver seção anti_persona."
+      },
+      {
+        "objection": "Já fui em clínica que reteve o animal até pagar",
+        "subtext": "Estou traumatizada. Preciso de garantia explícita de que aqui é diferente.",
+        "bad_response": "Aqui a gente é honesto",
+        "good_response": "Sinto muito que passou por isso — a gente trabalha exatamente pra evitar esse tipo de situação. Na Zenvet, a Dra. Nathalia sempre explica cada procedimento antes de fazer e mostra o valor estimado. Você aprova item a item antes de executar, e se precisar internar, a gente combina direitinho o custo e você decide. Sem surpresa.",
+        "when_to_use": "Quando tutor menciona experiência ruim com clínica anterior."
+      },
+      {
+        "objection": "Meu gato estressa muito para vir no vet",
+        "subtext": "Talvez eu nem leve — quero uma solução.",
+        "bad_response": "Tranquiliza que aqui a gente é calmo",
+        "good_response": "Você tá no lugar certo — a Dra. Nathalia atende muito gato com esse perfil e temos estrutura separada de cães pra reduzir o estresse. Se mesmo assim ele for muito sensível, ela faz atendimento domiciliar — ela vai até sua casa. Quer que eu te explique como funciona?",
+        "when_to_use": "Objeção de transporte. MAIOR oportunidade comercial da Zenvet — domicílio é diferencial sub-comunicado."
+      },
+      {
+        "objection": "Tenho que falar com meu marido/esposa primeiro",
+        "subtext": "Sinal de hesitação. Pode ser verdade (divide decisão) ou desculpa para não decidir.",
+        "bad_response": "Tudo bem, me avisa quando decidir",
+        "good_response": "Claro, alinhe com ele(a) sim. Só pra te ajudar a ter as informações na mão: nossa próxima vaga disponível com a Nathalia é [X], a consulta é R$[Y] e dura 40 min. Se quiser, eu seguro o horário até amanhã de manhã — se não der certo, libero sem problema nenhum. O que acha?",
+        "when_to_use": "Objeção social — baixa fricção, alta taxa de conversão se bem conduzida."
+      },
+      {
+        "objection": "Não sei se preciso de consulta agora — talvez passe",
+        "subtext": "Quer confirmação de um especialista mas não quer pagar por isso.",
+        "bad_response": "Ok, qualquer coisa me chama",
+        "good_response": "Posso te ajudar a decidir — me conta brevemente o que tá acontecendo com ele? Se eu achar que dá pra observar mais 24h, eu te falo honestamente. Se eu achar que vale a visita, te explico o porquê. Sem compromisso.",
+        "when_to_use": "Hesitação na urgência. Transforma em triagem consultiva — constrói confiança mesmo se não converte agora."
+      },
+      {
+        "objection": "Vi que vocês são especialistas em gato — eu tenho cachorro, atendem?",
+        "subtext": "Sinal positivo — entendeu o posicionamento. Preocupado se vai ser segunda classe.",
+        "bad_response": "Sim, atendemos qualquer pet",
+        "good_response": "Ótima pergunta! A gente é especialista em felinos, mas atende cães com a mesma qualidade — hora marcada, sem fila, valor transparente, Dra. Nathalia explica tudo direitinho. Se quiser, agendo pra você ver como é.",
+        "when_to_use": "ICP secundário (Carlos). Aproveitar para reforçar transparência de preço + hora marcada, que são as dores específicas dele."
+      }
+    ]
+  },
+
+  "key_message": {
+    "chosen_message": "Seu gato merece uma veterinária que entende de felinos — não de bicho em geral.",
+    "usage_context": "Meta Ads, bio do Instagram, copy de anúncios de topo e meio de funil",
+    "rationale": "Cria território emocional proprietário que os concorrentes não conseguem replicar. Ataca diretamente a dor principal da Mariana (medo de veterinário generalista) e ativa o diferencial real da Nathalia (especialista em felinos). A Opção A é boa mas qualquer clínica pode alegar diagnóstico preciso. A Opção C funciona melhor como suporte em depoimentos, não como mensagem primária.",
+    "alternatives": [
+      {
+        "message": "A veterinária especialista em felinos de Americana. Diagnóstico real, sem exames desnecessários.",
+        "approach": "functional",
+        "rationale": "Ataca a objeção de exploração + diferencial de especialização. Melhor para Google Ads e headline da LP.",
+        "usage_context": "Google Ads, headline da landing page"
+      },
+      {
+        "message": "Seu gato merece uma veterinária que entende de felinos — não de bicho em geral.",
+        "approach": "emotional",
+        "rationale": "Território emocional proprietário. Cria identificação imediata com quem já foi mal atendido em clínica genérica.",
+        "usage_context": "Meta Ads, bio Instagram, copy de anúncios"
+      },
+      {
+        "message": "A clínica que tutoras conscientes de Americana indicam para quem ama de verdade.",
+        "approach": "social",
+        "rationale": "Ativa job social e usa prova social implícita. Melhor como suporte em depoimentos, não como mensagem principal.",
+        "usage_context": "Peças de depoimento, anúncios de reconhecimento, topo de funil"
+      }
+    ]
+  }
+}

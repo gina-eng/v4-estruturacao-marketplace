@@ -114,14 +114,35 @@ Parágrafo 2: **Fraquezas + Ameaças (Proteção)** — Quais fraquezas, se não
 
 Parágrafo 3: **Estratégia recomendada** — Em 1 parágrafo, o que esse negócio deve priorizar nos próximos 90 dias.
 
-### Ações Prioritárias (5-7 ações)
+### Matriz TOWS (OBRIGATÓRIA — cruzamento estratégico)
 
-Derive ações concretas da SWOT. Para cada:
+Derive estratégias específicas cruzando os quadrantes. Não é redundância da SWOT — é onde a análise vira ação. Gere 2-3 estratégias por célula:
+
+- **SO (Forças × Oportunidades) — Estratégias Ofensivas:** use a força X para capturar a oportunidade Y. Onde o cliente ATACA.
+- **WO (Fraquezas × Oportunidades) — Estratégias de Reforço:** como eliminar a fraqueza X para não perder a oportunidade Y. Onde o cliente INVESTE.
+- **ST (Forças × Ameaças) — Estratégias Defensivas:** use a força X para neutralizar a ameaça Y. Onde o cliente PROTEGE.
+- **WT (Fraquezas × Ameaças) — Estratégias de Sobrevivência:** o pior cenário. O que fazer para reduzir a fraqueza X que se amplifica com a ameaça Y. Onde o cliente MINIMIZA DANO.
+
+Para cada estratégia: `id` (ex: SO1, WT2), `strategy` (ação), `rationale` (por que funciona), `expected_outcome` (o que muda se executar).
+
+### Ações Prioritárias (5-7 ações) — com risk-adjusted scoring
+
+Derive ações concretas da SWOT/TOWS. Para cada:
 1. **Ação** — o que fazer (específico)
-2. **Base SWOT** — quais quadrantes essa ação endereça (ex: "Alavanca F2, captura O3, mitiga A1")
+2. **Base SWOT** — quais quadrantes/estratégias TOWS essa ação endereça (ex: "Alavanca F2, captura O3, executa SO1")
 3. **Impacto** — alto/médio/baixo
 4. **Prazo sugerido** — semana 1/2/3 da estruturação
-5. **Dependência** — se depende de alguma outra ação ou skill
+5. **Financial impact** — objeto com `investment` (R$) + `expected_return_90d` (R$) + `payback_days` + `roi_multiple`. Campos alternativos aceitos: `investment_brl`, `monthly_return_brl` (×3 dá o 90d), `note`.
+6. **Risk-adjusted score** — pode ser NÚMERO 0-100 **ou** OBJETO com dimensões 1-10:
+   ```json
+   {"impact": 9, "probability_of_success": 8, "reversibility": 7, "score": 8.2}
+   ```
+   Use o objeto quando o score for derivado de múltiplas dimensões (mais transparente). O campo `score` é obrigatório.
+7. **Dependência** — se depende de alguma outra ação ou skill
+
+Ordene as ações por risk_adjusted_score (maior primeiro).
+
+> **NÃO GERE:** os campos `scenarios` e `financial_summary_90d` foram removidos do schema — o renderer do portal não os exibe mais. Projeções de cenários vivem em `ee-s2-diagnostico-midia` (budget_reallocation_scenarios). A consolidação financeira é redundante com `priority_actions[].financial_impact`, que o portal já agrega.
 
 ## Auto-validação
 
@@ -135,6 +156,10 @@ Antes de mostrar ao operador, verifique:
 - [ ] Cada item da SWOT é específico — se trocar o nome da empresa, NÃO serve para outro negócio do setor?
 - [ ] Síntese cruza quadrantes (não é apenas resumo)?
 - [ ] Ações derivam dos quadrantes (referência F/W/O/T explícita)?
+- [ ] Matriz TOWS tem pelo menos 2 estratégias por célula (SO, WO, ST, WT)?
+- [ ] Cada priority_action tem `financial_impact` (investment, return, payback, ROI) e `risk_adjusted_score`?
+- [ ] Priority_actions estão ORDENADAS por risk_adjusted_score (maior primeiro)?
+- [ ] NÃO gerou `scenarios` nem `financial_summary_90d` (removidos do schema)?
 
 Se falhou → regenere silenciosamente. Não avise o operador.
 

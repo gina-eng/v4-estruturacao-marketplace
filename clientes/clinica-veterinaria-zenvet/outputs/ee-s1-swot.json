@@ -1,0 +1,515 @@
+{
+  "summary": "Jogada principal: ocupar o território 'veterinária especialista em gatos de Americana' antes dos concorrentes, eliminando hemorragias digitais (tracking zero, Meta Ads com link quebrado, LP genérica) e construindo ativos proprietários (CRM, conteúdo educativo, GMB). O diferencial técnico da Nathalia é real e não replicável no curto prazo — o problema é que ainda não está comunicado onde o ICP procura.",
+
+  "strengths": [
+    {
+      "title": "Nathalia — única especialista em felinos da microrregião",
+      "description": "Formação e expertise em medicina felina num raio de 40km. Clientes dos concorrentes 24h buscam segunda opinião na Zenvet após diagnósticos genéricos — dado coletado no kickoff. Vantagem estrutural não replicável sem contratação e tempo de reputação.",
+      "implication": "Posicionamento proprietário: 'a clínica de gatos de Americana'. Território que nenhum concorrente pode ocupar sem anos de investimento. Janela de consolidação disponível agora.",
+      "time_sensitivity": "urgent"
+    },
+    {
+      "title": "Base ativa de 1.186 pacientes com show rate de ~100%",
+      "description": "1.186 pacientes ativos dos 1.700 cadastrados. Show rate de ~100% (quem agenda, aparece) evidencia que o problema é volume de entrada de leads, não qualidade do serviço entregue.",
+      "implication": "A alavanca de crescimento está em aquisição + reativação, não em melhoria de serviço. O produto já funciona.",
+      "time_sensitivity": "medium_term"
+    },
+    {
+      "title": "Acompanhamento pós-consulta ativo via WhatsApp",
+      "description": "Nathalia envia mensagem de acompanhamento após atendimento — prática citada espontaneamente pelas clientes como diferencial vs. concorrência 24h. Motor orgânico de NPS e indicações da Mariana para amigas tutoras.",
+      "implication": "Motor de indicação não sistematizado. Com CRM, pode ser escalado em régua de reativação + nutrição para toda a base de 1.700 pacientes.",
+      "time_sensitivity": "medium_term"
+    },
+    {
+      "title": "Ticket diferenciado em felinos — R$ 500–R$ 1.000 por consulta",
+      "description": "Consulta especialista felinos gera 2–10× mais receita que a consulta isca de R$70 dos hospitais 24h. Mix atual de 70% gatos já favorece o segmento de maior margem.",
+      "implication": "Crescer o segmento felinos aumenta receita sem aumentar volume de atendimento. Premium positioning é financeiramente superior a volume via preço baixo.",
+      "time_sensitivity": "long_term"
+    },
+    {
+      "title": "Atendimento domiciliar disponível para gatos estressados",
+      "description": "Diferencial relevante para o ICP principal (tutoras com gatos que estressam no transporte) — serviço existe mas não aparece na comunicação atual. Demanda represada não capturada.",
+      "implication": "Quick win de comunicação: ativar essa oferta no Instagram e nos anúncios captura demanda reprimida sem custo operacional adicional.",
+      "time_sensitivity": "urgent"
+    },
+    {
+      "title": "Reputação de 'segunda opinião' consolidada na região",
+      "description": "Clientes dos hospitais 24h da mesma avenida buscam a Zenvet após diagnósticos que não convenceram. Significa que Nathalia tem autoridade técnica percebida que os concorrentes alimentam involuntariamente.",
+      "implication": "Pode se tornar posicionamento explícito: 'quando você tem dúvida do diagnóstico do seu gato, a Zenvet é onde você vai'. Captura clientes já desapontados com a concorrência.",
+      "time_sensitivity": "medium_term"
+    }
+  ],
+
+  "weaknesses": [
+    {
+      "title": "Zero rastreamento digital — sem Pixel, GTM ou Analytics",
+      "description": "Meta Pixel ausente, Google Tag Manager não instalado, sem Google Analytics. Investindo R$3.200/mês em mídia paga sem saber quais anúncios geram leads, quais palavras-chave convertem ou qual o CAC real por canal.",
+      "implication": "Sem tracking, toda otimização de mídia é especulação. É impossível escalar o que funciona ou pausar o que não funciona. Risco de CAC aumentando sem perceber.",
+      "severity": "critical"
+    },
+    {
+      "title": "Meta Ads ativo com links quebrados (404)",
+      "description": "Campanha Meta Ads em exibição aponta para URL que retorna 404. R$800/mês de verba Meta desperdiçada 100% — cada clique no anúncio chega numa página de erro. A Loíse recebe leads que nunca converteram.",
+      "implication": "Correção imediata recupera R$800/mês. É a ação com maior ROI possível: zero custo técnico, impacto no mesmo dia.",
+      "severity": "critical"
+    },
+    {
+      "title": "Conversão lead→agendamento de apenas 16,6%",
+      "description": "72 leads/mês → 12 agendamentos. 60 leads qualificados descartados por mês sem follow-up. Loíse atende reativamente via WhatsApp sem script, sem CRM, sem retorno estruturado.",
+      "implication": "Subir de 16,6% para 25% de conversão = +6 agendamentos/mês. Com ticket R$500 = +R$3.000/mês sem aumentar budget de mídia.",
+      "severity": "high"
+    },
+    {
+      "title": "486 pacientes inativos sem régua de reativação",
+      "description": "1.700 cadastrados, 1.186 ativos = 486 inativos parados. Sem CRM, sem automação, sem régua de WhatsApp. Cada paciente inativo representa perdas estimadas de R$100–R$200/ano em consultas não realizadas.",
+      "implication": "Canal de crescimento gratuito ignorado. Reativar 20% (97 pacientes) com régua automatizada = R$0 de custo de aquisição.",
+      "severity": "high"
+    },
+    {
+      "title": "Sem Landing Page dedicada para o segmento felinos",
+      "description": "Todo tráfego pago vai para o site genérico que não comunica especialização em felinos. A promessa do anúncio ('especialista em gatos') não é cumprida na landing page. Queda de conversão estrutural.",
+      "implication": "Visitante do anúncio chega num site que fala de 'pets em geral'. Alta taxa de saída mesmo com tráfego qualificado.",
+      "severity": "high"
+    },
+    {
+      "title": "Acessos a plataformas de mídia não consolidados",
+      "description": "Meta Business, Google Ads, Google Analytics, Instagram Admin, Search Console — todos marcados como sem acesso no briefing. Execução de ajustes depende de terceiros ou autorização a cada ação.",
+      "implication": "Gargalo operacional que vai atrasar toda a execução técnica das semanas 2-3. Consolidar acessos na Semana 1 é pré-requisito para tudo que vem depois.",
+      "severity": "high"
+    }
+  ],
+
+  "opportunities": [
+    {
+      "title": "Vácuo de posicionamento felino na microrregião",
+      "description": "Americana/SBO/Nova Odessa sem clínica que ocupe explicitamente o território 'especialista em felinos'. Concorrentes 24h competem em preço genérico. O vácuo existe agora e a janela é de 6-12 meses antes que outros percebam.",
+      "implication": "Agir agora consolida território de reputação difícil de reverter. Velocidade de execução é vantagem competitiva real.",
+      "impact": "high",
+      "probability": "high"
+    },
+    {
+      "title": "Google Maps local sem dominância especializada",
+      "description": "Buscas 'veterinário gatos americana', 'clínica felinos americana' têm volume relevante e baixa competição de clínicas especializadas. GMB otimizado + LP felinos pode capturar esse tráfego de alta intenção em 30-60 dias.",
+      "implication": "Canal com CAC próximo de zero. Retorno em 30-60 dias com otimização focada.",
+      "impact": "high",
+      "probability": "high"
+    },
+    {
+      "title": "Base de 486 inativos para reativação com custo zero",
+      "description": "Pacientes que foram atendidos e pararam. Régua via WhatsApp com lembrete de vacinas/check-up pode recuperar 15-25% desses pacientes sem R$1 de mídia paga.",
+      "implication": "97 pacientes reativados × 2 visitas/ano × R$500 = R$97.000/ano de receita incremental zero mídia.",
+      "impact": "high",
+      "probability": "medium"
+    },
+    {
+      "title": "Demanda orgânica ativa por conteúdo educativo felino",
+      "description": "Tutoras pesquisam 'gato vomitando o que fazer', 'vacina gato quando tomar', 'gato não come veterinário americana' — buscas com intenção e localização. Nathalia tem autoridade técnica e vocabulário correto para esse conteúdo.",
+      "implication": "Série de Reels/posts posiciona Nathalia como autoridade regional em saúde felina. Alcance orgânico com o ICP exato.",
+      "impact": "medium",
+      "probability": "high"
+    },
+    {
+      "title": "Automação WhatsApp + CRM para dobrar purchase frequency",
+      "description": "Tutoras compram 2-4x/ano. Com lembretes de vacina, pós-consulta, aniversário do pet e retorno anual automatizados, purchase frequency pode subir para 3-6x/ano — dado comparável em clínicas com CRM ativo.",
+      "implication": "Dobrar frequência de compra da base atual tem impacto maior que dobrar tráfego pago.",
+      "impact": "high",
+      "probability": "medium"
+    },
+    {
+      "title": "Mercado pet em expansão com crescimento no segmento felinos",
+      "description": "Crescimento nacional de 15% ao ano no setor pet, tutores de gatos sendo o segmento com maior crescimento em medicina preventiva. Americana segue a tendência nacional com atraso, o que significa curva de adoção ainda em aceleração.",
+      "implication": "A onda do mercado empurra o segmento principal da Zenvet. Posicionamento agora = crescimento estrutural nos próximos 3 anos.",
+      "impact": "medium",
+      "probability": "high"
+    }
+  ],
+
+  "threats": [
+    {
+      "title": "Hospitais 24h com consulta isca de R$70 na mesma avenida",
+      "description": "Concorrentes diretos usam preço de entrada artificialmente baixo para atrair clientes e enchem de exames na sequência. Dominam Google Maps local com volume de reviews e budget de mídia maior que a Zenvet.",
+      "implication": "Competir em preço é suicídio para a Zenvet. A estratégia é tornar a comparação de preço irrelevante via posicionamento de especialização e reputação.",
+      "probability": "high",
+      "impact": "high"
+    },
+    {
+      "title": "Dependência total de plataformas sem dados históricos próprios",
+      "description": "Sem Pixel, sem GA, sem dados de conversão acumulados. Se Meta ou Google mudarem algoritmos, subirem CPCs ou bloquearem a conta, a Zenvet parte do zero sem histórico para recriar audiências.",
+      "implication": "Construção de base própria (lista de WhatsApp, CRM, email) é proteção estrutural prioritária.",
+      "probability": "medium",
+      "impact": "high"
+    },
+    {
+      "title": "Custo de mídia em pet crescendo com expansão do setor",
+      "description": "Mercado pet nacional em expansão atrai mais anunciantes. CPCs de termos pet no Google Ads sobem à medida que a competição digital aumenta. Sem otimização, o CAC atual de R$266 tende a subir.",
+      "implication": "Diversificação de canais — orgânico, indicação sistematizada, CRM — reduz dependência de mídia paga e protege CAC.",
+      "probability": "high",
+      "impact": "medium"
+    },
+    {
+      "title": "Risco de cópia do posicionamento felino por concorrentes",
+      "description": "Se os hospitais 24h perceberem o gap e contratarem um especialista em felinos, o diferencial atual pode ser replicado em 6-12 meses. Nathalia tem anos de reputação de vantagem, mas o território digital pode ser alcançado mais rápido.",
+      "implication": "Velocidade de execução é vantagem competitiva. Consolidar território via conteúdo e GMB enquanto os concorrentes não perceberam.",
+      "probability": "medium",
+      "impact": "high"
+    },
+    {
+      "title": "WhatsApp como único canal de conversão sem redundância",
+      "description": "Principal canal de conversão é WhatsApp reativo, operado por uma única pessoa (Loíse) sem script ou CRM. Risco de perda de leads por variação de qualidade de atendimento ou ausência da operadora.",
+      "implication": "Single point of failure no processo comercial. Script consultivo + CRM é proteção operacional urgente.",
+      "probability": "medium",
+      "impact": "medium"
+    }
+  ],
+
+  "strategic_synthesis": {
+    "leverage": "A especialização real de Nathalia (F1) combinada com o vácuo de posicionamento dos concorrentes (O1) e a demanda orgânica por conteúdo educativo felino (O4) cria uma janela de consolidação de território proprietário. A jogada principal é ocupar digitalmente o espaço 'veterinária especialista em gatos de Americana' antes que os concorrentes percebam o gap: Landing Page felinos + conteúdo educativo + GMB otimizado formam um triângulo de captura de tráfego de alta intenção com CAC marginal.",
+    "protection": "A fraqueza de zero rastreamento (F1) amplificada pela dependência de plataformas sem dados (A2) cria um ciclo perigoso: sem dados, a Zenvet não consegue otimizar o orçamento de R$3.200/mês. Meta Ads com links quebrados (F2) é o exemplo mais imediato: R$800/mês destruídos. A conversão de 16,6% (F3) sem script ou CRM mantém 60 leads/mês na mesa, enquanto o WhatsApp não estruturado (A5) é single point of failure no único canal de conversão.",
+    "recommended_strategy": "Nos próximos 90 dias, a Zenvet executa em duas frentes simultâneas: (1) eliminar hemorragias — tracking instalado, Meta Ads corrigido, acessos consolidados, LP felinos no ar; isso aumenta o retorno do budget atual sem gastar mais; e (2) construir ativos proprietários — CRM com régua de reativação dos 486 inativos, série de conteúdo educativo felino com Nathalia como autoridade, GMB dominante para buscas de felinos em Americana. O eixo de toda comunicação é a mensagem-chave aprovada: 'Seu gato merece uma veterinária que entende de felinos — não de bicho em geral.'"
+  },
+
+  "tows_matrix": {
+    "description": "Matriz TOWS cruzada: estratégias derivadas de cada par quadrante, não listagem. Cada célula combina itens de duas dimensões para gerar uma jogada concreta.",
+    "so_strategies": [
+      {
+        "code": "SO1",
+        "title": "Ocupar território felino digital antes dos 24h perceberem",
+        "combines": "F1 (especialização Nathalia) × O1 (vácuo de posicionamento) + O4 (demanda orgânica conteúdo)",
+        "strategy": "Sprint de 60 dias: LP felinos + série de 8 Reels educativos com Nathalia + GMB otimizado para 'veterinário gatos americana'. Objetivo é indexar topo do Google Maps e topo de feed antes de qualquer concorrente iniciar movimento similar.",
+        "rationale": "A Nathalia é o único ativo não replicável da microrregião. Os concorrentes competem em preço/volume — não em especialização. A janela de 6-12 meses se fecha quando algum 24h contrata especialista felino."
+      },
+      {
+        "code": "SO2",
+        "title": "Escalar motor de indicação que já funciona organicamente",
+        "combines": "F3 (pós-consulta WhatsApp) × O3 (486 inativos) + O5 (automação CRM)",
+        "strategy": "Sistematizar a mensagem de pós-consulta que a Nathalia já envia → transformar em régua CRM de 4 toques (pós-consulta D+1, lembrete vacina D+30, check-up anual, aniversário do pet). Adicionar pedido de indicação humanizado no momento de maior satisfação (pós-consulta positiva).",
+        "rationale": "O diferencial de acompanhamento já existe manualmente. Automatizá-lo multiplica o alcance sem diluir a qualidade percebida, e captura os 486 inativos como base de retargeting zero-custo."
+      },
+      {
+        "code": "SO3",
+        "title": "Converter 'segunda opinião' em posicionamento explícito",
+        "combines": "F6 (reputação 2ª opinião) × O2 (Google Maps baixa competição felinos)",
+        "strategy": "GMB + LP incluir seção 'Desconfia do diagnóstico? Traga seu gato para segunda opinião especializada'. Anúncio Google Search em termos como 'clínica veterinária gatos americana diagnóstico'. Posiciona a Zenvet como destino de clientes já insatisfeitos com 24h — captura churn da concorrência sem pagar aquisição.",
+        "rationale": "A reputação já existe na prática mas não está no digital. Explicitá-la é exercício de comunicação, não de construção."
+      }
+    ],
+    "wo_strategies": [
+      {
+        "code": "WO1",
+        "title": "Converter tracking zero em vantagem via instalação imediata",
+        "combines": "W1 (zero tracking) × O1 (vácuo) + O2 (Google Maps)",
+        "strategy": "Semana 1: instalar Meta Pixel + GTM + GA4 + eventos de conversão (clique WhatsApp, formulário LP, post GMB). Isso vira input para otimizar as campanhas de felinos da Semana 2-3 com dados próprios desde o Dia 1 de execução.",
+        "rationale": "Fraqueza estrutural vira alavanca quando a oportunidade requer dados de conversão para escalar. Sem pixel não há lookalike, sem lookalike não há escala saudável da campanha felinos."
+      },
+      {
+        "code": "WO2",
+        "title": "Usar gargalo de acessos como pré-requisito organizacional",
+        "combines": "W6 (acessos não consolidados) × O1+O2+O4 (todas as oportunidades de execução digital)",
+        "strategy": "Sprint de consolidação de acesso na Semana 1 — Meta Business, Google Ads, GA, GSC, Instagram Admin — torna tudo que vem depois executável sem atrito. Sem isso, as 3 oportunidades principais dependem de intermediação do cliente a cada ação."
+      }
+    ],
+    "st_strategies": [
+      {
+        "code": "ST1",
+        "title": "Neutralizar preço isca dos 24h via prova social especializada",
+        "combines": "F1+F6 (especialização + 2ª opinião) × T1 (hospitais 24h com consulta R$70)",
+        "strategy": "Coletar 5 depoimentos curtos em vídeo no próximo mês — tutoras que vieram de 24h após diagnóstico errado. Distribuir em Reels, GMB e LP. Cada depoimento é antídoto específico contra a promessa de R$70: 'paguei R$70, fiz R$800 de exames que ela não precisava; aqui ela paga R$180 e sai com diagnóstico certo'.",
+        "rationale": "Não compete em preço — desqualifica o preço baixo do concorrente expondo o custo oculto. Arma defensiva e ofensiva simultaneamente."
+      },
+      {
+        "code": "ST2",
+        "title": "Blindar base própria contra risco de plataforma",
+        "combines": "F2 (1.186 pacientes ativos) × T2 (dependência de plataformas)",
+        "strategy": "Exportar base de WhatsApp + Kommo CRM + lista de email. Criar Custom Audience Meta com base segmentada (gatos/cães, ativos/inativos, ticket alto/médio). Permite lookalike 1% dos melhores clientes e reduz dependência da performance do algoritmo Meta.",
+        "rationale": "Protege contra upgrade de CPC, mudança de algoritmo ou banimento de conta. Base própria é o único ativo digital que a Zenvet controla 100%."
+      }
+    ],
+    "wt_strategies": [
+      {
+        "code": "WT1",
+        "title": "Fechar janela de cópia acelerando entrega (urgência)",
+        "combines": "W1+W5 (tracking + LP ausentes) × T4 (risco de cópia do posicionamento)",
+        "strategy": "Comprimir roadmap de 12 semanas em 6 para posicionamento felino: tracking S1, LP felinos e Meta corrigido S2, campanha felinos Google S3, Reels e GMB otimizado S3, régua CRM S4. Após S4, consolidação só é copiável com tempo de reputação — não com dinheiro.",
+        "rationale": "A janela existe porque os concorrentes não perceberam. Quando perceberem, eles não têm Nathalia — mas podem contratar. O ativo defensivo é reputação digital acumulada, que só se constrói com tempo."
+      },
+      {
+        "code": "WT2",
+        "title": "Remover single point of failure do funil comercial",
+        "combines": "W3 (conversão 16,6% sem script) × T5 (WhatsApp single point of failure)",
+        "strategy": "Script consultivo por ICP (Mariana vs Carlos) + CRM Kommo com tarefas automáticas + Loíse treinada em qualificação 1-5 estrelas + alerta de SLA a cada 30 min. Redundância: plantão reverso se Loíse ausente (Nathalia responde)."
+      }
+    ]
+  },
+
+  "scenarios": {
+    "description": "Três cenários de execução baseados na velocidade de liberação de acessos e decisão da cliente. Cada cenário tem premissas explícitas, projeção quantificada e gatilhos de transição.",
+    "conservative": {
+      "label": "Conservador — Só o que temos acesso agora",
+      "assumptions": [
+        "Apenas acessos disponíveis: GMB, WhatsApp Business, site (via Nathalia)",
+        "Meta Ads e Google Ads continuam geridos por terceiros com ajustes limitados",
+        "LP felinos no WordPress do cliente, sem deploy Vercel",
+        "Sem CRM novo — melhorias só em processo manual"
+      ],
+      "expected_outcomes": {
+        "leads_month_90d": 90,
+        "leads_delta_vs_current": "+25%",
+        "cac_90d": 200,
+        "cac_delta": "-25%",
+        "revenue_incremental_90d_brl": 9000,
+        "confidence": "alta"
+      },
+      "what_gets_done": [
+        "Quick wins de comunicação (bio IG, GMB, mensagem ausência WhatsApp)",
+        "LP felinos simples no domínio atual",
+        "Série de 4 Reels educativos com Nathalia",
+        "Manual de atendimento consultivo para Loíse (sem CRM)"
+      ]
+    },
+    "realistic": {
+      "label": "Realista — Acessos consolidados na S1",
+      "assumptions": [
+        "Acessos Meta Business + Google Ads + GA + Instagram Admin liberados até fim da Semana 1",
+        "Budget mantido em R$3.200/mês com reordenação por canal",
+        "CRM Kommo contratado na Semana 3 (sem alteração de preço com cliente)",
+        "Nathalia com 1h/semana para gravação de Reels"
+      ],
+      "expected_outcomes": {
+        "leads_month_90d": 140,
+        "leads_delta_vs_current": "+94%",
+        "cac_90d": 120,
+        "cac_delta": "-55%",
+        "revenue_incremental_90d_brl": 24000,
+        "confidence": "média-alta"
+      },
+      "what_gets_done": [
+        "Tracking completo (Pixel + GTM + GA + conversões)",
+        "Meta Ads reconstruído com objetivo LEADS e copy felinos",
+        "Google Ads reativado flyvet.search-Geral + Performance Max + campanha felinos nova",
+        "LP felinos Vercel com tracking nativo",
+        "CRM Kommo + régua 486 inativos + régua pós-consulta",
+        "Scripts SDR para Loíse + Nathalia backup"
+      ]
+    },
+    "aggressive": {
+      "label": "Agressivo — Budget+20% + aceleração criativa",
+      "assumptions": [
+        "Todos os pressupostos do Realista",
+        "Cliente aceita elevar budget de R$3.200 → R$4.000/mês a partir da Semana 4 (quando LP + pixel estão entregando dados de conversão)",
+        "Produção de 8 Reels/mês (não 4) com edição externa",
+        "Primeiros 5 depoimentos em vídeo coletados até S8"
+      ],
+      "expected_outcomes": {
+        "leads_month_90d": 200,
+        "leads_delta_vs_current": "+178%",
+        "cac_90d": 95,
+        "cac_delta": "-64%",
+        "revenue_incremental_90d_brl": 46000,
+        "confidence": "média"
+      },
+      "what_gets_done": [
+        "Tudo do Realista",
+        "+25% budget em Google (felinos + domicílio)",
+        "Meta Ads com 2 campanhas: Leads felinos + Retargeting da base de 1.186 ativos",
+        "Série de depoimentos em vídeo (5 peças)",
+        "Co-marketing com pet shops locais (indicação cruzada)"
+      ],
+      "risks": [
+        "Aumento de budget sem histórico de conversão pode amplificar CAC ruim antes de melhorar",
+        "Dependência de produção de vídeo adiciona ponto de falha",
+        "Cliente pode recusar elevação de budget — neutralizar exigindo dados de S1-S3 antes de pedir"
+      ]
+    },
+    "recommendation": "Executar Realista como plano base com gatilho explícito de migração para Agressivo: se CPL Meta < R$25 e leads qualificados/semana > 30 até fim da S4, propor elevação de budget em S5. Se acessos não liberarem até S1, descer para Conservador sem prejuízo de continuidade."
+  },
+
+  "priority_actions": [
+    {
+      "action": "Instalar tracking completo: Meta Pixel, GTM e eventos de conversão (clique WhatsApp, formulário)",
+      "swot_basis": "Elimina F1 (zero tracking) — pré-requisito para toda otimização de mídia e mensuração de CAC real",
+      "impact": "alto",
+      "suggested_timeline": "Semana 1",
+      "dependencies": ["Acesso Meta Business, Google Ads e site confirmados"],
+      "week_start": 1,
+      "week_end": 1,
+      "track": "Tracking & Dados",
+      "financial_impact": {
+        "investment_brl": 0,
+        "monthly_return_brl": 0,
+        "note": "Habilitador — sem retorno direto, mas sem ele todas as outras ações operam cegas. Impacto indireto: viabiliza 100% do roadmap de mídia (R$3.200/mês em jogo)."
+      },
+      "risk_adjusted_score": {
+        "impact": 10,
+        "probability_of_success": 9,
+        "reversibility": "trivial",
+        "score": 9,
+        "ranking_rationale": "Dependência para tudo. Sem acesso ao site = blocker total."
+      }
+    },
+    {
+      "action": "Corrigir Meta Ads: link quebrado + recriar campanha com mensagem-chave felinos aprovada",
+      "swot_basis": "Elimina F2 (R$800/mês desperdiçado), alavanca F1 (especialização), captura O1 (vácuo concorrentes)",
+      "impact": "alto",
+      "suggested_timeline": "Semana 1–2",
+      "dependencies": ["Tracking instalado", "Landing Page felinos no ar"],
+      "week_start": 1,
+      "week_end": 2,
+      "track": "Mídia Paga",
+      "financial_impact": {
+        "investment_brl": 0,
+        "monthly_return_brl": 800,
+        "payback_days": 1,
+        "note": "Correção do link 404 recupera R$800/mês imediatamente. Com copy felinos nova, potencial de +15 leads/mês × R$500 ticket = +R$7.500/mês de receita incremental."
+      },
+      "risk_adjusted_score": {
+        "impact": 10,
+        "probability_of_success": 10,
+        "reversibility": "trivial",
+        "score": 10,
+        "ranking_rationale": "Maior ROI absoluto. Correção de URL é reversível e instantânea."
+      }
+    },
+    {
+      "action": "Criar Landing Page dedicada felinos com mensagem-chave, prova social e CTA WhatsApp",
+      "swot_basis": "Elimina F5 (sem LP felinos), captura O2 (Google Maps), alavanca F1+F6 (especialização + reputação de segunda opinião)",
+      "impact": "alto",
+      "suggested_timeline": "Semana 2–3",
+      "dependencies": ["Posicionamento aprovado (Semana 2)"],
+      "week_start": 2,
+      "week_end": 3,
+      "track": "CRO & LP",
+      "financial_impact": {
+        "investment_brl": 0,
+        "monthly_return_brl": 6000,
+        "payback_days": 7,
+        "note": "Destravada a campanha felinos Google Ads (hoje com CPA R$43 → projeção R$20 com LP dedicada). +12 leads/mês × R$500 = R$6.000/mês."
+      },
+      "risk_adjusted_score": {
+        "impact": 9,
+        "probability_of_success": 8,
+        "reversibility": "alta",
+        "score": 8.5,
+        "ranking_rationale": "LP testável em 72h de tráfego. Se não converte, iterar copy."
+      }
+    },
+    {
+      "action": "Otimizar Google Meu Negócio: fotos, posts semanais, Q&A, categoria especialista felinos",
+      "swot_basis": "Captura O2 (Google Maps baixa competição), alavanca F3 (pós-atendimento como prova social), mitiga A1 (hospitais 24h)",
+      "impact": "médio",
+      "suggested_timeline": "Semana 2",
+      "dependencies": [],
+      "week_start": 2,
+      "week_end": 3,
+      "track": "Conteúdo & SEO",
+      "financial_impact": {
+        "investment_brl": 0,
+        "monthly_return_brl": 3000,
+        "payback_days": 30,
+        "note": "GMB otimizado captura ~6 leads/mês de alta intenção de buscas locais. CAC zero (orgânico). Benefício composto: cada review + post reforça ranqueamento no pack local."
+      },
+      "risk_adjusted_score": {
+        "impact": 7,
+        "probability_of_success": 9,
+        "reversibility": "trivial",
+        "score": 8,
+        "ranking_rationale": "Baixo esforço, retorno gradual garantido. Canal orgânico com evidência de demanda."
+      }
+    },
+    {
+      "action": "Lançar série de conteúdo educativo felino: 8 Reels/mês com Nathalia como autoridade técnica",
+      "swot_basis": "Alavanca F1+F6 (especialização + segunda opinião), captura O4 (demanda orgânica), mitiga A4 (velocidade de consolidação de território)",
+      "impact": "médio",
+      "suggested_timeline": "Semana 2–4",
+      "dependencies": ["Identidade visual/brandbook (Semana 3) para padronização"],
+      "week_start": 2,
+      "week_end": 4,
+      "track": "Conteúdo & SEO",
+      "financial_impact": {
+        "investment_brl": 600,
+        "monthly_return_brl": 2000,
+        "payback_days": 45,
+        "note": "Investimento: 4h/mês Nathalia (custo oportunidade R$600 em consultas). Retorno composto: autoridade → conversão orgânica + argumento anti-concorrente para próximos 12 meses."
+      },
+      "risk_adjusted_score": {
+        "impact": 7,
+        "probability_of_success": 6,
+        "reversibility": "alta",
+        "score": 6.5,
+        "ranking_rationale": "Retorno depende de consistência de produção (risco) e alcance orgânico (risco algorítmico)."
+      }
+    },
+    {
+      "action": "Implementar CRM + régua de reativação dos 486 inativos (vacinas, check-up, aniversário do pet)",
+      "swot_basis": "Elimina F4 (486 inativos sem régua), captura O3+O5 (reativação + automação), resolve F3 (follow-up de leads)",
+      "impact": "alto",
+      "suggested_timeline": "Semana 3",
+      "dependencies": ["Acesso WhatsApp Business confirmado"],
+      "week_start": 3,
+      "week_end": 4,
+      "track": "CRM & Comercial",
+      "financial_impact": {
+        "investment_brl": 450,
+        "monthly_return_brl": 8000,
+        "payback_days": 12,
+        "note": "Reativar 20% dos 486 inativos (97 pacientes) × 2 visitas/ano × R$500 ticket = R$97.000/ano = R$8.000/mês. Custo Kommo: R$450/mês. ROI: 17x."
+      },
+      "risk_adjusted_score": {
+        "impact": 10,
+        "probability_of_success": 7,
+        "reversibility": "média",
+        "score": 8.5,
+        "ranking_rationale": "Maior receita incremental do roadmap. Risco moderado: taxa de reativação pode variar 10-25%."
+      }
+    },
+    {
+      "action": "Treinar Loíse com script consultivo por tipo de serviço (felinos vs. cães) e qualificação adaptada",
+      "swot_basis": "Resolve F3 (conversão 16,6%), alavanca F2 (show rate 100%), mitiga A5 (WhatsApp como single point of failure)",
+      "impact": "alto",
+      "suggested_timeline": "Semana 3–4",
+      "dependencies": ["Scripts SDR aprovados (antecipar versão simplificada para conversão básica)"],
+      "week_start": 3,
+      "week_end": 5,
+      "track": "CRM & Comercial",
+      "financial_impact": {
+        "investment_brl": 0,
+        "monthly_return_brl": 3000,
+        "payback_days": 21,
+        "note": "Subir conversão de 16,6% → 25% = +6 agendamentos/mês × R$500 = +R$3.000/mês sem aumentar budget de mídia."
+      },
+      "risk_adjusted_score": {
+        "impact": 9,
+        "probability_of_success": 7,
+        "reversibility": "alta",
+        "score": 8,
+        "ranking_rationale": "Requer treinamento real e supervisão — alta variabilidade na execução humana."
+      }
+    }
+  ],
+
+  "financial_summary_90d": {
+    "description": "Consolidação financeira dos 90 dias considerando o cenário Realista. Todos os valores em R$/mês ao fim da Semana 12.",
+    "total_monthly_investment_incremental": 1050,
+    "investment_breakdown": {
+      "crm_kommo": 450,
+      "producao_reels_externa": 600,
+      "note": "Budget de mídia mantido em R$3.200/mês (reorganizado, não aumentado)."
+    },
+    "total_monthly_return_incremental": 22800,
+    "return_breakdown": {
+      "meta_ads_corrigido": 800,
+      "google_campanha_felinos_via_lp": 6000,
+      "gmb_organico": 3000,
+      "reels_autoridade": 2000,
+      "crm_reativacao_inativos": 8000,
+      "script_loise_conversao": 3000
+    },
+    "net_monthly_return": 21750,
+    "roi_multiplier": 20.7,
+    "payback_days_blended": 16,
+    "caveats": [
+      "Números em regime — ao fim da S12, não média das 12 semanas.",
+      "Pressupõe acessos liberados na S1 e sem bloqueios operacionais da cliente.",
+      "CRM Kommo tem curva de adoção de ~30 dias antes de entregar todo o potencial."
+    ]
+  }
+}
