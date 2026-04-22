@@ -1808,7 +1808,7 @@ def build_consolidated_html(client, outputs, ident, generated_at, current_week):
   </div>
 
   <footer class="cs-footer">
-    Documento gerado a partir de <code>client.json</code> + <code>outputs/*.json</code> · <a href="./">← Voltar ao portal</a>
+    Documento gerado a partir de <code>client.json</code> + <code>outputs/*.json</code>
   </footer>
 
 <script>
