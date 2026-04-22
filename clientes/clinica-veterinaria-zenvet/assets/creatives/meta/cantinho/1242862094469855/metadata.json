@@ -1,0 +1,23 @@
+{
+  "ads_library_id": "1242862094469855",
+  "ads_library_url": "https://www.facebook.com/ads/library/?id=1242862094469855",
+  "page_name": "Cantinho do Mascote Clínica Veterinária",
+  "page_id": "278502958682594",
+  "start_date_raw": "2026-02-18",
+  "platforms": [
+    "facebook",
+    "instagram",
+    "audience_network",
+    "messenger",
+    "whatsapp"
+  ],
+  "display_format": "DCO",
+  "cta_type": "Enviar mensagem pelo WhatsApp",
+  "link_url": "https://api.whatsapp.com/send",
+  "copy_excerpt": "{{product.brand}}",
+  "image_url": "assets/creatives/meta/cantinho/1242862094469855/image.jpg",
+  "thumbnail_url": "assets/creatives/meta/cantinho/1242862094469855/image.jpg",
+  "video_url": null,
+  "source_image_url": "https://scontent.fcpq7-1.fna.fbcdn.net/v/t39.35426-6/493940171_1776535686225599_4571405858323848277_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=101&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=d3DhaTODGVEQ7kNvwFGw1CG&_nc_oc=Adq3JK7FPoBhspwD-WrL_P0nyuPIw3tX6OLfZCApNY-S2MH_x3QHSxsv0YTcxQm_oj9OChqxR4-WQ7cgLqPtXxea&_nc_zt=14&_nc_ht=scontent.fcpq7-1.fna&_nc_gid=K4YfO7IriLjeZS9RcsMpvg&_nc_ss=7a389&oh=00_Af22pLSHBSyuWTuIgGQ5JIBYzCteKlQqr92pV6MyOax4WA&oe=69EE037D",
+  "fetched_at": "2026-04-22T02:34:59.272738+00:00"
+}

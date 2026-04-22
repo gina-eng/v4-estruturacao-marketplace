@@ -2070,10 +2070,11 @@
         "version": 2
       },
       "ee-s2-diagnostico-criativos": {
-        "status": "pending",
+        "status": "completed",
         "checkpoint": 0,
-        "started_at": null,
-        "completed_at": null
+        "started_at": "2026-04-22T02:42:00.268295+00:00",
+        "completed_at": "2026-04-22T02:42:00.268295+00:00",
+        "version": 1
       },
       "ee-s2-diagnostico-organico-ig": {
         "status": "completed",
@@ -2241,6 +2242,12 @@
       "skill": "briefing-update",
       "action": "updated",
       "note": "Atualização do briefing com documentação consolidada 2026-04-21: endereço, ICP (best/not customers), marca (paleta HEX, adjetivos, tom, inventário de assets), CRM Vetsoft, acessos coletados (Meta, Google Ads, Instagram, CRM, site)."
+    },
+    {
+      "ts": "2026-04-22T02:42:00.268295+00:00",
+      "skill": "ee-s2-diagnostico-criativos",
+      "action": "completed",
+      "note": "Pack analisado (10 criativos, média 13.4/25). Pipeline Meta Ads Library ativada — 6 anúncios reais da Cantinho do Mascote embedados no portal como benchmark visual."
     }
   ],
   "page_audit": {

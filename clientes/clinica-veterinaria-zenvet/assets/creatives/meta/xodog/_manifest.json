@@ -1,0 +1,32 @@
+{
+  "slug": "xodog",
+  "target": "xodog",
+  "fetched_at": "2026-04-22T02:38:00.937562+00:00",
+  "total_ads": 1,
+  "ads": [
+    {
+      "ads_library_id": "791694880408333",
+      "ads_library_url": "https://www.facebook.com/ads/library/?id=791694880408333",
+      "page_name": "XoDog",
+      "page_id": "854455984418454",
+      "start_date_raw": "2026-04-17",
+      "platforms": [
+        "facebook",
+        "instagram",
+        "audience_network",
+        "messenger",
+        "whatsapp"
+      ],
+      "display_format": "IMAGE",
+      "cta_type": "Enviar mensagem pelo WhatsApp",
+      "link_url": "https://api.whatsapp.com/send",
+      "copy_excerpt": "🔥🍔 O verdadeiro X-TUDO que faz jus ao nome! 🍔🔥\n\nTem hambúrguer… tem sabor… e tem X-TUDO do Xodog que chega daquele jeito: grande, suculento e cheio de sabor em cada mordida! 😋\n\nAqui você monta do seu jeito, porque além de tudo isso ainda temos opcionais grátis pra deixar seu lanche ainda mais insano:\n🍍 Abacaxi\n🧀 Catupiri\n🧅 Cebola\n🥔 Batata palha\n\nÉ só escolher e deixar seu X-TUDO do jeito que você ",
+      "image_url": "assets/creatives/meta/xodog/791694880408333/image.jpg",
+      "thumbnail_url": "assets/creatives/meta/xodog/791694880408333/image.jpg",
+      "video_url": null,
+      "source_image_url": "https://scontent.fcpq7-1.fna.fbcdn.net/v/t39.35426-6/676273855_2018840498709461_8568048857227911026_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=fL0uzaOtZ50Q7kNvwEWTgCq&_nc_oc=Adrv52m4NvOLDMBed_UYgIA-oqoGdQCVjzrXVAOAIu_54Ic8_G_mDuX48O-nvMivj_9zfHiXpprsHeDro4KDHOeQ&_nc_zt=14&_nc_ht=scontent.fcpq7-1.fna&_nc_gid=fmI2Q4XS6asLewxwnuB3Gw&_nc_ss=7a389&oh=00_Af1ru7yCoRmHVQA2UhL7hrFZTtJ22McQgJLPkpg73CUXaQ&oe=69EE0E77",
+      "fetched_at": "2026-04-22T02:38:00.937562+00:00"
+    }
+  ],
+  "source_url": "https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=BR&q=xodog&search_type=keyword_unordered"
+}

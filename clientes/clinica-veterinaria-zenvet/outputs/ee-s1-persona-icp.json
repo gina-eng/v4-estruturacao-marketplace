@@ -1,6 +1,5 @@
 {
   "summary": "ICP principal: tutoras de gatos 30-45 anos, classe média-alta, Americana/SBO/Nova Odessa. Job emocional central: encontrar veterinária que entende de felinos de verdade. Maior dor: medo de ser explorada com exames desnecessários (trauma com concorrentes 24h). Mensagem-chave escolhida: 'Seu gato merece uma veterinária que entende de felinos — não de bicho em geral.' ICP secundário: tutores de cães 35-55 anos, perfil mais prático, prioridade em agilidade e preço transparente.",
-
   "icp": {
     "segment_label": "Tutoras de gatos — 70% da base atual",
     "demographics": {
@@ -86,7 +85,6 @@
       }
     ]
   },
-
   "icp_secondary": {
     "segment_label": "Tutores de cães — 30% da base, segmento de crescimento",
     "demographics": {
@@ -152,7 +150,6 @@
     ],
     "key_message_secondary": "Na Zenvet, seu cachorro é atendido com hora marcada, sem fila e sem surpresa na conta."
   },
-
   "persona": {
     "name": "Mariana",
     "age": "36 anos",
@@ -162,7 +159,6 @@
     "story": "Mariana é professora do ensino fundamental em Americana. Mora com o marido, não tem filhos — o Simba, gato SRD laranja que adotou há 4 anos, é o filho da casa. Ela pesquisa muito antes de confiar: ficou semanas olhando o Instagram da Zenvet antes de agendar a primeira consulta. Quando Nathalia chamou o Simba pelo nome na segunda visita e explicou cada detalhe do exame sem pressa, Mariana se tornou cliente fiel e passou a indicar para todas as amigas tutoras. Sua maior insegurança continua sendo levar o Simba num lugar que vai estressá-lo ou cobrar por exames que não precisam. Ela paga o que for preciso — desde que entenda por quê.",
     "quote": "Eu não levo o Simba em qualquer lugar não. Gato não é cachorro, e tem muito veterinário que não entende isso."
   },
-
   "persona_secondary": {
     "name": "Carlos",
     "age": "43 anos",
@@ -172,7 +168,6 @@
     "story": "Carlos mora com a esposa e dois filhos adolescentes em Santa Bárbara. O Thor, labrador de 5 anos, é da família inteira. Carlos não pesquisa muito antes de decidir — age por indicação ou necessidade. Quando a esposa ouviu de uma amiga que a Zenvet atende sem fila e explica tudo direitinho, agendaram e não mudaram mais. O que importa para Carlos: chegar, ser atendido rápido, saber o que está pagando e voltar para casa. Fidelidade vem pela praticidade e pela transparência, não pela emoção.",
     "quote": "Veterinário bom é aquele que me diz o que o Thor tem, quanto vai custar e me manda embora rápido. Sem enrolação."
   },
-
   "where_to_find": {
     "digital_channels": [
       "Grupos do Facebook: 'Pets Americana SP', 'Tutores de Gatos Americana e Região', 'Cães e Gatos Nova Odessa'",
@@ -201,7 +196,6 @@
       "Rede de indicação orgânica entre tutoras — canal mais forte atualmente"
     ]
   },
-
   "anti_persona": {
     "description": "Perfil que NÃO deve ser atendido ativamente. Drena margem, gera churn, prejudica reputação ou exige política que quebra o posicionamento premium.",
     "profiles": [
@@ -240,7 +234,6 @@
     ],
     "operational_rule": "Loíse sinaliza no WhatsApp quando detecta sinal de anti-persona (tag 'AP' no Kommo). Nathalia revê semanalmente — se repetido, desqualifica no SLA para priorizar ICP principal."
   },
-
   "buyer_journey": {
     "description": "Jornada da Mariana do primeiro sinal de necessidade até advocacy. Cada estágio mapeia gatilho, canal preferido, dúvida dominante e intervenção ideal da Zenvet.",
     "stages": [
@@ -307,7 +300,6 @@
     ],
     "critical_leakage_point": "O maior vazamento é na etapa de Consideração (duração 3-7 dias): Mariana pesquisa intensamente e a Zenvet não oferece sinais de especialização felina nos canais que ela verifica. Corrigir GMB + bio IG + reviews específicas fecha esse vazamento sem investir R$1 em mídia."
   },
-
   "willingness_to_pay": {
     "description": "Disposição a pagar da Mariana por serviço. Cruzamento entre dados do mercado, sensibilidade de preço declarada no briefing e expectativa de valor da persona.",
     "context": "Renda R$5-12K/mês + gato humanizado + disposição a pagar por qualidade demonstrada. Mariana NÃO é sensível a preço absoluto — é sensível a preço SEM EXPLICAÇÃO.",
@@ -355,7 +347,6 @@
     ],
     "strategic_implication": "A Zenvet opera abaixo do teto de willingness-to-pay em todos os serviços. Oportunidade de revisão de preços com +15% gradual ao longo de 6 meses sem perda de volume, desde que acompanhada de comunicação de diferencial. Prioridade máxima: domicílio felinos (teto premium alto + baixa competição)."
   },
-
   "objection_library": {
     "description": "Biblioteca de objeções com resposta consultiva pronta para a Loíse usar no WhatsApp. Cada resposta preserva posicionamento (não desconta, não compete em preço), valida a preocupação do tutor, e redireciona para valor.",
     "objections": [
@@ -403,7 +394,6 @@
       }
     ]
   },
-
   "key_message": {
     "chosen_message": "Seu gato merece uma veterinária que entende de felinos — não de bicho em geral.",
     "usage_context": "Meta Ads, bio do Instagram, copy de anúncios de topo e meio de funil",
@@ -427,6 +417,7 @@
         "rationale": "Ativa job social e usa prova social implícita. Melhor como suporte em depoimentos, não como mensagem principal.",
         "usage_context": "Peças de depoimento, anúncios de reconhecimento, topo de funil"
       }
-    ]
+    ],
+    "approach": "emotional"
   }
 }

@@ -1,284 +1,180 @@
 {
   "summary": "Score médio: 35/100. Três hemorragias confirmadas: Meta Ads com link 404 (R$800/mês destruídos), zero tracking em todos os canais, e mensagem-chave de especialização felina ausente em todos os pontos de contato. Instagram ativo e consistente é o único ponto positivo — mas fala de 'pets' não de felinos. 5 Quick Wins executáveis esta semana sem custo.",
-
-  "channels": [
+  "quick_wins": [
+    {
+      "action": "Corrigir URL dos anúncios Meta Ads — trocar destino 404 pelo site funcional",
+      "channel": "Meta Ads",
+      "who": "Rafael (operador)",
+      "time_estimate": "15 min",
+      "expected_impact": "Reativa R$800/mês de verba que está destruída. Leads voltam a chegar no mesmo dia."
+    },
+    {
+      "action": "Instalar Meta Pixel + Google Tag Manager no site via acesso website_admin",
+      "channel": "Site",
+      "who": "Rafael (operador) — solicitar acesso website_admin para Nathalia urgente",
+      "time_estimate": "3h",
+      "expected_impact": "Habilita rastreamento de conversões, retargeting e lookalike audiences. Pré-requisito para toda otimização de mídia."
+    },
+    {
+      "action": "Atualizar bio do Instagram: 'Especialista em felinos | Americana SP' + CTA WhatsApp + link funcional",
+      "channel": "Instagram",
+      "who": "Cliente (Nathalia) ou Rafael — acesso Instagram_admin a confirmar",
+      "time_estimate": "30 min",
+      "expected_impact": "Mariana que pesquisa o perfil encontra sinal imediato de especialização. CTA para WhatsApp funcional."
+    },
+    {
+      "action": "Criar post GMB: especialização em felinos + foto Nathalia com gato + atualizar categoria",
+      "channel": "Google Meu Negócio",
+      "who": "Rafael (acesso GMB confirmado)",
+      "time_estimate": "30 min",
+      "expected_impact": "Aumenta relevância local para buscas 'veterinário gatos americana'. Canal de CAC zero."
+    },
+    {
+      "action": "Configurar mensagem de ausência WhatsApp: humanizada, com qualificação felino/cão e horário",
+      "channel": "WhatsApp Business",
+      "who": "Loíse (cliente) — orientar Rafael",
+      "time_estimate": "19 min",
+      "expected_impact": "Reduz leads perdidos fora do horário. Tom alinhado com posicionamento felinos."
+    }
+  ],
+  "gap_matrix": [
+    {
+      "rank": 1,
+      "channel": "Meta Ads",
+      "gap": "Links quebrados (404) — R$800/mês destruídos",
+      "impact": "alto",
+      "effort": "baixo",
+      "recommended_action": "Corrigir URL destino no Gerenciador Meta"
+    },
+    {
+      "rank": 2,
+      "channel": "Site",
+      "gap": "Meta Pixel + GTM ausentes",
+      "impact": "alto",
+      "effort": "baixo",
+      "recommended_action": "Instalar via website_admin (solicitar acesso urgente)"
+    },
+    {
+      "rank": 3,
+      "channel": "Instagram",
+      "gap": "Bio sem mensagem-chave + link quebrado",
+      "impact": "alto",
+      "effort": "baixo",
+      "recommended_action": "Atualizar bio e link em 30 min"
+    },
+    {
+      "rank": 4,
+      "channel": "WhatsApp",
+      "gap": "Sem follow-up de leads que somem",
+      "impact": "alto",
+      "effort": "médio",
+      "recommended_action": "Script de retorno + régua CRM (Semana 3)"
+    },
+    {
+      "rank": 5,
+      "channel": "GMB",
+      "gap": "Sem otimização para termos de felinos",
+      "impact": "médio",
+      "effort": "baixo",
+      "recommended_action": "Post + categoria + resposta reviews (Quick Win)"
+    },
+    {
+      "rank": 6,
+      "channel": "Site",
+      "gap": "Sem Landing Page dedicada felinos",
+      "impact": "alto",
+      "effort": "alto",
+      "recommended_action": "Criar LP (Semana 3 — ee-s3-landing-page)"
+    },
+    {
+      "rank": 7,
+      "channel": "Meta Ads",
+      "gap": "Copy sem mensagem-chave felinos",
+      "impact": "alto",
+      "effort": "médio",
+      "recommended_action": "Recriar campanha ICP felinos (Semana 1-2)"
+    },
+    {
+      "rank": 8,
+      "channel": "Google Ads",
+      "gap": "Campanha felinos pausada sem LP de suporte",
+      "impact": "alto",
+      "effort": "médio",
+      "recommended_action": "Reativar com LP nova (Semana 3)"
+    },
+    {
+      "rank": 9,
+      "channel": "WhatsApp",
+      "gap": "Sem script consultivo por serviço",
+      "impact": "alto",
+      "effort": "médio",
+      "recommended_action": "Treinar Loíse com script (Semana 3-4)"
+    },
+    {
+      "rank": 10,
+      "channel": "Instagram",
+      "gap": "Conteúdo não diferencia felinos de cães",
+      "impact": "médio",
+      "effort": "médio",
+      "recommended_action": "Série educativa felinos com Nathalia (Semana 2)"
+    },
+    {
+      "rank": 11,
+      "channel": "Todos",
+      "gap": "Mensagem-chave não institucionalizada em nenhum canal",
+      "impact": "alto",
+      "effort": "baixo",
+      "recommended_action": "Aplicar após brandbook (Semana 3)"
+    },
+    {
+      "rank": 12,
+      "channel": "GMB",
+      "gap": "Sem processo sistemático de coleta e resposta de reviews",
+      "impact": "médio",
+      "effort": "baixo",
+      "recommended_action": "Configurar processo de resposta semanal"
+    }
+  ],
+  "channel_scores": [
     {
       "channel": "site",
-      "channel_name": "Site — clinicazenvet.com.br",
+      "channel_name": "Site",
       "score": 28,
-      "classification": "critical",
-      "top_problems": [
-        "Meta Pixel e Google Tag ausentes — confirmado no briefing",
-        "Sem Landing Page dedicada para o segmento felinos",
-        "Links quebrados em algumas URLs (evidenciado pelos 404 do Meta Ads)"
-      ],
-      "strengths": [
-        "Site existe e está no ar",
-        "HTTPS provavelmente ativo"
-      ],
-      "gaps": [
-        {
-          "gap": "Meta Pixel e GTM não instalados",
-          "impact": "alto",
-          "evidence": "Confirmado no briefing: sem rastreamento de conversões em nenhum canal"
-        },
-        {
-          "gap": "Proposta de valor genérica — sem mencionar especialização em felinos",
-          "impact": "alto",
-          "evidence": "Mensagem-chave aprovada ainda não está no site; LP felinos inexistente"
-        },
-        {
-          "gap": "Links quebrados (404) em URLs usadas pelos anúncios",
-          "impact": "alto",
-          "evidence": "Meta Ads confirmado apontando para URL 404"
-        },
-        {
-          "gap": "Sem landing page dedicada para o ICP principal (tutoras de gatos)",
-          "impact": "alto",
-          "evidence": "Todo tráfego pago vai para home genérica de 'pets'"
-        }
-      ]
+      "classification": "critical"
     },
     {
       "channel": "instagram",
-      "channel_name": "Instagram — @clinicazenvet",
+      "channel_name": "Instagram",
       "score": 44,
-      "classification": "low",
-      "top_problems": [
-        "Bio sem mensagem-chave de especialização felina",
-        "Conteúdo educativo genérico — não diferencia felinos de cães",
-        "CTR de anúncios boosting 0,76% indica desalinhamento com ICP"
-      ],
-      "strengths": [
-        "Frequência alta — várias vezes por semana",
-        "Conteúdo educativo (tipo correto para o ICP)",
-        "Perfil ativo e consistente"
-      ],
-      "gaps": [
-        {
-          "gap": "Bio não menciona especialização em felinos nem a mensagem-chave aprovada",
-          "impact": "alto",
-          "evidence": "Mariana pesquisa o Instagram por dias antes de ligar — se não vê sinal de especialização, não liga"
-        },
-        {
-          "gap": "Conteúdo fala de 'pets' sem diferenciação para felinos",
-          "impact": "médio",
-          "evidence": "Anúncios boosting: 'vacinação', 'Seu pet merece' — linguagem genérica, não de especialista em gatos"
-        },
-        {
-          "gap": "Sem Reels educativos com Nathalia como autoridade técnica felina",
-          "impact": "médio",
-          "evidence": "Formato de vídeo não identificado nos posts boosted; conteúdo majorialmente estático"
-        },
-        {
-          "gap": "CTA na bio provavelmente aponta para site com link quebrado",
-          "impact": "alto",
-          "evidence": "Links quebrados confirmados nos anúncios — bio provavelmente tem o mesmo destino"
-        }
-      ]
+      "classification": "low"
     },
     {
       "channel": "anuncios",
-      "channel_name": "Anúncios — Meta Ads + Google Ads",
+      "channel_name": "Anúncios",
       "score": 18,
-      "classification": "critical",
-      "top_problems": [
-        "Meta Ads: 100% da verba destruída com links 404",
-        "Google Ads: campanha de felinos pausada com zero conversões (problema era a LP, não a demanda)",
-        "Sem pixel/tag — impossível otimizar ou criar audiências"
-      ],
-      "strengths": [
-        "Google Ads campanha ativa com CTR 6,54% — sinal de demanda real",
-        "Verba total investida (R$3.200/mês) está disponível para redistribuir corretamente"
-      ],
-      "gaps": [
-        {
-          "gap": "Meta Ads com URL 404 — R$800/mês com zero possibilidade de conversão",
-          "impact": "alto",
-          "evidence": "Confirmado no briefing: 'Meta Ads com links quebrados (erro 404)'"
-        },
-        {
-          "gap": "Sem Meta Pixel — impossível criar retargeting ou lookalike audiences",
-          "impact": "alto",
-          "evidence": "Sem pixel instalado no site"
-        },
-        {
-          "gap": "Campanha 'flyvet.search - felinos' pausada com zero conversões",
-          "impact": "alto",
-          "evidence": "Pausada provavelmente por ausência de resultado — mas o problema era a LP genérica, não a demanda pelo termo"
-        },
-        {
-          "gap": "Copy Meta Ads sem mensagem-chave de especialização felina",
-          "impact": "alto",
-          "evidence": "Anúncios boosting posts genéricos de 'pets' sem diferenciação"
-        },
-        {
-          "gap": "14 de 15 campanhas Google pausadas sem estrutura clara de reativação",
-          "impact": "médio",
-          "evidence": "Histórico de campanhas mostra tentativas sem LP de suporte — problema estrutural"
-        }
-      ]
+      "classification": "critical"
     },
     {
       "channel": "gmb",
       "channel_name": "Google Meu Negócio",
       "score": 46,
-      "classification": "low",
-      "top_problems": [
-        "Categoria provavelmente genérica — sem 'especialista em felinos'",
-        "Sem posts regulares identificados",
-        "Concorrentes 24h dominam Google Maps local"
-      ],
-      "strengths": [
-        "Perfil reivindicado e verificado (gmb: true)",
-        "Acesso disponível (accesses.gmb: true) — pode ser otimizado imediatamente"
-      ],
-      "gaps": [
-        {
-          "gap": "Categoria sem 'especialista em felinos' — perde buscas de alta intenção",
-          "impact": "médio",
-          "evidence": "Concorrentes 24h 'dominam Google local' segundo briefing — Zenvet invisível para 'veterinário gatos americana'"
-        },
-        {
-          "gap": "Sem posts regulares sobre especialização felina",
-          "impact": "médio",
-          "evidence": "Posts GMB aumentam relevância local e visibilidade no Google Maps"
-        },
-        {
-          "gap": "Sem processo de solicitação e resposta sistemática de reviews",
-          "impact": "médio",
-          "evidence": "Volume e qualidade de reviews determinam ranqueamento no pack local"
-        }
-      ]
+      "classification": "low"
     },
     {
       "channel": "whatsapp",
       "channel_name": "WhatsApp Business",
       "score": 38,
-      "classification": "low",
-      "top_problems": [
-        "Sem script consultivo — atendimento reativo e inconsistente",
-        "Sem follow-up de leads que somem (citado como causa de churn)",
-        "Sem CRM — 60 leads/mês perdidos sem registro"
-      ],
-      "strengths": [
-        "WhatsApp Business ativo (confirmado)",
-        "Qualificação inicial existe: 'cão ou gato? domicílio ou clínica?'"
-      ],
-      "gaps": [
-        {
-          "gap": "Sem script consultivo por tipo de serviço (felinos vs. cães)",
-          "impact": "alto",
-          "evidence": "has_scripts: false no briefing; conversão 16,6% (60 leads/mês perdidos)"
-        },
-        {
-          "gap": "Sem follow-up de leads que não respondem",
-          "impact": "alto",
-          "evidence": "'Lead sumiu sem retorno' citado como causa de churn no briefing"
-        },
-        {
-          "gap": "Sem CRM — impossível rastrear funil ou fazer retargeting da base",
-          "impact": "alto",
-          "evidence": "crm: false no briefing; 486 inativos sem régua de reativação"
-        },
-        {
-          "gap": "Atendimento por 1 pessoa (Loíse) sem redundância",
-          "impact": "médio",
-          "evidence": "Sales module: '1 (Loíse — recepcionista/comercial)' — single point of failure"
-        }
-      ]
+      "classification": "low"
     }
   ],
-
-  "top_problems": [
-    {
-      "problem": "Meta Ads com link 404 — R$800/mês destruídos sem gerar nenhum lead",
-      "data_evidence": "Briefing confirma: 'Meta Ads com links quebrados (erro 404)'. CTR Meta 0,76% vs benchmark 1-3%. Toda a verba Meta em desperdício confirmado.",
-      "impact": "R$800/mês recuperáveis no mesmo dia da correção. Zero custo de implementação."
-    },
-    {
-      "problem": "Zero tracking digital — CAC real desconhecido, otimização impossível",
-      "data_evidence": "Sem Meta Pixel, sem Google Tag, sem Google Analytics. Investindo R$3.200/mês sem saber qual canal gera qual resultado.",
-      "impact": "Sem tracking, toda decisão de mídia é especulação. Impossível escalar o que funciona ou cortar o que não funciona."
-    },
-    {
-      "problem": "Mensagem-chave de especialização felina ausente em todos os canais",
-      "data_evidence": "Mensagem 'Seu gato merece uma veterinária que entende de felinos' aprovada no ICP mas ainda não aplicada em nenhum ponto de contato. Canais falam de 'pets' genericamente.",
-      "impact": "A Mariana que pesquisa o Instagram por dias antes de ligar não encontra sinal do diferencial principal da Zenvet. Conversão depende de indicação, não do digital."
-    }
-  ],
-
-  "quick_wins": [
-    {
-      "action": "Corrigir URL dos anúncios Meta Ads — trocar destino 404 pelo site funcional",
-      "channel": "Meta Ads",
-      "time_hours": 0.25,
-      "impact": "Reativa R$800/mês de verba que está destruída. Leads voltam a chegar no mesmo dia.",
-      "who": "Rafael (operador)"
-    },
-    {
-      "action": "Instalar Meta Pixel + Google Tag Manager no site via acesso website_admin",
-      "channel": "Site",
-      "time_hours": 3,
-      "impact": "Habilita rastreamento de conversões, retargeting e lookalike audiences. Pré-requisito para toda otimização de mídia.",
-      "who": "Rafael (operador) — solicitar acesso website_admin para Nathalia urgente"
-    },
-    {
-      "action": "Atualizar bio do Instagram: 'Especialista em felinos | Americana SP' + CTA WhatsApp + link funcional",
-      "channel": "Instagram",
-      "time_hours": 0.5,
-      "impact": "Mariana que pesquisa o perfil encontra sinal imediato de especialização. CTA para WhatsApp funcional.",
-      "who": "Cliente (Nathalia) ou Rafael — acesso Instagram_admin a confirmar"
-    },
-    {
-      "action": "Criar post GMB: especialização em felinos + foto Nathalia com gato + atualizar categoria",
-      "channel": "Google Meu Negócio",
-      "time_hours": 0.5,
-      "impact": "Aumenta relevância local para buscas 'veterinário gatos americana'. Canal de CAC zero.",
-      "who": "Rafael (acesso GMB confirmado)"
-    },
-    {
-      "action": "Configurar mensagem de ausência WhatsApp: humanizada, com qualificação felino/cão e horário",
-      "channel": "WhatsApp Business",
-      "time_hours": 0.33,
-      "impact": "Reduz leads perdidos fora do horário. Tom alinhado com posicionamento felinos.",
-      "who": "Loíse (cliente) — orientar Rafael"
-    }
-  ],
-
-  "gap_matrix": [
-    { "rank": 1, "channel": "Meta Ads", "gap": "Links quebrados (404) — R$800/mês destruídos", "impact": "alto", "effort": "baixo", "action": "Corrigir URL destino no Gerenciador Meta" },
-    { "rank": 2, "channel": "Site", "gap": "Meta Pixel + GTM ausentes", "impact": "alto", "effort": "baixo", "action": "Instalar via website_admin (solicitar acesso urgente)" },
-    { "rank": 3, "channel": "Instagram", "gap": "Bio sem mensagem-chave + link quebrado", "impact": "alto", "effort": "baixo", "action": "Atualizar bio e link em 30 min" },
-    { "rank": 4, "channel": "WhatsApp", "gap": "Sem follow-up de leads que somem", "impact": "alto", "effort": "médio", "action": "Script de retorno + régua CRM (Semana 3)" },
-    { "rank": 5, "channel": "GMB", "gap": "Sem otimização para termos de felinos", "impact": "médio", "effort": "baixo", "action": "Post + categoria + resposta reviews (Quick Win)" },
-    { "rank": 6, "channel": "Site", "gap": "Sem Landing Page dedicada felinos", "impact": "alto", "effort": "alto", "action": "Criar LP (Semana 3 — ee-s3-landing-page)" },
-    { "rank": 7, "channel": "Meta Ads", "gap": "Copy sem mensagem-chave felinos", "impact": "alto", "effort": "médio", "action": "Recriar campanha ICP felinos (Semana 1-2)" },
-    { "rank": 8, "channel": "Google Ads", "gap": "Campanha felinos pausada sem LP de suporte", "impact": "alto", "effort": "médio", "action": "Reativar com LP nova (Semana 3)" },
-    { "rank": 9, "channel": "WhatsApp", "gap": "Sem script consultivo por serviço", "impact": "alto", "effort": "médio", "action": "Treinar Loíse com script (Semana 3-4)" },
-    { "rank": 10, "channel": "Instagram", "gap": "Conteúdo não diferencia felinos de cães", "impact": "médio", "effort": "médio", "action": "Série educativa felinos com Nathalia (Semana 2)" },
-    { "rank": 11, "channel": "Todos", "gap": "Mensagem-chave não institucionalizada em nenhum canal", "impact": "alto", "effort": "baixo", "action": "Aplicar após brandbook (Semana 3)" },
-    { "rank": 12, "channel": "GMB", "gap": "Sem processo sistemático de coleta e resposta de reviews", "impact": "médio", "effort": "baixo", "action": "Configurar processo de resposta semanal" }
-  ],
-
-  "channel_scores": [
-    { "channel": "site", "channel_name": "Site", "score": 28, "classification": "critical" },
-    { "channel": "instagram", "channel_name": "Instagram", "score": 44, "classification": "low" },
-    { "channel": "anuncios", "channel_name": "Anúncios", "score": 18, "classification": "critical" },
-    { "channel": "gmb", "channel_name": "Google Meu Negócio", "score": 46, "classification": "low" },
-    { "channel": "whatsapp", "channel_name": "WhatsApp Business", "score": 38, "classification": "low" }
-  ],
-
   "overall_score": 35,
   "overall_classification": "critical",
-
   "coherence_gaps": [
     "Mensagem-chave de especialização felina ausente em todos os 5 canais",
     "Links entre canais quebrados: Meta Ads → site (404), bio Instagram → possivelmente o mesmo",
     "Tom de voz sem brandbook de referência — cada canal evolui independente",
     "Jornada completa anúncio → LP → WhatsApp quebrada no Meta (404) e incompleta no Google (sem LP felinos)"
   ],
-
   "competitor_benchmark": {
     "description": "Comparação por canal vs. principais concorrentes da microrregião. Baseado no briefing (hospitais 24h da mesma avenida como referência de volume e preço) e análise de GMB/Instagram público.",
     "competitors_analyzed": [
@@ -344,7 +240,6 @@
     ],
     "strategic_read": "Zenvet está atrás em 3 canais (Site, Anúncios, GMB) e na frente em 2 (Instagram, WhatsApp). A estratégia vencedora NÃO é fechar os gaps — é expandir nos canais onde já está na frente e criar nicho próprio onde está atrás (felinos em Google Ads, felinos em GMB). Competir diretamente com 24h em volume é suicídio financeiro; competir em especialização é território praticamente vazio."
   },
-
   "journey_friction_map": {
     "description": "Mapa de fricção na jornada anúncio → LP → WhatsApp → agendamento → visita. Onde vaza, quanto vaza, e o que corrigir primeiro.",
     "funnel_stages": [
@@ -422,12 +317,21 @@
       "notes": "Premissa: Meta corrigido + LP felinos + script consultivo implementados. Budget constante. Conversão final de 60 agendamentos/mês vs. 12 atuais (5x)."
     }
   },
-
   "tone_of_voice_analysis": {
     "description": "Diagnóstico de tom-de-voz por canal vs. posicionamento felinos especialista aprovado. Detecta drift (desvio) entre canais.",
     "brand_voice_target": {
-      "pillars": ["técnica acessível", "empática sem infantilização", "transparente com preço e procedimento", "autoridade felina sem arrogância"],
-      "avoid": ["diminutivos genéricos ('petinho', 'amigão')", "linguagem corporativa fria", "jargão técnico sem explicação", "promessas vagas ('seu pet merece o melhor')"]
+      "pillars": [
+        "técnica acessível",
+        "empática sem infantilização",
+        "transparente com preço e procedimento",
+        "autoridade felina sem arrogância"
+      ],
+      "avoid": [
+        "diminutivos genéricos ('petinho', 'amigão')",
+        "linguagem corporativa fria",
+        "jargão técnico sem explicação",
+        "promessas vagas ('seu pet merece o melhor')"
+      ]
     },
     "channel_drift": [
       {
@@ -473,7 +377,6 @@
     "coherence_score": 38,
     "coherence_read": "Tom-de-voz está fragmentado: cada canal comunica de jeito diferente, sem um fio condutor. Isso reforça a percepção de 'mais uma clínica' e dilui a autoridade técnica real da Nathalia. Brandbook da Semana 3 (ee-s3-brandbook) precisa ser mandatório para todos os produtores de conteúdo a partir daí."
   },
-
   "url_audit": {
     "description": "Auditoria específica de URLs mencionadas ou usadas nos canais. Lista o que verificar e corrigir.",
     "urls_to_verify": [
@@ -501,6 +404,147 @@
         "url": "Link GMB → site",
         "status": "a verificar",
         "action": "Garantir que o link do perfil GMB aponta para destino rastreável (com UTMs para medir volume orgânico via Maps)."
+      }
+    ]
+  },
+  "channels_audited": [
+    {
+      "score": 28,
+      "classification": "critical",
+      "top_problems": [
+        "Meta Pixel e Google Tag ausentes — confirmado no briefing",
+        "Sem Landing Page dedicada para o segmento felinos",
+        "Links quebrados em algumas URLs (evidenciado pelos 404 do Meta Ads)"
+      ],
+      "strengths": [
+        "Site existe e está no ar",
+        "HTTPS provavelmente ativo"
+      ],
+      "gaps": [
+        "Meta Pixel e GTM não instalados",
+        "Proposta de valor genérica — sem mencionar especialização em felinos",
+        "Links quebrados (404) em URLs usadas pelos anúncios",
+        "Sem landing page dedicada para o ICP principal (tutoras de gatos)"
+      ],
+      "name": "Site — clinicazenvet.com.br",
+      "recommendations": [
+        "Recomendações específicas consolidadas em gap_matrix e quick_wins"
+      ]
+    },
+    {
+      "score": 44,
+      "classification": "low",
+      "top_problems": [
+        "Bio sem mensagem-chave de especialização felina",
+        "Conteúdo educativo genérico — não diferencia felinos de cães",
+        "CTR de anúncios boosting 0,76% indica desalinhamento com ICP"
+      ],
+      "strengths": [
+        "Frequência alta — várias vezes por semana",
+        "Conteúdo educativo (tipo correto para o ICP)",
+        "Perfil ativo e consistente"
+      ],
+      "gaps": [
+        "Bio não menciona especialização em felinos nem a mensagem-chave aprovada",
+        "Conteúdo fala de 'pets' sem diferenciação para felinos",
+        "Sem Reels educativos com Nathalia como autoridade técnica felina",
+        "CTA na bio provavelmente aponta para site com link quebrado"
+      ],
+      "name": "Instagram — @clinicazenvet",
+      "recommendations": [
+        "Recomendações específicas consolidadas em gap_matrix e quick_wins"
+      ]
+    },
+    {
+      "score": 18,
+      "classification": "critical",
+      "top_problems": [
+        "Meta Ads: 100% da verba destruída com links 404",
+        "Google Ads: campanha de felinos pausada com zero conversões (problema era a LP, não a demanda)",
+        "Sem pixel/tag — impossível otimizar ou criar audiências"
+      ],
+      "strengths": [
+        "Google Ads campanha ativa com CTR 6,54% — sinal de demanda real",
+        "Verba total investida (R$3.200/mês) está disponível para redistribuir corretamente"
+      ],
+      "gaps": [
+        "Meta Ads com URL 404 — R$800/mês com zero possibilidade de conversão",
+        "Sem Meta Pixel — impossível criar retargeting ou lookalike audiences",
+        "Campanha 'flyvet.search - felinos' pausada com zero conversões",
+        "Copy Meta Ads sem mensagem-chave de especialização felina",
+        "14 de 15 campanhas Google pausadas sem estrutura clara de reativação"
+      ],
+      "name": "Anúncios — Meta Ads + Google Ads",
+      "recommendations": [
+        "Recomendações específicas consolidadas em gap_matrix e quick_wins"
+      ]
+    },
+    {
+      "score": 46,
+      "classification": "low",
+      "top_problems": [
+        "Categoria provavelmente genérica — sem 'especialista em felinos'",
+        "Sem posts regulares identificados",
+        "Concorrentes 24h dominam Google Maps local"
+      ],
+      "strengths": [
+        "Perfil reivindicado e verificado (gmb: true)",
+        "Acesso disponível (accesses.gmb: true) — pode ser otimizado imediatamente"
+      ],
+      "gaps": [
+        "Categoria sem 'especialista em felinos' — perde buscas de alta intenção",
+        "Sem posts regulares sobre especialização felina",
+        "Sem processo de solicitação e resposta sistemática de reviews"
+      ],
+      "name": "Google Meu Negócio",
+      "recommendations": [
+        "Recomendações específicas consolidadas em gap_matrix e quick_wins"
+      ]
+    },
+    {
+      "score": 38,
+      "classification": "low",
+      "top_problems": [
+        "Sem script consultivo — atendimento reativo e inconsistente",
+        "Sem follow-up de leads que somem (citado como causa de churn)",
+        "Sem CRM — 60 leads/mês perdidos sem registro"
+      ],
+      "strengths": [
+        "WhatsApp Business ativo (confirmado)",
+        "Qualificação inicial existe: 'cão ou gato? domicílio ou clínica?'"
+      ],
+      "gaps": [
+        "Sem script consultivo por tipo de serviço (felinos vs. cães)",
+        "Sem follow-up de leads que não respondem",
+        "Sem CRM — impossível rastrear funil ou fazer retargeting da base",
+        "Atendimento por 1 pessoa (Loíse) sem redundância"
+      ],
+      "name": "WhatsApp Business",
+      "recommendations": [
+        "Recomendações específicas consolidadas em gap_matrix e quick_wins"
+      ]
+    }
+  ],
+  "executive_summary": {
+    "overall_assessment": "Score médio: 35/100. Três hemorragias confirmadas: Meta Ads com link 404 (R$800/mês destruídos), zero tracking em todos os canais, e mensagem-chave de especialização felina ausente em todos os pontos de contato. Instagram ativo e consistente é o único ponto positivo — mas fala de 'pets' não de felinos. 5 Quick Wins executáveis esta semana sem custo.",
+    "top_problems": [
+      {
+        "problem": "Meta Ads com link 404 — R$800/mês destruídos sem gerar nenhum lead",
+        "evidence": "Briefing confirma: 'Meta Ads com links quebrados (erro 404)'. CTR Meta 0,76% vs benchmark 1-3%. Toda a verba Meta em desperdício confirmado.",
+        "impact": "R$800/mês recuperáveis no mesmo dia da correção. Zero custo de implementação.",
+        "action": "Ver gap_matrix/quick_wins"
+      },
+      {
+        "problem": "Zero tracking digital — CAC real desconhecido, otimização impossível",
+        "evidence": "Sem Meta Pixel, sem Google Tag, sem Google Analytics. Investindo R$3.200/mês sem saber qual canal gera qual resultado.",
+        "impact": "Sem tracking, toda decisão de mídia é especulação. Impossível escalar o que funciona ou cortar o que não funciona.",
+        "action": "Ver gap_matrix/quick_wins"
+      },
+      {
+        "problem": "Mensagem-chave de especialização felina ausente em todos os canais",
+        "evidence": "Mensagem 'Seu gato merece uma veterinária que entende de felinos' aprovada no ICP mas ainda não aplicada em nenhum ponto de contato. Canais falam de 'pets' genericamente.",
+        "impact": "A Mariana que pesquisa o Instagram por dias antes de ligar não encontra sinal do diferencial principal da Zenvet. Conversão depende de indicação, não do digital.",
+        "action": "Ver gap_matrix/quick_wins"
       }
     ]
   }

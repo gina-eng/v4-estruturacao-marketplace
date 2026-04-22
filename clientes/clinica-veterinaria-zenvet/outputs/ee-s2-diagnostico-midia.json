@@ -92,7 +92,8 @@
     "total_leads": 216,
     "total_clicks": 3193,
     "impressions": 158786,
-    "frequency": 1.56
+    "frequency": 1.56,
+    "unavailable_reason": "ROAS indisponível — cliente não reporta receita atribuída, apenas CPL e volume de leads"
   },
   "overall_metrics": {
     "total_spend_90d": 5626.37,
@@ -140,7 +141,8 @@
     "conversion_lp_range": {
       "min": 10,
       "max": 20
-    }
+    },
+    "unavailable_reason": "Benchmark ROAS não aplicável — cliente opera em modelo lead-gen sem tracking de receita"
   },
   "diagnosis_by_dimension": {
     "account_structure": {
@@ -162,7 +164,8 @@
       "lp_count": 1,
       "coherence_with_ads": "low",
       "estimated_bounce_rate": null,
-      "evaluation": "Meta Ads direcionam para WhatsApp direto (api.whatsapp.com/send) ou URLs que retornam 404. Não existe LP real medindo conversão — só conversa de WhatsApp. Google Ads vai para o site institucional, que não foi auditado em S1 mas o operador já indicou ausência de Pixel + Google Tag. Zero rastreamento de LP conversion rate."
+      "evaluation": "Meta Ads direcionam para WhatsApp direto (api.whatsapp.com/send) ou URLs que retornam 404. Não existe LP real medindo conversão — só conversa de WhatsApp. Google Ads vai para o site institucional, que não foi auditado em S1 mas o operador já indicou ausência de Pixel + Google Tag. Zero rastreamento de LP conversion rate.",
+      "unavailable_reason": "Bounce rate estimado indisponível — GA4 não instalado nas LPs"
     },
     "audiences": {
       "types_used": [
@@ -171,7 +174,8 @@
       ],
       "overlap_detected": null,
       "retargeting_active": false,
-      "evaluation": "Sem Pixel instalado → sem Custom Audience, sem Lookalike, sem retargeting. Base de 1.186 clientes existentes da clínica não está uploadada no Meta. Públicos Meta atuais são broad + interest (gatos, pets, região Americana). ICP Mariana (mulheres 30-45, tutoras de gato, Americana/SBO/Nova Odessa) não está explicitamente segmentado em nenhum conjunto de ads."
+      "evaluation": "Sem Pixel instalado → sem Custom Audience, sem Lookalike, sem retargeting. Base de 1.186 clientes existentes da clínica não está uploadada no Meta. Públicos Meta atuais são broad + interest (gatos, pets, região Americana). ICP Mariana (mulheres 30-45, tutoras de gato, Americana/SBO/Nova Odessa) não está explicitamente segmentado em nenhum conjunto de ads.",
+      "unavailable_reason": "Overlap de audiências não verificado — requer acesso ao Audience Overlap Tool do Meta"
     }
   },
   "google_ads": {

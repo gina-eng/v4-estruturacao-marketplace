@@ -1,0 +1,13 @@
+{
+  "fetched_at": "2026-04-22T02:38:00.937562+00:00",
+  "pages": {
+    "lm": {
+      "total_ads": 0,
+      "target": "lmveterinaria"
+    },
+    "xodog": {
+      "total_ads": 1,
+      "target": "xodog"
+    }
+  }
+}
