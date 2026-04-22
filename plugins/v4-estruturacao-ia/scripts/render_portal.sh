@@ -81,6 +81,19 @@ PYEOF
 
 echo "✓ Portal atualizado: $OUTPUT_FILE"
 
+# Valida completude dos outputs contra schema (não bloqueia — apenas avisa)
+VALIDATOR="$SCRIPT_DIR/validate_output.py"
+if [ -f "$VALIDATOR" ]; then
+  VALIDATION_REPORT=$(python3 "$VALIDATOR" "$CLIENT_DIR" 2>&1 || true)
+  if echo "$VALIDATION_REPORT" | grep -qE "^Resumo: [1-9]"; then
+    echo ""
+    echo "⚠ Validação de completude encontrou gaps:"
+    echo "$VALIDATION_REPORT" | tail -40
+    echo ""
+    echo "  (aviso — deploy continua. Rode: python3 $VALIDATOR $CLIENT_DIR para detalhe completo)"
+  fi
+fi
+
 # Gera/atualiza consolidated.md + consolidated.html (visão narrativa end-to-end)
 CONSOLIDATED_SCRIPT="$SCRIPT_DIR/../shared-templates/render_consolidated.py"
 CONSOLIDATED_HTML="$CLIENT_DIR/consolidated.html"
@@ -100,6 +113,10 @@ if [ -f "$VERCEL_CFG" ] && command -v vercel >/dev/null 2>&1; then
   cp "$OUTPUT_FILE" "$DEPLOY_DIR/index.html"
   if [ -f "$CONSOLIDATED_HTML" ]; then
     cp "$CONSOLIDATED_HTML" "$DEPLOY_DIR/consolidated.html"
+  fi
+  # Copia assets (imagens de criativos, logos, etc) — paths relativos no portal dependem disso
+  if [ -d "$CLIENT_DIR/assets" ]; then
+    cp -R "$CLIENT_DIR/assets" "$DEPLOY_DIR/assets"
   fi
   mkdir -p "$DEPLOY_DIR/.vercel"
   cp "$VERCEL_CFG" "$DEPLOY_DIR/.vercel/project.json"

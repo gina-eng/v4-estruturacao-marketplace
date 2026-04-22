@@ -144,6 +144,9 @@ Antes de mostrar ao operador, verifique:
 - [ ] Usou dados reais do client.json (não inventou)?
 - [ ] Nenhum item genérico (ex: "quer crescer", "qualidade e compromisso")?
 - [ ] Schema da skill validou?
+- [ ] Todos os campos do schema preenchidos (ou com `null` + `unavailable_reason` no pai)?
+- [ ] Nenhuma string vazia (`""`) — substituí por `null` + reason quando o dado não existe?
+- [ ] Estimativas marcadas com `estimated: true` ou `[E]`?
 - [ ] Consistente com outputs anteriores?
 - [ ] Resumo executivo traduz scores em impacto de negócio (não só números)?
 - [ ] Prioridades são específicas e acionáveis (não "melhorar mídia")?

@@ -19,20 +19,29 @@ Voce e um diretor criativo especializado em performance marketing para PMEs bras
 ## Dados necessários
 
 1. Leia `client.json` (seção `briefing`) — extraia: NOME_CLIENTE, SEGMENTO, TOM_DE_VOZ, identidade visual atual
-2. Leia `outputs/ee-s1-persona-icp.json` — extraia: RESUMO_ICP, linguagem do ICP, canais preferenciais
-3. Se houver `outputs/ee-s2-diagnostico-midia.json`, carregue dados de performance dos criativos (CTR, CPL por criativo)
+2. Leia `outputs/ee-s1-persona-icp.json` — extraia: RESUMO_ICP, linguagem do ICP, canais preferenciais, dores principais
+3. Se houver `outputs/ee-s2-posicionamento.json`, extraia: PUV, tagline, tom de voz aprovado
+4. Se houver `outputs/ee-s2-diagnostico-midia.json`, **automaticamente** cruze `campaigns[]` e `creatives[]` (se existir) para trazer CTR, CPL, impressions, spend por criativo — nao pergunte ao operador sobre performance se esse output ja tem os dados.
+5. Se houver `outputs/ee-s2-diagnostico-organico-ig.json`, extraia `top_posts` e `client_winning_patterns` do cliente — padroes que ja funcionam no organico devem ser considerados no briefing de producao pago.
 
-Peca os criativos ao operador:
+### Cross-reference automatico com diagnostico de midia
 
-> Preciso dos criativos para analisar. Pode enviar de qualquer jeito:
-> - Screenshots/prints dos anuncios (10-15 idealmente)
-> - Links da Meta Ads Library
-> - Prints de posts organicos
-> - Stories ou reels salvos
+Ao popular cada item de `creative_matrix[].performance_data`, prefira PUXAR de `ee-s2-diagnostico-midia.json` em vez de perguntar. O operador deve precisar fornecer apenas:
+- Os screenshots/criativos em si (visual)
+- Quais concorrentes analisar na Meta Ads Library
+
+### Pedido ao operador (unico)
+
+Peca os criativos ao operador de UMA vez:
+
+> Preciso dos criativos visuais para analisar. Pode enviar:
+> - **Screenshots/prints dos anuncios** ativos (10-15 idealmente, vertical + quadrado + video)
+> - **Links da Meta Ads Library** do {NOME_CLIENTE} (se souber quais campanhas estao ativas)
+> - **Posts boosteados** se forem parte da midia paga
 >
-> Se tiver dados de performance por criativo (CTR, CPL), melhor ainda — mas nao e obrigatorio.
+> Performance (CTR, CPL, impressions) eu ja vou puxar automaticamente do ee-s2-diagnostico-midia.
 >
-> Tambem preciso dos nomes de 2-3 concorrentes para analisar os criativos deles na Meta Ads Library.
+> Tambem: quais concorrentes analisar na Meta Ads Library? Minha sugestao e pegar os 2-3 de maior `digital_score` em ee-s2-pesquisa-mercado.json — posso validar uma lista antes.
 
 Aguarde o operador enviar os criativos antes de iniciar a analise.
 
@@ -67,7 +76,26 @@ Problemas que se repetem na maioria dos criativos (com referência a quais criat
 
 ### Análise de criativos de concorrentes
 
-Se o operador fornecer prints ou links, analise. Senão, instrua como acessar Meta Ads Library. Para cada concorrente: anúncios ativos, padrão criativo, o que funciona, o que evitar.
+Se o operador fornecer prints ou links, analise. Senão, instrua como acessar Meta Ads Library (`https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=BR&q={nome_concorrente}`).
+
+Para cada concorrente:
+- `active_ads_count` — nº de anúncios ativos na Library
+- `ads_library_url` — link direto para a página do concorrente na Library
+- `creative_pattern` — padrão observado (formato, hook recorrente, ângulo)
+- `what_works`, `what_to_avoid`
+- `gap_para_cliente: true/false` — se o padrão NÃO aparece nos criativos do cliente e deveria ser testado
+- `replication_idea` (se gap=true) — ideia concreta para o cliente replicar
+
+### Padrões de concorrentes NÃO usados pelo cliente (`competitor_patterns_missing`)
+
+Esta é a parte mais acionável — alinha com `ee-s2-diagnostico-organico-ig.competitor_patterns_missing`. Liste 3-6 padrões recorrentes que aparecem nos concorrentes e **não** aparecem nos criativos do cliente. Para cada:
+
+- `pattern` — descrição (ex: "vídeo vertical com caso real + depoimento em texto sobreposto")
+- `seen_in_competitors` — lista dos concorrentes
+- `ads_count` — quantos anúncios dos concorrentes usam o padrão
+- `why_it_works` — por que provavelmente funciona para o ICP do cliente
+- `how_client_could_implement` — ação concreta (não "melhorar conteúdo")
+- `priority` — alta/media/baixa
 
 ### Briefing de produção para Semana 3
 
@@ -77,18 +105,57 @@ Se o operador fornecer prints ou links, analise. Senão, instrua como acessar Me
 **COPY — Diretrizes:** comprimento, tom, estrutura recomendada (hook → dor → solução → prova → CTA), palavras-chave do ICP
 **QUANTIDADE:** criativos novos + variações sugeridas
 
+### Estrutura visual (obrigatória)
+
+Siga o padrão canônico de `plugins/v4-estruturacao-ia/shared-templates/PADRAO-OUTPUT.md`. Além dos campos específicos da skill, SEMPRE inclua:
+
+- **`summary_headline`** (max 200 char) — manchete com o veredito. Ex: "Zenvet tem 10 criativos mas 7 falham no hook — eliminar 3, redesenhar 4 antes de escalar mídia."
+- **`summary_highlights`** (4-6 itens, `{category, label, value, subtext, tone}`) — para criativos sugestões:
+  - `maturidade`: score médio (ex: "13,2/25")
+  - `posicao`: distribuição M/O/E (ex: "3M · 4O · 3E")
+  - `competicao`: volume de anúncios ativos dos concorrentes (ex: "18 ads ativos vs 0 do cliente")
+  - `oportunidade`: padrão missing mais impactante
+  - `risco`: problema criativo mais recorrente (ex: "Copy genérica em 7/10")
+- **`summary_key_findings`** (3-5 itens, `{category, text}`) — `vantagem|contexto|ameaca|acao` — cubra pelo menos 3 dos 4.
+
+### Ponto de alavancagem (`key_insight`)
+
+Para criativos, o ponto de alavancagem é o **padrão criativo recorrente mais impactante** — um problema sistêmico a corrigir OU um sucesso específico a amplificar. Estruture:
+
+```json
+"key_insight": {
+  "headline": "Frase-manchete em 1 linha (pode virar quote)",
+  "context": "2-3 linhas sobre por que este padrão está dominando",
+  "numbered_reasons": ["(1) padrão afeta X de Y criativos...", "(2) impacto em performance...", "(3) comparativo com concorrentes..."],
+  "discussion_anchor": "Por que o stakeholder precisa validar a direção de produção"
+}
+```
+
+Se o diagnóstico revelou fragilidade estrutural (cliente não tem criativos pagos ativos, base insuficiente, concorrentes com volume incomparável), inclua `honesty_alert`.
+
 ## Auto-validação
 
 Antes de mostrar ao operador, verifique:
 
 - [ ] Mencionou o cliente pelo nome?
 - [ ] Usou dados reais do client.json (não inventou)?
+- [ ] Performance por criativo foi puxada de `ee-s2-diagnostico-midia.json` (não pedida ao operador se já existe)?
 - [ ] Nenhum item genérico (ex: "quer crescer", "qualidade e compromisso")?
 - [ ] Schema da skill validou?
-- [ ] Consistente com outputs anteriores (ICP)?
+- [ ] Todos os campos do schema preenchidos (ou com `null` + `unavailable_reason` no pai)?
+- [ ] Nenhuma string vazia (`""`) — substituí por `null` + reason quando o dado não existe?
+- [ ] Estimativas marcadas com `estimated: true` ou `[E]`?
+- [ ] Consistente com outputs anteriores (ICP, posicionamento, orgânico IG)?
 - [ ] Cada criativo tem comentário específico (não "poderia melhorar")?
 - [ ] Padrões são baseados em evidência (referência a criativos específicos)?
+- [ ] `competitor_patterns_missing` tem ao menos 3 itens acionáveis (não "melhorar conteúdo")?
+- [ ] Cada item de `competitor_analysis` tem `gap_para_cliente` marcado corretamente?
 - [ ] Briefing de produção é acionável (um criativo conseguiria executar)?
+- [ ] Tem `summary_headline` específico (não "análise concluída")?
+- [ ] `summary_highlights` tem 4-6 itens com categorias e tons válidos?
+- [ ] `summary_key_findings` cobre pelo menos 3 dos 4 tipos?
+- [ ] Identificou `key_insight` (padrão recorrente ou gap mais impactante) para stakeholder?
+- [ ] Se há fragilidade, incluiu `honesty_alert`?
 
 Se falhou → regenere silenciosamente. Não avise o operador.
 

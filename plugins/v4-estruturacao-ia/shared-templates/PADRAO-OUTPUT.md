@@ -146,6 +146,49 @@ E na auto-validação:
 
 ---
 
+## Completude (regra crítica)
+
+**Todo campo definido no schema da skill é obrigatório no output.** Não omitir campos — o renderer assume que os campos do schema existem e quebra/fica vazio silenciosamente quando faltam.
+
+Se um dado **não pode ser obtido** (GA4 não instalado, conector não conectado, cliente não sabe, etc.), preencher com `null` E adicionar `unavailable_reason` no objeto pai:
+
+```json
+{
+  "current_conversion_rate": null,
+  "current_bounce_rate": null,
+  "avg_time_on_page": null,
+  "unavailable_reason": "GA4 não instalado no site — métricas de analytics não coletadas nesta auditoria"
+}
+```
+
+Para arrays vazios legitimamente (ex: nenhum competidor identificado), preencher com `[]` e adicionar uma nota no campo irmão `{campo}_note`:
+
+```json
+{
+  "competitors": [],
+  "competitors_note": "Nenhum concorrente direto identificado na microrregião após busca em Google Maps + Instagram."
+}
+```
+
+Para valores **estimados** (sem fonte pública), adicionar flag `[E]` no texto OU campo `estimated: true` no objeto:
+
+```json
+{ "tam_brl": 450000000, "estimated": true, "estimation_basis": "IBGE população × SEBRAE ticket médio" }
+```
+
+**Nunca** deixar string vazia (`""`), zero falso (`0` quando não é zero real), ou omitir o campo. Essas três formas são invisíveis para o renderer e geram o bug "coluna vazia" que aconteceu na Zenvet.
+
+O validador `scripts/validate_output.py` roda junto do `render_portal.sh` e avisa (não bloqueia) quando detecta campo ausente ou `null` sem `unavailable_reason`.
+
+### Checklist adicional de auto-validação
+
+> - [ ] Todos os campos do schema estão presentes (preenchidos ou com `null` + `unavailable_reason`)?
+> - [ ] Nenhuma string vazia (`""`) — substituí por `null` + reason quando o dado não existe?
+> - [ ] Arrays vazios legítimos têm `{campo}_note` explicando por quê?
+> - [ ] Estimativas marcadas com `estimated: true` ou `[E]`?
+
+---
+
 ## Tons de voz
 
 - `green` — oportunidade/vantagem/confirmado
