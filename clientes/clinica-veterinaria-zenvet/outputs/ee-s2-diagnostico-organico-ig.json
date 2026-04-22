@@ -482,5 +482,20 @@
       "priority": 8
     }
   ],
-  "completed_at": "2026-04-21T20:10:00+00:00"
+  "completed_at": "2026-04-21T20:10:00+00:00",
+  "proximas_acoes": "Refinar bio: remover 'Clinica geral de cães' (dilui o posicionamento felino declarado no posicionamento S2) e adicionar link wa.me clicável com CTA explícito.",
+  "_refinement_history": [
+    {
+      "ts": "2026-04-22T13:34:56Z",
+      "review": "ee-revisao-semanal",
+      "semana": 2,
+      "updates": [
+        "U21"
+      ],
+      "evolutions_applied": [
+        "E7"
+      ],
+      "note": "Revisão semanal S2 aplicada."
+    }
+  ]
 }

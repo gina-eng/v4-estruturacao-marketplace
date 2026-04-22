@@ -480,7 +480,7 @@
         "cpa": 74.68
       },
       {
-        "keyword": "ZenVet",
+        "keyword": "Zenvet",
         "match_type": "Frase",
         "ad_group": "Institucional",
         "campaign": "flyvet.search - Nova Institucional",
@@ -1673,5 +1673,24 @@
   },
   "honesty_alert": "O número de 'leads reais' (72/mês) vem do briefing do cliente, mas NÃO é rastreado por Pixel/GTM. O CPL de R$ 26 é estimativa — o número real pode estar entre R$ 20 e R$ 35 dependendo de quantos leads WhatsApp são qualificados. Primeira ação obrigatória: instalar Pixel/GTM antes de qualquer meta de otimização. Sem tracking, qualquer CPL alvo é suposição. Além disso: os totais de Meta mostrados em top_5_ads_by_spend e creative_gallery refletem histórico completo (43 ads ativos/pausados), não apenas o período 90d — isso é intencional para avaliar criativos com volume estatístico, mas o investimento real 90d é R$ 1.274.",
   "completed_at": "2026-04-21T17:00:00Z",
-  "data_source_note": "Dados Google Ads (cost, clicks, impressions, conversions por campanha) e Meta Ads (spend, clicks, impressions, reach por campanha) agregados do período 2026-01-21 a 2026-04-21. Meta creatives[] reflete histórico completo (43 ads) — apenas para análise qualitativa de criativos. V4MOS ignora filtro createdStart/createdEnd em facebook/ads/campaigns; script v4mos_fetch.sh compensa com filtro Python por segments_date/date_start."
+  "data_source_note": "Dados Google Ads (cost, clicks, impressions, conversions por campanha) e Meta Ads (spend, clicks, impressions, reach por campanha) agregados do período 2026-01-21 a 2026-04-21. Meta creatives[] reflete histórico completo (43 ads) — apenas para análise qualitativa de criativos. V4MOS ignora filtro createdStart/createdEnd em facebook/ads/campaigns; script v4mos_fetch.sh compensa com filtro Python por segments_date/date_start.",
+  "recommendations": "Dayparting: concentrar entregas Meta em Qua/Qui (35% dos cliques históricos) sem afetar a operação física de pico Seg/Sáb. Testar por 14d e comparar CPL.",
+  "evolution_note": "A Semana 1 descreveu Meta como 'R$800/mês desperdiçado' com CAC reportado R$266 (não validado por ERP). Após correção do fetch V4MOS, este diagnóstico inverteu a leitura: Meta subescalado (R$424/mês real), CPL de plataforma R$26. V4MOS não mede conversão lead→venda; portanto o CAC real continua sem validação até integração ERP. Decisão: escalar Meta com tracking, não pausar — usando CPL como baseline de mídia.",
+  "_refinement_history": [
+    {
+      "ts": "2026-04-22T13:34:56Z",
+      "review": "ee-revisao-semanal",
+      "semana": 2,
+      "updates": [
+        "U15",
+        "U16",
+        "U23"
+      ],
+      "evolutions_applied": [
+        "E2",
+        "E8"
+      ],
+      "note": "Revisão semanal S2 aplicada."
+    }
+  ]
 }

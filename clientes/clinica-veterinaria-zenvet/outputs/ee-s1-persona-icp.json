@@ -419,5 +419,29 @@
       }
     ],
     "approach": "emotional"
-  }
+  },
+  "primary_persona": {
+    "validation": "Validação quantitativa (S2, ee-s2-diagnostico-midia): 63,8% dos cliques em Meta são mulheres; concentração etária 30-45 anos. Confirma Mariana como persona primária.",
+    "evolution_note": "Hipótese briefing: 'classe média a média alta'. Evidência S1 + S2: tutora de gato 30-45, R$5-12K/mês, dominância feminina confirmada em Meta (63,8%). Decisão: ICP primário fechado; anti-personas ativadas como exclusão em campanhas.",
+    "willingness_to_pay": {
+      "_note": "Importante distinguir consulta isolada (R$180-250) vs ticket médio total (R$500 registrado no briefing, que inclui exames/procedimentos). Comunicação externa usa apenas o range da consulta."
+    }
+  },
+  "_refinement_history": [
+    {
+      "ts": "2026-04-22T13:34:56Z",
+      "review": "ee-revisao-semanal",
+      "semana": 2,
+      "updates": [
+        "U9",
+        "U10",
+        "U22"
+      ],
+      "evolutions_applied": [
+        "E1",
+        "E6"
+      ],
+      "note": "Revisão semanal S2 aplicada."
+    }
+  ]
 }

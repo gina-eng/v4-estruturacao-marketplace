@@ -16,7 +16,7 @@
       "expected_impact": "Habilita rastreamento de conversões, retargeting e lookalike audiences. Pré-requisito para toda otimização de mídia."
     },
     {
-      "action": "Atualizar bio do Instagram: 'Especialista em felinos | Americana SP' + CTA WhatsApp + link funcional",
+      "action": "Refinar bio do Instagram: (1) remover 'Clinica geral de cães' que dilui o posicionamento felino; (2) adicionar link wa.me clicável; (3) adicionar CTA explícito 'Agende pelo WhatsApp → link bio'. A menção 'Esp. em felinos 🐱' já existe.",
       "channel": "Instagram",
       "who": "Cliente (Nathalia) ou Rafael — acesso Instagram_admin a confirmar",
       "time_estimate": "30 min",
@@ -547,5 +547,30 @@
         "action": "Ver gap_matrix/quick_wins"
       }
     ]
-  }
+  },
+  "channel_audit": {
+    "instagram": {
+      "findings": "[refinado em Semana 2] Bio real capturada pelo diagnóstico orgânico: '🩺 Esp. em felinos 🐱 Clinica geral de cães🐶.' Mensagem felina presente; item restante: remover menção a cães e adicionar link wa.me."
+    },
+    "anuncios": {
+      "findings": "Meta Ads com links 404 identificados em alguns anúncios e sem Pixel/GTM — investimento real R$424/mês (subescalado vs R$800 contratado). [refinado em Semana 2]"
+    }
+  },
+  "_refinement_history": [
+    {
+      "ts": "2026-04-22T13:34:56Z",
+      "review": "ee-revisao-semanal",
+      "semana": 2,
+      "updates": [
+        "U7",
+        "U8",
+        "U18"
+      ],
+      "evolutions_applied": [
+        "E2",
+        "E7"
+      ],
+      "note": "Revisão semanal S2 aplicada."
+    }
+  ]
 }

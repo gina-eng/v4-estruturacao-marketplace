@@ -1,6 +1,6 @@
 # Visão Consolidada — Clínica Veterinária Zenvet
 
-*Gerado em 2026-04-22 12:23 UTC · Ciclo atual: Semana 2 · Cliente: `clinica-veterinaria-zenvet`*
+*Gerado em 2026-04-22 13:36 UTC · Ciclo atual: Semana 2 · Cliente: `clinica-veterinaria-zenvet`*
 
 > Este documento consolida tudo que foi produzido para o cliente ao longo do projeto.
 > Cada seção referencia o output estruturado original em `outputs/` para auditabilidade.
@@ -185,21 +185,21 @@ Ocupar o território 'A única clínica PRIVADA especialista em felinos de Ameri
 
 **Prioridades (top 3):**
 1. Instalar Pixel Meta e Google Tag na LP + configurar eventos de conversão (WhatsApp click, agendamento) — *Esforço: low / Pilar: cro*
-2. Pausar anúncios Meta com links quebrados e recriar campanhas com LP correta e segmentação por tipo de pet — *Esforço: low / Pilar: midia_paga*
+2. Corrigir tracking (Pixel + CAPI) + migrar Meta para objetivo LEADS + preencher budget contratado (R$800/mês). Links 404 identificados passam a ser item de checklist técnico, não mais bloqueio estratégico. — *Esforço: low / Pilar: midia_paga*
 3. Reconfigurar Google Ads para termos de intenção local e criar campanha separada para 'especialista felinos Americana' — *Esforço: medium / Pilar: midia_paga*
 
 ### SWOT
 > Jogada principal: ocupar o território 'veterinária especialista em gatos de Americana' antes dos concorrentes, eliminando hemorragias digitais (tracking zero, Meta Ads com link quebrado, LP genérica) e construindo ativos proprietários (CRM, conteúdo educativo, GMB). O diferencial técnico da Nathalia é real e não replicável no curto prazo — o problema é que ainda não está comunicado onde o ICP procura.
 
 **Forças:**
-- Nathalia — única especialista em felinos da microrregião
+- Nathalia — única profissional da microrregião com posicionamento felino declarado (pós-graduanda em clínica e cirurgia com ênfase em felinos; título oficial ABFel em roadmap 12-18m)
 - Base ativa de 1.186 pacientes com show rate de ~100%
 - Acompanhamento pós-consulta ativo via WhatsApp
 - Ticket diferenciado em felinos — R$ 500–R$ 1.000 por consulta
 
 **Fraquezas:**
 - Zero rastreamento digital — sem Pixel, GTM ou Analytics
-- Meta Ads ativo com links quebrados (404)
+- Meta Ads com tracking ausente e investimento subescalado — R$424/mês real vs R$800 contratado. [refinado em Semana 2: narrativa invertida de desperdício para subinvestimento escalável]
 - Conversão lead→agendamento de apenas 16,6%
 - 486 pacientes inativos sem régua de reativação
 
@@ -288,7 +288,7 @@ O mapa competitivo mostra um quadrante inteiro vago (NE): nenhum concorrente pri
 ### Quick Wins
 - Corrigir URL dos anúncios Meta Ads — trocar destino 404 pelo site funcional *(Impacto: —)*
 - Instalar Meta Pixel + Google Tag Manager no site via acesso website_admin *(Impacto: —)*
-- Atualizar bio do Instagram: 'Especialista em felinos | Americana SP' + CTA WhatsApp + link funcional *(Impacto: —)*
+- Refinar bio do Instagram: (1) remover 'Clinica geral de cães' que dilui o posicionamento felino; (2) adicionar link wa.me clicável; (3) adicionar CTA explícito 'Agende pelo WhatsApp → link bio'. A menção 'Esp. em felinos 🐱' já existe. *(Impacto: —)*
 - Criar post GMB: especialização em felinos + foto Nathalia com gato + atualizar categoria *(Impacto: —)*
 - Configurar mensagem de ausência WhatsApp: humanizada, com qualificação felino/cão e horário *(Impacto: —)*
 
@@ -438,11 +438,11 @@ O mapa competitivo mostra um quadrante inteiro vago (NE): nenhum concorrente pri
 - ✅ **ee-s2-diagnostico-criativos** — concluída em 2026-04-22T02:42:00.268295+00:00
 - ✅ **ee-s2-diagnostico-organico-ig** — concluída em 2026-04-21T20:10:00+00:00
 - ✅ **ee-s2-diagnostico-cro** — concluída em 2026-04-21T18:39:46.704257+00:00
+- ✅ **ee-revisao-semanal** — concluída em 2026-04-22T13:35:14Z
 
 **Semana atual:** 2
 
 ### Histórico de refinamentos
-- *2026-04-20T15:00:00Z* — **ee-s2-pesquisa-mercado** (completed): Pesquisa aprovada após busca aprofundada em especialistas felinos na região. TAM R$8,1bi (vet BR 2025, Abinpet) | SAM R$34M (Americana/SBO/Nova Odessa, ~113K domicílios com pet) | SOM R$1,8M em 3 anos (5,3% SAM). 5 concorrentes diretos analisados (LM+ score 9, Cantinho 7, Xodog 5, Shop Dog 4, Riedog 6). Descobertas-chave: (1) Zenvet é ÚNICA clínica PRIVADA da microrregião com posicionamento felino declarado; (2) Clínica Meu Pet SBO (pública, jun/2024) atende felinos mas só baixa renda — não toca ICP premium; (3) Campinas tem 4 clínicas especializadas em felinos a 45-60min (MedCat Cat Friendly Gold, ClinFel, Hospital Gattare, Estimma) — concorrência indireta por distância; (4) ABFel/CFMV é caminho oficial para título de Especialista em Medicina Felina — ação defensiva crítica. 6 diferenciais reais identificados (3 confirmados, 2 potenciais, 1 aspiracional). Janela de consolidação: 12-18 meses. Fontes setor pet: Abinpet 2024 (+9,6%) e 3T/2025 revisão (+2,42%).
 - *2026-04-20T18:00:00Z* — **ee-s2-posicionamento** (completed): Posicionamento aprovado. Território: 'Felino · Humano · Transparente' — quadrante NE (Especialista × Premium-Humanizado) identificado como VAGO no mapa 2x2 da microrregião. PUV: 'A clínica veterinária privada especialista em felinos de Americana — com medicina humana, acompanhamento pós-consulta e sem conta surpresa.' Declaração escolhida: Opção A — O Especialista Felino Premium (foca ICP Mariana + diferenciais reais de Nathalia). Tagline recomendada: 'Seu gato merece uma veterinária que entende de felinos.' (já validada na ee-s1-persona-icp, reforçada aqui). Canvas 4P: Produto = consulta 40min + D+1 WhatsApp + orçamento pré-aprovado; Preço = premium ancorado contra consulta isca dos 24h; Praça = Instagram + Google Search/Maps (onde Mariana decide); Promoção = tom íntimo/consultivo, topo educativo felino. Canais a EVITAR: Meta sem mensagem-chave, TikTok, mídia tradicional, planos de saúde pet. Honesty alert: (1) Nathalia ainda é pós-graduanda — ABFel precisa ser buscado em 12-18m; (2) estrutura Cat Friendly é parcialmente aspiracional, adaptação simples R$3-8K; (3) consistência de execução nas skills da S3 é condição de sucesso.
 - *2026-04-21T17:00:00Z* — **ee-s2-diagnostico-midia** (regenerated): Regenerado com totais V4MOS corrigidos após fix no v4mos_fetch.sh (filtro Python por segments_date/date_start). Investimento real 90d: R$ 5.626 (R$ 1.875/mês) — 41% ABAIXO do contratado R$ 3.200. Meta 90d: R$ 1.274 (era R$ 3.472 — soma de 2 anos). CPL real R$ 26 (era R$ 44). Narrativa invertida: Meta não está sangrando, está subescalado. Destravamento principal: reativar 2 Google pausadas + preencher budget contratado + instalar Pixel Meta. Meta 90d mantida: CPL R$ 22, 145 leads/mês.
 - *2026-04-21T17:53:01Z* — **ee-s2-diagnostico-cro** (completed): Diagnostico CRO gerado com audit tecnico automatizado (PSI + on-page + security). Gap principal: posicionamento ausente no hero (H1 diz "cachorros e gatos" vs PUV "especialista felinos"). 8 hipoteses P1-P3 priorizadas.
@@ -450,6 +450,7 @@ O mapa competitivo mostra um quadrante inteiro vago (NE): nenhum concorrente pri
 - *2026-04-21T20:14:15.600599+00:00* — **ee-s2-diagnostico-organico-ig** (completed): Diagnostico organico IG concluido. Cliente (@clinicazenvet) vs 2 concorrentes top por digital_score (@lmveterinaria, @clinicacantinhodomascote). Janela 90d. Cliente lidera engagement proxy (1.202% vs LM+ 0.781% e Cantinho 1.108%) e volume (19 posts). Gap #1: zero carrosseis educativos vs 20% do Cantinho.
 - *2026-04-22T00:19:43Z* — **briefing-update** (updated): Atualização do briefing com documentação consolidada 2026-04-21: endereço, ICP (best/not customers), marca (paleta HEX, adjetivos, tom, inventário de assets), CRM Vetsoft, acessos coletados (Meta, Google Ads, Instagram, CRM, site).
 - *2026-04-22T02:42:00.268295+00:00* — **ee-s2-diagnostico-criativos** (completed): Pack analisado (10 criativos, média 13.4/25). Pipeline Meta Ads Library ativada — 6 anúncios reais da Cantinho do Mascote embedados no portal como benchmark visual.
+- *2026-04-22T13:35:14Z* — **ee-revisao-semanal** (completed): Revisão Semana 2: 8 evoluções estratégicas mapeadas, 5 divergências factuais, 9 gaps narrativos, 24 atualizações aplicadas (todas aceitas). Reframe principal: CPL (R$26, V4MOS) vs CAC (R$266, não validado — ERP não integrado).
 
 ---
 

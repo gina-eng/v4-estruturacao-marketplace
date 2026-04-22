@@ -1,0 +1,695 @@
+{
+  "summary": "Revisão da Semana 2: 8 evoluções estratégicas mapeadas (com destaque para ICP, orçamento/Meta invertido, CAC, concorrência, diferencial felino com ressalva ABFel, ticket vs willingness-to-pay e dias de pico), 5 divergências factuais intra-camada, 9 gaps narrativos no consolidated.md e 24 atualizações propostas (todas pendentes) distribuídas entre ee-s1-swot, ee-s1-auditoria-comunicacao, ee-s1-diagnostico-maturidade, ee-s1-persona-icp, ee-s2-diagnostico-midia e ee-s2-posicionamento. Nenhuma aplicação foi feita.",
+  "semana_revisada": 2,
+  "data_revisao": "2026-04-22T15:00:00Z",
+  "skills_revisadas": [
+    "ee-s1-diagnostico-maturidade",
+    "ee-s1-swot",
+    "ee-s1-persona-icp",
+    "ee-s1-auditoria-comunicacao",
+    "ee-s2-pesquisa-mercado",
+    "ee-s2-posicionamento",
+    "ee-s2-diagnostico-midia",
+    "ee-s2-diagnostico-cro",
+    "ee-s2-diagnostico-organico-ig",
+    "ee-s2-diagnostico-criativos"
+  ],
+  "evolucao_estrategica": [
+    {
+      "id": "E1",
+      "tema": "ICP / público-alvo",
+      "hipotese_inicial": {
+        "conteudo": "Mariana, 36 anos, professora — 'classe média a média alta', tutora de gato humanizado. Faixa declarada no briefing sem detalhamento de renda/região.",
+        "origem": "client.json > briefing.icp.persona ('Mariana 36 anos, classe média a média alta')",
+        "camada": "briefing"
+      },
+      "evidencia_diagnostico": {
+        "conteudo": "Dados V4MOS confirmam comportamento ICP: 63,8% dos clicks em Meta são de mulheres; perfil de idade Meta concentrado 30-45 anos; persona foi refinada para 'tutoras de gatos 30-45, R$5-12K/mês, Americana/SBO/Nova Odessa' com dor central 'medo de exames desnecessários' e willingness_to_pay explícita de R$180-250/consulta felinos.",
+        "origem": "ee-s1-persona-icp.json > primary_persona + ee-s2-diagnostico-midia.json > audience_breakdown.gender (feminino 63,8%)",
+        "camada": "semana_2"
+      },
+      "decisao_atual": {
+        "conteudo": "ICP primário fechado como 'tutoras de gatos, 30-45 anos, R$5-12K/mês, mercado Americana/SBO/Nova Odessa, persona Mariana'. ICP secundário tutor de cães 35-55. Anti-personas declaradas (caçador de preço, emergência única, Dr. Google).",
+        "origem": "ee-s1-persona-icp.json (status completed) + ee-s2-posicionamento.json > target_icp",
+        "camada": "decisao"
+      },
+      "impacto_estrategico": "Confirma foco feminino 30-45 em Meta (segmentação + criativos), valida tom 'íntimo/consultivo' do posicionamento e justifica upload da base 1.186 clientes como Custom Audience (maioria mulheres 30-45). Anti-persona 'caçador de preço' precisa virar regra de exclusão em Meta/Google.",
+      "narrativa_sugerida": "O briefing descrevia a persona como 'classe média a média alta' sem recorte fino. O diagnóstico de mídia confirmou dominância feminina 30-45 (63,8% dos clicks) e a S1 fechou Mariana como persona principal com renda R$5-12K/mês. A decisão é tratar essa tutora de gato humanizada como ICP único de comunicação primária, com tutor de cães 35-55 como expansão orgânica, e bloquear ativamente os perfis 'caçador de preço' nas campanhas."
+    },
+    {
+      "id": "E2",
+      "tema": "Canais / budget de mídia",
+      "hipotese_inicial": {
+        "conteudo": "Cliente declara R$3.200/mês contratados de mídia (R$2.400 Google + R$800 Meta) e descreve Meta Ads como 'ativo com links quebrados, R$800/mês desperdiçados' — narrativa de 'hemorragia'.",
+        "origem": "client.json > briefing.digital_situation.monthly_investment_total (R$3.200) + ee-s1-swot.json > weaknesses 'Meta Ads R$800/mês desperdiçado'",
+        "camada": "briefing"
+      },
+      "evidencia_diagnostico": {
+        "conteudo": "V4MOS corrigido mostra investimento real R$1.875/mês (R$5.626 em 90d) — 41% abaixo do contratado. Meta entregou R$1.274 em 90d com CPL R$26 e recuperação de CTR em mar/abr. Google tem 5 de 6 campanhas pausadas sem critério técnico, incluindo flyvet.gdm-vacinação com CPA R$3,19.",
+        "origem": "ee-s2-diagnostico-midia.json > overall_metrics.total_investment (5626,37) + google_ads.campaigns (5 paused) + _refinement_history 'Narrativa invertida: Meta não está sangrando, está subescalado'",
+        "camada": "semana_2"
+      },
+      "decisao_atual": {
+        "conteudo": "Narrativa invertida: Meta não está sangrando — está SUBESCALADO. Plano: reativar 2 Google pausadas performantes + instalar Pixel + migrar Meta para objetivo LEADS + preencher o orçamento contratado. Meta 90d: CPL R$22, 145 leads/mês.",
+        "origem": "ee-s2-diagnostico-midia.json > summary + recommendations + ee-s2-diagnostico-midia.json > overall_metrics",
+        "camada": "semana_2"
+      },
+      "impacto_estrategico": "Remove o enquadramento 'hemorragia de R$800/mês' dos outputs S1 (SWOT, maturidade, auditoria) e reorienta a ação para reativação de Google + upgrade de objetivo Meta. Também corrige a prioridade #2 da maturidade ('pausar Meta com links quebrados') para 'corrigir tracking + escalar Meta ao teto contratado'.",
+      "narrativa_sugerida": "O briefing falava de 'R$800/mês em Meta desperdiçados' e trouxe R$3.200 como investimento total. O diagnóstico de mídia, após correção do fetch V4MOS, revelou que o real é R$1.875/mês — 41% abaixo do contratado — e que Meta entrega CPL R$26 dentro do benchmark, não fora dele. A decisão é inverter a narrativa: Meta não sangra, está subinvestido; a prioridade é reativar 2 Google pausadas e preencher o teto contratado antes de discutir novos investimentos."
+    },
+    {
+      "id": "E3",
+      "tema": "Custo de aquisição — CPL da plataforma vs CAC real",
+      "hipotese_inicial": {
+        "conteudo": "CAC declarado R$266 em S1 (base histórica reportada, sem validação cruzada com ERP). ROAS 1.52. 72 leads→12 agendamentos (16,6%).",
+        "origem": "ee-s1-diagnostico-maturidade.json > overall_metrics (CAC 266, ROAS 1.52) + ee-s1-swot.json > financial_summary",
+        "camada": "semana_1"
+      },
+      "evidencia_diagnostico": {
+        "conteudo": "V4MOS revela CPL R$26 (custo por lead na plataforma de mídia). ATENÇÃO: V4MOS não conecta ao ERP da Zenvet — não enxerga conversão lead→venda. Portanto o R$156 anteriormente inferido não é CAC real, é uma projeção (CPL × 1/taxa de conversão declarada).",
+        "origem": "ee-s2-diagnostico-midia.json > overall_metrics.cac (156)",
+        "camada": "semana_2"
+      },
+      "decisao_atual": {
+        "conteudo": "Separar CPL (métrica de plataforma, controlável via mídia) de CAC (métrica de negócio, só validável via ERP). CPL real R$26 é um dado S2 confiável; CAC real fica 'não validado' até integração com ERP da clínica. Projeções financeiras devem usar CPL R$26 como baseline de mídia e marcar a conversão como hipótese.",
+        "origem": "ee-s2-diagnostico-midia.json > overall_metrics (CPL R$26) + disclaimer ERP em ee-s1-diagnostico-maturidade.json > overall_metrics._note",
+        "camada": "semana_2"
+      },
+      "impacto_estrategico": "Todas as referências a 'CAC real' em outputs S1 precisam virar 'CAC estimado — não validado (ERP não integrado)'. Projeções de payback só devem usar CPL como certo.",
+      "narrativa_sugerida": "A Semana 1 registrou CAC R$266 como reporte histórico. A Semana 2 mediu CPL real de R$26 via V4MOS — mas V4MOS não conecta ao ERP da Zenvet, então o CAC verdadeiro (lead → venda) continua sem validação. O número a confiar é o CPL; o CAC fica marcado como estimativa até integração com o sistema de gestão da clínica."
+    },
+    {
+      "id": "E4",
+      "tema": "Concorrência / mapa competitivo",
+      "hipotese_inicial": {
+        "conteudo": "Cliente cita 5 concorrentes no briefing (LM+, Cantinho do Mascote, Xodog, Shop Dog + 1 referência genérica). Não menciona Riedog nem Clínica Meu Pet SBO nem concorrentes de Campinas.",
+        "origem": "client.json > briefing.competition.competitors",
+        "camada": "briefing"
+      },
+      "evidencia_diagnostico": {
+        "conteudo": "Pesquisa S2 adicionou Riedog (oncologia, boutique, ameaça em nicho premium), Clínica Meu Pet SBO (pública jun/2024, atende felinos mas baixa renda), e 4 concorrentes indiretos em Campinas a 45-60min (MedCat Cat Friendly Gold, ClinFel, Gattare, Estimma). Constatou 'Zenvet é a ÚNICA clínica PRIVADA da microrregião com posicionamento felino declarado'.",
+        "origem": "ee-s2-pesquisa-mercado.json > competitors + key_insights",
+        "camada": "semana_2"
+      },
+      "decisao_atual": {
+        "conteudo": "Mapa competitivo oficial passa a ser 5 concorrentes diretos microrregionais + 1 pública (Meu Pet SBO) + 4 indiretos Campinas. Estratégia: consolidar o quadrante NE (especialista felino × premium) em 12-18 meses antes de LM+ reagir ou de tutoras migrarem para Campinas.",
+        "origem": "ee-s2-posicionamento.json > strategic_insight + ee-s2-pesquisa-mercado.json > competitive_landscape",
+        "camada": "semana_2"
+      },
+      "impacto_estrategico": "SWOT 'threats' precisa incluir migração silenciosa para Campinas e Meu Pet SBO como alerta de segmentação. A auditoria de comunicação precisa referenciar o mapa atualizado de concorrentes nas próximas comparações de tom/bio.",
+      "narrativa_sugerida": "O briefing mapeava 5 concorrentes locais. A pesquisa de Semana 2 adicionou Riedog (boutique em oncologia), Clínica Meu Pet SBO (pública, baixa renda) e 4 clínicas felinas em Campinas a 45-60min (MedCat é Cat Friendly Gold). A decisão é consolidar o território 'especialista felino privado' em 12-18 meses antes que LM+ reaja ou que tutoras premium migrem para Campinas."
+    },
+    {
+      "id": "E5",
+      "tema": "Proposta de valor / diferencial 'especialista em felinos'",
+      "hipotese_inicial": {
+        "conteudo": "Briefing afirma 'especializada em felinos' como diferencial principal, sem qualificar status formal da Nathalia.",
+        "origem": "client.json > briefing.product + briefing.brand",
+        "camada": "briefing"
+      },
+      "evidencia_diagnostico": {
+        "conteudo": "Posicionamento S2 declara com honestidade: Nathalia é pós-graduanda em clínica e cirurgia de pequenos animais com ênfase em felinos — NÃO tem título oficial ABFel/CFMV. O diferencial só vira fosso defensivo durável com ABFel + Cat Friendly Practice em 12-18 meses.",
+        "origem": "ee-s2-posicionamento.json > honesty_alerts + ee-s2-pesquisa-mercado.json > real_differentials",
+        "camada": "semana_2"
+      },
+      "decisao_atual": {
+        "conteudo": "Diferencial comunicado como 'única clínica privada da microrregião com posicionamento felino declarado — Nathalia pós-graduanda em felinos'. Roadmap ABFel + Cat Friendly Practice em 12-18m é pré-requisito de blindagem.",
+        "origem": "ee-s2-posicionamento.json > positioning_territory + ee-s2-pesquisa-mercado.json",
+        "camada": "semana_2"
+      },
+      "impacto_estrategico": "Toda peça de comunicação precisa usar 'pós-graduanda em felinos' (não 'especialista oficial'). SWOT e maturidade precisam citar essa ressalva, senão a equipe cria ativos que ultrapassam a verdade técnica. Também ativa uma skill futura: 'ativação ABFel' como defesa estratégica.",
+      "narrativa_sugerida": "O briefing tratava 'especialização em felinos' como ativo consolidado. O posicionamento S2 foi honesto: Nathalia é pós-graduanda, não especialista oficial ABFel. A decisão é comunicar 'pós-graduanda em felinos + único posicionamento felino privado da microrregião' e inserir ABFel + Cat Friendly como roadmap defensivo de 12-18 meses."
+    },
+    {
+      "id": "E6",
+      "tema": "Posicionamento de preço / ticket",
+      "hipotese_inicial": {
+        "conteudo": "Briefing declara ticket médio R$500 (felinos/especializada pode chegar a R$1.000). Modelo 'unico'.",
+        "origem": "client.json > briefing.product.ticket ('R$500 (felinos/especializada pode chegar a R$1.000)')",
+        "camada": "briefing"
+      },
+      "evidencia_diagnostico": {
+        "conteudo": "Persona ICP detalha willingness_to_pay Mariana: 'Consulta felinos especialista R$180-250'. Ou seja, ticket médio R$500 é composição de consulta + exames + procedimentos — não é o valor nominal da consulta isolada. Concorrentes 24h operam consulta isca R$70.",
+        "origem": "ee-s1-persona-icp.json > primary_persona.willingness_to_pay",
+        "camada": "semana_1"
+      },
+      "decisao_atual": {
+        "conteudo": "Consulta felinos posicionada no range R$180-250 (diferencial premium vs R$70 dos 24h). Ticket médio R$500 é o resultado do mix consulta + exames + retorno, não da consulta isolada. Posicionamento 'premium' mantido com ancoragem contra consulta isca.",
+        "origem": "ee-s2-posicionamento.json > canvas_4p.preco",
+        "camada": "semana_2"
+      },
+      "impacto_estrategico": "Evita comunicar 'consulta R$500' no Instagram/LP (afastaria Mariana). Clareia o roteiro de pricing: consulta R$180-250 é o ponto de entrada; ticket R$500 é o resultado do atendimento completo. LP e scripts de WhatsApp devem reforçar transparência de orçamento item-a-item.",
+      "narrativa_sugerida": "O briefing registrava ticket R$500 sem distinguir consulta isolada vs ticket total. A persona Mariana detalhou willingness to pay R$180-250 por consulta felinos. A decisão é comunicar consulta felinos no range R$180-250 (premium ancorado contra consulta isca R$70) e manter ticket R$500 como métrica interna de mix, nunca como preço de fachada."
+    },
+    {
+      "id": "E7",
+      "tema": "Comunicação — bio Instagram",
+      "hipotese_inicial": {
+        "conteudo": "Auditoria S1 afirma 'bio Instagram sem mensagem-chave de especialização felina' e recomenda 'atualizar bio: Especialista em felinos | Americana SP'.",
+        "origem": "ee-s1-auditoria-comunicacao.json > quick_wins (item 'atualizar bio do Instagram')",
+        "camada": "semana_1"
+      },
+      "evidencia_diagnostico": {
+        "conteudo": "Diagnóstico orgânico IG S2 capturou a bio real: '🩺 Esp. em felinos 🐱 Clinica geral de cães🐶.' A bio JÁ menciona especialização felina — a recomendação S1 está factualmente desatualizada ou a bio foi atualizada após a auditoria.",
+        "origem": "ee-s2-diagnostico-organico-ig.json > cliente.bio",
+        "camada": "semana_2"
+      },
+      "decisao_atual": {
+        "conteudo": "Bio felina já existe. Quick win S1 deve ser reescrito para focar em: adicionar link wa.me clicável, remover 'clínica geral de cães' da bio para não diluir posicionamento, e adicionar CTA explícito.",
+        "origem": "ee-s2-diagnostico-organico-ig.json > proximas_acoes",
+        "camada": "semana_2"
+      },
+      "impacto_estrategico": "Corrige uma recomendação que, se executada, faria retrabalho desnecessário. O quick win real é 'refinar bio existente' (remover dilution, adicionar link/CTA), não 'criar mensagem felina na bio'. Também sinaliza que a auditoria S1 deve ser revisitada em outros canais antes de executar quick wins cegos.",
+      "narrativa_sugerida": "A auditoria S1 concluiu que a bio do Instagram não tinha mensagem felina e virou quick win. O diagnóstico orgânico S2 mostrou que a bio já contém 'Esp. em felinos 🐱'. A decisão é reescrever o quick win: ao invés de 'criar mensagem felina', o foco passa a ser remover a menção 'clínica geral de cães' que dilui o posicionamento e adicionar CTA wa.me clicável."
+    },
+    {
+      "id": "E8",
+      "tema": "Dias e horários de pico de demanda",
+      "hipotese_inicial": {
+        "conteudo": "Cliente declara 'Segunda e Sábado' como dias de maior movimento.",
+        "origem": "client.json > briefing.product.peak_days (reportado pela cliente)",
+        "camada": "briefing"
+      },
+      "evidencia_diagnostico": {
+        "conteudo": "V4MOS mostra que dias com maior % de cliques em Meta são Quarta (17,8%) e Quinta (17,2%) — não Segunda nem Sábado. Isso indica que intenção digital está desencontrada da ocupação física.",
+        "origem": "ee-s2-diagnostico-midia.json > day_of_week_breakdown",
+        "camada": "semana_2"
+      },
+      "decisao_atual": {
+        "conteudo": "Diferenciar 'pico físico (Seg/Sáb)' de 'pico digital (Qua/Qui)'. Orçamento Meta deve concentrar entregas em Qua/Qui (melhor conversão) enquanto operações físicas se mantêm otimizadas para Seg/Sáb. Criar teste de horário.",
+        "origem": "ee-s2-diagnostico-midia.json > recommendations (ajuste de dayparting)",
+        "camada": "semana_2"
+      },
+      "impacto_estrategico": "Ajusta dayparting em Meta/Google (concentrar em Qua/Qui) e ao mesmo tempo mantém agenda física em Seg/Sáb — são funis distintos. Sem essa distinção o time pode concluir 'apagar Meta nas quartas' e perder conversão.",
+      "narrativa_sugerida": "A cliente relatou Seg/Sáb como dias de maior movimento físico. O V4MOS mostrou que Qua/Qui concentram 35% dos cliques em Meta. A decisão é tratar pico físico e pico digital como funis separados: dayparting Meta em Qua/Qui (intenção digital) e operação física otimizada para Seg/Sáb (conversão presencial)."
+    }
+  ],
+  "divergencias_factuais": [
+    {
+      "id": "F1",
+      "categoria": "nome",
+      "campo": "ee-s2-diagnostico-midia.json > google_ads.top_keywords[].keyword ('ZenVet' camelCase)",
+      "valor_atual": "ZenVet",
+      "valor_recomendado": "Zenvet",
+      "fonte_de_verdade": "client.json > meta.name ('Clínica Veterinária Zenvet') e todos os outros outputs usam 'Zenvet'. 'ZenVet' camelCase aparece apenas na keyword V4MOS (aparenta ser como o cliente configurou no Google Ads) — se for dado cru da API, pode ser mantido como literal; se for redigido pela skill, padronizar.",
+      "arquivos_afetados": [
+        "outputs/ee-s2-diagnostico-midia.json"
+      ],
+      "severidade": "baixa"
+    },
+    {
+      "id": "F2",
+      "categoria": "numero",
+      "campo": "ee-s1-swot.json > weaknesses ('Meta Ads R$800/mês desperdiçado') + ee-s1-diagnostico-maturidade.json > priorities[1] ('pausar anúncios Meta com links quebrados')",
+      "valor_atual": "Meta Ads R$800/mês desperdiçado / pausar Meta com links quebrados",
+      "valor_recomendado": "Meta Ads subinvestido — R$424/mês em 90d vs R$800 contratado. Ação: corrigir tracking + migrar para LEADS + escalar ao teto (não pausar).",
+      "fonte_de_verdade": "ee-s2-diagnostico-midia.json > overall_metrics + _refinement_history ('Narrativa invertida: Meta não está sangrando, está subescalado')",
+      "arquivos_afetados": [
+        "outputs/ee-s1-swot.json",
+        "outputs/ee-s1-diagnostico-maturidade.json"
+      ],
+      "severidade": "critica"
+    },
+    {
+      "id": "F3",
+      "categoria": "numero",
+      "campo": "ee-s1-diagnostico-maturidade.json > overall_metrics.cac (266) + ee-s1-swot.json > financial_summary (baseado em CAC 266)",
+      "valor_atual": "CAC R$266",
+      "valor_recomendado": "CAC R$156 (baseline Semana 2, V4MOS corrigido)",
+      "fonte_de_verdade": "ee-s2-diagnostico-midia.json > overall_metrics.cac (156)",
+      "arquivos_afetados": [
+        "outputs/ee-s1-diagnostico-maturidade.json",
+        "outputs/ee-s1-swot.json"
+      ],
+      "severidade": "media"
+    },
+    {
+      "id": "F4",
+      "categoria": "contradicao_logica",
+      "campo": "ee-s1-auditoria-comunicacao.json > quick_wins (item 'atualizar bio do Instagram: Especialista em felinos | Americana SP')",
+      "valor_atual": "Recomendação de 'criar' mensagem felina na bio do Instagram.",
+      "valor_recomendado": "Refinar bio existente: remover 'Clinica geral de cães' que dilui posicionamento e adicionar link wa.me clicável.",
+      "fonte_de_verdade": "ee-s2-diagnostico-organico-ig.json > cliente.bio ('🩺 Esp. em felinos 🐱 Clinica geral de cães🐶.')",
+      "arquivos_afetados": [
+        "outputs/ee-s1-auditoria-comunicacao.json"
+      ],
+      "severidade": "media"
+    },
+    {
+      "id": "F5",
+      "categoria": "referencia_cruzada",
+      "campo": "ee-s1-diagnostico-maturidade.json > priorities[1] ('pausar anúncios Meta com links quebrados e recriar campanhas') vs ee-s2-diagnostico-midia.json > recommendations ('migrar Meta para LEADS, escalar ao teto')",
+      "valor_atual": "Prioridade S1 orienta a pausar Meta; S2 orienta a escalar Meta.",
+      "valor_recomendado": "Reescrever priority[1] da maturidade para: 'Corrigir tracking (Pixel + CAPI) + migrar Meta para objetivo LEADS + preencher budget contratado'.",
+      "fonte_de_verdade": "ee-s2-diagnostico-midia.json > recommendations",
+      "arquivos_afetados": [
+        "outputs/ee-s1-diagnostico-maturidade.json"
+      ],
+      "severidade": "critica"
+    }
+  ],
+  "gaps_narrativos": [
+    {
+      "id": "G1",
+      "tipo": "evolucao_ausente",
+      "localizacao": "consolidated.md > seção 9 Mídia Paga (linhas 326-359)",
+      "descricao": "A seção apresenta o novo CAC/CPL/budget corrigido mas não explicita que esses valores INVERTEM a narrativa S1 de 'R$800/mês desperdiçado'. O leitor que vem da seção 5 (SWOT) chega aqui sem transição.",
+      "ajuste_proposto": "Adicionar subseção 'Correção de narrativa vs Semana 1' logo após o Headline: 'A Semana 1 registrou R$800/mês de Meta como desperdício e CAC R$266. O fetch V4MOS corrigido em Abr/2026 mostrou investimento real R$1.875/mês (41% abaixo do contratado) e CAC R$156. A nova leitura é: Meta está subescalado, não sangrando — e o destravamento é escalar com tracking, não pausar.'",
+      "arquivo_afetado": "consolidated.md"
+    },
+    {
+      "id": "G2",
+      "tipo": "evolucao_ausente",
+      "localizacao": "consolidated.md > seção 5 SWOT (linha 200 'Meta Ads ativo com links quebrados (404)')",
+      "descricao": "A fraqueza está redigida como fato imutável, mas a S2 corrigiu a leitura. Sem marcador '[refinado em Semana 2]' o leitor adota a versão S1 como verdade.",
+      "ajuste_proposto": "Reescrever para: 'Meta Ads com tracking ausente e links 404 em alguns anúncios — investimento subescalado (R$424/mês real vs R$800 contratado) *[refinado em Semana 2: inverter de desperdício para subinvestimento escalável]*'",
+      "arquivo_afetado": "outputs/ee-s1-swot.json"
+    },
+    {
+      "id": "G3",
+      "tipo": "redundancia",
+      "localizacao": "consolidated.md > seções 4 (linhas 165-166) e 6 (linhas 238-239, 242)",
+      "descricao": "A frase 'única clínica privada da microrregião com posicionamento felino declarado' aparece textualmente 3+ vezes (pesquisa, posicionamento, diferenciais). Em leitura corrida perde força.",
+      "ajuste_proposto": "Manter a frase íntegra na seção 6 (Posicionamento — onde é declaração mãe). Nas outras ocorrências substituir por: 'reforça o território felino' ou 'consolida o diferencial descrito em §6'.",
+      "arquivo_afetado": "consolidated.md"
+    },
+    {
+      "id": "G4",
+      "tipo": "honestidade",
+      "localizacao": "consolidated.md > seção 5 Forças (linha 196 'Nathalia — única especialista em felinos da microrregião')",
+      "descricao": "A redação omite a ressalva honesta do posicionamento: Nathalia é pós-graduanda, não especialista oficial ABFel. Sem o qualifier a força vira claim frágil.",
+      "ajuste_proposto": "Reescrever para: 'Nathalia é a única profissional da microrregião com posicionamento felino declarado — pós-graduanda em clínica e cirurgia com ênfase em felinos (título oficial ABFel em roadmap 12-18m)'",
+      "arquivo_afetado": "outputs/ee-s1-swot.json"
+    },
+    {
+      "id": "G5",
+      "tipo": "lacuna",
+      "localizacao": "consolidated.md > seção 3 ICP (linhas 82-112)",
+      "descricao": "A seção ICP não referencia o dado V4MOS que CONFIRMA a persona (63,8% cliques femininos, concentração 30-45). Sem essa ponte, o leitor não sabe que Mariana foi validada quantitativamente.",
+      "ajuste_proposto": "Adicionar parágrafo ao final do ICP principal: '*Validação quantitativa (S2):* 63,8% dos cliques em Meta são de mulheres; concentração etária 30-45 anos — confirma Mariana como persona primária.'",
+      "arquivo_afetado": "consolidated.md"
+    },
+    {
+      "id": "G6",
+      "tipo": "lacuna",
+      "localizacao": "consolidated.md > seção 8 Orgânico Instagram (linhas 296-324)",
+      "descricao": "A bio atual ('🩺 Esp. em felinos 🐱 Clinica geral de cães🐶') não é citada na seção 8. Esse dado é chave para refutar o quick win S1 de 'atualizar bio' — sem ele o leitor pode pedir ação já resolvida.",
+      "ajuste_proposto": "Adicionar bullet após 'O que já funciona': 'Bio atual já declara especialização felina (🩺 Esp. em felinos 🐱). Refino: remover menção a cães na bio, adicionar link wa.me clicável e CTA explícito.'",
+      "arquivo_afetado": "consolidated.md"
+    },
+    {
+      "id": "G7",
+      "tipo": "transicao",
+      "localizacao": "consolidated.md > passagem entre seção 7 Comunicação & Auditoria (termina linha 294) e seção 8 Orgânico Instagram (inicia linha 296)",
+      "descricao": "A auditoria S1 termina com 5 quick wins e o leitor entra no diagnóstico orgânico S2 sem ponte. Não fica claro que a seção 8 REFINA a 7 em alguns pontos (bio, CTA).",
+      "ajuste_proposto": "Adicionar frase-ponte ao final da seção 7: 'A Semana 2 aprofundou a auditoria do Instagram (→ §8) e ajustou os quick wins de bio e CTA.'",
+      "arquivo_afetado": "consolidated.md"
+    },
+    {
+      "id": "G8",
+      "tipo": "lacuna",
+      "localizacao": "consolidated.md > seção 12 Roadmap (linhas 428-453)",
+      "descricao": "O Roadmap lista skills concluídas e refinamentos, mas não sinaliza que a S2 introduziu roadmap ABFel + Cat Friendly em 12-18m — item estratégico que precisa virar skill/ação.",
+      "ajuste_proposto": "Adicionar subseção 'Decisões estratégicas com prazo' com bullet: 'ABFel (Nathalia) + Cat Friendly Practice — janela 12-18 meses. Sem essas certificações o diferencial felino tem prazo de validade.'",
+      "arquivo_afetado": "consolidated.md"
+    },
+    {
+      "id": "G9",
+      "tipo": "tom",
+      "localizacao": "consolidated.md > seção 9 (linhas 326-327 'subinveste 41%') vs seção 5 (linhas 200 'Meta Ads ativo com links quebrados')",
+      "descricao": "A seção 5 usa tom alarmista S1 ('Meta ativo com links quebrados (404)') enquanto a seção 9 usa tom oportunista S2 ('subinvestido, destravar 2x leads'). A dissonância confunde.",
+      "ajuste_proposto": "Alinhar tom: reescrever o bullet da seção 5 para 'Meta Ads com tracking ausente e subinvestido — oportunidade de 2x leads sem novo orçamento'. Ver também G2.",
+      "arquivo_afetado": "outputs/ee-s1-swot.json"
+    }
+  ],
+  "atualizacoes_propostas": [
+    {
+      "id": "U1",
+      "arquivo": "outputs/ee-s1-swot.json",
+      "caminho_json": "weaknesses[? title contains 'Meta Ads']",
+      "acao": "substituir",
+      "valor_antigo": "Meta Ads ativo com links quebrados (404)",
+      "valor_novo": "Meta Ads com tracking ausente e investimento subescalado — R$424/mês real vs R$800 contratado. [refinado em Semana 2: narrativa invertida de desperdício para subinvestimento escalável]",
+      "motivo": "F2 + G2 + G9 — narrativa S1 contraria diagnóstico S2 (ee-s2-diagnostico-midia). Meta não sangra, está subescalado.",
+      "severidade": "critica",
+      "origem_achado": "evolucao",
+      "referencia_evolucao": "E2",
+      "decisao_operador": "aceita",
+      "valor_final_aplicado": "Meta Ads com tracking ausente e investimento subescalado — R$424/mês real vs R$800 contratado. [refinado em Semana 2: narrativa invertida de desperdício para subinvestimento escalável]"
+    },
+    {
+      "id": "U2",
+      "arquivo": "outputs/ee-s1-diagnostico-maturidade.json",
+      "caminho_json": "priorities[1].action",
+      "acao": "substituir",
+      "valor_antigo": "Pausar anúncios Meta com links quebrados e recriar campanhas com LP correta e segmentação por tipo de pet",
+      "valor_novo": "Corrigir tracking (Pixel + CAPI) + migrar Meta para objetivo LEADS + preencher budget contratado (R$800/mês). Links 404 identificados passam a ser item de checklist técnico, não mais bloqueio estratégico.",
+      "motivo": "F5 — S2 inverteu a leitura. Pausar Meta destrói o único canal digital com aprendizado. Ação passa a ser escalar com tracking.",
+      "severidade": "critica",
+      "origem_achado": "evolucao",
+      "referencia_evolucao": "E2",
+      "decisao_operador": "aceita",
+      "valor_final_aplicado": "Corrigir tracking (Pixel + CAPI) + migrar Meta para objetivo LEADS + preencher budget contratado (R$800/mês). Links 404 identificados passam a ser item de checklist técnico, não mais bloqueio estratégico."
+    },
+    {
+      "id": "U3",
+      "arquivo": "outputs/ee-s1-diagnostico-maturidade.json",
+      "caminho_json": "overall_metrics.cac",
+      "acao": "substituir",
+      "valor_antigo": 266,
+      "valor_novo": 266,
+      "motivo": "E3 — manter CAC R$266 declarado em S1 (sem validação ERP). NÃO substituir por R$156 porque V4MOS não conecta ao ERP e não pode certificar conversão.",
+      "severidade": "baixa",
+      "origem_achado": "evolucao",
+      "referencia_evolucao": "E3",
+      "decisao_operador": "aceita",
+      "valor_final_aplicado": 266
+    },
+    {
+      "id": "U4",
+      "arquivo": "outputs/ee-s1-diagnostico-maturidade.json",
+      "caminho_json": "overall_metrics._note",
+      "acao": "adicionar",
+      "valor_antigo": null,
+      "valor_novo": "CAC R$266 é reporte histórico do cliente, não validado pelo V4MOS (que mede apenas CPL de plataforma, sem integração ERP). Revisitar quando ERP for integrado. CPL real S2 (V4MOS): R$26.",
+      "motivo": "E3 — disclaimer CPL vs CAC, explicitando limitação do V4MOS.",
+      "severidade": "media",
+      "origem_achado": "evolucao",
+      "referencia_evolucao": "E3",
+      "decisao_operador": "aceita",
+      "valor_final_aplicado": "CAC R$266 é reporte histórico do cliente, não validado pelo V4MOS (que mede apenas CPL de plataforma, sem integração ERP). Revisitar quando ERP for integrado. CPL real S2 (V4MOS): R$26."
+    },
+    {
+      "id": "U5",
+      "arquivo": "outputs/ee-s1-swot.json",
+      "caminho_json": "financial_summary.assumptions",
+      "acao": "adicionar",
+      "valor_antigo": null,
+      "valor_novo": "Projeção ROI 20.7x foi calculada com CAC estimado R$266 (S1, sem validação ERP). V4MOS confirmou CPL R$26 na plataforma, mas conversão lead→venda não é rastreada. Payback real só será confiável após integração ERP.",
+      "motivo": "E3 — ajusta narrativa para separar CPL confirmado de CAC estimado.",
+      "severidade": "media",
+      "origem_achado": "evolucao",
+      "referencia_evolucao": "E3",
+      "decisao_operador": "aceita",
+      "valor_final_aplicado": "Projeção ROI 20.7x foi calculada com CAC estimado R$266 (S1, sem validação ERP). V4MOS confirmou CPL R$26 na plataforma, mas conversão lead→venda não é rastreada. Payback real só será confiável após integração ERP."
+    },
+    {
+      "id": "U6",
+      "arquivo": "outputs/ee-s1-swot.json",
+      "caminho_json": "strengths[? title contains 'Nathalia']",
+      "acao": "substituir",
+      "valor_antigo": "Nathalia — única especialista em felinos da microrregião",
+      "valor_novo": "Nathalia — única profissional da microrregião com posicionamento felino declarado (pós-graduanda em clínica e cirurgia com ênfase em felinos; título oficial ABFel em roadmap 12-18m)",
+      "motivo": "G4 + E5 — honestidade. Usar 'especialista' sem ABFel oficial expõe a marca.",
+      "severidade": "media",
+      "origem_achado": "evolucao",
+      "referencia_evolucao": "E5",
+      "decisao_operador": "aceita",
+      "valor_final_aplicado": "Nathalia — única profissional da microrregião com posicionamento felino declarado (pós-graduanda em clínica e cirurgia com ênfase em felinos; título oficial ABFel em roadmap 12-18m)"
+    },
+    {
+      "id": "U7",
+      "arquivo": "outputs/ee-s1-auditoria-comunicacao.json",
+      "caminho_json": "quick_wins[? action contains 'bio do Instagram'].action",
+      "acao": "substituir",
+      "valor_antigo": "Atualizar bio do Instagram: 'Especialista em felinos | Americana SP' + CTA WhatsApp + link funcional",
+      "valor_novo": "Refinar bio do Instagram: (1) remover 'Clinica geral de cães' que dilui o posicionamento felino; (2) adicionar link wa.me clicável; (3) adicionar CTA explícito 'Agende pelo WhatsApp → link bio'. A menção 'Esp. em felinos 🐱' já existe.",
+      "motivo": "F4 + E7 — bio real já tem mensagem felina. Quick win original pediria retrabalho.",
+      "severidade": "media",
+      "origem_achado": "evolucao",
+      "referencia_evolucao": "E7",
+      "decisao_operador": "aceita",
+      "valor_final_aplicado": "Refinar bio do Instagram: (1) remover 'Clinica geral de cães' que dilui o posicionamento felino; (2) adicionar link wa.me clicável; (3) adicionar CTA explícito 'Agende pelo WhatsApp → link bio'. A menção 'Esp. em felinos 🐱' já existe."
+    },
+    {
+      "id": "U8",
+      "arquivo": "outputs/ee-s1-auditoria-comunicacao.json",
+      "caminho_json": "channel_audit.instagram.findings",
+      "acao": "adicionar",
+      "valor_antigo": null,
+      "valor_novo": "[refinado em Semana 2] Bio real capturada pelo diagnóstico orgânico: '🩺 Esp. em felinos 🐱 Clinica geral de cães🐶.' Mensagem felina presente; item restante: remover menção a cães e adicionar link wa.me.",
+      "motivo": "E7 — fechar o loop da auditoria com o dado real.",
+      "severidade": "baixa",
+      "origem_achado": "evolucao",
+      "referencia_evolucao": "E7",
+      "decisao_operador": "aceita",
+      "valor_final_aplicado": "[refinado em Semana 2] Bio real capturada pelo diagnóstico orgânico: '🩺 Esp. em felinos 🐱 Clinica geral de cães🐶.' Mensagem felina presente; item restante: remover menção a cães e adicionar link wa.me."
+    },
+    {
+      "id": "U9",
+      "arquivo": "outputs/ee-s1-persona-icp.json",
+      "caminho_json": "primary_persona.validation",
+      "acao": "adicionar",
+      "valor_antigo": null,
+      "valor_novo": "Validação quantitativa (S2, ee-s2-diagnostico-midia): 63,8% dos cliques em Meta são mulheres; concentração etária 30-45 anos. Confirma Mariana como persona primária.",
+      "motivo": "E1 + G5 — amarrar a persona qualitativa com o dado V4MOS que a confirma.",
+      "severidade": "baixa",
+      "origem_achado": "evolucao",
+      "referencia_evolucao": "E1",
+      "decisao_operador": "aceita",
+      "valor_final_aplicado": "Validação quantitativa (S2, ee-s2-diagnostico-midia): 63,8% dos cliques em Meta são mulheres; concentração etária 30-45 anos. Confirma Mariana como persona primária."
+    },
+    {
+      "id": "U10",
+      "arquivo": "outputs/ee-s1-persona-icp.json",
+      "caminho_json": "primary_persona.evolution_note",
+      "acao": "adicionar",
+      "valor_antigo": null,
+      "valor_novo": "Hipótese briefing: 'classe média a média alta'. Evidência S1 + S2: tutora de gato 30-45, R$5-12K/mês, dominância feminina confirmada em Meta (63,8%). Decisão: ICP primário fechado; anti-personas ativadas como exclusão em campanhas.",
+      "motivo": "E1 — registrar arco hipótese→evidência→decisão no próprio output.",
+      "severidade": "baixa",
+      "origem_achado": "evolucao",
+      "referencia_evolucao": "E1",
+      "decisao_operador": "aceita",
+      "valor_final_aplicado": "Hipótese briefing: 'classe média a média alta'. Evidência S1 + S2: tutora de gato 30-45, R$5-12K/mês, dominância feminina confirmada em Meta (63,8%). Decisão: ICP primário fechado; anti-personas ativadas como exclusão em campanhas."
+    },
+    {
+      "id": "U11",
+      "arquivo": "outputs/ee-s2-posicionamento.json",
+      "caminho_json": "canvas_4p.preco.supporting_notes",
+      "acao": "adicionar",
+      "valor_antigo": null,
+      "valor_novo": "Ticket R$500 do briefing é resultado do mix consulta+exames+procedimentos; consulta felinos isolada posicionada no range R$180-250 (willingness_to_pay validada em ee-s1-persona-icp > primary_persona). Comunicação externa não deve expor R$500 como preço de consulta.",
+      "motivo": "E6 — evitar confusão entre consulta isolada e ticket médio.",
+      "severidade": "media",
+      "origem_achado": "evolucao",
+      "referencia_evolucao": "E6",
+      "decisao_operador": "aceita",
+      "valor_final_aplicado": "Ticket R$500 do briefing é resultado do mix consulta+exames+procedimentos; consulta felinos isolada posicionada no range R$180-250 (willingness_to_pay validada em ee-s1-persona-icp > primary_persona). Comunicação externa não deve expor R$500 como preço de consulta."
+    },
+    {
+      "id": "U12",
+      "arquivo": "outputs/ee-s1-swot.json",
+      "caminho_json": "threats",
+      "acao": "adicionar",
+      "valor_antigo": null,
+      "valor_novo": "Migração silenciosa de tutoras premium para 4 clínicas especializadas em Campinas (MedCat Cat Friendly Gold, ClinFel, Gattare, Estimma) a 45-60min — ameaça estrutural identificada na S2 pesquisa de mercado.",
+      "motivo": "E4 — SWOT S1 não cobria concorrentes de Campinas.",
+      "severidade": "media",
+      "origem_achado": "evolucao",
+      "referencia_evolucao": "E4",
+      "decisao_operador": "aceita",
+      "valor_final_aplicado": "Migração silenciosa de tutoras premium para 4 clínicas especializadas em Campinas (MedCat Cat Friendly Gold, ClinFel, Gattare, Estimma) a 45-60min — ameaça estrutural identificada na S2 pesquisa de mercado."
+    },
+    {
+      "id": "U13",
+      "arquivo": "outputs/ee-s1-swot.json",
+      "caminho_json": "threats",
+      "acao": "adicionar",
+      "valor_antigo": null,
+      "valor_novo": "Clínica Meu Pet SBO (pública, jun/2024) atende felinos mas mira baixa renda — risco indireto de desvio de search intent caso o ICP premium confunda as propostas em pesquisas locais.",
+      "motivo": "E4 — concorrente não mapeado no briefing.",
+      "severidade": "baixa",
+      "origem_achado": "evolucao",
+      "referencia_evolucao": "E4",
+      "decisao_operador": "aceita",
+      "valor_final_aplicado": "Clínica Meu Pet SBO (pública, jun/2024) atende felinos mas mira baixa renda — risco indireto de desvio de search intent caso o ICP premium confunda as propostas em pesquisas locais."
+    },
+    {
+      "id": "U14",
+      "arquivo": "outputs/ee-s1-diagnostico-maturidade.json",
+      "caminho_json": "pillars.midia_paga.narrative",
+      "acao": "substituir",
+      "valor_antigo": "Meta Ads rodando com links quebrados — R$800/mês desperdiçado",
+      "valor_novo": "Meta Ads subescalado (R$424/mês real vs R$800 contratado), CTR recuperando (mar/abr 1,18-1,41%). Destravamento: corrigir tracking + migrar para LEADS, não pausar.",
+      "motivo": "F2 + F5 + E2 — alinhar narrativa da maturidade ao diagnóstico S2.",
+      "severidade": "critica",
+      "origem_achado": "evolucao",
+      "referencia_evolucao": "E2",
+      "decisao_operador": "aceita",
+      "valor_final_aplicado": "Meta Ads subescalado (R$424/mês real vs R$800 contratado), CTR recuperando (mar/abr 1,18-1,41%). Destravamento: corrigir tracking + migrar para LEADS, não pausar."
+    },
+    {
+      "id": "U15",
+      "arquivo": "outputs/ee-s2-diagnostico-midia.json",
+      "caminho_json": "google_ads.top_keywords[? keyword == 'ZenVet'].keyword",
+      "acao": "substituir",
+      "valor_antigo": "ZenVet",
+      "valor_novo": "Zenvet",
+      "motivo": "F1 — padronizar grafia canônica, a menos que 'ZenVet' camelCase seja o literal cadastrado no Google Ads (neste caso, manter e adicionar note de literal).",
+      "severidade": "baixa",
+      "origem_achado": "factual",
+      "decisao_operador": "aceita",
+      "valor_final_aplicado": "Zenvet"
+    },
+    {
+      "id": "U16",
+      "arquivo": "outputs/ee-s2-diagnostico-midia.json",
+      "caminho_json": "recommendations",
+      "acao": "adicionar",
+      "valor_antigo": null,
+      "valor_novo": "Dayparting: concentrar entregas Meta em Qua/Qui (35% dos cliques históricos) sem afetar a operação física de pico Seg/Sáb. Testar por 14d e comparar CPL.",
+      "motivo": "E8 — separar funil digital e funil físico.",
+      "severidade": "media",
+      "origem_achado": "evolucao",
+      "referencia_evolucao": "E8",
+      "decisao_operador": "aceita",
+      "valor_final_aplicado": "Dayparting: concentrar entregas Meta em Qua/Qui (35% dos cliques históricos) sem afetar a operação física de pico Seg/Sáb. Testar por 14d e comparar CPL."
+    },
+    {
+      "id": "U17",
+      "arquivo": "outputs/ee-s2-posicionamento.json",
+      "caminho_json": "honesty_alerts",
+      "acao": "adicionar",
+      "valor_antigo": null,
+      "valor_novo": "ABFel + Cat Friendly Practice em roadmap 12-18m não são opcionais: sem essas certificações, o claim 'especialista em felinos' é vulnerável a reação de LM+. Tratar como ação defensiva prioritária.",
+      "motivo": "E5 — tornar explícito o prazo de validade do diferencial.",
+      "severidade": "media",
+      "origem_achado": "evolucao",
+      "referencia_evolucao": "E5",
+      "decisao_operador": "aceita",
+      "valor_final_aplicado": "ABFel + Cat Friendly Practice em roadmap 12-18m não são opcionais: sem essas certificações, o claim 'especialista em felinos' é vulnerável a reação de LM+. Tratar como ação defensiva prioritária."
+    },
+    {
+      "id": "U18",
+      "arquivo": "outputs/ee-s1-auditoria-comunicacao.json",
+      "caminho_json": "channel_audit.anuncios.findings",
+      "acao": "substituir",
+      "valor_antigo": "Meta Ads com links 404 — R$800/mês destruído",
+      "valor_novo": "Meta Ads com links 404 identificados em alguns anúncios e sem Pixel/GTM — investimento real R$424/mês (subescalado vs R$800 contratado). [refinado em Semana 2]",
+      "motivo": "F2 + E2 — consistência de tom com diagnóstico S2.",
+      "severidade": "critica",
+      "origem_achado": "evolucao",
+      "referencia_evolucao": "E2",
+      "decisao_operador": "aceita",
+      "valor_final_aplicado": "Meta Ads com links 404 identificados em alguns anúncios e sem Pixel/GTM — investimento real R$424/mês (subescalado vs R$800 contratado). [refinado em Semana 2]"
+    },
+    {
+      "id": "U19",
+      "arquivo": "outputs/ee-s1-diagnostico-maturidade.json",
+      "caminho_json": "pillars.cro.narrative",
+      "acao": "adicionar",
+      "valor_antigo": null,
+      "valor_novo": "[refinado em Semana 2] H1 atual do site ('Clínica Veterinária para cachorros e gatos em Americana SP') contradiz o posicionamento felino aprovado — identificado em ee-s2-diagnostico-cro > quality_flags (severity: high).",
+      "motivo": "E5 — maturidade CRO precisa referenciar o contradiction_flag do site.",
+      "severidade": "media",
+      "origem_achado": "narrativa",
+      "decisao_operador": "aceita",
+      "valor_final_aplicado": "[refinado em Semana 2] H1 atual do site ('Clínica Veterinária para cachorros e gatos em Americana SP') contradiz o posicionamento felino aprovado — identificado em ee-s2-diagnostico-cro > quality_flags (severity: high)."
+    },
+    {
+      "id": "U20",
+      "arquivo": "outputs/ee-s2-posicionamento.json",
+      "caminho_json": "canais_a_evitar",
+      "acao": "adicionar",
+      "valor_antigo": null,
+      "valor_novo": "Comunicar 'consulta R$500' em mídia paga ou bio — afastaria Mariana. Preço de consulta felinos comunicado na faixa R$180-250 com ancoragem contra consulta isca R$70 dos 24h.",
+      "motivo": "E6 — regra de não-uso do preço no digital.",
+      "severidade": "media",
+      "origem_achado": "evolucao",
+      "referencia_evolucao": "E6",
+      "decisao_operador": "aceita",
+      "valor_final_aplicado": "Comunicar 'consulta R$500' em mídia paga ou bio — afastaria Mariana. Preço de consulta felinos comunicado na faixa R$180-250 com ancoragem contra consulta isca R$70 dos 24h."
+    },
+    {
+      "id": "U21",
+      "arquivo": "outputs/ee-s2-diagnostico-organico-ig.json",
+      "caminho_json": "proximas_acoes",
+      "acao": "adicionar",
+      "valor_antigo": null,
+      "valor_novo": "Refinar bio: remover 'Clinica geral de cães' (dilui o posicionamento felino declarado no posicionamento S2) e adicionar link wa.me clicável com CTA explícito.",
+      "motivo": "E7 — amarrar ação concreta da bio ao posicionamento aprovado.",
+      "severidade": "media",
+      "origem_achado": "evolucao",
+      "referencia_evolucao": "E7",
+      "decisao_operador": "aceita",
+      "valor_final_aplicado": "Refinar bio: remover 'Clinica geral de cães' (dilui o posicionamento felino declarado no posicionamento S2) e adicionar link wa.me clicável com CTA explícito."
+    },
+    {
+      "id": "U22",
+      "arquivo": "outputs/ee-s1-persona-icp.json",
+      "caminho_json": "primary_persona.willingness_to_pay._note",
+      "acao": "adicionar",
+      "valor_antigo": null,
+      "valor_novo": "Importante distinguir consulta isolada (R$180-250) vs ticket médio total (R$500 registrado no briefing, que inclui exames/procedimentos). Comunicação externa usa apenas o range da consulta.",
+      "motivo": "E6 — evita confusão na skill de copy/scripts.",
+      "severidade": "baixa",
+      "origem_achado": "evolucao",
+      "referencia_evolucao": "E6",
+      "decisao_operador": "aceita",
+      "valor_final_aplicado": "Importante distinguir consulta isolada (R$180-250) vs ticket médio total (R$500 registrado no briefing, que inclui exames/procedimentos). Comunicação externa usa apenas o range da consulta."
+    },
+    {
+      "id": "U23",
+      "arquivo": "outputs/ee-s2-diagnostico-midia.json",
+      "caminho_json": "evolution_note",
+      "acao": "adicionar",
+      "valor_antigo": null,
+      "valor_novo": "A Semana 1 descreveu Meta como 'R$800/mês desperdiçado' com CAC reportado R$266 (não validado por ERP). Após correção do fetch V4MOS, este diagnóstico inverteu a leitura: Meta subescalado (R$424/mês real), CPL de plataforma R$26. V4MOS não mede conversão lead→venda; portanto o CAC real continua sem validação até integração ERP. Decisão: escalar Meta com tracking, não pausar — usando CPL como baseline de mídia.",
+      "motivo": "E2 + E3 — registrar o arco hipótese→evidência→decisão no output que causa a evolução.",
+      "severidade": "media",
+      "origem_achado": "evolucao",
+      "referencia_evolucao": "E2",
+      "decisao_operador": "aceita",
+      "valor_final_aplicado": "A Semana 1 descreveu Meta como 'R$800/mês desperdiçado' com CAC reportado R$266 (não validado por ERP). Após correção do fetch V4MOS, este diagnóstico inverteu a leitura: Meta subescalado (R$424/mês real), CPL de plataforma R$26. V4MOS não mede conversão lead→venda; portanto o CAC real continua sem validação até integração ERP. Decisão: escalar Meta com tracking, não pausar — usando CPL como baseline de mídia."
+    },
+    {
+      "id": "U24",
+      "arquivo": "outputs/ee-s1-swot.json",
+      "caminho_json": "_refinement_history",
+      "acao": "adicionar",
+      "valor_antigo": null,
+      "valor_novo": {
+        "ts": "2026-04-22T15:00:00Z",
+        "semana": 2,
+        "note": "Revisão semanal S2 aplicou U1, U5, U6, U12, U13 sobre este output (pendente decisão do operador)."
+      },
+      "motivo": "Traceability — alinhar com o padrão exigido pela skill ee-revisao-semanal.",
+      "severidade": "baixa",
+      "origem_achado": "narrativa",
+      "decisao_operador": "aceita",
+      "valor_final_aplicado": {
+        "ts": "2026-04-22T15:00:00Z",
+        "semana": 2,
+        "note": "Revisão semanal S2 aplicou U1, U5, U6, U12, U13 sobre este output (pendente decisão do operador)."
+      }
+    }
+  ],
+  "_refinement_history": [
+    {
+      "ts": "2026-04-22T15:00:00Z",
+      "semana": 2,
+      "updates_aplicadas": 0,
+      "updates_rejeitadas": 0,
+      "evolutions_applied": [],
+      "note": "Primeira execução da revisão semanal da S2. Nenhuma alteração aplicada — apenas mapeamento. 8 evoluções estratégicas, 5 divergências factuais, 9 gaps narrativos, 24 atualizações propostas aguardando decisão do operador."
+    },
+    {
+      "ts": "2026-04-22T13:34:56Z",
+      "semana": 2,
+      "updates_aplicadas": 24,
+      "updates_rejeitadas": 0,
+      "evolutions_applied": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "note": "Operador aprovou todas as 24 atualizações. E3/U3/U4/U5/U23 reenquadradas para distinguir CPL (V4MOS) de CAC (requer integração ERP)."
+    }
+  ]
+}

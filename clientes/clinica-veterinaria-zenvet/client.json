@@ -2161,6 +2161,12 @@
         "checkpoint": 0,
         "started_at": null,
         "completed_at": null
+      },
+      "ee-revisao-semanal": {
+        "status": "completed",
+        "version": 1,
+        "started_at": "2026-04-22T13:35:14Z",
+        "completed_at": "2026-04-22T13:35:14Z"
       }
     }
   },
@@ -2248,6 +2254,12 @@
       "skill": "ee-s2-diagnostico-criativos",
       "action": "completed",
       "note": "Pack analisado (10 criativos, média 13.4/25). Pipeline Meta Ads Library ativada — 6 anúncios reais da Cantinho do Mascote embedados no portal como benchmark visual."
+    },
+    {
+      "ts": "2026-04-22T13:35:14Z",
+      "skill": "ee-revisao-semanal",
+      "action": "completed",
+      "note": "Revisão Semana 2: 8 evoluções estratégicas mapeadas, 5 divergências factuais, 9 gaps narrativos, 24 atualizações aplicadas (todas aceitas). Reframe principal: CPL (R$26, V4MOS) vs CAC (R$266, não validado — ERP não integrado)."
     }
   ],
   "page_audit": {

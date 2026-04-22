@@ -1,13 +1,7 @@
 {
   "summary": "Jogada principal: ocupar o território 'veterinária especialista em gatos de Americana' antes dos concorrentes, eliminando hemorragias digitais (tracking zero, Meta Ads com link quebrado, LP genérica) e construindo ativos proprietários (CRM, conteúdo educativo, GMB). O diferencial técnico da Nathalia é real e não replicável no curto prazo — o problema é que ainda não está comunicado onde o ICP procura.",
-
   "strengths": [
-    {
-      "title": "Nathalia — única especialista em felinos da microrregião",
-      "description": "Formação e expertise em medicina felina num raio de 40km. Clientes dos concorrentes 24h buscam segunda opinião na Zenvet após diagnósticos genéricos — dado coletado no kickoff. Vantagem estrutural não replicável sem contratação e tempo de reputação.",
-      "implication": "Posicionamento proprietário: 'a clínica de gatos de Americana'. Território que nenhum concorrente pode ocupar sem anos de investimento. Janela de consolidação disponível agora.",
-      "time_sensitivity": "urgent"
-    },
+    "Nathalia — única profissional da microrregião com posicionamento felino declarado (pós-graduanda em clínica e cirurgia com ênfase em felinos; título oficial ABFel em roadmap 12-18m)",
     {
       "title": "Base ativa de 1.186 pacientes com show rate de ~100%",
       "description": "1.186 pacientes ativos dos 1.700 cadastrados. Show rate de ~100% (quem agenda, aparece) evidencia que o problema é volume de entrada de leads, não qualidade do serviço entregue.",
@@ -39,7 +33,6 @@
       "time_sensitivity": "medium_term"
     }
   ],
-
   "weaknesses": [
     {
       "title": "Zero rastreamento digital — sem Pixel, GTM ou Analytics",
@@ -47,12 +40,7 @@
       "implication": "Sem tracking, toda otimização de mídia é especulação. É impossível escalar o que funciona ou pausar o que não funciona. Risco de CAC aumentando sem perceber.",
       "severity": "critical"
     },
-    {
-      "title": "Meta Ads ativo com links quebrados (404)",
-      "description": "Campanha Meta Ads em exibição aponta para URL que retorna 404. R$800/mês de verba Meta desperdiçada 100% — cada clique no anúncio chega numa página de erro. A Loíse recebe leads que nunca converteram.",
-      "implication": "Correção imediata recupera R$800/mês. É a ação com maior ROI possível: zero custo técnico, impacto no mesmo dia.",
-      "severity": "critical"
-    },
+    "Meta Ads com tracking ausente e investimento subescalado — R$424/mês real vs R$800 contratado. [refinado em Semana 2: narrativa invertida de desperdício para subinvestimento escalável]",
     {
       "title": "Conversão lead→agendamento de apenas 16,6%",
       "description": "72 leads/mês → 12 agendamentos. 60 leads qualificados descartados por mês sem follow-up. Loíse atende reativamente via WhatsApp sem script, sem CRM, sem retorno estruturado.",
@@ -78,7 +66,6 @@
       "severity": "high"
     }
   ],
-
   "opportunities": [
     {
       "title": "Vácuo de posicionamento felino na microrregião",
@@ -123,7 +110,6 @@
       "probability": "high"
     }
   ],
-
   "threats": [
     {
       "title": "Hospitais 24h com consulta isca de R$70 na mesma avenida",
@@ -159,15 +145,15 @@
       "implication": "Single point of failure no processo comercial. Script consultivo + CRM é proteção operacional urgente.",
       "probability": "medium",
       "impact": "medium"
-    }
+    },
+    "Migração silenciosa de tutoras premium para 4 clínicas especializadas em Campinas (MedCat Cat Friendly Gold, ClinFel, Gattare, Estimma) a 45-60min — ameaça estrutural identificada na S2 pesquisa de mercado.",
+    "Clínica Meu Pet SBO (pública, jun/2024) atende felinos mas mira baixa renda — risco indireto de desvio de search intent caso o ICP premium confunda as propostas em pesquisas locais."
   ],
-
   "strategic_synthesis": {
     "leverage": "A especialização real de Nathalia (F1) combinada com o vácuo de posicionamento dos concorrentes (O1) e a demanda orgânica por conteúdo educativo felino (O4) cria uma janela de consolidação de território proprietário. A jogada principal é ocupar digitalmente o espaço 'veterinária especialista em gatos de Americana' antes que os concorrentes percebam o gap: Landing Page felinos + conteúdo educativo + GMB otimizado formam um triângulo de captura de tráfego de alta intenção com CAC marginal.",
     "protection": "A fraqueza de zero rastreamento (F1) amplificada pela dependência de plataformas sem dados (A2) cria um ciclo perigoso: sem dados, a Zenvet não consegue otimizar o orçamento de R$3.200/mês. Meta Ads com links quebrados (F2) é o exemplo mais imediato: R$800/mês destruídos. A conversão de 16,6% (F3) sem script ou CRM mantém 60 leads/mês na mesa, enquanto o WhatsApp não estruturado (A5) é single point of failure no único canal de conversão.",
     "recommended_strategy": "Nos próximos 90 dias, a Zenvet executa em duas frentes simultâneas: (1) eliminar hemorragias — tracking instalado, Meta Ads corrigido, acessos consolidados, LP felinos no ar; isso aumenta o retorno do budget atual sem gastar mais; e (2) construir ativos proprietários — CRM com régua de reativação dos 486 inativos, série de conteúdo educativo felino com Nathalia como autoridade, GMB dominante para buscas de felinos em Americana. O eixo de toda comunicação é a mensagem-chave aprovada: 'Seu gato merece uma veterinária que entende de felinos — não de bicho em geral.'"
   },
-
   "tows_matrix": {
     "description": "Matriz TOWS cruzada: estratégias derivadas de cada par quadrante, não listagem. Cada célula combina itens de duas dimensões para gerar uma jogada concreta.",
     "so_strategies": [
@@ -240,7 +226,6 @@
       }
     ]
   },
-
   "scenarios": {
     "description": "Três cenários de execução baseados na velocidade de liberação de acessos e decisão da cliente. Cada cenário tem premissas explícitas, projeção quantificada e gatilhos de transição.",
     "conservative": {
@@ -322,14 +307,15 @@
     },
     "recommendation": "Executar Realista como plano base com gatilho explícito de migração para Agressivo: se CPL Meta < R$25 e leads qualificados/semana > 30 até fim da S4, propor elevação de budget em S5. Se acessos não liberarem até S1, descer para Conservador sem prejuízo de continuidade."
   },
-
   "priority_actions": [
     {
       "action": "Instalar tracking completo: Meta Pixel, GTM e eventos de conversão (clique WhatsApp, formulário)",
       "swot_basis": "Elimina F1 (zero tracking) — pré-requisito para toda otimização de mídia e mensuração de CAC real",
       "impact": "alto",
       "suggested_timeline": "Semana 1",
-      "dependencies": ["Acesso Meta Business, Google Ads e site confirmados"],
+      "dependencies": [
+        "Acesso Meta Business, Google Ads e site confirmados"
+      ],
       "week_start": 1,
       "week_end": 1,
       "track": "Tracking & Dados",
@@ -351,7 +337,10 @@
       "swot_basis": "Elimina F2 (R$800/mês desperdiçado), alavanca F1 (especialização), captura O1 (vácuo concorrentes)",
       "impact": "alto",
       "suggested_timeline": "Semana 1–2",
-      "dependencies": ["Tracking instalado", "Landing Page felinos no ar"],
+      "dependencies": [
+        "Tracking instalado",
+        "Landing Page felinos no ar"
+      ],
       "week_start": 1,
       "week_end": 2,
       "track": "Mídia Paga",
@@ -374,7 +363,9 @@
       "swot_basis": "Elimina F5 (sem LP felinos), captura O2 (Google Maps), alavanca F1+F6 (especialização + reputação de segunda opinião)",
       "impact": "alto",
       "suggested_timeline": "Semana 2–3",
-      "dependencies": ["Posicionamento aprovado (Semana 2)"],
+      "dependencies": [
+        "Posicionamento aprovado (Semana 2)"
+      ],
       "week_start": 2,
       "week_end": 3,
       "track": "CRO & LP",
@@ -420,7 +411,9 @@
       "swot_basis": "Alavanca F1+F6 (especialização + segunda opinião), captura O4 (demanda orgânica), mitiga A4 (velocidade de consolidação de território)",
       "impact": "médio",
       "suggested_timeline": "Semana 2–4",
-      "dependencies": ["Identidade visual/brandbook (Semana 3) para padronização"],
+      "dependencies": [
+        "Identidade visual/brandbook (Semana 3) para padronização"
+      ],
       "week_start": 2,
       "week_end": 4,
       "track": "Conteúdo & SEO",
@@ -443,7 +436,9 @@
       "swot_basis": "Elimina F4 (486 inativos sem régua), captura O3+O5 (reativação + automação), resolve F3 (follow-up de leads)",
       "impact": "alto",
       "suggested_timeline": "Semana 3",
-      "dependencies": ["Acesso WhatsApp Business confirmado"],
+      "dependencies": [
+        "Acesso WhatsApp Business confirmado"
+      ],
       "week_start": 3,
       "week_end": 4,
       "track": "CRM & Comercial",
@@ -466,7 +461,9 @@
       "swot_basis": "Resolve F3 (conversão 16,6%), alavanca F2 (show rate 100%), mitiga A5 (WhatsApp como single point of failure)",
       "impact": "alto",
       "suggested_timeline": "Semana 3–4",
-      "dependencies": ["Scripts SDR aprovados (antecipar versão simplificada para conversão básica)"],
+      "dependencies": [
+        "Scripts SDR aprovados (antecipar versão simplificada para conversão básica)"
+      ],
       "week_start": 3,
       "week_end": 5,
       "track": "CRM & Comercial",
@@ -485,7 +482,6 @@
       }
     }
   ],
-
   "financial_summary_90d": {
     "description": "Consolidação financeira dos 90 dias considerando o cenário Realista. Todos os valores em R$/mês ao fim da Semana 12.",
     "total_monthly_investment_incremental": 1050,
@@ -511,5 +507,30 @@
       "Pressupõe acessos liberados na S1 e sem bloqueios operacionais da cliente.",
       "CRM Kommo tem curva de adoção de ~30 dias antes de entregar todo o potencial."
     ]
-  }
+  },
+  "financial_summary": {
+    "assumptions": "Projeção ROI 20.7x foi calculada com CAC estimado R$266 (S1, sem validação ERP). V4MOS confirmou CPL R$26 na plataforma, mas conversão lead→venda não é rastreada. Payback real só será confiável após integração ERP."
+  },
+  "_refinement_history": [
+    {
+      "ts": "2026-04-22T13:34:56Z",
+      "review": "ee-revisao-semanal",
+      "semana": 2,
+      "updates": [
+        "U1",
+        "U5",
+        "U6",
+        "U12",
+        "U13",
+        "U24"
+      ],
+      "evolutions_applied": [
+        "E2",
+        "E3",
+        "E4",
+        "E5"
+      ],
+      "note": "Revisão semanal S2 aplicada."
+    }
+  ]
 }

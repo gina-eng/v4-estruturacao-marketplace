@@ -13,11 +13,41 @@
     "comparison": "significantly_below",
     "key_insight": "A Zenvet opera 22 pontos abaixo da média do setor. O gap mais crítico é CRO (12 vs ~38 do setor) — ausência total de tracking inviabiliza qualquer otimização futura.",
     "pillar_comparison": [
-      {"pillar": "midia_paga",  "client_score": 18, "sector_average": 45, "gap": -27, "position": "critical_gap"},
-      {"pillar": "criativos",   "client_score": 32, "sector_average": 40, "gap":  -8, "position": "below"},
-      {"pillar": "cro",         "client_score": 12, "sector_average": 38, "gap": -26, "position": "critical_gap"},
-      {"pillar": "crm",         "client_score": 14, "sector_average": 42, "gap": -28, "position": "critical_gap"},
-      {"pillar": "seo",         "client_score": 30, "sector_average": 50, "gap": -20, "position": "below"}
+      {
+        "pillar": "midia_paga",
+        "client_score": 18,
+        "sector_average": 45,
+        "gap": -27,
+        "position": "critical_gap"
+      },
+      {
+        "pillar": "criativos",
+        "client_score": 32,
+        "sector_average": 40,
+        "gap": -8,
+        "position": "below"
+      },
+      {
+        "pillar": "cro",
+        "client_score": 12,
+        "sector_average": 38,
+        "gap": -26,
+        "position": "critical_gap"
+      },
+      {
+        "pillar": "crm",
+        "client_score": 14,
+        "sector_average": 42,
+        "gap": -28,
+        "position": "critical_gap"
+      },
+      {
+        "pillar": "seo",
+        "client_score": 30,
+        "sector_average": 50,
+        "gap": -20,
+        "position": "below"
+      }
     ]
   },
   "pillar_scores": [
@@ -28,14 +58,22 @@
       "estimated": true,
       "highlight": "Meta Ads 100% desperdiçado (links quebrados); Google Ads invisível para termos locais; CAC R$ 266 vs benchmark R$ 80-200",
       "details": {
-        "strengths": ["Investimento mensal existente (R$ 3.200) — base para reativar"],
+        "strengths": [
+          "Investimento mensal existente (R$ 3.200) — base para reativar"
+        ],
         "weaknesses": [
           "Meta Ads: 5 anúncios ativos com links 404 — R$ 800/mês queimados",
           "Google Ads: invisível para termos como 'veterinário Americana' e 'clínica felinos'",
           "ROAS 1,52x vs mínimo de breakeven 3x",
           "CAC R$ 266 — 33 a 233% acima do benchmark do setor"
         ],
-        "metrics": {"cac": 266, "roas": 1.52, "monthly_investment": 3200, "leads_per_month": 72, "scheduled_per_month": 12}
+        "metrics": {
+          "cac": 266,
+          "roas": 1.52,
+          "monthly_investment": 3200,
+          "leads_per_month": 72,
+          "scheduled_per_month": 12
+        }
       }
     },
     {
@@ -45,7 +83,10 @@
       "estimated": true,
       "highlight": "Frequência de posts boa; retenção de vídeo abaixo de 3s em 100% dos casos analisados",
       "details": {
-        "strengths": ["Frequência de publicação consistente (várias vezes/semana)", "Conteúdo educativo já produzido"],
+        "strengths": [
+          "Frequência de publicação consistente (várias vezes/semana)",
+          "Conteúdo educativo já produzido"
+        ],
         "weaknesses": [
           "Retenção de vídeo: 100% dos conteúdos perdem audiência nos primeiros 3s",
           "Sem hook de abertura ou padrão de formato nos criativos de anúncio",
@@ -60,7 +101,9 @@
       "estimated": true,
       "highlight": "Sem Pixel Meta, sem Google Tag, LP precária — impossível rastrear ou otimizar qualquer conversão",
       "details": {
-        "strengths": ["WhatsApp como canal de conversão direto já funciona"],
+        "strengths": [
+          "WhatsApp como canal de conversão direto já funciona"
+        ],
         "weaknesses": [
           "Pixel Meta: não instalado — zero dados de audiência para remarketing",
           "Google Tag: não instalado — impossível medir conversões do Google Ads",
@@ -76,7 +119,9 @@
       "estimated": true,
       "highlight": "1.700 pacientes cadastrados sem régua de reativação; atendimento reativo via WhatsApp sem pipeline",
       "details": {
-        "strengths": ["Base de 1.700 pacientes cadastrados no sistema clínico — ativo latente"],
+        "strengths": [
+          "Base de 1.700 pacientes cadastrados no sistema clínico — ativo latente"
+        ],
         "weaknesses": [
           "Sem CRM: 0 automação de follow-up, 0 pipeline de vendas",
           "Atendimento 100% reativo — sem proatividade com leads que somem",
@@ -92,7 +137,9 @@
       "estimated": true,
       "highlight": "GMB ativo é ponto forte isolado; site sem conteúdo indexável, zero ranqueamento orgânico",
       "details": {
-        "strengths": ["Google Meu Negócio ativo com avaliações — visibilidade local básica"],
+        "strengths": [
+          "Google Meu Negócio ativo com avaliações — visibilidade local básica"
+        ],
         "weaknesses": [
           "Site clinicazenvet.com.br: sem blog, sem páginas de serviço indexadas",
           "Zero ranqueamento para termos como 'veterinário felinos Americana'",
@@ -113,11 +160,13 @@
     },
     {
       "rank": 2,
-      "action": "Pausar anúncios Meta com links quebrados e recriar campanhas com LP correta e segmentação por tipo de pet",
+      "action": "Corrigir tracking (Pixel + CAPI) + migrar Meta para objetivo LEADS + preencher budget contratado (R$800/mês). Links 404 identificados passam a ser item de checklist técnico, não mais bloqueio estratégico.",
       "rationale": "Resgate imediato de R$ 800/mês desperdiçados. Com links corretos e segmentação básica (tutores de gatos vs cães), ROAS deve dobrar em 30 dias.",
       "effort": "low",
       "pillar": "midia_paga",
-      "dependencies": ["Pixel Meta instalado (prioridade 1)"]
+      "dependencies": [
+        "Pixel Meta instalado (prioridade 1)"
+      ]
     },
     {
       "rank": 3,
@@ -125,7 +174,9 @@
       "rationale": "Há demanda ativa sendo capturada pelos concorrentes. Com os termos certos, o Google Ads da Zenvet pode gerar leads qualificados em 7 dias.",
       "effort": "medium",
       "pillar": "midia_paga",
-      "dependencies": ["Google Tag instalada (prioridade 1)"]
+      "dependencies": [
+        "Google Tag instalada (prioridade 1)"
+      ]
     },
     {
       "rank": 4,
@@ -141,7 +192,41 @@
       "rationale": "Captura a demanda qualificada do serviço de maior ticket (R$ 1.000) e maior diferencial. Potencial de conversão 2-3x superior à LP genérica atual.",
       "effort": "high",
       "pillar": "cro",
-      "dependencies": ["Pixel instalado (prioridade 1)", "Copy e criativos definidos"]
+      "dependencies": [
+        "Pixel instalado (prioridade 1)",
+        "Copy e criativos definidos"
+      ]
+    }
+  ],
+  "overall_metrics": {
+    "cac": 266,
+    "_note": "CAC R$266 é reporte histórico do cliente, não validado pelo V4MOS (que mede apenas CPL de plataforma, sem integração ERP). Revisitar quando ERP for integrado. CPL real S2 (V4MOS): R$26."
+  },
+  "pillars": {
+    "midia_paga": {
+      "narrative": "Meta Ads subescalado (R$424/mês real vs R$800 contratado), CTR recuperando (mar/abr 1,18-1,41%). Destravamento: corrigir tracking + migrar para LEADS, não pausar."
+    },
+    "cro": {
+      "narrative": "[refinado em Semana 2] H1 atual do site ('Clínica Veterinária para cachorros e gatos em Americana SP') contradiz o posicionamento felino aprovado — identificado em ee-s2-diagnostico-cro > quality_flags (severity: high)."
+    }
+  },
+  "_refinement_history": [
+    {
+      "ts": "2026-04-22T13:34:56Z",
+      "review": "ee-revisao-semanal",
+      "semana": 2,
+      "updates": [
+        "U2",
+        "U3",
+        "U4",
+        "U14",
+        "U19"
+      ],
+      "evolutions_applied": [
+        "E2",
+        "E3"
+      ],
+      "note": "Revisão semanal S2 aplicada."
     }
   ]
 }
