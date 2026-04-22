@@ -3611,15 +3611,79 @@ const R = {
 
 'ee-s2-diagnostico-criativos'(d) {
   let h = '';
-  if (d.summary) h += sm(d.summary);
+
+  // Leitura estratégica (padrão) com fallback para summary simples
+  h += renderLeituraEstrategica(d, { verdictLabel: 'Veredito dos Criativos' });
+
   const counts = d.counts || d.summary_counts || {};
-  if (d.total_creatives_analyzed || d.average_score) {
+  if (d.total_creatives_analyzed || d.average_score != null) {
     h += '<div class="gr gr--3">'
       +mt(d.total_creatives_analyzed||'—','Criativos Analisados','')
       +mt(d.average_score!=null?(d.average_score+'/25'):'—','Score Médio',d.average_score>=20?'green':d.average_score>=13?'yellow':'red')
       +(counts.keep_count!=null?mt(counts.keep_count,'Manter','green'):'')
       +'</div>';
   }
+
+  // Helper: card de criativo com preview embedado
+  const previewCard = (c) => {
+    const p = c.preview || {};
+    const voTone = {manter:'green',otimizar:'yellow',eliminar:'red'};
+    const tone = voTone[c.verdict] || 'gray';
+    const igPerm = c.instagram_permalink_url || p.instagram_permalink_url || '';
+    const igEmbed = igPerm ? (igPerm.replace(/\/$/,'') + '/embed/captioned/') : '';
+    const hasImg = p.image_url || p.thumbnail_url;
+    const hasVideo = p.video_url;
+    const label = c.creative_name || c.name || ('Criativo #'+(c.number||''));
+    const dateStr = p.start_date ? new Date(p.start_date).toLocaleDateString('pt-BR') : '';
+    const platforms = Array.isArray(p.platforms) && p.platforms.length ? p.platforms.join(' · ') : '';
+    const sourceTag = igPerm ? '<span class="tg tg--green" style="font-size:.625rem">Instagram</span>'
+      : p.source === 'meta_ads_library' ? '<span class="tg tg--green" style="font-size:.625rem">Ads Library</span>'
+      : p.source === 'uploaded' ? '<span class="tg tg--yellow" style="font-size:.625rem">Upload</span>'
+      : '<span class="tg tg--gray" style="font-size:.625rem">Sem preview</span>';
+
+    const mediaBlock = igEmbed
+      ? '<iframe src="'+E(igEmbed)+'" loading="lazy" allowfullscreen scrolling="no" frameborder="0" style="width:100%;height:480px;border:0;background:#0a0a0a;display:block"></iframe>'
+      : hasImg
+      ? '<div style="position:relative;background:#000;aspect-ratio:1/1;overflow:hidden">'
+        +'<img src="'+E(p.thumbnail_url||p.image_url)+'" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block" onerror="this.style.display=\'none\'">'
+        +(hasVideo?'<a href="'+E(p.video_url)+'" target="_blank" rel="noopener" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.25);color:#fff;font-size:2rem;text-decoration:none">▶</a>':'')
+        +'</div>'
+      : '<div style="aspect-ratio:1/1;background:var(--border-light);display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--muted);font-size:.75rem;text-align:center;padding:1rem;gap:.4rem">'
+        +'<div style="font-weight:600">'+(p.source==='unavailable'?'Preview indisponível':'Sem imagem')+'</div>'
+        +(p.note?'<div style="font-size:.6875rem;line-height:1.3;opacity:.85">'+E(p.note)+'</div>':'')
+        +'</div>';
+
+    return '<div class="cd cd--'+tone+'" style="display:flex;flex-direction:column;padding:0;overflow:hidden">'
+      +mediaBlock
+      +'<div style="padding:.75rem">'
+      +'<div style="display:flex;justify-content:space-between;align-items:flex-start;gap:.4rem;margin-bottom:.3rem">'
+      +'<strong style="font-size:.8125rem;line-height:1.25">'+E(label)+'</strong>'
+      +tg((c.verdict||'').toUpperCase(), tone)
+      +'</div>'
+      +'<div style="font-size:.75rem;color:var(--muted);margin-bottom:.4rem">'
+      +E(c.type||'')+(c.format?' · '+E(c.format):'')
+      +'</div>'
+      +'<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.4rem">'
+      +'<span style="font-size:.75rem;color:var(--muted)">Score</span>'
+      +'<strong style="font-size:.875rem">'+E(c.total_score)+'/25</strong>'
+      +'</div>'
+      +'<div style="display:flex;gap:.3rem;flex-wrap:wrap;font-size:.6875rem;color:var(--muted);margin-bottom:.4rem">'
+      +'<span>H '+E(c.hook_score||'—')+'</span>'
+      +'<span>C '+E(c.clarity_score||'—')+'</span>'
+      +'<span>I '+E(c.icp_coherence_score||'—')+'</span>'
+      +'<span>CTA '+E(c.cta_score||'—')+'</span>'
+      +'<span>V '+E(c.visual_score||'—')+'</span>'
+      +'</div>'
+      +(c.main_issue?'<div style="border-left:3px solid var(--'+(tone==='green'?'success':tone==='yellow'?'warning':'danger')+');padding-left:.5rem;font-size:.75rem;margin-top:.3rem"><strong style="font-size:.6875rem;text-transform:uppercase;color:var(--muted)">Problema</strong><div>'+E(c.main_issue)+'</div></div>':'')
+      +'<div style="display:flex;justify-content:space-between;align-items:center;margin-top:.5rem;gap:.4rem;flex-wrap:wrap">'
+      +'<div style="font-size:.6875rem;color:var(--muted)">'+(dateStr?E(dateStr):'')+(platforms?' · '+E(platforms):'')+'</div>'
+      +sourceTag
+      +'</div>'
+      +(igPerm?'<div style="margin-top:.4rem"><a href="'+E(igPerm)+'" target="_blank" rel="noopener" style="font-size:.6875rem">Ver no Instagram ↗</a></div>':'')
+      +(p.ads_library_url?'<div style="margin-top:.4rem"><a href="'+E(p.ads_library_url)+'" target="_blank" rel="noopener" style="font-size:.6875rem">Ver na Ads Library ↗</a></div>':'')
+      +'</div></div>';
+  };
+
   if (d.creative_matrix?.length) {
     const vc = {manter:'green',otimizar:'yellow',eliminar:'danger'};
     // Donut de veredictos
@@ -3641,13 +3705,94 @@ const R = {
     h += sc('Veredicto do Pack Atual',
       insight(chartDonut(donutData, {title:'Distribuição de Veredictos'}),
         verdictInsight, elimPct>=40?'bad':manterPct>=60?'good':'warn'));
-    h += sc('Matriz de Avaliação', tb(['#','Tipo','Hook','Clareza','ICP','CTA','Visual','Total','Veredicto'],
-      d.creative_matrix.map(c=>[E(c.number),E(c.type),E(c.hook_score),E(c.clarity_score),E(c.icp_coherence_score),E(c.cta_score),E(c.visual_score),
-        '<strong>'+E(c.total_score)+'/25</strong>',tg(c.verdict,vc[c.verdict])])));
+
+    // Grid de criativos — só mostra quando tem preview real (embed/imagem)
+    const hasPreview = (c) => {
+      const p = c.preview || {};
+      return !!(c.instagram_permalink_url || p.instagram_permalink_url || p.image_url || p.thumbnail_url);
+    };
+    const order = {manter:0,otimizar:1,eliminar:2};
+    const sorted = [...d.creative_matrix].filter(hasPreview).sort((a,b)=>{
+      const oa = order[a.verdict]??99, ob = order[b.verdict]??99;
+      if (oa !== ob) return oa-ob;
+      return (b.total_score||0)-(a.total_score||0);
+    });
+    if (sorted.length) {
+      const hidden = d.creative_matrix.length - sorted.length;
+      h += sc('Galeria de Criativos do Cliente',
+        '<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem">'
+        +sorted.map(previewCard).join('')
+        +'</div>'
+        +'<p style="font-size:.75rem;margin-top:.75rem;color:var(--muted)">H=Hook · C=Clareza · I=ICP · CTA · V=Visual (cada um de 0-5, total 0-25). Ordenado por veredicto (Manter → Otimizar → Eliminar).'
+        +(hidden>0?' · Exibindo '+sorted.length+' de '+d.creative_matrix.length+' criativos analisados (demais sem preview disponível).':'')
+        +'</p>'
+      );
+    }
   }
+
+  // Concorrentes — análise + amostras de anúncios
+  if (d.competitor_analysis?.length) {
+    const compHtml = d.competitor_analysis.map(c => {
+      const samples = Array.isArray(c.sample_ads) ? c.sample_ads : [];
+      const sampleCards = samples.map(s => {
+        const img = s.thumbnail_url || s.image_url;
+        const link = s.ads_library_url || '';
+        const media = img
+          ? '<div style="aspect-ratio:1/1;background:#000;overflow:hidden"><img src="'+E(img)+'" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block" onerror="this.style.display=\'none\'"></div>'
+          : '<div style="aspect-ratio:1/1;background:var(--border-light);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.625rem">sem preview</div>';
+        const dateStr = s.start_date ? new Date(s.start_date).toLocaleDateString('pt-BR') : '';
+        return (link?'<a href="'+E(link)+'" target="_blank" rel="noopener" style="text-decoration:none;color:inherit">':'<div>')
+          +'<div style="border:1px solid var(--border-light);border-radius:6px;overflow:hidden">'
+          +media
+          +'<div style="padding:.3rem .4rem;font-size:.6875rem;color:var(--muted);display:flex;justify-content:space-between">'
+          +'<span>'+E(dateStr||'')+'</span>'
+          +(s.platforms?.length?'<span>'+E(s.platforms.slice(0,2).join('·'))+'</span>':'')
+          +'</div></div>'
+          +(link?'</a>':'</div>');
+      }).join('');
+
+      const cname = c.name || c.competitor || '';
+      const cstrat = c.strategy_observed || c.creative_pattern;
+      const chook = c.hook_pattern || c.what_works;
+      return '<div class="cd cd--yellow">'
+        +'<div class="cd__title" style="display:flex;justify-content:space-between;align-items:center;gap:.5rem;flex-wrap:wrap">'
+        +'<span>'+E(cname)+(c.active_ads_count!=null?' <span style="color:var(--muted);font-weight:400;font-size:.75rem">('+c.active_ads_count+' ads)</span>':'')+'</span>'
+        +(c.gap_para_cliente?'<span class="tg tg--red">GAP</span>':'<span class="tg tg--gray">paridade</span>')
+        +'</div>'
+        +'<div class="cd__body" style="font-size:.8125rem">'
+        +(cstrat?'<div><strong>Estratégia:</strong> '+E(cstrat)+'</div>':'')
+        +(chook?'<div style="margin-top:.3rem"><strong>O que funciona:</strong> '+E(chook)+'</div>':'')
+        +(c.what_to_avoid?'<div style="margin-top:.3rem"><strong>O que evitar:</strong> '+E(c.what_to_avoid)+'</div>':'')
+        +(c.replication_idea?'<div style="margin-top:.3rem"><strong>Replicar:</strong> '+E(c.replication_idea)+'</div>':'')
+        +(samples.length?'<div style="margin-top:.5rem"><strong style="font-size:.6875rem;text-transform:uppercase;color:var(--muted)">Amostras ('+samples.length+')</strong>'
+          +'<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(90px,1fr));gap:.3rem;margin-top:.3rem">'+sampleCards+'</div></div>':'')
+        +(c.ads_library_url?'<div style="margin-top:.5rem"><a href="'+E(c.ads_library_url)+'" target="_blank" rel="noopener" style="font-size:.75rem">Todos os anúncios na Ads Library ↗</a></div>':'')
+        +'</div></div>';
+    }).join('');
+    h += sc('Análise de concorrentes — anúncios rodando',
+      '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:.75rem">'+compHtml+'</div>'
+    );
+  }
+
+  // Padrões que faltam no cliente (alinhado com organic IG)
+  if (d.competitor_patterns_missing?.length) {
+    h += sc('Padrões que funcionam nos concorrentes e o cliente não usa',
+      d.competitor_patterns_missing.map((p,i)=>cd(
+        '#'+(i+1)+' · '+E(p.pattern)+(p.seen_in_count?' (visto em '+N(p.seen_in_count)+' anúncios)':''),
+        '<div style="font-size:.8125rem">'
+        +(p.seen_in_competitors?.length?'<div><strong>Concorrentes:</strong> '+p.seen_in_competitors.map(c=>E(c)).join(', ')+'</div>':'')
+        +(p.why_works?'<div style="margin-top:.3rem"><strong>Por que funciona:</strong> '+E(p.why_works)+'</div>':'')
+        +(p.how_to_apply?'<div style="margin-top:.3rem"><strong>Como aplicar:</strong> '+E(p.how_to_apply)+'</div>':'')
+        +'</div>',
+        'yellow'
+      )).join('')
+    );
+  }
+
   if (d.patterns_identified?.length) {
     h += sc('Padrões Identificados', d.patterns_identified.map(p=>cd(p.pattern,E(p.example),'yellow')).join(''));
   }
+
   if (d.production_briefing) {
     const b = d.production_briefing;
     h += sc('Briefing de Produção', cd('Direção de Hook',E(b.hook_direction),'red')
@@ -3655,6 +3800,10 @@ const R = {
       +(b.visual_elements?'<p><strong>Incluir:</strong> '+b.visual_elements.map(v=>E(v)).join(', ')+'</p>':'')
       +(b.avoid_elements?'<p><strong>Evitar:</strong> '+b.avoid_elements.map(v=>E(v)).join(', ')+'</p>':''));
   }
+
+  h += renderKeyInsight(d.key_insight, { title: 'Ponto de Alavancagem — Criativo Vencedor + Próxima Leva' });
+  h += renderHonestyAlert(d.honesty_alert);
+
   return h;
 },
 
@@ -3678,25 +3827,52 @@ const R = {
   );
 
   // Cards das contas (client + competitors)
+  // Usa screenshot real do header do Instagram (capturado via ig_profile_screenshot.py)
+  // Fallback: avatar de iniciais quando screenshot não disponível
+  const initialsAvatar = (username, tone) => {
+    const u = (username||'').replace(/^@/,'');
+    const m = u.match(/[a-z]/gi) || ['?'];
+    const init = (m.slice(0,2).join('')).toUpperCase();
+    const bg = tone==='green' ? '#00B8BD' : '#8B5CF6';
+    return '<div style="width:48px;height:48px;border-radius:50%;flex:0 0 48px;background:'+bg+';display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:.9375rem;letter-spacing:.02em">'+E(init)+'</div>';
+  };
   const accountCard = (a, role) => {
     const toneRole = role==='client' ? 'green' : 'yellow';
     const tagRole = role==='client' ? 'CLIENTE' : 'CONCORRENTE';
-    const pic = a.profile_picture_url ? '<img src="'+E(a.profile_picture_url)+'" alt="" style="width:48px;height:48px;border-radius:50%;object-fit:cover;flex:0 0 48px">' : '';
-    return '<div class="cd cd--'+toneRole+'" style="min-width:260px">'
-      +'<div class="cd__title" style="display:flex;align-items:center;gap:.6rem">'
-      +pic
-      +'<div><div>@'+E(a.username||'')+'</div><div style="font-size:.75rem;color:var(--muted);font-weight:500">'+E(a.name||'')+'</div></div>'
-      +'<span class="tg tg--'+toneRole+'" style="margin-left:auto">'+tagRole+'</span>'
+    const snap = a.profile_screenshot_data_uri || a.profile_screenshot_path || '';
+
+    // Visual principal: screenshot real do IG (ocupa a linha inteira para leitura)
+    if (snap) {
+      return '<div class="cd cd--'+toneRole+'" style="padding:0;overflow:hidden;display:flex;flex-direction:column">'
+        +'<div style="background:#fff;position:relative;padding:1rem 1.25rem">'
+        +'<img src="'+E(snap)+'" alt="@'+E(a.username||'')+'" style="width:100%;max-width:100%;height:auto;display:block">'
+        +'<span class="tg tg--'+toneRole+'" style="position:absolute;top:.75rem;right:.75rem;white-space:nowrap;box-shadow:0 1px 4px rgba(0,0,0,.15);font-size:.75rem;padding:.35rem .7rem">'+tagRole+'</span>'
+        +'</div>'
+        +'<div class="cd__body" style="font-size:.875rem;padding:.75rem 1.25rem;border-top:1px solid var(--border-light);display:flex;gap:1.5rem;flex-wrap:wrap;align-items:center">'
+        +'<div>Posts 90d: <strong>'+N(a.posts_90d)+'</strong></div>'
+        +(a.followers_count!=null?'<div>Seguidores: <strong>'+N(a.followers_count)+'</strong></div>':'')
+        +(a.website?'<div style="word-break:break-all"><a href="'+E(a.website)+'" target="_blank" rel="noopener" style="color:var(--accent)">'+E(a.website)+'</a></div>':'')
+        +'</div></div>';
+    }
+
+    // Fallback sem screenshot
+    return '<div class="cd cd--'+toneRole+'" style="padding:0;overflow:hidden;display:flex;flex-direction:column">'
+      +'<div class="cd__title" style="display:flex;align-items:flex-start;gap:.6rem;flex-wrap:nowrap;padding:.75rem">'
+      +initialsAvatar(a.username, toneRole)
+      +'<div style="flex:1;min-width:0;overflow:hidden">'
+      +'<div style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap">@'+E(a.username||'')+'</div>'
+      +'<div style="font-size:.75rem;color:var(--muted);font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">'+E(a.name||'')+'</div>'
       +'</div>'
-      +'<div class="cd__body" style="font-size:.8125rem">'
+      +'<span class="tg tg--'+toneRole+'" style="flex:0 0 auto;white-space:nowrap">'+tagRole+'</span>'
+      +'</div>'
+      +'<div class="cd__body" style="font-size:.8125rem;padding:.75rem">'
       +'<div>Seguidores: <strong>'+N(a.followers_count)+'</strong></div>'
       +'<div>Posts 90d: <strong>'+N(a.posts_90d)+'</strong></div>'
-      +(a.website?'<div style="word-break:break-all">Site: '+E(a.website)+'</div>':'')
-      +(a.biography?'<div style="margin-top:.3rem;font-size:.75rem;color:var(--muted);max-height:60px;overflow:hidden">'+E(a.biography)+'</div>':'')
+      +(a.website?'<div style="margin-top:.3rem;word-break:break-all;font-size:.75rem"><a href="'+E(a.website)+'" target="_blank" rel="noopener" style="color:var(--accent)">'+E(a.website)+'</a></div>':'')
       +'</div></div>';
   };
   h += sc('Contas comparadas',
-    '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.75rem">'
+    '<div style="display:grid;grid-template-columns:1fr;gap:.75rem">'
     +accountCard(client,'client')
     +competitors.map(c=>accountCard(c,'competitor')).join('')
     +'</div>'
@@ -4034,8 +4210,11 @@ const R = {
       +mt(t.pagespeed_mobile??'—','PageSpeed Mobile',t.pagespeed_mobile>=80?'green':t.pagespeed_mobile>=50?'yellow':'red')
       +mt(t.pagespeed_desktop??'—','PageSpeed Desktop',t.pagespeed_desktop>=80?'green':t.pagespeed_desktop>=50?'yellow':'red')
       +mt(t.lcp!=null?t.lcp+'s':'—','LCP',t.lcp<=2.5?'green':t.lcp<=4?'yellow':'red')
-      +mt(d.current_conversion_rate!=null?PCT(d.current_conversion_rate):'—','Conv. Atual','')
+      +mt(d.current_conversion_rate!=null?PCT(d.current_conversion_rate):'N/D','Conv. Atual',d.current_conversion_rate!=null?'':'gray')
       +'</div>';
+    if (d.current_conversion_rate==null && d.current_bounce_rate==null && d.avg_time_on_page==null) {
+      h += '<div class="co" style="background:#f5f5f5;border-left:3px solid #909090"><strong>Métricas GA4 não disponíveis.</strong> Taxa de conversão, bounce rate e tempo médio na página não foram coletados nesta auditoria — GA4 ainda não instalado no site.</div>';
+    }
     if (t.critical_issues?.length) h += sc('Problemas Críticos de Velocidade',
       '<ul class="cl">'+t.critical_issues.map(x=>'<li><span class="cl__icon cl__icon--alert">!</span><span>'+E(x)+'</span></li>').join('')+'</ul>');
     if (t.estimated_conversion_loss) h += '<div class="co"><strong>Impacto estimado em conversão:</strong> '+E(t.estimated_conversion_loss)+'</div>';

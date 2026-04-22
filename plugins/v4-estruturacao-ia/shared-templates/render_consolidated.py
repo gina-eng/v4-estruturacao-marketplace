@@ -235,7 +235,7 @@ def section_market(client, outputs):
     for t in (o.get("trends") or [])[:3]:
         md.append(f"- **Tendência:** {safe(t.get('trend') or t.get('title'))} — {safe(t.get('evidence') or t.get('description'))}")
     for t in (o.get("threats") or [])[:3]:
-        md.append(f"- **Ameaça:** {safe(t.get('threat') or t.get('title'))} — {safe(t.get('impact') or t.get('description'))}")
+        md.append(f"- **Ameaça:** {safe(t.get('threat') or t.get('title'))} — {safe(t.get('potential_impact') or t.get('impact') or t.get('description'))}")
     md.append("")
     op = o.get("unexploited_opportunity")
     if op:
@@ -257,10 +257,12 @@ def section_market(client, outputs):
         for d in has:
             if isinstance(d, dict):
                 lbl = d.get("differential") or d.get("title") or d.get("item")
-                jus = d.get("rationale") or d.get("description") or ""
+                jus = d.get("icp_relevance") or d.get("rationale") or d.get("description") or d.get("action_needed") or ""
+                status = d.get("status")
             else:
-                lbl, jus = d, ""
-            md.append(f"- **{safe(lbl)}** — {safe(jus)}")
+                lbl, jus, status = d, "", None
+            status_tag = f" *[{status}]*" if status else ""
+            md.append(f"- **{safe(lbl)}**{status_tag} — {safe(jus)}")
     return "\n".join(md)
 
 
@@ -587,6 +589,12 @@ def section_cro(client, outputs):
     md.append(f"> **Resumo:** {o.get('summary', '—')}")
     md.append("")
     md.append(f"- **URL analisada:** {safe(o.get('url'))}")
+    conv = o.get("current_conversion_rate")
+    bounce = o.get("current_bounce_rate")
+    time_p = o.get("avg_time_on_page")
+    md.append(f"- **Taxa de conversão atual:** {safe(conv)+'%' if conv is not None else 'Não disponível — GA4 não instalado'}")
+    md.append(f"- **Bounce rate:** {safe(bounce)+'%' if bounce is not None else 'Não disponível — GA4 não instalado'}")
+    md.append(f"- **Tempo médio na página:** {safe(time_p)+'s' if time_p is not None else 'Não disponível — GA4 não instalado'}")
     ta = o.get("technical_audit") or {}
     if ta:
         md.append("")
@@ -1012,11 +1020,12 @@ DEEP['ee-s1-diagnostico-maturidade'] = function(d){
   out += cs_honestyAlert(d.honesty_alert);
   if (d.pillar_scores && d.pillar_scores.length) {
     out += cs_section('Pilares detalhados',
-      cs_table(['Pilar','Score','Peso','Diagnóstico'],
+      cs_table(['Pilar','Score','Status','Destaque'],
         d.pillar_scores.map(function(p){
-          return [CSE(p.name || p.pillar), p.score != null ? p.score + '/10' : '—',
-                  p.weight != null ? CSPCT(p.weight*100) : '—',
-                  CSE(p.diagnosis || p.commentary || p.note || '—')];
+          const scoreTxt = p.score != null ? (p.score + '/100' + (p.estimated ? ' [E]' : '')) : '—';
+          return [CSE(p.name || p.pillar), scoreTxt,
+                  CSE(p.classification || '—'),
+                  CSE(p.highlight || p.diagnosis || p.commentary || p.note || '—')];
         })
       ));
   }
@@ -1059,15 +1068,22 @@ DEEP['ee-s1-swot'] = function(d){
       }
     });
   }
-  if (d.priority_actions && d.priority_actions.length) {
+  const priActs = d.priority_actions || d.priorities;
+  if (priActs && priActs.length) {
     out += cs_section('Ações prioritárias detalhadas',
-      cs_table(['Ação','Impacto financeiro','Risco','Score ajustado','Prazo'],
-        d.priority_actions.map(function(a){
-          return [CSE(a.action||a.title||'—'),
-                  a.financial_impact ? CSBRL(a.financial_impact) : '—',
-                  CSE(a.risk||'—'),
-                  a.risk_adjusted_score != null ? a.risk_adjusted_score : '—',
-                  CSE(a.timeframe||'—')];
+      cs_table(['#','Ação','Base SWOT','Impacto','Prazo','Track','Investimento','Retorno/mês','Score ajustado'],
+        priActs.map(function(a,i){
+          const fi = a.financial_impact || {};
+          const ras = a.risk_adjusted_score || {};
+          return [i+1,
+                  CSE(a.action||a.title||'—'),
+                  CSE(a.swot_basis||'—'),
+                  CSE(a.impact||'—'),
+                  CSE(a.suggested_timeline||a.timeframe||'—'),
+                  CSE(a.track||'—'),
+                  fi.investment_brl != null ? CSBRL(fi.investment_brl) : '—',
+                  fi.monthly_return_brl != null ? CSBRL(fi.monthly_return_brl) : '—',
+                  ras.score != null ? ras.score : '—'];
         })
       ));
   }
@@ -1079,12 +1095,12 @@ DEEP['ee-s1-persona-icp'] = function(d){
   const ob = d.objection_library || d.objections;
   if (ob && ob.objections && ob.objections.length) {
     out += cs_section('Biblioteca completa de objeções',
-      cs_table(['Objeção','Gatilho','Resposta recomendada','Tom'],
+      cs_table(['Objeção','Subtexto (o que o tutor pensa)','Resposta recomendada','Quando usar'],
         ob.objections.map(function(o){
           return [CSE(o.objection||o.name||'—'),
-                  CSE(o.trigger||o.context||'—'),
-                  CSE(o.response||o.recommended_response||'—'),
-                  CSE(o.tone||'—')];
+                  CSE(o.subtext||o.trigger||o.context||'—'),
+                  CSE(o.good_response||o.response||o.recommended_response||'—'),
+                  CSE(o.when_to_use||o.tone||'—')];
         })
       ));
   }
@@ -1095,35 +1111,44 @@ DEEP['ee-s1-persona-icp'] = function(d){
       out += '<h5>' + CSE(s.stage||s.name||'Estágio') + '</h5>';
       out += cs_kv([
         ['Gatilho', s.trigger],
-        ['Comportamento', s.behavior],
-        ['Dor dominante', s.dominant_pain||s.pain],
-        ['Conteúdo ideal', s.ideal_content||s.content],
-        ['Canal principal', s.main_channel||s.channel],
-        ['Tempo médio', s.avg_time||s.duration]
+        ['Estado mental', s.mental_state||s.behavior],
+        ['Canal principal', s.primary_channel||s.main_channel||s.channel],
+        ['Pergunta dominante', s.dominant_question||s.dominant_pain||s.pain],
+        ['Intervenção Zenvet', s.zenvet_intervention||s.ideal_content||s.content],
+        ['Fricção atual', s.friction_today],
+        ['Duração estimada', s.duration_estimate||s.avg_time||s.duration]
       ]);
     });
   }
   const ap = d.anti_persona;
   if (ap && ap.profiles && ap.profiles.length) {
-    out += cs_section('Anti-personas (quem NÃO atender)',
-      '<ul>' + ap.profiles.map(function(p){
-        return '<li><strong>' + CSE(p.name||p.profile||'—') + '</strong>' +
-               (p.why_not ? '<br><span style="color:#606060">' + CSE(p.why_not) + '</span>' : '') +
-               '</li>';
-      }).join('') + '</ul>');
+    out += cs_section('Anti-personas (quem NÃO atender)', '');
+    ap.profiles.forEach(function(p){
+      out += '<h5>' + CSE(p.label||p.name||p.profile||'—') + '</h5>';
+      out += cs_kv([
+        ['Quem é', p.who],
+        ['Sinais', Array.isArray(p.signals) ? p.signals.join(' · ') : p.signals],
+        ['Por que não', p.why_not],
+        ['Redirecionar para', p.redirect]
+      ]);
+    });
   }
   const wtp = d.willingness_to_pay;
   if (wtp && wtp.services && wtp.services.length) {
     out += cs_section('Disposição a pagar — precificação estratégica',
-      cs_table(['Serviço','Faixa mínima','Faixa máxima','Ticket sugerido','Justificativa'],
+      cs_table(['Serviço','Ticket atual','Faixa percebida justa','Teto premium','Elasticidade','Alavanca de preço'],
         wtp.services.map(function(s){
           return [CSE(s.service||s.name||'—'),
-                  s.min_price ? CSBRL(s.min_price) : '—',
-                  s.max_price ? CSBRL(s.max_price) : '—',
-                  s.recommended_price ? CSBRL(s.recommended_price) : '—',
-                  CSE(s.rationale||s.justification||'—')];
+                  CSE(s.current_ticket_range||s.min_price||'—'),
+                  CSE(s.perceived_fair_range||s.max_price||'—'),
+                  CSE(s.premium_ceiling||s.recommended_price||'—'),
+                  CSE(s.elasticity||'—'),
+                  CSE(s.pricing_lever||s.rationale||s.justification||'—')];
         })
       ));
+    if (wtp.strategic_implication) {
+      out += '<div style="margin-top:.75rem;padding:.75rem 1rem;background:#fafafa;border-left:3px solid #909090"><strong>Implicação estratégica:</strong> ' + CSE(wtp.strategic_implication) + '</div>';
+    }
   }
   return out || cs_rawDump(d);
 };
@@ -1202,8 +1227,12 @@ DEEP['ee-s2-pesquisa-mercado'] = function(d){
       out += cs_section('Diferenciais reais (detalhado)',
         '<ul>' + rd.map(function(dif){
           if (typeof dif === 'string') return '<li>' + CSE(dif) + '</li>';
-          return '<li><strong>' + CSE(dif.differential||dif.title||'—') + '</strong>' +
-                 (dif.rationale||dif.why ? '<br><span style="color:#606060">' + CSE(dif.rationale||dif.why) + '</span>' : '') +
+          const body = dif.icp_relevance || dif.rationale || dif.why || dif.description || '';
+          const action = dif.action_needed || dif.action_required || '';
+          const status = dif.status ? ' <span style="color:#909090;font-size:12px">['+CSE(dif.status)+']</span>' : '';
+          return '<li><strong>' + CSE(dif.differential||dif.title||'—') + '</strong>' + status +
+                 (body ? '<br><span style="color:#606060">' + CSE(body) + '</span>' : '') +
+                 (action ? '<br><em style="color:#909090;font-size:12px">Ação: ' + CSE(action) + '</em>' : '') +
                  '</li>';
         }).join('') + '</ul>');
     } else if (rd && typeof rd === 'object') {
@@ -1358,15 +1387,23 @@ DEEP['ee-s2-diagnostico-organico-ig'] = function(d){
       })));
   }
   if (d.engagement_benchmark && d.engagement_benchmark.by_account) {
+    const byAcc = d.engagement_benchmark.by_account;
+    const hasNote = byAcc.some(a => a.note);
+    const headers = hasNote
+      ? ['Conta','Likes méd.','Comentários méd.','Engajamento proxy','Melhor formato','Observação']
+      : ['Conta','Likes méd.','Comentários méd.','Engajamento proxy','Melhor formato'];
     out += cs_section('Benchmark de engajamento — todas as contas',
-      cs_table(['Conta','Engajamento médio','Melhor formato','Observação'],
-        d.engagement_benchmark.by_account.map(function(a){
-          return [CSE(a.username||a.handle||'—'),
-                  a.avg_engagement_proxy != null ? CSPCT(a.avg_engagement_proxy*100) : '—',
-                  CSE(a.best_format_by_engagement||'—'),
-                  CSE(a.note||'—')];
+      cs_table(headers,
+        byAcc.map(function(a){
+          const row = [CSE(a.username||a.handle||'—'),
+                  a.avg_likes != null ? a.avg_likes.toFixed(1) : '—',
+                  a.avg_comments != null ? a.avg_comments.toFixed(1) : '—',
+                  a.avg_engagement_proxy != null ? CSPCT(a.avg_engagement_proxy) : '—',
+                  CSE(a.best_format_by_engagement||'—')];
+          if (hasNote) row.push(CSE(a.note||'—'));
+          return row;
         })
-      ));
+      ) + (d.engagement_benchmark.insight ? '<div style="margin-top:.75rem;padding:.75rem 1rem;background:#fafafa;border-left:3px solid #909090"><em>' + CSE(d.engagement_benchmark.insight) + '</em></div>' : ''));
   }
   if (d.content_recommendations && d.content_recommendations.length) {
     out += cs_section('Recomendações de conteúdo',
@@ -1383,19 +1420,39 @@ DEEP['ee-s2-diagnostico-cro'] = function(d){
   let out = '';
   if (d.technical_audit && d.technical_audit.pagespeed) {
     const ps = d.technical_audit.pagespeed;
+    const scoreLabels = {performance:'Performance', accessibility:'Acessibilidade', best_practices:'Boas práticas', seo:'SEO'};
+    const cwvLabels = {
+      lcp_ms:['LCP (Largest Contentful Paint)','ms'],
+      fcp_ms:['FCP (First Contentful Paint)','ms'],
+      tbt_ms:['TBT (Total Blocking Time)','ms'],
+      cls:['CLS (Cumulative Layout Shift)',''],
+      speed_index_ms:['Speed Index','ms'],
+      tti_ms:['TTI (Time to Interactive)','ms'],
+      ttfb_ms:['TTFB (Time to First Byte)','ms']
+    };
+    const fmtScore = v => v == null ? '—' : Math.round(v) + '/100';
+    const fmtCwv = (k,v) => {
+      if (v == null) return '—';
+      const lbl = cwvLabels[k];
+      if (!lbl) return v;
+      const unit = lbl[1];
+      if (unit === 'ms') return Math.round(v).toLocaleString('pt-BR') + ' ms';
+      if (k === 'cls') return Number(v).toFixed(3);
+      return v;
+    };
     out += cs_section('PageSpeed — resultados completos', '');
     if (ps.mobile_scores) {
       out += '<h5>Mobile</h5>' +
-        cs_kv(Object.keys(ps.mobile_scores).map(function(k){ return [k, ps.mobile_scores[k]]; }));
+        cs_kv(Object.keys(ps.mobile_scores).map(function(k){ return [scoreLabels[k]||k, fmtScore(ps.mobile_scores[k])]; }));
     }
     if (ps.desktop_scores) {
       out += '<h5>Desktop</h5>' +
-        cs_kv(Object.keys(ps.desktop_scores).map(function(k){ return [k, ps.desktop_scores[k]]; }));
+        cs_kv(Object.keys(ps.desktop_scores).map(function(k){ return [scoreLabels[k]||k, fmtScore(ps.desktop_scores[k])]; }));
     }
     if (ps.mobile_cwv_lab || ps.cwv) {
       const cwv = ps.mobile_cwv_lab || ps.cwv;
       out += '<h5>Core Web Vitals (mobile lab)</h5>' +
-        cs_kv(Object.keys(cwv).map(function(k){ return [k, cwv[k]]; }));
+        cs_kv(Object.keys(cwv).map(function(k){ return [cwvLabels[k] ? cwvLabels[k][0] : k, fmtCwv(k, cwv[k])]; }));
     }
     if (ps.critical_issues && ps.critical_issues.length) {
       out += '<h5>Problemas críticos</h5>' + cs_list(ps.critical_issues);
@@ -1463,6 +1520,107 @@ DEEP['ee-s2-diagnostico-cro'] = function(d){
         ['Formato', s.format]
       ]);
     });
+  }
+  return out || cs_rawDump(d);
+};
+
+DEEP['ee-s2-diagnostico-criativos'] = function(d){
+  let out = '';
+  if (d.summary_highlights && d.summary_highlights.length) {
+    out += cs_section('Destaques',
+      '<div class="gr gr--3" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem">' +
+      d.summary_highlights.map(function(h){
+        const color = h.tone==='red'?'#b00020':h.tone==='yellow'?'#a87a00':h.tone==='green'?'#1f7a3a':'#333';
+        return '<div style="padding:.75rem;border-left:3px solid '+color+';background:#fafafa">' +
+               '<div style="font-size:11px;color:#909090;text-transform:uppercase;letter-spacing:.5px">' + CSE(h.category||'') + '</div>' +
+               '<div style="font-weight:600;margin:.25rem 0">' + CSE(h.label||'—') + '</div>' +
+               '<div style="font-size:20px;font-weight:700;color:'+color+'">' + CSE(h.value||'—') + '</div>' +
+               (h.subtext ? '<div style="font-size:12px;color:#606060;margin-top:.25rem">' + CSE(h.subtext) + '</div>' : '') +
+               '</div>';
+      }).join('') + '</div>');
+  }
+  if (d.summary_key_findings && d.summary_key_findings.length) {
+    out += cs_section('Principais achados',
+      '<ul>' + d.summary_key_findings.map(function(f){
+        const tag = f.category ? '<span style="display:inline-block;padding:.1rem .5rem;background:#eaeaea;border-radius:3px;font-size:11px;margin-right:.5rem;text-transform:uppercase">'+CSE(f.category)+'</span>' : '';
+        return '<li style="margin-bottom:.5rem">' + tag + CSE(f.text||'—') + '</li>';
+      }).join('') + '</ul>');
+  }
+  if (d.counts) {
+    const c = d.counts;
+    out += cs_section('Veredito dos criativos',
+      cs_kv([
+        ['Total analisado', d.total_creatives_analyzed],
+        ['Score médio', d.average_score != null ? d.average_score + ' / 25' : '—'],
+        ['Manter', c.keep_count],
+        ['Otimizar', c.optimize_count],
+        ['Eliminar', c.eliminate_count]
+      ]));
+  }
+  if (d.creative_matrix && d.creative_matrix.length) {
+    out += cs_section('Matriz de criativos — scores por dimensão',
+      cs_table(['#','Tipo','Descrição','Hook','Clareza','ICP','CTA','Total'],
+        d.creative_matrix.map(function(c){
+          const total = (c.hook_score||0)+(c.clarity_score||0)+(c.icp_coherence_score||0)+(c.cta_score||0)+(c.production_score||0);
+          return [c.number||'—', CSE(c.type||'—'), CSE(c.description||'—'),
+                  c.hook_score!=null?c.hook_score:'—',
+                  c.clarity_score!=null?c.clarity_score:'—',
+                  c.icp_coherence_score!=null?c.icp_coherence_score:'—',
+                  c.cta_score!=null?c.cta_score:'—',
+                  total||'—'];
+        })
+      ));
+  }
+  if (d.patterns_identified && d.patterns_identified.length) {
+    out += cs_section('Padrões identificados',
+      '<ul>' + d.patterns_identified.map(function(p){
+        const aff = (p.affected_creatives||[]).join(', ');
+        return '<li><strong>' + CSE(p.pattern||'—') + '</strong>' +
+               (aff ? ' <span style="color:#909090">(criativos: '+CSE(aff)+')</span>' : '') +
+               (p.example ? '<br><span style="color:#606060;font-size:12.5px">' + CSE(p.example) + '</span>' : '') +
+               '</li>';
+      }).join('') + '</ul>');
+  }
+  if (d.what_works && d.what_works.length) {
+    out += cs_section('O que já funciona',
+      '<ul>' + d.what_works.map(function(w){
+        return '<li><strong>' + CSE(w.element||'—') + '</strong>' +
+               (w.reason ? '<br><span style="color:#606060;font-size:12.5px">' + CSE(w.reason) + '</span>' : '') +
+               '</li>';
+      }).join('') + '</ul>');
+  }
+  if (d.competitor_patterns_missing && d.competitor_patterns_missing.length) {
+    out += cs_section('Padrões de concorrência não explorados',
+      '<ul>' + d.competitor_patterns_missing.map(function(p){
+        return '<li><strong>' + CSE(p.pattern||'—') + '</strong>' +
+               (p.why_it_works ? '<br><span style="color:#606060;font-size:12.5px"><em>Por que funciona:</em> ' + CSE(p.why_it_works) + '</span>' : '') +
+               (p.how_client_could_implement ? '<br><span style="color:#606060;font-size:12.5px"><em>Como implementar:</em> ' + CSE(p.how_client_could_implement) + '</span>' : '') +
+               '</li>';
+      }).join('') + '</ul>');
+  }
+  if (d.production_briefing) {
+    const pb = d.production_briefing;
+    out += cs_section('Briefing de produção', '');
+    if (pb.hook_direction) out += '<p><strong>Direção de hook:</strong> ' + CSE(pb.hook_direction) + '</p>';
+    if (pb.hook_examples && pb.hook_examples.length) {
+      out += '<p><strong>Exemplos de hook:</strong></p><ul>' + pb.hook_examples.map(h => '<li>' + CSE(h) + '</li>').join('') + '</ul>';
+    }
+    const others = ['cta_direction','visual_direction','copy_direction','format_mix'];
+    others.forEach(function(k){
+      if (pb[k]) out += '<p><strong>' + k.replace(/_/g,' ').replace(/^./,c=>c.toUpperCase()) + ':</strong> ' + CSE(pb[k]) + '</p>';
+    });
+  }
+  if (d.key_insight) {
+    const ki = d.key_insight;
+    out += cs_section('Insight estratégico',
+      cs_callout(
+        (ki.headline ? '<strong>' + CSE(ki.headline) + '</strong>' : '') +
+        (ki.context ? '<p style="margin-top:.5rem">' + CSE(ki.context) + '</p>' : '') +
+        (ki.numbered_reasons && ki.numbered_reasons.length ? '<ol>' + ki.numbered_reasons.map(r => '<li>' + CSE(r) + '</li>').join('') + '</ol>' : '')
+      ));
+  }
+  if (d.honesty_alert) {
+    out += cs_honestyAlert(d.honesty_alert);
   }
   return out || cs_rawDump(d);
 };

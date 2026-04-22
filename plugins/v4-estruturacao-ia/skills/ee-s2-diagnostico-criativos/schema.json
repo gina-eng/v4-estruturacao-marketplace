@@ -5,6 +5,9 @@
   "type": "object",
   "required": [
     "summary",
+    "summary_headline",
+    "summary_highlights",
+    "summary_key_findings",
     "client_name",
     "segment",
     "creative_matrix",
@@ -170,6 +173,54 @@
                 ]
               }
             }
+          },
+          "preview": {
+            "type": "object",
+            "description": "Midia do criativo para embed no portal. Populado automaticamente pelo meta_ads_fetch.sh ou manualmente pelo operador.",
+            "properties": {
+              "image_url": {
+                "type": ["string", "null"],
+                "description": "Path relativo (ex: 'assets/creatives/meta/zenvet/{ad_id}/image.jpg') ou URL absoluta"
+              },
+              "thumbnail_url": {
+                "type": ["string", "null"],
+                "description": "Miniatura otimizada para grid"
+              },
+              "video_url": {
+                "type": ["string", "null"],
+                "description": "URL do CDN Meta (se for video) — renderer embeda direto via <video>"
+              },
+              "ads_library_id": {
+                "type": ["string", "null"],
+                "description": "ID do anuncio na Meta Ads Library"
+              },
+              "ads_library_url": {
+                "type": ["string", "null"],
+                "description": "Link direto para a pagina do anuncio no Meta Ads Library"
+              },
+              "start_date": {
+                "type": ["string", "null"],
+                "description": "Data de inicio da veiculacao (ISO)"
+              },
+              "platforms": {
+                "type": "array",
+                "items": {"type": "string"},
+                "description": "Plataformas onde o anuncio foi veiculado (facebook, instagram, messenger, audience_network)"
+              },
+              "cta_type": {
+                "type": ["string", "null"],
+                "description": "Tipo de CTA (LEARN_MORE, MESSAGE_PAGE, SHOP_NOW, etc.)"
+              },
+              "source": {
+                "type": "string",
+                "enum": ["meta_ads_library", "uploaded", "unavailable"],
+                "description": "De onde veio a midia"
+              },
+              "fetched_at": {
+                "type": ["string", "null"],
+                "format": "date-time"
+              }
+            }
           }
         }
       },
@@ -249,7 +300,11 @@
           },
           "active_ads_count": {
             "type": "integer",
-            "description": "Numero de anuncios ativos"
+            "description": "Numero de anuncios ativos (Meta Ads Library)"
+          },
+          "ads_library_url": {
+            "type": "string",
+            "description": "Link direto para a Meta Ads Library do concorrente"
           },
           "creative_pattern": {
             "type": "string",
@@ -262,10 +317,78 @@
           "what_to_avoid": {
             "type": "string",
             "description": "O que nao copiar"
+          },
+          "gap_para_cliente": {
+            "type": "boolean",
+            "description": "True se o concorrente usa um padrao que o cliente NAO usa e deveria testar."
+          },
+          "replication_idea": {
+            "type": ["string", "null"],
+            "description": "Se gap_para_cliente=true, ideia concreta para o cliente replicar (formato, hook, angulo). null quando gap=false."
+          },
+          "sample_ads": {
+            "type": "array",
+            "description": "Ate 6 anuncios de exemplo do concorrente para embed no portal. Populado pelo meta_ads_fetch.sh.",
+            "items": {
+              "type": "object",
+              "properties": {
+                "ads_library_id": {"type": ["string", "null"]},
+                "ads_library_url": {"type": ["string", "null"]},
+                "image_url": {"type": ["string", "null"]},
+                "thumbnail_url": {"type": ["string", "null"]},
+                "video_url": {"type": ["string", "null"]},
+                "copy_excerpt": {"type": ["string", "null"], "description": "Primeiros 150 caracteres do copy"},
+                "start_date": {"type": ["string", "null"]},
+                "platforms": {"type": "array", "items": {"type": "string"}},
+                "cta_type": {"type": ["string", "null"]}
+              }
+            }
           }
         }
       },
-      "description": "Analise de criativos de concorrentes"
+      "description": "Analise de criativos de concorrentes na Meta Ads Library"
+    },
+    "competitor_patterns_missing": {
+      "type": "array",
+      "description": "Padroes recorrentes dos concorrentes que o cliente NAO usa — lista priorizada de gaps acionaveis. Mesma logica do ee-s2-diagnostico-organico-ig para coerencia cross-outputs.",
+      "items": {
+        "type": "object",
+        "required": [
+          "pattern",
+          "seen_in_competitors",
+          "why_it_works",
+          "how_client_could_implement"
+        ],
+        "properties": {
+          "pattern": {
+            "type": "string",
+            "description": "Descricao do padrao (ex: 'video vertical com case real + depoimento em texto sobreposto')"
+          },
+          "seen_in_competitors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Nomes dos concorrentes que usam o padrao"
+          },
+          "ads_count": {
+            "type": "integer",
+            "description": "Quantos anuncios dos concorrentes usam esse padrao"
+          },
+          "why_it_works": {
+            "type": "string",
+            "description": "Por que provavelmente funciona para o ICP do cliente"
+          },
+          "how_client_could_implement": {
+            "type": "string",
+            "description": "Como o cliente poderia implementar (acionavel, nao generico)"
+          },
+          "priority": {
+            "type": "string",
+            "enum": ["alta", "media", "baixa"]
+          }
+        }
+      }
     },
     "production_briefing": {
       "type": "object",
@@ -385,6 +508,101 @@
     "summary": {
       "type": "string",
       "description": "Resumo de 1-2 frases do diagnóstico de criativos. Inclui principais padrões encontrados e ação prioritária."
+    },
+    "summary_headline": {
+      "type": "string",
+      "maxLength": 200,
+      "description": "Manchete em 1 linha com o veredito da analise. Ex: 'Zenvet: 7 de 10 criativos falham no hook — oportunidade de redesenho antes de escalar midia'. Ver PADRAO-OUTPUT.md."
+    },
+    "summary_highlights": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 8,
+      "description": "KPIs visuais categorizados para o resumo executivo. Ex: {category:'maturidade', label:'Score medio', value:'13,2/25', tone:'yellow'}.",
+      "items": {
+        "type": "object",
+        "required": ["category", "label", "value"],
+        "properties": {
+          "category": {
+            "type": "string",
+            "enum": ["posicao", "competicao", "janela", "maturidade", "oportunidade", "risco"]
+          },
+          "label": {
+            "type": "string",
+            "maxLength": 40
+          },
+          "value": {
+            "type": "string"
+          },
+          "subtext": {
+            "type": "string",
+            "maxLength": 80
+          },
+          "tone": {
+            "type": "string",
+            "enum": ["green", "yellow", "red", "blue", "gray"]
+          }
+        }
+      }
+    },
+    "summary_key_findings": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 6,
+      "description": "Achados categorizados. Cobrir pelo menos 3 dos 4 tipos (vantagem/contexto/ameaca/acao).",
+      "items": {
+        "type": "object",
+        "required": ["category", "text"],
+        "properties": {
+          "category": {
+            "type": "string",
+            "enum": ["vantagem", "contexto", "ameaca", "acao"]
+          },
+          "text": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "key_insight": {
+      "type": "object",
+      "description": "Ponto de alavancagem desta skill — para diagnostico de criativos, e o padrao criativo mais impactante (problema recorrente ou sucesso a amplificar) OU o gap mais assimetrico vs concorrente. Ver PADRAO-OUTPUT.md.",
+      "properties": {
+        "headline": {
+          "type": "string",
+          "description": "Frase-manchete do ponto (pode virar quote destacada)"
+        },
+        "context": {
+          "type": "string",
+          "description": "Contexto em 2-3 linhas explicando o cenario"
+        },
+        "numbered_reasons": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "Razoes numeradas (renderer vira 3 cards)"
+        },
+        "discussion_anchor": {
+          "type": "string",
+          "description": "Por que este e o ponto para stakeholder decidir/validar"
+        }
+      }
+    },
+    "honesty_alert": {
+      "type": "string",
+      "description": "Alerta se o diagnostico revelou fragilidade critica (ex: cliente nao tem criativos pagos ativos, base insuficiente para analise, concorrentes dominam com volume que o cliente nao consegue acompanhar). Nunca omitir se justificado."
+    },
+    "source_outputs": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Outputs consultados para cross-referencia (ex: 'ee-s2-diagnostico-midia.json' para performance por criativo, 'ee-s1-persona-icp.json' para ICP)."
+    },
+    "period": {
+      "type": "object",
+      "description": "Periodo coberto pelos criativos analisados (se aplicavel).",
+      "properties": {
+        "start": {"type": "string", "format": "date"},
+        "end": {"type": "string", "format": "date"}
+      }
     }
   }
 }

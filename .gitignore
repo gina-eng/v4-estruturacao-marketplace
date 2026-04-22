@@ -2,3 +2,6 @@
 .credentials/
 plugins/v4-estruturacao-ia/shared-templates/Downloads/
 clientes/*/cache/
+clientes/*/assets/creatives/**/*.mp4
+clientes/*/assets/creatives/**/*.mov
+clientes/*/assets/creatives/**/*.webm
