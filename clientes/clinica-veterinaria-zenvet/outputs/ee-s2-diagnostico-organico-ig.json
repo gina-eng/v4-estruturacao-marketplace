@@ -1,0 +1,411 @@
+{
+  "summary": "Zenvet tem o MAIOR engagement proxy dos 3 (1,202% vs LM+ 0,781% e Cantinho 1,108%) e o maior volume (19 posts/90d vs 4 do LM+ e 10 do Cantinho) — o feed organico ja performa acima da concorrencia local. Gap critico: zero carrosseis educativos em 90 dias enquanto Cantinho faz 20% do mix nesse formato, e nenhum post coloca 'felinos' no centro do briefing apesar de ser o posicionamento declarado. Acao prioritaria: lancar serie mensal de 4 carrosseis felinos (Mariana-first) nos proximos 30 dias.",
+
+  "client_name": "Clínica Veterinária Zenvet",
+  "period": { "start": "2026-01-21", "end": "2026-04-21", "days": 90 },
+
+  "client_account": {
+    "username": "clinicazenvet",
+    "name": "ZENVET - Clinica Veterinária - Domicílio - Americana SP",
+    "biography": "🩺 Esp. em felinos 🐱 Clinica geral de cães🐶. \nAtendimento cat friendly em casa ou na clínica!\n📍 Av. Pascoal Ardito 792, São Manoel, Americana SP",
+    "profile_picture_url": "https://scontent.cdninstagram.com/v/t51.2885-19/552930322_1155081056712680_3824500906006437706_n.jpg",
+    "followers_count": 3551,
+    "follows_count": 2119,
+    "media_count_total": 484,
+    "posts_90d": 19,
+    "permalink": "https://www.instagram.com/clinicazenvet/"
+  },
+
+  "competitor_accounts": [
+    {
+      "username": "lmveterinaria",
+      "name": "LM Hospital Veterinário",
+      "biography": "🏥Aberto 24 H\n🪵Com amor para as Famílias Multiespécies\n💫Med.Vet.Preventiva e Integrada\n🍀Método PVPet - 4Ps",
+      "profile_picture_url": "https://scontent.cdninstagram.com/v/t51.2885-19/552737498_1295895645595728_7538253268495858810_n.jpg",
+      "website": "http://linktr.ee/LMVeterinaria",
+      "followers_count": 13031,
+      "follows_count": 2020,
+      "media_count_total": 1680,
+      "posts_90d": 4,
+      "permalink": "https://www.instagram.com/lmveterinaria/"
+    },
+    {
+      "username": "clinicacantinhodomascote",
+      "name": "Cantinho do Mascote",
+      "biography": "🏥 | Clínica Veterinária 24h (Unidade 1)\n🐾 | 3 clínicas para cuidar do seu mascote\n🤝 | Parceria com @premierpet",
+      "profile_picture_url": "https://scontent.cdninstagram.com/v/t51.2885-19/512625517_17928920373047294_1128088014290317543_n.jpg",
+      "website": "https://wa.me/5519993920717",
+      "followers_count": 4550,
+      "follows_count": 104,
+      "media_count_total": 1531,
+      "posts_90d": 10,
+      "permalink": "https://www.instagram.com/clinicacantinhodomascote/"
+    }
+  ],
+
+  "format_distribution": {
+    "by_account": [
+      { "username": "clinicazenvet", "counts": { "FEED_IMAGE": 3, "CAROUSEL": 0, "REELS": 16, "VIDEO": 0 } },
+      { "username": "lmveterinaria", "counts": { "FEED_IMAGE": 1, "CAROUSEL": 0, "REELS": 3, "VIDEO": 0 } },
+      { "username": "clinicacantinhodomascote", "counts": { "FEED_IMAGE": 3, "CAROUSEL": 2, "REELS": 5, "VIDEO": 0 } }
+    ],
+    "insight": "Zenvet aposta 84% em Reels e tem ZERO carrosseis em 90 dias — fica cega ao formato que o Cantinho usa para conteudo educativo (20% do mix: Dia Mundial do Rim, alerta Pascoa, Dia Mundial do Gato). Reels resolve alcance; carrossel resolve autoridade. Ausencia completa de carrosseis e o unico gap de formato da Zenvet — LM+ tambem nao usa, entao o espaco esta aberto."
+  },
+
+  "cadence": {
+    "by_account": [
+      { "username": "clinicazenvet", "posts_per_week": 1.46, "preferred_weekday": null, "preferred_hour": null },
+      { "username": "lmveterinaria", "posts_per_week": 0.31, "preferred_weekday": null, "preferred_hour": null },
+      { "username": "clinicacantinhodomascote", "posts_per_week": 0.77, "preferred_weekday": null, "preferred_hour": null }
+    ],
+    "insight": "Zenvet posta 4,7x mais que o LM+ e 1,9x mais que o Cantinho — e claramente a voz mais ativa da microrregiao. LM+ esta letargico no Instagram (1 post a cada ~3 semanas) apesar de 13K seguidores: sinal de que o concorrente com maior reach esta tirando o pe do conteudo organico, janela aberta para Zenvet dominar share of voice local."
+  },
+
+  "engagement_benchmark": {
+    "by_account": [
+      { "username": "clinicazenvet", "avg_likes": 33.5, "avg_comments": 3.1, "avg_engagement_proxy": 1.202, "best_format_by_engagement": "REELS" },
+      { "username": "lmveterinaria", "avg_likes": 54.5, "avg_comments": 15.8, "avg_engagement_proxy": 0.781, "best_format_by_engagement": "REELS" },
+      { "username": "clinicacantinhodomascote", "avg_likes": 36.3, "avg_comments": 4.7, "avg_engagement_proxy": 1.108, "best_format_by_engagement": "REELS" }
+    ],
+    "insight": "Zenvet ja lidera o engagement proxy local (1,202%) apesar de ter 27% dos seguidores do LM+. LM+ tem 5x mais comentarios absolutos por post (15,8 vs 3,1) — sinal de que base engajada reage, mas volume baixo nao sustenta. Tres contas tem Reels como melhor formato — a briga nao e 'qual formato', e 'qual angulo dentro do Reels'."
+  },
+
+  "top_posts": [
+    {
+      "username": "clinicazenvet",
+      "permalink": "https://www.instagram.com/reel/DWZsbj5j64g/",
+      "embed_url": "https://www.instagram.com/reel/DWZsbj5j64g/embed/",
+      "media_type": "VIDEO",
+      "format": "REELS",
+      "timestamp": "2026-03-27T20:35:02+0000",
+      "caption": "Será que Dra Nathalia é assim mesmo? Kkkk quem conhece sabe!",
+      "caption_length": 60,
+      "hashtags_count": 0,
+      "mentions_count": 0,
+      "has_cta": false,
+      "like_count": 90,
+      "comments_count": 4,
+      "engagement_proxy": 2.872,
+      "diagnosis": "Humor + personalidade da Nathalia em caption ultra-curta (60 char) — o post com maior engajamento do cliente nao vende servico, vende pessoa. Replica esse angulo: serie 'bastidores da Dra Nathalia' mensal.",
+      "gap_para_cliente": false
+    },
+    {
+      "username": "clinicazenvet",
+      "permalink": "https://www.instagram.com/reel/DUNv5PHEXDx/",
+      "embed_url": "https://www.instagram.com/reel/DUNv5PHEXDx/embed/",
+      "media_type": "VIDEO",
+      "format": "REELS",
+      "timestamp": "2026-02-01T12:12:04+0000",
+      "caption": "Nossa Fênix segue feliz, comendo comida boa, tendo acompanhamento de dor, e muito carinho! Voce veio para mostrar a todos da ZENVET, que existe vontade de viver! Te amo pra sempre minha Fênix!",
+      "caption_length": 192,
+      "hashtags_count": 0,
+      "mentions_count": 0,
+      "has_cta": false,
+      "like_count": 42,
+      "comments_count": 9,
+      "engagement_proxy": 1.943,
+      "diagnosis": "Historia de paciente real com acompanhamento longitudinal — toca diretamente a dor 'meu pet vai ser tratado com carinho?' do ICP Mariana. Formato 'historia de paciente' gera comentarios (9, acima da media). Sistematizar em serie mensal.",
+      "gap_para_cliente": false
+    },
+    {
+      "username": "clinicazenvet",
+      "permalink": "https://www.instagram.com/reel/DT-a6X2EYBd/",
+      "embed_url": "https://www.instagram.com/reel/DT-a6X2EYBd/embed/",
+      "media_type": "VIDEO",
+      "format": "REELS",
+      "timestamp": "2026-01-26T13:21:37+0000",
+      "caption": "Um novo conceito em atendimento pet friendly! 🐶🐱 Conheça a Zenvet, onde nossa principal missão é cuidar do seu pet como se fosse o nosso! 📌 Rua São Gabriel 839, São Manoel, Americana! Atendimento na clinica e a domicílio, o que for mais confortável para você e seu pet!",
+      "caption_length": 269,
+      "hashtags_count": 0,
+      "mentions_count": 0,
+      "has_cta": false,
+      "like_count": 49,
+      "comments_count": 6,
+      "engagement_proxy": 1.887,
+      "diagnosis": "Post institucional de apresentacao com endereco — performa bem (1,887%) porque entrega info concreta (local, formato de atendimento). Mas fala 'cao e gato' indistintamente: deveria reforcar 'especialista em felinos' visto que e a biografia do perfil.",
+      "gap_para_cliente": false
+    },
+    {
+      "username": "lmveterinaria",
+      "permalink": "https://www.instagram.com/reel/DU6tjqbASEh/",
+      "embed_url": "https://www.instagram.com/reel/DU6tjqbASEh/embed/",
+      "media_type": "VIDEO",
+      "format": "REELS",
+      "timestamp": "2026-02-18T23:17:40+0000",
+      "caption": "Dia de festa na LM hoje! 🥳 Hoje comemoramos o aniversário de quem deu início a toda essa jornada 🎈🎊 Mais do que um profissional experiente que cuida com maestria de cada pet, ele é o coração por trás do nosso hospital 🐶🐱 Sua trajetória é marcada pelo respeito e pela confiança que conquistou de tantos tutores e pets ao longo dos anos! Parabéns ao nosso querido sócio-fundador ronaldocuquicandido ✨ 🥳",
+      "caption_length": 554,
+      "hashtags_count": 0,
+      "mentions_count": 0,
+      "has_cta": false,
+      "like_count": 172,
+      "comments_count": 59,
+      "engagement_proxy": 2.678,
+      "diagnosis": "Aniversario do socio-fundador com 59 comentarios — mostra que base do LM+ responde forte a conteudo de pessoas, nao de servico. Mesma mecanica que funciona para Zenvet com Dra Nathalia: humanizacao da lideranca tecnica gera comunidade.",
+      "gap_para_cliente": false
+    },
+    {
+      "username": "lmveterinaria",
+      "permalink": "https://www.instagram.com/reel/DUQ3lF_jvSo/",
+      "embed_url": "https://www.instagram.com/reel/DUQ3lF_jvSo/embed/",
+      "media_type": "VIDEO",
+      "format": "REELS",
+      "timestamp": "2026-02-02T17:16:47+0000",
+      "caption": "A Pollyana é uma paciente muito querida, ela esta com 13 anos e é acompanhada pelo Dr. Ronaldo desde 2012 quando nasceu. Sua familia cuida dela com muito amor e carinho e realiza todas ações de saude para que ela tenha uma vida saudável e com bem estar, faz mapeamento de saude anual, cuida da saude bucal, tem acompanhamento semanal com terapias preventivas no Circuito PVPet... #pvpet #planejamentodevidapet #medvetpreventiva",
+      "caption_length": 629,
+      "hashtags_count": 5,
+      "mentions_count": 0,
+      "has_cta": false,
+      "like_count": 29,
+      "comments_count": 2,
+      "engagement_proxy": 0.269,
+      "diagnosis": "Historia de paciente longitudinal (Pollyana, 13 anos, desde 2012) com metodologia proprietaria PVPet — mesma estrutura que a Zenvet usou com 'Fenix', mas LM+ executa com enquadramento tecnico-metodologico. Zenvet pode replicar com 'Diario da Mariana' (felino longitudinal) com angulo mais emocional.",
+      "gap_para_cliente": true
+    },
+    {
+      "username": "lmveterinaria",
+      "permalink": "https://www.instagram.com/p/DVocypbDoBy/",
+      "embed_url": "https://www.instagram.com/p/DVocypbDoBy/embed/",
+      "media_type": "IMAGE",
+      "format": "FEED_IMAGE",
+      "timestamp": "2026-03-08T17:00:44+0000",
+      "caption": "🌹Feliz Dia da Mulher em especial para as mulheres que fazem parte da equipe LM+ Hoje é dia de celebrar a força imensa que cada uma de vocês carrega, a coragem de enfrentar as batalhas diárias (aquelas que todo mundo vê e aquelas que só vocês conhecem) e a determinação para correr atrás dos seus sonhos.",
+      "caption_length": 303,
+      "hashtags_count": 0,
+      "mentions_count": 0,
+      "has_cta": false,
+      "like_count": 12,
+      "comments_count": 2,
+      "engagement_proxy": 0.138,
+      "diagnosis": "Post de data comemorativa padrao — performance fraca (0,138%) mesmo para o maior concorrente. Sinaliza que Dia da Mulher sem angulo proprio nao entrega. Zenvet ja cometeu erro similar (Pascoa bottom post). Evitar feed de feriado generico.",
+      "gap_para_cliente": false
+    },
+    {
+      "username": "clinicacantinhodomascote",
+      "permalink": "https://www.instagram.com/reel/DXPwtUzAJE_/",
+      "embed_url": "https://www.instagram.com/reel/DXPwtUzAJE_/embed/",
+      "media_type": "VIDEO",
+      "format": "REELS",
+      "timestamp": "2026-04-17T13:15:20+0000",
+      "caption": "Comemorar pra gente é cuidar 💛🐾 Doe 10kg de ração e faça parte disso… Agora me conta 👀 Quem acertar primeiro ganha caneca + o presente desse ano 🎁 Qual você acha que é?”",
+      "caption_length": 175,
+      "hashtags_count": 4,
+      "mentions_count": 0,
+      "has_cta": true,
+      "like_count": 56,
+      "comments_count": 29,
+      "engagement_proxy": 3.143,
+      "diagnosis": "Campanha de doacao gamificada com CTA triplo (doar + adivinhar + ganhar caneca) — maior engajamento do recorte (3,143%, 29 comentarios). Formato gerador de comunidade: causa social + mecanica ludica. Zenvet nao tem NENHUMA campanha social em 90 dias.",
+      "gap_para_cliente": true
+    },
+    {
+      "username": "clinicacantinhodomascote",
+      "permalink": "https://www.instagram.com/reel/DVZCQ09AN4w/",
+      "embed_url": "https://www.instagram.com/reel/DVZCQ09AN4w/embed/",
+      "media_type": "VIDEO",
+      "format": "REELS",
+      "timestamp": "2026-03-02T19:49:24+0000",
+      "caption": "Olá! 💙 É com grande alegria que convidamos você para a reinauguração da Unidade 3 do Cantinho do Mascote. Preparamos um espaço renovado que integra a Clínica Cantinho do Mascote e o Clubinho do Mascote com estética animal, oferecendo uma estrutura ainda mais moderna e acolhedora...",
+      "caption_length": 297,
+      "hashtags_count": 0,
+      "mentions_count": 0,
+      "has_cta": true,
+      "like_count": 103,
+      "comments_count": 7,
+      "engagement_proxy": 2.725,
+      "diagnosis": "Evento de inauguracao com convite explicito — transforma conteudo em evento fisico. Mecanica que Zenvet pode adaptar se/quando adequar a estrutura felino-friendly (sala separada, Feliway): 'reinauguracao do espaco felino' como marco de branding.",
+      "gap_para_cliente": true
+    },
+    {
+      "username": "clinicacantinhodomascote",
+      "permalink": "https://www.instagram.com/reel/DWmqcuZgGM9/",
+      "embed_url": "https://www.instagram.com/reel/DWmqcuZgGM9/embed/",
+      "media_type": "VIDEO",
+      "format": "REELS",
+      "timestamp": "2026-04-01T19:35:24+0000",
+      "caption": "A Páscoa está chegando… e com ela, o chocolate 🍫 Mas atenção: para os mascotes, ele pode ser um grande perigo! 🐶🐱 Fique atento e proteja quem você ama! Nós da Clínica Cantinho do Mascote estamos à disposição para cuidar com carinho de quem você ama 🐾❤️",
+      "caption_length": 253,
+      "hashtags_count": 5,
+      "mentions_count": 0,
+      "has_cta": true,
+      "like_count": 58,
+      "comments_count": 4,
+      "engagement_proxy": 1.538,
+      "diagnosis": "Alerta de risco atrelado a data comemorativa (Pascoa + chocolate = toxico). Angulo educativo com utilidade imediata — transforma feriado generico em conteudo de autoridade. Zenvet perdeu essa janela: post de Pascoa do cliente foi 'bom feriado' generico (bottom 1).",
+      "gap_para_cliente": true
+    }
+  ],
+
+  "bottom_posts": [
+    {
+      "username": "clinicazenvet",
+      "permalink": "https://www.instagram.com/p/DWqyNQBkfxA/",
+      "embed_url": "https://www.instagram.com/p/DWqyNQBkfxA/embed/",
+      "media_type": "IMAGE",
+      "format": "FEED_IMAGE",
+      "timestamp": "2026-04-03T11:52:13+0000",
+      "caption": "🐰✨ Final de semana prolongado com atendimento normal por aqui! Na ZenVet, seu pet continua recebendo todo o cuidado e carinho de sempre 💜🐶🐱 ⏰ Estaremos atendendo das 08h às 20h 📍 Venha nos visitar! Desejamos uma Páscoa cheia de amor, saúde e muitos momentos especiais ao lado do seu pet 🐣🌸 #ZenVet #PáscoaPet #ClínicaVeterinária #AmorAnimal #AmericanaSP",
+      "caption_length": 357,
+      "hashtags_count": 5,
+      "mentions_count": 0,
+      "has_cta": false,
+      "like_count": 6,
+      "comments_count": 0,
+      "engagement_proxy": 0.169,
+      "diagnosis": "Pascoa generica sem angulo proprio — enquanto o Cantinho pegou o mesmo feriado e transformou em alerta de risco (chocolate = toxico, eng 1,538%), a Zenvet deu aviso operacional de horario. Mesma data, 9x menos engajamento. Feriado sem utilidade = disperdicio de slot."
+    },
+    {
+      "username": "clinicazenvet",
+      "permalink": "https://www.instagram.com/reel/DXCtmOxEVAg/",
+      "embed_url": "https://www.instagram.com/reel/DXCtmOxEVAg/embed/",
+      "media_type": "VIDEO",
+      "format": "REELS",
+      "timestamp": "2026-04-12T18:54:10+0000",
+      "caption": "O que faz a vet feliz? Isso!!! Um pouquinho do que rolou por aqui essa semana!",
+      "caption_length": 78,
+      "hashtags_count": 0,
+      "mentions_count": 0,
+      "has_cta": false,
+      "like_count": 13,
+      "comments_count": 0,
+      "engagement_proxy": 0.366,
+      "diagnosis": "Caption meta-reflexiva sem ancora concreta — 'o que rolou essa semana' nao diz pro algoritmo (nem pro tutor) do que se trata. Ausencia de hook no primeiro frame. Bastidores funcionam so quando tem rosto + contexto (ex: top 1 com 'Dra Nathalia kkk')."
+    },
+    {
+      "username": "clinicazenvet",
+      "permalink": "https://www.instagram.com/reel/DXFzfM2EUBo/",
+      "embed_url": "https://www.instagram.com/reel/DXFzfM2EUBo/embed/",
+      "media_type": "VIDEO",
+      "format": "REELS",
+      "timestamp": "2026-04-13T23:43:31+0000",
+      "caption": "Alerta informação 📢",
+      "caption_length": 19,
+      "hashtags_count": 0,
+      "mentions_count": 0,
+      "has_cta": false,
+      "like_count": 17,
+      "comments_count": 1,
+      "engagement_proxy": 0.563,
+      "diagnosis": "Caption de 19 caracteres sem payload informativo. 'Alerta informacao' e um teaser sem promessa — o algoritmo nao tem sinal de tema, o tutor nao tem motivo para parar. Reels curtos exigem hook denso nos 3 primeiros segundos (audio + legenda + texto-na-tela)."
+    }
+  ],
+
+  "competitor_patterns_missing": [
+    {
+      "pattern": "Carrosseis educativos em datas-gancho (Dia Mundial do X, alerta de risco sazonal)",
+      "seen_in_count": 3,
+      "seen_in_competitors": ["clinicacantinhodomascote"],
+      "example_permalinks": [
+        "https://www.instagram.com/p/DWoQp56jVAD/",
+        "https://www.instagram.com/p/DVyqWFJjeFX/",
+        "https://www.instagram.com/p/DU2vcU3j-Jf/"
+      ],
+      "why_works": "Carrossel forca o tutor a deslizar = tempo de tela alto = sinal de qualidade para o algoritmo. Data comemorativa da gancho orgânico (buscas aumentam na data). Cantinho amarra 'Dia Mundial do Gato' em 'recepcao exclusiva para felinos' = institucional virou educativo.",
+      "how_to_apply": "Calendario mensal de 2 carrosseis educativos felinos (5-7 slides): 'Sinais de dor escondida em gatos', 'Como transportar seu gato sem trauma', 'Quando levar o gato ao vet', 'Vacinas essenciais para felinos'. Amarrar em datas: Dia Mundial do Gato (8/ago), Dia do Rim (10/mar), Outubro Rosa Felino."
+    },
+    {
+      "pattern": "Campanha social/causa com mecanica ludica (doar + adivinhar + ganhar)",
+      "seen_in_count": 1,
+      "seen_in_competitors": ["clinicacantinhodomascote"],
+      "example_permalinks": ["https://www.instagram.com/reel/DXPwtUzAJE_/"],
+      "why_works": "Transforma o follower em ator (doar) + incentiva engajamento (adivinhar) + cria recompensa (caneca/presente). 29 comentarios em um post = maior comunidade gerada em toda a amostra. Conteudo-causa constroi imagem de marca que 'faz o bem' — mapa direto para persona Mariana (humanizada, sensivel).",
+      "how_to_apply": "Lancar 'Campanha Gato de Rua' trimestral: doacao de racao felina para ONG parceira local. Mecanica: 'adivinhe quantos gatos atendemos em domicilio esse mes' — acertos ganham sessao gratis de escovacao. Amarrar a posicionamento de especialista felino."
+    },
+    {
+      "pattern": "Historia de paciente longitudinal com tecnica + emocao (paciente fixo como serie)",
+      "seen_in_count": 2,
+      "seen_in_competitors": ["lmveterinaria", "clinicazenvet"],
+      "example_permalinks": [
+        "https://www.instagram.com/reel/DUQ3lF_jvSo/",
+        "https://www.instagram.com/reel/DUNv5PHEXDx/"
+      ],
+      "why_works": "LM+ usa 'Pollyana, 13 anos, desde 2012' para ancorar metodologia PVPet. Zenvet ja acertou com 'Fenix' (top 2 do cliente). Publico engaja com jornada, nao com servico — paciente virou marca.",
+      "how_to_apply": "Zenvet JA tem esse padrao (Fenix) mas nao sistematizou. Escolher 2-3 felinos recorrentes e criar 'Diario do Simba' / 'Diario da Fenix' mensal — paciente vira personagem. Cliente ja vence nesse angulo, falta apenas escalar em serie."
+    },
+    {
+      "pattern": "CTA explicito no post (endereco + telefone + convite direto)",
+      "seen_in_count": 2,
+      "seen_in_competitors": ["clinicacantinhodomascote"],
+      "example_permalinks": ["https://www.instagram.com/reel/DXPwtUzAJE_/", "https://www.instagram.com/reel/DVZCQ09AN4w/"],
+      "why_works": "Cantinho usa WhatsApp direto na bio (wa.me/5519993920717) e todos os top posts tem CTA explicito. Zenvet tem zero has_cta=true nos top posts — perde a janela de converter engajamento em conversa. LM+ tambem erra aqui.",
+      "how_to_apply": "Adicionar CTA em TODO Reels de servico/condicao: 'Agende pelo WhatsApp: [link bio]', 'Envie DM com duvidas sobre seu gato'. Atualizar bio: substituir (ou adicionar junto) um link wa.me direto. Hoje a bio nao tem link clicavel."
+    }
+  ],
+
+  "client_winning_patterns": [
+    {
+      "pattern": "Humor + personalidade da lideranca tecnica (Dra Nathalia)",
+      "seen_in_count": 1,
+      "example_permalinks": ["https://www.instagram.com/reel/DWZsbj5j64g/"],
+      "recommendation": "Top 1 do cliente (eng 2,872%) e 'Dra Nathalia kkk' com 60 caracteres de caption — vence ate o top 1 do LM+ (com 100x mais seguidores, eng 2,678%). Lancar serie 'Dia na Clinica com a Dra Nath' quinzenal: 15s, humor, zero roteiro, 1-2 palavras na legenda. Humanizacao da lideranca tecnica = fosso defensivo que LM+ e Cantinho nao replicam facilmente."
+    },
+    {
+      "pattern": "Volume consistente de Reels (1,46/semana vs 0,31 LM+ e 0,77 Cantinho)",
+      "seen_in_count": 19,
+      "recommendation": "Cliente posta 4,7x mais que o LM+ e quase 2x mais que o Cantinho. Share of voice organico ja e da Zenvet. Manter cadencia 1-2 Reels/semana e empilhar 4 carrosseis/mes (gap identificado) = liderar o feed local por volume E por variedade. LM+ esta letargico — janela aberta para virar 'o perfil veterinario que voce sempre ve' em Americana."
+    },
+    {
+      "pattern": "Historia de paciente com narrativa emocional (Fenix)",
+      "seen_in_count": 1,
+      "example_permalinks": ["https://www.instagram.com/reel/DUNv5PHEXDx/"],
+      "recommendation": "Top 2 do cliente (eng 1,943%, 9 comentarios) e a historia da Fenix. Cliente JA DOMINA esse angulo mas faz 1 vez em 90 dias. Transformar em serie mensal fixa (mesmo paciente recorrente ou pacientes diferentes): 'Historia do mes', com timeline + depoimento do tutor + antes/depois."
+    }
+  ],
+
+  "instagram_compliance": {
+    "aspect_ratio_issues_count": 0,
+    "notes": "Nao foram detectados problemas evidentes de aspect ratio nos Reels/feed amostrados. Recomendacao: padronizar Reels em 9:16 com safe zones de texto (evitar texto nos 14% inferiores — zona de interface IG)."
+  },
+
+  "next_actions": [
+    {
+      "action": "Lancar serie mensal de 4 carrosseis educativos felinos (Mariana-first). Primeiros titulos: 'Sinais de dor que seu gato esconde', 'Como transportar seu gato sem trauma', 'Vacinas essenciais para felinos', 'Quando levar o gato ao vet'.",
+      "impact": "alto",
+      "effort": "medio",
+      "priority": 1
+    },
+    {
+      "action": "Sistematizar serie 'Dia com a Dra Nathalia' quinzenal (15s, humor, zero roteiro). Replicar mecanica do top 1 do cliente em cadencia fixa — fosso defensivo de humanizacao.",
+      "impact": "alto",
+      "effort": "baixo",
+      "priority": 2
+    },
+    {
+      "action": "Criar serie 'Diario do Paciente' mensal (paciente recorrente como personagem). Fenix ja funcionou — escolher 2-3 felinos fixos e construir jornada longitudinal (timeline + antes/depois + depoimento do tutor).",
+      "impact": "alto",
+      "effort": "baixo",
+      "priority": 3
+    },
+    {
+      "action": "Adicionar link wa.me clicavel na bio e CTA explicito em TODO Reels de servico ('Agende pelo WhatsApp: link bio'). Zero dos top 3 posts do cliente tem CTA — perde a conversao que ja esta no engajamento.",
+      "impact": "alto",
+      "effort": "baixo",
+      "priority": 4
+    },
+    {
+      "action": "Lancar campanha social trimestral 'Gato de Rua' (doacao de racao + mecanica ludica 'adivinhe X ganha Y'). Replica o padrao #1 do Cantinho (maior engajamento do recorte) + amarra ao posicionamento felino.",
+      "impact": "medio",
+      "effort": "alto",
+      "priority": 5
+    },
+    {
+      "action": "Parar posts de feriado generico sem angulo proprio (ex: Pascoa 'bom feriado'). Substituir por 'alerta de risco sazonal' quando o feriado permitir (Pascoa/chocolate, Natal/ossos, Sao Joao/fogos).",
+      "impact": "medio",
+      "effort": "baixo",
+      "priority": 6
+    },
+    {
+      "action": "Reforcar 'especialista em felinos' na primeira frase dos captions de posts institucionais — o top 3 do cliente ('um novo conceito pet friendly') fala generico 'cao e gato' apesar da bio dizer 'Esp. em felinos'. Coerencia de posicionamento puxa Mariana.",
+      "impact": "medio",
+      "effort": "baixo",
+      "priority": 7
+    },
+    {
+      "action": "Testar horario de postagem consistente (ex: terca e quinta, 19h). Hoje nao ha preferencia detectavel — padronizar aumenta recorrencia algoritmica e habituacao da audiencia.",
+      "impact": "baixo",
+      "effort": "baixo",
+      "priority": 8
+    }
+  ],
+
+  "completed_at": "2026-04-21T20:10:00+00:00"
+}

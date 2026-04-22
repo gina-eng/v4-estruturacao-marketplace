@@ -1,3 +1,4 @@
 .vercel
 .credentials/
 plugins/v4-estruturacao-ia/shared-templates/Downloads/
+clientes/*/cache/

@@ -1,0 +1,263 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Revisão Semanal",
+  "description": "Output estruturado da skill de revisão semanal: pente-fino cross-outputs, gaps narrativos e diffs aplicáveis aos outputs que alimentam o portal.",
+  "type": "object",
+  "required": [
+    "summary",
+    "semana_revisada",
+    "skills_revisadas",
+    "divergencias_factuais",
+    "gaps_narrativos",
+    "atualizacoes_propostas"
+  ],
+  "properties": {
+    "summary": {
+      "type": "string",
+      "description": "Resumo 1-2 frases: quantas divergências, quantos gaps, quantas atualizações aceitas/rejeitadas, arquivos afetados."
+    },
+    "semana_revisada": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Número da semana que foi submetida ao pente-fino."
+    },
+    "data_revisao": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp ISO8601 da execução da revisão."
+    },
+    "skills_revisadas": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "IDs das skills cobertas nesta passagem (inclui as da semana alvo E todas anteriores já completas)."
+    },
+    "divergencias_factuais": {
+      "type": "array",
+      "description": "Achados do Passe 1 — inconsistências factuais entre outputs.",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "campo",
+          "valor_atual",
+          "valor_recomendado",
+          "fonte_de_verdade",
+          "arquivos_afetados",
+          "severidade"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Identificador (ex: F1, F2, F3)."
+          },
+          "categoria": {
+            "type": "string",
+            "enum": [
+              "nome",
+              "numero",
+              "taxonomia",
+              "referencia_cruzada",
+              "contradicao_logica"
+            ]
+          },
+          "campo": {
+            "type": "string",
+            "description": "Onde está o dado divergente. Ex: 'ee-s1-swot.json > strengths[2].title'."
+          },
+          "valor_atual": {
+            "type": "string",
+            "description": "O valor que está hoje no output."
+          },
+          "valor_recomendado": {
+            "type": "string",
+            "description": "O valor correto (baseado na fonte de verdade)."
+          },
+          "fonte_de_verdade": {
+            "type": "string",
+            "description": "Qual output/seção tem a versão correta e por quê."
+          },
+          "arquivos_afetados": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Lista dos outputs que precisam ser atualizados."
+          },
+          "severidade": {
+            "type": "string",
+            "enum": [
+              "critica",
+              "media",
+              "baixa"
+            ]
+          }
+        }
+      }
+    },
+    "gaps_narrativos": {
+      "type": "array",
+      "description": "Achados do Passe 2 — problemas de fluidez, redundância, tom, lacunas no consolidated.",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "tipo",
+          "localizacao",
+          "descricao",
+          "ajuste_proposto"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Identificador (ex: G1, G2)."
+          },
+          "tipo": {
+            "type": "string",
+            "enum": [
+              "redundancia",
+              "lacuna",
+              "tom",
+              "transicao",
+              "honestidade"
+            ]
+          },
+          "localizacao": {
+            "type": "string",
+            "description": "Skill + seção onde o gap foi detectado."
+          },
+          "descricao": {
+            "type": "string",
+            "description": "O que está sobrando/faltando/inconsistente."
+          },
+          "ajuste_proposto": {
+            "type": "string",
+            "description": "Texto exato a adicionar/editar/remover (não apenas 'melhorar redação')."
+          },
+          "arquivo_afetado": {
+            "type": "string",
+            "description": "Output a ser atualizado (ex: 'ee-s1-swot.json')."
+          }
+        }
+      }
+    },
+    "atualizacoes_propostas": {
+      "type": "array",
+      "description": "Síntese final — lista de edições concretas aplicáveis automaticamente aos outputs. Ordenada por severidade (críticas primeiro).",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "arquivo",
+          "caminho_json",
+          "acao",
+          "motivo",
+          "severidade"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Identificador (ex: U1, U2). Referenciado no _refinement_history[] dos outputs editados."
+          },
+          "arquivo": {
+            "type": "string",
+            "description": "Caminho relativo do output a ser editado (ex: 'outputs/ee-s1-swot.json')."
+          },
+          "caminho_json": {
+            "type": "string",
+            "description": "Caminho até o campo dentro do JSON (ex: 'strengths[2].description')."
+          },
+          "acao": {
+            "type": "string",
+            "enum": [
+              "substituir",
+              "adicionar",
+              "remover"
+            ]
+          },
+          "valor_antigo": {
+            "description": "Valor atual. null se ação=adicionar.",
+            "type": [
+              "string",
+              "number",
+              "object",
+              "array",
+              "boolean",
+              "null"
+            ]
+          },
+          "valor_novo": {
+            "description": "Novo valor. null se ação=remover.",
+            "type": [
+              "string",
+              "number",
+              "object",
+              "array",
+              "boolean",
+              "null"
+            ]
+          },
+          "motivo": {
+            "type": "string",
+            "description": "Referência à divergência/gap (ex: 'F1' ou 'G3') + explicação curta."
+          },
+          "severidade": {
+            "type": "string",
+            "enum": [
+              "critica",
+              "media",
+              "baixa"
+            ]
+          },
+          "decisao_operador": {
+            "type": "string",
+            "enum": [
+              "aceita",
+              "rejeitada",
+              "ajustada",
+              "pendente"
+            ],
+            "description": "Registrada após o operador decidir. Default: pendente."
+          },
+          "valor_final_aplicado": {
+            "description": "Valor que foi efetivamente gravado (útil quando operador escolhe 'ajustada').",
+            "type": [
+              "string",
+              "number",
+              "object",
+              "array",
+              "boolean",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "_refinement_history": {
+      "type": "array",
+      "description": "Histórico acumulado de revisões aplicadas. Cada entrada = uma execução da skill.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "ts": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "semana": {
+            "type": "integer"
+          },
+          "updates_aplicadas": {
+            "type": "integer"
+          },
+          "updates_rejeitadas": {
+            "type": "integer"
+          },
+          "note": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

@@ -7,6 +7,7 @@
   "ee-s2-posicionamento": ["ee-s2-pesquisa-mercado", "ee-s1-persona-icp", "ee-s1-swot"],
   "ee-s2-diagnostico-midia": ["ee-s1-persona-icp"],
   "ee-s2-diagnostico-criativos": ["ee-s1-persona-icp"],
+  "ee-s2-diagnostico-organico-ig": ["ee-s1-persona-icp", "ee-s2-posicionamento", "ee-s2-pesquisa-mercado"],
   "ee-s2-diagnostico-cro": ["ee-s1-persona-icp", "ee-s2-posicionamento"],
   "ee-s3-identidade-visual": ["ee-s2-posicionamento"],
   "ee-s3-brandbook": ["ee-s2-posicionamento", "ee-s1-persona-icp"],
@@ -19,5 +20,6 @@
   "ee-s4-diagnostico-comercial": ["ee-s1-persona-icp"],
   "ee-s4-cliente-oculto": ["ee-s4-diagnostico-comercial"],
   "ee-s5-scripts-sdr": ["ee-s4-diagnostico-comercial", "ee-s3-brandbook"],
-  "ee-s5-sdr-ia-config": ["ee-s5-scripts-sdr", "ee-s3-crm-setup"]
+  "ee-s5-sdr-ia-config": ["ee-s5-scripts-sdr", "ee-s3-crm-setup"],
+  "ee-revisao-semanal": []
 }

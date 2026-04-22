@@ -3,7 +3,14 @@
   "title": "DiagnosticoMaturidade",
   "description": "Output estruturado da skill diagnostico-maturidade: score por pilar, resumo executivo, prioridades e benchmark.",
   "type": "object",
-  "required": ["summary", "overall_score", "pillar_scores", "executive_summary", "priorities", "sector_benchmark"],
+  "required": [
+    "summary",
+    "overall_score",
+    "pillar_scores",
+    "executive_summary",
+    "priorities",
+    "sector_benchmark"
+  ],
   "properties": {
     "summary": {
       "type": "string",
@@ -11,7 +18,11 @@
     },
     "data_source": {
       "type": "string",
-      "enum": ["v4mos", "manual", "mixed"],
+      "enum": [
+        "v4mos",
+        "manual",
+        "mixed"
+      ],
       "description": "De onde vieram os dados: V4MOS automático, coleta manual com operador, ou misto."
     },
     "overall_score": {
@@ -22,7 +33,13 @@
     },
     "overall_classification": {
       "type": "string",
-      "enum": ["critical", "low", "medium", "good", "excellent"],
+      "enum": [
+        "critical",
+        "low",
+        "medium",
+        "good",
+        "excellent"
+      ],
       "description": "Classificação textual do score geral."
     },
     "pillar_scores": {
@@ -31,11 +48,22 @@
       "maxItems": 5,
       "items": {
         "type": "object",
-        "required": ["pillar", "score", "classification", "highlight"],
+        "required": [
+          "pillar",
+          "score",
+          "classification",
+          "highlight"
+        ],
         "properties": {
           "pillar": {
             "type": "string",
-            "enum": ["midia_paga", "criativos", "cro", "crm", "seo"],
+            "enum": [
+              "midia_paga",
+              "criativos",
+              "cro",
+              "crm",
+              "seo"
+            ],
             "description": "Nome do pilar."
           },
           "score": {
@@ -46,7 +74,13 @@
           },
           "classification": {
             "type": "string",
-            "enum": ["critical", "low", "medium", "good", "excellent"],
+            "enum": [
+              "critical",
+              "low",
+              "medium",
+              "good",
+              "excellent"
+            ],
             "description": "Classificação do pilar."
           },
           "highlight": {
@@ -63,12 +97,16 @@
             "properties": {
               "strengths": {
                 "type": "array",
-                "items": { "type": "string" },
+                "items": {
+                  "type": "string"
+                },
                 "description": "Pontos fortes identificados."
               },
               "weaknesses": {
                 "type": "array",
-                "items": { "type": "string" },
+                "items": {
+                  "type": "string"
+                },
                 "description": "Pontos fracos identificados."
               },
               "metrics": {
@@ -92,7 +130,13 @@
       "maxItems": 7,
       "items": {
         "type": "object",
-        "required": ["rank", "action", "rationale", "effort", "pillar"],
+        "required": [
+          "rank",
+          "action",
+          "rationale",
+          "effort",
+          "pillar"
+        ],
         "properties": {
           "rank": {
             "type": "integer",
@@ -109,7 +153,11 @@
           },
           "effort": {
             "type": "string",
-            "enum": ["low", "medium", "high"],
+            "enum": [
+              "low",
+              "medium",
+              "high"
+            ],
             "description": "Nível de esforço para implementar."
           },
           "pillar": {
@@ -118,7 +166,9 @@
           },
           "dependencies": {
             "type": "array",
-            "items": { "type": "string" },
+            "items": {
+              "type": "string"
+            },
             "description": "O que precisa estar pronto antes."
           }
         }
@@ -127,7 +177,11 @@
     },
     "sector_benchmark": {
       "type": "object",
-      "required": ["sector", "sector_average", "comparison"],
+      "required": [
+        "sector",
+        "sector_average",
+        "comparison"
+      ],
       "properties": {
         "sector": {
           "type": "string",
@@ -139,7 +193,12 @@
         },
         "comparison": {
           "type": "string",
-          "enum": ["above_average", "at_average", "below_average", "significantly_below"],
+          "enum": [
+            "above_average",
+            "at_average",
+            "below_average",
+            "significantly_below"
+          ],
           "description": "Posição do cliente vs. média do setor."
         },
         "pillar_comparison": {
@@ -147,13 +206,26 @@
           "items": {
             "type": "object",
             "properties": {
-              "pillar": { "type": "string" },
-              "client_score": { "type": "number" },
-              "sector_average": { "type": "number" },
-              "gap": { "type": "number" },
+              "pillar": {
+                "type": "string"
+              },
+              "client_score": {
+                "type": "number"
+              },
+              "sector_average": {
+                "type": "number"
+              },
+              "gap": {
+                "type": "number"
+              },
               "position": {
                 "type": "string",
-                "enum": ["above", "at", "below", "critical_gap"]
+                "enum": [
+                  "above",
+                  "at",
+                  "below",
+                  "critical_gap"
+                ]
               }
             }
           },
@@ -164,6 +236,115 @@
           "description": "Insight principal da comparação com o setor."
         }
       }
+    },
+    "summary_headline": {
+      "type": "string",
+      "maxLength": 200,
+      "description": "Manchete em 1 linha com o veredito desta skill (hero do resumo executivo no portal). Ver plugins/v4-estruturacao-ia/shared-templates/PADRAO-OUTPUT.md"
+    },
+    "summary_highlights": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 8,
+      "description": "KPIs visuais categorizados para o resumo executivo. Cada item: {category, label, value, subtext, tone}.",
+      "items": {
+        "type": "object",
+        "required": [
+          "category",
+          "label",
+          "value"
+        ],
+        "properties": {
+          "category": {
+            "type": "string",
+            "enum": [
+              "posicao",
+              "competicao",
+              "janela",
+              "maturidade",
+              "oportunidade",
+              "risco"
+            ]
+          },
+          "label": {
+            "type": "string",
+            "maxLength": 40
+          },
+          "value": {
+            "type": "string"
+          },
+          "subtext": {
+            "type": "string",
+            "maxLength": 80
+          },
+          "tone": {
+            "type": "string",
+            "enum": [
+              "green",
+              "yellow",
+              "red",
+              "blue",
+              "gray"
+            ]
+          }
+        }
+      }
+    },
+    "summary_key_findings": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 6,
+      "description": "Achados categorizados por intenção (vantagem/contexto/ameaça/ação). Pelo menos 3 dos 4 tipos cobertos.",
+      "items": {
+        "type": "object",
+        "required": [
+          "category",
+          "text"
+        ],
+        "properties": {
+          "category": {
+            "type": "string",
+            "enum": [
+              "vantagem",
+              "contexto",
+              "ameaca",
+              "acao"
+            ]
+          },
+          "text": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "key_insight": {
+      "type": "object",
+      "description": "Ponto de alavancagem desta skill — o bloco que merece destaque visual para conversa com o stakeholder. Ver PADRAO-OUTPUT.md.",
+      "properties": {
+        "headline": {
+          "type": "string",
+          "description": "Frase-manchete do ponto (pode virar quote destacada no renderer)"
+        },
+        "context": {
+          "type": "string",
+          "description": "Contexto em 2-3 linhas explicando o cenário"
+        },
+        "numbered_reasons": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Razões numeradas (o renderer vira 3 cards numerados)"
+        },
+        "discussion_anchor": {
+          "type": "string",
+          "description": "Por que este é o ponto para stakeholder decidir/validar"
+        }
+      }
+    },
+    "honesty_alert": {
+      "type": "string",
+      "description": "Alerta se a análise revelou fragilidade real do cliente (não há diferencial claro, premissa contraditória, etc.). Nunca omitir se justificado."
     }
   }
 }

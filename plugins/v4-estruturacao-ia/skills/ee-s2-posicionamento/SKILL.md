@@ -79,6 +79,33 @@ Consulte `references/territorio-de-marca.md`.
 
 Para cada: tom + justificativa + melhor uso (site, assinatura, anúncios).
 
+### Estrutura visual (obrigatória)
+
+Siga o padrão canônico de `plugins/v4-estruturacao-ia/shared-templates/PADRAO-OUTPUT.md`. Além dos campos acima, SEMPRE inclua:
+
+- **`summary_headline`** (max 200 char) — manchete com o veredito do posicionamento. Ex: "Zenvet ocupa 'Especialista Felino Premium' — território único na microrregião com janela de 12-18 meses".
+- **`summary_highlights`** (4-6 itens, `{category, label, value, subtext, tone}`) — sugestões:
+  - `posicao`: território de 3 palavras escolhido
+  - `competicao`: território ocupado pelo concorrente #1 (contraste)
+  - `janela`: tempo até concorrência relevante chegar
+  - `oportunidade`: ICP principal + ticket esperado
+  - `risco`: pior cenário de posicionamento forçado
+- **`summary_key_findings`** (3-5 itens, `{category, text}`) — `vantagem|contexto|ameaca|acao`.
+
+### Ponto de alavancagem
+
+Em posicionamento, o ponto de alavancagem é o **território × janela de oportunidade** — o espaço competitivo disponível combinado com o tempo que o cliente tem para ocupá-lo antes da concorrência chegar. Estruture em `key_insight`:
+```json
+"key_insight": {
+  "headline": "Frase sobre território + janela (ex: 'Território Especialista Felino está vago por 12-18 meses')",
+  "context": "2-3 linhas sobre por que ninguém ocupou ainda e por que a janela é finita",
+  "numbered_reasons": ["(1) evidência de que está vago", "(2) o que fecha a janela", "(3) o que o cliente ganha ao ocupar primeiro"],
+  "discussion_anchor": "Por que o stakeholder precisa agir AGORA e não esperar validação"
+}
+```
+
+Se o território escolhido é aspiracional (diferencial ainda não construído), ou a janela é curtíssima e exige decisão imediata, inclua `honesty_alert`.
+
 ## Auto-validação
 
 Antes de mostrar ao operador, verifique:
@@ -91,6 +118,11 @@ Antes de mostrar ao operador, verifique:
 - [ ] PUV passa nos 5 testes de qualidade?
 - [ ] Cada declaração de posicionamento é diferente das outras (não variações do mesmo)?
 - [ ] Território de marca não está ocupado por concorrente?
+- [ ] Tem `summary_headline` específico?
+- [ ] `summary_highlights` tem 4-6 itens com categorias e tons válidos?
+- [ ] `summary_key_findings` cobre pelo menos 3 dos 4 tipos?
+- [ ] Identificou `key_insight` (território × janela)?
+- [ ] Se território é aspiracional ou janela curtíssima, incluiu `honesty_alert`?
 
 Se falhou → regenere silenciosamente. Não avise o operador.
 

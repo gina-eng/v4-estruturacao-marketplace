@@ -8,7 +8,15 @@
     "client_name",
     "segment",
     "url",
+    "technical_audit",
+    "onpage_seo",
+    "security_headers",
     "technical_diagnosis",
+    "tracking_stack",
+    "events_fired",
+    "quality_flags",
+    "cro_elements_deep",
+    "compliance_lgpd",
     "copy_audit",
     "trust_analysis",
     "test_hypotheses",
@@ -47,6 +55,115 @@
         "null"
       ],
       "description": "Tempo medio na pagina (se disponivel)"
+    },
+    "technical_audit": {
+      "type": "object",
+      "description": "Dados brutos do audit tecnico automatizado (PageSpeed Insights + on-page). Preenchido a partir de client.json.page_audit.",
+      "required": ["fetched_at", "pagespeed"],
+      "properties": {
+        "fetched_at": { "type": "string", "description": "ISO timestamp do audit" },
+        "cache_file": { "type": "string", "description": "Caminho relativo do cache raw" },
+        "pagespeed": {
+          "type": "object",
+          "properties": {
+            "mobile_scores": {
+              "type": ["object", "null"],
+              "properties": {
+                "performance": { "type": ["integer", "null"] },
+                "accessibility": { "type": ["integer", "null"] },
+                "best_practices": { "type": ["integer", "null"] },
+                "seo": { "type": ["integer", "null"] }
+              }
+            },
+            "desktop_scores": {
+              "type": ["object", "null"],
+              "properties": {
+                "performance": { "type": ["integer", "null"] },
+                "accessibility": { "type": ["integer", "null"] },
+                "best_practices": { "type": ["integer", "null"] },
+                "seo": { "type": ["integer", "null"] }
+              }
+            },
+            "mobile_cwv_lab": {
+              "type": ["object", "null"],
+              "description": "Core Web Vitals lab data (Lighthouse)",
+              "properties": {
+                "lcp_ms": { "type": ["number", "null"] },
+                "fcp_ms": { "type": ["number", "null"] },
+                "tbt_ms": { "type": ["number", "null"] },
+                "cls": { "type": ["number", "null"] },
+                "speed_index_ms": { "type": ["number", "null"] },
+                "tti_ms": { "type": ["number", "null"] },
+                "ttfb_ms": { "type": ["number", "null"] }
+              }
+            },
+            "desktop_cwv_lab": { "type": ["object", "null"] },
+            "mobile_cwv_field": {
+              "type": ["object", "null"],
+              "description": "CrUX field data (usuarios reais), null se sem dados suficientes"
+            },
+            "desktop_cwv_field": { "type": ["object", "null"] },
+            "mobile_top_opportunities": {
+              "type": "array",
+              "description": "Top opportunities do Lighthouse mobile ordenadas por savings_ms"
+            },
+            "desktop_top_opportunities": { "type": "array" }
+          }
+        }
+      }
+    },
+    "onpage_seo": {
+      "type": "object",
+      "description": "Analise on-page SEO (mobile/desktop via parser HTML). Preenchido a partir de client.json.page_audit.onpage.",
+      "properties": {
+        "mobile": {
+          "type": ["object", "null"],
+          "properties": {
+            "title": { "type": ["string", "null"] },
+            "title_length": { "type": ["integer", "null"] },
+            "meta_description": { "type": ["string", "null"] },
+            "meta_description_length": { "type": ["integer", "null"] },
+            "canonical": { "type": ["string", "null"] },
+            "lang": { "type": ["string", "null"] },
+            "viewport": { "type": ["string", "null"] },
+            "favicon": { "type": ["string", "null"] },
+            "og": { "type": "object", "description": "Open Graph tags" },
+            "twitter": { "type": "object", "description": "Twitter card tags" },
+            "schema_types": { "type": "array", "items": { "type": "string" } },
+            "h1_count": { "type": ["integer", "null"] },
+            "h2_count": { "type": ["integer", "null"] },
+            "h3_count": { "type": ["integer", "null"] },
+            "images_total": { "type": ["integer", "null"] },
+            "images_without_alt": { "type": ["integer", "null"] },
+            "links_internal": { "type": ["integer", "null"] },
+            "links_external": { "type": ["integer", "null"] },
+            "links_nofollow": { "type": ["integer", "null"] },
+            "html_size_kb": { "type": ["number", "null"] },
+            "response_time_ms": { "type": ["number", "null"] }
+          }
+        },
+        "desktop": { "type": ["object", "null"] },
+        "divergences": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Diferencas significativas entre versao mobile e desktop (title, h1, canonical, etc.)"
+        }
+      }
+    },
+    "security_headers": {
+      "type": "object",
+      "description": "Analise de headers HTTP de seguranca. Preenchido a partir de client.json.page_audit.security.",
+      "properties": {
+        "https": { "type": "boolean" },
+        "hsts": { "type": ["string", "null"], "description": "Valor do Strict-Transport-Security ou null se ausente" },
+        "csp": { "type": ["string", "null"] },
+        "x_frame_options": { "type": ["string", "null"] },
+        "x_content_type_options": { "type": ["string", "null"] },
+        "referrer_policy": { "type": ["string", "null"] },
+        "permissions_policy": { "type": ["string", "null"] },
+        "score": { "type": ["integer", "null"], "minimum": 0, "maximum": 10 },
+        "issues": { "type": "array", "items": { "type": "string" } }
+      }
     },
     "technical_diagnosis": {
       "type": "object",
@@ -393,6 +510,128 @@
         "exit_intent_offer": {
           "type": "string",
           "description": "Oferta do popup de exit intent (se aplicavel)"
+        }
+      }
+    },
+    "tracking_stack": {
+      "type": "object",
+      "description": "Ferramentas de tracking/ads/analytics detectadas via Playwright. Preenchido a partir de client.json.page_audit_deep.tracking_stack.",
+      "properties": {
+        "tools_detected": {
+          "type": "object",
+          "description": "Dicionario {tool_id: {name, category, evidence[]}} das ferramentas identificadas",
+          "additionalProperties": true
+        },
+        "ids_found": {
+          "type": "object",
+          "description": "IDs extraidos: gtm, ga4, ua, google_ads, meta_pixel, tiktok_pixel, linkedin_partner",
+          "properties": {
+            "gtm": { "type": "array", "items": { "type": "string" } },
+            "ga4": { "type": "array", "items": { "type": "string" } },
+            "ua": { "type": "array", "items": { "type": "string" } },
+            "google_ads": { "type": "array", "items": { "type": "string" } },
+            "meta_pixel": { "type": "array", "items": { "type": "string" } },
+            "tiktok_pixel": { "type": "array", "items": { "type": "string" } },
+            "linkedin_partner": { "type": "array", "items": { "type": "string" } }
+          }
+        },
+        "categories_summary": {
+          "type": "object",
+          "description": "Agrupamento por categoria: tracking, analytics, ads, heatmap, chat, cms, ecommerce, framework, lp_builder, cmp, hosting"
+        },
+        "total_tools": { "type": "integer" },
+        "setup_diagnosis": {
+          "type": "string",
+          "description": "Diagnostico narrativo do setup: coberturas, gaps, contradicoes. Ex: 'GTM presente mas sem GA4 — cliente opera cego.'"
+        }
+      }
+    },
+    "events_fired": {
+      "type": "object",
+      "description": "Eventos GA4 e Meta Pixel disparados durante navegacao.",
+      "properties": {
+        "ga4_event_count": { "type": "integer" },
+        "meta_event_count": { "type": "integer" },
+        "ga4_event_names": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "meta_event_names": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "events_diagnosis": {
+          "type": "string",
+          "description": "Avaliacao dos eventos: completude (page_view, scroll, click, form_submit), duplicatas, Consent Mode v2"
+        },
+        "expected_events_missing": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Eventos que DEVERIAM existir mas nao aparecem (ex: 'page_view', 'PageView', 'generate_lead')"
+        }
+      }
+    },
+    "quality_flags": {
+      "type": "array",
+      "description": "Red flags de qualidade do tagueamento (UA legacy, pixel duplicado, GTM sem analytics, etc.)",
+      "items": {
+        "type": "object",
+        "required": ["severity", "flag", "title", "detail"],
+        "properties": {
+          "severity": { "type": "string", "enum": ["critical", "high", "medium", "low"] },
+          "flag": { "type": "string", "description": "Identificador curto do flag" },
+          "title": { "type": "string" },
+          "detail": { "type": "string" }
+        }
+      }
+    },
+    "cro_elements_deep": {
+      "type": "object",
+      "description": "Analise profunda de elementos CRO via Playwright (CTAs, forms, WhatsApp, prova social, confianca, urgencia).",
+      "properties": {
+        "desktop": { "type": ["object", "null"] },
+        "mobile": { "type": ["object", "null"] },
+        "cta_diagnosis": {
+          "type": "string",
+          "description": "Avaliacao: quantidade de CTAs, above-fold, clareza, consistencia de texto"
+        },
+        "form_diagnosis": {
+          "type": "string",
+          "description": "Avaliacao: quantidade de forms, campos por form (regra: <= 5), campos obrigatorios, consentimento LGPD"
+        },
+        "social_proof_diagnosis": {
+          "type": "string",
+          "description": "Avaliacao de prova social (depoimentos, avaliacoes, numeros, certificacoes, logos)"
+        },
+        "trust_diagnosis": {
+          "type": "string",
+          "description": "Avaliacao: CNPJ, endereco, telefone, email, politica de privacidade, termos"
+        }
+      }
+    },
+    "compliance_lgpd": {
+      "type": "object",
+      "description": "Auditoria de compliance LGPD: CMP presente + scripts pre-consent.",
+      "properties": {
+        "status": { "type": "string", "enum": ["compliant", "partial", "non_compliant"] },
+        "score": { "type": "integer", "minimum": 0, "maximum": 10 },
+        "has_cmp": { "type": "boolean" },
+        "cmps_detected": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "pre_consent_trackers": {
+          "type": "object",
+          "description": "Trackers que disparam ANTES de qualquer consentimento {pattern: [urls]}"
+        },
+        "pre_consent_tracker_count": { "type": "integer" },
+        "issues": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "recommendation": {
+          "type": "string",
+          "description": "Recomendacao concreta: 'Instalar Cookiebot/OneTrust + gtag consent default denied + Consent Mode v2'"
         }
       }
     },

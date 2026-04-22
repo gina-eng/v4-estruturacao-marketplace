@@ -110,6 +110,32 @@ Compare o score do cliente com a média do setor (use `references/scoring-framew
 - Quais estão abaixo?
 - Qual o gap mais crítico vs. o setor?
 
+### Estrutura visual (obrigatória)
+
+Siga o padrão canônico de `plugins/v4-estruturacao-ia/shared-templates/PADRAO-OUTPUT.md`. Além dos campos acima, SEMPRE inclua:
+
+- **`summary_headline`** (max 200 char) — manchete com o veredito. Ex: "Zenvet tem 5.2/10 de maturidade digital — Mídia e CRM são os pilares que mais travam crescimento."
+- **`summary_highlights`** (4-6 itens, `{category, label, value, subtext, tone}`) — para maturidade sugestões:
+  - `maturidade`: score geral, pilar mais forte, pilar mais fraco
+  - `posicao`: score vs benchmark do setor (gap %)
+  - `oportunidade`: pilar com maior upside e retorno estimado
+  - `risco`: pilar crítico que bloqueia outros
+- **`summary_key_findings`** (3-5 itens, `{category, text}`) — `vantagem|contexto|ameaca|acao`.
+
+### Ponto de alavancagem
+
+Em diagnóstico de maturidade, o ponto de alavancagem é o **pilar mais fraco com maior impacto sistêmico** (bloqueia outros pilares ou representa o maior gap vs benchmark). Estruture em `key_insight`:
+```json
+"key_insight": {
+  "headline": "Frase sobre o pilar-chave (ex: 'CRM em 2/10 bloqueia ROI de toda mídia paga')",
+  "context": "2-3 linhas sobre cascata de efeitos",
+  "numbered_reasons": ["(1) evidência do score baixo", "(2) efeito cascata", "(3) ROI de destravar"],
+  "discussion_anchor": "Por que o stakeholder precisa priorizar este pilar antes dos outros"
+}
+```
+
+Se o diagnóstico revelou maturidade baixa em todos os pilares (ex: score médio < 4) ou dados insuficientes, inclua `honesty_alert`.
+
 ## Auto-validação
 
 Antes de mostrar ao operador, verifique:
@@ -122,6 +148,11 @@ Antes de mostrar ao operador, verifique:
 - [ ] Resumo executivo traduz scores em impacto de negócio (não só números)?
 - [ ] Prioridades são específicas e acionáveis (não "melhorar mídia")?
 - [ ] Benchmark do setor está referenciado com fonte?
+- [ ] Tem `summary_headline` específico?
+- [ ] `summary_highlights` tem 4-6 itens com categorias e tons válidos?
+- [ ] `summary_key_findings` cobre pelo menos 3 dos 4 tipos?
+- [ ] Identificou `key_insight` (pilar-chave com efeito sistêmico)?
+- [ ] Se há fragilidade geral, incluiu `honesty_alert`?
 
 Se falhou → regenere silenciosamente. Não avise o operador.
 

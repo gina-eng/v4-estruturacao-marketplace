@@ -144,6 +144,32 @@ Ordene as ações por risk_adjusted_score (maior primeiro).
 
 > **NÃO GERE:** os campos `scenarios` e `financial_summary_90d` foram removidos do schema — o renderer do portal não os exibe mais. Projeções de cenários vivem em `ee-s2-diagnostico-midia` (budget_reallocation_scenarios). A consolidação financeira é redundante com `priority_actions[].financial_impact`, que o portal já agrega.
 
+### Estrutura visual (obrigatória)
+
+Siga o padrão canônico de `plugins/v4-estruturacao-ia/shared-templates/PADRAO-OUTPUT.md`. Além dos campos acima, SEMPRE inclua:
+
+- **`summary_headline`** (max 200 char) — manchete com o veredito da SWOT. Ex: "Zenvet tem know-how felino raro (ABFel), mas mídia zerada — janela SO de 12 meses antes de Campinas se aproximar."
+- **`summary_highlights`** (4-6 itens, `{category, label, value, subtext, tone}`) — para SWOT sugestões:
+  - `posicao`: score SWOT líquido, nº de forças vs fraquezas
+  - `oportunidade`: top priority action com ROI projetado, payback
+  - `risco`: ameaça de maior impacto
+  - `janela`: tempo até janela fechar / urgência
+- **`summary_key_findings`** (3-5 itens, `{category, text}`) — `vantagem|contexto|ameaca|acao` — cubra pelo menos 3 dos 4.
+
+### Ponto de alavancagem
+
+Em SWOT, o ponto de alavancagem é a **combinação Força × Oportunidade mais assimétrica** (quadrante SO com maior risk_adjusted_score). Estruture em `key_insight`:
+```json
+"key_insight": {
+  "headline": "Cruzamento F×O em 1 frase (pode virar quote)",
+  "context": "2-3 linhas sobre por que esta combinação é única",
+  "numbered_reasons": ["(1) força específica...", "(2) oportunidade específica...", "(3) timing/janela..."],
+  "discussion_anchor": "Por que o stakeholder precisa decidir sobre apetite e ritmo"
+}
+```
+
+Se SWOT revelou fragilidade estrutural (mais ameaças que forças, ausência de diferencial real), inclua `honesty_alert`.
+
 ## Auto-validação
 
 Antes de mostrar ao operador, verifique:
@@ -160,6 +186,11 @@ Antes de mostrar ao operador, verifique:
 - [ ] Cada priority_action tem `financial_impact` (investment, return, payback, ROI) e `risk_adjusted_score`?
 - [ ] Priority_actions estão ORDENADAS por risk_adjusted_score (maior primeiro)?
 - [ ] NÃO gerou `scenarios` nem `financial_summary_90d` (removidos do schema)?
+- [ ] Tem `summary_headline` específico?
+- [ ] `summary_highlights` tem 4-6 itens com categorias e tons válidos?
+- [ ] `summary_key_findings` cobre pelo menos 3 dos 4 tipos?
+- [ ] Identificou `key_insight` (cruzamento SO mais assimétrico) para stakeholder?
+- [ ] Se há fragilidade estrutural, incluiu `honesty_alert`?
 
 Se falhou → regenere silenciosamente. Não avise o operador.
 

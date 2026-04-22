@@ -180,6 +180,32 @@ Para cada quick win:
 4. **Impacto esperado** — o que melhora
 5. **Quem faz** — operador, cliente, ou equipe do cliente
 
+### Estrutura visual (obrigatória)
+
+Siga o padrão canônico de `plugins/v4-estruturacao-ia/shared-templates/PADRAO-OUTPUT.md`. Além dos campos acima, SEMPRE inclua:
+
+- **`summary_headline`** (max 200 char) — manchete do veredito. Ex: "Zenvet tem 4 canais ativos mas 0 coerência de voz — maior vazamento na Consideração (-47%)."
+- **`summary_highlights`** (4-6 itens, `{category, label, value, subtext, tone}`) — para auditoria de comunicação sugestões:
+  - `maturidade`: nº de canais auditados, score médio, coherence_score de voz
+  - `risco`: maior vazamento (`biggest_leakage_summary`) com %
+  - `oportunidade`: quick win de maior impacto, tempo de execução
+  - `competicao`: gap vs melhor concorrente benchmark
+- **`summary_key_findings`** (3-5 itens, `{category, text}`) — `vantagem|contexto|ameaca|acao`.
+
+### Ponto de alavancagem
+
+Em auditoria de comunicação, o ponto de alavancagem é o **maior vazamento no funil com causa-raiz clara** (tipicamente o `biggest_leakage_summary` + o quick win que o destrava). Estruture em `key_insight`:
+```json
+"key_insight": {
+  "headline": "Frase sobre o vazamento (ex: '47% dos leads somem entre Descoberta e Consideração porque o Google Maps está incompleto')",
+  "context": "2-3 linhas ligando causa-raiz a impacto de receita",
+  "numbered_reasons": ["(1) evidência do vazamento", "(2) causa-raiz", "(3) quick win que destrava"],
+  "discussion_anchor": "Por que o stakeholder precisa aprovar este quick win antes de escalar mídia"
+}
+```
+
+Se a auditoria revelou ausência de ativos críticos (sem site, GMB sem reviews, redes zeradas), inclua `honesty_alert`.
+
 ## Auto-validação
 
 Antes de mostrar ao operador, verifique:
@@ -197,6 +223,11 @@ Antes de mostrar ao operador, verifique:
 - [ ] `biggest_leakage_summary` identifica QUAL estágio é o maior buraco (com número)?
 - [ ] `tone_of_voice_analysis` compara brand voice declarada vs atual por canal, com coherence_score final?
 - [ ] `url_audit` lista todas as URLs críticas com verify_checklist?
+- [ ] Tem `summary_headline` específico?
+- [ ] `summary_highlights` tem 4-6 itens com categorias e tons válidos?
+- [ ] `summary_key_findings` cobre pelo menos 3 dos 4 tipos?
+- [ ] Identificou `key_insight` (maior vazamento + quick win)?
+- [ ] Se há fragilidade estrutural (ativos faltando), incluiu `honesty_alert`?
 
 Se falhou → regenere silenciosamente. Não avise o operador.
 

@@ -335,6 +335,64 @@
     "summary": {
       "type": "string",
       "description": "Resumo de 1-2 frases do posicionamento estratégico. Inclui PUV definida e território de marca escolhido."
+    },
+    "summary_headline": {
+      "type": "string",
+      "maxLength": 200,
+      "description": "Manchete com o veredito do posicionamento em 1 frase (ex: 'Zenvet ocupa território Especialista Felino Premium — janela de 12-18 meses antes de Campinas chegar')."
+    },
+    "summary_highlights": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 8,
+      "items": {
+        "type": "object",
+        "required": ["category", "label", "value"],
+        "properties": {
+          "category": {
+            "type": "string",
+            "enum": ["posicao", "competicao", "janela", "maturidade", "oportunidade", "risco"]
+          },
+          "label": {"type": "string"},
+          "value": {"type": "string"},
+          "subtext": {"type": "string"},
+          "tone": {"type": "string", "enum": ["green", "yellow", "red", "blue", "gray"]}
+        }
+      }
+    },
+    "summary_key_findings": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "required": ["category", "text"],
+        "properties": {
+          "category": {"type": "string", "enum": ["vantagem", "contexto", "ameaca", "acao"]},
+          "text": {"type": "string"}
+        }
+      }
+    },
+    "key_insight": {
+      "type": "object",
+      "description": "Ponto de alavancagem — território × janela de oportunidade.",
+      "required": ["headline", "context", "numbered_reasons", "discussion_anchor"],
+      "properties": {
+        "headline": {"type": "string"},
+        "context": {"type": "string"},
+        "numbered_reasons": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 5,
+          "items": {"type": "string"}
+        },
+        "discussion_anchor": {"type": "string"},
+        "feasibility": {"type": "string"}
+      }
+    },
+    "honesty_alert": {
+      "type": "string",
+      "description": "Alerta de honestidade: território aspiracional, diferencial não ainda construído, ou risco de posicionamento forçado."
     }
   }
 }

@@ -3,7 +3,13 @@
   "title": "AuditoriaComunicacao",
   "description": "Output estruturado da skill auditoria-comunicacao: auditoria por canal, matriz de gaps e quick wins.",
   "type": "object",
-  "required": ["summary", "channels_audited", "gap_matrix", "executive_summary", "quick_wins"],
+  "required": [
+    "summary",
+    "channels_audited",
+    "gap_matrix",
+    "executive_summary",
+    "quick_wins"
+  ],
   "properties": {
     "summary": {
       "type": "string",
@@ -18,7 +24,12 @@
       "minItems": 1,
       "items": {
         "type": "object",
-        "required": ["name", "score", "gaps", "recommendations"],
+        "required": [
+          "name",
+          "score",
+          "gaps",
+          "recommendations"
+        ],
         "properties": {
           "name": {
             "type": "string",
@@ -36,7 +47,13 @@
           },
           "classification": {
             "type": "string",
-            "enum": ["critical", "low", "medium", "good", "excellent"],
+            "enum": [
+              "critical",
+              "low",
+              "medium",
+              "good",
+              "excellent"
+            ],
             "description": "Classificação do canal."
           },
           "screenshots_analyzed": {
@@ -50,53 +67,103 @@
               "value_proposition": {
                 "type": "object",
                 "properties": {
-                  "present": { "type": "boolean" },
-                  "clear": { "type": "boolean" },
-                  "aligned_with_icp": { "type": "boolean" },
-                  "notes": { "type": "string" }
+                  "present": {
+                    "type": "boolean"
+                  },
+                  "clear": {
+                    "type": "boolean"
+                  },
+                  "aligned_with_icp": {
+                    "type": "boolean"
+                  },
+                  "notes": {
+                    "type": "string"
+                  }
                 }
               },
               "social_proof": {
                 "type": "object",
                 "properties": {
-                  "present": { "type": "boolean" },
-                  "type": { "type": "string" },
-                  "quality": { "type": "string", "enum": ["none", "weak", "moderate", "strong"] },
-                  "notes": { "type": "string" }
+                  "present": {
+                    "type": "boolean"
+                  },
+                  "type": {
+                    "type": "string"
+                  },
+                  "quality": {
+                    "type": "string",
+                    "enum": [
+                      "none",
+                      "weak",
+                      "moderate",
+                      "strong"
+                    ]
+                  },
+                  "notes": {
+                    "type": "string"
+                  }
                 }
               },
               "cta": {
                 "type": "object",
                 "properties": {
-                  "present": { "type": "boolean" },
-                  "visible": { "type": "boolean" },
-                  "action_oriented": { "type": "boolean" },
-                  "notes": { "type": "string" }
+                  "present": {
+                    "type": "boolean"
+                  },
+                  "visible": {
+                    "type": "boolean"
+                  },
+                  "action_oriented": {
+                    "type": "boolean"
+                  },
+                  "notes": {
+                    "type": "string"
+                  }
                 }
               },
               "visual_consistency": {
                 "type": "object",
                 "properties": {
-                  "consistent": { "type": "boolean" },
-                  "professional": { "type": "boolean" },
-                  "notes": { "type": "string" }
+                  "consistent": {
+                    "type": "boolean"
+                  },
+                  "professional": {
+                    "type": "boolean"
+                  },
+                  "notes": {
+                    "type": "string"
+                  }
                 }
               },
               "mobile_experience": {
                 "type": "object",
                 "properties": {
-                  "responsive": { "type": "boolean" },
-                  "speed": { "type": "string" },
-                  "notes": { "type": "string" }
+                  "responsive": {
+                    "type": "boolean"
+                  },
+                  "speed": {
+                    "type": "string"
+                  },
+                  "notes": {
+                    "type": "string"
+                  }
                 }
               },
               "content_quality": {
                 "type": "object",
                 "properties": {
-                  "speaks_to_icp": { "type": "boolean" },
-                  "frequency": { "type": "string" },
-                  "engagement_level": { "type": "string" },
-                  "notes": { "type": "string" }
+                  "speaks_to_icp": {
+                    "type": "boolean"
+                  },
+                  "frequency": {
+                    "type": "string"
+                  },
+                  "engagement_level": {
+                    "type": "string"
+                  },
+                  "notes": {
+                    "type": "string"
+                  }
                 }
               },
               "additional_notes": {
@@ -109,7 +176,10 @@
             "type": "array",
             "items": {
               "type": "object",
-              "required": ["gap", "impact"],
+              "required": [
+                "gap",
+                "impact"
+              ],
               "properties": {
                 "gap": {
                   "type": "string",
@@ -121,7 +191,11 @@
                 },
                 "impact": {
                   "type": "string",
-                  "enum": ["high", "medium", "low"],
+                  "enum": [
+                    "high",
+                    "medium",
+                    "low"
+                  ],
                   "description": "Impacto na conversão/resultado."
                 }
               }
@@ -132,7 +206,10 @@
             "type": "array",
             "items": {
               "type": "object",
-              "required": ["action", "priority"],
+              "required": [
+                "action",
+                "priority"
+              ],
               "properties": {
                 "action": {
                   "type": "string",
@@ -140,12 +217,20 @@
                 },
                 "priority": {
                   "type": "string",
-                  "enum": ["immediate", "short_term", "medium_term"],
+                  "enum": [
+                    "immediate",
+                    "short_term",
+                    "medium_term"
+                  ],
                   "description": "Quando implementar."
                 },
                 "effort": {
                   "type": "string",
-                  "enum": ["low", "medium", "high"],
+                  "enum": [
+                    "low",
+                    "medium",
+                    "high"
+                  ],
                   "description": "Esforço para implementar."
                 }
               }
@@ -160,7 +245,14 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["rank", "channel", "gap", "impact", "effort", "recommended_action"],
+        "required": [
+          "rank",
+          "channel",
+          "gap",
+          "impact",
+          "effort",
+          "recommended_action"
+        ],
         "properties": {
           "rank": {
             "type": "integer",
@@ -177,12 +269,20 @@
           },
           "impact": {
             "type": "string",
-            "enum": ["high", "medium", "low"],
+            "enum": [
+              "high",
+              "medium",
+              "low"
+            ],
             "description": "Impacto na conversão."
           },
           "effort": {
             "type": "string",
-            "enum": ["low", "medium", "high"],
+            "enum": [
+              "low",
+              "medium",
+              "high"
+            ],
             "description": "Esforço para resolver."
           },
           "recommended_action": {
@@ -191,7 +291,12 @@
           },
           "quadrant": {
             "type": "string",
-            "enum": ["quick_win", "strategic_project", "fill_time", "deprioritize"],
+            "enum": [
+              "quick_win",
+              "strategic_project",
+              "fill_time",
+              "deprioritize"
+            ],
             "description": "Classificação na matriz impacto x esforço."
           }
         }
@@ -200,7 +305,10 @@
     },
     "executive_summary": {
       "type": "object",
-      "required": ["top_problems", "overall_assessment"],
+      "required": [
+        "top_problems",
+        "overall_assessment"
+      ],
       "properties": {
         "overall_assessment": {
           "type": "string",
@@ -212,7 +320,12 @@
           "maxItems": 3,
           "items": {
             "type": "object",
-            "required": ["problem", "evidence", "impact", "action"],
+            "required": [
+              "problem",
+              "evidence",
+              "impact",
+              "action"
+            ],
             "properties": {
               "problem": {
                 "type": "string",
@@ -246,16 +359,29 @@
       "type": "object",
       "description": "Benchmark canal-a-canal contra grupos de concorrentes.",
       "properties": {
-        "description": { "type": "string" },
+        "description": {
+          "type": "string"
+        },
         "groups": {
           "type": "array",
           "items": {
             "type": "object",
-            "required": ["name"],
+            "required": [
+              "name"
+            ],
             "properties": {
-              "name": { "type": "string" },
-              "members": { "type": "array", "items": { "type": "string" } },
-              "positioning": { "type": "string" }
+              "name": {
+                "type": "string"
+              },
+              "members": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "positioning": {
+                "type": "string"
+              }
             }
           }
         },
@@ -263,107 +389,241 @@
           "type": "array",
           "items": {
             "type": "object",
-            "required": ["channel"],
+            "required": [
+              "channel"
+            ],
             "properties": {
-              "channel": { "type": "string" },
-              "client_score": { "type": "number", "minimum": 0, "maximum": 100, "description": "Score do cliente (0-100). Nome preferido." },
-              "best_in_class_score": { "type": "number", "description": "Score do melhor concorrente do grupo." },
-              "competitor_avg_score": { "type": "number", "description": "Alternativa: média dos concorrentes. O renderer aceita best_in_class_score OU competitor_avg_score." },
-              "gap": { "type": "number", "description": "Diferença entre best_in_class e client_score." },
-              "best_practice_observed": { "type": "string", "description": "O que o melhor concorrente faz (específico). Nome preferido." },
-              "evidence": { "type": "string", "description": "Alternativa a best_practice_observed — evidência concreta observada." },
-              "opportunity_for_client": { "type": "string", "description": "Como o cliente pode fechar o gap (específico, não genérico). Nome preferido." },
-              "immediate_win": { "type": "string", "description": "Alternativa a opportunity_for_client — ganho imediato possível." }
+              "channel": {
+                "type": "string"
+              },
+              "client_score": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 100,
+                "description": "Score do cliente (0-100). Nome preferido."
+              },
+              "best_in_class_score": {
+                "type": "number",
+                "description": "Score do melhor concorrente do grupo."
+              },
+              "competitor_avg_score": {
+                "type": "number",
+                "description": "Alternativa: média dos concorrentes. O renderer aceita best_in_class_score OU competitor_avg_score."
+              },
+              "gap": {
+                "type": "number",
+                "description": "Diferença entre best_in_class e client_score."
+              },
+              "best_practice_observed": {
+                "type": "string",
+                "description": "O que o melhor concorrente faz (específico). Nome preferido."
+              },
+              "evidence": {
+                "type": "string",
+                "description": "Alternativa a best_practice_observed — evidência concreta observada."
+              },
+              "opportunity_for_client": {
+                "type": "string",
+                "description": "Como o cliente pode fechar o gap (específico, não genérico). Nome preferido."
+              },
+              "immediate_win": {
+                "type": "string",
+                "description": "Alternativa a opportunity_for_client — ganho imediato possível."
+              }
             }
           }
         },
-        "strategic_read": { "type": "string" }
+        "strategic_read": {
+          "type": "string"
+        }
       }
     },
     "journey_friction_map": {
       "type": "object",
       "description": "Mapa de fricção do funil real da persona, estágio a estágio.",
       "properties": {
-        "description": { "type": "string" },
+        "description": {
+          "type": "string"
+        },
         "stages": {
           "type": "array",
           "items": {
             "type": "object",
-            "required": ["stage"],
+            "required": [
+              "stage"
+            ],
             "properties": {
-              "stage": { "type": "string" },
-              "current_volume": { "type": ["number", "string"] },
-              "leakage_pct": { "type": "number", "description": "% que vaza para o próximo estágio." },
-              "root_cause": { "type": "string" },
-              "fix_effort": { "type": "string", "enum": ["low", "medium", "high"] },
-              "fix_impact_estimate": { "type": "string" }
+              "stage": {
+                "type": "string"
+              },
+              "current_volume": {
+                "type": [
+                  "number",
+                  "string"
+                ]
+              },
+              "leakage_pct": {
+                "type": "number",
+                "description": "% que vaza para o próximo estágio."
+              },
+              "root_cause": {
+                "type": "string"
+              },
+              "fix_effort": {
+                "type": "string",
+                "enum": [
+                  "low",
+                  "medium",
+                  "high"
+                ]
+              },
+              "fix_impact_estimate": {
+                "type": "string"
+              }
             }
           }
         },
-        "biggest_leakage_summary": { "type": "string" },
-        "projected_funnel_90d_realistic": { "type": "string" }
+        "biggest_leakage_summary": {
+          "type": "string"
+        },
+        "projected_funnel_90d_realistic": {
+          "type": "string"
+        }
       }
     },
     "tone_of_voice_analysis": {
       "type": "object",
       "description": "Auditoria de coerência do tom de voz entre canais.",
       "properties": {
-        "description": { "type": "string" },
+        "description": {
+          "type": "string"
+        },
         "brand_voice_target": {
           "type": "object",
           "properties": {
-            "pillars": { "type": "array", "items": { "type": "string" } },
-            "avoid": { "type": "array", "items": { "type": "string" } }
+            "pillars": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "avoid": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
           }
         },
         "channel_drift": {
           "type": "array",
           "items": {
             "type": "object",
-            "required": ["channel"],
+            "required": [
+              "channel"
+            ],
             "properties": {
-              "channel": { "type": "string" },
-              "actual_tone": { "type": "string", "description": "Como soa hoje (com exemplo citado). Nome preferido." },
-              "current_tone": { "type": "string", "description": "Alternativa a actual_tone." },
-              "alignment_score": { "type": "number", "minimum": 0, "maximum": 100, "description": "Score numérico 0-100. Opcional se target_alignment for usado." },
+              "channel": {
+                "type": "string"
+              },
+              "actual_tone": {
+                "type": "string",
+                "description": "Como soa hoje (com exemplo citado). Nome preferido."
+              },
+              "current_tone": {
+                "type": "string",
+                "description": "Alternativa a actual_tone."
+              },
+              "alignment_score": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 100,
+                "description": "Score numérico 0-100. Opcional se target_alignment for usado."
+              },
               "target_alignment": {
                 "type": "string",
                 "enum": [
-                  "alinhado", "aligned",
-                  "bom", "boa", "good",
-                  "parcial", "partial", "media", "média", "medium",
-                  "baixa", "baixo", "low",
-                  "desalinhado", "misaligned",
-                  "critico", "crítico",
-                  "nenhum", "none", "nao", "não"
+                  "alinhado",
+                  "aligned",
+                  "bom",
+                  "boa",
+                  "good",
+                  "parcial",
+                  "partial",
+                  "media",
+                  "média",
+                  "medium",
+                  "baixa",
+                  "baixo",
+                  "low",
+                  "desalinhado",
+                  "misaligned",
+                  "critico",
+                  "crítico",
+                  "nenhum",
+                  "none",
+                  "nao",
+                  "não"
                 ],
                 "description": "Alinhamento qualitativo com a brand voice. O renderer do portal mapeia para score (alinhado=100, bom=80, parcial/média=55, baixa=25, desalinhado=20, crítico=10, nenhum=0). Preferido sobre alignment_score numérico por ser mais legível."
               },
-              "drift_notes": { "type": "string", "description": "Onde desalinhou. Nome preferido." },
-              "gap": { "type": "string", "description": "Alternativa a drift_notes — descrição do gap observado." },
-              "fix": { "type": "string", "description": "Correção sugerida. Se presente, o renderer exibe como ação complementar ao drift_notes." },
-              "example": { "type": "string", "description": "Citação textual do canal que ilustra o drift." }
+              "drift_notes": {
+                "type": "string",
+                "description": "Onde desalinhou. Nome preferido."
+              },
+              "gap": {
+                "type": "string",
+                "description": "Alternativa a drift_notes — descrição do gap observado."
+              },
+              "fix": {
+                "type": "string",
+                "description": "Correção sugerida. Se presente, o renderer exibe como ação complementar ao drift_notes."
+              },
+              "example": {
+                "type": "string",
+                "description": "Citação textual do canal que ilustra o drift."
+              }
             }
           }
         },
-        "coherence_score": { "type": "number", "minimum": 0, "maximum": 100 }
+        "coherence_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        }
       }
     },
     "url_audit": {
       "type": "object",
       "description": "Lista de URLs críticas a verificar pelo operador.",
       "properties": {
-        "description": { "type": "string" },
+        "description": {
+          "type": "string"
+        },
         "urls": {
           "type": "array",
           "items": {
             "type": "object",
-            "required": ["url", "purpose"],
+            "required": [
+              "url",
+              "purpose"
+            ],
             "properties": {
-              "url": { "type": "string" },
-              "purpose": { "type": "string" },
-              "status_expected": { "type": "string" },
-              "verify_checklist": { "type": "array", "items": { "type": "string" } }
+              "url": {
+                "type": "string"
+              },
+              "purpose": {
+                "type": "string"
+              },
+              "status_expected": {
+                "type": "string"
+              },
+              "verify_checklist": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
             }
           }
         }
@@ -375,7 +635,12 @@
       "maxItems": 5,
       "items": {
         "type": "object",
-        "required": ["action", "channel", "time_estimate", "expected_impact"],
+        "required": [
+          "action",
+          "channel",
+          "time_estimate",
+          "expected_impact"
+        ],
         "properties": {
           "action": {
             "type": "string",
@@ -395,17 +660,133 @@
           },
           "who_does_it": {
             "type": "string",
-            "enum": ["operator", "client", "client_team", "designer"],
+            "enum": [
+              "operator",
+              "client",
+              "client_team",
+              "designer"
+            ],
             "description": "Quem implementa."
           },
           "steps": {
             "type": "array",
-            "items": { "type": "string" },
+            "items": {
+              "type": "string"
+            },
             "description": "Passos detalhados para implementar."
           }
         }
       },
       "description": "Ações implementáveis em menos de 1 semana sem custo adicional."
+    },
+    "summary_headline": {
+      "type": "string",
+      "maxLength": 200,
+      "description": "Manchete em 1 linha com o veredito desta skill (hero do resumo executivo no portal). Ver plugins/v4-estruturacao-ia/shared-templates/PADRAO-OUTPUT.md"
+    },
+    "summary_highlights": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 8,
+      "description": "KPIs visuais categorizados para o resumo executivo. Cada item: {category, label, value, subtext, tone}.",
+      "items": {
+        "type": "object",
+        "required": [
+          "category",
+          "label",
+          "value"
+        ],
+        "properties": {
+          "category": {
+            "type": "string",
+            "enum": [
+              "posicao",
+              "competicao",
+              "janela",
+              "maturidade",
+              "oportunidade",
+              "risco"
+            ]
+          },
+          "label": {
+            "type": "string",
+            "maxLength": 40
+          },
+          "value": {
+            "type": "string"
+          },
+          "subtext": {
+            "type": "string",
+            "maxLength": 80
+          },
+          "tone": {
+            "type": "string",
+            "enum": [
+              "green",
+              "yellow",
+              "red",
+              "blue",
+              "gray"
+            ]
+          }
+        }
+      }
+    },
+    "summary_key_findings": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 6,
+      "description": "Achados categorizados por intenção (vantagem/contexto/ameaça/ação). Pelo menos 3 dos 4 tipos cobertos.",
+      "items": {
+        "type": "object",
+        "required": [
+          "category",
+          "text"
+        ],
+        "properties": {
+          "category": {
+            "type": "string",
+            "enum": [
+              "vantagem",
+              "contexto",
+              "ameaca",
+              "acao"
+            ]
+          },
+          "text": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "key_insight": {
+      "type": "object",
+      "description": "Ponto de alavancagem desta skill — o bloco que merece destaque visual para conversa com o stakeholder. Ver PADRAO-OUTPUT.md.",
+      "properties": {
+        "headline": {
+          "type": "string",
+          "description": "Frase-manchete do ponto (pode virar quote destacada no renderer)"
+        },
+        "context": {
+          "type": "string",
+          "description": "Contexto em 2-3 linhas explicando o cenário"
+        },
+        "numbered_reasons": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Razões numeradas (o renderer vira 3 cards numerados)"
+        },
+        "discussion_anchor": {
+          "type": "string",
+          "description": "Por que este é o ponto para stakeholder decidir/validar"
+        }
+      }
+    },
+    "honesty_alert": {
+      "type": "string",
+      "description": "Alerta se a análise revelou fragilidade real do cliente (não há diferencial claro, premissa contraditória, etc.). Nunca omitir se justificado."
     }
   }
 }

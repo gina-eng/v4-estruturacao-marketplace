@@ -157,6 +157,42 @@ Para cada opção:
 - Por que essa abordagem funciona para este ICP
 - Em que contexto usar (anúncios, bio Instagram, headline do site, etc.)
 
+### Estrutura visual (obrigatória)
+
+Siga o padrão canônico de `plugins/v4-estruturacao-ia/shared-templates/PADRAO-OUTPUT.md`. Além dos campos acima, SEMPRE inclua:
+
+- **`summary_headline`** (string, max 200 char) — manchete com o veredito do ICP/Persona. Específica, com dados reais.
+  - Ex: "Mariana (35-50, tutora de gatos premium) é o ICP. Ignorada pelos concorrentes que tratam cão e gato igual."
+
+- **`summary_highlights`** (4-6 itens) — KPIs visuais. Sugestões para persona-ICP:
+  - `posicao`: faixa etária/renda da persona, ticket médio atual vs premium ceiling
+  - `competicao`: nº de concorrentes que atendem o mesmo ICP declaradamente
+  - `janela`: tempo de decisão médio (buyer journey duration)
+  - `oportunidade`: dor mais aguda não endereçada, WTP gap (premium ceiling - current ticket)
+  - `risco`: objeção mais comum / leakage point mais crítico
+  - Cada item: `{category, label, value, subtext, tone}` (tons: `green|yellow|red|blue|gray`)
+
+- **`summary_key_findings`** (3-5 itens) — achados categorizados:
+  - `vantagem | contexto | ameaca | acao`
+  - Cubra pelo menos 3 dos 4 tipos.
+
+### Ponto de alavancagem
+
+Em persona-ICP, o ponto de alavancagem é a **combinação {persona principal + dor mais ignorada pelos concorrentes + frase-citação}** — o que o time precisa internalizar para mudar comunicação/atendimento. Estruture como:
+
+```json
+"key_insight": {
+  "headline": "Frase-manchete (ex: 'Mariana paga R$400 se entender o porquê — e ninguém explica')",
+  "context": "2-3 linhas explicando o insight",
+  "numbered_reasons": ["(1) razão A", "(2) razão B", "(3) razão C"],
+  "discussion_anchor": "Por que este é o ponto para o stakeholder decidir"
+}
+```
+
+Alternativamente, se o renderer da skill tiver um campo específico de destaque (ex: `critical_leakage_point` com objeto estruturado), use a mesma lógica de quote + razões.
+
+Se a pesquisa do ICP revelou fragilidade (persona mal definida, ICP contraditório com o produto, WTP incompatível), inclua `honesty_alert`.
+
 ## Auto-validação
 
 Antes de mostrar ao operador, verifique:
@@ -178,6 +214,11 @@ Antes de mostrar ao operador, verifique:
 - [ ] `critical_leakage_point` identifica onde o cliente mais perde leads hoje COM evidência?
 - [ ] Willingness-to-pay cobre os serviços principais com preço atual, faixa justa, faixa premium, elasticidade e pricing_lever?
 - [ ] Objection library tem 5-7 objeções com subtext, bad_response e good_response (linguagem real, não corporativês)?
+- [ ] Tem `summary_headline` específico (não "persona definida")?
+- [ ] `summary_highlights` tem 4-6 itens com categorias e tons válidos?
+- [ ] `summary_key_findings` cobre pelo menos 3 dos 4 tipos (vantagem/contexto/ameaça/ação)?
+- [ ] Identificou `key_insight` para ancorar conversa com stakeholder?
+- [ ] Se há fragilidade, incluiu `honesty_alert`?
 
 Se falhou → regenere silenciosamente. Não avise o operador.
 

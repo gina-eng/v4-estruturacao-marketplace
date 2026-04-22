@@ -29,13 +29,13 @@ if [ ! -f "$CLIENT_JSON" ]; then
 fi
 
 # Build portal data using Python (handles large JSON safely)
-python3 - "$CLIENT_JSON" "$OUTPUTS_DIR" "$TEMPLATE" "$OUTPUT_FILE" << 'PYEOF'
+CLIENT_JSON_P="$CLIENT_JSON" OUTPUTS_DIR_P="$OUTPUTS_DIR" TEMPLATE_P="$TEMPLATE" OUTPUT_P="$OUTPUT_FILE" python3 << 'PYEOF'
 import json, sys, os, glob
 
-client_json_path = sys.argv[1]
-outputs_dir = sys.argv[2]
-template_path = sys.argv[3]
-output_path = sys.argv[4]
+client_json_path = os.environ['CLIENT_JSON_P']
+outputs_dir = os.environ['OUTPUTS_DIR_P']
+template_path = os.environ['TEMPLATE_P']
+output_path = os.environ['OUTPUT_P']
 
 # Read client.json
 with open(client_json_path, 'r', encoding='utf-8') as f:
@@ -60,14 +60,11 @@ portal_data = {
     'briefing': client_data.get('briefing', {}),
 }
 
-# Serialize to JSON (compact, no ASCII escaping for pt-BR)
 data_json = json.dumps(portal_data, ensure_ascii=False, separators=(',', ':'))
 
-# Read template
 with open(template_path, 'r', encoding='utf-8') as f:
     template = f.read()
 
-# Inject data — replace the marker line
 marker = '/*%%DATA%%*/ {}'
 if marker not in template:
     print("Erro: Marcador /*%%DATA%%*/ {} não encontrado no template", file=sys.stderr)
@@ -75,7 +72,6 @@ if marker not in template:
 
 result = template.replace(marker, data_json)
 
-# Write output
 os.makedirs(os.path.dirname(output_path) or '.', exist_ok=True)
 with open(output_path, 'w', encoding='utf-8') as f:
     f.write(result)
@@ -85,12 +81,26 @@ PYEOF
 
 echo "✓ Portal atualizado: $OUTPUT_FILE"
 
+# Gera/atualiza consolidated.md + consolidated.html (visão narrativa end-to-end)
+CONSOLIDATED_SCRIPT="$SCRIPT_DIR/../shared-templates/render_consolidated.py"
+CONSOLIDATED_HTML="$CLIENT_DIR/consolidated.html"
+if [ -f "$CONSOLIDATED_SCRIPT" ]; then
+  if python3 "$CONSOLIDATED_SCRIPT" "$CLIENT_DIR" >/dev/null 2>&1; then
+    echo "✓ Consolidated atualizado: $CONSOLIDATED_HTML"
+  else
+    echo "⚠ Falha ao gerar consolidated (seguindo sem atualizar)" >&2
+  fi
+fi
+
 # Deploy para Vercel se existir vercel-project.json no diretório do cliente
 VERCEL_CFG="$CLIENT_DIR/vercel-project.json"
 if [ -f "$VERCEL_CFG" ] && command -v vercel >/dev/null 2>&1; then
   PROJECT_NAME=$(python3 -c "import json,sys; print(json.load(open(sys.argv[1])).get('projectName',''))" "$VERCEL_CFG")
   DEPLOY_DIR=$(mktemp -d)
   cp "$OUTPUT_FILE" "$DEPLOY_DIR/index.html"
+  if [ -f "$CONSOLIDATED_HTML" ]; then
+    cp "$CONSOLIDATED_HTML" "$DEPLOY_DIR/consolidated.html"
+  fi
   mkdir -p "$DEPLOY_DIR/.vercel"
   cp "$VERCEL_CFG" "$DEPLOY_DIR/.vercel/project.json"
   echo "🚀 Deployando para Vercel ($PROJECT_NAME)..."

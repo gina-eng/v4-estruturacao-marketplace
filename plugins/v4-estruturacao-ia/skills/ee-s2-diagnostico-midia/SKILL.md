@@ -25,10 +25,18 @@ Voce e um especialista em midia paga com foco em performance para PMEs brasileir
    - Se `connectors.fetched_at` é null: rode `bash scripts/v4mos_fetch.sh clientes/{slug}` para buscar
    - Se não há `workspace_id` no client.json: peça dados ao operador (exportação manual dos últimos 90 dias)
 
-   **Estrutura dos dados V4MOS em connectors:**
+   **Estrutura dos dados V4MOS em connectors (atualizada — agregações temporais e por dimensão):**
    - `connectors.google_ads.campaigns[]` → {name, type, status, cost, clicks, impressions, conversions, ctr, cpa}
-   - `connectors.facebook_ads.campaigns[]` → {name, objective, spend, impressions, clicks, reach, cpm}
-   - `connectors.period` → {start, end} — período dos dados
+   - `connectors.google_ads.monthly_evolution[]` → {month, cost, clicks, impressions, conversions, ctr, cpa} — **use direto em `google_ads.monthly_evolution`**
+   - `connectors.google_ads.day_of_week[]` → {day, clicks, impressions, cost, pct, ctr} — ordem Seg→Dom
+   - `connectors.google_ads.gender_breakdown[]` → {gender, clicks, cost, pct_clicks, ctr, cpa}
+   - `connectors.google_ads.top_keywords[]` → {keyword, match_type, clicks, impressions, ctr, cost, cpc, cpa, conversions}
+   - `connectors.facebook_ads.campaigns[]` → {name, objective, spend, impressions, clicks, reach, cpm, ctr}
+   - `connectors.facebook_ads.monthly_evolution[]` → {month, spend, impressions, clicks, reach, cpm, ctr}
+   - `connectors.facebook_ads.creatives[]` → {ad_id, ad_name, spend, impressions, clicks, ctr, cpc, cpm, reach, object_type, thumbnail_url, instagram_permalink_url, ad_created_time, ...}
+   - `connectors.period` → {start, end} — período dos dados (normalmente 90 dias)
+
+   **IMPORTANTE — evite a armadilha de totais inflados:** o endpoint V4MOS `facebook/ads/campaigns` (e potencialmente outros) **ignora** o filtro de data `createdStart/createdEnd` e retorna histórico completo. O script `v4mos_fetch.sh` agora filtra por `segments_date`/`date_start` no Python — portanto os totais em `connectors.*.total_*` refletem o período real. Não some campanhas brutas por conta própria sem filtrar data.
 
    **API V4MOS (para referência, se precisar buscar manualmente):**
    ```bash
@@ -62,6 +70,75 @@ Apresente fonte dos dados, período, budget, integrações V4MOS e métricas atu
 
 Se algum dado crítico estiver faltando, pergunte ao operador de uma vez.
 
+### Blocos `google_ads` e `meta_ads` — obrigatórios (por canal)
+
+O portal renderiza cada canal em uma seção separada, iniciando por um **bloco de abertura** com 4 cards + 1 card "Resumo Executivo". Gere os dois objetos top-level `google_ads` e `meta_ads` com os campos abaixo — o renderer NÃO inventa fallback, se o campo estiver ausente o card some.
+
+**`google_ads` — campos esperados:**
+```json
+{
+  "integration": "nome da conta no V4MOS",
+  "budget_monthly_declared": 2400,
+  "budget_monthly_actual": 1450.92,
+  "total_campaigns": 6,
+  "active_campaigns": 1,
+  "paused_campaigns": 5,
+  "status": "healthy_but_choked | subscale | healthy | critical | broken",
+  "score": 62,
+  "score_classification": "medium",
+  "total_spend_90d": 4352.77,
+  "total_clicks_90d": 1751,
+  "total_impressions_90d": 46491,
+  "total_conversions_90d": 300,
+  "avg_cpa": 14.51,
+  "avg_ctr": 3.77,
+  "strategic_diagnosis": "3-5 linhas. Veredito do canal: o que está acontecendo, por que acontece, qual é o destravamento. Usado no card Resumo Executivo.",
+  "active_campaign": { "name":"...", "type":"SEARCH", "status":"ENABLED", "cost_90d":..., "ctr":..., "cpa":..., "note":"..." },
+  "paused_campaigns_opportunity": [ {name,type,cost_90d,clicks,impressions,conversions,ctr,cpa,note} ],
+  "monthly_evolution": [ {month,cost,clicks,impressions,conversions,ctr,cpa} ],
+  "day_of_week": [ {day,clicks,impressions,cost,pct,ctr} ],
+  "gender_breakdown": [ {gender,clicks,cost,pct_clicks,ctr,cpa} ],
+  "top_keywords": [ {keyword,match_type,clicks,impressions,ctr,cost,cpc,cpa,conversions,insight?,tag?} ]
+}
+```
+
+**`meta_ads` — campos esperados:**
+```json
+{
+  "integration": "nome da conta no V4MOS",
+  "budget_monthly_declared": 800,
+  "budget_monthly_actual": 424.53,
+  "total_campaigns": 5,
+  "total_ads": 43,
+  "total_creatives": 43,
+  "status": "critical | subscale | healthy | broken",
+  "score": 38,
+  "score_classification": "medium_low",
+  "total_spend_90d": 1273.60,
+  "total_clicks_90d": 1442,
+  "total_impressions_90d": 112295,
+  "total_reach_90d": 71890,
+  "avg_ctr": 1.28,
+  "avg_cpm": 11.34,
+  "strategic_diagnosis": "3-5 linhas. Veredito do canal. Usado no card Resumo Executivo.",
+  "critical_issues": [ "marcador por linha, começa com ▲ implicitamente no render" ],
+  "top_5_ads_by_spend": [ {ad_name,campaign_context,spend,impressions,clicks,ctr,cpc,cpm,object_type,creative_id,note} ],
+  "felino_creatives_found": [ ... ],        // opcional — destaques temáticos alinhados ao ICP
+  "monthly_evolution": [ {month,spend,impressions,clicks,reach,cpm,ctr} ],
+  "creative_gallery": [ ... ],              // vem do connectors.facebook_ads.creatives, mas com verdict M/O/E por ad
+  "creative_gallery_summary": { total_displayed, total_ads, manter, otimizar, eliminar, note }
+}
+```
+
+**COMO O PORTAL RENDERIZA O BLOCO DE ABERTURA (Google e Meta):**
+1. **4 cards** com cores semáforo:
+   - Google: Investido 90d · CTR médio · CPA médio · Conversões 90d
+   - Meta: Investido 90d · CTR médio · CPM médio · Alcance 90d (fallback: Clicks 90d)
+2. **Linha de stats secundárias** (muted): Média mensal · Clicks · Impressões · Ads/Campanhas
+3. **Card "Resumo Executivo"** com o texto de `strategic_diagnosis` (use este campo para a narrativa do canal — não é local para sinônimo do `summary` global, é o veredito específico de Google OU Meta).
+
+Se `strategic_diagnosis` estiver ausente, o card some. Sempre preencha.
+
 ### Métricas vs benchmarks por segmento
 
 | Metrica | Atual | Benchmark setor | Status | Gap |
@@ -94,13 +171,16 @@ Para cada: título, evidência nos dados, impacto estimado, dimensão afetada.
 
 Não trate keywords como lista única. Agrupe em 4-6 clusters estratégicos. Para cada:
 - `cluster`: nome (ex: "Marca", "Felinos", "Domicílio", "Genéricas")
-- `keywords`: exemplos (5-15)
+- `keywords`: exemplos (5-15) — keywords ATUALMENTE EM USO no cluster
 - `intent`: navegacional | informacional | transacional | comercial
 - `budget_allocation_pct`: % do budget de search para esse cluster
 - `expected_cpc_range`: faixa esperada (R$)
 - `bid_strategy`: estratégia (máx. conv., CPA alvo, manual)
 - `copy_angle`: ângulo da copy para esse cluster
 - `risk`: principal risco (ex: concorrência alta, baixa intenção, canibalização)
+- `opportunity_keywords`: **opcional mas RECOMENDADO** — lista de keywords relevantes para o ICP que o cliente NÃO usa hoje. Itens `{keyword, intent?, volume_estimate?|search_volume_monthly?, expected_cpc?|cpc_range?, rationale}`. Base: compare `google_ads.top_keywords` (ativas) contra ICP + segmento + concorrentes. O portal renderiza uma tabela "Keywords Relevantes Não Utilizadas Hoje — Oportunidades" agregando estes campos de todos os clusters.
+
+Alternativa: gere `opportunity_keywords` como array top-level (fora dos clusters) no formato `[{keyword, cluster, intent, volume_estimate, expected_cpc, rationale}]` — o renderer aceita ambos.
 
 ### Budget Reallocation Scenarios (OBRIGATÓRIO — 3 cenários)
 
@@ -152,27 +232,56 @@ Não basta "rodar o dia todo". Proponha ajustes de lance por dia/hora baseados n
 - `bid_adjustment_pct`: +X% ou -X%
 - `rationale`: por que (dado de comportamento, padrão do segmento)
 
-### Forecast Sensitivity Analysis (OBRIGATÓRIO)
+### Forecast Sensitivity Analysis (opcional)
 
-Projeção não é um número — é um intervalo. Mostre como a meta se move com variações:
-- `base_case`: meta central. Campos aceitos:
-  - `leads_monthly` (pref) ou `leads_month_90d`
-  - `cpl` (pref) ou `cpl_90d_brl`
-  - `cac` (pref) ou `cac_90d_brl`
-  - `revenue_monthly`, `roas`
-- `variations`: 4-6 cenários "what-if" com mudança nas variáveis (CPC +10%, CTR -20%, LP conv +30%, etc.) e impacto no resultado. Campos aceitos por variação:
-  - `scenario` (pref) ou `scenario_name`
-  - `variable_change` — descrição da mudança
-  - `impact_on_leads` (pref) ou `impact_on_leads_month_90d`
-  - `impact_on_cpl` (pref) ou `impact_on_cpl_brl`
-  - `impact_on_revenue`
-  - `delta_vs_base_pct` — variação vs. base em % (ex: -15.5)
+**Status:** Não é mais obrigatório. O portal suporta o bloco mas ele é dispensável — `honesty_alert` e `realistic_goal_90d.alert` cobrem os riscos principais. Gere apenas se:
+- O caso tem múltiplas variáveis interdependentes que mudam significativamente o forecast, ou
+- O operador pede explicitamente o what-if.
 
-> **IMPORTANTE — MUDANÇA NO RENDERER:** O portal NÃO exibe mais um gráfico de sensibilidade. Apenas os cards de detalhe (base_case + lista de variations) são renderizados. Continue gerando dados ricos — eles alimentam os cards e fazem parte do JSON para referência. Não gere gráficos no texto livre; o portal cuida da visualização.
+Se gerar, use a estrutura:
+- `base_case`: meta central com `leads_monthly`, `cpl`, `cac`, `revenue_monthly`, `roas`.
+- `variations`: 4-6 cenários "what-if" `{scenario, variable_change, impact_on_leads, impact_on_cpl, impact_on_revenue, delta_vs_base_pct}`.
+
+O renderer exibe apenas os cards (sem gráfico).
 
 ### Meta realista — 90 dias
 
-CPL alvo e ROAS alvo com justificativa baseada nos dados e benchmarks. Premissas + alertas sobre fatores fora do controle.
+Gere `realistic_goal_90d` com os seguintes campos (o portal renderiza 4 cards + card "Premissas"):
+- `current_cpl`, `target_cpl` — CPL atual e alvo em R$
+- `current_cac`, `target_cac` — CAC atual e alvo em R$
+- `current_leads_month`, `target_leads_month` — volume de leads atual e alvo
+- `current_agendamentos_month`, `target_agendamentos_month` — opcional, se a skill de posicionamento define funil lead→agendamento
+- `premissas`: lista de 3-6 premissas concretas (ex: "LP felinos no ar na Semana 3")
+
+**NÃO gere** o campo `alert` em `realistic_goal_90d` — o portal não renderiza mais essa caixa. Se há risco de prazo/acesso/budget, inclua em `honesty_alert` (global) ou como premissa condicional.
+
+Gere também `realistic_goal` com `target_cpl`, `target_roas`, `justification`, `assumptions`, `risk_factors` — usado como texto de apoio.
+
+### Estrutura visual (obrigatória)
+
+Siga o padrão canônico de `plugins/v4-estruturacao-ia/shared-templates/PADRAO-OUTPUT.md`. Além dos campos acima, SEMPRE inclua:
+
+- **`summary_headline`** (max 200 char) — manchete com o veredito. Ex: "CPL atual (R$ 85) está 40% acima do benchmark — realocação B recupera R$ 12K/mês sem subir orçamento."
+- **`summary_highlights`** (4-6 itens, `{category, label, value, subtext, tone}`) — para diagnóstico de mídia sugestões:
+  - `posicao`: CPL atual vs benchmark, leads/mês, CAC, ROAS
+  - `oportunidade`: cenário de realocação com maior upside, economia projetada
+  - `risco`: plataforma/campanha queimando verba sem retorno
+  - `janela`: tempo de ramp-up para estabilizar CPL alvo
+- **`summary_key_findings`** (3-5 itens, `{category, text}`) — `vantagem|contexto|ameaca|acao`.
+
+### Ponto de alavancagem
+
+Em diagnóstico de mídia, o ponto de alavancagem é o **canal/campanha com maior gap entre performance atual e potencial** — tipicamente o cenário de realocação recomendado + hipótese criativa principal. Estruture em `key_insight`:
+```json
+"key_insight": {
+  "headline": "Frase sobre o destravamento (ex: 'Cortar Performance Max e dobrar Search Branded baixa CPL em 35%')",
+  "context": "2-3 linhas sobre por que o desperdício acontece e o caminho",
+  "numbered_reasons": ["(1) evidência do gap", "(2) causa-raiz (estrutura/copy/segmentação)", "(3) upside projetado"],
+  "discussion_anchor": "Por que o stakeholder precisa aprovar a realocação antes do próximo ciclo"
+}
+```
+
+Se os dados são insuficientes (menos de 60 dias, tracking quebrado) ou o orçamento é incompatível com o objetivo, inclua `honesty_alert`.
 
 ## Auto-validação
 
@@ -186,11 +295,21 @@ Antes de mostrar ao operador, verifique:
 - [ ] Benchmarks são do segmento correto do cliente?
 - [ ] Plano de ação tem responsáveis e prazos realistas?
 - [ ] Meta de 90 dias é honesta (não promessa mágica)?
+- [ ] `google_ads` tem total_spend_90d, avg_ctr, avg_cpa, total_conversions_90d E `strategic_diagnosis` preenchido (3-5 linhas)?
+- [ ] `meta_ads` tem total_spend_90d, avg_ctr, avg_cpm, total_reach_90d E `strategic_diagnosis` preenchido (3-5 linhas)?
+- [ ] Totais 90d de google_ads e meta_ads BATEM com `connectors.google_ads.total_cost` e `connectors.facebook_ads.total_spend` (V4MOS filtrado)?
+- [ ] `budget_monthly_actual` por canal é `total_spend_90d / 3` (cliente pode estar subinvestindo — flag isso se delta vs declarado > 20%)?
 - [ ] `keyword_clusters` (search) tem 4-6 clusters com intent, budget %, copy angle e risco?
+- [ ] Pelo menos 1 cluster tem `opportunity_keywords[]` (keywords relevantes para o ICP NÃO ativas hoje)?
 - [ ] `budget_reallocation_scenarios` tem 3 cenários (A/B/C) com estrutura de campanhas e projeção?
 - [ ] `creative_testing_hypotheses` tem 4-6 hipóteses testáveis com success_criteria numérico e budget?
 - [ ] `daypart_optimization` traz ajustes específicos por janela com rationale?
-- [ ] `forecast_sensitivity_analysis` mostra base_case + 4-6 variações "what-if"?
+- [ ] `forecast_sensitivity_analysis` (opcional) — se gerar, tem base_case + 4-6 variações?
+- [ ] Tem `summary_headline` específico?
+- [ ] `summary_highlights` tem 4-6 itens com categorias e tons válidos?
+- [ ] `summary_key_findings` cobre pelo menos 3 dos 4 tipos?
+- [ ] Identificou `key_insight` (realocação/hipótese com maior upside)?
+- [ ] Se há limitação de dados/orçamento, incluiu `honesty_alert`?
 
 Se falhou → regenere silenciosamente. Não avise o operador.
 

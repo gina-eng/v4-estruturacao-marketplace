@@ -1,0 +1,429 @@
+{
+  "summary_headline": "Zenvet é a ÚNICA clínica privada da microrregião Americana/SBO/Nova Odessa com posicionamento felino declarado. Janela de 12-18 meses para consolidar o território antes que LM+ reaja ou que tutoras premium migrem para as 4 clínicas especializadas de Campinas (45-60min).",
+
+  "summary_highlights": [
+    { "category": "posicao", "label": "Fatia atual do SAM", "value": "1,9%", "subtext": "R$ 653K/ano de R$ 34M", "tone": "yellow" },
+    { "category": "posicao", "label": "Meta SOM (3 anos)", "value": "5,3%", "subtext": "R$ 1,8M/ano (+176%)", "tone": "green" },
+    { "category": "competicao", "label": "Clínicas privadas felinas na microrregião", "value": "0", "subtext": "concorrente direto inexistente", "tone": "green" },
+    { "category": "competicao", "label": "Especialistas felinos em Campinas", "value": "4", "subtext": "MedCat, ClinFel, Gattare, Estimma", "tone": "red" },
+    { "category": "janela", "label": "Janela estratégica", "value": "12-18m", "subtext": "antes de reação competitiva", "tone": "yellow" },
+    { "category": "janela", "label": "Crescimento do segmento felino", "value": "+5,4% a/a", "subtext": "~2x o ritmo de cães", "tone": "green" }
+  ],
+
+  "summary_key_findings": [
+    { "category": "vantagem", "text": "Zenvet é a única clínica PRIVADA da microrregião (Americana/SBO/Nova Odessa) com posicionamento felino declarado — nenhum concorrente privado local comunica especialização." },
+    { "category": "vantagem", "text": "Diferenciais reais confirmados: Nathalia com formação felina (pós-graduanda) + acompanhamento pós-consulta humanizado + base de 1.186 clientes fidelizados." },
+    { "category": "contexto", "text": "Competição local direta é dominada por 2 hospitais 24h na mesma avenida (LM+ e Cantinho do Mascote) + Xodog tradicional. Todos generalistas." },
+    { "category": "contexto", "text": "Clínica Meu Pet SBO (pública, jun/2024) tem felinos mas atende só baixa renda de SBO — não concorre no ICP premium." },
+    { "category": "ameaca", "text": "Em Campinas (45-60min) existem 4 clínicas altamente especializadas: MedCat (Cat Friendly Gold), ClinFel (exclusiva felinos), Hospital Gattare (2 certificações Cat Friendly) e Estimma — concorrência indireta por distância." },
+    { "category": "acao", "text": "Atendimento domiciliar é a alavanca premium sub-explorada de maior margem." },
+    { "category": "acao", "text": "Ação defensiva crítica: buscar título oficial ABFel (CFMV) + certificação Cat Friendly Practice (AAFP) para blindar posicionamento vs. Campinas." }
+  ],
+
+  "market_share": {
+    "current_revenue_brl": 653051.74,
+    "current_share_of_sam_pct": 1.92,
+    "target_share_of_sam_pct": 5.29,
+    "gap_to_som_brl": 1146948.26,
+    "gap_to_som_pct": 175.6,
+    "commentary": "Zenvet captura hoje R$ 653K de um SAM de R$ 34M (1,92%). Para atingir o SOM de R$ 1,8M em 3 anos (5,29% do SAM), precisa triplicar receita — crescimento de 176%. O gap de R$ 1,15M é atingível consolidando o posicionamento felino + corrigindo vazamentos digitais (CAC R$ 266 → R$ 120) + ativando a base dormente de 1.700 pacientes. Não exige expansão geográfica."
+  },
+
+  "summary": "Mercado vet BR projetado em R$ 8,1 bi em 2025 (10,6% do setor pet de R$ 77,2 bi). Na região Americana/SBO/Nova Odessa (500K hab, ~113K domicílios com pet), SAM estimado em R$ 34M. Zenvet opera com ~1,9% do SAM (R$ 653K/ano). Gatos são o segmento que mais cresce (+5,4% a/a vs +2,8% cães) e Medicina Felina consolidou-se como especialidade no Brasil. Zenvet é a ÚNICA CLÍNICA PRIVADA da microrregião (Americana/SBO/Nova Odessa) com posicionamento felino declarado — NENHUM concorrente privado local comunica especialização em felinos. Em Campinas (45-60min), existem 4 clínicas altamente especializadas (MedCat Cat Friendly Gold, ClinFel, Hospital Gattare, Estimma) que competem indiretamente por distância. Competição local direta é dominada por 2 hospitais 24h na mesma avenida (LM+ e Cantinho do Mascote) e por Xodog (tradicional, 19K clientes desde 1996), todos generalistas. Clínica Meu Pet SBO (pública, jun/2024) atende felinos mas apenas população baixa renda de SBO — não concorre no ICP premium. Diferenciais reais: Nathalia com formação felina (pós-graduanda) + atendimento humanizado com acompanhamento pós + base de 1.186 clientes fidelizados. Diferencial sub-explorado: atendimento domiciliar (alavanca premium de margem). Ação defensiva crítica: buscar título oficial ABFel (CFMV) + certificação Cat Friendly Practice para blindar posicionamento vs. Campinas.",
+
+  "client_name": "Clínica Veterinária Zenvet",
+  "segment": "Serviços Veterinários — Saúde Animal & Pet Care",
+  "region": "Americana, Santa Bárbara d'Oeste e Nova Odessa — SP (RMC)",
+
+  "tam_sam_som": {
+    "tam": {
+      "value_brl": 8100000000,
+      "description": "Serviços veterinários no Brasil em 2025: R$ 8,1 bi (10,6% do total do setor pet de R$ 77,2 bi). Inclui consultas, exames, cirurgias, internação e procedimentos em clínicas e hospitais veterinários. População pet de referência: 62,2M cães + 30,8M gatos (total ~93M animais relevantes)."
+    },
+    "sam": {
+      "value_brl": 34000000,
+      "description": "Serviços veterinários para pets em domicílios de Americana, SBO e Nova Odessa. Regiões com perfil socioeconômico compatível com o ICP Zenvet (classe média a média-alta com pets humanizados).",
+      "filters": [
+        "Regionalização: apenas 3 cidades de cobertura (500.221 hab. total em 2024 — IBGE)",
+        "Domicílios com pet: ~60% dos domicílios (média BR ajustada para perfil urbano de SP interior) = ~113K domicílios com pet",
+        "Pets por domicílio: ~1,45 (proporção cão/gato 67%/33% espelhando mix nacional)",
+        "Gasto médio anual por domicílio pet em serviços vet: R$ 300 (média ponderada entre tutores ocasionais e humanizados)",
+        "[E] SAM é estimativa calibrada — não existe dado público regionalizado para serviços vet nesse recorte"
+      ]
+    },
+    "som": {
+      "value_brl": 1800000,
+      "description": "Participação obtenível pela Zenvet em 3 anos (2029). Meta realista: triplicar o faturamento atual de R$ 653K para ~R$ 1,8M, capturando aproximadamente 5,3% do SAM regional.",
+      "assumptions": [
+        "Consolidação do posicionamento 'especialista em felinos' no território digital (GMB, Instagram, Google Ads) em 6 meses",
+        "Eliminação dos vazamentos de mídia atuais (Meta Ads 404 + ausência de tracking) gerando CAC R$ 120 (hoje R$ 266)",
+        "Crescimento da base ativa de 1.186 → ~3.200 clientes em 3 anos com retenção via CRM (hoje sem CRM)",
+        "Lançamento vertical de atendimento domiciliar felino como serviço premium proprietário",
+        "Expansão do ticket médio via pacotes preventivos (vacinação anual, check-up sênior) — Mariana mostra elasticidade baixa quando entende o valor",
+        "Premissa macro: mercado pet cresce 2,4%-3,5% a/a até 2028 (projeção Abinpet/IPB)"
+      ]
+    },
+    "methodology": "mixed",
+    "sources": [
+      {
+        "name": "Abinpet/Instituto Pet Brasil — Projeção setor pet 2025",
+        "url": "https://opresentepet.com.br/setor-pet-projeta-crescer-35-em-2025-com-faturamento-de-r-78-bilhoes/",
+        "year": 2025
+      },
+      {
+        "name": "Abinpet — Revisão setor pet 2025 (R$ 77,2 bi)",
+        "url": "https://www.revistafatorbrasil.com.br/2025/09/24/setor-pet-deve-faturar-772-bilhoes-em-2025/",
+        "year": 2025
+      },
+      {
+        "name": "Abinpet — População pet Brasil (160M, 62,2M cães / 30,8M gatos)",
+        "url": "https://www.cartacapital.com.br/do-micro-ao-macro/brasil-supera-160-milhoes-de-pets-crescimento-e-liderado-por-pequenos-animais-e-gatos/",
+        "year": 2024
+      },
+      {
+        "name": "Senado — Brasil 3ª maior população pet do mundo",
+        "url": "https://www12.senado.leg.br/noticias/infomaterias/2024/12/brasil-tem-terceira-maior-populacao-pet-do-mundo-veja-os-projetos-do-senado-sobre-o-assunto",
+        "year": 2024
+      },
+      {
+        "name": "IBGE — População Americana 246.655 hab (2024)",
+        "url": "https://www.americana.sp.gov.br/americana-index.php?a=perfil-demografia",
+        "year": 2024
+      },
+      {
+        "name": "IBGE — População Santa Bárbara d'Oeste 189.338 hab",
+        "url": "https://sbnoticias.com.br/noticia/Populacao-de-Santa-Barbara-aumenta-327-entre-2022-e-2024-segundo-o-IBGE/215248",
+        "year": 2024
+      },
+      {
+        "name": "IBGE — Nova Odessa 64.228 hab",
+        "url": "https://www.ibge.gov.br/cidades-e-estados/sp/nova-odessa.html",
+        "year": 2024
+      },
+      {
+        "name": "Royal Canin Portal Vet — Crescimento da população felina e Cat Friendly Practice",
+        "url": "https://portalvet.royalcanin.com.br/saude-e-nutricao/negocios/clinica-cat-friendly/",
+        "year": 2025
+      }
+    ]
+  },
+
+  "competitors": [
+    {
+      "name": "LM+ Hospital Veterinário 24h",
+      "positioning": "Hospital veterinário 24h completo com maior estrutura da região. Posicionamento de autoridade institucional: '25 anos de atuação, 50 colaboradores, 750m² divididos em 30 ambientes'. Método proprietário 'PVPet' (Protection, Prevention, Predisposition, Planning). Fala ao tutor que quer segurança de hospital com especialistas (cardiologia, fisioterapia, nutrologia).",
+      "channels": [
+        "Google Ads (domina buscas 'veterinário americana 24h' e 'emergência veterinária Americana')",
+        "Instagram (@lmveterinaria) com 50k+ seguidores",
+        "Google Meu Negócio robusto — reviews volume alto",
+        "SEO orgânico (site bem estruturado)",
+        "Relações públicas (coberturas no jornal local O Liberal)"
+      ],
+      "strengths": [
+        "Estrutura física imponente (750m², 30 ambientes) — barreira de entrada alta",
+        "25 anos de atuação = confiança institucional",
+        "Múltiplas especialidades sob o mesmo teto (cardiologia, fisioterapia, nutrologia)",
+        "24h 365 dias por ano — resolve urgência noturna",
+        "Site profissional com sitemap e conteúdo técnico",
+        "88% de recomendação no Facebook com 89 reviews"
+      ],
+      "weaknesses": [
+        "Atendimento genérico — não diferencia cão de gato na comunicação",
+        "Posicionamento frio/institucional — apela à razão, não à emoção",
+        "Ticket alto percebido — tutor teme 'conta surpresa' de hospital grande",
+        "Sem especialista felino declarado — todos atendem 'pets' indistintamente",
+        "Experiência de fila em horários de pico (volume alto de atendimentos)"
+      ],
+      "estimated_pricing": "Consulta R$ 150-220 / pacote cirúrgico R$ 800-3.000 / internação R$ 250-400/dia",
+      "digital_score": 9,
+      "digital_details": {
+        "website": "lmveterinaria.com.br — bem estruturado, conteúdo amplo, responsivo",
+        "instagram": "@lmveterinaria — feed ativo, stories frequentes, identidade visual consolidada",
+        "google": "GMB completo, alto volume de reviews, domina buscas genéricas",
+        "active_ads": "Anúncios ativos em Google Search + Performance Max (detectados no Auction Insights)"
+      }
+    },
+    {
+      "name": "Cantinho do Mascote (Clínica Veterinária 24h)",
+      "positioning": "Ecossistema completo de pet care: clínica 24h + pet shop + Clubinho (day care/hotel/estética). Posiciona-se como 'desde 2004 cuidando do seu pet' — tradição local combinada com serviços agregados. Opera com estratégia de consulta isca (R$ 70 mencionada no briefing) para conversão em procedimentos e produtos.",
+      "channels": [
+        "Google Meu Negócio em múltiplas unidades (Vila Belvedere, São Manoel, Vila Israel)",
+        "Facebook ativo (página @veterinaria24hcantinhodomascote)",
+        "Google Ads voltado para 'veterinário 24h americana' e 'pet shop americana'",
+        "Indicação boca-a-boca pela tradição local (21+ anos)"
+      ],
+      "strengths": [
+        "Múltiplas unidades na mesma avenida (Paschoal Ardito) — dominação territorial",
+        "Ecossistema completo — tutor entra para consulta e sai com produto/banho/hotel",
+        "Tradição local forte (desde 2004)",
+        "24h resolve urgência",
+        "Clubinho (day care/hotel) criado em 2022 = ticket médio expandido"
+      ],
+      "weaknesses": [
+        "Estratégia de consulta isca R$ 70 gera reputação de 'entra barato e sai caro' — identificado pela persona Mariana como trauma",
+        "Retenção forçada do animal até pagamento (relato no briefing) — gera trauma e churn viral",
+        "Comunicação visual datada — não dialoga com tutor humanizado de classe média-alta",
+        "Sem especialização clara — generalista com agregados",
+        "Posicionamento confuso (veterinária + pet shop + hotel) dilui mensagem"
+      ],
+      "estimated_pricing": "Consulta isca R$ 70 / consulta real R$ 120-180 / exames somados elevam conta para R$ 400-800 / Clubinho hotel R$ 80-120/dia",
+      "digital_score": 7,
+      "digital_details": {
+        "website": "cantinhodomascote.com — funcional, focado em conversão operacional",
+        "instagram": "Ativo mas sem identidade visual forte",
+        "google": "GMB completo nas múltiplas unidades, alto volume de menções",
+        "active_ads": "Detectados anúncios de 'consulta R$ 70' — estratégia agressiva de topo de funil"
+      }
+    },
+    {
+      "name": "Xodog Saúde Animal",
+      "positioning": "'Desde 1996 cuidando de quem você ama' — clínica tradicional com 19.000 clientes registrados e 40.000 animais atendidos no histórico. Posicionamento de longevidade e confiabilidade. Atende Americana e Santa Bárbara d'Oeste, com especialização diferenciada em animais silvestres (Dr. João Marcelo).",
+      "channels": [
+        "Site próprio (xodogsaudeanimal.com.br)",
+        "Indicação boca-a-boca (base cadastrada de 19K)",
+        "Google Meu Negócio com reviews positivos",
+        "Parceria Petlove Saúde (rede credenciada)",
+        "Facebook menos ativo"
+      ],
+      "strengths": [
+        "29 anos de atuação — autoridade institucional máxima da região",
+        "Base cadastrada massiva (19K clientes) = LTV altíssimo",
+        "Estrutura modernizada em 2016 e 2020 (4 consultórios, centro cirúrgico, laboratório próprio, ECG)",
+        "Laboratório clínico próprio — diferencial logístico (resultado rápido)",
+        "Nicho em animais silvestres (única da região)",
+        "Avaliações positivas consistentes no Google"
+      ],
+      "weaknesses": [
+        "Digital baixo — site básico, Instagram pouco ativo, identidade visual datada",
+        "Não comunica especialização felina (embora possa ter capacidade técnica)",
+        "Posicionamento 'tudo para todos' — cães, gatos, silvestres, banho e tosa",
+        "Pouca produção de conteúdo educativo — não constrói autoridade com público jovem (Gen Z/Millennials)",
+        "Geração de demanda digital fraca — depende muito da base antiga"
+      ],
+      "estimated_pricing": "Consulta R$ 120-200 / vacinação R$ 90-150 / cirurgias R$ 500-2.500 / laboratório interno com preços competitivos",
+      "digital_score": 5,
+      "digital_details": {
+        "website": "xodogsaudeanimal.com.br — funcional mas datado",
+        "instagram": "Perfil existe mas com baixa frequência e engajamento",
+        "google": "GMB com reviews positivos mas volume moderado",
+        "active_ads": "Sem anúncios detectáveis no momento (não aparece em Auction Insights relevantes)"
+      }
+    },
+    {
+      "name": "Clínica Veterinária Shop Dog 24h",
+      "positioning": "Clínica veterinária 24h com foco operacional em cães (o próprio nome sinaliza). Combina atendimento clínico com banho e tosa. Presença em Santa Bárbara d'Oeste (@shopdogsbo) e Americana. Posicionamento 'qualidade veterinária a qualquer hora' — rápido, humano, eficiente.",
+      "channels": [
+        "Site (shopdogclinicavet.com.br)",
+        "Instagram dedicado (@shopdogsbo)",
+        "Google Ads voltado para 24h",
+        "Boca-a-boca local em SBO",
+        "Monitoramento online do atendimento como feature (diferencial operacional)"
+      ],
+      "strengths": [
+        "Sistema de monitoramento online do pet durante procedimentos",
+        "24h com equipe experiente",
+        "Combo clínico + banho e tosa = ticket médio expandido",
+        "Pequeno hotel (feature diferencial)",
+        "Presença em SBO (cidade de cobertura Zenvet)"
+      ],
+      "weaknesses": [
+        "Nome 'Shop Dog' sinaliza foco em cães — enfraquece captura de tutores de gato",
+        "Instagram de baixo volume (engajamento fraco)",
+        "Mix confuso (clínica + banho e tosa + hotel) sem hierarquia clara",
+        "Sem especialização declarada",
+        "Escala menor que LM e Cantinho — estrutura mais modesta"
+      ],
+      "estimated_pricing": "Consulta R$ 100-180 / banho e tosa R$ 50-120 / hotel R$ 60-90/dia",
+      "digital_score": 4,
+      "digital_details": {
+        "website": "shopdogclinicavet.com.br — básico",
+        "instagram": "@shopdogsbo — baixa frequência",
+        "google": "GMB modesto com reviews de volume baixo",
+        "active_ads": "Anúncios ocasionais detectados"
+      }
+    },
+    {
+      "name": "Riedog Consultório Veterinário",
+      "positioning": "Clínica veterinária de pequeno porte com diferencial em oncologia veterinária (Dra. Juliana Riedo). Formato boutique — atendimento consultivo, estrutura enxuta, tecnologia de ponta. Oferece atendimento domiciliar e microchipagem. Concorrente indireto no nicho premium.",
+      "channels": [
+        "Site próprio (riedog.com.br) com SEO específico por serviço",
+        "Google orgânico para buscas de especialidade ('oncologista veterinário Americana')",
+        "Indicação direta de veterinários (fluxo B2B)",
+        "Instagram de médio engajamento"
+      ],
+      "strengths": [
+        "Especialização declarada: oncologia veterinária + ultrassom",
+        "Médica mulher à frente — paralelo direto com Nathalia (afinidade com ICP feminino)",
+        "Atendimento domiciliar (concorre com futuro serviço Zenvet)",
+        "Site com SEO por serviço (ultrassom, microchip, domicílio)",
+        "Formato boutique — apelo para tutor humanizado"
+      ],
+      "weaknesses": [
+        "Nicho em oncologia não captura demanda de rotina (baixo volume)",
+        "Estrutura menor que hospitais 24h",
+        "Sem comunicação de especialização felina",
+        "Digital moderado — não domina buscas gerais",
+        "Posicionamento muito especializado — difícil para tutor comum entender quando usar"
+      ],
+      "estimated_pricing": "Consulta R$ 180-250 / ultrassom R$ 200-350 / domicílio R$ 250-400 + deslocamento",
+      "digital_score": 6,
+      "digital_details": {
+        "website": "riedog.com.br — SEO específico por serviço, páginas dedicadas",
+        "instagram": "Moderadamente ativo, identidade pessoal da Dra. Juliana",
+        "google": "Boa ranking orgânica para buscas de especialidade",
+        "active_ads": "Sem anúncios pagos detectados — cresce por SEO e indicação"
+      }
+    }
+  ],
+
+  "competitive_map": {
+    "axis_x": "Generalista ←→ Especialista em Felinos",
+    "axis_y": "Commodity/Preço ←→ Premium/Humanizado",
+    "positions": [
+      {
+        "name": "LM+ Hospital Veterinário",
+        "quadrant": "Generalista / Premium — hospital grande com tíquete alto, atende 'pets em geral'"
+      },
+      {
+        "name": "Cantinho do Mascote",
+        "quadrant": "Generalista / Commodity — consulta isca R$70, converte em volume de procedimentos"
+      },
+      {
+        "name": "Xodog Saúde Animal",
+        "quadrant": "Generalista / Meio — preço moderado, posicionamento tradicional, sem diferenciação clara"
+      },
+      {
+        "name": "Shop Dog 24h",
+        "quadrant": "Generalista (viés cão) / Commodity — combo básico, sem especialização"
+      },
+      {
+        "name": "Riedog",
+        "quadrant": "Especialista em oncologia / Premium — boutique técnica, sem captura de rotina"
+      },
+      {
+        "name": "Zenvet (posição recomendada)",
+        "quadrant": "Especialista em Felinos / Premium-Humanizado — território PROPRIETÁRIO vago"
+      }
+    ],
+    "empty_spaces": "O quadrante 'Especialista em Felinos / Premium-Humanizado' está COMPLETAMENTE VAZIO na região. Nenhum concorrente ocupa esse espaço — mesmo Riedog (único com especialização declarada) está em oncologia genérica. Essa é a oportunidade estratégica central da Zenvet: ocupar esse quadrante antes que um concorrente reaja.",
+    "crowded_spaces": "O quadrante 'Generalista / Commodity' é o mais disputado (Cantinho, Shop Dog, parte do Xodog). Competir ali é impossível para a Zenvet (ticket R$500 vs. R$70 do concorrente). O quadrante 'Generalista / Premium' também é disputado pelo LM+, que domina a faixa de hospital-grande. O caminho NÃO é competir no centro — é ocupar o espaço vazio."
+  },
+
+  "trends": [
+    {
+      "trend": "Crescimento acelerado da população felina (+5,4% a/a — quase 2x o ritmo dos cães). Gatos vão de 29,2M (2023) para 30,8M (2024) e seguem como segmento que mais cresce em ritmo consistente nos últimos 10 anos.",
+      "evidence": "Dados Abinpet/Instituto Pet Brasil 2024-2025. Fonte: https://www.cartacapital.com.br/do-micro-ao-macro/brasil-supera-160-milhoes-de-pets-crescimento-e-liderado-por-pequenos-animais-e-gatos/. Correlação direta: felinos demandam estrutura e cuidado diferenciado — cresce a demanda por especialistas."
+    },
+    {
+      "trend": "Medicina Felina consolidou-se como especialidade médico-veterinária própria no Brasil. Mais de 30 clínicas exclusivamente felinas em operação no país, e certificação Cat Friendly Practice (AAFP) crescendo (2.400+ clínicas no mundo).",
+      "evidence": "Royal Canin Portal Vet 2025 + American Association of Feline Practitioners. Fonte: https://portalvet.royalcanin.com.br/saude-e-nutricao/negocios/clinica-cat-friendly/. Primeira clínica certificada na América Latina (Gattos) abriu precedente. Em Americana e região, nenhuma clínica tem certificação Cat Friendly — espaço livre."
+    },
+    {
+      "trend": "Humanização do pet + Millennials/Gen Z gastando desproporcionalmente. 45% da Gen Z e 40% dos Millennials declaram pets como 'a coisa mais importante da vida'. 77% dos tutores 'gastam o que for necessário para manter a saúde do pet' (Opinion Box).",
+      "evidence": "Pesquisa Quaest/Petlove 2025 + Opinion Box Q1/2025. Fonte: https://petepet.pet/2025/11/10/humanizacao-pets-bem-estar-mercado-pet-2025/. Esse grupo exato é o ICP Mariana — profª 36 anos, Simba como 'filho da casa'. Eles pagam premium quando entendem o porquê."
+    },
+    {
+      "trend": "Telemedicina veterinária emergindo como canal de acesso em 2026 — reduz distância e custo para check-ups de rotina e segunda opinião, especialmente para gatos que estressam no transporte.",
+      "evidence": "Projeções setor 2026 (Receitas Pet, Pet & Pet). Oportunidade adjacente ao atendimento domiciliar — Zenvet pode capturar essa tendência com teleorientação pós-consulta sistematizada, sem precisar de grande investimento tech."
+    }
+  ],
+
+  "threats": [
+    {
+      "threat": "Desaceleração do crescimento do setor pet: de +9,6% em 2024 para +2,42% projetado em 2025 (revisão para baixo pela Abinpet). Inflação, câmbio e desaceleração do consumo comprimem o tíquete médio e o volume discricionário.",
+      "potential_impact": "Mercado menos permissivo para erros de posicionamento e desperdício de mídia. Zenvet NÃO pode se dar ao luxo de continuar queimando R$ 800/mês em Meta Ads com link 404 (diagnóstico atual). Urgência máxima de fechar os vazamentos antes da desaceleração pressionar volume."
+    },
+    {
+      "threat": "Planos de saúde pet (Petlove Saúde, Vetz, Plano Vetz) consolidando-se como intermediários — tutores aderindo a planos e sendo direcionados para clínicas credenciadas. Xodog já está na rede Petlove, Zenvet fora.",
+      "potential_impact": "Se 2 dos 5 principais concorrentes entrarem em planos de saúde nos próximos 12 meses, a Zenvet perde visibilidade estrutural para tutores que buscam pela rede credenciada. Avaliar adesão SELETIVA (só para serviços de rotina, preservando premium em felinos/domicílio) vs. permanecer fora e competir em diferenciação pura."
+    },
+    {
+      "threat": "LM+ Hospital pode reagir lançando 'ala felina' com profissional contratado — replicando o posicionamento antes da Zenvet consolidar. Tem capital e estrutura para fazer isso em 6-12 meses. Cantinho do Mascote tem menos capacidade técnica mas pode responder com comunicação.",
+      "potential_impact": "Janela estreita de 12-18 meses para Zenvet consolidar território de 'especialista em felinos' no imaginário regional. Se perder essa janela, vai precisar competir com um LM+ que entrou no mesmo espaço com mais capital e reach. Urgência de executar mensagem-chave em TODOS os canais nas próximas 4-8 semanas."
+    },
+    {
+      "threat": "Concorrência indireta por distância: Campinas tem 4 clínicas fortemente especializadas em felinos a 45-60min — MedCat (primeira Cat Friendly Gold da região), ClinFel (exclusiva de felinos), Hospital Gattare (2 certificações Cat Friendly: Veterinarian + Practice Gold) e Estimma. Tutoras como Mariana, que pesquisam fundo antes de escolher, podem optar por dirigir até Campinas se a Zenvet não formalizar o diferencial com titulação (ABFel) e certificação (Cat Friendly Practice).",
+      "potential_impact": "Perda silenciosa de ICP premium que pesquisa além do microrregional. Tutor humanizado aceita 45min de deslocamento por certificação internacional visível. Sem formalizar a especialização (ABFel + Cat Friendly), Zenvet fica vulnerável ao argumento 'em Campinas tem especialista de verdade com certificação'. Mitigação: acelerar processo formal de titulação + certificação nos próximos 12 meses."
+    }
+  ],
+
+  "unexploited_opportunity": {
+    "description": "Ocupar o território 'A única clínica PRIVADA especialista em felinos de Americana/SBO/Nova Odessa' — comunicação proprietária, estrutura física adaptada (sala separada de cães, feromônios Feliway, ambiente silencioso) e, em 12-18 meses, buscar certificação Cat Friendly Practice (AAFP) + título oficial ABFel/CFMV para Nathalia. No microrregional NÃO existe clínica privada concorrente com especialização felina declarada, NEM certificação Cat Friendly (MedCat foi a primeira Gold de Campinas, mas a 45min). Segmento felino cresce 2x mais rápido que cães e Mariana (persona principal) pesquisa ativamente por 'veterinário para gatos' e hoje não encontra sinal claro no microrregional — hoje a alternativa especializada é dirigir 45-60min até Campinas.",
+    "why_nobody_does_it": "Três razões: (1) Hospitais 24h (LM+, Cantinho) operam em volume e escala — especializar-se em nicho reduz captura de demanda genérica, motor do negócio deles. (2) Clínicas menores (Xodog, Shop Dog, Riedog) não têm liderança técnica com formação felina declarada — Nathalia é ativo raro na microrregião. (3) Especialização felina exige adaptação física e protocolos (Cat Friendly Practice) que parece 'gasto' para quem não olha Millennials/Gen Z como ICP. Clínica Meu Pet SBO (pública, jun/2024) tem felinos mas atende apenas baixa renda — não cobre o ICP premium. Em Campinas existe o know-how (MedCat, ClinFel, Gattare), mas a distância abre janela no microrregional. Todos estão olhando para trás — Zenvet pode olhar para frente.",
+    "feasibility": "alta"
+  },
+
+  "market_jtbd": {
+    "current_solutions": "O tutor médio da região resolve hoje de 3 formas: (1) Vai ao hospital 24h mais próximo quando o pet apresenta problema (LM+ ou Cantinho do Mascote), aceitando consulta isca barata e arriscando conta inflada em exames; (2) Mantém relação com clínica tradicional da família por indicação antiga (Xodog, geralmente), sem questionar se é o melhor para a espécie do pet; (3) Pula consultas de rotina e vai só em emergência, tratando o vet como 'último recurso'. Nenhuma dessas soluções atende a Mariana, que quer especialização real + transparência + acompanhamento humanizado. O mercado hoje entrega commodities de atendimento, e o ICP premium sofre silenciosamente.",
+    "alternatives": [
+      {
+        "type": "direct",
+        "description": "Outro hospital/clínica 24h da região (LM+, Cantinho, Shop Dog) — resolve urgência mas não atende dor de especialização e humanização"
+      },
+      {
+        "type": "direct",
+        "description": "Clínica tradicional generalista (Xodog, Riedog) — atende rotina mas sem foco felino"
+      },
+      {
+        "type": "indirect",
+        "description": "Teleorientação veterinária (telemedicina emergente em 2026) — alternativa para check-up leve, não substitui consulta presencial"
+      },
+      {
+        "type": "indirect",
+        "description": "Consulta com veterinário de bairro/domiciliar de pequeno porte (sem estrutura, indicação local)"
+      },
+      {
+        "type": "diy",
+        "description": "'Dr. Google' — tutor pesquisa sintomas e automedica ou espera passar. MAIS comum em tutores jovens com receio de gastos inesperados"
+      },
+      {
+        "type": "inaction",
+        "description": "Tutor adia a consulta por medo de custo ou estresse do gato no transporte — gato fica doente e quadro agrava, gerando emergência mais cara e dolorosa"
+      }
+    ],
+    "cost_of_inaction": "Para Mariana: gato com problema não diagnosticado (gatos escondem sintomas), perda de confiança em veterinários em geral, trauma com clínica que retém animal, e no pior cenário — perda do pet por adiamento. Para a Zenvet: cada mês sem ocupar o território 'especialista em felinos' é um mês em que LM+ pode reagir, ou em que tutoras de gato continuam escolhendo o 'menos ruim' em vez da escolha certa. Custo de oportunidade estimado: ~R$ 15K/mês em receita potencial não capturada do segmento felino por baixa visibilidade digital."
+  },
+
+  "real_differentials": [
+    {
+      "differential": "Zenvet é a única CLÍNICA PRIVADA da microrregião (Americana/SBO/Nova Odessa) com posicionamento felino declarado — Nathalia é pós-graduanda em clínica e cirurgia de pequenos animais com especialização em felinos",
+      "status": "confirmed",
+      "icp_relevance": "Ataca a dor #1 da Mariana: 'será que esse veterinário entende de gato de verdade ou vai tratar como cachorro?'. NENHUM concorrente privado local (LM+, Cantinho, Xodog, Shop Dog, Riedog) comunica especialização felina. Clínica Meu Pet SBO (pública, jun/2024) tem felinos mas atende só baixa renda — não toca o ICP premium. A concorrência especializada real está em Campinas (MedCat, ClinFel, Gattare, Estimma) a 45-60min — distância abre janela. Replicar esse diferencial no microrregional levaria 6-12 meses para concorrente (contratação + estrutura). Ainda assim, é diferencial com prazo de validade: exige formalização (ABFel) e certificação (Cat Friendly) para virar fosso defensivo durável.",
+      "action_needed": "Buscar título oficial de Especialista em Medicina Felina pela ABFel (Academia Brasileira de Clínicos de Felinos — entidade CFMV) nos próximos 12-18 meses. Sem o título formal, concorrente pode contestar o claim 'especialista' em escala."
+    },
+    {
+      "differential": "Atendimento humanizado com acompanhamento ativo pós-consulta (mensagem D+1 via WhatsApp)",
+      "status": "confirmed",
+      "icp_relevance": "Transforma consulta em relacionamento — principal vetor de retenção e advocacy (indicação). Hospitais grandes não têm esse toque pela escala. Nathalia faz manualmente hoje — precisa ser sistematizado em CRM para escalar sem perder personalização.",
+      "action_needed": "Estruturar protocolo de acompanhamento em CRM Kommo (skill ee-s3-crm-setup). Automatizar gatilho mas manter personalização manual da Nathalia em casos de alto valor."
+    },
+    {
+      "differential": "Base ativa de 1.186 clientes fidelizados + 1.700 pacientes cadastrados — reativação orgânica subexplorada",
+      "status": "confirmed",
+      "icp_relevance": "Geração de receita de baixo custo para os próximos 90 dias. Indicação de cliente fidelizada é o canal mais confiável para Mariana (pergunta em grupos WhatsApp de tutoras). Hoje a base está dormindo — ativar via régua de reativação e programa de indicação captura receita sem investir em mídia.",
+      "action_needed": "Executar skill ee-s3-crm-setup + integração com SDR IA (ee-s5) para régua de reativação anual de vacinas e check-up sênior."
+    },
+    {
+      "differential": "Atendimento domiciliar para felinos que estressam no transporte",
+      "status": "potential",
+      "icp_relevance": "Alavanca premium MÁXIMA: resolve dor crítica de Mariana (Simba estressa no transporte), tem elasticidade muito baixa (tutor paga premium sem questionar) e nenhum concorrente local comunica essa especialização (apenas Riedog oferece genericamente). Ticket R$ 300-500 + deslocamento + possível ticket expandido com exames no local.",
+      "action_needed": "(1) Formatar serviço como produto com preço claro, tempo de atendimento e pacote opcional de exames no local. (2) Comunicar em landing page dedicada + bio Instagram + post mensal no Instagram. (3) Iniciar com capacidade de 2 domicílios/semana e escalar conforme demanda."
+    },
+    {
+      "differential": "Estrutura física separada cão/gato (se adaptada) + protocolos Cat Friendly Practice",
+      "status": "aspirational",
+      "icp_relevance": "Seria um diferencial DECLARÁVEL e VERIFICÁVEL por Mariana durante pesquisa (fotos no Instagram, reviews mencionando 'ambiente calmo'). Certificação Cat Friendly Practice (AAFP) internacional é selo que NENHUM concorrente local tem — seria marketing gratuito por anos.",
+      "action_needed": "Avaliar viabilidade de adaptação física: (1) Sala de espera separada cão/gato (custo R$ 3-8K com ajustes simples). (2) Feliway (feromônios) nas salas — custo baixo. (3) Em 12 meses, buscar certificação Cat Friendly Practice via AAFP. Priorização condicional à aprovação da Nathalia (custo de adequação + retorno em 18 meses)."
+    },
+    {
+      "differential": "Transparência de preço e consulta consultiva com explicação prévia de cada procedimento",
+      "status": "potential",
+      "icp_relevance": "Ataca a objeção universal do mercado ('exames desnecessários, conta surpresa') — maior diferenciador ANTI-hospital 24h. Pode ser sistematizado com orçamento impresso/digital antes de cada procedimento, item-a-item aprovado pelo tutor. Comunicação: 'Na Zenvet, você aprova cada linha da conta antes da gente executar'.",
+      "action_needed": "Criar protocolo de orçamento visual (template no WhatsApp ou impresso) + treinamento Loíse para apresentar orçamento antes de procedimentos. Incluir como seção na landing page e nas respostas de objeções (já mapeado na biblioteca de objeções do ICP)."
+    }
+  ],
+
+  "honesty_alert": "Diferenciais reais identificados são fortes (Nathalia com formação felina + acompanhamento humanizado + base fidelizada) mas a maior parte deles HOJE NÃO É COMUNICADA. O gap não está no produto — está no posicionamento e comunicação. A pesquisa reforça o que o diagnóstico e SWOT já indicaram: a Zenvet tem as armas certas mas está atirando para o chão. Janela de ocupação do território 'especialista em felinos' é de 12-18 meses antes que LM+ ou outro concorrente com capital responda. NÃO HÁ espaço para plano B de baixa urgência — execução dos próximos 90 dias define se essa posição fica ou vai embora. DOIS pontos de honestidade adicional: (1) Nathalia hoje é 'pós-graduanda em clínica e cirurgia de pequenos animais com especialização em felinos' — NÃO tem ainda o título oficial de Especialista em Medicina Felina pela ABFel/CFMV. O claim 'especialista em felinos' é defensável hoje (formação + experiência) mas fica mais forte (e blindado de contestação) COM o título formal. Buscar ABFel nos próximos 12-18 meses é imperativo estratégico. (2) Em Campinas (45-60min) existem 4 clínicas com especialização felina formal e certificações internacionais (MedCat Cat Friendly Gold, ClinFel, Hospital Gattare, Estimma). Tutoras premium que pesquisam fundo PODEM optar por dirigir — a distância abre janela mas não é barreira absoluta. 'Especialista em felinos' não pode ser comunicação vazia: a Nathalia precisa seguir produzindo conteúdo educativo felino continuamente, a estrutura precisa suportar (ambiente calmo, protocolos específicos) e a formalização (ABFel + Cat Friendly Practice) precisa entrar no roadmap. Se isso não for executado, o posicionamento vira promessa quebrada.",
+
+  "completed_at": "2026-04-20T14:30:00Z"
+}
