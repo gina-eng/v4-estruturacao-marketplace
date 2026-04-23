@@ -2032,14 +2032,14 @@
         "checkpoint": 1,
         "started_at": "2026-04-18",
         "completed_at": "2026-04-18",
-        "version": 1
+        "version": 2
       },
       "ee-s1-persona-icp": {
         "status": "completed",
         "checkpoint": 0,
         "started_at": null,
         "completed_at": "2026-04-18",
-        "version": 1
+        "version": 2
       },
       "ee-s1-auditoria-comunicacao": {
         "status": "completed",
@@ -2053,14 +2053,14 @@
         "checkpoint": 1,
         "started_at": "2026-04-20",
         "completed_at": "2026-04-20",
-        "version": 1
+        "version": 2
       },
       "ee-s2-posicionamento": {
         "status": "completed",
         "checkpoint": 1,
         "started_at": "2026-04-20",
         "completed_at": "2026-04-20",
-        "version": 1
+        "version": 2
       },
       "ee-s2-diagnostico-midia": {
         "status": "completed",
@@ -2260,6 +2260,12 @@
       "skill": "ee-revisao-semanal",
       "action": "completed",
       "note": "Revisão Semana 2: 8 evoluções estratégicas mapeadas, 5 divergências factuais, 9 gaps narrativos, 24 atualizações aplicadas (todas aceitas). Reframe principal: CPL (R$26, V4MOS) vs CAC (R$266, não validado — ERP não integrado)."
+    },
+    {
+      "ts": "2026-04-23T00:00:00Z",
+      "skill": "ee-revisao-semanal",
+      "action": "updated",
+      "note": "Correção pós-entrega S2 (reunião 22/04/2026 com Nathalia). Duas atualizações cross-outputs: (1) Persona Mariana — ICP principal corrigido de 30-45 anos para 25-55 anos com proporção 80% feminino / 20% masculino conforme trazido pela cliente. Persona exemplar Mariana mantida em 36 anos. (2) Cenário competitivo — descoberto que existe concorrente local também especializada em felinos (operação 100% orgânica, sem tráfego pago, com fatia de mercado relevante; nome não fornecido — mini-análise dedicada entra no escopo da S3). Reformulação central: Zenvet deixa de reivindicar 'única especialista em felinos da microrregião' e passa a reivindicar a COMBINAÇÃO proprietária (felino + digital + humano + pós-consulta sistematizado) — a concorrente orgânica não disputa o flanco digital. Janela de 12-18 meses mantida com narrativa reenquadrada: não é 'ocupar vácuo', é 'blindar a combinação antes de LM+ reagir com capital ou da concorrente orgânica escalar digital'. Ameaça 'Risco de cópia do posicionamento felino' movida de hipotética (probability medium) para presente (probability high) no SWOT. Arquivos atualizados: ee-s1-persona-icp.json (v2), ee-s2-pesquisa-mercado.json (v2), ee-s2-posicionamento.json (v2), ee-s1-swot.json (v2)."
     }
   ],
   "page_audit": {

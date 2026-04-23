@@ -1,6 +1,6 @@
 {
-  "summary": "Zenvet ocupa o território 'Especialista em Felinos · Humano · Transparente' — único na microrregião Americana/SBO/Nova Odessa. PUV: 'A clínica veterinária privada especialista em felinos de Americana — com medicina humana, acompanhamento pós-consulta e sem conta surpresa.' Tagline recomendada: 'Seu gato merece uma veterinária que entende de felinos.' Janela de consolidação de 12-18 meses antes de LM+ reagir ou tutoras premium migrarem para Campinas. Este posicionamento guia toda a produção da Semana 3 (brandbook, LP, criativos, copy).",
-  "summary_headline": "Zenvet ocupa 'Especialista Felino · Humano · Transparente' — território ÚNICO na microrregião. Janela de 12-18 meses para consolidar antes de LM+ reagir.",
+  "summary": "Zenvet ocupa o território 'Especialista em Felinos · Humano · Transparente', diferenciado no microrregional pela COMBINAÇÃO proprietária — especialização felina declarada + presença digital estruturada + medicina humanizada + acompanhamento pós-consulta sistematizado. Descoberta da entrega S2 (22/04/2026): existe concorrente local também especializada em felinos, operação 100% orgânica (sem tráfego pago), não nomeada — mini-análise dedicada na S3. Isso reenquadra a tese: nenhum concorrente privado da região combina os 4 elementos, e é a combinação que é proprietária, não a especialização isolada. PUV: 'A clínica veterinária privada especialista em felinos de Americana — com medicina humana, acompanhamento pós-consulta e sem conta surpresa.' Tagline recomendada: 'Seu gato merece uma veterinária que entende de felinos.' Janela de 12-18 meses para blindar a combinação antes de LM+ reagir com capital, da concorrente orgânica escalar digital, ou de tutoras premium migrarem para Campinas. Este posicionamento guia toda a produção da Semana 3 (brandbook, LP, criativos, copy).",
+  "summary_headline": "Zenvet ocupa 'Especialista Felino · Humano · Transparente' — diferenciação proprietária pela COMBINAÇÃO (felino + digital + humano + pós-consulta). Janela de 12-18 meses para blindar antes de LM+ reagir ou concorrente orgânica escalar digital.",
   "summary_highlights": [
     {
       "category": "posicao",
@@ -11,10 +11,10 @@
     },
     {
       "category": "competicao",
-      "label": "Concorrentes no mesmo território",
+      "label": "Concorrentes na combinação completa",
       "value": "0",
-      "subtext": "LM+ ocupa Premium-Generalista; Cantinho ocupa Commodity-Generalista",
-      "tone": "green"
+      "subtext": "concorrente orgânica felina local ocupa parte (especialização + humano) mas não disputa digital; LM+ ocupa Premium-Generalista; Cantinho ocupa Commodity-Generalista",
+      "tone": "yellow"
     },
     {
       "category": "janela",
@@ -27,7 +27,7 @@
       "category": "oportunidade",
       "label": "ICP principal",
       "value": "Mariana",
-      "subtext": "tutoras 30-45a · ticket R$500-1.000 · domicílio elasticidade muito baixa",
+      "subtext": "tutoras 25-55a (80F/20M) · ticket R$500-1.000 · domicílio elasticidade muito baixa",
       "tone": "green"
     },
     {
@@ -48,11 +48,11 @@
   "summary_key_findings": [
     {
       "category": "vantagem",
-      "text": "Quadrante 'Especialista em Felinos × Premium-Humanizado' está COMPLETAMENTE VAZIO no microrregional — nenhum concorrente privado ocupa (LM+ é generalista, Riedog é especialista em oncologia, Meu Pet SBO é público baixa-renda)."
+      "text": "Quadrante 'Especialista em Felinos × Premium-Humanizado' está parcialmente ocupado no microrregional por concorrente orgânica felina local (não nomeada, operação 100% orgânica — a mapear na S3), mas nenhum player combina os 4 elementos: especialização felina + presença digital estruturada + medicina humanizada declarada + acompanhamento pós-consulta sistematizado. A combinação é o território proprietário da Zenvet."
     },
     {
       "category": "vantagem",
-      "text": "PUV passa nos 5 testes: verdadeira (diferencial real da Nathalia), específica (nenhum concorrente pode repetir), relevante (ataca dor #1 da Mariana), memorável (mensagem já validada) e diferente (território proprietário vago)."
+      "text": "PUV passa nos 5 testes: verdadeira (diferencial real da Nathalia), específica (a combinação dos 4 elementos não é replicada por nenhum concorrente local), relevante (ataca dor #1 da Mariana), memorável (mensagem já validada) e diferente (combinação proprietária)."
     },
     {
       "category": "contexto",
@@ -60,7 +60,7 @@
     },
     {
       "category": "ameaca",
-      "text": "LM+ tem capital para lançar 'ala felina' em 6-12 meses se reagir. Tutoras premium que pesquisam fundo já consideram dirigir 45min até Campinas (MedCat, ClinFel, Gattare, Estimma). Sem formalização da especialização, o território é vulnerável."
+      "text": "Ameaça de replicação é PRESENTE em dois vetores: (1) concorrente orgânica felina local já ocupa parte do território e pode escalar presença digital; (2) LM+ tem capital para lançar 'ala felina' em 6-12 meses. Tutoras premium que pesquisam fundo já consideram dirigir 45min até Campinas (MedCat, ClinFel, Gattare, Estimma). Sem formalização + consistência digital, o território é vulnerável."
     },
     {
       "category": "acao",
@@ -72,8 +72,12 @@
     "axis_x": "Generalista → Especialista em Felinos",
     "axis_y": "Commodity/Preço → Premium/Humanizado",
     "client_position": "NE",
-    "justification": "Quadrante 'Especialista Felino × Premium-Humanizado' está vazio na microrregião. LM+ ocupa NO (Premium-Generalista — hospital grande sem especialização felina declarada). Cantinho, Shop Dog e Xodog ocupam SO (Commodity-Generalista — consulta isca, volume). Riedog tenta NE por especialização, mas em oncologia — não em felinos, e sem ecossistema premium-humanizado. Clínica Meu Pet SBO atende felinos mas como pública de baixa renda (SO). Zenvet é a única com (1) liderança técnica com formação felina declarada, (2) ticket premium R$500-1.000, (3) acompanhamento humanizado pós-consulta e (4) vocação para Cat Friendly Practice — combinação que nenhum concorrente local replica hoje.",
+    "justification": "Quadrante 'Especialista Felino × Premium-Humanizado' está parcialmente ocupado na microrregião por concorrente orgânica felina local (não nomeada, trazida pela cliente na entrega S2 — mini-análise na S3). LM+ ocupa NO (Premium-Generalista — hospital grande sem especialização felina declarada). Cantinho, Shop Dog e Xodog ocupam SO (Commodity-Generalista — consulta isca, volume). Riedog tenta NE por especialização, mas em oncologia — não em felinos, e sem ecossistema premium-humanizado. Clínica Meu Pet SBO atende felinos mas como pública de baixa renda (SO). Zenvet é a única com (1) liderança técnica com formação felina declarada + (2) ticket premium R$500-1.000 + (3) acompanhamento humanizado pós-consulta sistematizado + (4) presença digital estruturada + (5) vocação para Cat Friendly Practice — a COMBINAÇÃO que nenhum concorrente local replica. A concorrente orgânica cobre (1) e parte de (3), mas não disputa (4) digital nem (5) formalização.",
     "competitor_positions": [
+      {
+        "name": "Concorrente felina orgânica (não nomeada)",
+        "quadrant": "NE parcial — ocupa especialização + humanização sem presença digital estruturada"
+      },
       {
         "name": "LM+ Hospital Veterinário",
         "quadrant": "NO"
@@ -103,8 +107,8 @@
   "positioning_statements": [
     {
       "label": "A — O Especialista Felino Premium",
-      "statement": "Para tutoras de gatos de Americana, SBO e Nova Odessa que tratam o pet como filho da casa, a Zenvet é a clínica especialista em felinos que combina diagnóstico consultivo, ambiente preparado para gatos e acompanhamento ativo pós-consulta — porque a Dra. Nathalia é a única veterinária com formação felina declarada da microrregião e a clínica foi estruturada para reduzir o estresse do gato em cada detalhe.",
-      "justification": "Direção que ocupa o quadrante estratégico vago identificado na pesquisa de mercado (NE — Especialista × Premium-Humanizado). Ataca a dor #1 da Mariana ('será que esse vet entende de gato?'). Usa os 3 diferenciais reais já confirmados: Nathalia felina + acompanhamento D+1 + preparo estrutural. Captura 70% da base atual (felinos) e a faixa premium. ICP de cães (Carlos) fica como público secundário atendido com o mesmo DNA — não perdido, mas não priorizado.",
+      "statement": "Para tutoras de gatos de Americana, SBO e Nova Odessa que tratam o pet como filho da casa, a Zenvet é a clínica especialista em felinos que combina diagnóstico consultivo, ambiente preparado para gatos e acompanhamento ativo pós-consulta — porque a Dra. Nathalia tem formação felina declarada (pós-graduanda em clínica e cirurgia de pequenos animais com ênfase em felinos) e a clínica foi estruturada para reduzir o estresse do gato em cada detalhe.",
+      "justification": "Direção que ocupa o quadrante estratégico (NE — Especialista × Premium-Humanizado). Ataca a dor #1 da Mariana ('será que esse vet entende de gato?'). Usa os 4 diferenciais reais já confirmados: Nathalia felina + acompanhamento D+1 sistematizado + preparo estrutural + presença digital em estruturação. Descoberta da entrega S2 (22/04): existe concorrente orgânica local também especializada em felinos — a diferenciação da Zenvet é a COMBINAÇÃO completa (especialização + digital + humanização + pós-consulta sistematizado), não a especialização isolada. A concorrente orgânica não disputa top-of-mind digital, o que abre o flanco para a Zenvet ocupar primeiro. Captura 70% da base atual (felinos) e a faixa premium. ICP de cães (Carlos) fica como público secundário atendido com o mesmo DNA — não perdido, mas não priorizado.",
       "bet": "Concentrar toda a comunicação no diferencial felino + premium. Abrir mão de competir por volume de consulta isca (R$70 dos 24h) e por urgência 24h (não é a proposta).",
       "risk": "Se Nathalia não formalizar a especialização (ABFel + Cat Friendly Practice) nos próximos 12-18 meses, um LM+ que reagir contratando especialista pode contestar o claim em escala. Claim 'especialista' precisa ganhar fosso formal."
     },
@@ -123,7 +127,7 @@
       "risk": "Sem o território felino, a Zenvet vira 'mais uma clínica transparente' — perde o território único que só ela tem hoje e vira commodity premium. Em 12 meses, o diferencial se dilui."
     }
   ],
-  "chosen_statement": "Para tutoras de gatos de Americana, SBO e Nova Odessa que tratam o pet como filho da casa, a Zenvet é a clínica especialista em felinos que combina diagnóstico consultivo, ambiente preparado para gatos e acompanhamento ativo pós-consulta — porque a Dra. Nathalia é a única veterinária com formação felina declarada da microrregião e a clínica foi estruturada para reduzir o estresse do gato em cada detalhe.",
+  "chosen_statement": "Para tutoras de gatos de Americana, SBO e Nova Odessa que tratam o pet como filho da casa, a Zenvet é a clínica especialista em felinos que combina diagnóstico consultivo, ambiente preparado para gatos e acompanhamento ativo pós-consulta — porque a Dra. Nathalia tem formação felina declarada (pós-graduanda em clínica e cirurgia de pequenos animais com ênfase em felinos) e a clínica foi estruturada para reduzir o estresse do gato em cada detalhe.",
   "puv": "A clínica veterinária privada especialista em felinos de Americana — com medicina humana, acompanhamento pós-consulta e sem conta surpresa.",
   "canvas_4p": {
     "product": {
@@ -133,7 +137,7 @@
     },
     "price": {
       "positioning": "premium",
-      "justification": "A consulta é com a única veterinária da microrregião com formação felina declarada. Dura 40 min de conversa aprofundada (vs. 15 min do 24h). Inclui acompanhamento ativo pós-consulta via WhatsApp. O orçamento é aprovado por você antes de cada procedimento, item a item. Por isso o valor é diferente — e maior — que o da consulta básica dos hospitais 24h.",
+      "justification": "A consulta é com uma veterinária com formação felina declarada (pós-graduanda em clínica e cirurgia com ênfase em felinos). Dura 40 min de conversa aprofundada (vs. 15 min do 24h). Inclui acompanhamento ativo pós-consulta via WhatsApp e orçamento aprovado item a item antes da execução. Por isso o valor é diferente — e maior — que o da consulta básica dos hospitais 24h.",
       "anchoring": "Ancorar SEMPRE contra a experiência negativa do hospital 24h (consulta R$70 + exames que somam R$400-800 + retenção do animal). Mostrar que o 'caro' real é começar barato e terminar com conta surpresa e trauma. Posicionar Zenvet como 'caro de verdade é aceitar o barato dos outros'. Em serviços específicos (domicílio felino, castração com pós-operatório monitorado) comunicar preço explicitamente premium — elasticidade baixíssima, tutor paga."
     },
     "place": {
@@ -162,7 +166,7 @@
     "promotion": {
       "tone": "Íntimo, consultivo, especialista sem jargão técnico inacessível. Nathalia fala como profissional que escuta o tutor antes de diagnosticar. Nunca infantiliza. Nunca usa 'peludo', 'dono', 'bichinho' — usa 'tutor', 'paciente', 'caso'. Foto ao lado de gato real na bio (não stock photo). Em posts educativos, começa com o problema que o tutor vive (vômito, comportamento estranho) e só depois entrega a explicação técnica.",
       "top_funnel_message": "'Meu gato está diferente, e agora?' — conteúdo educativo felino em Reels e carrossel Instagram que resolve micro-dúvidas comuns (vômito, apetite, comportamento) e posiciona Nathalia como autoridade antes mesmo do tutor precisar de consulta.",
-      "bottom_funnel_message": "'Seu gato merece uma veterinária que entende de felinos — não de bicho em geral. Agende com a Dra. Nathalia, a única especialista em felinos de Americana.' — CTA direto no WhatsApp para agendamento."
+      "bottom_funnel_message": "'Seu gato merece uma veterinária que entende de felinos — não de bicho em geral. Agende com a Dra. Nathalia: medicina felina com acompanhamento humano e orçamento sem surpresa.' — CTA direto no WhatsApp para agendamento."
     },
     "preco": {
       "supporting_notes": "Ticket R$500 do briefing é resultado do mix consulta+exames+procedimentos; consulta felinos isolada posicionada no range R$180-250 (willingness_to_pay validada em ee-s1-persona-icp > primary_persona). Comunicação externa não deve expor R$500 como preço de consulta."
@@ -174,7 +178,7 @@
       "Humano",
       "Transparente"
     ],
-    "description": "Felino — única clínica privada da microrregião com especialização real e estrutura pensada para o gato. Humano — cada paciente tem nome, histórico e acompanhamento pós-consulta via WhatsApp da própria Dra. Nathalia; nunca é 'mais um bicho na fila'. Transparente — cada orçamento é aprovado pelo tutor antes da execução, item a item; não existe conta surpresa, não existe exame sem explicação. Os três juntos formam o anti-hospital-24h: onde o concorrente é genérico, frio e opaco, a Zenvet é especializada, humana e clara.",
+    "description": "Felino — clínica com especialização felina declarada (Nathalia, pós-graduanda em clínica e cirurgia com ênfase em felinos) e estrutura pensada para o gato. Humano — cada paciente tem nome, histórico e acompanhamento pós-consulta via WhatsApp da própria Dra. Nathalia; nunca é 'mais um bicho na fila'. Transparente — cada orçamento é aprovado pelo tutor antes da execução, item a item; não existe conta surpresa, não existe exame sem explicação. Os três juntos, COMBINADOS com presença digital estruturada, formam o território proprietário da Zenvet — a combinação que nenhum concorrente local replica (hospitais 24h são genéricos; concorrente orgânica felina local tem especialização mas sem presença digital; clínicas tradicionais não têm especialização declarada). É a combinação, e não a especialização isolada, que é defensível.",
     "competitor_territories": [
       {
         "competitor": "LM+ Hospital Veterinário",
@@ -201,7 +205,7 @@
         "territory": "Acesso público de baixo custo para baixa renda em SBO. Felinos incluídos mas sem posicionamento premium."
       }
     ],
-    "availability_justification": "'Especialista em Felinos × Premium-Humanizado' está vago na microrregião por três razões estruturais: (1) Hospitais 24h operam em volume — especializar-se em nicho reduz a captura genérica, que é o motor deles. (2) Clínicas menores (Xodog, Shop Dog, Riedog) não têm liderança técnica com formação felina declarada — Nathalia é ativo raro. (3) Adaptar estrutura para felinos (ambiente calmo, protocolos Cat Friendly) parece 'gasto' para quem não olha Millennials/Gen Z humanizados como ICP. Em Campinas existe o território (MedCat, ClinFel, Gattare, Estimma) mas a 45-60min — distância abre janela no microrregional. Zenvet pode ocupar primeiro no microrregional e, em 12-18 meses, formalizar com ABFel + Cat Friendly Practice para blindar."
+    "availability_justification": "'Especialista em Felinos × Premium-Humanizado' está parcialmente ocupado na microrregião por concorrente orgânica felina local (não nomeada, a mapear na S3), mas a COMBINAÇÃO completa (felino + digital + humano + pós-consulta sistematizado) segue vaga. Quatro razões estruturais: (1) Hospitais 24h operam em volume — especializar-se em nicho reduz a captura genérica, motor deles. (2) Clínicas menores (Xodog, Shop Dog, Riedog) não têm liderança técnica com formação felina declarada — Nathalia é ativo raro. (3) A concorrente orgânica local tem especialização mas optou por não investir em tráfego pago nem sistematizar acompanhamento digital — abre o flanco que a Zenvet pode ocupar. (4) Adaptar estrutura para felinos (ambiente calmo, protocolos Cat Friendly) parece 'gasto' para quem não olha Millennials/Gen Z humanizados como ICP. Em Campinas existe o território (MedCat, ClinFel, Gattare, Estimma) mas a 45-60min — distância abre janela no microrregional. Zenvet pode ocupar a combinação primeiro e, em 12-18 meses, formalizar com ABFel + Cat Friendly Practice para blindar."
   },
   "taglines": [
     {
@@ -226,7 +230,7 @@
   "recommended_tagline": "Seu gato merece uma veterinária que entende de felinos.",
   "operator_direction": {
     "strongest_differential": "Dra. Nathalia com formação felina declarada (pós-graduanda em clínica e cirurgia de pequenos animais com ênfase em felinos) + acompanhamento ativo pós-consulta via WhatsApp — combinação que nenhum concorrente local replica.",
-    "desired_position": "Quadrante NE — Especialista em Felinos × Premium-Humanizado. Território proprietário vago identificado na pesquisa de mercado (ee-s2-pesquisa-mercado).",
+    "desired_position": "Quadrante NE — Especialista em Felinos × Premium-Humanizado. Território parcialmente ocupado por concorrente orgânica felina local (não nomeada, a mapear na S3) — a diferenciação proprietária da Zenvet é a COMBINAÇÃO completa: especialização felina + presença digital estruturada + medicina humanizada declarada + acompanhamento pós-consulta sistematizado.",
     "positioning_restrictions": [
       "Não posicionar como 'emergência 24h' — Zenvet não atende 24h e direciona urgências para parceiros.",
       "Não competir em preço com consulta isca R$70 dos hospitais 24h.",
@@ -236,17 +240,17 @@
     "desired_tone": "Íntimo, consultivo, especialista sem jargão inacessível. Nathalia como autoridade técnica humana, não institucional distante."
   },
   "key_insight": {
-    "headline": "O território 'Especialista Felino × Premium-Humanizado' está vazio — e a janela para ocupar fecha em 12-18 meses",
-    "context": "O mapa competitivo mostra um quadrante inteiro vago (NE): nenhum concorrente privado da microrregião combina especialização felina declarada + ticket premium + humanização estrutural. Zenvet pode ocupar esse espaço antes de LM+ (que tem capital para reagir em 6-12 meses contratando especialista) ou antes que tutoras premium migrem silenciosamente para as 4 clínicas de Campinas com certificação Cat Friendly (MedCat, ClinFel, Gattare, Estimma). O território é proprietário HOJE — mas só vira fosso defensivo com formalização (ABFel + Cat Friendly Practice) em 12-18 meses.",
+    "headline": "O território 'Especialista Felino × Premium-Humanizado' está parcialmente ocupado — mas a COMBINAÇÃO felino + digital + humano + pós-consulta sistematizado segue vaga, e a janela para blindar fecha em 12-18 meses",
+    "context": "Descoberta da entrega S2 (22/04/2026): existe concorrente orgânica felina local (não nomeada, a mapear na S3) no quadrante NE. O mapa competitivo mostra que nenhum concorrente privado da microrregião combina os 4 elementos: especialização felina declarada + presença digital estruturada + medicina humanizada declarada + acompanhamento pós-consulta sistematizado. Zenvet pode ocupar essa COMBINAÇÃO antes de LM+ (que tem capital para reagir em 6-12 meses contratando especialista e com presença digital) ou antes que a concorrente orgânica escale digital, ou antes que tutoras premium migrem silenciosamente para as 4 clínicas de Campinas com certificação Cat Friendly (MedCat, ClinFel, Gattare, Estimma). A combinação é o que é proprietário HOJE — mas só vira fosso defensivo com formalização (ABFel + Cat Friendly Practice) em 12-18 meses e com consistência de execução digital.",
     "numbered_reasons": [
-      "O quadrante está vago por motivo estrutural: hospitais 24h (LM+, Cantinho) operam em volume genérico e especializar reduz captura; clínicas menores (Xodog, Shop Dog, Riedog) não têm liderança técnica com formação felina declarada. Nathalia é ativo raro na microrregião.",
-      "A janela fecha por dois vetores paralelos: LM+ pode contratar especialista felino em 6-12 meses e replicar o claim com mais capital; e tutoras premium como Mariana, que pesquisam fundo, podem descobrir MedCat/ClinFel/Gattare em Campinas e aceitar 45-60min de deslocamento pela certificação internacional.",
-      "Ocupar o território primeiro entrega três ativos não-replicáveis: (a) top-of-mind 'especialista em gatos de Americana' nas buscas do Google, (b) base de reviews com a palavra 'gato' explícita (prova social que LM+ não tem histórico de), (c) tempo para Nathalia concluir ABFel + buscar Cat Friendly Practice e blindar o claim formalmente."
+      "Nenhum concorrente combina os 4 elementos hoje: hospitais 24h (LM+, Cantinho) operam em volume genérico e especializar reduz captura; clínicas menores (Xodog, Shop Dog, Riedog) não têm liderança técnica com formação felina declarada; concorrente orgânica felina local tem especialização mas optou por não investir em tráfego pago nem sistematizar acompanhamento digital — abre o flanco digital. Nathalia é ativo raro no microrregional.",
+      "A janela fecha por três vetores paralelos: (a) LM+ pode contratar especialista felino em 6-12 meses e replicar o claim com mais capital e reach digital; (b) a concorrente orgânica pode escalar presença digital e disputar top-of-mind; (c) tutoras premium como Mariana, que pesquisam fundo, podem descobrir MedCat/ClinFel/Gattare em Campinas e aceitar 45-60min de deslocamento pela certificação internacional.",
+      "Ocupar a combinação primeiro entrega três ativos não-replicáveis: (a) top-of-mind 'especialista em gatos de Americana' nas buscas do Google — flanco que a concorrente orgânica não disputa, (b) base de reviews com a palavra 'gato' explícita (prova social que LM+ não tem histórico de), (c) tempo para Nathalia concluir ABFel + buscar Cat Friendly Practice e blindar o claim formalmente."
     ],
-    "discussion_anchor": "A direção escolhida concentra TODA a comunicação no diferencial felino + premium — o que implica abrir mão ativamente de competir por volume genérico e por emergência 24h. Nathalia e stakeholders diretos (Kelly, V4) precisam validar: estão prontos para essa escolha? Vão sustentar a consistência quando aparecer um tutor de cachorro pedindo consulta R$70? Vão investir nos próximos 12 meses para buscar ABFel + Cat Friendly Practice e fechar o fosso? Se a resposta for sim, o território vira ativo proprietário em 18 meses. Se for não, o posicionamento vira promessa quebrada e a janela passa.",
+    "discussion_anchor": "A direção escolhida concentra TODA a comunicação no diferencial felino + premium — o que implica abrir mão ativamente de competir por volume genérico e por emergência 24h. Nathalia e stakeholders diretos (Kelly, V4) precisam validar: estão prontos para essa escolha? Vão sustentar a consistência quando aparecer um tutor de cachorro pedindo consulta R$70? Vão investir nos próximos 12 meses para buscar ABFel + Cat Friendly Practice e fechar o fosso? Vão priorizar a mini-análise da concorrente orgânica na S3 para calibrar intensidade? Se a resposta for sim, a combinação vira ativo proprietário em 18 meses. Se for não, o posicionamento vira promessa quebrada e a janela passa.",
     "feasibility": "alta — diferenciais reais já existem; o trabalho é comunicação + formalização"
   },
-  "honesty_alert": "Três pontos de honestidade que o posicionamento NÃO pode esconder: (1) Nathalia é pós-graduanda em medicina felina — tem formação real, mas NÃO tem ainda o título oficial de Especialista em Medicina Felina pela ABFel/CFMV. O claim 'especialista em felinos' é defensável hoje por formação + experiência + mix de 70% felinos, mas precisa do título formal nos próximos 12-18 meses para ficar blindado de contestação. (2) A estrutura física atual provavelmente ainda não tem sala de espera separada de cães nem protocolos Cat Friendly implementados — comunicar 'ambiente preparado para felinos' antes de adaptar (mesmo que seja adaptação simples: R$3-8K) é promessa parcial. Validar com Nathalia o que já existe vs. o que precisa ser implementado nos próximos 90 dias. (3) O território 'Premium-Humanizado' depende de consistência na execução — se Loíse atender sem script consultivo, se os preços não forem explicados antes, se o acompanhamento D+1 não for sistematizado em CRM, o posicionamento vira palavra vazia. O posicionamento só se sustenta se Skills ee-s3-crm-setup, ee-s3-landing-page, ee-s3-copy-anuncios e ee-s3-brandbook executarem COM CONSISTÊNCIA o DNA definido aqui. Se alguma dessas skills desviar, todo o território desmonta.",
+  "honesty_alert": "Quatro pontos de honestidade que o posicionamento NÃO pode esconder: (1) Nathalia é pós-graduanda em medicina felina — tem formação real, mas NÃO tem ainda o título oficial de Especialista em Medicina Felina pela ABFel/CFMV. O claim 'especialista em felinos' é defensável hoje por formação + experiência + mix de 70% felinos, mas precisa do título formal nos próximos 12-18 meses para ficar blindado de contestação. (2) Existe concorrente felina local (não nomeada, trazida pela cliente na entrega S2 em 22/04) também especializada em felinos, operando 100% orgânica com fatia de mercado relevante. Isso invalida a narrativa anterior de 'única especialista em felinos da microrregião' — o diferencial proprietário da Zenvet é a COMBINAÇÃO (felino + digital + humano + pós-consulta sistematizado), não a especialização isolada. Mini-análise dedicada entra no escopo da S3 para dimensionar a ameaça. (3) A estrutura física atual provavelmente ainda não tem sala de espera separada de cães nem protocolos Cat Friendly implementados — comunicar 'ambiente preparado para felinos' antes de adaptar (mesmo que seja adaptação simples: R$3-8K) é promessa parcial. Validar com Nathalia o que já existe vs. o que precisa ser implementado nos próximos 90 dias. (4) O território 'Premium-Humanizado' depende de consistência na execução — se Loíse atender sem script consultivo, se os preços não forem explicados antes, se o acompanhamento D+1 não for sistematizado em CRM, o posicionamento vira palavra vazia. O posicionamento só se sustenta se Skills ee-s3-crm-setup, ee-s3-landing-page, ee-s3-copy-anuncios e ee-s3-brandbook executarem COM CONSISTÊNCIA o DNA definido aqui. Se alguma dessas skills desviar, todo o território desmonta.",
   "completed_at": "2026-04-20T18:00:00Z",
   "honesty_alerts": "ABFel + Cat Friendly Practice em roadmap 12-18m não são opcionais: sem essas certificações, o claim 'especialista em felinos' é vulnerável a reação de LM+. Tratar como ação defensiva prioritária.",
   "canais_a_evitar": "Comunicar 'consulta R$500' em mídia paga ou bio — afastaria Mariana. Preço de consulta felinos comunicado na faixa R$180-250 com ancoragem contra consulta isca R$70 dos 24h.",

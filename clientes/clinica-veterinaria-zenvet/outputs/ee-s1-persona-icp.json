@@ -1,13 +1,13 @@
 {
-  "summary": "ICP principal: tutoras de gatos 30-45 anos, classe média-alta, Americana/SBO/Nova Odessa. Job emocional central: encontrar veterinária que entende de felinos de verdade. Maior dor: medo de ser explorada com exames desnecessários (trauma com concorrentes 24h). Mensagem-chave escolhida: 'Seu gato merece uma veterinária que entende de felinos — não de bicho em geral.' ICP secundário: tutores de cães 35-55 anos, perfil mais prático, prioridade em agilidade e preço transparente.",
+  "summary": "ICP principal: tutoras de gatos 25-55 anos (80% mulheres / 20% homens), classe média-alta, Americana/SBO/Nova Odessa. Job emocional central: encontrar veterinária que entende de felinos de verdade. Maior dor: medo de ser explorada com exames desnecessários (trauma com concorrentes 24h). Mensagem-chave escolhida: 'Seu gato merece uma veterinária que entende de felinos — não de bicho em geral.' ICP secundário: tutores de cães 35-55 anos, perfil mais prático, prioridade em agilidade e preço transparente.",
   "icp": {
     "segment_label": "Tutoras de gatos — 70% da base atual",
     "demographics": {
       "type": "B2C",
-      "age_range": "30–45 anos",
+      "age_range": "25–55 anos",
       "income_or_revenue": "R$ 5.000–R$ 12.000/mês (classe média a média-alta)",
       "location": "Americana, Santa Bárbara d'Oeste, Nova Odessa — SP",
-      "gender": "Majoritariamente feminino",
+      "gender": "80% feminino / 20% masculino (confirmado pela cliente na entrega S2)",
       "civil_status": "Casada ou com relacionamento estável, sem filhos ou filhos crescidos",
       "education": "Superior completo ou em andamento",
       "decision_maker_role": "Decisão individual — não precisa de aprovação de terceiros",
@@ -421,8 +421,8 @@
     "approach": "emotional"
   },
   "primary_persona": {
-    "validation": "Validação quantitativa (S2, ee-s2-diagnostico-midia): 63,8% dos cliques em Meta são mulheres; concentração etária 30-45 anos. Confirma Mariana como persona primária.",
-    "evolution_note": "Hipótese briefing: 'classe média a média alta'. Evidência S1 + S2: tutora de gato 30-45, R$5-12K/mês, dominância feminina confirmada em Meta (63,8%). Decisão: ICP primário fechado; anti-personas ativadas como exclusão em campanhas.",
+    "validation": "Validação quantitativa (S2, ee-s2-diagnostico-midia): 63,8% dos cliques em Meta são mulheres; concentração etária predominante 30-45 anos dentro de uma faixa real 25-55. Cliente confirmou na entrega S2 a distribuição 80% feminino / 20% masculino, ampliando o targeting para as pontas (25-34 e 45-55) que não devem ser excluídas.",
+    "evolution_note": "Hipótese briefing: 'classe média a média alta'. Evidência S1 + S2: tutora de gato, R$5-12K/mês, dominância feminina confirmada em Meta (63,8%). Entrega S2 (22/04): cliente corrigiu faixa etária para 25-55 anos e proporção 80F/20M — expande targeting no Meta/Google sem alterar a persona exemplar (Mariana, 36 anos). Decisão: ICP primário fechado com faixa ampliada; anti-personas ativadas como exclusão em campanhas.",
     "willingness_to_pay": {
       "_note": "Importante distinguir consulta isolada (R$180-250) vs ticket médio total (R$500 registrado no briefing, que inclui exames/procedimentos). Comunicação externa usa apenas o range da consulta."
     }
