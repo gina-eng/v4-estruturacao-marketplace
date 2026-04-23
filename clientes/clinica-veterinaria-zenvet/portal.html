@@ -1974,7 +1974,7 @@ const R = {
   }
   if (d.icp?.demographics) {
     const dm = d.icp.demographics;
-    const fields = [['Tipo',dm.type],['Idade/Faixa',dm.age_range],['Renda/Faturamento',dm.income_or_revenue],['Localização',dm.location],['Decisor',dm.decision_maker_role],['Escolaridade',dm.education]].filter(f=>f[1]);
+    const fields = [['Tipo',dm.type],['Idade/Faixa',dm.age_range],['Gênero',dm.gender],['Renda/Faturamento',dm.income_or_revenue],['Localização',dm.location],['Decisor',dm.decision_maker_role],['Escolaridade',dm.education]].filter(f=>f[1]);
     h += sc('ICP — Demografia', '<div class="gr gr--3">'+fields.map(f=>mt(f[1],f[0],'')).join('')+'</div>');
   }
   if (d.icp?.behavior) {
