@@ -240,12 +240,12 @@
       {
         "stage": "Gatilho — algo está errado com o Simba",
         "trigger": "Comportamento atípico (come menos, esconde, vomita). Vacina vencida. Indicação de amiga com urgência.",
-        "mental_state": "Preocupação + culpa ('devia ter levado antes')",
+        "mental_state": "Preocupação + culpa ('devia ter levado antes'). Urgência real — gato esconde sintoma, quando demonstra é porque já está mal.",
         "primary_channel": "Google (busca informativa), grupos de WhatsApp de tutoras",
         "dominant_question": "É sério? Preciso ir agora? Qual veterinário é bom pra gato?",
-        "zenvet_intervention": "Conteúdo educativo SEO e Reels ('gato vomitando — quando é emergência') com Nathalia como autoridade. Aparecer antes de ela começar a pesquisar por clínicas.",
-        "friction_today": "Zenvet invisível nessa fase — conteúdo educativo felino é lacuna.",
-        "duration_estimate": "1-3 dias"
+        "zenvet_intervention": "Conteúdo educativo felino como ATIVO DE AUTORIDADE de longo prazo — SEO indexado e Reels familiares no feed da Mariana ANTES da crise acontecer. Quando o gatilho dispara, a Zenvet já precisa estar no top-of-mind e no topo do Google Maps — não há janela pra descoberta just-in-time.",
+        "friction_today": "Zenvet invisível nessa fase — conteúdo educativo felino é lacuna. Não há tempo pra corrigir no momento do gatilho.",
+        "duration_estimate": "no mesmo dia"
       },
       {
         "stage": "Consideração — avaliando clínicas",
@@ -301,11 +301,12 @@
     "critical_leakage_point": "O maior vazamento é na etapa de Consideração (duração 3-7 dias): Mariana pesquisa intensamente e a Zenvet não oferece sinais de especialização felina nos canais que ela verifica. Corrigir GMB + bio IG + reviews específicas fecha esse vazamento sem investir R$1 em mídia."
   },
   "willingness_to_pay": {
-    "description": "Disposição a pagar da Mariana por serviço. Cruzamento entre dados do mercado, sensibilidade de preço declarada no briefing e expectativa de valor da persona.",
-    "context": "Renda R$5-12K/mês + gato humanizado + disposição a pagar por qualidade demonstrada. Mariana NÃO é sensível a preço absoluto — é sensível a preço SEM EXPLICAÇÃO.",
+    "description": "Disposição a pagar da Mariana por serviço. Comportamento financeiro é dual e depende da natureza do serviço (rotina vs crítico) e do estado de confiança na clínica.",
+    "context": "Para Mariana, o gato não é pet — é filho, companheiro e suporte emocional. Referência cultural: 45% da Gen Z e 40% dos Millennials declaram pets como 'a coisa mais importante da vida'; 77% dos tutores brasileiros afirmam 'pagar o que for preciso para manter a saúde do pet' (Opinion Box Q1/2025). Traduzido ao comportamento financeiro real: em CASOS CRÍTICOS (emergência, cirurgia, doença grave), não há teto de preço — Mariana parcela, empresta, vende o que for preciso. O limitador é a CONFIANÇA na clínica + a CAPACIDADE DE PARCELAMENTO, não o valor em si. Em SERVIÇOS DE ROTINA (consulta preventiva, vacina, check-up), o comportamento é outro: Mariana compara, pesquisa, tem faixa de referência — o preço importa mais, mas ainda é secundário à especialização e à transparência. IMPORTANTE: o 'pago o que for preciso' é CONDICIONAL à confiança estabelecida — pra lead frio na primeira consulta, a postura racional/comparativa predomina. A conversão emocional acontece depois do primeiro contato positivo (ver a história da Mariana: ela paga porque a Nathalia chamou o Simba pelo nome). Mariana ganha R$5-12K/mês — willingness emocional é ilimitada, ability financeira tem limite, e é onde o parcelamento/financiamento entra como alavanca.",
     "services": [
       {
         "service": "Consulta felinos especialista",
+        "category": "rotina",
         "current_ticket_range": "R$180-250",
         "perceived_fair_range": "R$180-300",
         "premium_ceiling": "R$400 (com exame complementar justificado)",
@@ -314,6 +315,7 @@
       },
       {
         "service": "Vacinação felina completa",
+        "category": "rotina",
         "current_ticket_range": "R$150-220",
         "perceived_fair_range": "R$150-250",
         "premium_ceiling": "R$300",
@@ -322,30 +324,42 @@
       },
       {
         "service": "Castração de gato",
+        "category": "crítico",
         "current_ticket_range": "R$350-600",
         "perceived_fair_range": "R$400-700",
-        "premium_ceiling": "R$900 (fêmea com monitoramento)",
-        "elasticity": "baixa — procedimento único e alto medo do pós-operatório",
-        "pricing_lever": "Pacote castração + pós-operatório monitorado (Nathalia acompanha via WhatsApp 48h) cobra premium e reduz ansiedade."
+        "premium_ceiling": "Sem teto operacional — em procedimento cirúrgico com anestesia, Mariana paga o necessário com confiança estabelecida. Limitador é confiança na Nathalia + capacidade de parcelamento, não preço.",
+        "elasticity": "muito baixa — procedimento único, alto medo do pós-operatório, Simba como filho. Preço compara entre clínicas na fase de pesquisa; depois de confiança firmada, não compara mais.",
+        "pricing_lever": "Pacote castração + pós-operatório monitorado (Nathalia acompanha via WhatsApp 48h) cobra premium e reduz ansiedade. Oferecer parcelamento 3-6x sem juros reduz atrito de ability-to-pay sem ceder no ticket."
       },
       {
         "service": "Atendimento domiciliar felinos",
+        "category": "misto (rotina proativa + crítico reativo)",
         "current_ticket_range": "R$250-400 (consulta) + deslocamento",
-        "perceived_fair_range": "R$300-500",
-        "premium_ceiling": "R$700 (emergência com exame no local)",
-        "elasticity": "muito baixa — resolve dor crítica (gato estressa no transporte)",
-        "pricing_lever": "MAIOR alavanca de margem. Premium explícito para gatos que estressam. Comunicação proprietária da Zenvet — concorrentes não oferecem com qualidade."
+        "perceived_fair_range": "R$300-500 (rotina) / sem teto em emergência domiciliar",
+        "premium_ceiling": "Em rotina: R$700 é o ponto de saturação comparativa. Em emergência (gato não come há 3 dias, prostrado, não consegue transportar): não há teto — Mariana paga + deslocamento + exames no local sem comparar.",
+        "elasticity": "muito baixa — resolve dor crítica (gato estressa no transporte). Em emergência, elasticidade zero.",
+        "pricing_lever": "MAIOR alavanca de margem. Premium explícito para gatos que estressam. Comunicação proprietária da Zenvet — concorrentes não oferecem com qualidade. Segmentar comunicação: 'proativo' (para tutoras que querem evitar o estresse de transporte) vs 'reativo' (para emergência domiciliar)."
       },
       {
         "service": "Check-up anual gato senior",
+        "category": "rotina",
         "current_ticket_range": "R$400-600 (consulta + exames básicos)",
         "perceived_fair_range": "R$400-700",
         "premium_ceiling": "R$900",
-        "elasticity": "média",
+        "elasticity": "média — em rotina tem comparação. Se o check-up achar algo, a sequência vira crítico (sem teto).",
         "pricing_lever": "Educação via conteúdo: 'gatos com 7+ anos precisam de check-up'. Demanda que Mariana não sabe que tem — criar com conteúdo."
+      },
+      {
+        "service": "Emergência / cirurgia / internação (casos críticos)",
+        "category": "crítico",
+        "current_ticket_range": "R$800 - R$5.000+ dependendo do caso (dado operacional a validar com Nathalia)",
+        "perceived_fair_range": "irrelevante em emergência — tutora não compara preço com gato em risco",
+        "premium_ceiling": "Sem teto operacional. Willingness-to-pay da Mariana é 'o que for preciso'. Ability-to-pay é o real limitador — reflexo nas decisões de parcelamento, empréstimo, pedido de vaquinha em grupo de tutoras.",
+        "elasticity": "zero — em emergência, preço é o último critério (depois de competência técnica, disponibilidade e confiança).",
+        "pricing_lever": "Nenhuma — é onde o LTV da Mariana se materializa pela primeira vez. O momento da emergência é o momento de maior vínculo emocional com a clínica: atender bem aqui gera advocacy vitalícia + conversão em recorrência (rotina, check-up, domicílio). Oferecer parcelamento / PIX / cartão em múltiplas parcelas remove o gargalo financeiro sem ceder em preço."
       }
     ],
-    "strategic_implication": "A Zenvet opera abaixo do teto de willingness-to-pay em todos os serviços. Oportunidade de revisão de preços com +15% gradual ao longo de 6 meses sem perda de volume, desde que acompanhada de comunicação de diferencial. Prioridade máxima: domicílio felinos (teto premium alto + baixa competição)."
+    "strategic_implication": "A alavanca estratégica principal NÃO é 'revisar preços de rotina +15%' (ainda vale, mas é tática de margem). É CONVERTER CRÍTICO EM RECORRÊNCIA: capturar Mariana no momento de emergência (onde não há teto de WTP), entregar acompanhamento humanizado pós-evento, e fidelizá-la em rotina (check-up anual, vacinação, domicílio). Implicações para a S3: (1) comunicação de mídia paga deve priorizar captura de intenção crítica ('veterinário gatos emergência Americana', 'meu gato não está comendo') tanto quanto rotina — ticket e LTV são maiores; (2) a LP precisa de seção dedicada a emergência/crítico com mensagem de disponibilidade + parcelamento, não só consulta de rotina; (3) o CRM precisa ter régua pós-emergência específica (D+1, D+7, D+30) pra converter o vínculo emocional da crise em cliente fiel; (4) no brandbook, tom de voz precisa servir tanto o momento racional (rotina) quanto o momento emocional (crise) — a Mariana que chega pedindo vacina é outra pessoa emocionalmente que a Mariana que chega com Simba prostrado. Prioridade tática mantida: domicílio felinos (margem alta + dor crítica)."
   },
   "objection_library": {
     "description": "Biblioteca de objeções com resposta consultiva pronta para a Loíse usar no WhatsApp. Cada resposta preserva posicionamento (não desconta, não compete em preço), valida a preocupação do tutor, e redireciona para valor.",

@@ -2039,7 +2039,7 @@
         "checkpoint": 0,
         "started_at": null,
         "completed_at": "2026-04-18",
-        "version": 2
+        "version": 3
       },
       "ee-s1-auditoria-comunicacao": {
         "status": "completed",
@@ -2053,7 +2053,7 @@
         "checkpoint": 1,
         "started_at": "2026-04-20",
         "completed_at": "2026-04-20",
-        "version": 2
+        "version": 3
       },
       "ee-s2-posicionamento": {
         "status": "completed",
@@ -2266,6 +2266,18 @@
       "skill": "ee-revisao-semanal",
       "action": "updated",
       "note": "Correção pós-entrega S2 (reunião 22/04/2026 com Nathalia). Duas atualizações cross-outputs: (1) Persona Mariana — ICP principal corrigido de 30-45 anos para 25-55 anos com proporção 80% feminino / 20% masculino conforme trazido pela cliente. Persona exemplar Mariana mantida em 36 anos. (2) Cenário competitivo — descoberto que existe concorrente local também especializada em felinos (operação 100% orgânica, sem tráfego pago, com fatia de mercado relevante; nome não fornecido — mini-análise dedicada entra no escopo da S3). Reformulação central: Zenvet deixa de reivindicar 'única especialista em felinos da microrregião' e passa a reivindicar a COMBINAÇÃO proprietária (felino + digital + humano + pós-consulta sistematizado) — a concorrente orgânica não disputa o flanco digital. Janela de 12-18 meses mantida com narrativa reenquadrada: não é 'ocupar vácuo', é 'blindar a combinação antes de LM+ reagir com capital ou da concorrente orgânica escalar digital'. Ameaça 'Risco de cópia do posicionamento felino' movida de hipotética (probability medium) para presente (probability high) no SWOT. Arquivos atualizados: ee-s1-persona-icp.json (v2), ee-s2-pesquisa-mercado.json (v2), ee-s2-posicionamento.json (v2), ee-s1-swot.json (v2)."
+    },
+    {
+      "ts": "2026-04-24T00:00:00Z",
+      "skill": "ee-s1-persona-icp",
+      "action": "updated",
+      "note": "Refino da jornada de compra e do WTP da Mariana. (1) Buyer journey, estágio 'Gatilho — algo está errado com o Simba': duração corrigida de '1-3 dias' para 'no mesmo dia' — tutoras de felinos agem imediatamente ao perceber sintoma/comportamento anormal (gato esconde sintoma, quando demonstra já está mal). Intervenção da Zenvet reformulada: conteúdo educativo felino passa a ser ATIVO DE AUTORIDADE de longo prazo (indexado SEO + familiar no feed ANTES da crise), não janela just-in-time. (2) Willingness-to-pay reestruturado em comportamento dual rotina vs crítico. Context reescrito com framing emocional: gato como filho/suporte emocional, não pet — 77% dos tutores 'pagam o que for preciso' (Opinion Box). Em casos críticos (emergência, cirurgia, diagnóstico grave), não há teto de preço — limitador é confiança + ability-to-pay (parcelamento), não willingness. Em rotina, comportamento comparativo ainda existe. Adicionado campo 'category' em cada serviço; adicionado serviço 'Emergência/cirurgia/internação' como crítico sem teto. Strategic_implication reescrita: alavanca principal = CONVERTER CRÍTICO EM RECORRÊNCIA (captura na crise → fidelização em rotina). Implicações desdobradas para S3: mídia paga com intenção crítica + LP com seção emergência/parcelamento + CRM com régua pós-emergência + brandbook com tom dual (racional/rotina + emocional/crise). Arquivo: ee-s1-persona-icp.json (v3)."
+    },
+    {
+      "ts": "2026-04-24T01:00:00Z",
+      "skill": "ee-s2-pesquisa-mercado",
+      "action": "updated",
+      "note": "Correção metodológica crítica no SOM. Erro anterior: SOM estava derivado da meta comercial da cliente ('triplicar faturamento de R$653K para R$1,8M'), conflatando aspiração operacional com métrica de mercado. Novo SOM (cenário AGRESSIVO): R$2,0M/ano em 3 anos (≈5,9% do SAM de R$34M), calculado por triangulação metodológica: (a) bottom-up de capacidade operacional — Nathalia sozinha tem teto ~R$1,5-1,8M/ano; com 2º veterinário no ano 2 sobe para R$2,0-2,5M; (b) top-down market share — clínica-nicho premium com diferenciação real costuma chegar a 4-7% do SAM em 3-5 anos; (c) nicho premium felino — segmento estimado em R$3,3M, Zenvet pode capturar 40-50% competindo com concorrente orgânica local. Os três métodos convergem na faixa R$1,4-2,2M; agressivo no topo. Cenário base alternativo seria R$1,4M (4,1% do SAM). Adicionado client_goal_vs_som_note explicitando que meta da cliente (R$1,08M/ano) é milestone operacional de ano 1, NÃO o SOM — evita conflação estratégica. Adicionadas assumptions novas (2º vet no ano 2, ABFel+Cat Friendly em 12-18m, execução completa do roadmap S1-S5, conversão crítico→recorrência conforme WTP v3). Condição crítica listada: se concorrente orgânica escalar digital, captura cai a 25-35% e SOM desce para R$1,2-1,5M. Arquivo: ee-s2-pesquisa-mercado.json (v3)."
     }
   ],
   "page_audit": {
