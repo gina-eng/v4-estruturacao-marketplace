@@ -2623,35 +2623,86 @@ const R = {
     const progressToSom = Math.min(100, current / som * 100);
     const remainingPct = 100 - progressToSom;
 
+    // Meta comercial da cliente (métrica operacional separada do SOM).
+    // Só entra no visual se estiver registrada, for maior que o atual e menor que o SOM.
+    const goal = ms.client_annual_revenue_goal_brl;
+    const hasGoal = typeof goal === 'number' && goal > current && goal < som;
+    const goalPct = hasGoal ? Math.min(100, goal / som * 100) : null;
+    const curToGoalPct = hasGoal ? goalPct - progressToSom : 0;
+    const goalToSomPct = hasGoal ? 100 - goalPct : 0;
+    const gapToGoal = hasGoal ? goal - current : 0;
+    const gapToGoalPctOverCurrent = hasGoal && current > 0 ? (gapToGoal / current) * 100 : 0;
+    const gapGoalToSom = hasGoal ? som - goal : 0;
+    const gapGoalToSomPctOverGoal = hasGoal && goal > 0 ? (gapGoalToSom / goal) * 100 : 0;
+
     // ── BLOCO A: Jornada até o SOM (visual principal) ──
-    // Três pontos de referência: Zero → Atual → SOM
-    const journey = '<div style="margin:.25rem 0 .25rem">'
-      +'<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:.5rem;margin-bottom:.625rem">'
-      +  '<div style="text-align:left">'
-      +    '<div style="font-size:.625rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--text-muted);margin-bottom:.15rem">Ponto de partida</div>'
-      +    '<div style="font-size:.875rem;font-weight:700;color:var(--text-muted)">R$ 0</div>'
-      +  '</div>'
-      +  '<div style="text-align:center">'
-      +    '<div style="font-size:.625rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--warning);margin-bottom:.15rem">Você está aqui</div>'
-      +    '<div style="font-size:1.125rem;font-weight:800;color:var(--warning);letter-spacing:-.01em">'+BRL(current)+'</div>'
-      +    '<div style="font-size:.6875rem;color:var(--text-muted);margin-top:.125rem">'+progressToSom.toFixed(1)+'% do caminho</div>'
-      +  '</div>'
-      +  '<div style="text-align:right">'
-      +    '<div style="font-size:.625rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--success);margin-bottom:.15rem">Meta SOM · 3 anos</div>'
-      +    '<div style="font-size:1.125rem;font-weight:800;color:var(--success);letter-spacing:-.01em">'+BRL(som)+'</div>'
-      +  '</div>'
-      +'</div>'
-      // Barra de progresso com segmentos claros: percorrido + a percorrer
-      +'<div style="position:relative;height:28px;background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden;display:flex">'
-      +  '<div style="height:100%;width:'+progressToSom+'%;background:linear-gradient(90deg, #f59e0b, #f97316);display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-size:.75rem;letter-spacing:.02em">'+(progressToSom>=8?progressToSom.toFixed(1)+'%':'')+'</div>'
-      +  '<div style="height:100%;flex:1;background:repeating-linear-gradient(45deg, transparent, transparent 6px, rgba(22,163,74,0.08) 6px, rgba(22,163,74,0.08) 12px);display:flex;align-items:center;justify-content:center;color:var(--success);font-weight:700;font-size:.75rem">'+(remainingPct>=20?'faltam '+remainingPct.toFixed(1)+'%':'')+'</div>'
-      +'</div>'
-      +'<div style="display:flex;justify-content:space-between;align-items:center;margin-top:.5rem;font-size:.75rem">'
-      +  '<span style="color:var(--warning);font-weight:700">✓ Percorrido: '+BRL(current)+'</span>'
-      +  '<span style="color:var(--text-muted)">Gap: <strong style="color:var(--danger)">'+BRL(gap)+'</strong> (+'+ms.gap_to_som_pct.toFixed(0)+'%)</span>'
-      +  '<span style="color:var(--success);font-weight:700">Meta: '+BRL(som)+'</span>'
-      +'</div>'
-      +'</div>';
+    // Quatro pontos de referência quando há meta cliente: Zero → Atual → Meta cliente → SOM
+    // Três pontos quando não há: Zero → Atual → SOM
+    const headerGrid = hasGoal
+      ? '<div style="display:grid;grid-template-columns:.8fr 1fr 1fr 1fr;gap:.5rem;margin-bottom:.625rem">'
+        +  '<div style="text-align:left">'
+        +    '<div style="font-size:.625rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--text-muted);margin-bottom:.15rem">Ponto de partida</div>'
+        +    '<div style="font-size:.875rem;font-weight:700;color:var(--text-muted)">R$ 0</div>'
+        +  '</div>'
+        +  '<div style="text-align:center">'
+        +    '<div style="font-size:.625rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--warning);margin-bottom:.15rem">Você está aqui</div>'
+        +    '<div style="font-size:1.0625rem;font-weight:800;color:var(--warning);letter-spacing:-.01em">'+BRL(current)+'</div>'
+        +    '<div style="font-size:.6875rem;color:var(--text-muted);margin-top:.125rem">'+progressToSom.toFixed(1)+'% do SOM</div>'
+        +  '</div>'
+        +  '<div style="text-align:center">'
+        +    '<div style="font-size:.625rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#6366f1;margin-bottom:.15rem">Meta da cliente</div>'
+        +    '<div style="font-size:1.0625rem;font-weight:800;color:#6366f1;letter-spacing:-.01em">'+BRL(goal)+'</div>'
+        +    '<div style="font-size:.6875rem;color:var(--text-muted);margin-top:.125rem">'+goalPct.toFixed(1)+'% do SOM</div>'
+        +  '</div>'
+        +  '<div style="text-align:right">'
+        +    '<div style="font-size:.625rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--success);margin-bottom:.15rem">SOM · 3 anos</div>'
+        +    '<div style="font-size:1.0625rem;font-weight:800;color:var(--success);letter-spacing:-.01em">'+BRL(som)+'</div>'
+        +    '<div style="font-size:.6875rem;color:var(--text-muted);margin-top:.125rem">teto de mercado</div>'
+        +  '</div>'
+        +'</div>'
+      : '<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:.5rem;margin-bottom:.625rem">'
+        +  '<div style="text-align:left">'
+        +    '<div style="font-size:.625rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--text-muted);margin-bottom:.15rem">Ponto de partida</div>'
+        +    '<div style="font-size:.875rem;font-weight:700;color:var(--text-muted)">R$ 0</div>'
+        +  '</div>'
+        +  '<div style="text-align:center">'
+        +    '<div style="font-size:.625rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--warning);margin-bottom:.15rem">Você está aqui</div>'
+        +    '<div style="font-size:1.125rem;font-weight:800;color:var(--warning);letter-spacing:-.01em">'+BRL(current)+'</div>'
+        +    '<div style="font-size:.6875rem;color:var(--text-muted);margin-top:.125rem">'+progressToSom.toFixed(1)+'% do caminho</div>'
+        +  '</div>'
+        +  '<div style="text-align:right">'
+        +    '<div style="font-size:.625rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--success);margin-bottom:.15rem">SOM · 3 anos</div>'
+        +    '<div style="font-size:1.125rem;font-weight:800;color:var(--success);letter-spacing:-.01em">'+BRL(som)+'</div>'
+        +  '</div>'
+        +'</div>';
+
+    // Barra de progresso: 3 segmentos quando há meta cliente, 2 quando não há
+    const progressBar = hasGoal
+      ? '<div style="position:relative;height:28px;background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden;display:flex">'
+        +  '<div style="height:100%;width:'+progressToSom+'%;background:linear-gradient(90deg, #f59e0b, #f97316);display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-size:.75rem;letter-spacing:.02em">'+(progressToSom>=10?progressToSom.toFixed(1)+'%':'')+'</div>'
+        +  '<div style="height:100%;width:'+curToGoalPct+'%;background:linear-gradient(90deg, #818cf8, #6366f1);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:.75rem">'+(curToGoalPct>=12?'até meta '+curToGoalPct.toFixed(1)+'%':'')+'</div>'
+        +  '<div style="height:100%;flex:1;background:repeating-linear-gradient(45deg, transparent, transparent 6px, rgba(22,163,74,0.12) 6px, rgba(22,163,74,0.12) 12px);display:flex;align-items:center;justify-content:center;color:var(--success);font-weight:700;font-size:.75rem">'+(goalToSomPct>=18?'upside de mercado '+goalToSomPct.toFixed(1)+'%':'')+'</div>'
+        +'</div>'
+      : '<div style="position:relative;height:28px;background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden;display:flex">'
+        +  '<div style="height:100%;width:'+progressToSom+'%;background:linear-gradient(90deg, #f59e0b, #f97316);display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-size:.75rem;letter-spacing:.02em">'+(progressToSom>=8?progressToSom.toFixed(1)+'%':'')+'</div>'
+        +  '<div style="height:100%;flex:1;background:repeating-linear-gradient(45deg, transparent, transparent 6px, rgba(22,163,74,0.08) 6px, rgba(22,163,74,0.08) 12px);display:flex;align-items:center;justify-content:center;color:var(--success);font-weight:700;font-size:.75rem">'+(remainingPct>=20?'faltam '+remainingPct.toFixed(1)+'%':'')+'</div>'
+        +'</div>';
+
+    // Rodapé com gaps escalonados
+    const footer = hasGoal
+      ? '<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:.5rem;margin-top:.5rem;font-size:.75rem;align-items:center">'
+        +  '<span style="color:var(--warning);font-weight:700">✓ Atual: '+BRL(current)+'</span>'
+        +  '<span style="color:#6366f1;text-align:center"><strong>Gap até meta:</strong> '+BRL(gapToGoal)+' <span style="color:var(--text-muted)">(+'+gapToGoalPctOverCurrent.toFixed(0)+'% sobre atual)</span></span>'
+        +  '<span style="color:var(--success);text-align:right"><strong>Upside sobre meta:</strong> +'+BRL(gapGoalToSom)+' <span style="color:var(--text-muted)">(+'+gapGoalToSomPctOverGoal.toFixed(0)+'% sobre a meta)</span></span>'
+        +'</div>'
+        +'<div style="margin-top:.375rem;padding:.5rem .625rem;background:rgba(99,102,241,0.06);border-left:3px solid #6366f1;border-radius:3px;font-size:.75rem;color:var(--text-secondary)"><strong>Leitura:</strong> a meta comercial da cliente (<strong style="color:#6366f1">'+BRL(goal)+'</strong>) é conservadora frente ao que o mercado permite — o SOM aponta <strong style="color:var(--success)">'+BRL(gapGoalToSom)+'</strong> de upside adicional, obtenível em 3 anos com execução plena do roadmap.</div>'
+      : '<div style="display:flex;justify-content:space-between;align-items:center;margin-top:.5rem;font-size:.75rem">'
+        +  '<span style="color:var(--warning);font-weight:700">✓ Percorrido: '+BRL(current)+'</span>'
+        +  '<span style="color:var(--text-muted)">Gap: <strong style="color:var(--danger)">'+BRL(gap)+'</strong> (+'+ms.gap_to_som_pct.toFixed(0)+'%)</span>'
+        +  '<span style="color:var(--success);font-weight:700">SOM: '+BRL(som)+'</span>'
+        +'</div>';
+
+    const journey = '<div style="margin:.25rem 0 .25rem">' + headerGrid + progressBar + footer + '</div>';
 
     // ── BLOCO B: Contexto dentro do SAM (quanto isso tudo representa) ──
     // Barra do SAM total com marcação SOM (alvo) e Atual (onde estamos)
