@@ -1,8 +1,7 @@
 # Documentação Completa — Clínica Veterinária Zenvet
-**Tipo:** Compilado v3 (Compilado v2 + Entregas S1 + Entregas S2 + Correções pós-entrega S2 + Refinamentos estratégicos 24/04)
+**Tipo:** Atualização (Entregas S1 + Entregas S2 + Correções pós-entrega S2 + Refinamentos estratégicos 24/04)
 **Data:** 2026-04-24
-**Substitui:** 2026-04-21-documentacao-completa-zenvet.md
-**Referência baseline:** documento de 2026-04-21 (Formulário V4MOS, Diagnóstico V4MOS, Rollout, Plano de ROI, Reunião de Vendas, Kickoff, Coleta de Acessos, Brief de Identidade Visual) — preservado como histórico, não reescrito aqui.
+**Documento anterior (mantido):** 2026-04-21-documentacao-completa-zenvet.md — Formulário V4MOS, Diagnóstico V4MOS, Rollout, Plano de ROI, Reunião de Vendas, Kickoff, Coleta de Acessos, Brief de Identidade Visual. Este documento NÃO substitui o anterior — é um registro adicional focado no que evoluiu após a entrega da Semana 2 e as correções pós-reunião de 22/04. O documento de 21/04 permanece como fonte canônica para briefing inicial, diagnóstico V4MOS original e contexto de kickoff.
 
 ---
 
