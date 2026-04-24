@@ -1,7 +1,7 @@
 # Documentação Completa — Clínica Veterinária Zenvet
-**Tipo:** Atualização (Entregas S1 + Entregas S2 + Correções pós-entrega S2 + Refinamentos estratégicos 24/04)
+**Tipo:** Consolidação das entregas S1 + S2
 **Data:** 2026-04-24
-**Documento anterior (mantido):** 2026-04-21-documentacao-completa-zenvet.md — Formulário V4MOS, Diagnóstico V4MOS, Rollout, Plano de ROI, Reunião de Vendas, Kickoff, Coleta de Acessos, Brief de Identidade Visual. Este documento NÃO substitui o anterior — é um registro adicional focado no que evoluiu após a entrega da Semana 2 e as correções pós-reunião de 22/04. O documento de 21/04 permanece como fonte canônica para briefing inicial, diagnóstico V4MOS original e contexto de kickoff.
+**Documento anterior (mantido):** 2026-04-21-documentacao-completa-zenvet.md — Formulário V4MOS, Diagnóstico V4MOS, Rollout, Plano de ROI, Reunião de Vendas, Kickoff, Coleta de Acessos, Brief de Identidade Visual. Este documento NÃO substitui o anterior — é um registro focado no que foi produzido nas Semanas 1 e 2 do projeto. O documento de 21/04 permanece como fonte canônica para briefing inicial, diagnóstico V4MOS original e contexto de kickoff.
 
 ---
 
@@ -469,108 +469,7 @@ A narrativa inicial era "Meta desperdiça R$800/mês por links 404". Reframed: *
 
 ---
 
-# PARTE D — Correções pós-entrega S2 (reunião com Nathalia em 22/04/2026)
-
-Na reunião de entrega da Semana 2 (22/04/2026, duração 01h46min), a cliente trouxe **duas informações** que exigiram correção cross-outputs antes de iniciarmos a S3. Aplicadas em 23-24/04.
-
-## D.1 — Correção de Persona (ampliação da faixa etária)
-
-**Trazido pela cliente [00:33:53]:** a faixa etária da persona Mariana precisa ser **ampliada para 25–55 anos**, com proporção **80% mulheres / 20% homens**.
-
-**Impacto:**
-- `outputs/ee-s1-persona-icp.json → icp.demographics.age_range`: "30–45 anos" → "25–55 anos"
-- `outputs/ee-s1-persona-icp.json → icp.demographics.gender`: "Majoritariamente feminino" → "80% feminino / 20% masculino (confirmado pela cliente na entrega S2)"
-- Persona exemplar Mariana mantida em 36 anos (continua representativa)
-- Targeting Meta/Google passa a capturar as pontas 25-34 e 45-55 (não mais exclui)
-- Commit: `a7cd253`
-
-## D.2 — Correção do cenário competitivo (concorrente felina orgânica local)
-
-**Trazido pela cliente [01:02:21]:** existe **outra clínica especializada em felinos na mesma microrregião**. Opera 100% orgânica (sem tráfego pago), detém fatia de mercado relevante. **Nome não fornecido** — manter anônima, mapear na S3.
-
-**Impacto cross-outputs:**
-- Narrativa central reformulada: Zenvet **NÃO é** a "única clínica privada da microrregião com posicionamento felino declarado". É a única que **COMBINA especialização felina + presença digital estruturada + medicina humanizada + acompanhamento pós-consulta sistematizado**. A combinação é o que é proprietário, não a especialização isolada.
-- `ee-s2-pesquisa-mercado.json`: adicionado novo concorrente à lista (anônimo, a mapear); `summary_headline`, `summary_key_findings`, `competitive_map`, `empty_spaces`, `real_differentials[0]`, `honesty_alert` todos reformulados
-- `ee-s2-posicionamento.json`: `summary_headline`, `brand_territory.description`, `positioning_statements[0]`, `canvas_4p.price.justification`, `canvas_4p.promotion.bottom_funnel_message`, `key_insight`, `honesty_alert` todos reformulados
-- `ee-s1-swot.json`:
-  - `strengths[0]` (Nathalia) reformulada como combinação, não exclusividade
-  - **`threats[3]` (Risco de cópia do posicionamento felino): movida de hipotética para PRESENTE, probability medium → high**
-  - `opportunities[0]` reformulada como "Vácuo da COMBINAÇÃO", não vácuo absoluto
-- Janela de 12-18 meses mantida, com narrativa reenquadrada: não é "ocupar vácuo", é "blindar a combinação antes de LM+ reagir com capital ou da concorrente orgânica escalar digital"
-- Commit: `a7cd253`
-
-## D.3 — Ponto de atenção para S3
-
-Foi incluído no escopo da S3 uma **mini-análise dedicada da concorrente felina orgânica** (Instagram, GMB, reviews, volume de seguidores e engajamento) para dimensionar corretamente a ameaça e calibrar a agressividade da estratégia de ocupação. Registrada nos outputs como "a mapear na S3".
-
----
-
-# PARTE E — Refinamentos estratégicos de 2026-04-24
-
-Três ajustes adicionais aplicados hoje para deixar o diagnóstico mais fiel à realidade e mais útil estrategicamente.
-
-## E.1 — Refinamento da jornada de compra e WTP (persona v3)
-
-### Mudança na jornada
-Estágio **"Gatilho — algo está errado com o Simba"** teve duração corrigida de `1-3 dias` → **`no mesmo dia`**. Tutoras de felinos agem imediatamente ao perceber sintoma/comportamento anormal. Gato esconde o quadro — quando demonstra, já está mal.
-
-**Consequência para estratégia de conteúdo:** conteúdo educativo felino (SEO + Reels) deixa de ser "janela just-in-time" e passa a ser **ativo de autoridade de longo prazo**. Precisa estar indexado e familiar no feed ANTES da crise.
-
-### Reestruturação completa da Willingness-to-Pay
-Ver detalhes na Parte B.2 acima. Síntese:
-- Separação **rotina vs crítico**
-- Em casos críticos (emergência, cirurgia, doença grave): SEM teto de preço. Limitador é confiança + ability-to-pay (parcelamento)
-- Em rotina: comportamento comparativo ainda existe, ticket importa
-- Alavanca estratégica: **CONVERTER CRÍTICO EM RECORRÊNCIA**
-
-### Desdobramentos para a S3
-- Mídia paga: priorizar intenção crítica tanto quanto rotina (ticket e LTV são maiores em crítico)
-- LP: seção dedicada a emergência/crítico com mensagem de disponibilidade + parcelamento
-- CRM: régua pós-emergência específica (D+1, D+7, D+30) para converter vínculo emocional da crise em cliente fiel
-- Brandbook: tom de voz deve servir tanto o momento racional (rotina) quanto o momento emocional (crise)
-
-## E.2 — Recalibração estrutural do SOM
-
-### Erro anterior
-SOM estava em R$ 2,0M (cenário "agressivo em 3 anos"), derivado em parte da meta comercial da cliente — **conflação clássica entre aspiração operacional e métrica de mercado**.
-
-### SOM novo: R$ 7,0M/ano (sem horizonte temporal)
-Ver detalhes na Parte C.1 acima. Síntese:
-- **Triangulação metodológica:** capacidade operacional com 3 vets instaladas (teto ~R$5,4M) + market share top-down (10-12% do SAM = R$3,4-4,1M) + segmento premium felino bottom-up (R$2,9-3,55M). Convergência em R$3-4M não servia — subestimava.
-- **Nova ótica:** SOM é teto tangível de MERCADO, não limitado por capacidade. Com 3 vets, Zenvet já tem estrutura instalada — gargalo não é contratar, é encher agenda + otimizar ticket + escalar procedimentos/exames/domicílio.
-- **Camada pedagógica "Mercado Endereçável":** R$ 20M (59% do SAM — premium humanizado + medium upgrading). Separa barreira de escolha estratégica (SAM→Endereçável = 41% fora por desenho) de barreira competitiva (Endereçável→SOM = 65% fica com concorrência).
-- **SOM = 20,6% do SAM**, consistente com benchmarks de clínica-nicho líder do quadrante (8-25% típico).
-
-## E.3 — Meta da cliente corrigida (via Formulário V4MOS)
-
-### Erro anterior
-Estávamos usando R$ 90k/mês = R$ 1,08M/ano como meta da cliente, baseado no kickoff. Mas o formulário V4MOS preenchido pela própria cliente registra **Meta 12M = R$ 1.320.000**.
-
-### Correção
-- `client.json.briefing.identification.annual_revenue_goal`: adicionado R$ 1.320.000 com `annual_revenue_goal_source`: "Formulário V4MOS — campo 'Meta 12M' preenchido pela cliente"
-- `client.json.briefing.identification.monthly_revenue_goal`: mantido R$ 90.000 com `monthly_revenue_goal_source`: "Kickoff V4 (versão negociada)"
-- Ambas coexistem como registros operacionais distintos (ambição da cliente vs versão negociada). **Nenhuma é o SOM.**
-- Commit: `e790cab`
-
-### Leitura estratégica
-A meta V4MOS (R$ 1,32M) representa **18,9% do SOM**. Mesmo atingindo a meta que a própria cliente ambiciona, ainda sobram **R$ 5,68M de mercado não capturado**. Essa é a provocação central para apresentação: a cliente está pensando em menos de 1/5 do que o mercado permite.
-
----
-
-# PARTE F — Incrementos na skill ee-s2-pesquisa-mercado
-
-Com base nos aprendizados deste cliente, a skill `ee-s2-pesquisa-mercado` foi atualizada no repo para incorporar a metodologia refinada. Próximos clientes já herdam por padrão.
-
-Commit: `925f1a9`
-
-### Atualizações
-- `framework-tam-sam-som.md` — nova seção "Camada intermediária: Mercado Endereçável"; nova seção "SOM vs Capacidade Operacional vs Meta Comercial" (três métricas distintas); nova seção "Triangulação metodológica para SOM robusto" (3 métodos obrigatórios); nova seção "Segmentação heterogênea do SAM"; 4 novos erros comuns (SOM derivado da meta; SOM = capacidade; SOM sem triangulação; conflação SOM vs meta 12m)
-- `SKILL.md` — bloco "⚠️ Regras críticas para o SOM" com 6 diretrizes + 6 novos checkpoints de auto-validação
-- `schema.json` — campos opcionais novos em `market_share` (client_annual_revenue_goal_brl + source + note; enderecavel_value_brl + composition + note) e em `tam_sam_som.som` (operational_ceiling_note, related_but_separate)
-
----
-
-# PARTE G — Estado estratégico consolidado
+# PARTE D — Estado estratégico consolidado
 
 ## Território de marca aprovado
 **Felino · Humano · Transparente** — com presença digital estruturada como 4º pilar. Quadrante NE (Especialista Felino × Premium-Humanizado), onde **a COMBINAÇÃO dos 4 elementos é o diferencial proprietário**, não a especialização isolada.
@@ -596,7 +495,7 @@ Commit: `925f1a9`
 
 ---
 
-# PARTE H — Próximos passos (Semana 3)
+# PARTE E — Próximos passos (Semana 3)
 
 A S2 está completa. Pronto para iniciar a Semana 3, que tem 8 skills com dependências já satisfeitas:
 
@@ -627,4 +526,4 @@ A S2 está completa. Pronto para iniciar a Semana 3, que tem 8 skills com depend
 
 ---
 
-*Documento de base-de-conhecimento consolidado em 2026-04-24 — reflete todo o histórico S1 + S2 + correções pós-entrega + refinamentos estratégicos até esta data.*
+*Documento de base-de-conhecimento consolidado em 2026-04-24 — consolida o que foi produzido, analisado e diagnosticado nas Semanas 1 e 2.*
