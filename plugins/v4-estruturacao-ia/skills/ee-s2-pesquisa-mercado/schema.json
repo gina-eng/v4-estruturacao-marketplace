@@ -92,18 +92,44 @@
           "properties": {
             "value_brl": {
               "type": "number",
-              "description": "Valor do SOM em reais"
+              "description": "Valor do SOM em reais (anual). Teto de mercado capturavel — NAO derivar da meta do cliente, NAO limitar pela capacidade interna."
             },
             "description": {
               "type": "string",
-              "description": "Descricao do que o SOM representa"
+              "description": "Descricao do que o SOM representa. Inclua a triangulacao metodologica (capacidade + market share + segmento) e explicite: (1) que nao e derivado da meta do cliente; (2) que e metrica de mercado, nao de capacidade."
             },
             "assumptions": {
               "type": "array",
               "items": {
                 "type": "string"
               },
-              "description": "Premissas usadas para estimar o SOM"
+              "description": "Premissas usadas para estimar o SOM (posicionamento, competicao, dinamica de nicho, nao premissas operacionais de capacidade)."
+            },
+            "operational_ceiling_note": {
+              "type": "string",
+              "description": "Nota opcional descrevendo o teto de capacidade operacional atual (ex: 'estrutura atual de 3 vets topa em R$ 5,4M — R$ 1,6M entre capacidade e SOM exigem expansao futura'). Separa restricao INTERNA (capacidade) do SOM (mercado)."
+            },
+            "related_but_separate": {
+              "type": "object",
+              "description": "Metricas relacionadas mas SEPARADAS do SOM: meta comercial do cliente de fontes diversas. Ajuda a comparar aspiracao da cliente vs potencial de mercado sem conflatar.",
+              "properties": {
+                "client_annual_revenue_goal_brl_v4mos": {
+                  "type": "number",
+                  "description": "Meta anual registrada no Formulario V4MOS (campo 'Meta 12M')"
+                },
+                "client_annual_revenue_goal_source_v4mos": {
+                  "type": "string",
+                  "description": "Fonte exata (ex: 'Formulario V4MOS - campo Meta 12M preenchido pela cliente')"
+                },
+                "client_monthly_revenue_goal_kickoff": {
+                  "type": "string",
+                  "description": "Meta mensal negociada no kickoff (se houver), em formato livre (ex: 'R$ 90.000 = R$ 1,08M/ano')"
+                },
+                "note": {
+                  "type": "string",
+                  "description": "Narrativa explicando relacao entre metas e SOM — enfatizando que metas sao aspiracao operacional, nao metrica de mercado."
+                }
+              }
             }
           }
         },
@@ -465,14 +491,56 @@
     },
     "market_share": {
       "type": "object",
-      "description": "Comparação do faturamento atual do cliente vs SAM/SOM (se faturamento conhecido)",
+      "description": "Comparação do faturamento atual do cliente vs SAM/SOM + meta da cliente separada + camada enderecavel opcional.",
       "properties": {
-        "current_revenue_brl": { "type": "number" },
-        "current_share_of_sam_pct": { "type": "number" },
-        "target_share_of_sam_pct": { "type": "number" },
-        "gap_to_som_brl": { "type": "number" },
-        "gap_to_som_pct": { "type": "number" },
-        "commentary": { "type": "string" }
+        "current_revenue_brl": {
+          "type": "number",
+          "description": "Faturamento atual anual (12 meses) em reais."
+        },
+        "current_share_of_sam_pct": {
+          "type": "number",
+          "description": "% do SAM que o cliente captura hoje."
+        },
+        "target_share_of_sam_pct": {
+          "type": "number",
+          "description": "% do SAM que o SOM representa. Sem 'target_scenario' — SOM e metrica unica, nao cenarios."
+        },
+        "gap_to_som_brl": {
+          "type": "number",
+          "description": "Diferenca absoluta entre SOM e faturamento atual."
+        },
+        "gap_to_som_pct": {
+          "type": "number",
+          "description": "% de crescimento sobre atual necessario para atingir SOM."
+        },
+        "commentary": {
+          "type": "string",
+          "description": "Narrativa do market share: onde esta, onde pode chegar, porque."
+        },
+        "client_annual_revenue_goal_brl": {
+          "type": "number",
+          "description": "Meta comercial anual registrada pela cliente — SEPARADA do SOM. Use a meta oficial (V4MOS se houver). NAO usar como SOM."
+        },
+        "client_annual_revenue_goal_source": {
+          "type": "string",
+          "description": "Fonte documentada da meta do cliente (ex: 'Formulario V4MOS - campo Meta 12M', 'Kickoff V4', 'Briefing inicial'). Obrigatorio quando client_annual_revenue_goal_brl esta presente."
+        },
+        "client_goal_vs_som_note": {
+          "type": "string",
+          "description": "Narrativa explicando a relacao entre a meta da cliente e o SOM. Se houver MAIS de uma meta em fontes diferentes (V4MOS + kickoff), registrar ambas aqui com suas fontes respectivas."
+        },
+        "enderecavel_value_brl": {
+          "type": "number",
+          "description": "Tamanho do Mercado Enderecavel (subset do SAM onde a oferta do cliente e relevante). Usar quando SAM tem perfis heterogeneos e o cliente escolhe competir apenas em um subsegmento (tipicamente premium humanizado + upgrading medium)."
+        },
+        "enderecavel_composition": {
+          "type": "string",
+          "description": "Como chegou ao valor do enderecavel — composicao dos subsegmentos somados (ex: 'Premium humanizado R$17M + 20% do medio R$2,9M = R$20M')."
+        },
+        "enderecavel_note": {
+          "type": "string",
+          "description": "Explicacao pedagogica da camada enderecavel — renderizada no portal abaixo do grafico Market Share. Tipicamente explica: (1) que o SAM tem perfis diversos; (2) quais perfis o cliente NAO persegue por decisao estrategica; (3) separa barreira de escolha (SAM->Enderecavel) de barreira competitiva (Enderecavel->SOM)."
+        }
       }
     }
   }

@@ -36,15 +36,29 @@ Use WebSearch extensivamente para pesquisar dados reais.
 
 ### TAM/SAM/SOM com fontes
 
-Consulte o framework em `references/framework-tam-sam-som.md` para a metodologia de estimativa. Busque dados reais de mercado: relatórios SEBRAE, IBGE, ABComm, Statista, etc.
+Consulte o framework em `references/framework-tam-sam-som.md` para a metodologia completa. Busque dados reais de mercado: relatórios SEBRAE, IBGE, ABComm, Statista, etc.
 
 Para cada nível (TAM, SAM, SOM):
-- Valor em R$
+- Valor em R$ (anual)
 - Descrição
 - Fonte com link
 - Premissas (para SOM)
 
 Valores marcados com [E] sao estimativas. Demais tem fonte publica.
+
+**⚠️ Regras criticas para o SOM — leia antes de calcular:**
+
+1. **SOM NAO e a meta do cliente.** Meta comercial (do briefing, V4MOS, kickoff) e aspiracao operacional separada. Registrar como campo proprio (`market_share.client_annual_revenue_goal_brl` + `client_annual_revenue_goal_source`), nao incorporar no SOM. Se o SOM ficar igual a meta, voce provavelmente derivou o errado — refaca.
+
+2. **SOM NAO e capacidade operacional.** Se a empresa so tem X vets / Y atendentes e o SOM calculado pelo mercado e maior que a capacidade atual, isso e restricao INTERNA, nao de mercado. Registre como `tam_sam_som.som.operational_ceiling_note`. O SOM continua sendo o teto de mercado, nao de capacidade.
+
+3. **Triangulacao obrigatoria.** Nao calcule SOM por 1 metodo so. Use 3 metodos independentes (ver framework). Se convergirem, use a media; se divergirem, investigue.
+
+4. **Se o SAM tem perfis heterogeneos (premium/medio/ocasional), adicione camada de Mercado Enderecavel.** Preencha `market_share.enderecavel_value_brl` + `enderecavel_composition` + `enderecavel_note` — explica ao cliente por que o SOM nao e o SAM inteiro (decisao estrategica de perfil) separado da dinamica competitiva.
+
+5. **Meta da cliente pode vir de MAIS de uma fonte.** Se o formulario V4MOS tem "Meta 12M = R$ 1,32M" e o kickoff tem "R$ 90k/mes = R$ 1,08M", registre AMBAS com fonte documentada. Nao escolha uma arbitrariamente.
+
+6. **Remova cenarios/horizontes temporais do SOM.** SOM de mercado e o teto tangivel — sem "3 anos", sem "agressivo". Se precisar de horizonte, use no plano de execucao (forecast), nao no SOM.
 
 ### Analise de concorrentes
 
@@ -94,7 +108,9 @@ Siga o padrão canônico de `plugins/v4-estruturacao-ia/shared-templates/PADRAO-
   - Cubra pelo menos 3 dos 4 tipos.
 
 - **`market_share`** (objeto) — se o cliente tem faturamento conhecido, compare com SAM/SOM:
-  - `current_revenue_brl`, `current_share_of_sam_pct`, `target_share_of_sam_pct`, `gap_to_som_brl`, `gap_to_som_pct`, `commentary`
+  - **Obrigatorios:** `current_revenue_brl`, `current_share_of_sam_pct`, `target_share_of_sam_pct` (= SOM/SAM), `gap_to_som_brl`, `gap_to_som_pct`, `commentary`
+  - **Meta do cliente (se houver):** `client_annual_revenue_goal_brl` + `client_annual_revenue_goal_source` (ex: "Formulario V4MOS — campo 'Meta 12M'") + `client_goal_vs_som_note` (narrativa distinguindo meta de SOM). Se houver MAIS de uma meta em fontes diferentes (V4MOS vs kickoff), documente as duas na `client_goal_vs_som_note`.
+  - **Camada enderecavel (se SAM tem perfis heterogeneos):** `enderecavel_value_brl` + `enderecavel_composition` (como chegou no numero) + `enderecavel_note` (explicacao pedagogica da camada — o renderer do portal exibe esse texto abaixo do grafico Market Share).
 
 ### Ponto de alavancagem
 
@@ -116,6 +132,12 @@ Antes de mostrar ao operador, verifique:
 - [ ] Estimativas marcadas com `estimated: true` ou `[E]`?
 - [ ] Consistente com outputs anteriores (ICP, posicionamento)?
 - [ ] TAM/SAM/SOM tem fontes citadas (não apenas estimativas)?
+- [ ] **SOM foi triangulado por 3 métodos independentes** (capacidade, market share top-down, segmento premium) e os números convergem?
+- [ ] **SOM NÃO foi derivado da meta comercial da cliente** (V4MOS, briefing ou kickoff)? Se meta da cliente e SOM ficaram iguais, refez?
+- [ ] **SOM NÃO foi limitado pela capacidade operacional?** Se a empresa tem capacidade inferior ao SOM, registrou `operational_ceiling_note` separadamente em vez de reduzir o SOM?
+- [ ] **Meta da cliente registrada com fonte documentada** (`client_annual_revenue_goal_source`)? Se há 2 metas em fontes diferentes (V4MOS + kickoff), registrou as duas na `client_goal_vs_som_note`?
+- [ ] **Se SAM tem perfis heterogeneos, adicionou camada enderecavel** (`enderecavel_value_brl` + `enderecavel_composition` + `enderecavel_note`)?
+- [ ] **Removeu cenários ("agressivo") e horizontes temporais ("3 anos") do SOM**? SOM e teto de mercado, nao forecast.
 - [ ] Análise de concorrentes é baseada em pesquisa real (não suposições)?
 - [ ] Diferenciais são honestos (não aspiracionais vendidos como reais)?
 - [ ] Tem `summary_headline` específico (não "pesquisa concluída")?
