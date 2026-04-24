@@ -157,6 +157,8 @@ def section_icp(client, outputs):
     dem = icp.get("demographics", {}) or {}
     if dem:
         md.append(f"- **Faixa etária:** {safe(dem.get('age_range'))}")
+        if dem.get('gender'):
+            md.append(f"- **Gênero:** {safe(dem.get('gender'))}")
         md.append(f"- **Renda:** {safe(dem.get('income_or_revenue'))}")
         md.append(f"- **Localização:** {safe(dem.get('location'))}")
         md.append(f"- **Relação com o pet:** {safe(dem.get('pet_relationship'))}")
@@ -193,6 +195,55 @@ def section_icp(client, outputs):
         for p in profiles[:3]:
             if isinstance(p, dict):
                 md.append(f"- **{safe(p.get('label'))}** — {safe(p.get('who'))}")
+    bj = o.get("buyer_journey")
+    if bj and bj.get("stages"):
+        md.append("")
+        md.append("### Jornada de compra")
+        if bj.get("description"):
+            md.append(f"*{bj['description']}*")
+            md.append("")
+        for s in bj["stages"]:
+            md.append(f"**{safe(s.get('stage') or s.get('name'))}**")
+            if s.get("trigger"):
+                md.append(f"- *Gatilho:* {safe(s['trigger'])}")
+            if s.get("mental_state"):
+                md.append(f"- *Estado mental:* {safe(s['mental_state'])}")
+            if s.get("primary_channel"):
+                md.append(f"- *Canal principal:* {safe(s['primary_channel'])}")
+            if s.get("dominant_question"):
+                md.append(f"- *Pergunta dominante:* {safe(s['dominant_question'])}")
+            if s.get("zenvet_intervention"):
+                md.append(f"- *Intervenção Zenvet:* {safe(s['zenvet_intervention'])}")
+            if s.get("friction_today"):
+                md.append(f"- *Fricção atual:* {safe(s['friction_today'])}")
+            if s.get("duration_estimate"):
+                md.append(f"- *Duração estimada:* {safe(s['duration_estimate'])}")
+            md.append("")
+        if bj.get("critical_leakage_point"):
+            md.append(f"> **Vazamento crítico do funil:** {bj['critical_leakage_point']}")
+    wtp = o.get("willingness_to_pay")
+    if wtp and wtp.get("services"):
+        md.append("")
+        md.append("### Disposição a pagar — precificação estratégica")
+        if wtp.get("context"):
+            md.append(f"*{wtp['context']}*")
+            md.append("")
+        for s in wtp["services"]:
+            category_tag = f" *[{safe(s.get('category'))}]*" if s.get('category') else ""
+            md.append(f"**{safe(s.get('service'))}**{category_tag}")
+            if s.get("current_ticket_range"):
+                md.append(f"- Ticket atual: {safe(s.get('current_ticket_range'))}")
+            if s.get("perceived_fair_range"):
+                md.append(f"- Faixa percebida justa: {safe(s.get('perceived_fair_range'))}")
+            if s.get("premium_ceiling"):
+                md.append(f"- Teto premium: {safe(s.get('premium_ceiling'))}")
+            if s.get("elasticity"):
+                md.append(f"- Elasticidade: {safe(s.get('elasticity'))}")
+            if s.get("pricing_lever"):
+                md.append(f"- Alavanca de preço: {safe(s.get('pricing_lever'))}")
+            md.append("")
+        if wtp.get("strategic_implication"):
+            md.append(f"> **Implicação estratégica:** {wtp['strategic_implication']}")
     return "\n".join(md)
 
 
@@ -219,7 +270,12 @@ def section_market(client, outputs):
         cur = ms.get("current_share_of_sam_pct")
         tgt = ms.get("target_share_of_sam_pct")
         if cur is not None:
-            md.append(f"**Market share atual:** {cur}% do SAM · **Meta 3 anos:** {tgt}% do SAM")
+            scenario = ms.get("target_scenario")
+            scenario_tag = f" ({scenario})" if scenario else ""
+            md.append(f"**Market share atual:** {cur}% do SAM · **SOM 3 anos{scenario_tag}:** {tgt}% do SAM")
+        client_goal = ms.get("client_annual_revenue_goal_brl")
+        if client_goal:
+            md.append(f"**Meta comercial da cliente (ano 1):** {fmt_brl(client_goal)} — métrica operacional separada do SOM")
         if ms.get("commentary"):
             md.append(f"*{ms['commentary']}*")
     md.append("")

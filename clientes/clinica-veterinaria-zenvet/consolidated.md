@@ -1,6 +1,6 @@
 # Visão Consolidada — Clínica Veterinária Zenvet
 
-*Gerado em 2026-04-24 15:05 UTC · Ciclo atual: Semana 2 · Cliente: `clinica-veterinaria-zenvet`*
+*Gerado em 2026-04-24 15:10 UTC · Ciclo atual: Semana 2 · Cliente: `clinica-veterinaria-zenvet`*
 
 > Este documento consolida tudo que foi produzido para o cliente ao longo do projeto.
 > Cada seção referencia o output estruturado original em `outputs/` para auditabilidade.
@@ -86,6 +86,7 @@
 ### ICP principal
 **Segmento:** Tutoras de gatos — 70% da base atual
 - **Faixa etária:** 25–55 anos
+- **Gênero:** 80% feminino / 20% masculino (confirmado pela cliente na entrega S2)
 - **Renda:** R$ 5.000–R$ 12.000/mês (classe média a média-alta)
 - **Localização:** Americana, Santa Bárbara d'Oeste, Nova Odessa — SP
 - **Relação com o pet:** Gato humanizado — 'é o filho da casa'
@@ -111,6 +112,112 @@ Perfil que NÃO deve ser atendido ativamente. Drena margem, gera churn, prejudic
 - **Emergência única — sem intenção de vínculo** — Tutor em urgência 2h da manhã procurando qualquer clínica aberta. Não volta após o episódio resolvido.
 - **Tutor exigente de controle total — 'tratamento Dr. Google'** — Chega com diagnóstico pronto pesquisado na internet, recusa orientação técnica, quer apenas comprar o remédio/exame que decidiu.
 
+### Jornada de compra
+*Jornada da Mariana do primeiro sinal de necessidade até advocacy. Cada estágio mapeia gatilho, canal preferido, dúvida dominante e intervenção ideal da Zenvet.*
+
+**Gatilho — algo está errado com o Simba**
+- *Gatilho:* Comportamento atípico (come menos, esconde, vomita). Vacina vencida. Indicação de amiga com urgência.
+- *Estado mental:* Preocupação + culpa ('devia ter levado antes'). Urgência real — gato esconde sintoma, quando demonstra é porque já está mal.
+- *Canal principal:* Google (busca informativa), grupos de WhatsApp de tutoras
+- *Pergunta dominante:* É sério? Preciso ir agora? Qual veterinário é bom pra gato?
+- *Intervenção Zenvet:* Conteúdo educativo felino como ATIVO DE AUTORIDADE de longo prazo — SEO indexado e Reels familiares no feed da Mariana ANTES da crise acontecer. Quando o gatilho dispara, a Zenvet já precisa estar no top-of-mind e no topo do Google Maps — não há janela pra descoberta just-in-time.
+- *Fricção atual:* Zenvet invisível nessa fase — conteúdo educativo felino é lacuna. Não há tempo pra corrigir no momento do gatilho.
+- *Duração estimada:* no mesmo dia
+
+**Consideração — avaliando clínicas**
+- *Gatilho:* Mariana decidiu que precisa levar ao veterinário
+- *Estado mental:* Medo de escolher mal. Cautela elevada. Pesquisa ativa 2-5 dias.
+- *Canal principal:* Google Maps (reviews), Instagram da clínica, grupos WhatsApp (pergunta qual indicam)
+- *Pergunta dominante:* Esse veterinário entende de GATOS? Vai cobrar exame que não precisa? Tem review de outras tutoras?
+- *Intervenção Zenvet:* GMB com 'especialista em felinos' + fotos Nathalia atendendo gato + reviews que mencionem 'gato'. Instagram bio com mensagem-chave. Reviews estratégicos (pedir tutoras de gato para mencionar espécie no review).
+- *Fricção atual:* Bio IG não menciona felinos. Reviews atuais falam de 'pet' genérico — não sinalizam especialização.
+- *Duração estimada:* 3-7 dias
+
+**Decisão — primeiro contato**
+- *Gatilho:* Mariana escolheu mentalmente a Zenvet, vai iniciar contato
+- *Estado mental:* Cautelosa mas decidida. Quer confirmar que a primeira interação bate com o que viu online.
+- *Canal principal:* WhatsApp (preferido), ligação só se WhatsApp demorar
+- *Pergunta dominante:* Tem horário hoje/amanhã? Quanto custa? Vocês atendem gato mesmo ou é só pet em geral?
+- *Intervenção Zenvet:* Loíse com script consultivo: saudação que reforça especialização ('Oi! Aqui é a Loíse da Zenvet, clínica especializada em gatos e cães em Americana. Quem é seu pet?'), qualificação felina, agendamento no mesmo contato.
+- *Fricção atual:* Sem script. Resposta genérica. Em 16,6% converte — 83,4% não agendam.
+- *Duração estimada:* mesmo dia ou 24h
+
+**Primeira visita — momento da verdade**
+- *Gatilho:* Dia do agendamento
+- *Estado mental:* Ansiosa pelo Simba. Avaliando cada detalhe: estrutura, postura da veterinária, conversa, conta.
+- *Canal principal:* Presencial
+- *Pergunta dominante:* Ela escuta minha história? Trata o Simba com carinho? Explica o que está fazendo? A conta bate com o que esperava?
+- *Intervenção Zenvet:* Ritual de primeira visita: Nathalia chama o gato pelo nome em 30s, senta na altura do gato (não o eleva), explica cada procedimento antes de executar, mostra a conta detalhada antes de finalizar.
+- *Fricção atual:* Já é um ponto forte — Nathalia faz isso naturalmente. Oportunidade: formalizar como protocolo para escalar se aumentar time.
+- *Duração estimada:* consulta de ~40 min
+
+**Pós-consulta — o momento que fideliza**
+- *Gatilho:* Simba em casa, Mariana observando evolução
+- *Estado mental:* Alívio misturado com ansiedade residual. Quer confirmação de que está fazendo certo.
+- *Canal principal:* WhatsApp (mensagem da Nathalia)
+- *Pergunta dominante:* Ele está respondendo bem ao tratamento? Se piorar, posso voltar a falar com ela?
+- *Intervenção Zenvet:* Mensagem D+1 da Nathalia (já faz manualmente) — sistematizar em régua CRM. Incluir pergunta aberta 'como ele está hoje?' para gerar engajamento.
+- *Fricção atual:* Manual e dependente da agenda. Sistematizar com CRM sem perder a personalização.
+- *Duração estimada:* 1-3 dias após consulta
+
+**Retenção + advocacy — viraliza na tribo**
+- *Gatilho:* Mariana satisfeita + outra amiga pergunta sobre veterinário
+- *Estado mental:* Orgulho de ter encontrado. Quer ser útil para a amiga + reforçar status de tutora responsável.
+- *Canal principal:* WhatsApp privado ou em grupo, indicação direta
+- *Pergunta dominante:* — (não é dúvida, é afirmação) 'Você precisa levar no Zenvet, a Nathalia é maravilhosa com gato'
+- *Intervenção Zenvet:* Pedido de indicação no momento de pico emocional (pós-consulta positiva). Programa simples: 'se você indicar uma amiga, ambas ganham 15% na próxima consulta'. Reativação via CRM: lembretes de vacina + check-up anual.
+- *Fricção atual:* Indicação ocorre organicamente mas sem sistematização. CRM ausente = sem régua de reativação.
+- *Duração estimada:* contínuo após 1ª visita positiva
+
+> **Vazamento crítico do funil:** O maior vazamento é na etapa de Consideração (duração 3-7 dias): Mariana pesquisa intensamente e a Zenvet não oferece sinais de especialização felina nos canais que ela verifica. Corrigir GMB + bio IG + reviews específicas fecha esse vazamento sem investir R$1 em mídia.
+
+### Disposição a pagar — precificação estratégica
+*Para Mariana, o gato não é pet — é filho, companheiro e suporte emocional. Referência cultural: 45% da Gen Z e 40% dos Millennials declaram pets como 'a coisa mais importante da vida'; 77% dos tutores brasileiros afirmam 'pagar o que for preciso para manter a saúde do pet' (Opinion Box Q1/2025). Traduzido ao comportamento financeiro real: em CASOS CRÍTICOS (emergência, cirurgia, doença grave), não há teto de preço — Mariana parcela, empresta, vende o que for preciso. O limitador é a CONFIANÇA na clínica + a CAPACIDADE DE PARCELAMENTO, não o valor em si. Em SERVIÇOS DE ROTINA (consulta preventiva, vacina, check-up), o comportamento é outro: Mariana compara, pesquisa, tem faixa de referência — o preço importa mais, mas ainda é secundário à especialização e à transparência. IMPORTANTE: o 'pago o que for preciso' é CONDICIONAL à confiança estabelecida — pra lead frio na primeira consulta, a postura racional/comparativa predomina. A conversão emocional acontece depois do primeiro contato positivo (ver a história da Mariana: ela paga porque a Nathalia chamou o Simba pelo nome). Mariana ganha R$5-12K/mês — willingness emocional é ilimitada, ability financeira tem limite, e é onde o parcelamento/financiamento entra como alavanca.*
+
+**Consulta felinos especialista** *[rotina]*
+- Ticket atual: R$180-250
+- Faixa percebida justa: R$180-300
+- Teto premium: R$400 (com exame complementar justificado)
+- Elasticidade: baixa — aceita pagar mais se entender o porquê
+- Alavanca de preço: Justificar via especialização + tempo de consulta (40 min vs. 15 min do 24h) no próprio material de comunicação.
+
+**Vacinação felina completa** *[rotina]*
+- Ticket atual: R$150-220
+- Faixa percebida justa: R$150-250
+- Teto premium: R$300
+- Elasticidade: média
+- Alavanca de preço: Pacote anual (V4 + antirrábica + vermífugo + leucemia) com 10% vs. avulsos. Previsibilidade de receita + conveniência para Mariana.
+
+**Castração de gato** *[crítico]*
+- Ticket atual: R$350-600
+- Faixa percebida justa: R$400-700
+- Teto premium: Sem teto operacional — em procedimento cirúrgico com anestesia, Mariana paga o necessário com confiança estabelecida. Limitador é confiança na Nathalia + capacidade de parcelamento, não preço.
+- Elasticidade: muito baixa — procedimento único, alto medo do pós-operatório, Simba como filho. Preço compara entre clínicas na fase de pesquisa; depois de confiança firmada, não compara mais.
+- Alavanca de preço: Pacote castração + pós-operatório monitorado (Nathalia acompanha via WhatsApp 48h) cobra premium e reduz ansiedade. Oferecer parcelamento 3-6x sem juros reduz atrito de ability-to-pay sem ceder no ticket.
+
+**Atendimento domiciliar felinos** *[misto (rotina proativa + crítico reativo)]*
+- Ticket atual: R$250-400 (consulta) + deslocamento
+- Faixa percebida justa: R$300-500 (rotina) / sem teto em emergência domiciliar
+- Teto premium: Em rotina: R$700 é o ponto de saturação comparativa. Em emergência (gato não come há 3 dias, prostrado, não consegue transportar): não há teto — Mariana paga + deslocamento + exames no local sem comparar.
+- Elasticidade: muito baixa — resolve dor crítica (gato estressa no transporte). Em emergência, elasticidade zero.
+- Alavanca de preço: MAIOR alavanca de margem. Premium explícito para gatos que estressam. Comunicação proprietária da Zenvet — concorrentes não oferecem com qualidade. Segmentar comunicação: 'proativo' (para tutoras que querem evitar o estresse de transporte) vs 'reativo' (para emergência domiciliar).
+
+**Check-up anual gato senior** *[rotina]*
+- Ticket atual: R$400-600 (consulta + exames básicos)
+- Faixa percebida justa: R$400-700
+- Teto premium: R$900
+- Elasticidade: média — em rotina tem comparação. Se o check-up achar algo, a sequência vira crítico (sem teto).
+- Alavanca de preço: Educação via conteúdo: 'gatos com 7+ anos precisam de check-up'. Demanda que Mariana não sabe que tem — criar com conteúdo.
+
+**Emergência / cirurgia / internação (casos críticos)** *[crítico]*
+- Ticket atual: R$800 - R$5.000+ dependendo do caso (dado operacional a validar com Nathalia)
+- Faixa percebida justa: irrelevante em emergência — tutora não compara preço com gato em risco
+- Teto premium: Sem teto operacional. Willingness-to-pay da Mariana é 'o que for preciso'. Ability-to-pay é o real limitador — reflexo nas decisões de parcelamento, empréstimo, pedido de vaquinha em grupo de tutoras.
+- Elasticidade: zero — em emergência, preço é o último critério (depois de competência técnica, disponibilidade e confiança).
+- Alavanca de preço: Nenhuma — é onde o LTV da Mariana se materializa pela primeira vez. O momento da emergência é o momento de maior vínculo emocional com a clínica: atender bem aqui gera advocacy vitalícia + conversão em recorrência (rotina, check-up, domicílio). Oferecer parcelamento / PIX / cartão em múltiplas parcelas remove o gargalo financeiro sem ceder em preço.
+
+> **Implicação estratégica:** A alavanca estratégica principal NÃO é 'revisar preços de rotina +15%' (ainda vale, mas é tática de margem). É CONVERTER CRÍTICO EM RECORRÊNCIA: capturar Mariana no momento de emergência (onde não há teto de WTP), entregar acompanhamento humanizado pós-evento, e fidelizá-la em rotina (check-up anual, vacinação, domicílio). Implicações para a S3: (1) comunicação de mídia paga deve priorizar captura de intenção crítica ('veterinário gatos emergência Americana', 'meu gato não está comendo') tanto quanto rotina — ticket e LTV são maiores; (2) a LP precisa de seção dedicada a emergência/crítico com mensagem de disponibilidade + parcelamento, não só consulta de rotina; (3) o CRM precisa ter régua pós-emergência específica (D+1, D+7, D+30) pra converter o vínculo emocional da crise em cliente fiel; (4) no brandbook, tom de voz precisa servir tanto o momento racional (rotina) quanto o momento emocional (crise) — a Mariana que chega pedindo vacina é outra pessoa emocionalmente que a Mariana que chega com Simba prostrado. Prioridade tática mantida: domicílio felinos (margem alta + dor crítica).
+
 
 ## 4. Mercado & Concorrência
 
@@ -121,7 +228,8 @@ Perfil que NÃO deve ser atendido ativamente. Drena margem, gera churn, prejudic
 - **SAM:** R$ 34.0 M — Serviços veterinários para pets em domicílios de Americana, SBO e Nova Odessa. Regiões com perfil socioeconômico compatível com o ICP Zenvet (classe média a média-alta com pets humanizados).
 - **SOM:** R$ 2.0 M — Participação OBTENÍVEL pela Zenvet em 3 anos (2029): R$ 2,0M/ano (≈5,9% do SAM). Calculado por triangulação metodológica (NÃO derivado da meta comercial da cliente, que é métrica separada de curto prazo): (a) Bottom-up de capacidade operacional — Nathalia sozinha tem teto ~R$1,5-1,8M/ano (8-12 consultas/dia × 5 dias × 48 semanas × ticket misto consulta+procedimento); com contratação de 2º veterinário no ano 2, teto sobe para R$2,0-2,5M; (b) Top-down market share — captura de 5-6% do SAM regional é alcançável para clínica especialista premium com diferenciação real e 3 anos de execução consistente (referência: clínicas-nicho em mercados comparáveis costumam chegar a 4-7% do SAM regional em 3-5 anos); (c) Nicho premium felino — o segmento premium de tutores felinos humanizados na microrregião é estimado em R$ 3,3M (≈33% do SAM felino × ~30% premium); Zenvet compete com concorrente orgânica local e pode capturar 40-50% desse nicho (R$ 1,3-1,7M) + captura residual em ICP secundário de cães. Os três métodos convergem na faixa R$ 1,4M-R$ 2,2M; cenário agressivo posiciona Zenvet no topo. SOM base realista (alternativo) seria R$ 1,4M (≈4,1% do SAM).
 
-**Market share atual:** 1.92% do SAM · **Meta 3 anos:** 5.88% do SAM
+**Market share atual:** 1.92% do SAM · **SOM 3 anos (agressivo):** 5.88% do SAM
+**Meta comercial da cliente (ano 1):** R$ 1.1 M — métrica operacional separada do SOM
 *Zenvet captura hoje R$ 653K/ano (1,92% do SAM de R$ 34M). SOM agressivo em 3 anos: R$ 2,0M/ano (5,88% do SAM) — calculado por triangulação metodológica (capacidade operacional + market share top-down + nicho premium felino), não derivado da meta comercial da cliente. Gap de R$ 1,35M / ~206% de crescimento em 3 anos é alcançável via: (1) consolidação digital do posicionamento 'combinação proprietária' nos primeiros 6-12 meses, (2) formalização ABFel + Cat Friendly Practice em 12-18m para blindar o claim, (3) contratação de 2º veterinário no ano 2 para remover o teto operacional de capacidade, (4) escalonamento da vertical de atendimento domiciliar como margem premium proprietária, (5) CRM + reativação sistemática da base (1.186 ativos → ~3.200 em 3 anos). A meta comercial da cliente (R$ 1,08M/ano) cabe como milestone do ano 1 — não representa o teto do SOM. Não exige expansão geográfica.*
 
 ### Concorrentes mapeados
