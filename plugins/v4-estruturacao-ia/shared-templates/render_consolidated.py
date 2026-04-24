@@ -45,19 +45,25 @@ def bullets(items, fmt=lambda x: x):
 
 
 def fmt_brl(v):
+    """Formata valor em BRL no padrão pt-BR (vírgula decimal, ponto milhar).
+    Para valores abreviados (M, bi), usa 2 casas decimais com vírgula.
+    """
     if v is None:
         return "—"
     try:
         v = float(v)
     except Exception:
         return str(v)
+    def _br(num, decimals=2):
+        s = f"{num:,.{decimals}f}"
+        return s.replace(",", "X").replace(".", ",").replace("X", ".")
     if v >= 1_000_000_000:
-        return f"R$ {v/1_000_000_000:.1f} bi"
+        return f"R$ {_br(v/1_000_000_000, 2)} bi"
     if v >= 1_000_000:
-        return f"R$ {v/1_000_000:.1f} M"
+        return f"R$ {_br(v/1_000_000, 2)} M"
     if v >= 1_000:
-        return f"R$ {v/1_000:.0f} mil"
-    return f"R$ {v:.2f}"
+        return f"R$ {_br(v/1_000, 0)} mil"
+    return f"R$ {_br(v, 2)}"
 
 
 def load_outputs(base):
@@ -271,18 +277,63 @@ def section_market(client, outputs):
         tgt = ms.get("target_share_of_sam_pct")
         if cur is not None:
             md.append(f"**Market share atual:** {cur}% do SAM · **SOM:** {tgt}% do SAM")
+        # Jornada Atual → (Meta cliente) → SOM com gaps escalonados (espelha chart do portal)
+        som_val = ts.get("som", {}).get("value_brl") if ts else None
+        current_val = ms.get("current_revenue_brl")
         client_goal = ms.get("client_annual_revenue_goal_brl")
+        if current_val and som_val:
+            has_goal = client_goal and current_val < client_goal < som_val
+            md.append("")
+            md.append("**Jornada de captura — posição atual vs meta da cliente vs SOM:**")
+            if has_goal:
+                gap_to_goal = client_goal - current_val
+                gap_goal_to_som = som_val - client_goal
+                gap_to_goal_pct = (gap_to_goal / current_val * 100) if current_val else 0
+                gap_goal_to_som_pct = (gap_goal_to_som / client_goal * 100) if client_goal else 0
+                gap_total = som_val - current_val
+                gap_total_pct = (gap_total / current_val * 100) if current_val else 0
+                cur_pct_of_som = (current_val / som_val * 100) if som_val else 0
+                goal_pct_of_som = (client_goal / som_val * 100) if som_val else 0
+                md.append(f"- **Atual:** {fmt_brl(current_val)} ({cur_pct_of_som:.1f}% do SOM)")
+                md.append(f"- **Meta da cliente:** {fmt_brl(client_goal)} ({goal_pct_of_som:.1f}% do SOM)")
+                md.append(f"- **SOM:** {fmt_brl(som_val)} (teto de mercado)")
+                md.append("")
+                md.append(f"- **Gap atual → meta da cliente:** +{fmt_brl(gap_to_goal)} (+{gap_to_goal_pct:.0f}% sobre atual)")
+                md.append(f"- **Gap meta da cliente → SOM:** +{fmt_brl(gap_goal_to_som)} (+{gap_goal_to_som_pct:.0f}% sobre a meta — upside de mercado não enxergado pela cliente)")
+                md.append(f"- **Gap total atual → SOM:** +{fmt_brl(gap_total)} (+{gap_total_pct:.0f}% sobre atual)")
+                md.append("")
+                md.append(f"> **Leitura:** a meta comercial da cliente ({fmt_brl(client_goal)}) é conservadora frente ao que o mercado permite — o SOM aponta {fmt_brl(gap_goal_to_som)} de upside adicional, capturável com consolidação do posicionamento + expansão operacional do nicho premium.")
+            else:
+                gap_total = som_val - current_val
+                gap_total_pct = (gap_total / current_val * 100) if current_val else 0
+                cur_pct_of_som = (current_val / som_val * 100) if som_val else 0
+                md.append(f"- **Atual:** {fmt_brl(current_val)} ({cur_pct_of_som:.1f}% do SOM)")
+                md.append(f"- **SOM:** {fmt_brl(som_val)} (teto de mercado)")
+                md.append(f"- **Gap atual → SOM:** +{fmt_brl(gap_total)} (+{gap_total_pct:.0f}% sobre atual)")
         if client_goal:
             goal_source = ms.get("client_annual_revenue_goal_source")
             source_note = f" — fonte: {goal_source}" if goal_source else ""
-            md.append(f"**Meta comercial anual da cliente:** {fmt_brl(client_goal)}{source_note} — métrica operacional separada do SOM")
+            md.append("")
+            md.append(f"**Meta comercial anual da cliente:** {fmt_brl(client_goal)}{source_note} — métrica operacional separada do SOM.")
+            goal_vs_som = ms.get("client_goal_vs_som_note")
+            if goal_vs_som:
+                md.append(f"*{goal_vs_som}*")
         enderecavel_val = ms.get("enderecavel_value_brl")
         enderecavel_note = ms.get("enderecavel_note")
         if enderecavel_val or enderecavel_note:
             md.append("")
             md.append("**Por que o SOM não é o SAM inteiro? — camada do mercado endereçável**")
             if enderecavel_val:
-                md.append(f"- **Mercado endereçável:** {fmt_brl(enderecavel_val)} — fatia do SAM relevante à oferta (decisão estratégica de não competir em commodity/ocasional)")
+                sam_val_for_ratio = ts.get("sam", {}).get("value_brl") if ts else None
+                pct_of_sam = (enderecavel_val / sam_val_for_ratio * 100) if sam_val_for_ratio else None
+                som_over_end = (som_val / enderecavel_val * 100) if som_val and enderecavel_val else None
+                extra_bits = []
+                if pct_of_sam:
+                    extra_bits.append(f"{pct_of_sam:.0f}% do SAM")
+                if som_over_end:
+                    extra_bits.append(f"SOM = {som_over_end:.0f}% do endereçável")
+                extra = f" ({' · '.join(extra_bits)})" if extra_bits else ""
+                md.append(f"- **Mercado endereçável:** {fmt_brl(enderecavel_val)}{extra} — fatia do SAM relevante à oferta (decisão estratégica de não competir em commodity/ocasional)")
             comp = ms.get("enderecavel_composition")
             if comp:
                 md.append(f"- **Composição:** {comp}")
