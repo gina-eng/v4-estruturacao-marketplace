@@ -2655,7 +2655,7 @@ const R = {
         +    '<div style="font-size:.6875rem;color:var(--text-muted);margin-top:.125rem">'+goalPct.toFixed(1)+'% do SOM</div>'
         +  '</div>'
         +  '<div style="text-align:right">'
-        +    '<div style="font-size:.625rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--success);margin-bottom:.15rem">SOM · 3 anos</div>'
+        +    '<div style="font-size:.625rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--success);margin-bottom:.15rem">SOM</div>'
         +    '<div style="font-size:1.0625rem;font-weight:800;color:var(--success);letter-spacing:-.01em">'+BRL(som)+'</div>'
         +    '<div style="font-size:.6875rem;color:var(--text-muted);margin-top:.125rem">teto de mercado</div>'
         +  '</div>'
@@ -2671,7 +2671,7 @@ const R = {
         +    '<div style="font-size:.6875rem;color:var(--text-muted);margin-top:.125rem">'+progressToSom.toFixed(1)+'% do caminho</div>'
         +  '</div>'
         +  '<div style="text-align:right">'
-        +    '<div style="font-size:.625rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--success);margin-bottom:.15rem">SOM · 3 anos</div>'
+        +    '<div style="font-size:.625rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--success);margin-bottom:.15rem">SOM</div>'
         +    '<div style="font-size:1.125rem;font-weight:800;color:var(--success);letter-spacing:-.01em">'+BRL(som)+'</div>'
         +  '</div>'
         +'</div>';
@@ -2695,7 +2695,7 @@ const R = {
         +  '<span style="color:#6366f1;text-align:center"><strong>Gap até meta:</strong> '+BRL(gapToGoal)+' <span style="color:var(--text-muted)">(+'+gapToGoalPctOverCurrent.toFixed(0)+'% sobre atual)</span></span>'
         +  '<span style="color:var(--success);text-align:right"><strong>Upside sobre meta:</strong> +'+BRL(gapGoalToSom)+' <span style="color:var(--text-muted)">(+'+gapGoalToSomPctOverGoal.toFixed(0)+'% sobre a meta)</span></span>'
         +'</div>'
-        +'<div style="margin-top:.375rem;padding:.5rem .625rem;background:rgba(99,102,241,0.06);border-left:3px solid #6366f1;border-radius:3px;font-size:.75rem;color:var(--text-secondary)"><strong>Leitura:</strong> a meta comercial da cliente (<strong style="color:#6366f1">'+BRL(goal)+'</strong>) é conservadora frente ao que o mercado permite — o SOM aponta <strong style="color:var(--success)">'+BRL(gapGoalToSom)+'</strong> de upside adicional, obtenível em 3 anos com execução plena do roadmap.</div>'
+        +'<div style="margin-top:.375rem;padding:.5rem .625rem;background:rgba(99,102,241,0.06);border-left:3px solid #6366f1;border-radius:3px;font-size:.75rem;color:var(--text-secondary)"><strong>Leitura:</strong> a meta comercial da cliente (<strong style="color:#6366f1">'+BRL(goal)+'</strong>) é conservadora frente ao que o mercado permite — o SOM aponta <strong style="color:var(--success)">'+BRL(gapGoalToSom)+'</strong> de upside adicional, capturável com consolidação do posicionamento + expansão operacional do nicho premium.</div>'
       : '<div style="display:flex;justify-content:space-between;align-items:center;margin-top:.5rem;font-size:.75rem">'
         +  '<span style="color:var(--warning);font-weight:700">✓ Percorrido: '+BRL(current)+'</span>'
         +  '<span style="color:var(--text-muted)">Gap: <strong style="color:var(--danger)">'+BRL(gap)+'</strong> (+'+ms.gap_to_som_pct.toFixed(0)+'%)</span>'
@@ -2728,8 +2728,28 @@ const R = {
       +'</div>'
       +'</div>';
 
+    // ── BLOCO C: Pedagogia — por que o SOM não é o SAM inteiro ──
+    // Explica a camada de "mercado endereçável" em linguagem de cliente, sem adicionar ao gráfico
+    let enderecavelHtml = '';
+    if (ms.enderecavel_value_brl || ms.enderecavel_note) {
+      const endVal = ms.enderecavel_value_brl;
+      const endPctSam = endVal && sam ? (endVal/sam*100) : null;
+      const somOverEnd = endVal && som ? (som/endVal*100) : null;
+      enderecavelHtml = '<div style="margin-top:1rem;padding:.875rem 1rem;background:linear-gradient(180deg, rgba(99,102,241,0.04), rgba(99,102,241,0.02));border:1px solid rgba(99,102,241,0.15);border-radius:4px">'
+        +'<div style="font-size:.6875rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#6366f1;margin-bottom:.5rem">Por que o SOM não é o SAM inteiro? — camada do mercado endereçável</div>'
+        +(endVal
+          ? '<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem;margin-bottom:.625rem;font-size:.75rem">'
+            +'<div style="padding:.5rem;background:rgba(245,158,11,0.08);border-left:2px solid var(--warning);border-radius:2px"><div style="font-size:.625rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.2rem">SAM total</div><div style="font-weight:700;color:var(--text-primary)">'+BRL(sam)+'</div><div style="color:var(--text-muted);font-size:.6875rem">todo o gasto vet da microrregião</div></div>'
+            +'<div style="padding:.5rem;background:rgba(99,102,241,0.08);border-left:2px solid #6366f1;border-radius:2px"><div style="font-size:.625rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.2rem">Mercado endereçável</div><div style="font-weight:700;color:#6366f1">'+BRL(endVal)+(endPctSam?' <span style="font-size:.6875rem;color:var(--text-muted);font-weight:500">('+endPctSam.toFixed(0)+'% do SAM)</span>':'')+'</div><div style="color:var(--text-muted);font-size:.6875rem">fatia do SAM relevante à oferta</div></div>'
+            +'<div style="padding:.5rem;background:rgba(22,163,74,0.08);border-left:2px solid var(--success);border-radius:2px"><div style="font-size:.625rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.2rem">SOM</div><div style="font-weight:700;color:var(--success)">'+BRL(som)+(somOverEnd?' <span style="font-size:.6875rem;color:var(--text-muted);font-weight:500">('+somOverEnd.toFixed(0)+'% do endereçável)</span>':'')+'</div><div style="color:var(--text-muted);font-size:.6875rem">capturável pela clínica</div></div>'
+            +'</div>'
+          : '')
+        +'<div style="font-size:.75rem;color:var(--text-secondary);line-height:1.55">'+(ms.enderecavel_note ? E(ms.enderecavel_note) : 'O SAM inclui todo o gasto vet da microrregião — de tutores ocasionais (consulta isca R$70) até premium humanizados. A clínica <strong>não compete</strong> nos perfis de commodity/ocasional por decisão estratégica. O <strong style="color:#6366f1">Mercado endereçável</strong> é o recorte do SAM onde a oferta dela é relevante — tipicamente o segmento premium humanizado + fatia do médio que upgrade. O SOM é quanto a clínica realisticamente captura DESSE endereçável, disputando com concorrentes de perfil similar. Essa camada explica por que o SOM não é maior mesmo sendo a clínica líder do seu nicho.')+'</div>'
+        +'</div>';
+    }
+
     h += sc('Market Share: ' + E(d.client_name || 'Cliente') + ' vs Mercado',
-      insight(journey + context,
+      insight(journey + context + enderecavelHtml,
         ms.commentary || '',
         progressToSom >= 50 ? 'good' : progressToSom >= 25 ? 'warn' : 'bad'));
   }

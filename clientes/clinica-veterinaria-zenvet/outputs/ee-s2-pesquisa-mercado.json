@@ -3,7 +3,7 @@
 
   "summary_highlights": [
     { "category": "posicao", "label": "Fatia atual do SAM", "value": "1,9%", "subtext": "R$ 653K/ano de R$ 34M", "tone": "yellow" },
-    { "category": "posicao", "label": "SOM agressivo (3 anos)", "value": "5,9%", "subtext": "R$ 2,0M/ano — triangulação capacidade + market share + nicho felino premium", "tone": "green" },
+    { "category": "posicao", "label": "SOM — potencial de mercado", "value": "20,6%", "subtext": "R$ 7,0M/ano — captura plenamente consolidada no nicho premium da microrregião", "tone": "green" },
     { "category": "competicao", "label": "Clínicas privadas felinas na microrregião", "value": "1+", "subtext": "concorrente orgânica local identificada (a mapear na S3)", "tone": "yellow" },
     { "category": "competicao", "label": "Especialistas felinos em Campinas", "value": "4", "subtext": "MedCat, ClinFel, Gattare, Estimma", "tone": "red" },
     { "category": "janela", "label": "Janela estratégica", "value": "12-18m", "subtext": "antes de reação competitiva", "tone": "yellow" },
@@ -24,13 +24,16 @@
   "market_share": {
     "current_revenue_brl": 653051.74,
     "current_share_of_sam_pct": 1.92,
-    "target_share_of_sam_pct": 5.88,
-    "target_scenario": "agressivo",
-    "gap_to_som_brl": 1346948.26,
-    "gap_to_som_pct": 206.3,
-    "client_annual_revenue_goal_brl": 1080000,
-    "client_goal_vs_som_note": "A meta comercial atual da cliente (R$ 90k/mês = R$ 1,08M/ano, conforme briefing) é um milestone do ano 1 dentro da trajetória do SOM agressivo — NÃO é o SOM. SOM é fatia obtenível de mercado em 3 anos; meta da cliente é aspiração operacional de curto prazo. A distinção evita conflação estratégica.",
-    "commentary": "Zenvet captura hoje R$ 653K/ano (1,92% do SAM de R$ 34M). SOM agressivo em 3 anos: R$ 2,0M/ano (5,88% do SAM) — calculado por triangulação metodológica (capacidade operacional + market share top-down + nicho premium felino), não derivado da meta comercial da cliente. Gap de R$ 1,35M / ~206% de crescimento em 3 anos é alcançável via: (1) consolidação digital do posicionamento 'combinação proprietária' nos primeiros 6-12 meses, (2) formalização ABFel + Cat Friendly Practice em 12-18m para blindar o claim, (3) contratação de 2º veterinário no ano 2 para remover o teto operacional de capacidade, (4) escalonamento da vertical de atendimento domiciliar como margem premium proprietária, (5) CRM + reativação sistemática da base (1.186 ativos → ~3.200 em 3 anos). A meta comercial da cliente (R$ 1,08M/ano) cabe como milestone do ano 1 — não representa o teto do SOM. Não exige expansão geográfica."
+    "target_share_of_sam_pct": 20.59,
+    "gap_to_som_brl": 6346948.26,
+    "gap_to_som_pct": 971.8,
+    "client_annual_revenue_goal_brl": 1320000,
+    "client_annual_revenue_goal_source": "Formulário V4MOS — campo 'Meta 12M' (preenchido pela cliente)",
+    "client_goal_vs_som_note": "A meta comercial anual que a cliente registrou no V4MOS (R$ 1.320.000 = R$ 110k/mês) é ambição operacional, não métrica de mercado. Representa 18,9% do SOM — mesmo atingindo essa meta, ainda sobram R$ 5,68M de mercado endereçável não capturado. Observação: no kickoff com a V4 foi registrada uma meta mensal negociada de R$ 90k (R$ 1,08M/ano) — versão mais conservadora, representa 15,4% do SOM. As duas metas coexistem como registros operacionais distintos; nenhuma delas é o SOM, que é métrica de teto de mercado.",
+    "enderecavel_value_brl": 20000000,
+    "enderecavel_composition": "Premium humanizado completo (R$ 17,1M = tutores classe média-alta, pet como filho, gasto R$ 1.500-2.500/ano — 17% dos 113K domicílios com pet da microrregião) + fatia do médio que upgrade para premium quando vê valor (~R$ 2,9M = 20% do R$ 14,6M do segmento médio).",
+    "enderecavel_note": "O SAM de R$ 34M inclui TODOS os perfis de consumidor vet da microrregião — premium humanizado (~50% do gasto), médio regular (~30%) e ocasional/commodity (~20%, tutores que só vão ao vet em emergência e buscam consulta isca R$ 70). A Zenvet decide estrategicamente NÃO competir no perfil ocasional/commodity — não abre 24h, não faz consulta isca. O MERCADO ENDEREÇÁVEL (~R$ 20M) é o recorte do SAM onde a oferta da Zenvet (premium humanizado + especialização felina + transparência) é relevante. Dentro desse endereçável, ela disputa com concorrente orgânica felina local, hospitais 24h que pescam uma fatia do premium, clínicas de Campinas (MedCat, ClinFel, Gattare, Estimma) e Riedog, ficando com 35% = R$ 7M (SOM). Essa camada explica por que o SOM não é maior mesmo sendo a Zenvet líder do nicho: ~R$ 14M do SAM nunca foram alvo (decisão de posicionamento), e ~R$ 13M do endereçável ficam com a concorrência (dinâmica competitiva).",
+    "commentary": "Zenvet captura hoje R$ 653K/ano — 9,3% do SOM e 1,92% do SAM. O SOM de R$ 7,0M representa o potencial de mercado plenamente consolidado: fatia capturável pela Zenvet como líder do quadrante premium felino da microrregião, considerando a concorrência existente (concorrente orgânica felina local + hospitais 24h generalistas + 4 clínicas especializadas em Campinas a 45-60min) e a escolha estratégica de não competir em commodity/volume (~48% do SAM fica fora por desenho, não por incapacidade). SOM = 20,6% do SAM de R$ 34M, consistente com benchmarks de clínica-nicho líder de quadrante (8-25% típico). Gap atual → SOM: R$ 6,35M (+972% sobre atual). A meta V4MOS da cliente (R$ 1,32M/ano) leva a captura a 18,9% do SOM — ainda deixa R$ 5,68M de mercado inexplorado. Essa é a provocação estratégica central: a cliente está pensando em menos de 1/5 do que o mercado permite. Não exige expansão geográfica."
   },
 
   "summary": "Mercado vet BR projetado em R$ 8,1 bi em 2025 (10,6% do setor pet de R$ 77,2 bi). Na região Americana/SBO/Nova Odessa (500K hab, ~113K domicílios com pet), SAM estimado em R$ 34M. Zenvet opera com ~1,9% do SAM (R$ 653K/ano). Gatos são o segmento que mais cresce (+5,4% a/a vs +2,8% cães) e Medicina Felina consolidou-se como especialidade no Brasil. Descoberta central (entrega S2, 22/04): existe concorrente local — não nomeada, a mapear na mini-análise S3 — também especializada em felinos, operando 100% orgânico (sem tráfego pago) e com fatia de mercado relevante. Isso reenquadra o diferencial proprietário da Zenvet: não é mais 'única especialista em felinos', é a única da microrregião que COMBINA especialização felina + presença digital estruturada + medicina humanizada declarada + acompanhamento pós-consulta sistematizado. Essa combinação é o que nenhum concorrente local replica — é ela que precisa ser blindada. Em Campinas (45-60min), existem 4 clínicas altamente especializadas (MedCat Cat Friendly Gold, ClinFel, Hospital Gattare, Estimma) que competem indiretamente por distância. Competição local direta é dominada por 2 hospitais 24h na mesma avenida (LM+ e Cantinho do Mascote) e por Xodog (tradicional, 19K clientes desde 1996), todos generalistas. Clínica Meu Pet SBO (pública, jun/2024) atende felinos mas apenas população baixa renda de SBO — não concorre no ICP premium. Diferenciais reais: Nathalia com formação felina (pós-graduanda) + atendimento humanizado com acompanhamento pós-consulta sistematizado + base de 1.186 clientes fidelizados + presença digital em estruturação. Diferencial sub-explorado: atendimento domiciliar (alavanca premium de margem). Ação defensiva crítica: buscar título oficial ABFel (CFMV) + certificação Cat Friendly Practice para blindar posicionamento vs. Campinas E vs. concorrente orgânica local que pode escalar digital.",
@@ -56,25 +59,24 @@
       ]
     },
     "som": {
-      "value_brl": 2000000,
-      "scenario": "agressivo",
-      "description": "Participação OBTENÍVEL pela Zenvet em 3 anos (2029): R$ 2,0M/ano (≈5,9% do SAM). Calculado por triangulação metodológica (NÃO derivado da meta comercial da cliente, que é métrica separada de curto prazo): (a) Bottom-up de capacidade operacional — Nathalia sozinha tem teto ~R$1,5-1,8M/ano (8-12 consultas/dia × 5 dias × 48 semanas × ticket misto consulta+procedimento); com contratação de 2º veterinário no ano 2, teto sobe para R$2,0-2,5M; (b) Top-down market share — captura de 5-6% do SAM regional é alcançável para clínica especialista premium com diferenciação real e 3 anos de execução consistente (referência: clínicas-nicho em mercados comparáveis costumam chegar a 4-7% do SAM regional em 3-5 anos); (c) Nicho premium felino — o segmento premium de tutores felinos humanizados na microrregião é estimado em R$ 3,3M (≈33% do SAM felino × ~30% premium); Zenvet compete com concorrente orgânica local e pode capturar 40-50% desse nicho (R$ 1,3-1,7M) + captura residual em ICP secundário de cães. Os três métodos convergem na faixa R$ 1,4M-R$ 2,2M; cenário agressivo posiciona Zenvet no topo. SOM base realista (alternativo) seria R$ 1,4M (≈4,1% do SAM).",
+      "value_brl": 7000000,
+      "description": "SOM — teto tangível de mercado capturável pela Zenvet plenamente consolidada como líder do quadrante premium felino da microrregião Americana/SBO/Nova Odessa. R$ 7,0M/ano = 20,6% do SAM de R$ 34M. NÃO é cenário aspiracional nem meta temporal — é o share realisticamente obtenível considerando posicionamento, competição real e a escolha estratégica de não competir em commodity/volume (~48% do SAM fica fora por desenho). Afunilamento transparente do funil: TAM R$ 8,1bi → SAM R$ 34M (-99,58%, regionalização) → Mercado endereçável R$ 20M (-41%, descartando ocasional/commodity) → SOM R$ 7M (-65%, share competitivo). Composição do SOM (R$ 7M) por captura de subsegmento: (a) Premium felino (líder do quadrante, disputando com concorrente orgânica local + migração silenciosa a Campinas): 25-30% de R$ 8,5M = ~R$ 2,98M; (b) Premium cães (ICP secundário, oferta diferenciada mas não prioritária): 10-15% de R$ 8,5M = ~R$ 1,70M; (c) Upgrade de medium tutors convertidos em premium pela qualidade percebida: 15-25% de R$ 3M = ~R$ 0,86M; (d) Efeito crescimento natural do segmento felino (+5,4% a/a, Abinpet) amplia o endereçável no tempo = ~R$ 1,46M. SOM = 0,086% do TAM nacional — proporção coerente com negócio regional de nicho.",
       "assumptions": [
-        "Execução completa do roadmap S1-S5 (tracking, CRM, LP, brandbook, identidade, criativos, scripts comerciais) com consistência",
-        "Consolidação digital do posicionamento 'combinação proprietária' (felino + digital + humano + pós-consulta) nos primeiros 6-12 meses",
-        "Formalização ABFel (CFMV) + certificação Cat Friendly Practice (AAFP) em 12-18 meses para blindar claim vs. réplica de LM+ e vs. concorrente orgânica local",
-        "Contratação de 2º veterinário (com perfil felino ou generalista de apoio) no ano 2 para remover teto operacional — sem esse passo, capacidade limita SOM em ~R$1,5-1,8M",
-        "Eliminação dos vazamentos de mídia atuais (Meta Ads 404 + ausência de tracking) levando CAC de R$ 266 para ~R$ 120",
-        "Crescimento da base ativa de 1.186 → ~3.200 clientes em 3 anos via CRM + régua de reativação",
-        "Escalonamento do atendimento domiciliar felino como serviço premium proprietário (margem alta, elasticidade baixa, dor crítica)",
-        "Conversão do momento crítico em recorrência (ver ee-s1-persona-icp v3 — estratégia WTP): captura em emergência/cirurgia e fidelização em rotina",
-        "Premissa macro: mercado pet cresce 2,4%-3,5% a/a até 2028 (projeção Abinpet/IPB)",
-        "Concorrente orgânica local NÃO escala presença digital estruturada dentro do horizonte (condição crítica — caso escale, captura do nicho premium felino pode cair a 25-35%, baixando SOM para R$1,2-1,5M)"
+        "Posicionamento da combinação proprietária (felino + digital + humanizado + pós-consulta) executado com consistência nos canais onde Mariana decide: GMB, Instagram, Google Search, conteúdo educativo felino",
+        "Formalização ABFel (CFMV) + certificação Cat Friendly Practice (AAFP) para blindar o claim de especialização contra réplica de LM+ e consolidar liderança contra concorrente orgânica local",
+        "Concorrente orgânica felina local mantém escolha estrutural de não investir em tráfego pago — se escalar digital, captura do premium felino pela Zenvet cai de 25-30% para 15-20% e SOM recua para ~R$ 5-5,5M",
+        "Escolha estratégica sustentada de NÃO competir em commodity/volume (consulta isca R$70, emergência 24h plena, banho/tosa) — essa decisão deixa fora 48% do SAM por desenho, preservando o posicionamento",
+        "Crescimento do segmento felino +5,4% a/a mantém-se (Abinpet 2025), ampliando naturalmente o mercado endereçável",
+        "Desaceleração macroeconômica do setor pet (projeção +2,4% em 2025) não comprime o nicho premium, que tem menor elasticidade (tutor humanizado é dos últimos a cortar gasto)",
+        "Execução do roadmap S1-S5 (tracking, CRM, LP dedicada felinos, brandbook, identidade visual, criativos, scripts comerciais) entrega o funil necessário para escalar a captura"
       ],
       "related_but_separate": {
-        "client_annual_revenue_goal_brl": 1080000,
-        "note": "Meta comercial da cliente (R$ 90k/mês, do briefing) é milestone operacional de ano 1, não métrica de mercado. Não confundir com SOM."
-      }
+        "client_annual_revenue_goal_brl_v4mos": 1320000,
+        "client_annual_revenue_goal_source_v4mos": "Formulário V4MOS — campo 'Meta 12M' preenchido pela cliente",
+        "client_monthly_revenue_goal_kickoff": "R$ 90.000 (R$ 1,08M/ano, versão negociada no kickoff)",
+        "note": "Duas metas comerciais convivem nos registros do cliente: (1) Meta V4MOS de R$ 1,32M/ano = R$ 110k/mês, que é a ambição da própria cliente; (2) Meta kickoff de R$ 90k/mês = R$ 1,08M/ano, versão mais conservadora negociada com a V4. Ambas são aspirações operacionais, NÃO o SOM. A meta V4MOS representa 18,9% do SOM; a meta kickoff representa 15,4% do SOM — em qualquer das duas leituras, a cliente está enxergando menos de 1/5 do mercado endereçável."
+      },
+      "operational_ceiling_note": "A estrutura atual da Zenvet (3 veterinárias instaladas) tem teto operacional estimado em ~R$ 5,4M/ano em agenda cheia + ticket otimizado + escalonamento de exames/procedimentos/domicílio. Entre esse teto e o SOM de R$ 7,0M há R$ 1,6M que exigem expansão futura (2ª unidade, ampliação física, nova sede). Essa é restrição OPERACIONAL, não de mercado — não reduz o SOM, mas informa o plano de execução: os primeiros ~R$ 4-5M de crescimento exigem só consolidação; o trecho final de R$ 1,6M depende de investimento estrutural."
     },
     "methodology": "mixed",
     "sources": [

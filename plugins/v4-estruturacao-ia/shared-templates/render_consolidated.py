@@ -270,12 +270,24 @@ def section_market(client, outputs):
         cur = ms.get("current_share_of_sam_pct")
         tgt = ms.get("target_share_of_sam_pct")
         if cur is not None:
-            scenario = ms.get("target_scenario")
-            scenario_tag = f" ({scenario})" if scenario else ""
-            md.append(f"**Market share atual:** {cur}% do SAM · **SOM 3 anos{scenario_tag}:** {tgt}% do SAM")
+            md.append(f"**Market share atual:** {cur}% do SAM · **SOM:** {tgt}% do SAM")
         client_goal = ms.get("client_annual_revenue_goal_brl")
         if client_goal:
-            md.append(f"**Meta comercial da cliente (ano 1):** {fmt_brl(client_goal)} — métrica operacional separada do SOM")
+            goal_source = ms.get("client_annual_revenue_goal_source")
+            source_note = f" — fonte: {goal_source}" if goal_source else ""
+            md.append(f"**Meta comercial anual da cliente:** {fmt_brl(client_goal)}{source_note} — métrica operacional separada do SOM")
+        enderecavel_val = ms.get("enderecavel_value_brl")
+        enderecavel_note = ms.get("enderecavel_note")
+        if enderecavel_val or enderecavel_note:
+            md.append("")
+            md.append("**Por que o SOM não é o SAM inteiro? — camada do mercado endereçável**")
+            if enderecavel_val:
+                md.append(f"- **Mercado endereçável:** {fmt_brl(enderecavel_val)} — fatia do SAM relevante à oferta (decisão estratégica de não competir em commodity/ocasional)")
+            comp = ms.get("enderecavel_composition")
+            if comp:
+                md.append(f"- **Composição:** {comp}")
+            if enderecavel_note:
+                md.append(f"- *{enderecavel_note}*")
         if ms.get("commentary"):
             md.append(f"*{ms['commentary']}*")
     md.append("")
