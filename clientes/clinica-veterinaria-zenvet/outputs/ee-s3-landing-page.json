@@ -155,6 +155,11 @@
     "og_description": "Em Americana, a clínica especialista em medicina felina. Consulta consultiva de 40min, transparência item a item, acompanhamento da Dra. Nathalia no WhatsApp.",
     "og_type": "website"
   },
-  "deploy_url": "http://localhost:3001",
+  "deploy_url": "https://zenvet-landing.vercel.app",
+  "deploy_dev_url": "http://localhost:3001",
+  "deploy_provider": "Vercel",
+  "deploy_status": "production",
+  "deploy_deployed_at": "2026-04-29",
+  "deployment_id": "dpl_5fyYzBKjCYBH9e5e85J2v3BV61SH",
   "whatsapp_link": "https://wa.me/5519995795483?text=Oi%21%20Vi%20a%20p%C3%A1gina%20da%20Zenvet%20e%20queria%20agendar%20consulta%20para%20meu%20pet."
 }
