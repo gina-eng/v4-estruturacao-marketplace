@@ -1,0 +1,107 @@
+{
+  "summary": "Identidade visual da Clínica Veterinária Zenvet ancorada na paleta atual já implantada (Roxo Profundo #4B1C7D + Turquesa Cuidado #00B8BD + Bege Acolhedor #F6EAD8 + Magenta Ação #A8358C) — formalizada como sistema com tipografia Fraunces (títulos serif contemporâneo) + Inter (corpo sans-serif) e diretrizes de forma balanceadas. Conceito criativo 'Felino Premium Humanizado' traduz visualmente a combinação proprietária do território Felino · Humano · Transparente: roxo lidera (sofisticação felina), turquesa sustenta (saúde médica), bege quente humaniza (acolhimento doméstico) e magenta ativa apenas CTAs. 3 direções de logo prontas para Midjourney aguardam escolha do operador.",
+  "creative_concept": "Felino Premium Humanizado — identidade que comunica especialização clínica e calor humano simultaneamente, sem cair no asséptico hospitalar nem no infantil pet shop. Roxo Profundo lidera (sofisticação felina, premium), Turquesa sustenta (saúde, frescor médico), Bege Quente humaniza (acolhimento doméstico) e Magenta ativa apenas CTAs. Tradução visual da combinação proprietária 'Felino · Humano · Transparente' — premium sem ser frio, técnico sem ser distante.",
+  "color_palette": [
+    {
+      "name": "Roxo Profundo",
+      "hex": "#4B1C7D",
+      "rgb": "75, 28, 125",
+      "cmyk": "85, 95, 0, 25",
+      "role": "primary",
+      "justification": "Cor de assinatura da marca — já consolidada no logo e nos materiais existentes. Roxo profundo carrega sofisticação e tom premium (segmento Premium-Humanizado), e tem associação cultural com mistério e elegância felina (gato como animal nobre, independente). Diferencia a Zenvet do azul corporativo/clínico genérico do setor e do verde de farmácia veterinária. Usar em logo, headlines de LP, fundo de seções institucionais e elementos de assinatura."
+    },
+    {
+      "name": "Turquesa Cuidado",
+      "hex": "#00B8BD",
+      "rgb": "0, 184, 189",
+      "cmyk": "100, 3, 0, 26",
+      "role": "secondary",
+      "justification": "Sustenta a paleta com a associação universal de saúde, frescor e cuidado médico — sem cair no verde-farmácia (#00FF00) que ficaria amador. Funciona como cor complementar técnica em ícones de serviço, badges de status (vacina em dia, exame agendado), gráficos e elementos de UI da LP. Contraste cromático com o roxo cria pares dinâmicos sem brigar."
+    },
+    {
+      "name": "Magenta Ação",
+      "hex": "#A8358C",
+      "rgb": "168, 53, 140",
+      "cmyk": "0, 68, 17, 34",
+      "role": "accent",
+      "justification": "Cor exclusiva para CTAs primários — botão de agendamento, link de WhatsApp, microcopy de ação. Magenta dialoga com o roxo (mesma família cromática) mas tem energia que o roxo não tem, garantindo contraste visual onde precisa converter. Reservar para ação significa que sempre que o tutor vê magenta na peça, sabe que ali se decide algo. Nunca usar como fundo grande nem em seções inteiras."
+    },
+    {
+      "name": "Bege Acolhedor",
+      "hex": "#F6EAD8",
+      "rgb": "246, 234, 216",
+      "cmyk": "0, 5, 12, 4",
+      "role": "background",
+      "justification": "Humaniza o premium — o roxo sozinho ficaria pesado e institucional. Bege quente cria sensação de ambiente doméstico, sala de estar, foto com luz natural (alinhado à fotografia da Mariana segurando o Simba na sala dela). Usar como fundo de seções respiráveis (about, equipe, depoimentos), de cards educativos e de Stories e Reels — onde a marca quer se aproximar do tutor sem perder o premium."
+    },
+    {
+      "name": "Grafite Texto",
+      "hex": "#2E2E33",
+      "rgb": "46, 46, 51",
+      "cmyk": "10, 10, 0, 80",
+      "role": "neutral",
+      "justification": "Cinza-grafite para corpo de texto e elementos de UI neutros. Garante contraste WCAG AA (>7:1) em fundos branco e bege, e legibilidade superior ao preto puro (#000) que ficaria duro em layouts premium-humanizados. Inclui sutil viés violeta no canal RGB que harmoniza com o roxo profundo da paleta — preto neutro pareceria desconectado do sistema."
+    }
+  ],
+  "typography": {
+    "title": {
+      "font": "Fraunces",
+      "weight": "Bold 700 / SemiBold 600",
+      "size": "48px / 3rem (H1) · 32px / 2rem (H2) · 24px / 1.5rem (H3)",
+      "source": "Google Fonts"
+    },
+    "body": {
+      "font": "Inter",
+      "weight": "Regular 400 (corpo) / Medium 500 (links e ênfases)",
+      "size": "17px / 1.0625rem (corpo desktop) · 16px / 1rem (corpo mobile) · 14px / 0.875rem (caption)",
+      "source": "Google Fonts"
+    },
+    "highlight": {
+      "font": "Fraunces",
+      "weight": "Italic 600 (eyebrow / palavras de ênfase em narrativa)",
+      "size": "20px / 1.25rem · 18px / 1.125rem (mobile)",
+      "source": "Google Fonts"
+    },
+    "justification": "Fraunces é serif contemporâneo com tecnologia variable font (optical sizing), curvas humanas e personalidade editorial — afasta a marca do hospital institucional sem cair no pet shop carismático. Reforça os adjetivos 'humano' e 'especialista' simultaneamente. Inter é sans-serif neutro, otimizado para tela, com legibilidade testada em UI e microcopy — sustenta o adjetivo 'transparente' (clareza de leitura em LP, microcopy de orçamento, mensagens de WhatsApp). O par Fraunces (título com calor) + Inter (corpo com clareza) traduz visualmente a tensão produtiva entre 'medicina técnica' e 'medicina humana'. Ambas gratuitas no Google Fonts e suportam pt-BR sem ajustes."
+  },
+  "shape_guidelines": {
+    "shapes": "mixed",
+    "borders": "rounded",
+    "density": "balanced",
+    "icon_style": "Linha contínua (1.5-2px), peso uniforme, terminações arredondadas. Estilo similar a Lucide Icons ou Phosphor Icons (regular weight). Cabeças de gato e cão estilizadas em traço único, sem realismo (zero stock-icon-foto). Cor padrão Roxo Profundo (#4B1C7D); ativar Magenta apenas em ícones de CTA e Turquesa em estados positivos (sucesso, agendamento confirmado, vacina em dia). Nunca preencher área de ícone com cor sólida — o peso fica desproporcional ao restante do sistema."
+  },
+  "logo_prompts": [
+    {
+      "direction": "Minimalista Geométrico — Felino em Linha Contínua",
+      "concept": "Gato estilizado em traço único, formando uma silhueta sentada de perfil, contida por moldura geométrica suave que ancora o símbolo sem prendê-lo.",
+      "prompt": "minimalist single continuous line drawing logo of a stylized cat sitting in profile, geometric purity, contained within a soft rounded square frame, deep purple (#4B1C7D) on warm cream background (#F6EAD8), modern veterinary clinic identity, scalable vector style, balanced negative space, clean professional, premium humanized feel, flat 2D, no gradients, no realistic textures, generous whitespace, suitable for app icon and small favicon scaling --ar 1:1 --v 7 --no shadows realism photorealistic 3d gradient watercolor mascot cute kawaii anthropomorphic cartoon"
+    },
+    {
+      "direction": "Tipográfico-Simbólico — Wordmark com Detalhe Felino",
+      "concept": "Logotipo 'Zenvet' em serif contemporâneo (referência Fraunces ou DM Serif Display), com uma letra sutilmente transformada — um detalhe felino integrado ao alfabeto sem virar mascote.",
+      "prompt": "sophisticated wordmark logo for 'Zenvet' veterinary clinic, contemporary serif typography reminiscent of Fraunces or DM Serif Display, the dot of letter 'i' or curve of letter 'e' subtly transformed into a minimalist cat ear silhouette or single whisker line, deep purple (#4B1C7D) lettering on white background, single-color flat design, editorial premium feel, balanced kerning, feminine humanized aesthetic, vector logotype, suitable for letterhead and Instagram bio --ar 1:1 --v 7 --no icon mascot illustration cartoon shadow gradient handwriting script childish curly hand-drawn"
+    },
+    {
+      "direction": "Ícone Abstrato — Cuidado e Felino Fundidos",
+      "concept": "Símbolo abstrato que funde pata felina e coração em um único traço fluido — sugere cuidado humano sem ilustrar literalmente gato ou veterinário.",
+      "prompt": "abstract symbolic logo combining a paw print silhouette and a heart shape merged into one continuous fluid stroke, suggesting feline care and human warmth, organic curves with geometric precision, deep purple (#4B1C7D) primary stroke with subtle turquoise accent (#00B8BD), modern veterinary brand mark, single weight line work, suitable for app icon and favicon scaling, premium boutique clinic identity, flat 2D vector, generous negative space, white background --ar 1:1 --v 7 --no realism mascot text typography cute illustration literal cat face cartoon photorealistic 3d gradient"
+    }
+  ],
+  "chosen_direction": "pendente — operador escolhe após gerar variações no Midjourney/Ideogram",
+  "dos_and_donts": {
+    "dos": [
+      "Use o Roxo Profundo (#4B1C7D) como cor de assinatura — em logo, headlines, elementos institucionais e fundo de seções premium.",
+      "Aplique o Turquesa Cuidado (#00B8BD) em ícones de saúde/serviço, badges de status médico (vacina em dia, exame agendado) e em destaques que precisam comunicar frescor clínico.",
+      "Use o Bege Acolhedor (#F6EAD8) como fundo de seções respiráveis (about, equipe, depoimentos, conteúdo educativo) — humaniza sem perder o premium.",
+      "Reserve o Magenta Ação (#A8358C) exclusivamente para CTAs primários (botão de agendamento, link de WhatsApp, microcopy de ação). Toda vez que o tutor vê magenta, sabe que ali há ação.",
+      "Use fotografia real da Dra. Nathalia com pacientes em vez de stock photo — fotografia verdadeira é o ativo de prova social mais forte da marca e está mapeada como diferencial no posicionamento."
+    ],
+    "donts": [
+      "Não use rosa chiclete, lilás claro, ou qualquer derivado pastel das cores oficiais — quebra o premium e devolve a marca para a categoria 'pet shop infantil'.",
+      "Não combine mais de 3 cores em uma mesma peça. A marca tem 5 cores no sistema, mas nunca todas juntas — sempre uma primária + uma secundária ou accent + neutra ou background.",
+      "Não use ilustrações cartoonizadas de gato ou cão (estilo mascote, kawaii, anthropomorphic). A marca é 'humano não infantilizado' — fotografia real e ícones de linha sustentam o tom.",
+      "Não use serifa diferente de Fraunces para títulos nem fonte diferente de Inter para corpo. Em Stories ou peças rápidas, manter consistência mesmo que a aprovação leve mais tempo.",
+      "Não invada o whitespace. Layouts cheios soam apressados e baratos — a marca premium pede respiração visual em cada peça (mínimo 24px de margem em mobile, 48px em desktop)."
+    ]
+  }
+}

@@ -1,0 +1,199 @@
+{
+  "summary": "Brandbook da Clínica Veterinária Zenvet com 4 adjetivos de tom (Especialista · Humano · Transparente · Próximo), narrativa em 3 atos centrada na ansiedade da tutora de gato em decidir bem, e banco de copy de 30 headlines + 25 CTAs + 7 frases-chave + vocabulário com 12 termos a usar e 12 a evitar — tudo ancorado na PUV 'A clínica veterinária privada especialista em felinos de Americana — com medicina humana, acompanhamento pós-consulta e sem conta surpresa.' Diferencial verbal proprietário: combinação 'especialista sem arrogância + humano sem infantilização + transparente sem burocracia + próximo sem invasão' — traduz em linguagem aplicável a Loíse no WhatsApp e a Nathalia em conteúdo, sem deixar para 'sentido editorial'.",
+  "purpose": {
+    "why_we_exist": "Existimos para que tutores de gato em Americana parem de aceitar atendimento veterinário genérico — porque cada gato esconde dor por instinto e merece uma profissional que enxergue isso antes que seja tarde, e cada tutora merece decidir com informação, não com susto.",
+    "for_whom": "Para tutoras como a Mariana, que tratam o gato como filho da casa, pesquisam por dias antes de confiar e querem decidir com informação — não com susto. E para tutores como o Carlos, que querem hora marcada, sem fila e conta sem surpresa para cuidar do cachorro da família.",
+    "not_for_whom": "Não somos para quem caça consulta isca de R$70 sem entender o que está incluído, para quem precisa de emergência 24h (direcionamos para parceiros), para quem quer um pet shop completo (banho, tosa, hotel), ou para quem chega com diagnóstico do Dr. Google e recusa orientação técnica.",
+    "positioning": "Para tutoras de gatos de Americana, SBO e Nova Odessa que tratam o pet como filho da casa, a Zenvet é a clínica veterinária especialista em felinos que combina diagnóstico consultivo, ambiente preparado para gatos e acompanhamento ativo pós-consulta — porque a Dra. Nathalia tem formação felina declarada (pós-graduanda em clínica e cirurgia com ênfase em felinos) e a clínica foi estruturada para reduzir o estresse do gato em cada detalhe.",
+    "promise": "Você sai daqui sabendo o que seu gato tem, com cada item da conta aprovado antes da execução e a Dra. Nathalia te acompanhando no WhatsApp depois — todas as vezes."
+  },
+  "verbal_identity": {
+    "tone_adjectives": [
+      {
+        "adjective": "Especialista",
+        "opposite": "arrogante",
+        "explanation": "Nathalia explica conceitos de medicina felina sem jargão e sem condescendência. Em vez de 'o paciente apresenta hiporexia', diz 'ele está comendo menos — e isso costuma ser sinal de dor, porque gato esconde por instinto'. A autoridade vem da clareza, não da distância técnica."
+      },
+      {
+        "adjective": "Humano",
+        "opposite": "infantilizado",
+        "explanation": "Chama o gato pelo nome real (Simba, não 'peludinho'), trata o tutor como adulto que decide (não como cliente que precisa ser agradado), e nunca usa diminutivos como 'castraçãozinha' ou 'consultinha'. Calor humano se manifesta em cuidado real (lembrar do nome, mandar mensagem D+1) — não em emoji ou apelido."
+      },
+      {
+        "adjective": "Transparente",
+        "opposite": "burocrático",
+        "explanation": "Mostra o valor antes da execução, item a item, em linguagem direta. 'A consulta é R$ 220 e dura 40 min — o exame complementar X custa R$ 90 e indico se sair indício no físico'. Nunca 'sujeito a verificação no momento do atendimento' ou 'consultar tabela'. Transparência é palavra cumprida em microcopy, não em política impressa."
+      },
+      {
+        "adjective": "Próximo",
+        "opposite": "invasivo",
+        "explanation": "WhatsApp é canal de cuidado da Nathalia — D+1 com pergunta aberta ('como o Simba está hoje?') e D+7 se for caso clínico que pediu retorno. Não é canal de promoção: nunca '10% off na próxima consulta!' em mensagem de acompanhamento. Frequência baixa, intencionalidade alta."
+      }
+    ],
+    "writing_style": {
+      "sentence_length": "Curtas a médias (8-18 palavras). Em conteúdo educativo, 1 ideia por frase. Em Reels, 1 frase por cena. Em LP e about, parágrafos respirados de no máximo 4 linhas — leitor que rola no celular não decifra muralha de texto.",
+      "emoji_usage": "Uso parcimonioso. 🐱 e 🐾 OK em posts educativos felinos e na bio. Proibido cluster ('🐱❤️✨'), proibido 😍 🥰 e correlatos (infantilizam). Em comunicação de orçamento, agendamento ou clínica: zero emoji.",
+      "humor_usage": "Humor leve apenas em conteúdo educativo de comportamento ('seu gato te ignora? bom sinal — ele se sente seguro'). Nunca em peças clínicas, em emergência, em atendimento via WhatsApp ou à custa de outros profissionais. Humor que não passa pelo crivo 'a Nathalia falaria isso?' não entra.",
+      "technical_language": "Termo técnico sempre seguido de tradução em primeira menção: 'hiporexia (perda de apetite)'. Em peças para tutor já cliente (CRM avançado, retorno) pode usar termo direto. Em peças para tutor leigo (mídia paga, conteúdo top-of-funnel) traduz sempre.",
+      "form_of_address": "Você. Nunca 'senhor/senhora' (cria distância e parece cobrança), nunca 'amigo/amiga' (informalidade demais e finge intimidade). 'Você' funciona com Mariana, Carlos e tutor mais velho.",
+      "preferred_format": "Misto. Listas curtas (3-5 itens) para conteúdo educativo escaneável, parágrafos respirados em narrativa de marca, frases isoladas em criativos de tráfego. Bullet point com mais de 7 itens vira manual técnico — desmonta para 2 listas ou texto corrido.",
+      "punctuation_style": "Ponto final firme. Travessão (—) para criar respiração e contraste. Reticências (...) e exclamação (!) usadas com extrema parcimônia: máximo 1 por peça e só quando há motivo emocional real (não decorativo). CAPS LOCK proibido em qualquer contexto. Itálico só para nome do paciente em narrativa ('o Simba voltou pra casa em 48h')."
+    },
+    "donts": [
+      {
+        "do": "A Dra. Nathalia tem formação em medicina felina e atende muito gato com esse perfil.",
+        "dont": "Nossa Dra. é especialista em pets em geral!",
+        "reason": "Especialização em felinos é o território proprietário (e a S2 levou um mês construindo). Generalizar para 'pets em geral' apaga o diferencial em 5 segundos e devolve a Zenvet para a categoria genérica que ela está justamente tentando deixar."
+      },
+      {
+        "do": "Ele está comendo menos — pode ser sinal de dor, gato esconde por instinto. Vale uma consulta para investigar.",
+        "dont": "Hiporexia em felinos exige investigação clínica imediata e eventual ultrassonografia abdominal.",
+        "reason": "Tutor não é veterinário. Termo técnico sem tradução não cria autoridade — cria distância. Mariana fecha a aba ou pergunta no Google o que é hiporexia em vez de mandar mensagem para a clínica."
+      },
+      {
+        "do": "A consulta especialista é R$ 220, dura 40 min e inclui acompanhamento pelo WhatsApp depois. Quer que eu agende?",
+        "dont": "O valor da consulta é a partir de R$ 220, sujeito a verificação no momento do atendimento.",
+        "reason": "Clareza absoluta de preço é uma das 3 promessas centrais do posicionamento. Linguagem com 'sujeito a' soa contratual e burocrática — quebra o tom transparente exatamente no momento decisivo (orçamento)."
+      },
+      {
+        "do": "Como o Simba está hoje? Conseguiu comer alguma coisa?",
+        "dont": "Olá! Tudo bem? Aproveite 10% off na próxima consulta!",
+        "reason": "WhatsApp é canal de cuidado, não de vendas. Promoção genérica em D+1 quebra a confiança que o atendimento construiu — a tutora que recebeu 'comeu hoje?' se sente cuidada; a que recebeu '10% off' se sente cliente da farmácia."
+      },
+      {
+        "do": "Atendemos cães também — com hora marcada, sem fila e valor explicado antes.",
+        "dont": "Atendemos qualquer pet com excelência!",
+        "reason": "Cães entram com o mesmo DNA de transparência, mas a comunicação não pode dizer 'qualquer pet' porque apaga o território felino sem trazer benefício de captura. Mensagem específica para Carlos preserva o posicionamento da Mariana."
+      }
+    ]
+  },
+  "brand_narrative": {
+    "before": "Tutora de gato em Americana vive um problema invisível: o pet apresenta sinal — para de comer, esconde, vomita — e ela sabe que precisa levar a um veterinário. Mas em qual? O hospital 24h da avenida cobra R$ 70 na consulta e R$ 800 quando ela sai. A clínica do bairro não tem espera para gato e o Simba estressa em 5 minutos. A última experiência foi de retenção do animal até o pagamento à vista. Cada decisão custa caro emocionalmente — e cada erro custa caro financeiramente. Mariana fica três dias pesquisando reviews, perguntando em grupos de WhatsApp, olhando o Instagram da clínica antes de ligar. E ainda assim, a cada gatilho novo, a ansiedade volta inteira.",
+    "different": "A Zenvet existe para um tipo específico de tutor: o que decide com informação. A consulta é com a Dra. Nathalia, pós-graduanda em medicina felina, dura 40 minutos e custa R$ 180-250. Cada exame, cada procedimento e cada medicamento é apresentado em valor antes da execução — o tutor aprova, a clínica executa. No dia seguinte, a Nathalia manda mensagem perguntando como o pet está. Não é um diferencial isolado: é a combinação. Especialização felina declarada + medicina humanizada + transparência item a item + acompanhamento ativo pós-consulta. Em uma só clínica, em uma só veterinária.",
+    "after": "A tutora sai da consulta sabendo o que o gato tem, com plano de tratamento que consegue seguir em casa, sem dúvida sobre o que pagou. Em D+1 recebe mensagem da Nathalia. Em 30 dias, indica para uma amiga sem ser perguntada — porque finalmente encontrou alguém que vê o gato dela como ela vê. A clínica deixa de ser uma despesa periódica imprevisível e vira parte da rotina familiar. O cachorro do vizinho, o gato da prima, o resgate da sobrinha — todos passam pela mesma referência. A indicação se torna o motor de crescimento que nenhum anúncio consegue substituir.",
+    "templates": {
+      "social_post": "Seu gato passou a comer menos. Você nota há uns dias, mas ele tá ali — andando, dormindo no lugar de sempre. Talvez seja calor, você pensa. Talvez seja birra. // O problema é que gato esconde dor por instinto. Quando ele demonstra, geralmente já passou de um ponto que era simples de resolver. // Hiporexia (que é como a gente chama 'comer menos') é um dos sinais mais subestimados em felinos. Pode ser dental, pode ser renal, pode ser comportamental. Mas só consulta diz qual. // Aqui na Zenvet, a consulta especialista em felinos dura 40 minutos. A gente examina o histórico, faz a investigação clínica, mostra exames se houver indicação e te explica cada decisão antes da execução. Sem exame por exame. Sem conta surpresa. // Se seu gato está diferente há mais de 3 dias, vale agendar. WhatsApp na bio.",
+      "ad": "Seu gato merece uma veterinária que entende de felinos — não de bicho em geral. Consulta especialista em medicina felina, 40 minutos com a Dra. Nathalia, orçamento aprovado antes de qualquer exame e acompanhamento no WhatsApp depois. Em Americana. Agende pelo WhatsApp.",
+      "presentation": "Em Americana, há um problema invisível para quem tem gato. // O hospital 24h da avenida cobra R$ 70 na consulta, mas a saída sai R$ 800. A clínica do bairro não entende que gato esconde dor por instinto. A última experiência foi de retenção do animal até o pagamento à vista. Para a tutora que pesquisa três dias antes de levar o pet, isso não é serviço — é trauma. // A Zenvet existe para um tipo específico de tutor: o que decide com informação. // Toda consulta é com a Dra. Nathalia, pós-graduanda em clínica e cirurgia com ênfase em medicina felina. Dura 40 minutos. Inclui histórico, exame clínico, conversa sobre comportamento e plano de tratamento que cabe no dia-a-dia da família. // O orçamento é apresentado item a item antes de qualquer execução. O tutor aprova, a clínica executa. Se for preciso exame complementar, a indicação é justificada. Se não for, não é feito — mesmo que o tutor peça. // No dia seguinte à consulta, a Nathalia manda mensagem no WhatsApp perguntando como o pet está. Não é régua de marketing automatizada — é a Nathalia, com nome do paciente, com contexto. // Hoje: 1.186 pacientes ativos, 70% gatos, show rate praticamente 100%. A combinação que nenhuma clínica de Americana oferece: especialização felina + medicina humana + transparência de preço + acompanhamento pós-consulta. // Para tutoras como a Mariana, que tratam o Simba como filho da casa, a Zenvet não é mais uma despesa periódica — é parte da rotina familiar. Para tutores como o Carlos, que querem hora marcada, sem fila e conta sem surpresa, é o atendimento que o cachorro merece sem o ritual do hospital 24h. // A clínica veterinária privada especialista em felinos de Americana, SBO e Nova Odessa.",
+      "about_page": "A Zenvet começou pelo que faltava em Americana: uma clínica especialista em felinos. // A Dra. Nathalia Alves é pós-graduanda em clínica e cirurgia de pequenos animais com ênfase em medicina felina. Atende em Americana há anos e construiu, paciente a paciente, uma base de mais de 1.100 tutores ativos — 70% deles, tutoras de gato. // O modelo da clínica é direto: consulta especialista de 40 minutos, orçamento aprovado item a item antes da execução, acompanhamento no WhatsApp depois. Cada paciente tem nome, histórico e a mesma veterinária do começo ao fim. // A Zenvet não é hospital 24h — emergências fora do horário são direcionadas a parceiros confiáveis. Não é pet shop — não tem banho, tosa ou hotel. É um lugar onde quem decide pelo pet decide com informação. // Atendimento em Americana, Santa Bárbara d'Oeste e Nova Odessa, com domicílio para felinos que estressam no transporte. // Seu gato merece uma veterinária que entende de felinos. Seu cachorro merece a mesma transparência."
+    }
+  },
+  "copy_bank": {
+    "headlines": {
+      "top_funnel": [
+        "Seu gato esconde dor por instinto — e quando ele mostra, geralmente já passou do ponto fácil de resolver.",
+        "Hiporexia em felinos: por que 'comer menos' é mais sério do que parece.",
+        "Vômito em gato é normal? A regra dos 3 dias que tutoras precisam saber.",
+        "Por que gato estressa tanto no veterinário — e o que dá para fazer antes de sair de casa.",
+        "Vacinas essenciais para felinos: o que muda entre gato de apartamento e gato com acesso à rua.",
+        "Gato passou dos 7 anos? O check-up que muda o que ele vai viver depois.",
+        "Seu gato está bebendo mais água que o normal? O sinal que tutoras ignoram com mais frequência.",
+        "Gato adulto começou a fazer xixi fora da caixa: comportamental ou doença?",
+        "Por que gato e cachorro não podem ser atendidos com o mesmo protocolo.",
+        "Castração de gato: o que ninguém te conta sobre o pós-operatório."
+      ],
+      "authority": [
+        "Como a clínica especialista em felinos de Americana acompanha cada paciente depois da consulta.",
+        "40 minutos por consulta — o que muda quando o veterinário tem tempo de escutar.",
+        "Por que a Zenvet aprova orçamento item a item antes de executar qualquer procedimento.",
+        "Da reanimação ao retorno em casa: como funciona o acompanhamento D+1 da Dra. Nathalia.",
+        "Pós-graduação em clínica e cirurgia com ênfase em felinos: por que isso muda o atendimento do seu gato.",
+        "1.186 pacientes ativos, 70% gatos — o que essa proporção diz sobre como atendemos felinos.",
+        "Atendimento domiciliar para felinos: quando o transporte custa mais que a consulta.",
+        "Consulta isca R$ 70 vs. consulta consultiva R$ 220: o que entra na conta de cada uma.",
+        "Por que a Zenvet não atende emergência 24h — e por que isso é vantagem para você.",
+        "A combinação que nenhuma clínica de Americana oferece: especialização felina + medicina humana + transparência."
+      ],
+      "sales_page": [
+        "A clínica veterinária especialista em felinos de Americana — sem fila, sem conta surpresa.",
+        "Agende com a única veterinária com formação felina declarada da microrregião.",
+        "Consulta especialista em felinos: 40 minutos, valor explicado antes, acompanhamento depois.",
+        "Seu gato em mãos de quem realmente entende de felinos — em Americana, SBO e Nova Odessa.",
+        "Hora marcada, valor transparente e a Dra. Nathalia te acompanhando no WhatsApp.",
+        "Atendimento domiciliar para gatos que estressam no transporte. Em Americana e região.",
+        "Castração com pós-operatório monitorado pela Dra. Nathalia via WhatsApp.",
+        "Vacinação felina completa em pacote anual — previsibilidade pra você, proteção contínua pra ele.",
+        "Check-up anual para gato senior: encontrar antes que vire emergência.",
+        "Agende pelo WhatsApp em menos de 1 minuto — resposta da Loíse em até 30 min no horário comercial."
+      ]
+    },
+    "ctas": {
+      "request_quote": [
+        "Quero o valor da consulta especialista",
+        "Pedir orçamento de castração",
+        "Quanto custa atendimento domiciliar para o meu gato?",
+        "Quero saber o valor do check-up anual",
+        "Pedir orçamento da vacinação felina completa"
+      ],
+      "follow_social": [
+        "Acompanhe @clinicazenvet no Instagram",
+        "Veja como atendemos no Instagram",
+        "Conteúdo educativo felino toda semana — siga @clinicazenvet",
+        "Posts da Dra. Nathalia no Instagram",
+        "Reels de comportamento felino: @clinicazenvet"
+      ],
+      "download_material": [
+        "Baixe o guia: 'Sinais de dor que seu gato esconde'",
+        "Receba o checklist de vacinas felinas por idade",
+        "Calendário do gato senior: o que fazer aos 7, 10 e 13 anos",
+        "E-book: como reduzir o estresse do gato no transporte",
+        "Guia de transporte felino sem trauma — PDF gratuito"
+      ],
+      "schedule_demo": [
+        "Agendar consulta com a Dra. Nathalia",
+        "Reservar horário pelo WhatsApp",
+        "Agendar atendimento domiciliar para felinos",
+        "Marcar consulta especialista em felinos",
+        "Agendar visita ao consultório"
+      ],
+      "whatsapp": [
+        "Falar com a clínica no WhatsApp",
+        "Mande oi pra Loíse — atendimento em até 30 min no horário comercial",
+        "Tirar dúvida no WhatsApp antes de agendar",
+        "Agendar pelo WhatsApp em 1 minuto",
+        "WhatsApp Zenvet: (19) 99579-5483"
+      ]
+    },
+    "key_phrases": [
+      "Seu gato merece uma veterinária que entende de felinos — não de bicho em geral.",
+      "40 minutos com a Dra. Nathalia. Tempo que muda o diagnóstico.",
+      "Sem conta surpresa. Você aprova cada item antes da execução.",
+      "Acompanhamento no WhatsApp pela Dra. Nathalia. Todas as vezes.",
+      "A clínica especialista em felinos de Americana, SBO e Nova Odessa.",
+      "Medicina felina humana — quando seu gato é filho da casa.",
+      "Atendimento domiciliar para gatos que estressam no transporte."
+    ],
+    "vocabulary": {
+      "always_use": [
+        { "word": "felino / felinos", "context": "Em vez de 'gatos' quando o foco é técnico ou de posicionamento. 'Especialista em felinos', 'medicina felina', 'comportamento felino'." },
+        { "word": "tutor / tutora", "context": "Em vez de 'dono'. Reflete o vínculo (filho da casa) e respeita o pet." },
+        { "word": "paciente", "context": "Em vez de 'animal' ou 'pet' em comunicação clínica. Sempre que souber, chamar pelo nome ('o Simba', 'o Thor')." },
+        { "word": "consulta especialista", "context": "Em vez de 'consulta' apenas, em peças comerciais e na LP. Reforça os 40 min e a formação felina declarada." },
+        { "word": "acompanhamento (pós-consulta)", "context": "Em vez de 'follow-up' ou 'pós-venda'. Termo humano e sistematizado." },
+        { "word": "orçamento aprovado item a item", "context": "Em vez de 'preço fechado' ou 'tabela'. Comunica o protocolo de transparência da clínica." },
+        { "word": "histórico", "context": "Em vez de 'prontuário'. Linguagem mais humana e relacional na comunicação externa." },
+        { "word": "esconde dor por instinto", "context": "Frase-chave educativa em conteúdo top-of-funnel sobre comportamento felino." },
+        { "word": "ambiente preparado para felinos", "context": "Em vez de 'cat friendly' (jargão). Quando referir estrutura física ou roadmap de adaptação." },
+        { "word": "medicina felina", "context": "Em vez de 'tratamento de gato'. Termo correto, mais técnico-comercial e indexável em SEO." },
+        { "word": "Dra. Nathalia", "context": "Sempre com o título 'Dra.'. Personalização do atendimento e identidade do negócio." },
+        { "word": "filho da casa", "context": "Frase de espelhamento em narrativa, prefixada por 'que tratam o pet como'. Ativa identificação imediata da Mariana sem virar clichê." }
+      ],
+      "never_use": [
+        { "word": "peludo / peludinho", "use_instead": "felino, gato, paciente (ou nome quando souber)" },
+        { "word": "dono", "use_instead": "tutor / tutora" },
+        { "word": "bichinho / bichano", "use_instead": "gato, pet, paciente, nome do paciente" },
+        { "word": "pet em geral / qualquer pet", "use_instead": "felinos e cães (ou felino quando comunicação for específica para Mariana)" },
+        { "word": "consulta básica", "use_instead": "consulta especialista" },
+        { "word": "promoção", "use_instead": "pacote (anual, castração, vacinação) ou condição" },
+        { "word": "preço fechado", "use_instead": "valor do serviço, orçamento aprovado item a item" },
+        { "word": "exame de rotina", "use_instead": "exame complementar (quando houver indicação clínica)" },
+        { "word": "urgência (em comunicação proativa)", "use_instead": "emergência (e contextualizar que a clínica não atende 24h)" },
+        { "word": "follow-up", "use_instead": "acompanhamento" },
+        { "word": "cliente (em peças externas)", "use_instead": "tutor / tutora; 'cliente' fica restrito a fala financeira interna" },
+        { "word": "diminutivos infantilizantes (consultinha, castraçãozinha, vacinhazinha)", "use_instead": "consulta, castração, vacina (sem diminutivo)" }
+      ],
+      "call_customers": "tutor / tutora — sempre, em comunicação interna e externa. 'Cliente' fica restrito a fala financeira interna; nunca em peças, copy ou WhatsApp.",
+      "call_product": "consulta especialista, atendimento, acompanhamento — nunca 'serviço' em peças externas. Para o pet: 'paciente' (com nome quando souber)."
+    }
+  }
+}
