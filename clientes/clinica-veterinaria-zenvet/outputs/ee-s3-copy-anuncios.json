@@ -1,0 +1,266 @@
+{
+  "summary": "35 variações de copy para Zenvet (11 Meta Ads + 24 elementos Google Ads Responsivo) cobrindo Topo (esconde-dor / hospital 24h surpresa / pesquisa-antes-de-confiar), Meio (40 min vs 15 min / item-a-item / gato ≠ cachorro), Fundo (consulta R$220 / WhatsApp Loíse 30min / acompanhamento D+1) e Remarketing (você pesquisou no Insta + lembrete suave). Hooks ancorados na quote da Mariana ('gato não é cachorro') e no diagnóstico de criativos S2 (0% retenção 3s — todos os topos abrem com problema, não com produto).",
+  "client_name": "Clínica Veterinária Zenvet",
+  "campaign_focus": "Felinos-first (4 das 5 angles felinas, 1 cães secundária) · Meta Ads primeiro · Google Ads Responsive Search em paralelo",
+  "destination_url": "Landing Page Zenvet (a definir domínio antes do go-live)",
+  "whatsapp_link": "https://wa.me/5519995795483?text=Oi%21%20Vi%20a%20p%C3%A1gina%20da%20Zenvet%20e%20queria%20agendar%20consulta%20para%20meu%20pet.",
+  "funnel_stages": [
+    {
+      "name": "topo_de_funil",
+      "objective": "Consciência do problema — tutora reconhece dor (gato esconde sintoma, generalista trata como cão, hospital 24h cobra surpresa) ainda sem mencionar a Zenvet como produto. Hook explícito no 1º segundo (corrige 0% retenção S2).",
+      "tone": "Educativo, empático, sem vender. Voz de quem entende felinos — vocabulário de medicina felina sem jargão. Pilares ativos: Especialista + Humano.",
+      "platforms": [
+        {
+          "name": "meta_ads",
+          "variations": [
+            {
+              "type": "text_primary",
+              "hook_type": "dor",
+              "text": "Gato esconde dor por instinto. Quando ele demonstra, geralmente já passou do ponto fácil. Por isso atender gato é diferente.",
+              "headline": "Gato não é cachorro.",
+              "description": "Medicina felina · Americana",
+              "cta": "Saiba mais",
+              "char_count": { "text": 122, "headline": 21, "description": 28 }
+            },
+            {
+              "type": "text_primary",
+              "hook_type": "indignacao",
+              "text": "Hospital 24h cobra R$70 na consulta. E sai R$800. Você já sabia que ia. A Mariana também sabia — até decidir ir noutro lugar.",
+              "headline": "R$70 que viraram R$800",
+              "description": "A diferença é o que você sabia",
+              "cta": "Saiba mais",
+              "char_count": { "text": 124, "headline": 22, "description": 30 }
+            },
+            {
+              "type": "text_primary",
+              "hook_type": "reconhecimento",
+              "text": "Você pesquisou no Instagram por 3 dias antes de agendar. A gente entende — e respeita. Tutora de gato decide com calma.",
+              "headline": "Pesquisar antes é normal.",
+              "description": "Medicina felina · Americana",
+              "cta": "Saiba mais",
+              "char_count": { "text": 119, "headline": 25, "description": 28 }
+            }
+          ]
+        },
+        {
+          "name": "google_ads",
+          "variations": [
+            {
+              "type": "responsive_search",
+              "match_intent": "Busca informacional sobre 'veterinário gato Americana', 'clínica felina', 'gato esconde dor'",
+              "headlines": [
+                "Veterinário Especialista Gato",
+                "Medicina Felina Americana",
+                "Gato Esconde Dor: Por Quê?",
+                "Clínica Especialista Felinos",
+                "Atendimento Cat-Friendly"
+              ],
+              "descriptions": [
+                "Gato esconde dor por instinto. Especialista em felinos atende com calma em Americana.",
+                "A clínica especialista em medicina felina de Americana. 40 min com a Dra. Nathalia.",
+                "Gato não é cachorro. Atendimento cat-friendly em Americana, sem cheiro de canil."
+              ],
+              "char_count_headlines": [29, 25, 26, 28, 23],
+              "char_count_descriptions": [85, 84, 80]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "meio_de_funil",
+      "objective": "Consideração — tutora reconhece a Zenvet como opção e compara com generalistas/24h. Apresenta diferenciais (40 min, item a item, especialização declarada) com prova social leve (70% felina, +1.200, 4,9★).",
+      "tone": "Educativo + prova social. Pilares ativos: Especialista + Transparente. Sem promoção, sem desconto.",
+      "platforms": [
+        {
+          "name": "meta_ads",
+          "variations": [
+            {
+              "type": "text_primary",
+              "hook_type": "comparacao",
+              "text": "Consulta de 15 min é exame de cachorro com gato em cima. Na Zenvet são 40 min com a Dra. Nathalia. Faz diferença.",
+              "headline": "40 min, não 15.",
+              "description": "Medicina felina · Americana",
+              "cta": "Enviar mensagem",
+              "char_count": { "text": 115, "headline": 16, "description": 28 }
+            },
+            {
+              "type": "text_primary",
+              "hook_type": "transparencia",
+              "text": "Cada exame e procedimento aprovado item a item antes. O que está no orçamento é o que você paga. Sem surpresa.",
+              "headline": "Item a item, sem surpresa.",
+              "description": "Você aprova antes",
+              "cta": "Enviar mensagem",
+              "char_count": { "text": 112, "headline": 26, "description": 18 }
+            },
+            {
+              "type": "text_primary",
+              "hook_type": "prova_social",
+              "text": "70% da base é tutora de gato. +1.200 felinos atendidos. 4,9★ no Google. Pra quem decide com informação.",
+              "headline": "Felina por escolha técnica.",
+              "description": "70% da base é gato",
+              "cta": "Enviar mensagem",
+              "char_count": { "text": 104, "headline": 27, "description": 18 }
+            }
+          ]
+        },
+        {
+          "name": "google_ads",
+          "variations": [
+            {
+              "type": "responsive_search",
+              "match_intent": "Busca comparativa: 'melhor veterinário Americana', 'consulta veterinária preço', 'veterinário humanizado gato'",
+              "headlines": [
+                "40 min com Especialista",
+                "Sem Conta Surpresa Aqui",
+                "Aprovação Item a Item",
+                "+1.200 Gatos Atendidos",
+                "Dra. Nathalia · CRMV-SP"
+              ],
+              "descriptions": [
+                "40 min com a Dra. Nathalia, especialista em felinos. Orçamento item a item antes.",
+                "Consulta R$220 — 40 min, plano por escrito, acompanhamento no WhatsApp em D+1.",
+                "70% felina por escolha técnica. 4,9★ no Google. Em Americana, gato é com a gente."
+              ],
+              "char_count_headlines": [23, 23, 21, 22, 22],
+              "char_count_descriptions": [82, 79, 82]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "fundo_de_funil",
+      "objective": "Conversão — tutora pronta a agendar. Oferta clara (R$220, 40 min, com Dra. Nathalia), CTA direto pra WhatsApp, friction zero. Inclui 1 variação para tutor de cães (cobertura secundária).",
+      "tone": "Direto, transparente, sem urgência fake. Pilares ativos: Transparente + Próximo.",
+      "platforms": [
+        {
+          "name": "meta_ads",
+          "variations": [
+            {
+              "type": "text_primary",
+              "hook_type": "oferta_direta",
+              "text": "Consulta felina com a Dra. Nathalia: R$220, 40 min, plano por escrito. Acompanhamento no WhatsApp em D+1.",
+              "headline": "Agende com a Dra. Nathalia",
+              "description": "R$220 · 40 min · D+1",
+              "cta": "Enviar mensagem",
+              "char_count": { "text": 105, "headline": 26, "description": 22 }
+            },
+            {
+              "type": "text_primary",
+              "hook_type": "facilitacao",
+              "text": "Manda mensagem no WhatsApp. A Loíse responde em até 30 min, Seg a Sex de 8h às 18h. Sem bot, sem fila — atendimento de gente.",
+              "headline": "Loíse responde em 30 min.",
+              "description": "Sem bot · Sem fila",
+              "cta": "Enviar mensagem",
+              "char_count": { "text": 124, "headline": 25, "description": 19 }
+            },
+            {
+              "type": "text_primary",
+              "hook_type": "secundaria_caes",
+              "text": "Cães também — hora marcada, sem fila, valor explicado antes. Mesmo cuidado humanizado da Dra. Nathalia.",
+              "headline": "Cães também: hora marcada.",
+              "description": "Sem fila · Valor antes",
+              "cta": "Enviar mensagem",
+              "char_count": { "text": 104, "headline": 26, "description": 22 }
+            }
+          ]
+        },
+        {
+          "name": "google_ads",
+          "variations": [
+            {
+              "type": "responsive_search",
+              "match_intent": "Intenção de compra: 'agendar veterinário Americana', 'consulta gato preço', 'veterinário felino telefone'",
+              "headlines": [
+                "Agendar Consulta Felina",
+                "Consulta R$220 · 40 min",
+                "WhatsApp em 30 Minutos",
+                "Av. Pascoal Ardito, 792",
+                "Seg–Sex 8h às 18h"
+              ],
+              "descriptions": [
+                "Agende no WhatsApp com a Loíse — resposta em até 30 min. Consulta R$220, 40 min com a Dra.",
+                "Especialista em felinos · Americana SP. Orçamento item a item, sem conta surpresa. Agende.",
+                "Acompanhamento no WhatsApp em D+1 — sem custo. Atendimento humanizado da Dra. Nathalia."
+              ],
+              "char_count_headlines": [23, 22, 22, 23, 17],
+              "char_count_descriptions": [89, 88, 87]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "remarketing",
+      "objective": "Recuperação de quem visitou LP/IG mas não converteu. Tom diferente da copy fria — reconhece o comportamento da Mariana ('pesquisar por dias'), reduz fricção, sem urgência fake.",
+      "tone": "Próximo, leve, paciente. Pilares ativos: Humano + Próximo. Não repete copy fria — adiciona contexto de continuidade.",
+      "platforms": [
+        {
+          "name": "meta_ads",
+          "variations": [
+            {
+              "type": "text_primary",
+              "hook_type": "reconhecimento_continuidade",
+              "text": "Você viu nossa página. Tutora de gato pesquisa antes — a gente entende. Quando quiser, Loíse tá no WhatsApp.",
+              "headline": "Sem pressa pra decidir.",
+              "description": "WhatsApp quando quiser",
+              "cta": "Enviar mensagem",
+              "char_count": { "text": 108, "headline": 23, "description": 22 }
+            },
+            {
+              "type": "text_primary",
+              "hook_type": "objecao_estresse",
+              "text": "Gato estressa no transporte? A Dra. Nathalia atende em domicílio. Consulta na sua casa, sem trauma.",
+              "headline": "Atende em domicílio.",
+              "description": "Sem estresse de transporte",
+              "cta": "Enviar mensagem",
+              "char_count": { "text": 99, "headline": 20, "description": 26 }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "copy_rules_applied": [
+    "Topo de funil fala SÓ do problema (gato esconde dor, hospital 24h surpresa, pesquisar é normal) — nunca menciona Zenvet/Nathalia/preço. Corrige o anti-padrão dos 43 anúncios atuais com 0% retenção em 3s.",
+    "Vocabulário do manual: 'tutora' (não 'dona'), 'felino/paciente' (não 'peludinho'), 'consulta especialista' (não 'consulta básica'), 'orçamento aprovado item a item' (não 'preço fechado'), 'medicina felina' (não 'tratamento de gato'). Zero diminutivos.",
+    "Cada variação ancora em uma dor real da Mariana (S1) ou em um diferencial real (S2): especialização declarada, 40 min, item a item, D+1 no WhatsApp. Nada genérico ('qualidade', 'compromisso', 'amor').",
+    "Limites respeitados: Meta texto ≤125 chars, headline ≤40, descrição ≤30; Google headline ≤30, descrição ≤90. Cada variação tem char_count auditado.",
+    "Remarketing reconhece comportamento de pesquisa da Mariana (Insta por 3 dias) e adiciona uma objeção sub-comunicada (atendimento domiciliar) — não repete copy fria nem oferece desconto."
+  ],
+  "total_variations": 35,
+  "char_limits_reference": {
+    "meta_ads": {
+      "primary_text_max": 125,
+      "headline_max": 40,
+      "description_max": 30,
+      "note": "Limites do feed Meta. Stories/Reels podem cortar antes — preview no Ads Manager antes de subir."
+    },
+    "google_ads": {
+      "headline_max": 30,
+      "description_max": 90,
+      "note": "Responsive Search Ads — 5 headlines + 3 descriptions por anúncio."
+    }
+  },
+  "test_strategy": {
+    "duration_min_days": 7,
+    "min_budget_per_adset_brl": 30,
+    "kpis_kill_criteria": [
+      "CTR < 1% após 1.000 impressões → pausar",
+      "Retenção 3s < 25% → redesenhar hook (não a copy — o problema é visual)",
+      "CPL > R$ 80 após 50 cliques → revisar audiência ou criativo"
+    ],
+    "kpis_winners": [
+      "CTR ≥ 1,8% (acima da média atual de 1,28%)",
+      "CPL ≤ R$ 35 (atual está em R$ 26 com criativos ruins — esperado melhorar com hook bom)",
+      "Conversa iniciada no WhatsApp (evento custom no Pixel)"
+    ]
+  },
+  "operator_decisions": [
+    "Aprovar copy ou pedir refinos por variação?",
+    "Quer que eu exporte para Google Sheets agora (4 abas: Topo / Meio / Fundo / Remarketing) ou primeiro fechamos o briefing visual (Etapa 2)?",
+    "Confirma destination URL da LP — domínio próprio (clinicazenvet.com.br) ou subdomínio (agendar.clinicazenvet.com.br)?",
+    "Prefere CTA do botão Meta como 'Enviar mensagem' (abre WhatsApp direto) ou 'Saiba mais' (vai pra LP que tem CTA WhatsApp)? Recomendo: Topo = 'Saiba mais' (LP educa), Meio/Fundo/Remarketing = 'Enviar mensagem' (atalho)."
+  ]
+}

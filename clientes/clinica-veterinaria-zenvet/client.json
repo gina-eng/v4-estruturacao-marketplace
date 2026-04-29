@@ -2119,16 +2119,16 @@
         "version": 1
       },
       "ee-s3-copy-anuncios": {
-        "status": "pending",
-        "checkpoint": 0,
-        "started_at": null,
-        "completed_at": null
+        "status": "completed",
+        "version": 1,
+        "started_at": "2026-04-29T20:02:26.166797Z",
+        "completed_at": "2026-04-29T20:02:26.166797Z"
       },
       "ee-s3-criativos-anuncios": {
-        "status": "pending",
-        "checkpoint": 0,
-        "started_at": null,
-        "completed_at": null
+        "status": "completed",
+        "version": 1,
+        "started_at": "2026-04-29T20:11:47.011481Z",
+        "completed_at": "2026-04-29T20:11:47.011481Z"
       },
       "ee-s3-crm-setup": {
         "status": "pending",
@@ -2324,6 +2324,18 @@
       "skill": "ee-s3-landing-page",
       "action": "completed",
       "note": "LP felino-first em Next.js 14 + Tailwind. 9 seções (hero/problem/solution/how_it_works/deliverables/social_proof/for_dogs/faq/final_cta). Servida em http://localhost:3001 (dev). Pendentes antes do deploy: foto real do hero, depoimentos reais (3 placeholders), domínio definitivo."
+    },
+    {
+      "ts": "2026-04-29T20:02:26.166797Z",
+      "skill": "ee-s3-copy-anuncios",
+      "action": "completed",
+      "note": "35 variações geradas (11 Meta Ads + 24 Google Ads RSA elementos) — 4 fases de funil. Hooks ancorados em quote da Mariana e em diagnóstico S2 de criativos. Validado: schema OK, todos limites de chars respeitados, vocabulário do manual de marca aplicado."
+    },
+    {
+      "ts": "2026-04-29T20:11:47.011481Z",
+      "skill": "ee-s3-criativos-anuncios",
+      "action": "completed",
+      "note": "5 variações de criativo (Dor / Resultado / Curiosidade / Social Proof / Urgência cães) — 15 peças totais (3 formatos cada). 3 reaproveitam fotos já produzidas, 2 precisam MJ. Briefing inclui prompts MJ+Ideogram, guia Canva passo-a-passo, plano A/B com 5 conjuntos e KPIs ancorados no diagnóstico S2."
     }
   ],
   "page_audit": {
