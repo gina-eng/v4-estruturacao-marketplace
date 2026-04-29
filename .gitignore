@@ -1,5 +1,7 @@
 .vercel
 .credentials/
+.DS_Store
+**/.DS_Store
 plugins/v4-estruturacao-ia/shared-templates/Downloads/
 clientes/*/cache/
 clientes/*/assets/creatives/**/*.mp4

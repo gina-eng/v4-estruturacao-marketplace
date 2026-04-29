@@ -1,5 +1,4 @@
 import { sectionByName } from "@/lib/data";
-import { AlertCircle } from "lucide-react";
 
 export default function Problem() {
   const s: any = sectionByName("problem");
@@ -7,17 +6,30 @@ export default function Problem() {
     <section id="problem" className="bg-white">
       <div className="container-content section">
         <header className="max-w-3xl mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">{s.headline}</h2>
-          <p className="text-lg text-graphite/80">{s.subheadline}</p>
+          <div className="text-[11px] uppercase tracking-[0.15em] font-semibold text-turquoise-dark mb-3">
+            · {s.eyebrow}
+          </div>
+          <h2 className="text-3xl md:text-5xl font-serif font-medium leading-[1.05] tracking-tight mb-5">
+            Cansado(a) de consulta corrida que parece{" "}
+            <em className="italic font-normal text-graphite/70">protocolo de fábrica?</em>
+          </h2>
+          <p className="text-base md:text-lg text-graphite/75 leading-relaxed max-w-xl">
+            {s.subheadline}
+          </p>
         </header>
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-5">
           {s.cards.map((c: any, i: number) => (
-            <div key={i} className="bg-beige/40 border border-graphite/10 rounded-card p-6 flex flex-col gap-3">
-              <div className="w-10 h-10 rounded-full bg-magenta/10 flex items-center justify-center text-magenta">
-                <AlertCircle size={20} />
+            <div
+              key={i}
+              className="bg-white border border-purple-deep/10 rounded-card p-7 flex flex-col"
+            >
+              <div className="w-9 h-9 rounded-[10px] bg-turquoise-mist text-turquoise-dark flex items-center justify-center font-bold text-base mb-5">
+                0{i + 1}
               </div>
-              <h3 className="text-lg font-semibold !text-graphite">{c.title}</h3>
-              <p className="text-graphite/75 text-sm leading-relaxed">{c.body}</p>
+              <h3 className="text-xl md:text-[22px] font-serif font-medium !text-purple-deep mb-2 leading-tight">
+                {c.title}
+              </h3>
+              <p className="text-sm text-graphite/75 leading-relaxed">{c.body}</p>
             </div>
           ))}
         </div>

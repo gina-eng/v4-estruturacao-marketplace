@@ -1,18 +1,55 @@
-import { ADDRESS, INSTAGRAM, PHONE_DISPLAY } from "@/lib/data";
+import Image from "next/image";
+import { ADDRESS, INSTAGRAM, PHONE_DISPLAY, HOURS } from "@/lib/data";
 
 export default function Footer() {
   return (
-    <footer className="bg-graphite text-white/70 py-10 px-6">
-      <div className="container-content flex flex-col md:flex-row gap-4 justify-between items-start md:items-center text-sm">
+    <footer className="bg-purple-shadow text-beige/80 px-6 pt-14 pb-8">
+      <div className="container-content grid md:grid-cols-[1.4fr_1fr_1fr] gap-10">
         <div>
-          <div className="font-serif font-bold text-white text-xl tracking-tight">Zenvet</div>
-          <div className="text-xs mt-1">Clínica veterinária especialista em felinos · Americana SP</div>
+          <Image
+            src="/logo/zenvet_horizontal_white.svg"
+            alt="Zenvet"
+            width={1138}
+            height={363}
+            className="h-9 w-auto mb-4"
+          />
+          <p className="font-serif italic text-lg text-beige mb-3">
+            Cuidar é o nosso jeito.
+          </p>
+          <p className="text-[13px] leading-relaxed">
+            {ADDRESS}
+          </p>
         </div>
-        <div className="text-xs flex flex-col md:items-end gap-1">
-          <span>{ADDRESS}</span>
-          <span>WhatsApp {PHONE_DISPLAY} · IG {INSTAGRAM}</span>
-          <span className="opacity-50 mt-2">© Zenvet 2026 — todos os direitos reservados.</span>
+        <div>
+          <div className="text-[11px] font-semibold text-turquoise-light uppercase tracking-[0.1em] mb-4">
+            Atendimento
+          </div>
+          <div className="text-[13px] leading-[1.9]">
+            {HOURS}
+            <br />
+            WhatsApp · {PHONE_DISPLAY}
+          </div>
         </div>
+        <div>
+          <div className="text-[11px] font-semibold text-turquoise-light uppercase tracking-[0.1em] mb-4">
+            Por aqui
+          </div>
+          <div className="text-[13px] leading-[1.9]">
+            <a
+              href={`https://instagram.com/${INSTAGRAM.replace("@", "")}`}
+              target="_blank"
+              rel="noopener"
+              className="hover:text-beige"
+            >
+              {INSTAGRAM}
+            </a>
+            <br />
+            contato@zenvet.com.br
+          </div>
+        </div>
+      </div>
+      <div className="container-content mt-10 pt-5 border-t border-white/10 text-[11px] text-beige/50">
+        © 2026 Zenvet · Todos os direitos reservados.
       </div>
     </footer>
   );

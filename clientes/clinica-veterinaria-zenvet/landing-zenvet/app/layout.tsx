@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Fraunces, Inter } from "next/font/google";
 import "./globals.css";
 import { META } from "@/lib/data";
@@ -6,7 +6,8 @@ import { META } from "@/lib/data";
 const fraunces = Fraunces({
   subsets: ["latin"],
   display: "swap",
-  weight: ["600", "700"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
   variable: "--font-fraunces",
 });
 
@@ -27,6 +28,9 @@ export const metadata: Metadata = {
     locale: "pt_BR",
   },
   robots: { index: true, follow: true },
+};
+
+export const viewport: Viewport = {
   themeColor: "#4B1C7D",
 };
 

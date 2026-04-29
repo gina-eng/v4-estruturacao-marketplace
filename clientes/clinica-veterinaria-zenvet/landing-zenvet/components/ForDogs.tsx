@@ -3,7 +3,7 @@ import { Dog, MessageCircle } from "lucide-react";
 
 export default function ForDogs() {
   return (
-    <section className="bg-white border-y border-graphite/10">
+    <section id="for-dogs" className="bg-turquoise-mist">
       <div className="container-content section">
         <div className="bg-purple-deep/5 rounded-card p-8 md:p-10 flex flex-col md:flex-row items-start gap-6">
           <div className="w-14 h-14 rounded-full bg-purple-deep/10 flex items-center justify-center text-purple-deep flex-shrink-0">
