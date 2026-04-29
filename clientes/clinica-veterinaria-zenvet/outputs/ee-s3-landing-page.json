@@ -1,0 +1,160 @@
+{
+  "summary": "Landing page de conversão da Clínica Veterinária Zenvet — felino-first, em Next.js 14 (App Router) + Tailwind CSS, com 8 seções (hero · problem · solution · how_it_works · deliverables · for_dogs · social_proof · faq · final_cta) ancoradas na PUV aprovada e no tom de voz de 4 pilares do manual de marca. Copy 100% reusada de S1/S2/S3 (mensagem-chave 'Seu gato merece...', dores reais da Mariana, 4 pilares como benefícios, jornada da S1 como passos do como funciona, FAQ com objeções da S1). Stack: Next.js 14 + React 18 + Tailwind 3, Fraunces + Inter via next/font, mobile-first. Servida em http://localhost:3001 (dev). Deploy Vercel pendente — operador valida copy + escolhe domínio antes de publicar.",
+  "sections": [
+    {
+      "name": "hero",
+      "headline": "Seu gato merece uma veterinária que entende de felinos.",
+      "subheadline": "Em Americana, somos a clínica especialista em medicina felina — com consulta consultiva de 40 minutos, orçamento aprovado item a item antes da execução, e acompanhamento da Dra. Nathalia no WhatsApp depois.",
+      "cta_primary": "Agendar pelo WhatsApp",
+      "cta_secondary": "Ver como atendemos →"
+    },
+    {
+      "name": "problem",
+      "headline": "Tutora de gato em Americana vive um problema invisível.",
+      "subheadline": "O Simba apresenta sinal — para de comer, esconde, vomita — e você sabe que precisa levar a um veterinário. Mas em qual?",
+      "cards": [
+        {
+          "title": "Veterinário generalista que não entende de gato",
+          "body": "Gato esconde dor por instinto. Quando ele demonstra, geralmente já passou do ponto fácil de resolver. Generalistas erram diagnóstico porque tratam felino como cão."
+        },
+        {
+          "title": "Hospital 24h com conta surpresa",
+          "body": "A consulta de R$ 70 vira R$ 800 quando você sai. Já passou pela retenção do animal até pagamento. Trauma, não serviço."
+        },
+        {
+          "title": "Atendimento corrido e frio",
+          "body": "Gato estressa muito no transporte. Quando chega numa clínica que não foi pensada para felinos, o estresse vira trauma — para você e para ele."
+        }
+      ]
+    },
+    {
+      "name": "solution",
+      "headline": "Aqui é diferente — porque a combinação é diferente.",
+      "subheadline": "Especialização felina declarada + medicina humanizada + transparência item a item + acompanhamento ativo pós-consulta. Em uma só clínica, em uma só veterinária.",
+      "benefits": [
+        {
+          "icon": "stethoscope",
+          "title": "Especialização Felina Declarada",
+          "body": "A Dra. Nathalia é pós-graduanda em clínica e cirurgia de pequenos animais com ênfase em medicina felina. 70% da nossa base é gato — toda decisão clínica considera o comportamento da espécie."
+        },
+        {
+          "icon": "heart",
+          "title": "Medicina Humanizada",
+          "body": "Cada paciente tem nome, histórico e a mesma veterinária do começo ao fim. Nada de 'mais um bicho na fila' — chamamos seu gato pelo nome desde a 2ª visita."
+        },
+        {
+          "icon": "list-check",
+          "title": "Transparência Item a Item",
+          "body": "Você aprova cada exame e cada procedimento antes da execução. Cada indicação é justificada em linguagem clara. Nunca há conta surpresa — preço é o que está no orçamento aprovado."
+        },
+        {
+          "icon": "clock",
+          "title": "40 Minutos com a Dra. Nathalia",
+          "body": "Tempo o suficiente para examinar, conversar sobre comportamento, mostrar exames se necessário e construir plano de tratamento que cabe na sua rotina. Não é consulta de 15 minutos."
+        }
+      ]
+    },
+    {
+      "name": "how_it_works",
+      "headline": "Como agendar com a Zenvet.",
+      "subheadline": "Em 3 passos simples — do primeiro contato ao acompanhamento depois.",
+      "steps": [
+        {
+          "number": 1,
+          "title": "Você manda mensagem no WhatsApp",
+          "body": "A Loíse responde em até 30 minutos no horário comercial. Pergunta o nome do seu pet, qual a dúvida, e te mostra a próxima vaga disponível com a Dra. Nathalia."
+        },
+        {
+          "number": 2,
+          "title": "Consulta de 40 minutos com a Dra. Nathalia",
+          "body": "Histórico, exame clínico, conversa sobre comportamento e plano de tratamento. Se precisar exame complementar, a indicação é justificada e o valor mostrado antes — você aprova item a item."
+        },
+        {
+          "number": 3,
+          "title": "Acompanhamento no WhatsApp em D+1",
+          "body": "No dia seguinte, a Nathalia te manda mensagem perguntando como o pet está. Não é régua de marketing automatizada — é a Nathalia, com nome do paciente, com contexto. Todas as vezes."
+        }
+      ]
+    },
+    {
+      "name": "deliverables",
+      "headline": "O que está incluído na consulta especialista.",
+      "subheadline": "Sem letra miúda. Sem item escondido. O que está aqui é o que você recebe.",
+      "items": [
+        { "title": "40 minutos com a Dra. Nathalia", "benefit": "Tempo de conversa aprofundada — não 15 minutos do hospital 24h." },
+        { "title": "Histórico clínico completo", "benefit": "Cada paciente tem ficha viva — Nathalia te lembra do que aconteceu na última visita." },
+        { "title": "Exame físico e comportamental", "benefit": "Avaliação que considera o comportamento felino, não só os sinais clínicos visíveis." },
+        { "title": "Orçamento aprovado item a item antes da execução", "benefit": "Você decide o que faz e o que não faz, com cada valor mostrado antes." },
+        { "title": "Plano de tratamento por escrito", "benefit": "Você sai sabendo o que dar, em que dose, em qual horário e até quando." },
+        { "title": "Acompanhamento D+1 da Dra. Nathalia no WhatsApp", "benefit": "Sem custo adicional, sem pergunta de venda — só cuidado." }
+      ]
+    },
+    {
+      "name": "final_cta",
+      "headline": "Em Americana, gato é com a gente.",
+      "subheadline": "Agende pelo WhatsApp. Loíse responde em até 30 minutos no horário comercial — Seg a Sex, 8h às 18h.",
+      "cta_primary": "Agendar pelo WhatsApp",
+      "cta_secondary": "Como chegar (Google Maps) →"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Quanto custa a consulta especialista em felinos?",
+      "answer": "A consulta com a Dra. Nathalia é R$ 220 e dura 40 minutos. Inclui exame clínico, conversa sobre comportamento, plano de tratamento por escrito e acompanhamento no WhatsApp em D+1. Se precisar exame complementar, o valor é mostrado e aprovado antes da execução — nunca há conta surpresa."
+    },
+    {
+      "question": "Vocês fazem exames lá ou enviam para fora?",
+      "answer": "Os exames simples são feitos na própria clínica. Para exames especializados (ultrassom, ressonância, biopsia) trabalhamos com laboratórios parceiros de confiança da Dra. Nathalia. Você sempre aprova o orçamento item a item antes — incluindo o custo do exame externo."
+    },
+    {
+      "question": "Atendimento domiciliar para felinos — como funciona?",
+      "answer": "Para gatos que estressam muito no transporte ou são mais sensíveis, oferecemos atendimento domiciliar com a Dra. Nathalia. Inclui consulta completa na sua casa + acompanhamento posterior. Mande mensagem no WhatsApp contando sobre seu gato — a Loíse explica a logística e o valor antes."
+    },
+    {
+      "question": "Vocês atendem emergência 24 horas?",
+      "answer": "Não. A Zenvet é uma clínica com hora marcada, das 8h às 18h de Segunda a Sexta. Para emergência fora do horário, recomendamos os hospitais 24h da região. Quando seu pet estabilizar, volta a falar com a gente para um check-up — explicamos tudo direitinho."
+    },
+    {
+      "question": "Atendem cães também?",
+      "answer": "Sim. Atendemos cães com o mesmo cuidado humanizado e a mesma transparência de preço — hora marcada, sem fila, valor explicado antes de qualquer procedimento. A diferença é que somos especialistas em felinos por escolha técnica, e cães são bem-vindos com o mesmo DNA de atendimento."
+    },
+    {
+      "question": "Posso cancelar ou reagendar?",
+      "answer": "Pode, sem multa. Avise no WhatsApp com pelo menos 4 horas de antecedência para liberarmos a vaga para outro tutor. Em caso de imprevisto no mesmo dia, a gente se entende — emergência acontece e a gente respeita."
+    }
+  ],
+  "social_proof": {
+    "stats": [
+      { "number": "1.186", "label": "tutores ativos hoje" },
+      { "number": "70%", "label": "da base é tutora de gato" },
+      { "number": "~100%", "label": "show rate (quem agenda, comparece)" },
+      { "number": "40 min", "label": "de consulta com a Dra. Nathalia" }
+    ],
+    "testimonials": [
+      {
+        "name": "[Placeholder — coletar depoimento real de tutora de gato antes de publicar]",
+        "role": "Tutora de gato — Americana SP",
+        "text": "[Texto a ser coletado da Loíse / Google Reviews. Sugestão de tom: tutora narra como pesquisou bastante antes de confiar, como Nathalia chamou o gato pelo nome na 2ª visita, como recebeu mensagem D+1, como passou a indicar para amigas tutoras.]"
+      },
+      {
+        "name": "[Placeholder — coletar depoimento real de tutor de cachorro antes de publicar]",
+        "role": "Tutor de cachorro — Santa Bárbara d'Oeste SP",
+        "text": "[Texto a ser coletado. Sugestão de tom: tutor narra a praticidade de chegar com hora marcada, sem fila, valor explicado antes, e a clareza da Nathalia ao explicar diagnóstico em linguagem simples.]"
+      },
+      {
+        "name": "[Placeholder — coletar depoimento real de atendimento domiciliar antes de publicar]",
+        "role": "Tutora de gato senior — Nova Odessa SP",
+        "text": "[Texto a ser coletado. Sugestão de tom: tutora de gato senior que estressa no transporte, narra como o atendimento domiciliar mudou a relação com a clínica, e como a Nathalia continua acompanhando em D+1 e D+7 mesmo depois.]"
+      }
+    ]
+  },
+  "meta": {
+    "title": "Veterinário Especialista em Felinos · Zenvet · Americana",
+    "description": "Consulta especialista em medicina felina, 40 min com a Dra. Nathalia. Orçamento item a item, acompanhamento no WhatsApp. Americana SP.",
+    "og_title": "Seu gato merece uma veterinária que entende de felinos. — Zenvet",
+    "og_description": "Em Americana, a clínica especialista em medicina felina. Consulta consultiva de 40min, transparência item a item, acompanhamento da Dra. Nathalia no WhatsApp.",
+    "og_type": "website"
+  },
+  "deploy_url": "http://localhost:3001",
+  "whatsapp_link": "https://wa.me/5519995795483?text=Oi%21%20Vi%20a%20p%C3%A1gina%20da%20Zenvet%20e%20queria%20agendar%20consulta%20para%20meu%20pet."
+}

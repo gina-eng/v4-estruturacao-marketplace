@@ -170,12 +170,8 @@ Gere o output COMPLETO de uma vez. Para cada bloco, preencha todos os campos do 
 - Cada aplicação tem 2 camadas: técnica (specs) + contextual (descrição do mockup que será renderizado em SVG no portal).
 - Para PME early-stage local (vet, dentista, salão): foco em digital + redes sociais + papelaria essencial. Não documentar fachada/uniforme/embalagem se não há ROI.
 
-**Bloco 5 — Governança:**
-- Brand owner (pessoa ou cargo). Para PME pequena: o(a) próprio(a) sócio(a).
-- Processo de aprovação: fluxo enxuto (3-4 etapas).
-- Sem comitê de marca em early-stage.
-
 ## Auto-validação
+
 
 Antes de apresentar:
 - [ ] Mencionou o cliente pelo nome em todos os blocos?

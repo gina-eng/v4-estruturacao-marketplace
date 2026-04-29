@@ -3,12 +3,12 @@ name: ee-s3-landing-page
 description: "Cria a landing page de conversão: copy completa seção por seção, geração de código React+Tailwind, e deploy na Vercel. Mix auto + manual. Use quando disser /ee-s3-landing-page ou 'criar LP' ou 'landing page' ou 'página de conversão'."
 dependencies:
   - ee-s2-posicionamento
-  - ee-s3-brandbook
+  - ee-s3-manual-marca
   - ee-s2-diagnostico-cro
 inputs:
   - client.json (briefing)
   - ee-s2-posicionamento.json
-  - ee-s3-brandbook.json
+  - ee-s3-manual-marca.json
   - ee-s2-diagnostico-cro.json
 output: ee-s3-landing-page.json
 week: 3

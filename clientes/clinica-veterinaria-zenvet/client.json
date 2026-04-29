@@ -2112,10 +2112,11 @@
         "superseded_at": "2026-04-28T15:00:00Z"
       },
       "ee-s3-landing-page": {
-        "status": "pending",
+        "status": "completed",
         "checkpoint": 0,
-        "started_at": null,
-        "completed_at": null
+        "started_at": "2026-04-29T17:00:00Z",
+        "completed_at": "2026-04-29T17:00:00Z",
+        "version": 1
       },
       "ee-s3-copy-anuncios": {
         "status": "pending",
@@ -2317,6 +2318,12 @@
       "skill": "ee-s3-manual-marca",
       "action": "completed",
       "note": "Manual de Marca unificado (Brandbook + MIV) gerado seguindo a Estrutura MIV de 5 blocos. Substitui ee-s3-brandbook e ee-s3-identidade-visual (marcados como superseded). Renderer SVG-rich no portal: paleta com swatches grandes, tipografia em escala real (Fraunces+Inter via Google Fonts), galeria de 6 usos incorretos do logo, mockups contextuais (cartão, e-mail signature, IG avatar+bio, post de feed, story, favicon scaling, WhatsApp Business, GMB), matriz de contraste WCAG, proporção 60-30-10 visual, matriz competitiva 2x2 com competidores plotados, persona com avatar SVG + 6 campos. Aguardando aprovação do operador."
+    },
+    {
+      "ts": "2026-04-29T17:00:00Z",
+      "skill": "ee-s3-landing-page",
+      "action": "completed",
+      "note": "LP felino-first em Next.js 14 + Tailwind. 9 seções (hero/problem/solution/how_it_works/deliverables/social_proof/for_dogs/faq/final_cta). Servida em http://localhost:3001 (dev). Pendentes antes do deploy: foto real do hero, depoimentos reais (3 placeholders), domínio definitivo."
     }
   ],
   "page_audit": {

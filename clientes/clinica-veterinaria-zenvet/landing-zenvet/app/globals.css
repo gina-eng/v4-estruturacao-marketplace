@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-white text-graphite font-sans antialiased;
+  }
+  h1, h2, h3 {
+    @apply font-serif text-purple-deep tracking-tight;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 bg-magenta text-white font-semibold px-6 py-3 rounded-full hover:opacity-90 transition shadow-md;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 text-purple-deep font-semibold px-6 py-3 rounded-full border-2 border-purple-deep hover:bg-purple-deep hover:text-white transition;
+  }
+  .section {
+    @apply py-16 md:py-24 px-6;
+  }
+  .container-content {
+    @apply max-w-content mx-auto;
+  }
+}
