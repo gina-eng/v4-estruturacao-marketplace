@@ -1,8 +1,139 @@
 {
-  "summary": "Pack de 5 criativos para Zenvet (4 felinas + 1 cães), 15 peças totais (3 formatos × 5 variações: feed quadrado 1080×1080, feed retrato 1080×1350, stories 1080×1920). Cada variação testa 1 hook diferente — Dor / Resultado / Curiosidade / Prova Social / Urgência. Direção: estática-first com foto real da Dra. Nathalia (corrige 0% retenção dos vídeos atuais), hook explícito no 1º segundo em Fraunces serif itálico, paleta da marca (roxo #4B1C7D, turquesa #00B8BD, bege #F6EAD8). 2 variações reaproveitam fotos já produzidas (dra-com-gato, dra-retrato, Arlete da depoimento Katia Leite); 3 precisam de imagens novas (operador gera no Midjourney com prompts entregues).",
+  "summary": "Pack de 5 criativos para Zenvet (4 felinas + 1 cães), 15 peças totais (3 formatos × 5 variações: feed quadrado 1080×1080, feed retrato 1080×1350, stories 1080×1920). Cada variação testa 1 hook diferente — Dor / Resultado / Curiosidade / Prova Social / Urgência. Direção: estática-first com foto real da Dra. Nathalia (corrige 0% retenção dos vídeos atuais), hook explícito no 1º segundo em Fraunces serif itálico, paleta da marca (roxo #4B1C7D, turquesa #00B8BD, bege #F6EAD8). Cada prompt referencia explicitamente os assets do repo via URL Vercel pública (CDN rápido) — pronta pra colar em Midjourney/Ideogram com --cref/upload de imagem.",
   "client_name": "Clínica Veterinária Zenvet",
   "campaign_focus": "Felinos-first (4 de 5 variações felinas, 1 cães secundária) · Meta Ads · Estática-first",
   "diagnostic_anchor": "S2 ee-s2-diagnostico-criativos: 0% retenção 3s nos 43 anúncios atuais, estáticas convertem 2x mais que vídeos, hospitais 24h da região rodam 22 anúncios cada vs 5 da Zenvet. Resposta: hook explícito no 1s, foto real (não stock), texto curto sobreposto, sem música, sem vídeo na 1ª rodada.",
+  "asset_registry": {
+    "_note": "Todos os assets disponíveis no repo, com URLs públicas. Vercel CDN é a URL recomendada (rápida, estável). GitHub raw é a alternativa versionada caso o Vercel mude.",
+    "base_urls": {
+      "vercel_cdn": "https://zenvet-landing.vercel.app",
+      "github_raw": "https://raw.githubusercontent.com/gina-eng/v4-estruturacao-marketplace/main/clientes/clinica-veterinaria-zenvet/landing-zenvet/public"
+    },
+    "photos": {
+      "dra_com_gato": {
+        "id": "dra_com_gato",
+        "vercel_url": "https://zenvet-landing.vercel.app/photos/dra-com-gato.png",
+        "github_raw_url": "https://raw.githubusercontent.com/gina-eng/v4-estruturacao-marketplace/main/clientes/clinica-veterinaria-zenvet/landing-zenvet/public/photos/dra-com-gato.png",
+        "local_path": "landing-zenvet/public/photos/dra-com-gato.png",
+        "dimensions": "1122×1402",
+        "format": "PNG",
+        "size_kb": 1898,
+        "description": "Dra. Nathalia segurando gato laranja (SRD) em estúdio com fundo roxo #4B1C7D, jaleco branco, expressão atenta voltada ao gato, gato confortável no colo. Foto profissional editorial — tom emocional + profissional.",
+        "best_use": "Hero, criativos com hook de DOR ou RESULTADO felino, posts educativos, OG image",
+        "consent": "Foto da própria Dra. Nathalia (proprietária da clínica) — uso comercial autorizado pela cliente"
+      },
+      "dra_retrato": {
+        "id": "dra_retrato",
+        "vercel_url": "https://zenvet-landing.vercel.app/photos/dra-retrato.png",
+        "github_raw_url": "https://raw.githubusercontent.com/gina-eng/v4-estruturacao-marketplace/main/clientes/clinica-veterinaria-zenvet/landing-zenvet/public/photos/dra-retrato.png",
+        "local_path": "landing-zenvet/public/photos/dra-retrato.png",
+        "dimensions": "1122×1402",
+        "format": "PNG",
+        "size_kb": 1707,
+        "description": "Retrato profissional Dra. Nathalia de braços cruzados, jaleco branco, fundo roxo #4B1C7D, olhar firme e cordial diretamente na câmera. Postura de autoridade técnica.",
+        "best_use": "Seções de autoridade, criativos de PROVA SOCIAL, bio Instagram, MOFU/BOFU",
+        "consent": "Foto da própria Dra. Nathalia — uso comercial autorizado"
+      },
+      "testimonial_amanda_silva": {
+        "id": "testimonial_amanda_silva",
+        "vercel_url": "https://zenvet-landing.vercel.app/photos/testimonials/gato-amanda-silva.webp",
+        "github_raw_url": "https://raw.githubusercontent.com/gina-eng/v4-estruturacao-marketplace/main/clientes/clinica-veterinaria-zenvet/landing-zenvet/public/photos/testimonials/gato-amanda-silva.webp",
+        "local_path": "landing-zenvet/public/photos/testimonials/gato-amanda-silva.webp",
+        "dimensions": "960×1280",
+        "format": "WebP",
+        "size_kb": 152,
+        "description": "Gatinho tabby com 'Certificado de Coragem' da Dra. Nathalia ao lado de um vaso azul-turquesa. Cenário de casa com clínica visível ao fundo. Anexo do review 5★ de Amanda da Silva.",
+        "best_use": "Variação RESULTADO/depoimento, social proof felino",
+        "consent": "Review público no Google — permissão implícita por já estar publicado pela própria tutora"
+      },
+      "testimonial_arlete": {
+        "id": "testimonial_arlete",
+        "vercel_url": "https://zenvet-landing.vercel.app/photos/testimonials/arlete-katia-leite.webp",
+        "github_raw_url": "https://raw.githubusercontent.com/gina-eng/v4-estruturacao-marketplace/main/clientes/clinica-veterinaria-zenvet/landing-zenvet/public/photos/testimonials/arlete-katia-leite.webp",
+        "local_path": "landing-zenvet/public/photos/testimonials/arlete-katia-leite.webp",
+        "dimensions": "1526×1526",
+        "format": "WebP",
+        "size_kb": 73,
+        "description": "Cachorrinha SRD pequena (Arlete), pelagem preta com manchas marrons claras, lacinho roxo na cabeça, expressão calma sentada em piso branco da clínica. Anexo do review 5★ de Katia Leite (Local Guide).",
+        "best_use": "Variação URGÊNCIA/CÃES, callout para tutores de cachorro",
+        "consent": "Review público no Google da Katia Leite — permissão implícita"
+      },
+      "testimonial_xareu": {
+        "id": "testimonial_xareu",
+        "vercel_url": "https://zenvet-landing.vercel.app/photos/testimonials/xareu-amanda-carolina.webp",
+        "github_raw_url": "https://raw.githubusercontent.com/gina-eng/v4-estruturacao-marketplace/main/clientes/clinica-veterinaria-zenvet/landing-zenvet/public/photos/testimonials/xareu-amanda-carolina.webp",
+        "local_path": "landing-zenvet/public/photos/testimonials/xareu-amanda-carolina.webp",
+        "dimensions": "858×1526",
+        "format": "WebP",
+        "size_kb": 76,
+        "description": "Gato branco/creme com olhos claros e colar azul-turquesa, sentado em superfície roxa (mesma da identidade visual). Anexo do review 5★ de Amanda Carolina ('tenho 5 gatos e não abro mão dela').",
+        "best_use": "Variação RESULTADO/CURIOSIDADE/depoimento felino",
+        "consent": "Review público no Google — permissão implícita"
+      }
+    },
+    "logos": {
+      "horizontal": {
+        "id": "logo_horizontal",
+        "vercel_url": "https://zenvet-landing.vercel.app/logo/zenvet_horizontal.svg",
+        "github_raw_url": "https://raw.githubusercontent.com/gina-eng/v4-estruturacao-marketplace/main/clientes/clinica-veterinaria-zenvet/landing-zenvet/public/logo/zenvet_horizontal.svg",
+        "local_path": "landing-zenvet/public/logo/zenvet_horizontal.svg",
+        "dimensions": "1138×363 (vetor)",
+        "format": "SVG",
+        "description": "Logo horizontal — ícone do gato com cruz veterinária + wordmark 'Zenvet' lado a lado. Cores originais: roxo #51056B (primário) + turquesa #57B9C2 + acentos light blue.",
+        "use_when": "Backgrounds claros (bege, branco, cream). Padrão para header e LP."
+      },
+      "horizontal_white": {
+        "id": "logo_horizontal_white",
+        "vercel_url": "https://zenvet-landing.vercel.app/logo/zenvet_horizontal_white.svg",
+        "github_raw_url": "https://raw.githubusercontent.com/gina-eng/v4-estruturacao-marketplace/main/clientes/clinica-veterinaria-zenvet/landing-zenvet/public/logo/zenvet_horizontal_white.svg",
+        "local_path": "landing-zenvet/public/logo/zenvet_horizontal_white.svg",
+        "dimensions": "1138×363 (vetor)",
+        "format": "SVG",
+        "description": "Versão white do logo horizontal — todas as cores primárias substituídas por #FFFFFF, acentos preservados em rgba transparente.",
+        "use_when": "Backgrounds escuros (roxo deep, roxo shadow, preto). Padrão para footer e criativos com fundo dark."
+      },
+      "icone": {
+        "id": "logo_icone",
+        "vercel_url": "https://zenvet-landing.vercel.app/logo/zenvet_icone.svg",
+        "github_raw_url": "https://raw.githubusercontent.com/gina-eng/v4-estruturacao-marketplace/main/clientes/clinica-veterinaria-zenvet/landing-zenvet/public/logo/zenvet_icone.svg",
+        "local_path": "landing-zenvet/public/logo/zenvet_icone.svg",
+        "dimensions": "322×363 (vetor)",
+        "format": "SVG",
+        "description": "Apenas o ícone (gato + cruz) sem wordmark.",
+        "use_when": "Favicon, avatar Instagram, espaços muito reduzidos onde o wordmark não cabe (<32px de altura)"
+      },
+      "icone_white": {
+        "id": "logo_icone_white",
+        "vercel_url": "https://zenvet-landing.vercel.app/logo/zenvet_icone_white.svg",
+        "github_raw_url": "https://raw.githubusercontent.com/gina-eng/v4-estruturacao-marketplace/main/clientes/clinica-veterinaria-zenvet/landing-zenvet/public/logo/zenvet_icone_white.svg",
+        "local_path": "landing-zenvet/public/logo/zenvet_icone_white.svg",
+        "dimensions": "322×363 (vetor)",
+        "format": "SVG",
+        "description": "Ícone branco para fundos escuros.",
+        "use_when": "Marca d'água em criativos com fundo dark, watermark sutil em vídeo, avatar dark mode"
+      },
+      "vertical": {
+        "id": "logo_vertical",
+        "vercel_url": "https://zenvet-landing.vercel.app/logo/zenvet_vertical.svg",
+        "github_raw_url": "https://raw.githubusercontent.com/gina-eng/v4-estruturacao-marketplace/main/clientes/clinica-veterinaria-zenvet/landing-zenvet/public/logo/zenvet_vertical.svg",
+        "local_path": "landing-zenvet/public/logo/zenvet_vertical.svg",
+        "dimensions": "730×504 (vetor)",
+        "format": "SVG",
+        "description": "Versão vertical empilhada — ícone em cima, wordmark embaixo. Fundo claro.",
+        "use_when": "Stories Instagram (formato 9:16), capa de Reels, papelaria (cartão de visita, receituário), assinatura institucional"
+      },
+      "vertical_white": {
+        "id": "logo_vertical_white",
+        "vercel_url": "https://zenvet-landing.vercel.app/logo/zenvet_vertical_white.svg",
+        "github_raw_url": "https://raw.githubusercontent.com/gina-eng/v4-estruturacao-marketplace/main/clientes/clinica-veterinaria-zenvet/landing-zenvet/public/logo/zenvet_vertical_white.svg",
+        "local_path": "landing-zenvet/public/logo/zenvet_vertical_white.svg",
+        "dimensions": "730×504 (vetor)",
+        "format": "SVG",
+        "description": "Vertical em branco para fundos escuros.",
+        "use_when": "Stories com fundo roxo/preto, capa institucional dark"
+      }
+    }
+  },
   "brand_constraints": {
     "colors": {
       "purple_deep": "#4B1C7D",
@@ -11,11 +142,14 @@
       "turquoise_dark": "#008185",
       "turquoise_mist": "#DFF3F5",
       "beige": "#F6EAD8",
+      "cream": "#F4E8D0",
       "graphite": "#2E2E33"
     },
     "fonts": {
       "display": "Fraunces (Google Fonts) — serif, italic para destaques de marca",
-      "body": "Inter (Google Fonts) — sans-serif para subtextos, stats, CTA"
+      "display_url": "https://fonts.google.com/specimen/Fraunces",
+      "body": "Inter (Google Fonts) — sans-serif para subtextos, stats, CTA",
+      "body_url": "https://fonts.google.com/specimen/Inter"
     },
     "vocabulary_required": [
       "tutora (não 'dona')",
@@ -24,12 +158,8 @@
       "orçamento aprovado item a item (não 'preço fechado')",
       "Dra. Nathalia (sempre nome completo, com 'Dra.')"
     ],
-    "logo": {
-      "horizontal": "/public/logo/zenvet_horizontal.svg (uso em fundo bege/branco)",
-      "horizontal_white": "/public/logo/zenvet_horizontal_white.svg (uso em fundo roxo escuro)",
-      "min_size_px": 28,
-      "clearspace": "altura do ícone ao redor"
-    }
+    "logo_clearspace_min_px": 28,
+    "logo_clearspace_rule": "altura do ícone como margem mínima ao redor do logo"
   },
   "variations": [
     {
@@ -40,12 +170,18 @@
       "headline": "Gato não é cachorro.",
       "description": "Especialista em felinos atende com calma em Americana. 40 min com a Dra. Nathalia.",
       "button_cta": "Saiba mais",
-      "visual_concept": "Foto real da Dra. Nathalia segurando o gato laranja no colo (asset disponível em /public/photos/dra-com-gato.png — fundo roxo-marca, expressão atenta dela, gato confortável). Crop: vertical 4:5 priorizando rosto da Dra. + cabeça do gato no terço superior. Overlay: faixa transparente roxa (#4B1C7D 35% opacidade) na metade inferior da imagem. Texto sobre overlay: hook 'Gato esconde dor por instinto.' em Fraunces serif italic 56pt, branco. Subtexto pequeno: 'Quando ele demonstra, é tarde.' em Inter 18pt, branco/80%. Sticker pill turquesa-claro no canto superior esquerdo: 'Especialista em felinos · Americana / SP' em Fraunces italic 13pt. Logo Zenvet horizontal_white 36px no canto inferior direito.",
+      "asset_refs": {
+        "primary_photo": "dra_com_gato",
+        "logo": "logo_horizontal_white",
+        "primary_photo_url": "https://zenvet-landing.vercel.app/photos/dra-com-gato.png",
+        "logo_url": "https://zenvet-landing.vercel.app/logo/zenvet_horizontal_white.svg"
+      },
+      "visual_concept": "Foto real da Dra. Nathalia segurando o gato laranja no colo (asset 'dra_com_gato' — fundo roxo-marca, expressão atenta dela, gato confortável). Crop: vertical 4:5 priorizando rosto da Dra. + cabeça do gato no terço superior. Overlay: faixa transparente roxa #4B1C7D 35% opacidade na metade inferior da imagem. Texto sobre overlay: hook 'Gato esconde dor por instinto.' em Fraunces serif italic 56pt branco. Subtexto pequeno: 'Quando ele demonstra, é tarde.' em Inter 18pt branco/80%. Sticker pill turquesa-claro no canto superior esquerdo: 'Especialista em felinos · Americana / SP' em Fraunces italic 13pt. Logo zenvet_horizontal_white 36px no canto inferior direito.",
       "recommended_format": "feed_portrait",
       "additional_formats": ["feed_square", "stories"],
-      "midjourney_prompt": "NÃO É NECESSÁRIO — usar foto real /public/photos/dra-com-gato.png. Caso queira variação alternativa para teste: 'Brazilian female veterinarian in her 30s, white lab coat, holding a calm orange tabby cat in her arms, gentle expression looking down at the cat, deep purple background #4B1C7D, soft studio lighting, editorial portrait, photorealistic, candid composition --ar 4:5 --v 7 --style raw'",
-      "ideogram_prompt": "Editorial advertising poster, vertical 4:5 ratio. Photo of woman holding orange cat fills background (use uploaded image). Overlay translucent purple gradient on bottom half. Text on overlay: large serif italic 'Gato esconde dor por instinto.' in cream white, Fraunces font feel. Below in small sans-serif 'Quando ele demonstra, é tarde.'. Top-left corner: turquoise pill sticker reading 'Especialista em felinos · Americana / SP' in italic. Bottom-right: small Zenvet horizontal logo in white. Brand colors: deep purple #4B1C7D, turquoise #00B8BD. Minimal, editorial, magazine-style.",
-      "canva_guide": "1) Importar /public/photos/dra-com-gato.png (1122×1402). 2) Frame 1080×1350 (feed_portrait). 3) Aplicar foto preenchendo o frame com crop centralizado-superior. 4) Adicionar retângulo Y=720, H=630, fill #4B1C7D opacity 35%, sem borda. 5) Hook em Text Box Y=820, fonte Fraunces SemiBold Italic 56pt, cor #FBF4E4: 'Gato esconde dor por instinto.' (quebra automática em 2 linhas). 6) Subtexto Y=1080, Inter 400 18pt, cor #FBF4E4 80%: 'Quando ele demonstra, é tarde.'. 7) Sticker pill turquesa: rounded rect 20px X=40 Y=40 W=300 H=44, fill #DFF3F5, border 1px #00B8BD; texto Fraunces Italic 13pt #4B1C7D 'Especialista em felinos · Americana / SP'. 8) Logo: importar zenvet_horizontal_white.svg, posicionar X=900 Y=1280 W=140. 9) Exportar PNG em 1080×1350 (feed), 1080×1080 (square), 1080×1920 (stories). Para stories: re-centrar foto vertical, aumentar texto hook para 72pt, posicionar overlay 60% inferior."
+      "midjourney_prompt": "PRIMÁRIO — usar a foto real (não regenerar): https://zenvet-landing.vercel.app/photos/dra-com-gato.png\n\nALTERNATIVA (se quiser variação para A/B): use a foto como cref para preservar identidade visual da Dra.:\n\n/imagine prompt: Brazilian female veterinarian in her 30s, white lab coat, holding a calm orange tabby cat in her arms, gentle expression looking down at the cat, deep purple background #4B1C7D, soft studio lighting, editorial portrait, photorealistic, candid composition --cref https://zenvet-landing.vercel.app/photos/dra-com-gato.png --cw 90 --ar 4:5 --v 7 --style raw",
+      "ideogram_prompt": "Editorial advertising poster, vertical 4:5 ratio.\n\nIMAGE INPUT (upload no Ideogram via URL): https://zenvet-landing.vercel.app/photos/dra-com-gato.png\n\nUse the uploaded photo as the full background. Apply translucent purple overlay #4B1C7D at 35% opacity on the bottom half. Overlay text on the bottom area:\n- Large serif italic 'Gato esconde dor por instinto.' in cream white #FBF4E4, Fraunces font (60pt-feel)\n- Below in small sans-serif 'Quando ele demonstra, é tarde.' in white at 80% opacity, Inter font (18pt-feel)\n\nTop-left corner: turquoise pill sticker (rounded full) reading 'Especialista em felinos · Americana / SP' in italic, background #DFF3F5 with #00B8BD border, text in #4B1C7D.\n\nBottom-right corner: small Zenvet horizontal logo in white. Brand: deep purple #4B1C7D, turquoise #00B8BD. Style: minimalist, editorial, magazine. No clutter.",
+      "canva_guide": "1) Importar foto real: drag-and-drop https://zenvet-landing.vercel.app/photos/dra-com-gato.png (ou usar arquivo local landing-zenvet/public/photos/dra-com-gato.png — 1122×1402). 2) Frame 1080×1350 (feed_portrait). 3) Aplicar foto preenchendo o frame com crop centralizado-superior. 4) Adicionar retângulo Y=720, H=630, fill #4B1C7D opacity 35%, sem borda. 5) Hook em Text Box Y=820, fonte Fraunces SemiBold Italic 56pt, cor #FBF4E4: 'Gato esconde dor por instinto.' (quebra automática em 2 linhas). 6) Subtexto Y=1080, Inter 400 18pt, cor #FBF4E4 80%: 'Quando ele demonstra, é tarde.'. 7) Sticker pill turquesa: rounded rect 20px X=40 Y=40 W=300 H=44, fill #DFF3F5, border 1px #00B8BD; texto Fraunces Italic 13pt #4B1C7D 'Especialista em felinos · Americana / SP'. 8) Logo: importar https://zenvet-landing.vercel.app/logo/zenvet_horizontal_white.svg, posicionar X=900 Y=1280 W=140. 9) Exportar PNG em 1080×1350 (feed), 1080×1080 (square — re-centrar), 1080×1920 (stories — aumentar hook para 72pt, overlay 60% inferior)."
     },
     {
       "hook_type": "resultado",
@@ -55,12 +191,20 @@
       "headline": "Diagnóstico em 40 min.",
       "description": "40 min de consulta consultiva com a Dra. Nathalia, especialista em felinos. R$220.",
       "button_cta": "Enviar mensagem",
-      "visual_concept": "Foto candidata (precisa ser gerada no MJ — não temos no banco): tutora brasileira ~30-40 anos, expressão suave de alívio/satisfação, segurando gato (não institucional, look cotidiano), luz natural diurna, ambiente interno aconchegante (sala de estar, NÃO clínica). Layout: foto preenche 70% do frame; faixa bege creme no rodapé com aspas grandes em serif e citação. Texto principal: hook em aspas duplas 'Saí entendendo a Mel pela primeira vez.' em Fraunces serif italic 44pt cor roxo-deep. Sub-créditos: 'Mariana, tutora · Vila Santa Catarina · Americana' em Inter 13pt cor cinza. Logo Zenvet pequeno discreto no rodapé.",
+      "asset_refs": {
+        "primary_photo_options": ["testimonial_amanda_silva", "testimonial_xareu"],
+        "logo": "logo_horizontal",
+        "primary_photo_url_option_a": "https://zenvet-landing.vercel.app/photos/testimonials/gato-amanda-silva.webp",
+        "primary_photo_url_option_b": "https://zenvet-landing.vercel.app/photos/testimonials/xareu-amanda-carolina.webp",
+        "logo_url": "https://zenvet-landing.vercel.app/logo/zenvet_horizontal.svg",
+        "_recommendation": "Usar foto REAL de testimonial (Amanda Silva ou Carolina) substituindo o nome 'Mel/Mariana' do hook por 'Tutora real'. Mais autêntico e a copy é o depoimento literal da S3."
+      },
+      "visual_concept": "Foto candidata: usar uma das fotos REAIS de testimonial (gato-amanda-silva.webp OU xareu-amanda-carolina.webp). Layout split: foto preenche 65% do frame; faixa bege creme #F6EAD8 no rodapé com aspas grandes em serif e citação. Texto principal: hook em aspas duplas em Fraunces serif italic 44pt cor roxo-deep #4B1C7D. Sub-créditos: 'Amanda da Silva, tutora · Google Reviews · 5★' em Inter 13pt cor cinza. Logo zenvet_horizontal pequeno discreto no rodapé. ALTERNATIVA: gerar foto MJ se quiser visual mais editorial (prompt abaixo).",
       "recommended_format": "feed_portrait",
       "additional_formats": ["feed_square", "stories"],
-      "midjourney_prompt": "Brazilian woman in her mid-30s, casual sweater, soft natural smile of relief, holding her domestic cat close to her face, warm afternoon natural light from window, lifestyle documentary photography, neutral living room background slightly blurred, candid moment not posed, editorial style, photorealistic, shallow depth of field --ar 4:5 --v 7 --style raw",
-      "ideogram_prompt": "Editorial poster vertical 4:5. Top 70%: lifestyle photo of woman holding her cat, warm tones. Bottom 30%: cream beige background #F6EAD8. Overlay text on cream area: opening quotation mark large in italic serif #4B1C7D, then italic serif quote 'Saí entendendo a Mel pela primeira vez.' large size in deep purple. Below: small sans-serif 'Mariana, tutora · Vila Santa Catarina · Americana' in graphite gray. Bottom right: small Zenvet horizontal logo in deep purple. Magazine, editorial, minimal.",
-      "canva_guide": "1) Frame 1080×1350. 2) Importar foto MJ gerada (ou use temporariamente /public/photos/dra-com-gato.png recortada na Mariana). 3) Crop superior 70% (Y=0 H=945). 4) Retângulo Y=945 H=405 fill #F6EAD8. 5) Aspas Texto X=70 Y=970 fonte Fraunces Bold Italic 80pt cor #4B1C7D: '“'. 6) Citação X=130 Y=985 W=880 fonte Fraunces SemiBold Italic 44pt cor #4B1C7D: 'Saí entendendo a Mel pela primeira vez.'. 7) Crédito X=130 Y=1240 fonte Inter 500 13pt cor #2E2E33 letter-spacing 0.05em: 'MARIANA, TUTORA · VILA SANTA CATARINA · AMERICANA'. 8) Logo zenvet_horizontal.svg X=900 Y=1280 W=140. 9) Substituir por DEPOIMENTO REAL antes de subir (Amanda da Silva / Katia Leite / Amanda Carolina — fotos disponíveis em /public/photos/testimonials/). Caso use real, substituir nome no crédito."
+      "midjourney_prompt": "OPÇÃO A (recomendada) — usar foto real direto:\nhttps://zenvet-landing.vercel.app/photos/testimonials/gato-amanda-silva.webp (gato com certificado)\nOU\nhttps://zenvet-landing.vercel.app/photos/testimonials/xareu-amanda-carolina.webp (gato branco com colar azul)\n\nOPÇÃO B — gerar foto editorial nova (mais estilizada):\n\n/imagine prompt: Brazilian woman in her mid-30s, casual sweater in warm tone, soft natural smile of relief, holding her domestic cat close to her face, warm afternoon natural light from window, lifestyle documentary photography, neutral living room background slightly blurred, candid moment not posed, editorial style, photorealistic, shallow depth of field --ar 4:5 --v 7 --style raw",
+      "ideogram_prompt": "Editorial poster vertical 4:5.\n\nIMAGE INPUT (upload uma das URLs):\n- https://zenvet-landing.vercel.app/photos/testimonials/gato-amanda-silva.webp\n- https://zenvet-landing.vercel.app/photos/testimonials/xareu-amanda-carolina.webp\n\nLayout:\n- Top 65%: photo fills the area, warm tones preserved\n- Bottom 35%: cream beige background #F6EAD8\n- On cream area: opening quotation mark large in italic serif #4B1C7D, then italic serif quote 'Saí entendendo a [Mel] pela primeira vez.' large size in deep purple, Fraunces font feel\n- Below: small sans-serif credits 'AMANDA DA SILVA, TUTORA · GOOGLE REVIEWS · 5★' in graphite gray with letter-spacing, Inter font\n- Bottom right: small Zenvet horizontal logo in deep purple (use https://zenvet-landing.vercel.app/logo/zenvet_horizontal.svg)\n\nStyle: magazine, editorial, minimal.",
+      "canva_guide": "1) Frame 1080×1350. 2) Importar uma foto real de testimonial (link Vercel ou file local em landing-zenvet/public/photos/testimonials/). 3) Crop superior 65% (Y=0 H=878). 4) Retângulo Y=878 H=472 fill #F6EAD8. 5) Aspas Texto X=70 Y=900 fonte Fraunces Bold Italic 80pt cor #4B1C7D: '“'. 6) Citação X=130 Y=920 W=880 fonte Fraunces SemiBold Italic 44pt cor #4B1C7D: 'Saí entendendo a [nome do pet] pela primeira vez.'. 7) Crédito X=130 Y=1180 fonte Inter 500 13pt cor #2E2E33 letter-spacing 0.05em UPPER: 'AMANDA DA SILVA, TUTORA · GOOGLE REVIEWS · 5★'. 8) Logo zenvet_horizontal.svg X=900 Y=1280 W=140. 9) ATENÇÃO: substituir [nome do pet] pelo nome real do animal da tutora escolhida ANTES de subir."
     },
     {
       "hook_type": "curiosidade",
@@ -70,12 +214,20 @@
       "headline": "Antes de virar emergência.",
       "description": "Comeu menos, esconde, vomita? Pode ser dor escondida. Agende com a Dra.",
       "button_cta": "Saiba mais",
-      "visual_concept": "Close-up editorial de um gato em retrato fotográfico (não temos no banco — gerar MJ): olhar atento direto na câmera, fundo neutro suavemente desfocado, luz natural lateral, expressão investigativa (não fofa, não 'cute pet'). Composição: gato no terço inferior-esquerdo, espaço respirado em cima e à direita para texto. Layout: fundo bege #F6EAD8 com sutil estampa de patinhas paw print em watermark (3% opacidade). Texto: hook como pergunta em Fraunces serif italic 60pt cor roxo-deep, 'Seu gato comeu menos esta semana?' — quebra de linha proposital após 'comeu menos'. Subtexto Inter 18pt: 'Pode ser dor escondida.'. Pequeno selo turquesa-claro inferior: '40 min com a Dra. Nathalia · Especialista em felinos'.",
+      "asset_refs": {
+        "primary_photo": null,
+        "primary_photo_alternative": "testimonial_xareu",
+        "primary_photo_alternative_url": "https://zenvet-landing.vercel.app/photos/testimonials/xareu-amanda-carolina.webp",
+        "logo": "logo_horizontal",
+        "logo_url": "https://zenvet-landing.vercel.app/logo/zenvet_horizontal.svg",
+        "_note": "Variação ideal pede close de gato editorial — usar prompt MJ. Alternativa rápida: usar foto do Xareu (gato branco com colar azul) e adaptar o crop para close-up."
+      },
+      "visual_concept": "Close-up editorial de um gato em retrato fotográfico (recomendado: gerar MJ ou usar foto do Xareu cortada em close): olhar atento direto na câmera, fundo neutro suavemente desfocado, luz natural lateral, expressão investigativa (não fofa, não 'cute pet'). Composição: gato no terço inferior-esquerdo, espaço respirado em cima e à direita para texto. Layout: fundo bege #F6EAD8 com sutil estampa de patinhas paw print em watermark (3% opacidade). Texto: hook como pergunta em Fraunces serif italic 60pt cor roxo-deep #4B1C7D, 'Seu gato comeu menos esta semana?' — quebra de linha proposital após 'comeu menos'. Subtexto Inter 18pt: 'Pode ser dor escondida.'. Pequeno selo turquesa-claro inferior: '40 min com a Dra. Nathalia · Especialista em felinos'.",
       "recommended_format": "feed_square",
       "additional_formats": ["feed_portrait", "stories"],
-      "midjourney_prompt": "Close-up portrait of a domestic short-hair tabby cat looking directly at camera with alert curious eyes, side natural lighting, soft warm bokeh background in neutral cream tone, editorial photography, magazine style, shallow depth of field, photorealistic, captures personality of the cat without being cute or staged --ar 1:1 --v 7 --style raw",
-      "ideogram_prompt": "Square 1:1 editorial poster. Background warm cream beige #F6EAD8 with subtle paw-print watermark pattern at 3% opacity. Bottom-left third: photographic portrait of alert tabby cat. Top-right negative space with text: large serif italic 'Seu gato comeu menos esta semana?' in deep purple #4B1C7D, line breaks after 'menos'. Below in smaller sans-serif: 'Pode ser dor escondida.' in graphite. Bottom: small turquoise pill 'Especialista em felinos · Americana'. Bottom-right corner: small Zenvet logo in purple. Style: editorial, minimal, sophisticated, brand-aligned.",
-      "canva_guide": "1) Frame 1080×1080. 2) BG fill #F6EAD8. 3) Pattern paw print: usar elements 'paw' Canva, espalhar 8 unidades, opacity 4%, color #4B1C7D, scattered organic. 4) Importar foto MJ do gato. Posicionar bottom-left, crop circular ou orgânico, W=520 H=520, X=0 Y=560. 5) Hook texto: X=540 Y=140 W=500 fonte Fraunces SemiBold Italic 60pt cor #4B1C7D: 'Seu gato comeu menos esta semana?' (quebra após 'menos'). 6) Subtexto X=540 Y=480 fonte Inter 500 18pt cor #2E2E33: 'Pode ser dor escondida.'. 7) Sticker pill turquesa X=540 Y=540 W=440 H=36, fill #DFF3F5 border #00B8BD, texto Fraunces Italic 12pt #4B1C7D '40 min com a Dra. Nathalia · Especialista em felinos'. 8) Logo zenvet_horizontal.svg X=900 Y=1000 W=140. 9) Exportar PNG. Variação stories: re-empilhar verticalmente (foto em cima 60%, texto embaixo 40%)."
+      "midjourney_prompt": "OPÇÃO A — gerar foto editorial nova:\n\n/imagine prompt: Close-up portrait of a domestic short-hair tabby cat looking directly at camera with alert curious eyes, side natural lighting, soft warm bokeh background in neutral cream tone #F6EAD8, editorial photography, magazine style, shallow depth of field, photorealistic, captures personality of the cat without being cute or staged --ar 1:1 --v 7 --style raw\n\nOPÇÃO B — usar foto existente do Xareu (gato branco com colar azul) cortada em close:\nhttps://zenvet-landing.vercel.app/photos/testimonials/xareu-amanda-carolina.webp",
+      "ideogram_prompt": "Square 1:1 editorial poster.\n\nBackground: warm cream beige #F6EAD8 with subtle paw-print watermark pattern at 3% opacity in deep purple #4B1C7D.\n\nIMAGE INPUT (upload):\nhttps://zenvet-landing.vercel.app/photos/testimonials/xareu-amanda-carolina.webp\nUse this photo cropped tight to the cat's face, place at bottom-left third of frame, with circular or organic crop edge.\n\nText (top-right negative space):\n- Large serif italic 'Seu gato comeu menos esta semana?' in deep purple #4B1C7D, line break after 'menos', Fraunces font feel\n- Below in smaller sans-serif: 'Pode ser dor escondida.' in graphite #2E2E33, Inter font feel\n\nBottom: small turquoise pill 'Especialista em felinos · Americana' in #DFF3F5 with #00B8BD border\nBottom-right corner: small Zenvet logo in purple (https://zenvet-landing.vercel.app/logo/zenvet_horizontal.svg)\n\nStyle: editorial, minimal, sophisticated.",
+      "canva_guide": "1) Frame 1080×1080. 2) BG fill #F6EAD8. 3) Pattern paw print: usar elements 'paw' Canva, espalhar 8 unidades, opacity 4%, color #4B1C7D, scattered organic. 4) Importar foto: https://zenvet-landing.vercel.app/photos/testimonials/xareu-amanda-carolina.webp (ou MJ gerada). Crop tight no rosto do gato. Posicionar bottom-left, W=520 H=520, X=0 Y=560. 5) Hook texto: X=540 Y=140 W=500 fonte Fraunces SemiBold Italic 60pt cor #4B1C7D: 'Seu gato comeu menos esta semana?' (quebra após 'menos'). 6) Subtexto X=540 Y=480 fonte Inter 500 18pt cor #2E2E33: 'Pode ser dor escondida.'. 7) Sticker pill turquesa X=540 Y=540 W=440 H=36, fill #DFF3F5 border #00B8BD, texto Fraunces Italic 12pt #4B1C7D '40 min com a Dra. Nathalia · Especialista em felinos'. 8) Logo zenvet_horizontal.svg X=900 Y=1000 W=140. 9) Exportar PNG. Variação stories: re-empilhar verticalmente (foto em cima 60%, texto embaixo 40%)."
     },
     {
       "hook_type": "social_proof",
@@ -85,12 +237,18 @@
       "headline": "70% felina. Por escolha.",
       "description": "+1.200 gatos · 4,9★ Google · 8 anos com a Dra. Especialista em felinos.",
       "button_cta": "Enviar mensagem",
-      "visual_concept": "Foto real retrato Dra. Nathalia (asset /public/photos/dra-retrato.png — braços cruzados, jaleco branco, fundo roxo da marca). Composição em estilo 'ficha técnica' editorial: foto à esquerda (50% do frame), painel lateral direito com 3 stats em formato listagem grande. Frame full-bleed roxo deep #4B1C7D. Painel direito: '+1.200 / gatos atendidos', '4,9 ★ / no Google', '8 anos / com felinos' — números grandes em Fraunces 80pt cor turquesa-claro, labels em Inter 13pt branco/70%. Topo: logo Zenvet horizontal_white. Rodapé: faixa fina bege com 'AGENDE COM A DRA. NATHALIA · ZENVET · AMERICANA' em Inter 11pt letter-spacing alto.",
+      "asset_refs": {
+        "primary_photo": "dra_retrato",
+        "logo": "logo_horizontal_white",
+        "primary_photo_url": "https://zenvet-landing.vercel.app/photos/dra-retrato.png",
+        "logo_url": "https://zenvet-landing.vercel.app/logo/zenvet_horizontal_white.svg"
+      },
+      "visual_concept": "Foto real retrato Dra. Nathalia ('dra_retrato' — braços cruzados, jaleco branco, fundo roxo da marca). Composição em estilo 'ficha técnica' editorial: foto à esquerda (50% do frame), painel lateral direito com 3 stats em formato listagem grande. Frame full-bleed roxo deep #4B1C7D. Painel direito: '+1.200 / gatos atendidos', '4,9 ★ / no Google', '8 anos / com felinos' — números grandes em Fraunces 80pt cor turquesa-claro #8FD9DF, labels em Inter 13pt branco/70%. Topo: logo zenvet_horizontal_white. Rodapé: faixa fina bege com 'AGENDE COM A DRA. NATHALIA · ZENVET · AMERICANA' em Inter 11pt letter-spacing alto.",
       "recommended_format": "feed_portrait",
       "additional_formats": ["feed_square", "stories", "carousel"],
-      "midjourney_prompt": "NÃO É NECESSÁRIO — usar foto real /public/photos/dra-retrato.png. Caso queira variação: 'Brazilian female veterinarian in her 30s, professional confident pose, arms crossed, white lab coat, looking at camera with warm steady gaze, deep purple solid background #4B1C7D, studio editorial portrait lighting, sharp clarity, magazine cover quality --ar 4:5 --v 7 --style raw'",
-      "ideogram_prompt": "Editorial vertical 4:5 poster, fact-sheet style. Left half: studio portrait of veterinarian in white coat against deep purple. Right half: deep purple background with three large stats stacked vertically. Stat 1: huge serif italic '+1.200' in light turquoise, label below in small sans-serif white 'gatos atendidos'. Stat 2: '4,9 ★' large turquoise, label 'no Google'. Stat 3: '8 anos' large turquoise, label 'com felinos'. Top-left: white Zenvet horizontal logo. Bottom: thin cream beige strip with small uppercase letterspaced text 'AGENDE COM A DRA. NATHALIA · ZENVET · AMERICANA'. Brand colors purple #4B1C7D, turquoise light #8FD9DF, cream #F6EAD8.",
-      "canva_guide": "1) Frame 1080×1350. 2) BG fill #4B1C7D. 3) Importar /public/photos/dra-retrato.png. Posicionar X=0 Y=80 W=540 H=1190 (left half), crop top-center. 4) Logo zenvet_horizontal_white.svg X=580 Y=80 W=180. 5) Painel stats: Text Box X=580 Y=200 W=460. Stat 1 — número Fraunces SemiBold Italic 90pt cor #8FD9DF: '+1.200'; label abaixo Inter 500 14pt cor #FBF4E4 letter-spacing 0.1em UPPER: 'GATOS ATENDIDOS'. 6) Stat 2 X=580 Y=420: '4,9 ★' / 'NO GOOGLE'. 7) Stat 3 X=580 Y=640: '8 anos' (Fraunces 70pt) / 'COM FELINOS'. 8) Faixa rodapé X=0 Y=1280 W=1080 H=70 fill #F6EAD8. Texto Inter 600 11pt #4B1C7D letter-spacing 0.15em UPPER X=70: 'AGENDE COM A DRA. NATHALIA · ZENVET · AMERICANA / SP'. 9) Variação carrossel: 4 cards no formato 1080×1080 — Card 1 retrato Dra., Card 2 stat +1.200, Card 3 stat 4,9★, Card 4 CTA 'Agende no WhatsApp'."
+      "midjourney_prompt": "PRIMÁRIO — usar foto real (não regenerar): https://zenvet-landing.vercel.app/photos/dra-retrato.png\n\nALTERNATIVA (variação A/B):\n\n/imagine prompt: Brazilian female veterinarian in her 30s, professional confident pose, arms crossed, white lab coat, looking at camera with warm steady gaze, deep purple solid background #4B1C7D, studio editorial portrait lighting, sharp clarity, magazine cover quality --cref https://zenvet-landing.vercel.app/photos/dra-retrato.png --cw 90 --ar 4:5 --v 7 --style raw",
+      "ideogram_prompt": "Editorial vertical 4:5 poster, fact-sheet style.\n\nIMAGE INPUT (upload):\nhttps://zenvet-landing.vercel.app/photos/dra-retrato.png\n\nLayout:\n- Left 50%: studio portrait of veterinarian in white coat against deep purple #4B1C7D (the uploaded photo)\n- Right 50%: deep purple #4B1C7D background with three large stats stacked vertically:\n  - Stat 1: huge serif italic '+1.200' in light turquoise #8FD9DF, label below in small sans-serif white 70% 'GATOS ATENDIDOS' (uppercase, letter-spaced)\n  - Stat 2: '4,9 ★' in #8FD9DF, label 'NO GOOGLE'\n  - Stat 3: '8 anos' in #8FD9DF, label 'COM FELINOS'\n- Top-left: white Zenvet horizontal logo (https://zenvet-landing.vercel.app/logo/zenvet_horizontal_white.svg)\n- Bottom: thin cream beige strip #F6EAD8 with small uppercase letterspaced text 'AGENDE COM A DRA. NATHALIA · ZENVET · AMERICANA' in #4B1C7D\n\nBrand colors: deep purple #4B1C7D, turquoise light #8FD9DF, cream #F6EAD8. Fonts: Fraunces (display italic), Inter (body uppercase).",
+      "canva_guide": "1) Frame 1080×1350. 2) BG fill #4B1C7D. 3) Importar foto: https://zenvet-landing.vercel.app/photos/dra-retrato.png. Posicionar X=0 Y=80 W=540 H=1190 (left half), crop top-center. 4) Logo: https://zenvet-landing.vercel.app/logo/zenvet_horizontal_white.svg X=580 Y=80 W=180. 5) Painel stats: Text Box X=580 Y=200 W=460. Stat 1 — número Fraunces SemiBold Italic 90pt cor #8FD9DF: '+1.200'; label abaixo Inter 500 14pt cor #FBF4E4 letter-spacing 0.1em UPPER: 'GATOS ATENDIDOS'. 6) Stat 2 X=580 Y=420: '4,9 ★' / 'NO GOOGLE'. 7) Stat 3 X=580 Y=640: '8 anos' (Fraunces 70pt) / 'COM FELINOS'. 8) Faixa rodapé X=0 Y=1280 W=1080 H=70 fill #F6EAD8. Texto Inter 600 11pt #4B1C7D letter-spacing 0.15em UPPER X=70: 'AGENDE COM A DRA. NATHALIA · ZENVET · AMERICANA / SP'. 9) Variação carrossel: 4 cards 1080×1080 — Card 1 retrato Dra., Card 2 stat +1.200, Card 3 stat 4,9★, Card 4 CTA 'Agende no WhatsApp'."
     },
     {
       "hook_type": "urgencia",
@@ -100,12 +258,18 @@
       "headline": "Cães também: hora marcada.",
       "description": "Cães em Americana — hora marcada, sem fila, valor explicado antes de qualquer item.",
       "button_cta": "Enviar mensagem",
-      "visual_concept": "Foto real do depoimento da Katia Leite — cachorra Arlete (asset /public/photos/testimonials/arlete-katia-leite.webp — cachorrinha preta com lacinho roxo, expressão calma, ambiente de clínica). Composição split: foto à esquerda 60%, painel à direita 40% em fundo bege #F6EAD8. Painel direito: hook em Fraunces italic 36pt cor roxo-deep ('Cães também — agenda da semana, hora marcada.'), divisor turquesa, lista bullet 3 pontos: 'Hora marcada · Sem fila / Valor explicado antes / 40 min com a Dra.'. Sticker turquesa pequeno topo: '4 vagas terça-feira · Americana'. CTA pill no rodapé: 'Agende no WhatsApp →' em pill turquesa-deep.",
+      "asset_refs": {
+        "primary_photo": "testimonial_arlete",
+        "logo": "logo_horizontal",
+        "primary_photo_url": "https://zenvet-landing.vercel.app/photos/testimonials/arlete-katia-leite.webp",
+        "logo_url": "https://zenvet-landing.vercel.app/logo/zenvet_horizontal.svg"
+      },
+      "visual_concept": "Foto real do depoimento da Katia Leite — cachorra Arlete ('testimonial_arlete' — cachorrinha preta com lacinho roxo, expressão calma, ambiente de clínica). Composição split: foto à esquerda 60%, painel à direita 40% em fundo bege #F6EAD8. Painel direito: hook em Fraunces italic 36pt cor roxo-deep #4B1C7D ('Cães também — agenda da semana, hora marcada.'), divisor turquesa, lista bullet 3 pontos: 'Hora marcada · Sem fila / Valor explicado antes / 40 min com a Dra.'. Sticker turquesa pequeno topo: '4 vagas terça-feira · Americana'. CTA pill no rodapé: 'Agende no WhatsApp →' em pill turquesa-deep.",
       "recommended_format": "feed_square",
       "additional_formats": ["feed_portrait", "stories"],
-      "midjourney_prompt": "NÃO É NECESSÁRIO — usar foto real /public/photos/testimonials/arlete-katia-leite.webp. Caso queira variação: 'Friendly small mixed-breed black-and-tan dog wearing purple bow on head, calm expression, sitting on white tile floor of bright veterinary clinic, soft daylight, candid documentary photography, photorealistic --ar 1:1 --v 7'. Atenção: hospitais 24h da região (concorrentes) usam fotos de pastor alemão e golden retriever heroicos — diferenciar com SRD pequeno e calmo (mesma estética da Mariana com gato).",
-      "ideogram_prompt": "Square 1:1 editorial poster. Left 60%: photo of small black-and-tan dog with purple bow looking calmly at camera. Right 40%: cream beige #F6EAD8 background. Right panel content: top — small turquoise pill '4 vagas terça-feira · Americana'; middle — italic serif headline in deep purple 'Cães também — agenda da semana, hora marcada.'; turquoise horizontal divider; bullet list 'Hora marcada · Sem fila / Valor explicado antes / 40 min com a Dra.'; bottom — turquoise pill button 'Agende no WhatsApp →'. Bottom-right corner: small Zenvet logo in deep purple.",
-      "canva_guide": "1) Frame 1080×1080. 2) BG split: retângulo X=0 Y=0 W=648 H=1080 — preencher com /public/photos/testimonials/arlete-katia-leite.webp crop centro. 3) Retângulo X=648 Y=0 W=432 H=1080 fill #F6EAD8. 4) Sticker pill X=688 Y=80 W=350 H=32 fill #DFF3F5 border #00B8BD; texto Inter Medium 11pt #008185 UPPER letter-spacing 0.1em '4 VAGAS TERÇA-FEIRA · AMERICANA'. 5) Headline X=688 Y=160 W=350 fonte Fraunces SemiBold Italic 36pt cor #4B1C7D: 'Cães também — agenda da semana, hora marcada.'. 6) Divisor X=688 Y=440 W=80 H=2 fill #00B8BD. 7) Lista X=688 Y=480 fonte Inter 500 14pt cor #2E2E33 line-height 1.7: '✓ Hora marcada · sem fila\\n✓ Valor explicado antes\\n✓ 40 min com a Dra.'. 8) CTA pill X=688 Y=920 W=350 H=52 fill #4B1C7D rounded 999; texto Inter SemiBold 14pt branco letter-spacing 0.05em center: 'AGENDE NO WHATSAPP →'. 9) Logo zenvet_horizontal.svg pequeno X=920 Y=1000 W=130. 10) Para feed_portrait re-empilhar foto em cima 60% / painel embaixo 40%."
+      "midjourney_prompt": "PRIMÁRIO — usar foto real (não regenerar): https://zenvet-landing.vercel.app/photos/testimonials/arlete-katia-leite.webp\n\nALTERNATIVA — gerar variação MJ caso queira evitar uso da foto real:\n\n/imagine prompt: Friendly small mixed-breed black-and-tan dog wearing purple bow on head, calm expression, sitting on white tile floor of bright veterinary clinic, soft daylight, candid documentary photography, photorealistic --ar 1:1 --v 7 --style raw\n\nNOTA DE DIFERENCIAÇÃO: hospitais 24h da região (concorrentes) usam fotos de pastor alemão e golden retriever heroicos — diferenciar com SRD pequeno e calmo (mesma estética da Mariana com gato).",
+      "ideogram_prompt": "Square 1:1 editorial poster.\n\nIMAGE INPUT (upload):\nhttps://zenvet-landing.vercel.app/photos/testimonials/arlete-katia-leite.webp\n\nLayout:\n- Left 60%: photo of small black-and-tan dog with purple bow looking calmly at camera (uploaded image)\n- Right 40%: cream beige #F6EAD8 background\n- Right panel content (top to bottom):\n  - Small turquoise pill '4 vagas terça-feira · Americana' (background #DFF3F5, border #00B8BD, text #008185 uppercase, Inter Medium)\n  - Italic serif headline in deep purple #4B1C7D 'Cães também — agenda da semana, hora marcada.' (Fraunces, ~36pt feel)\n  - Turquoise horizontal divider 80×2 px\n  - Bullet list (Inter 14pt, graphite #2E2E33): '✓ Hora marcada · sem fila / ✓ Valor explicado antes / ✓ 40 min com a Dra.'\n  - CTA pill at bottom: deep purple #4B1C7D background, white Inter SemiBold text 'AGENDE NO WHATSAPP →'\n- Bottom-right corner: small Zenvet logo in deep purple (https://zenvet-landing.vercel.app/logo/zenvet_horizontal.svg)\n\nStyle: editorial, minimal, brand-aligned.",
+      "canva_guide": "1) Frame 1080×1080. 2) BG split: retângulo X=0 Y=0 W=648 H=1080 — preencher com https://zenvet-landing.vercel.app/photos/testimonials/arlete-katia-leite.webp crop centro. 3) Retângulo X=648 Y=0 W=432 H=1080 fill #F6EAD8. 4) Sticker pill X=688 Y=80 W=350 H=32 fill #DFF3F5 border #00B8BD; texto Inter Medium 11pt #008185 UPPER letter-spacing 0.1em '4 VAGAS TERÇA-FEIRA · AMERICANA'. 5) Headline X=688 Y=160 W=350 fonte Fraunces SemiBold Italic 36pt cor #4B1C7D: 'Cães também — agenda da semana, hora marcada.'. 6) Divisor X=688 Y=440 W=80 H=2 fill #00B8BD. 7) Lista X=688 Y=480 fonte Inter 500 14pt cor #2E2E33 line-height 1.7: '✓ Hora marcada · sem fila\\n✓ Valor explicado antes\\n✓ 40 min com a Dra.'. 8) CTA pill X=688 Y=920 W=350 H=52 fill #4B1C7D rounded 999; texto Inter SemiBold 14pt branco letter-spacing 0.05em center: 'AGENDE NO WHATSAPP →'. 9) Logo zenvet_horizontal.svg pequeno X=920 Y=1000 W=130. 10) Para feed_portrait re-empilhar foto em cima 60% / painel embaixo 40%."
     }
   ],
   "ab_test_guide": {
@@ -126,29 +290,44 @@
   },
   "total_pieces": 15,
   "production_notes": {
-    "assets_already_available": [
-      "/public/photos/dra-com-gato.png — Variação 1 (Dor)",
-      "/public/photos/dra-retrato.png — Variação 4 (Social Proof)",
-      "/public/photos/testimonials/arlete-katia-leite.webp — Variação 5 (Cães)"
+    "assets_already_available_with_urls": [
+      "Var 1 (Dor): https://zenvet-landing.vercel.app/photos/dra-com-gato.png",
+      "Var 4 (Social Proof): https://zenvet-landing.vercel.app/photos/dra-retrato.png",
+      "Var 5 (Cães): https://zenvet-landing.vercel.app/photos/testimonials/arlete-katia-leite.webp"
     ],
-    "assets_to_generate_via_midjourney": [
-      "Variação 2 (Resultado): tutora segurando gato em casa — usar prompt MJ ou substituir por foto real de Amanda da Silva / Amanda Carolina (em /public/photos/testimonials/) com permissão",
-      "Variação 3 (Curiosidade): close de gato editorial — usar prompt MJ"
+    "assets_with_alternatives": [
+      "Var 2 (Resultado): foto real https://zenvet-landing.vercel.app/photos/testimonials/gato-amanda-silva.webp OU https://zenvet-landing.vercel.app/photos/testimonials/xareu-amanda-carolina.webp — alternativa MJ disponível no prompt",
+      "Var 3 (Curiosidade): foto MJ (recomendado) OU close do Xareu https://zenvet-landing.vercel.app/photos/testimonials/xareu-amanda-carolina.webp adaptado"
     ],
+    "logos_with_urls": {
+      "horizontal_color": "https://zenvet-landing.vercel.app/logo/zenvet_horizontal.svg",
+      "horizontal_white": "https://zenvet-landing.vercel.app/logo/zenvet_horizontal_white.svg",
+      "icone_color": "https://zenvet-landing.vercel.app/logo/zenvet_icone.svg",
+      "icone_white": "https://zenvet-landing.vercel.app/logo/zenvet_icone_white.svg",
+      "vertical_color": "https://zenvet-landing.vercel.app/logo/zenvet_vertical.svg",
+      "vertical_white": "https://zenvet-landing.vercel.app/logo/zenvet_vertical_white.svg"
+    },
     "operator_workflow": [
-      "1) Gerar 2 imagens MJ (Variações 2 e 3) — ~30 min, 4 candidatos cada, escolher 1",
-      "2) Montar 5 frames mestres no Canva (1080×1350) seguindo canva_guide de cada variação — ~2h",
-      "3) Duplicar cada mestre em 1080×1080 e 1080×1920 com ajuste de layout — ~1h",
-      "4) Exportar PNG (Meta aceita PNG ou JPG; PNG melhor pra texto crisp)",
-      "5) Subir no Meta Ads Manager: 5 conjuntos de anúncios separados, audiência conforme S2 (geo Americana+SBO+NO, idade 25-55, interesses gatos+veterinária)",
-      "6) Pixel Meta + GTM já devem estar instalados na LP (pendência S1) — bloquear go-live até confirmação"
+      "1) Variação 3 (Curiosidade): gerar 1 imagem MJ com o prompt fornecido (~10 min, 4 candidatos, escolher 1) OU usar foto do Xareu adaptada",
+      "2) Decidir Var 2 (Resultado) — recomendo usar foto real de Amanda Silva ou Carolina (já estão no repo)",
+      "3) Montar 5 frames mestres no Canva (1080×1350) seguindo canva_guide de cada variação — ~2h. Importar fotos e logos via URL Vercel direto no Canva (drag-drop URL ou Upload from URL plugin)",
+      "4) Duplicar cada mestre em 1080×1080 e 1080×1920 com ajuste de layout — ~1h",
+      "5) Exportar PNG (Meta aceita PNG ou JPG; PNG melhor pra texto crisp)",
+      "6) Subir no Meta Ads Manager: 5 conjuntos de anúncios separados, audiência conforme S2 (geo Americana+SBO+NO, idade 25-55, interesses gatos+veterinária)",
+      "7) Pixel Meta + GTM já devem estar instalados na LP (pendência S1) — bloquear go-live até confirmação"
     ],
-    "carousel_extra": "Variação 4 (Social Proof) tem versão carrossel sugerida: 4 cards 1080×1080 (retrato Dra. → +1.200 → 4,9★ → CTA WhatsApp). Não conta no total_pieces dessa rodada — é teste futuro se a estática performar bem."
+    "carousel_extra": "Variação 4 (Social Proof) tem versão carrossel sugerida: 4 cards 1080×1080 (retrato Dra. → +1.200 → 4,9★ → CTA WhatsApp). Não conta no total_pieces dessa rodada — é teste futuro se a estática performar bem.",
+    "midjourney_image_reference_tips": [
+      "Use --cref <URL> para preservar identidade da Dra. Nathalia em variações geradas (--cw 80-100 = 80-100% de força do reference de personagem)",
+      "Use --sref <URL> para preservar estilo visual (paleta, iluminação) sem necessariamente o mesmo personagem",
+      "Use --iw 1.5 para aumentar peso do reference de imagem em uma composição com texto",
+      "Para Ideogram: ele aceita upload direto via URL no campo 'Image to Image' — cole o URL Vercel"
+    ]
   },
   "operator_decisions": [
-    "Aprovar prompts ou pedir ajuste em alguma variação?",
-    "Variação 2 (Resultado): preferir prompt MJ ou usar uma das fotos reais de testimonial (Amanda Silva / Carolina) com aspas reais já coletadas? Recomendo: foto real, mais autêntico — a copy é o depoimento literal da S3.",
-    "Variação 5 (Cães): manter Arlete (foto da Katia Leite) ou gerar MJ pra evitar exposição da tutora real? Recomendo: usar Arlete — Katia já deu review público, tem permissão implícita.",
-    "Vai exportar tudo (copy + briefing) numa planilha Sheets? Posso gerar agora ou esperar você montar os criativos primeiro."
+    "Aprovar prompts e seguir para produção?",
+    "Variação 2 (Resultado): Amanda Silva (gato com certificado) ou Amanda Carolina (Xareu)? Recomendo Carolina — foto mais limpa, gato em primeiro plano, fundo da própria identidade visual da clínica.",
+    "Variação 3 (Curiosidade): gerar MJ novo (mais editorial) ou adaptar foto do Xareu (mais barato e rápido)? Recomendo MJ — close-up de gato editorial é específico, e MJ entrega bem com o prompt fornecido.",
+    "Exportar tudo (copy + briefing visual) numa planilha Sheets agora ou após você produzir os criativos?"
   ]
 }
