@@ -2115,8 +2115,8 @@
         "status": "completed",
         "checkpoint": 0,
         "started_at": "2026-04-29T17:00:00Z",
-        "completed_at": "2026-04-29T17:00:00Z",
-        "version": 1
+        "completed_at": "2026-04-29T22:12:00.763457Z",
+        "version": 2
       },
       "ee-s3-copy-anuncios": {
         "status": "completed",
@@ -2336,6 +2336,12 @@
       "skill": "ee-s3-criativos-anuncios",
       "action": "completed",
       "note": "5 variações de criativo (Dor / Resultado / Curiosidade / Social Proof / Urgência cães) — 15 peças totais (3 formatos cada). 3 reaproveitam fotos já produzidas, 2 precisam MJ. Briefing inclui prompts MJ+Ideogram, guia Canva passo-a-passo, plano A/B com 5 conjuntos e KPIs ancorados no diagnóstico S2."
+    },
+    {
+      "ts": "2026-04-29T22:12:00.763457Z",
+      "skill": "ee-s3-landing-page",
+      "action": "updated",
+      "note": "Output canônico sincronizado com versão LIVE deployada (https://zenvet-landing.vercel.app). Estrutura agora reflete os 12 componentes finais: Header, Hero+stats+credential_card, Problem, dra_nathalia (nova seção de autoridade), Solution, HowItWorks, Deliverables, SocialProof com 3 depoimentos reais Google + fotos, ForDogs, FAQ, FinalCTA, LocationMap. Schema v2 da skill atualizado pra suportar eyebrows, hero stats, credential_card, credentials timeline, e testimonials no formato rico (photo/source/when/rating). v2."
     }
   ],
   "page_audit": {

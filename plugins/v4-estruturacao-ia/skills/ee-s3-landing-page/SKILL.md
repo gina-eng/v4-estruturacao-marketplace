@@ -41,13 +41,19 @@ Consulte `references/copy-patterns-lp.md` para padrões de copy de alta convers�
 
 ### Copy completa (seção por seção)
 
-**HERO:** Headline (máx. 8 palavras), subheadline (1-2 frases), CTA primário, CTA secundário
-**PROBLEMA:** 3 dores do ICP (título + 1 frase de empatia cada)
-**SOLUÇÃO:** 3-4 benefícios com ícone sugerido, conectados ao PUV
-**COMO FUNCIONA:** 3 passos simples (título + 1 frase)
+Toda seção pode ter `eyebrow` opcional (texto pequeno acima do headline, estilo "· A profissional" ou sticker rounded — ajuda hierarquia tipográfica).
+
+**HERO:** Headline (máx. 8 palavras), subheadline (1-2 frases), CTA primário, CTA secundário, opcional `stats[]` (3-4 números) e `credential_card` (nome + CRMV/credencial flutuante sobre a foto)
+**PROBLEMA:** 3 cards de dor (título curto + 1 frase de empatia cada). Recomendo formato "Sem X / Sem Y / Sem Z" ou similar, em vez de listar dores genéricas.
+**DRA./PROFISSIONAL (opcional `dra_nathalia` ou `authority`):** Seção dedicada de autoridade quando há um profissional de marca. Inclui `credentials[]` (timeline ano + título de formação) e CTA. Recomendado para clínicas, consultórios e prestadores de serviço pessoa-física.
+**SOLUÇÃO:** 3-4 benefícios com ícone sugerido (Lucide/Heroicons), conectados ao PUV
+**COMO FUNCIONA:** 3-4 passos simples (título + 1 frase)
 **ENTREGÁVEIS:** Lista principal com benefício de cada
-**PROVA SOCIAL:** Estrutura para 2-3 depoimentos + números de impacto
-**FAQ:** 5 objeções mais comuns do ICP com respostas que vendem
+**PROVA SOCIAL:** Depoimentos no formato simples (`name`/`role`/`text`) ou rico (`photo`, `photo_caption`, `source` ex 'Google Reviews', `when` ex '6 meses atrás', `rating` 1-5, `neighborhood`, `pet`). Quando há fotos reais, prefira o formato rico — converte mais. Stats podem ficar no `social_proof.stats[]` OU inline no hero (`sections[0].stats`); evite duplicar.
+**FOR_DOGS / SECUNDÁRIO (opcional):** Callout para audiência secundária quando o foco é nicho (ex: clínica especialista em gato que também atende cão).
+**FAQ:** 5+ objeções mais comuns do ICP com respostas que vendem
+**LOCATION (opcional):** Embed Google Maps + card de contato. Recomendado para negócios físicos.
+**FINAL CTA:** Headline emocional + WhatsApp button. Pode ter eyebrow.
 **CTA FINAL:** Headline de urgência + subtítulo de reassurance + botão
 
 **META / SEO:** Title tag (máx. 60 chars), meta description (máx. 155 chars), OG tags

@@ -26,12 +26,53 @@
             "enum": [
               "hero",
               "problem",
+              "dra_nathalia",
               "solution",
               "how_it_works",
               "deliverables",
-              "final_cta"
+              "social_proof",
+              "for_dogs",
+              "faq",
+              "final_cta",
+              "location"
             ],
-            "description": "Identificador da seção"
+            "description": "Identificador da seção. Aceita seções extras além do core (dra_nathalia/authority, for_dogs, location/map) para LPs mais ricas."
+          },
+          "eyebrow": {
+            "type": "string",
+            "description": "Texto pequeno acima do headline (estilo eyebrow/sticker — ex: '· A profissional')."
+          },
+          "stats": {
+            "type": "array",
+            "description": "Stats inline da seção (ex: hero stats — alternativa a social_proof.stats).",
+            "items": {
+              "type": "object",
+              "required": ["number", "label"],
+              "properties": {
+                "number": { "type": "string" },
+                "label": { "type": "string" }
+              }
+            }
+          },
+          "credential_card": {
+            "type": "object",
+            "description": "Card flutuante com credencial (ex: nome do profissional + CRMV).",
+            "properties": {
+              "name": { "type": "string" },
+              "role": { "type": "string" }
+            }
+          },
+          "credentials": {
+            "type": "array",
+            "description": "Timeline de credenciais (formato 'year' + 'title' — usado em seções de autoridade).",
+            "items": {
+              "type": "object",
+              "required": ["year", "title"],
+              "properties": {
+                "year": { "type": "string" },
+                "title": { "type": "string" }
+              }
+            }
           },
           "headline": {
             "type": "string",
@@ -164,18 +205,16 @@
     "social_proof": {
       "type": "object",
       "required": [
-        "testimonials",
-        "stats"
+        "testimonials"
       ],
       "properties": {
         "testimonials": {
           "type": "array",
-          "description": "Depoimentos de clientes (reais ou placeholders).",
+          "description": "Depoimentos de clientes (reais ou placeholders). Aceita formato simples (name/role/text) ou rico (com photo, source, when, rating, neighborhood, pet, photo_caption).",
           "items": {
             "type": "object",
             "required": [
               "name",
-              "role",
               "text"
             ],
             "properties": {
@@ -184,11 +223,41 @@
               },
               "role": {
                 "type": "string",
-                "description": "Cargo ou contexto da pessoa"
+                "description": "Cargo ou contexto da pessoa (opcional — pode ser derivado de source/when/neighborhood)"
               },
               "text": {
                 "type": "string",
                 "description": "Texto do depoimento"
+              },
+              "photo": {
+                "type": "string",
+                "description": "Caminho relativo da foto do depoimento (ex: /photos/testimonials/x.webp)"
+              },
+              "photo_caption": {
+                "type": "string",
+                "description": "Legenda da foto (ex: 'Arlete · cachorrinha levada para exame')"
+              },
+              "source": {
+                "type": "string",
+                "description": "Fonte do depoimento (ex: 'Google Reviews', 'Google · Local Guide')"
+              },
+              "when": {
+                "type": "string",
+                "description": "Quando foi escrito (ex: '6 meses atrás')"
+              },
+              "rating": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 5,
+                "description": "Nota em estrelas (1-5)"
+              },
+              "neighborhood": {
+                "type": "string",
+                "description": "Bairro/cidade da pessoa"
+              },
+              "pet": {
+                "type": "string",
+                "description": "Nome e raça/idade do pet (ex: 'Mel · Siamês, 4 anos')"
               }
             }
           }
