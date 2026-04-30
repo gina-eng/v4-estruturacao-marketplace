@@ -4698,10 +4698,22 @@ const R = {
 
   let h = '';
 
-  // ─── PDF button + wrapper open ───
-  h += '<div style="display:flex;justify-content:flex-end;gap:.5rem;margin-bottom:1rem" class="no-print">'
-    + '<button id="mm-pdf-btn" onclick="exportManualMarcaPDF()" style="display:inline-flex;align-items:center;gap:.5rem;background:'+PURPLE+';color:#fff;border:none;padding:.625rem 1.125rem;border-radius:8px;font-family:Inter,sans-serif;font-weight:600;font-size:.875rem;cursor:pointer;transition:transform .1s,box-shadow .15s;box-shadow:0 1px 3px rgba(0,0,0,.1)" onmouseover="this.style.transform=\'translateY(-1px)\';this.style.boxShadow=\'0 4px 10px rgba(75,28,125,.25)\'" onmouseout="this.style.transform=\'\';this.style.boxShadow=\'0 1px 3px rgba(0,0,0,.1)\'">&#x2B07; Exportar PDF</button>'
-    + '</div>';
+  // ─── PDF button + Web link + wrapper open ───
+  // Se houver manual_pdf_url no output canônico, usa link direto pro PDF hospedado
+  // (gerado a partir do /marca apresentação web). Senão, fallback para html2pdf.
+  h += '<div style="display:flex;justify-content:flex-end;gap:.5rem;margin-bottom:1rem;flex-wrap:wrap" class="no-print">';
+
+  if (d.manual_web_url) {
+    h += '<a href="'+E(d.manual_web_url)+'" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.5rem;background:'+TURQ+';color:#fff;text-decoration:none;padding:.625rem 1.125rem;border-radius:8px;font-family:Inter,sans-serif;font-weight:600;font-size:.875rem;transition:transform .1s,box-shadow .15s;box-shadow:0 1px 3px rgba(0,0,0,.1)" onmouseover="this.style.transform=\'translateY(-1px)\';this.style.boxShadow=\'0 4px 10px rgba(0,184,189,.3)\'" onmouseout="this.style.transform=\'\';this.style.boxShadow=\'0 1px 3px rgba(0,0,0,.1)\'">&#x1F4FA; Ver apresentação web</a>';
+  }
+
+  if (d.manual_pdf_url) {
+    h += '<a href="'+E(d.manual_pdf_url)+'" download target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.5rem;background:'+PURPLE+';color:#fff;text-decoration:none;padding:.625rem 1.125rem;border-radius:8px;font-family:Inter,sans-serif;font-weight:600;font-size:.875rem;transition:transform .1s,box-shadow .15s;box-shadow:0 1px 3px rgba(0,0,0,.1)" onmouseover="this.style.transform=\'translateY(-1px)\';this.style.boxShadow=\'0 4px 10px rgba(75,28,125,.25)\'" onmouseout="this.style.transform=\'\';this.style.boxShadow=\'0 1px 3px rgba(0,0,0,.1)\'">&#x2B07; Baixar PDF</a>';
+  } else {
+    h += '<button id="mm-pdf-btn" onclick="exportManualMarcaPDF()" style="display:inline-flex;align-items:center;gap:.5rem;background:'+PURPLE+';color:#fff;border:none;padding:.625rem 1.125rem;border-radius:8px;font-family:Inter,sans-serif;font-weight:600;font-size:.875rem;cursor:pointer;transition:transform .1s,box-shadow .15s;box-shadow:0 1px 3px rgba(0,0,0,.1)" onmouseover="this.style.transform=\'translateY(-1px)\';this.style.boxShadow=\'0 4px 10px rgba(75,28,125,.25)\'" onmouseout="this.style.transform=\'\';this.style.boxShadow=\'0 1px 3px rgba(0,0,0,.1)\'">&#x2B07; Exportar PDF</button>';
+  }
+
+  h += '</div>';
   h += '<div id="mm-content-wrapper">';
 
   // ─── Top ───

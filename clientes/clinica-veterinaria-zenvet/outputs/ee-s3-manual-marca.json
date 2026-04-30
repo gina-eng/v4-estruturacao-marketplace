@@ -71,14 +71,39 @@
         "axis_y": "Commodity/Preço → Premium/Humanizado",
         "client_position": "NE",
         "competitors": [
-          { "name": "Zenvet", "quadrant": "NE", "is_client": true },
-          { "name": "Concorrente felina orgânica (não nomeada)", "quadrant": "NE parcial — sem digital" },
-          { "name": "LM+ Hospital Veterinário", "quadrant": "NO" },
-          { "name": "Riedog (oncologia)", "quadrant": "NO" },
-          { "name": "Cantinho do Mascote", "quadrant": "SO" },
-          { "name": "Shop Dog 24h", "quadrant": "SO" },
-          { "name": "Xodog Saúde Animal", "quadrant": "SO" },
-          { "name": "Clínica Meu Pet SBO (pública)", "quadrant": "SO" }
+          {
+            "name": "Zenvet",
+            "quadrant": "NE",
+            "is_client": true
+          },
+          {
+            "name": "Concorrente felina orgânica (não nomeada)",
+            "quadrant": "NE parcial — sem digital"
+          },
+          {
+            "name": "LM+ Hospital Veterinário",
+            "quadrant": "NO"
+          },
+          {
+            "name": "Riedog (oncologia)",
+            "quadrant": "NO"
+          },
+          {
+            "name": "Cantinho do Mascote",
+            "quadrant": "SO"
+          },
+          {
+            "name": "Shop Dog 24h",
+            "quadrant": "SO"
+          },
+          {
+            "name": "Xodog Saúde Animal",
+            "quadrant": "SO"
+          },
+          {
+            "name": "Clínica Meu Pet SBO (pública)",
+            "quadrant": "SO"
+          }
         ]
       },
       "puv": "A Zenvet combina formação felina declarada da Dra. Nathalia (pós-graduanda em clínica e cirurgia com ênfase em medicina felina) com acompanhamento ativo pós-consulta no WhatsApp e orçamento aprovado item a item para resolver a ansiedade da tutora de gato em decidir bem com o pet que ela trata como filho da casa, eliminando a conta surpresa do hospital 24h e o atendimento genérico que não diferencia gato de cachorro."
@@ -107,9 +132,18 @@
       "anti_persona": {
         "description": "Perfis que NÃO devem ser atendidos ativamente — drenam margem, geram churn ou exigem política que quebra o posicionamento premium.",
         "profiles": [
-          { "label": "Caçador de preço — 'Consulta R$70'", "redirect": "Loíse responde com valor sem desconto: 'Nossa consulta especialista começa em R$180 — o que inclui é diferente do plano R$70 dos hospitais 24h.'" },
-          { "label": "Emergência única sem vínculo", "redirect": "Mensagem automática direciona para hospitais 24h parceiros." },
-          { "label": "Tutor 'Dr. Google' de controle total", "redirect": "Não atendemos ativamente — mina autoridade técnica da Nathalia." }
+          {
+            "label": "Caçador de preço — 'Consulta R$70'",
+            "redirect": "Loíse responde com valor sem desconto: 'Nossa consulta especialista começa em R$180 — o que inclui é diferente do plano R$70 dos hospitais 24h.'"
+          },
+          {
+            "label": "Emergência única sem vínculo",
+            "redirect": "Mensagem automática direciona para hospitais 24h parceiros."
+          },
+          {
+            "label": "Tutor 'Dr. Google' de controle total",
+            "redirect": "Não atendemos ativamente — mina autoridade técnica da Nathalia."
+          }
         ]
       },
       "buyer_journey_summary": "6 estágios mapeados em ee-s1-persona-icp: Gatilho (mesmo dia, gato esconde dor) → Consideração (3-7 dias, vazamento crítico do funil) → Decisão/primeiro contato (24h, WhatsApp) → Primeira visita (40min consulta, momento da verdade) → Pós-consulta (D+1 mensagem da Nathalia, fideliza) → Retenção+advocacy (indicação orgânica, motor atual de aquisição)."
@@ -128,13 +162,41 @@
   "block2_verbal_identity": {
     "personality": {
       "scales": [
-        { "trait_low": "Formal", "trait_high": "Casual", "position": 4 },
-        { "trait_low": "Sério", "trait_high": "Bem-humorado", "position": 5 },
-        { "trait_low": "Técnico", "trait_high": "Coloquial", "position": 5 },
-        { "trait_low": "Reservado", "trait_high": "Caloroso", "position": 7 },
-        { "trait_low": "Tradicional", "trait_high": "Contemporâneo", "position": 7 },
-        { "trait_low": "Neutro", "trait_high": "Opinativo", "position": 6 },
-        { "trait_low": "Discreto", "trait_high": "Expressivo", "position": 5 }
+        {
+          "trait_low": "Formal",
+          "trait_high": "Casual",
+          "position": 4
+        },
+        {
+          "trait_low": "Sério",
+          "trait_high": "Bem-humorado",
+          "position": 5
+        },
+        {
+          "trait_low": "Técnico",
+          "trait_high": "Coloquial",
+          "position": 5
+        },
+        {
+          "trait_low": "Reservado",
+          "trait_high": "Caloroso",
+          "position": 7
+        },
+        {
+          "trait_low": "Tradicional",
+          "trait_high": "Contemporâneo",
+          "position": 7
+        },
+        {
+          "trait_low": "Neutro",
+          "trait_high": "Opinativo",
+          "position": 6
+        },
+        {
+          "trait_low": "Discreto",
+          "trait_high": "Expressivo",
+          "position": 5
+        }
       ],
       "archetype_applied": "O Cuidador na voz manifesta-se em frases que validam a preocupação do tutor antes de dar a solução ('entendo que isso preocupe...'). O Sábio manifesta-se em frases que explicam o porquê ('gato esconde dor por instinto, então...'). O par Cuidador+Sábio resulta em uma voz que cuida sem ser piegas e ensina sem ser arrogante.",
       "as_a_person": "Se a Zenvet fosse uma pessoa, seria a Dra. Nathalia em pessoa — uma mulher 30-40 anos, cacheada, óculos discretos, vestindo jaleco branco sobre camiseta de algodão. Em uma festa, escutaria mais do que falaria, mas quando perguntada sobre seu trabalho, falaria por horas com clareza e exemplos concretos. Não usa jargão para impressionar. Lê livros de medicina felina e biografias. No celular, segue perfis científicos no Instagram e responde mensagens de tutoras pacientes em D+1 sem reclamar. Acredita em explicar o porquê e respeitar o limite financeiro de cada família — odeia veterinário que cobra exame que não faz sentido."
@@ -163,26 +225,104 @@
         }
       ],
       "channel_variations": [
-        { "channel": "Instagram (feed e Reels)", "adaptation": "Casual, educativo, emocional. Começa com o problema que o tutor vive (vômito, comportamento) e só depois traz a explicação técnica. Caption respirada, máximo 4 linhas por bloco." },
-        { "channel": "Google Ads (search)", "adaptation": "Funcional, intenção informacional. Headline com keyword + diferencial específico ('veterinário gatos americana — consulta especialista 40min')." },
-        { "channel": "Meta Ads (anúncios)", "adaptation": "Emocional + território proprietário. Headline com mensagem-chave ('Seu gato merece uma veterinária que entende de felinos'). Sub-headline com diferencial." },
-        { "channel": "WhatsApp (Loíse)", "adaptation": "Consultivo, paciente, resolutivo. Saudação que reforça especialização ('Aqui é a Loíse da Zenvet, clínica especializada em gatos e cães em Americana. Quem é seu pet?'). Resposta em até 30 min no horário comercial." },
-        { "channel": "WhatsApp (Nathalia D+1)", "adaptation": "Pergunta aberta sobre o paciente pelo nome ('Como o Simba está hoje? Conseguiu comer?'). Sem call-to-action comercial." },
-        { "channel": "Google Meu Negócio (GMB)", "adaptation": "Institucional + SEO-friendly. Descrição curta com 'especialista em felinos' + Americana + transparência. Resposta a reviews humanizada e específica ao paciente." }
+        {
+          "channel": "Instagram (feed e Reels)",
+          "adaptation": "Casual, educativo, emocional. Começa com o problema que o tutor vive (vômito, comportamento) e só depois traz a explicação técnica. Caption respirada, máximo 4 linhas por bloco."
+        },
+        {
+          "channel": "Google Ads (search)",
+          "adaptation": "Funcional, intenção informacional. Headline com keyword + diferencial específico ('veterinário gatos americana — consulta especialista 40min')."
+        },
+        {
+          "channel": "Meta Ads (anúncios)",
+          "adaptation": "Emocional + território proprietário. Headline com mensagem-chave ('Seu gato merece uma veterinária que entende de felinos'). Sub-headline com diferencial."
+        },
+        {
+          "channel": "WhatsApp (Loíse)",
+          "adaptation": "Consultivo, paciente, resolutivo. Saudação que reforça especialização ('Aqui é a Loíse da Zenvet, clínica especializada em gatos e cães em Americana. Quem é seu pet?'). Resposta em até 30 min no horário comercial."
+        },
+        {
+          "channel": "WhatsApp (Nathalia D+1)",
+          "adaptation": "Pergunta aberta sobre o paciente pelo nome ('Como o Simba está hoje? Conseguiu comer?'). Sem call-to-action comercial."
+        },
+        {
+          "channel": "Google Meu Negócio (GMB)",
+          "adaptation": "Institucional + SEO-friendly. Descrição curta com 'especialista em felinos' + Americana + transparência. Resposta a reviews humanizada e específica ao paciente."
+        }
       ],
       "say_dont_say": [
-        { "situation": "Apresentação da clínica", "say": "Clínica veterinária especialista em felinos de Americana — atendemos gatos e cães com hora marcada, transparência de preço e acompanhamento pós-consulta.", "dont_say": "Clínica veterinária para qualquer pet com excelência!", "reason": "Especialização em felinos é o território proprietário. 'Qualquer pet' apaga o diferencial." },
-        { "situation": "Resposta a 'quanto custa?' no WhatsApp", "say": "A consulta especialista é R$ 220, dura 40 min com a Dra. Nathalia e inclui acompanhamento pelo WhatsApp depois. Quer que eu agende?", "dont_say": "O valor da consulta é a partir de R$ 220, sujeito a verificação no momento do atendimento.", "reason": "Clareza absoluta de preço é uma das 3 promessas centrais. 'Sujeito a' soa contratual." },
-        { "situation": "Conteúdo educativo sobre comportamento felino", "say": "Ele está comendo menos — pode ser dor, gato esconde por instinto. Vale uma consulta para investigar.", "dont_say": "Hiporexia em felinos exige investigação clínica imediata e eventual ultrassonografia abdominal.", "reason": "Tutor não é veterinário. Termo técnico sem tradução afasta." },
-        { "situation": "Acompanhamento D+1 no WhatsApp", "say": "Como o Simba está hoje? Conseguiu comer alguma coisa?", "dont_say": "Olá! Tudo bem? Aproveite 10% off na próxima consulta!", "reason": "WhatsApp é canal de cuidado, não de vendas." },
-        { "situation": "Comunicação para tutor de cachorro", "say": "Atendemos cães também — com hora marcada, sem fila e valor explicado antes.", "dont_say": "Atendemos qualquer pet com excelência!", "reason": "Mensagem específica para Carlos preserva o território felino sem perdê-lo na comunicação." },
-        { "situation": "Resposta a objeção 'já fui explorada em outra clínica'", "say": "Sinto muito que passou por isso. Aqui, a Dra. Nathalia explica cada procedimento antes de fazer e mostra o valor estimado. Você aprova item a item antes de executar.", "dont_say": "Aqui a gente é honesto.", "reason": "Promessa específica ancora confiança. 'Honesto' é palavra vazia que qualquer um diz." },
-        { "situation": "Comunicação de emergência (fora do horário)", "say": "No momento estamos fechados — em emergência, recomendamos [hospital parceiro]. Volta a falar com a gente quando o pet estabilizar para um check-up.", "dont_say": "Não atendemos emergência. Procure outro lugar.", "reason": "Direcionamento humano + ponte para vínculo futuro mantém relacionamento." },
-        { "situation": "Apresentação de diferencial", "say": "Consulta de 40 min com a Dra. Nathalia, pós-graduanda em medicina felina, com orçamento aprovado antes de qualquer exame.", "dont_say": "Atendimento humanizado e de qualidade.", "reason": "Específico vence genérico. 'Humanizado' qualquer clínica diz; '40 min com a Nathalia' só a Zenvet." },
-        { "situation": "Reposta a review positivo", "say": "Obrigada, [Nome]! Que alegria saber que o [paciente] está bem. Qualquer coisa, é só chamar a Nathalia no WhatsApp.", "dont_say": "Obrigada pela avaliação! 🐾❤️✨", "reason": "Personalização vence emoji. Cluster de emoji parece automático." },
-        { "situation": "Convite para agendamento em conteúdo", "say": "Se o seu gato está diferente há mais de 3 dias, vale agendar. WhatsApp na bio.", "dont_say": "Agende já! Não perca tempo!", "reason": "Conselho consultivo respeita autonomia. Pressão soa de venda agressiva." },
-        { "situation": "Comunicação sobre preço premium", "say": "A consulta especialista é R$ 220 — inclui 40 min com a Dra. Nathalia, exame completo, plano de tratamento e acompanhamento no WhatsApp.", "dont_say": "Consulta a R$ 220 — barato!", "reason": "Justificativa do preço ancora valor. 'Barato' para Mariana soa como a consulta R$70 do 24h." },
-        { "situation": "Headline de anúncio Meta", "say": "Seu gato merece uma veterinária que entende de felinos — não de bicho em geral.", "dont_say": "A melhor clínica veterinária da região!", "reason": "Mensagem-chave ativa território proprietário. 'A melhor' é claim genérico não defensável." }
+        {
+          "situation": "Apresentação da clínica",
+          "say": "Clínica veterinária especialista em felinos de Americana — atendemos gatos e cães com hora marcada, transparência de preço e acompanhamento pós-consulta.",
+          "dont_say": "Clínica veterinária para qualquer pet com excelência!",
+          "reason": "Especialização em felinos é o território proprietário. 'Qualquer pet' apaga o diferencial."
+        },
+        {
+          "situation": "Resposta a 'quanto custa?' no WhatsApp",
+          "say": "A consulta especialista é R$ 220, dura 40 min com a Dra. Nathalia e inclui acompanhamento pelo WhatsApp depois. Quer que eu agende?",
+          "dont_say": "O valor da consulta é a partir de R$ 220, sujeito a verificação no momento do atendimento.",
+          "reason": "Clareza absoluta de preço é uma das 3 promessas centrais. 'Sujeito a' soa contratual."
+        },
+        {
+          "situation": "Conteúdo educativo sobre comportamento felino",
+          "say": "Ele está comendo menos — pode ser dor, gato esconde por instinto. Vale uma consulta para investigar.",
+          "dont_say": "Hiporexia em felinos exige investigação clínica imediata e eventual ultrassonografia abdominal.",
+          "reason": "Tutor não é veterinário. Termo técnico sem tradução afasta."
+        },
+        {
+          "situation": "Acompanhamento D+1 no WhatsApp",
+          "say": "Como o Simba está hoje? Conseguiu comer alguma coisa?",
+          "dont_say": "Olá! Tudo bem? Aproveite 10% off na próxima consulta!",
+          "reason": "WhatsApp é canal de cuidado, não de vendas."
+        },
+        {
+          "situation": "Comunicação para tutor de cachorro",
+          "say": "Atendemos cães também — com hora marcada, sem fila e valor explicado antes.",
+          "dont_say": "Atendemos qualquer pet com excelência!",
+          "reason": "Mensagem específica para Carlos preserva o território felino sem perdê-lo na comunicação."
+        },
+        {
+          "situation": "Resposta a objeção 'já fui explorada em outra clínica'",
+          "say": "Sinto muito que passou por isso. Aqui, a Dra. Nathalia explica cada procedimento antes de fazer e mostra o valor estimado. Você aprova item a item antes de executar.",
+          "dont_say": "Aqui a gente é honesto.",
+          "reason": "Promessa específica ancora confiança. 'Honesto' é palavra vazia que qualquer um diz."
+        },
+        {
+          "situation": "Comunicação de emergência (fora do horário)",
+          "say": "No momento estamos fechados — em emergência, recomendamos [hospital parceiro]. Volta a falar com a gente quando o pet estabilizar para um check-up.",
+          "dont_say": "Não atendemos emergência. Procure outro lugar.",
+          "reason": "Direcionamento humano + ponte para vínculo futuro mantém relacionamento."
+        },
+        {
+          "situation": "Apresentação de diferencial",
+          "say": "Consulta de 40 min com a Dra. Nathalia, pós-graduanda em medicina felina, com orçamento aprovado antes de qualquer exame.",
+          "dont_say": "Atendimento humanizado e de qualidade.",
+          "reason": "Específico vence genérico. 'Humanizado' qualquer clínica diz; '40 min com a Nathalia' só a Zenvet."
+        },
+        {
+          "situation": "Reposta a review positivo",
+          "say": "Obrigada, [Nome]! Que alegria saber que o [paciente] está bem. Qualquer coisa, é só chamar a Nathalia no WhatsApp.",
+          "dont_say": "Obrigada pela avaliação! 🐾❤️✨",
+          "reason": "Personalização vence emoji. Cluster de emoji parece automático."
+        },
+        {
+          "situation": "Convite para agendamento em conteúdo",
+          "say": "Se o seu gato está diferente há mais de 3 dias, vale agendar. WhatsApp na bio.",
+          "dont_say": "Agende já! Não perca tempo!",
+          "reason": "Conselho consultivo respeita autonomia. Pressão soa de venda agressiva."
+        },
+        {
+          "situation": "Comunicação sobre preço premium",
+          "say": "A consulta especialista é R$ 220 — inclui 40 min com a Dra. Nathalia, exame completo, plano de tratamento e acompanhamento no WhatsApp.",
+          "dont_say": "Consulta a R$ 220 — barato!",
+          "reason": "Justificativa do preço ancora valor. 'Barato' para Mariana soa como a consulta R$70 do 24h."
+        },
+        {
+          "situation": "Headline de anúncio Meta",
+          "say": "Seu gato merece uma veterinária que entende de felinos — não de bicho em geral.",
+          "dont_say": "A melhor clínica veterinária da região!",
+          "reason": "Mensagem-chave ativa território proprietário. 'A melhor' é claim genérico não defensável."
+        }
       ]
     },
     "editorial_guidelines": {
@@ -216,27 +356,84 @@
         ]
       },
       "official_glossary": [
-        { "term": "Felino", "definition": "Em vez de 'gatos' quando o foco é técnico ou de posicionamento." },
-        { "term": "Tutor / tutora", "definition": "Em vez de 'dono'. Reflete o vínculo (filho da casa)." },
-        { "term": "Paciente", "definition": "Em vez de 'animal' ou 'pet' em comunicação clínica. Sempre que souber, chamar pelo nome." },
-        { "term": "Consulta especialista", "definition": "Em vez de 'consulta'. Reforça os 40 min e a formação felina declarada." },
-        { "term": "Acompanhamento (pós-consulta)", "definition": "Em vez de 'follow-up' ou 'pós-venda'. Termo humano e sistematizado." },
-        { "term": "Orçamento aprovado item a item", "definition": "Em vez de 'preço fechado'. Comunica o protocolo de transparência." },
-        { "term": "Esconde dor por instinto", "definition": "Frase-chave educativa em conteúdo top-of-funnel sobre comportamento felino." },
-        { "term": "Ambiente preparado para felinos", "definition": "Em vez de 'cat friendly' (jargão). Quando referir estrutura física." },
-        { "term": "Medicina felina", "definition": "Em vez de 'tratamento de gato'. Termo correto, indexável em SEO." }
+        {
+          "term": "Felino",
+          "definition": "Em vez de 'gatos' quando o foco é técnico ou de posicionamento."
+        },
+        {
+          "term": "Tutor / tutora",
+          "definition": "Em vez de 'dono'. Reflete o vínculo (filho da casa)."
+        },
+        {
+          "term": "Paciente",
+          "definition": "Em vez de 'animal' ou 'pet' em comunicação clínica. Sempre que souber, chamar pelo nome."
+        },
+        {
+          "term": "Consulta especialista",
+          "definition": "Em vez de 'consulta'. Reforça os 40 min e a formação felina declarada."
+        },
+        {
+          "term": "Acompanhamento (pós-consulta)",
+          "definition": "Em vez de 'follow-up' ou 'pós-venda'. Termo humano e sistematizado."
+        },
+        {
+          "term": "Orçamento aprovado item a item",
+          "definition": "Em vez de 'preço fechado'. Comunica o protocolo de transparência."
+        },
+        {
+          "term": "Esconde dor por instinto",
+          "definition": "Frase-chave educativa em conteúdo top-of-funnel sobre comportamento felino."
+        },
+        {
+          "term": "Ambiente preparado para felinos",
+          "definition": "Em vez de 'cat friendly' (jargão). Quando referir estrutura física."
+        },
+        {
+          "term": "Medicina felina",
+          "definition": "Em vez de 'tratamento de gato'. Termo correto, indexável em SEO."
+        }
       ],
       "forbidden_terms": [
-        { "term": "peludo / peludinho", "use_instead": "felino, gato, paciente (ou nome quando souber)" },
-        { "term": "dono", "use_instead": "tutor / tutora" },
-        { "term": "bichinho / bichano", "use_instead": "gato, pet, paciente, nome do paciente" },
-        { "term": "pet em geral / qualquer pet", "use_instead": "felinos e cães (ou felino quando para Mariana)" },
-        { "term": "consulta básica", "use_instead": "consulta especialista" },
-        { "term": "promoção", "use_instead": "pacote (anual, castração, vacinação)" },
-        { "term": "preço fechado", "use_instead": "orçamento aprovado item a item" },
-        { "term": "follow-up", "use_instead": "acompanhamento" },
-        { "term": "consultinha / castraçãozinha (diminutivos infantilizantes)", "use_instead": "consulta, castração (sem diminutivo)" },
-        { "term": "cliente (em peças externas)", "use_instead": "tutor / tutora" }
+        {
+          "term": "peludo / peludinho",
+          "use_instead": "felino, gato, paciente (ou nome quando souber)"
+        },
+        {
+          "term": "dono",
+          "use_instead": "tutor / tutora"
+        },
+        {
+          "term": "bichinho / bichano",
+          "use_instead": "gato, pet, paciente, nome do paciente"
+        },
+        {
+          "term": "pet em geral / qualquer pet",
+          "use_instead": "felinos e cães (ou felino quando para Mariana)"
+        },
+        {
+          "term": "consulta básica",
+          "use_instead": "consulta especialista"
+        },
+        {
+          "term": "promoção",
+          "use_instead": "pacote (anual, castração, vacinação)"
+        },
+        {
+          "term": "preço fechado",
+          "use_instead": "orçamento aprovado item a item"
+        },
+        {
+          "term": "follow-up",
+          "use_instead": "acompanhamento"
+        },
+        {
+          "term": "consultinha / castraçãozinha (diminutivos infantilizantes)",
+          "use_instead": "consulta, castração (sem diminutivo)"
+        },
+        {
+          "term": "cliente (em peças externas)",
+          "use_instead": "tutor / tutora"
+        }
       ],
       "form_of_address": "Você. Nunca 'senhor/senhora' (cria distância e parece cobrança), nunca 'amigo/amiga' (informalidade que finge intimidade). 'Você' funciona com Mariana, Carlos e tutor mais velho.",
       "emoji_punctuation": "Uso parcimonioso de emoji. 🐱 e 🐾 OK em posts educativos felinos e na bio. Proibido cluster ('🐱❤️✨'), proibido 😍 🥰 (infantilizam). Em comunicação de orçamento, agendamento ou clínica: zero emoji. Reticências (...) e exclamação (!) com extrema parcimônia: máximo 1 por peça e só com motivo emocional real. CAPS LOCK proibido em qualquer contexto.",
@@ -318,12 +515,30 @@
         "max_recommended": "Sem limite máximo, mas em peças muito grandes (banner de evento, fachada) avaliar se faz sentido escalar o símbolo separado do wordmark para preservar legibilidade."
       },
       "official_versions": [
-        { "name": "Principal — lockup horizontal colorido", "use_case": "Padrão para a maioria dos usos: site, redes sociais, papelaria, anúncios." },
-        { "name": "Vertical — símbolo acima do wordmark", "use_case": "Layouts quadrados ou verticais: avatar IG, GMB, app icon Android." },
-        { "name": "Símbolo isolado", "use_case": "Favicon, sticker, app icon (16-180px), assinatura mínima em peças com pouco espaço." },
-        { "name": "Monocromático preto (#2E2E33)", "use_case": "Impressão em uma só cor: timbrado simples, fax, documentos legais, carimbos." },
-        { "name": "Monocromático branco", "use_case": "Aplicação sobre fundo escuro: roxo profundo, fotografia escura, banner com overlay." },
-        { "name": "Negativo — símbolo branco com wordmark branco", "use_case": "Aplicação sobre cor primária ou imagem. Usar com moderação — sempre validar contraste WCAG." }
+        {
+          "name": "Principal — lockup horizontal colorido",
+          "use_case": "Padrão para a maioria dos usos: site, redes sociais, papelaria, anúncios."
+        },
+        {
+          "name": "Vertical — símbolo acima do wordmark",
+          "use_case": "Layouts quadrados ou verticais: avatar IG, GMB, app icon Android."
+        },
+        {
+          "name": "Símbolo isolado",
+          "use_case": "Favicon, sticker, app icon (16-180px), assinatura mínima em peças com pouco espaço."
+        },
+        {
+          "name": "Monocromático preto (#2E2E33)",
+          "use_case": "Impressão em uma só cor: timbrado simples, fax, documentos legais, carimbos."
+        },
+        {
+          "name": "Monocromático branco",
+          "use_case": "Aplicação sobre fundo escuro: roxo profundo, fotografia escura, banner com overlay."
+        },
+        {
+          "name": "Negativo — símbolo branco com wordmark branco",
+          "use_case": "Aplicação sobre cor primária ou imagem. Usar com moderação — sempre validar contraste WCAG."
+        }
       ],
       "logo_directions": [
         {
@@ -345,12 +560,36 @@
       "chosen_direction": "pendente — operador escolhe e gera 4 variações no Midjourney/Ideogram"
     },
     "incorrect_uses": [
-      { "rule": "Não distorcer (esticar/achatar)", "visual_demo": "distort_x", "reason": "Distorção horizontal quebra a proporção tipográfica do wordmark e descaracteriza a marca." },
-      { "rule": "Não recolorir fora da paleta oficial", "visual_demo": "recolor_red", "reason": "Cor é assinatura. Mudar o roxo para qualquer outra cor desconecta a peça do sistema visual." },
-      { "rule": "Não aplicar sombras, brilhos ou efeitos", "visual_demo": "drop_shadow", "reason": "A marca é flat e sóbria. Efeitos pesam o logo e remetem a estilo amador 'PowerPoint 2007'." },
-      { "rule": "Não usar em fundos de baixo contraste", "visual_demo": "low_contrast", "reason": "Roxo sobre bege em proporção errada não atinge WCAG AA. Sempre validar contraste >= 4.5:1." },
-      { "rule": "Não rotacionar ou inclinar", "visual_demo": "rotated", "reason": "Marca sempre na horizontal. Inclinação (mesmo de 5°) parece erro de aplicação." },
-      { "rule": "Não criar variações próprias (versões temáticas)", "visual_demo": "outlined", "reason": "Versão 'só contorno' ou 'temática' (Halloween, Natal) não foi aprovada e fragmenta o sistema. Use só as versões oficiais." }
+      {
+        "rule": "Não distorcer (esticar/achatar)",
+        "visual_demo": "distort_x",
+        "reason": "Distorção horizontal quebra a proporção tipográfica do wordmark e descaracteriza a marca."
+      },
+      {
+        "rule": "Não recolorir fora da paleta oficial",
+        "visual_demo": "recolor_red",
+        "reason": "Cor é assinatura. Mudar o roxo para qualquer outra cor desconecta a peça do sistema visual."
+      },
+      {
+        "rule": "Não aplicar sombras, brilhos ou efeitos",
+        "visual_demo": "drop_shadow",
+        "reason": "A marca é flat e sóbria. Efeitos pesam o logo e remetem a estilo amador 'PowerPoint 2007'."
+      },
+      {
+        "rule": "Não usar em fundos de baixo contraste",
+        "visual_demo": "low_contrast",
+        "reason": "Roxo sobre bege em proporção errada não atinge WCAG AA. Sempre validar contraste >= 4.5:1."
+      },
+      {
+        "rule": "Não rotacionar ou inclinar",
+        "visual_demo": "rotated",
+        "reason": "Marca sempre na horizontal. Inclinação (mesmo de 5°) parece erro de aplicação."
+      },
+      {
+        "rule": "Não criar variações próprias (versões temáticas)",
+        "visual_demo": "outlined",
+        "reason": "Versão 'só contorno' ou 'temática' (Halloween, Natal) não foi aprovada e fragmenta o sistema. Use só as versões oficiais."
+      }
     ],
     "color_system": {
       "primary": [
@@ -410,10 +649,38 @@
         }
       ],
       "functional": [
-        { "name": "Magenta Ação", "hex": "#A8358C", "rgb": "168, 53, 140", "cmyk": "0, 68, 17, 34", "role": "accent", "justification": "Cor exclusiva para CTAs primários (agendamento, WhatsApp). Magenta dialoga com o roxo (mesma família cromática) mas tem energia para conversão. Reservar para ação." },
-        { "name": "Verde Sucesso", "hex": "#10B981", "rgb": "16, 185, 129", "cmyk": "91, 0, 30, 27", "role": "accent", "justification": "Estados positivos: agendamento confirmado, vacina em dia, exame normal. Não usar como cor primária." },
-        { "name": "Vermelho Erro", "hex": "#DC2626", "rgb": "220, 38, 38", "cmyk": "0, 83, 83, 14", "role": "accent", "justification": "Estados de erro/alerta crítico em UI. Nunca em comunicação de marketing — vermelho gera ansiedade na Mariana." },
-        { "name": "Amarelo Atenção", "hex": "#F59E0B", "rgb": "245, 158, 11", "cmyk": "0, 36, 96, 4", "role": "accent", "justification": "Estados de atenção em UI: lembrete de vacina próxima, retorno pendente." }
+        {
+          "name": "Magenta Ação",
+          "hex": "#A8358C",
+          "rgb": "168, 53, 140",
+          "cmyk": "0, 68, 17, 34",
+          "role": "accent",
+          "justification": "Cor exclusiva para CTAs primários (agendamento, WhatsApp). Magenta dialoga com o roxo (mesma família cromática) mas tem energia para conversão. Reservar para ação."
+        },
+        {
+          "name": "Verde Sucesso",
+          "hex": "#10B981",
+          "rgb": "16, 185, 129",
+          "cmyk": "91, 0, 30, 27",
+          "role": "accent",
+          "justification": "Estados positivos: agendamento confirmado, vacina em dia, exame normal. Não usar como cor primária."
+        },
+        {
+          "name": "Vermelho Erro",
+          "hex": "#DC2626",
+          "rgb": "220, 38, 38",
+          "cmyk": "0, 83, 83, 14",
+          "role": "accent",
+          "justification": "Estados de erro/alerta crítico em UI. Nunca em comunicação de marketing — vermelho gera ansiedade na Mariana."
+        },
+        {
+          "name": "Amarelo Atenção",
+          "hex": "#F59E0B",
+          "rgb": "245, 158, 11",
+          "cmyk": "0, 36, 96, 4",
+          "role": "accent",
+          "justification": "Estados de atenção em UI: lembrete de vacina próxima, retorno pendente."
+        }
       ],
       "proportions": {
         "dominant_pct": 60,
@@ -425,15 +692,69 @@
         "rule": "Em peças padrão, 60% branco (background dominante), 30% roxo profundo (headlines, blocos institucionais, símbolo do logo), 10% magenta (CTAs e destaques). Em peças mais quentes (about, depoimentos), substituir 60% branco por 60% bege acolhedor mantendo a mesma proporção do roxo e magenta."
       },
       "wcag_contrast_matrix": [
-        { "foreground": "#4B1C7D", "background": "#FFFFFF", "label": "Roxo sobre Branco", "ratio": 12.2, "level": "AAA" },
-        { "foreground": "#4B1C7D", "background": "#F6EAD8", "label": "Roxo sobre Bege", "ratio": 10.0, "level": "AAA" },
-        { "foreground": "#2E2E33", "background": "#FFFFFF", "label": "Grafite sobre Branco", "ratio": 13.3, "level": "AAA" },
-        { "foreground": "#2E2E33", "background": "#F6EAD8", "label": "Grafite sobre Bege", "ratio": 10.9, "level": "AAA" },
-        { "foreground": "#FFFFFF", "background": "#4B1C7D", "label": "Branco sobre Roxo", "ratio": 12.2, "level": "AAA" },
-        { "foreground": "#FFFFFF", "background": "#A8358C", "label": "Branco sobre Magenta", "ratio": 5.0, "level": "AA" },
-        { "foreground": "#A8358C", "background": "#FFFFFF", "label": "Magenta sobre Branco", "ratio": 5.0, "level": "AA" },
-        { "foreground": "#00B8BD", "background": "#FFFFFF", "label": "Turquesa sobre Branco", "ratio": 2.4, "level": "Fail" },
-        { "foreground": "#00B8BD", "background": "#4B1C7D", "label": "Turquesa sobre Roxo", "ratio": 5.1, "level": "AA Large" }
+        {
+          "foreground": "#4B1C7D",
+          "background": "#FFFFFF",
+          "label": "Roxo sobre Branco",
+          "ratio": 12.2,
+          "level": "AAA"
+        },
+        {
+          "foreground": "#4B1C7D",
+          "background": "#F6EAD8",
+          "label": "Roxo sobre Bege",
+          "ratio": 10.0,
+          "level": "AAA"
+        },
+        {
+          "foreground": "#2E2E33",
+          "background": "#FFFFFF",
+          "label": "Grafite sobre Branco",
+          "ratio": 13.3,
+          "level": "AAA"
+        },
+        {
+          "foreground": "#2E2E33",
+          "background": "#F6EAD8",
+          "label": "Grafite sobre Bege",
+          "ratio": 10.9,
+          "level": "AAA"
+        },
+        {
+          "foreground": "#FFFFFF",
+          "background": "#4B1C7D",
+          "label": "Branco sobre Roxo",
+          "ratio": 12.2,
+          "level": "AAA"
+        },
+        {
+          "foreground": "#FFFFFF",
+          "background": "#A8358C",
+          "label": "Branco sobre Magenta",
+          "ratio": 5.0,
+          "level": "AA"
+        },
+        {
+          "foreground": "#A8358C",
+          "background": "#FFFFFF",
+          "label": "Magenta sobre Branco",
+          "ratio": 5.0,
+          "level": "AA"
+        },
+        {
+          "foreground": "#00B8BD",
+          "background": "#FFFFFF",
+          "label": "Turquesa sobre Branco",
+          "ratio": 2.4,
+          "level": "Fail"
+        },
+        {
+          "foreground": "#00B8BD",
+          "background": "#4B1C7D",
+          "label": "Turquesa sobre Roxo",
+          "ratio": 5.1,
+          "level": "AA Large"
+        }
       ]
     },
     "typography": {
@@ -442,7 +763,10 @@
         "source": "Google Fonts",
         "google_fonts_url": "https://fonts.google.com/specimen/Fraunces",
         "embed_url": "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap",
-        "weights_permitted": ["SemiBold 600", "Bold 700"],
+        "weights_permitted": [
+          "SemiBold 600",
+          "Bold 700"
+        ],
         "license": "Open Font License — gratuita para uso comercial."
       },
       "secondary_family": {
@@ -450,17 +774,70 @@
         "source": "Google Fonts",
         "google_fonts_url": "https://fonts.google.com/specimen/Inter",
         "embed_url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap",
-        "weights_permitted": ["Regular 400", "Medium 500", "SemiBold 600"],
+        "weights_permitted": [
+          "Regular 400",
+          "Medium 500",
+          "SemiBold 600"
+        ],
         "license": "Open Font License — gratuita para uso comercial."
       },
       "hierarchy": [
-        { "level": "H1 (Display)", "font": "Fraunces", "weight": "Bold 700", "size_px": 56, "line_height": "1.1", "use_case": "Headline principal de LP, capa de deck, banner principal." },
-        { "level": "H2", "font": "Fraunces", "weight": "Bold 700", "size_px": 36, "line_height": "1.2", "use_case": "Títulos de seção em LP e papelaria." },
-        { "level": "H3", "font": "Fraunces", "weight": "SemiBold 600", "size_px": 24, "line_height": "1.3", "use_case": "Subtítulos de bloco e cards." },
-        { "level": "Body", "font": "Inter", "weight": "Regular 400", "size_px": 17, "line_height": "1.6", "use_case": "Corpo de texto em LP, e-mail e materiais de venda." },
-        { "level": "Body Mobile", "font": "Inter", "weight": "Regular 400", "size_px": 16, "line_height": "1.6", "use_case": "Corpo em telas pequenas." },
-        { "level": "Caption", "font": "Inter", "weight": "Medium 500", "size_px": 13, "line_height": "1.4", "use_case": "Legendas, microcopy, footnotes, badges." },
-        { "level": "CTA", "font": "Inter", "weight": "SemiBold 600", "size_px": 16, "line_height": "1.0", "use_case": "Texto de botões e links principais." }
+        {
+          "level": "H1 (Display)",
+          "font": "Fraunces",
+          "weight": "Bold 700",
+          "size_px": 56,
+          "line_height": "1.1",
+          "use_case": "Headline principal de LP, capa de deck, banner principal."
+        },
+        {
+          "level": "H2",
+          "font": "Fraunces",
+          "weight": "Bold 700",
+          "size_px": 36,
+          "line_height": "1.2",
+          "use_case": "Títulos de seção em LP e papelaria."
+        },
+        {
+          "level": "H3",
+          "font": "Fraunces",
+          "weight": "SemiBold 600",
+          "size_px": 24,
+          "line_height": "1.3",
+          "use_case": "Subtítulos de bloco e cards."
+        },
+        {
+          "level": "Body",
+          "font": "Inter",
+          "weight": "Regular 400",
+          "size_px": 17,
+          "line_height": "1.6",
+          "use_case": "Corpo de texto em LP, e-mail e materiais de venda."
+        },
+        {
+          "level": "Body Mobile",
+          "font": "Inter",
+          "weight": "Regular 400",
+          "size_px": 16,
+          "line_height": "1.6",
+          "use_case": "Corpo em telas pequenas."
+        },
+        {
+          "level": "Caption",
+          "font": "Inter",
+          "weight": "Medium 500",
+          "size_px": 13,
+          "line_height": "1.4",
+          "use_case": "Legendas, microcopy, footnotes, badges."
+        },
+        {
+          "level": "CTA",
+          "font": "Inter",
+          "weight": "SemiBold 600",
+          "size_px": 16,
+          "line_height": "1.0",
+          "use_case": "Texto de botões e links principais."
+        }
       ],
       "fallbacks": "Caso Fraunces ou Inter não carreguem, fallback CSS: Fraunces → Georgia, 'Times New Roman', serif. Inter → -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif. Em documentos do Office, substitutas: Cambria (no lugar de Fraunces) e Calibri (no lugar de Inter).",
       "justification": "Fraunces é serif contemporâneo com tecnologia variable font (optical sizing), curvas humanas e personalidade editorial — afasta a marca do hospital institucional sem cair no pet shop carismático. Reforça os adjetivos 'humano' e 'especialista'. Inter é sans-serif neutro otimizado para tela, com legibilidade testada em UI e microcopy — sustenta o adjetivo 'transparente'. O par Fraunces (calor) + Inter (clareza) traduz visualmente a tensão produtiva entre 'medicina técnica' e 'medicina humana'."
@@ -472,10 +849,22 @@
       "grid": "24×24px (ícones de UI) e 32×32px (ícones de serviço com mais detalhe)",
       "color_default": "#4B1C7D — Roxo Profundo. Ativar Magenta (#A8358C) apenas em ícones de CTA e Turquesa (#00B8BD) em estados positivos.",
       "do_dont": [
-        { "type": "do", "rule": "Use linhas com peso uniforme (1.75px) e terminações arredondadas." },
-        { "type": "do", "rule": "Estilize gato e cão em traço único, sem realismo." },
-        { "type": "dont", "rule": "Não preencha ícones com cor sólida — vira mascote." },
-        { "type": "dont", "rule": "Não misture ícones de outline com filled na mesma peça." }
+        {
+          "type": "do",
+          "rule": "Use linhas com peso uniforme (1.75px) e terminações arredondadas."
+        },
+        {
+          "type": "do",
+          "rule": "Estilize gato e cão em traço único, sem realismo."
+        },
+        {
+          "type": "dont",
+          "rule": "Não preencha ícones com cor sólida — vira mascote."
+        },
+        {
+          "type": "dont",
+          "rule": "Não misture ícones de outline com filled na mesma peça."
+        }
       ]
     },
     "graphic_system": {
@@ -496,17 +885,40 @@
       "color_treatment": "Tratamento sutil — não filtrar para 'preto e branco', não saturar. LUT ideal: leve aumento de calor (+5 amarelo), redução discreta de saturação (-10%) para evitar 'photo studio'.",
       "stock_rules": "Evitar bancos genéricos quando a clínica tem 29 fotos profissionais próprias. Quando precisar de stock, evitar 'veterinário sorrindo segurando estetoscópio em pose forçada' e 'gato perfeito de pelo branco em fundo branco'.",
       "do_dont": [
-        { "type": "do", "rule": "Use fotografia real da Dra. Nathalia com pacientes (já existem 29 fotos profissionais)." },
-        { "type": "do", "rule": "Mostre pacientes com nome real (Simba, Tom, Maju) quando autorizado pela tutora." },
-        { "type": "do", "rule": "Capture momentos de cuidado: Nathalia agachada na altura do gato, mão na cabeça do paciente, conversa com a tutora." },
-        { "type": "dont", "rule": "Não use stock photo genérico de 'veterinário com estetoscópio sorrindo'." },
-        { "type": "dont", "rule": "Não use ilustração 3D de animal — quebra o tom humano-real." },
-        { "type": "dont", "rule": "Não filtre para sépia ou preto-e-branco — Mariana lê isso como 'foto antiga' ou 'datada'." }
+        {
+          "type": "do",
+          "rule": "Use fotografia real da Dra. Nathalia com pacientes (já existem 29 fotos profissionais)."
+        },
+        {
+          "type": "do",
+          "rule": "Mostre pacientes com nome real (Simba, Tom, Maju) quando autorizado pela tutora."
+        },
+        {
+          "type": "do",
+          "rule": "Capture momentos de cuidado: Nathalia agachada na altura do gato, mão na cabeça do paciente, conversa com a tutora."
+        },
+        {
+          "type": "dont",
+          "rule": "Não use stock photo genérico de 'veterinário com estetoscópio sorrindo'."
+        },
+        {
+          "type": "dont",
+          "rule": "Não use ilustração 3D de animal — quebra o tom humano-real."
+        },
+        {
+          "type": "dont",
+          "rule": "Não filtre para sépia ou preto-e-branco — Mariana lê isso como 'foto antiga' ou 'datada'."
+        }
       ]
     },
     "illustration": {
       "style": "Ilustração linear minimalista, peso uniforme, paleta restrita à secundária (roxo + turquesa). Usada em conteúdo educativo (sinais felinos, calendário de vacinas, jornada do tutor). Nunca como personagem mascote — preservar tom humano-real.",
-      "use_cases": ["Conteúdo educativo no Instagram (carrosseis)", "Diagramas em LP", "E-book e PDF de guia gratuito", "Microilustrações em e-mail"]
+      "use_cases": [
+        "Conteúdo educativo no Instagram (carrosseis)",
+        "Diagramas em LP",
+        "E-book e PDF de guia gratuito",
+        "Microilustrações em e-mail"
+      ]
     }
   },
   "block4_applications": {
@@ -562,7 +974,11 @@
               "Av. Pascoal Ardito, 792 · Seg–Sex 8h–18h"
             ],
             "link_text": "wa.me/5519995795483",
-            "stats": { "posts": 142, "followers": 2840, "following": 312 }
+            "stats": {
+              "posts": 142,
+              "followers": 2840,
+              "following": 312
+            }
           }
         }
       },
@@ -603,7 +1019,13 @@
           "type": "favicon_scaling",
           "description": "5 tamanhos de favicon/app icon renderizados em sequência: 16, 32, 64, 180, 512px.",
           "data": {
-            "sizes": [16, 32, 64, 180, 512],
+            "sizes": [
+              16,
+              32,
+              64,
+              180,
+              512
+            ],
             "background": "#4B1C7D",
             "foreground": "#FFFFFF"
           }
@@ -647,12 +1069,30 @@
   "block5_governance": {
     "brand_owner": "Dra. Nathalia Alves (proprietária e veterinária) é a guardiã final da marca. Decisões estratégicas (mudanças de tagline, paleta, posicionamento, novo serviço com sub-marca) passam por ela. Decisões táticas (criação de peças dentro das regras já documentadas, posts de Instagram, respostas no WhatsApp) são delegadas à Loíse (atendimento) e à V4 (executor Rafael Corazza) com checagem por amostragem semanal.",
     "approval_process": [
-      { "step": "Solicitação interna ou da V4", "responsible": "Loíse / Rafael (V4)", "estimated_time": "imediato" },
-      { "step": "Validação contra regras do manual", "responsible": "Auto-validação pelo solicitante usando o portal", "estimated_time": "5–15 min" },
-      { "step": "Revisão da Dra. Nathalia (apenas se for nova categoria, sub-marca ou desvio do manual)", "responsible": "Dra. Nathalia", "estimated_time": "até 24h" },
-      { "step": "Publicação", "responsible": "Loíse / Rafael (V4)", "estimated_time": "imediato após aprovação" }
+      {
+        "step": "Solicitação interna ou da V4",
+        "responsible": "Loíse / Rafael (V4)",
+        "estimated_time": "imediato"
+      },
+      {
+        "step": "Validação contra regras do manual",
+        "responsible": "Auto-validação pelo solicitante usando o portal",
+        "estimated_time": "5–15 min"
+      },
+      {
+        "step": "Revisão da Dra. Nathalia (apenas se for nova categoria, sub-marca ou desvio do manual)",
+        "responsible": "Dra. Nathalia",
+        "estimated_time": "até 24h"
+      },
+      {
+        "step": "Publicação",
+        "responsible": "Loíse / Rafael (V4)",
+        "estimated_time": "imediato após aprovação"
+      }
     ],
     "review_cadence": "Manual revisado a cada trimestre (4x/ano) ou quando houver mudança estrutural (novo serviço, certificação ABFel obtida, expansão para 2ª unidade). Cada revisão gera novo número de versão e changelog em history[] do client.json.",
     "committee": null
-  }
+  },
+  "manual_pdf_url": "https://zenvet-landing.vercel.app/manual-zenvet.pdf",
+  "manual_web_url": "https://zenvet-landing.vercel.app/marca"
 }
