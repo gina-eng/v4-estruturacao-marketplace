@@ -1,6 +1,6 @@
 # Visão Consolidada — Clínica Veterinária Zenvet
 
-*Gerado em 2026-04-30 13:31 UTC · Ciclo atual: Semana 3 · Cliente: `clinica-veterinaria-zenvet`*
+*Gerado em 2026-04-30 13:50 UTC · Ciclo atual: Semana 3 · Cliente: `clinica-veterinaria-zenvet`*
 
 > Este documento consolida tudo que foi produzido para o cliente ao longo do projeto.
 > Cada seção referencia o output estruturado original em `outputs/` para auditabilidade.
@@ -574,21 +574,22 @@ Descoberta da entrega S2 (22/04/2026): existe concorrente orgânica felina local
 - ✅ **ee-s3-landing-page** — concluída em 2026-04-29T22:12:00.763457Z
 - ✅ **ee-s3-copy-anuncios** — concluída em 2026-04-29T20:02:26.166797Z
 - ✅ **ee-s3-criativos-anuncios** — concluída em 2026-04-29T20:11:47.011481Z
-- ✅ **ee-s3-forecast-midia** — concluída em 2026-04-30T13:50:00Z
+- ✅ **ee-s3-forecast-midia** — concluída em 2026-04-30T14:15:00Z
+- ✅ **ee-s3-gmb-otimizacao** — concluída em 2026-04-30T13:49:44.009568Z
 - ✅ **ee-revisao-semanal** — concluída em 2026-04-22T13:35:14Z
 - ✅ **ee-s3-manual-marca** — concluída em 2026-04-28T15:00:00Z
 
 **Semana atual:** 3
 
 ### Histórico de refinamentos
-- *2026-04-28T00:00:00Z* — **ee-s3-identidade-visual** (completed): Identidade visual S3 entregue: paleta atual mantida e formalizada (Roxo Profundo, Turquesa, Bege, Magenta + Grafite Texto adicionado), tipografia Fraunces+Inter (Google Fonts), 3 prompts de logo prontos. Aguardando geração e escolha de direção pelo operador no Midjourney.
-- *2026-04-28T15:00:00Z* — **ee-s3-manual-marca** (completed): Manual de Marca unificado (Brandbook + MIV) gerado seguindo a Estrutura MIV de 5 blocos. Substitui ee-s3-brandbook e ee-s3-identidade-visual (marcados como superseded). Renderer SVG-rich no portal: paleta com swatches grandes, tipografia em escala real (Fraunces+Inter via Google Fonts), galeria de 6 usos incorretos do logo, mockups contextuais (cartão, e-mail signature, IG avatar+bio, post de feed, story, favicon scaling, WhatsApp Business, GMB), matriz de contraste WCAG, proporção 60-30-10 visual, matriz competitiva 2x2 com competidores plotados, persona com avatar SVG + 6 campos. Aguardando aprovação do operador.
 - *2026-04-29T17:00:00Z* — **ee-s3-landing-page** (completed): LP felino-first em Next.js 14 + Tailwind. 9 seções (hero/problem/solution/how_it_works/deliverables/social_proof/for_dogs/faq/final_cta). Servida em http://localhost:3001 (dev). Pendentes antes do deploy: foto real do hero, depoimentos reais (3 placeholders), domínio definitivo.
 - *2026-04-29T20:02:26.166797Z* — **ee-s3-copy-anuncios** (completed): 35 variações geradas (11 Meta Ads + 24 Google Ads RSA elementos) — 4 fases de funil. Hooks ancorados em quote da Mariana e em diagnóstico S2 de criativos. Validado: schema OK, todos limites de chars respeitados, vocabulário do manual de marca aplicado.
 - *2026-04-29T20:11:47.011481Z* — **ee-s3-criativos-anuncios** (completed): 5 variações de criativo (Dor / Resultado / Curiosidade / Social Proof / Urgência cães) — 15 peças totais (3 formatos cada). 3 reaproveitam fotos já produzidas, 2 precisam MJ. Briefing inclui prompts MJ+Ideogram, guia Canva passo-a-passo, plano A/B com 5 conjuntos e KPIs ancorados no diagnóstico S2.
 - *2026-04-29T22:12:00.763457Z* — **ee-s3-landing-page** (updated): Output canônico sincronizado com versão LIVE deployada (https://zenvet-landing.vercel.app). Estrutura agora reflete os 12 componentes finais: Header, Hero+stats+credential_card, Problem, dra_nathalia (nova seção de autoridade), Solution, HowItWorks, Deliverables, SocialProof com 3 depoimentos reais Google + fotos, ForDogs, FAQ, FinalCTA, LocationMap. Schema v2 da skill atualizado pra suportar eyebrows, hero stats, credential_card, credentials timeline, e testimonials no formato rico (photo/source/when/rating). v2.
 - *2026-04-30T13:30:00Z* — **ee-s3-forecast-midia** (completed): Forecast 90d sobre R$ 3.200/mês contratado (Cenário B Realista do diagnóstico). Ticket ponderado R$ 540 (70% felinos × R$ 600 + 30% cães × R$ 400). Saída: 145 leads/mês, CPL R$ 22, ROAS 5,4x mês 3. Acumulado 90d: 80 vendas, R$ 43.200 receita inicial, ROAS médio 4,5x. Pré-requisitos críticos: Pixel/GTM S1, acessos Meta+Google, base 1.186 → Custom Audience S2, Loíse com script consultivo (depende ee-s3-crm-setup). Sheets export pendente (gog CLI não disponível localmente).
 - *2026-04-30T13:50:00Z* — **ee-s3-forecast-midia** (refined): Refeito conforme operador: verba R$ 3.000/mês (não 3.200), split fixo 70% Google / 30% Meta, distribuição granular por campanha com objetivo (6 Google + 3 Meta), 12 KPIs operacionais (impressões, cliques, CTR, CPC, leads, CPL, MQL rate, MQLs, agendamentos, show rate, atendimentos, CAC mídia), forecast 6 meses Mai–Out com evolução gradual (leads 100→188, CPL R$30→R$16, atendimentos 17→54). Modelagem financeira removida — alertas de pausa virão na próxima iteração.
+- *2026-04-30T13:49:44.009568Z* — **ee-s3-gmb-otimizacao** (completed): Perfil GMB completo: descrição SEO 645 chars (especialista felina + transparência item-a-item + cobertura Americana/SBO/Nova Odessa), categoria 'Clínica veterinária' + 6 secundárias, 9 serviços (todos 'Sob consulta' por decisão do operador — direcionar conversão pro WhatsApp), 4 posts (apresentação · educativo gato esconde dor · prova social 1.186 tutores + quote Mariana · oferta), 5 Q&As endereçando as 4 objeções da Mariana. Checklist 23 itens incluindo solicitação de reviews aos best_customers.
+- *2026-04-30T14:15:00Z* — **ee-s3-forecast-midia** (refined): v3 (cenário conservador): leads 80→130 (era 100→188), CPL R$37→R$23 (era R$30→R$16), atendimentos 11→31 (era 17→54). Campanhas reduzidas de 9 para 5 — concentração em vez de pulverização: Google em Search Felinos Americana (R$1.050) + Search Brand & Diferenciais consolidada (R$900) + Demand Gen Vacinação (R$150); Meta em Conversões Felinos (R$700, com Lookalike incorporado depois) + Retargeting (R$200). Acumulado 6m: 630 leads, 126 atendimentos, CAC mídia médio R$143. Renderer atualizado: cards de canal redesenhados, donut com R$/mês na legenda, gráfico unificado (funil+custos no mesmo SVG), tabela horizontal (KPIs em linhas, meses em colunas).
 
 ---
 

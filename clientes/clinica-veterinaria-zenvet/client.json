@@ -2137,16 +2137,18 @@
         "completed_at": null
       },
       "ee-s3-forecast-midia": {
-        "status": "pending",
-        "checkpoint": 0,
-        "started_at": null,
-        "completed_at": null
+        "status": "completed",
+        "checkpoint": 1,
+        "version": 3,
+        "started_at": "2026-04-30T13:30:00Z",
+        "completed_at": "2026-04-30T14:15:00Z"
       },
       "ee-s3-gmb-otimizacao": {
-        "status": "pending",
+        "status": "completed",
         "checkpoint": 0,
-        "started_at": null,
-        "completed_at": null
+        "started_at": "2026-04-30T13:49:44.009568Z",
+        "completed_at": "2026-04-30T13:49:44.009568Z",
+        "version": 1
       },
       "ee-s4-diagnostico-comercial": {
         "status": "pending",
@@ -2342,6 +2344,32 @@
       "skill": "ee-s3-landing-page",
       "action": "updated",
       "note": "Output canônico sincronizado com versão LIVE deployada (https://zenvet-landing.vercel.app). Estrutura agora reflete os 12 componentes finais: Header, Hero+stats+credential_card, Problem, dra_nathalia (nova seção de autoridade), Solution, HowItWorks, Deliverables, SocialProof com 3 depoimentos reais Google + fotos, ForDogs, FAQ, FinalCTA, LocationMap. Schema v2 da skill atualizado pra suportar eyebrows, hero stats, credential_card, credentials timeline, e testimonials no formato rico (photo/source/when/rating). v2."
+    },
+    {
+      "ts": "2026-04-30T13:30:00Z",
+      "skill": "ee-s3-forecast-midia",
+      "action": "completed",
+      "note": "Forecast 90d sobre R$ 3.200/mês contratado (Cenário B Realista do diagnóstico). Ticket ponderado R$ 540 (70% felinos × R$ 600 + 30% cães × R$ 400). Saída: 145 leads/mês, CPL R$ 22, ROAS 5,4x mês 3. Acumulado 90d: 80 vendas, R$ 43.200 receita inicial, ROAS médio 4,5x. Pré-requisitos críticos: Pixel/GTM S1, acessos Meta+Google, base 1.186 → Custom Audience S2, Loíse com script consultivo (depende ee-s3-crm-setup). Sheets export pendente (gog CLI não disponível localmente)."
+    },
+    {
+      "ts": "2026-04-30T13:50:00Z",
+      "skill": "ee-s3-forecast-midia",
+      "action": "refined",
+      "version": 2,
+      "note": "Refeito conforme operador: verba R$ 3.000/mês (não 3.200), split fixo 70% Google / 30% Meta, distribuição granular por campanha com objetivo (6 Google + 3 Meta), 12 KPIs operacionais (impressões, cliques, CTR, CPC, leads, CPL, MQL rate, MQLs, agendamentos, show rate, atendimentos, CAC mídia), forecast 6 meses Mai–Out com evolução gradual (leads 100→188, CPL R$30→R$16, atendimentos 17→54). Modelagem financeira removida — alertas de pausa virão na próxima iteração."
+    },
+    {
+      "ts": "2026-04-30T13:49:44.009568Z",
+      "skill": "ee-s3-gmb-otimizacao",
+      "action": "completed",
+      "note": "Perfil GMB completo: descrição SEO 645 chars (especialista felina + transparência item-a-item + cobertura Americana/SBO/Nova Odessa), categoria 'Clínica veterinária' + 6 secundárias, 9 serviços (todos 'Sob consulta' por decisão do operador — direcionar conversão pro WhatsApp), 4 posts (apresentação · educativo gato esconde dor · prova social 1.186 tutores + quote Mariana · oferta), 5 Q&As endereçando as 4 objeções da Mariana. Checklist 23 itens incluindo solicitação de reviews aos best_customers."
+    },
+    {
+      "ts": "2026-04-30T14:15:00Z",
+      "skill": "ee-s3-forecast-midia",
+      "action": "refined",
+      "version": 3,
+      "note": "v3 (cenário conservador): leads 80→130 (era 100→188), CPL R$37→R$23 (era R$30→R$16), atendimentos 11→31 (era 17→54). Campanhas reduzidas de 9 para 5 — concentração em vez de pulverização: Google em Search Felinos Americana (R$1.050) + Search Brand & Diferenciais consolidada (R$900) + Demand Gen Vacinação (R$150); Meta em Conversões Felinos (R$700, com Lookalike incorporado depois) + Retargeting (R$200). Acumulado 6m: 630 leads, 126 atendimentos, CAC mídia médio R$143. Renderer atualizado: cards de canal redesenhados, donut com R$/mês na legenda, gráfico unificado (funil+custos no mesmo SVG), tabela horizontal (KPIs em linhas, meses em colunas)."
     }
   ],
   "page_audit": {

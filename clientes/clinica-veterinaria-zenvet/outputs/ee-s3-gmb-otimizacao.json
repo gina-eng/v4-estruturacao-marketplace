@@ -1,0 +1,145 @@
+{
+  "summary": "Otimização completa do perfil GMB da Clínica Veterinária Zenvet (Americana-SP) com foco em medicina felina: descrição SEO ancorada em 'especialista em felinos' + transparência (item a item) + área de cobertura (3 cidades), 1 categoria principal + 6 secundárias, 8 atributos, 9 serviços (todos 'Sob consulta' — preço apurado pelo WhatsApp), 4 posts (apresentação · educativo · prova social · oferta) e 5 Q&As que endereçam as 4 objeções principais da Mariana (especialização real, conta surpresa, exames desnecessários, gato estressa).",
+  "profile_description": "Clínica Veterinária Zenvet — especialista em medicina felina em Americana, SP. Consultas com a Dra. Nathalia: rotina, especializada em felinos e dermatologia. Exames hematológicos, ultrassom abdominal, radiografia. Também atendemos cães. Vacinação preventiva, internação e cirurgias. Cada exame e procedimento é aprovado item a item antes do início — você só paga o que aprovou. Atendimento humanizado e cat-friendly, com 40 minutos por consulta. Acompanhamento pós-consulta no WhatsApp em D+1, sem custo extra. Atendemos Americana, Santa Bárbara d'Oeste e Nova Odessa. Av. Pascoal Ardito, 792 — São Manoel. Agende pelo WhatsApp (19) 99579-5483.",
+  "categories": {
+    "primary": "Clínica veterinária",
+    "secondary": [
+      "Veterinário",
+      "Hospital veterinário",
+      "Centro de vacinação para animais",
+      "Cirurgião veterinário",
+      "Serviço de exames veterinários",
+      "Estabelecimento de cuidados com animais"
+    ]
+  },
+  "attributes": [
+    "Atendimento por agendamento",
+    "Aceita cartão de crédito",
+    "Aceita PIX",
+    "Aceita débito",
+    "Estacionamento [E — confirmar com operador se há vaga na fachada da Av. Pascoal Ardito]",
+    "Acessível para cadeirantes [E — confirmar acessibilidade física]",
+    "Gerência feminina (Dra. Nathalia · Loíse · Kelly)",
+    "Wi-Fi para clientes [E — confirmar se já está disponível na sala de espera]"
+  ],
+  "services": [
+    {
+      "name": "Consulta veterinária com especialista em felinos",
+      "description": "Consulta de 40 minutos com a Dra. Nathalia, médica veterinária com foco em medicina felina. Diagnóstico técnico, plano de tratamento por escrito e acompanhamento no WhatsApp em D+1.",
+      "price": "Sob consulta"
+    },
+    {
+      "name": "Consulta veterinária de rotina (cães e gatos)",
+      "description": "Avaliação clínica completa para cães e gatos. Inclui exame físico, orientação preventiva e plano de cuidado contínuo.",
+      "price": "Sob consulta"
+    },
+    {
+      "name": "Consulta dermatológica veterinária",
+      "description": "Investigação de problemas de pele em cães e gatos: alergias, dermatites, descamação, queda de pelo. Diagnóstico e protocolo de tratamento.",
+      "price": "Sob consulta"
+    },
+    {
+      "name": "Vacinação para cães e gatos",
+      "description": "Protocolo completo de vacinas obrigatórias e recomendadas. Calendário personalizado por idade e estilo de vida do pet.",
+      "price": "Sob consulta"
+    },
+    {
+      "name": "Exames hematológicos (sangue)",
+      "description": "Hemograma, bioquímico, função renal e hepática, perfil tireoidiano. Coleta na clínica com baixo estresse para o gato.",
+      "price": "Sob consulta"
+    },
+    {
+      "name": "Ultrassom abdominal veterinário",
+      "description": "Exame de imagem do abdômen para investigação de fígado, rins, bexiga e trato gastrointestinal. Sem necessidade de sedação na maioria dos casos.",
+      "price": "Sob consulta"
+    },
+    {
+      "name": "Raio-X veterinário",
+      "description": "Radiografia digital para diagnóstico ortopédico, torácico e abdominal em cães e gatos.",
+      "price": "Sob consulta"
+    },
+    {
+      "name": "Internação veterinária",
+      "description": "Internação clínica para casos que exigem monitoramento contínuo. Estrutura cat-friendly com baia separada para felinos.",
+      "price": "Sob consulta"
+    },
+    {
+      "name": "Cirurgia veterinária",
+      "description": "Castração, cirurgias de tecidos moles e procedimentos eletivos. Orçamento aprovado item a item antes do procedimento.",
+      "price": "Sob consulta"
+    }
+  ],
+  "posts": [
+    {
+      "title": "Quem somos: a clínica especialista em felinos de Americana",
+      "text": "A Zenvet é a clínica veterinária com foco em medicina felina em Americana, SP. Aqui, a Dra. Nathalia atende cada gato com 40 minutos de consulta, sem pressa — porque gato não é cachorro, e exige tempo, ambiente cat-friendly e técnica específica. 70% da nossa base é tutora de felino, e cada exame é aprovado item a item antes do início: você só paga o que aprovou. Atendemos também cães, com o mesmo cuidado humanizado. Endereço: Av. Pascoal Ardito, 792, São Manoel — Americana. Agendamento pelo WhatsApp (19) 99579-5483.",
+      "cta": "Saiba mais",
+      "type": "novidade"
+    },
+    {
+      "title": "Gato esconde dor por instinto — saiba reconhecer os sinais",
+      "text": "Gatos não miam quando estão com dor — escondem. Quando o sintoma aparece, geralmente o problema já está avançado. Sinais de alerta: comer menos, esconder em lugares atípicos, parar de usar a caixa de areia, ranger os dentes durante o sono, deixar de se limpar. Se você percebeu qualquer um desses comportamentos no seu gato esta semana, vale agendar uma avaliação. A consulta com a Dra. Nathalia, especialista em felinos, dura 40 minutos — tempo necessário para diagnóstico real, sem exames desnecessários.",
+      "cta": "Saiba mais",
+      "type": "novidade"
+    },
+    {
+      "title": "1.186 tutores ativos confiam na Zenvet",
+      "text": "São mais de 1.700 pacientes cadastrados, 4,9 estrelas no Google e 1.186 tutores ativos que voltam — porque cuidado bom é o que faz tutor indicar. 'Eu não levo o Simba em qualquer lugar não. Gato não é cachorro, e tem muito veterinário que não entende isso' — Mariana, tutora há 4 anos. Se você ainda não conhece a Zenvet, agende sua primeira consulta e veja a diferença de uma clínica feita para felinos.",
+      "cta": "Reservar",
+      "type": "novidade"
+    },
+    {
+      "title": "Consulta especialista em felinos com a Dra. Nathalia",
+      "text": "Consulta felina completa com a Dra. Nathalia: 40 minutos, plano de tratamento por escrito e acompanhamento pós-consulta no WhatsApp no dia seguinte (D+1) — sem custo extra. Cada exame ou procedimento adicional é orçado e aprovado item a item antes do início. Sem conta surpresa, sem retenção do animal, sem cobrança não conversada. Atendemos Americana, Santa Bárbara d'Oeste e Nova Odessa. Agende pelo WhatsApp (19) 99579-5483 para apurar o valor.",
+      "cta": "Reservar",
+      "type": "oferta"
+    }
+  ],
+  "qas": [
+    {
+      "question": "Vocês são especialistas em gatos de verdade ou atendem qualquer bicho?",
+      "answer": "A Dra. Nathalia tem foco clínico em medicina felina e 70% da nossa base de pacientes ativos é de gatos. Atendemos cães também, com o mesmo cuidado humanizado, mas a clínica foi montada com protocolo cat-friendly: consultas de 40 minutos, baia de internação separada e ambiente desenhado para reduzir estresse de felinos. Se quiser conversar antes de agendar, mande mensagem no WhatsApp (19) 99579-5483 — a Loíse responde em até 30 minutos."
+    },
+    {
+      "question": "Qual o valor da consulta?",
+      "answer": "Para apurar o valor da consulta e de qualquer exame ou procedimento adicional, mande mensagem no WhatsApp (19) 99579-5483 — a Loíse responde em até 30 minutos com o orçamento item a item antes de qualquer início. Você só paga o que aprovou previamente, sem conta surpresa. A consulta com a Dra. Nathalia tem 40 minutos, plano de tratamento por escrito e acompanhamento pós-consulta no WhatsApp em D+1, sem custo extra."
+    },
+    {
+      "question": "Como funciona o agendamento?",
+      "answer": "O agendamento é feito pelo WhatsApp (19) 99579-5483 ou por telefone. A Loíse responde em até 30 minutos, de segunda a sexta, das 8h às 18h. Atendemos por hora marcada — você não fica em fila de espera. Atendemos tutores de Americana, Santa Bárbara d'Oeste e Nova Odessa."
+    },
+    {
+      "question": "Vocês fazem exames sem necessidade só pra cobrar mais?",
+      "answer": "Não. Toda solicitação de exame ou procedimento é apresentada com justificativa clínica e orçamento item a item antes do início — e você decide o que autoriza. Nosso modelo é transparência: o que está no orçamento aprovado é o que você paga, sem acréscimo durante o atendimento. Se algum exame não for indispensável, vamos te dizer."
+    },
+    {
+      "question": "Meu gato estressa muito no transporte. Vocês têm alguma alternativa?",
+      "answer": "Sim. A Dra. Nathalia atende em domicílio para casos de gatos com alto estresse de transporte ou condição clínica que dificulte o deslocamento. A consulta domiciliar tem valor diferenciado e dia/hora combinados pelo WhatsApp. Em ambiente conhecido, o gato fica mais cooperativo, e o exame clínico costuma ser mais preciso. Mande mensagem no (19) 99579-5483 para conversar sobre disponibilidade."
+    }
+  ],
+  "implementation_checklist": [
+    { "item": "Verificar se o perfil GMB já está reivindicado (briefing diz 'gmb: true' — confirmar acesso da Dra. Nathalia ou Kelly)", "status": "pending", "notes": "Pré-requisito. Sem acesso, nada do checklist sai do papel." },
+    { "item": "Atualizar nome do estabelecimento exatamente como na razão social: 'Clínica Veterinária Zenvet'", "status": "pending" },
+    { "item": "Configurar endereço: Av. Pascoal Ardito, 792, São Manoel, Americana-SP", "status": "pending" },
+    { "item": "Adicionar telefone principal: (19) 99579-5483 (mesmo do WhatsApp)", "status": "pending" },
+    { "item": "Adicionar site: https://clinicazenvet.com.br", "status": "pending" },
+    { "item": "Configurar horário de atendimento [E — confirmar com operador: 'Seg-Sex 8h às 18h' aparece na copy mas não há registro de sábado]", "status": "pending", "notes": "Confirmar com Kelly antes de publicar." },
+    { "item": "Ativar mensagens (botão WhatsApp) com link wa.me/5519995795483", "status": "pending" },
+    { "item": "Publicar descrição SEO (texto deste JSON, 644 caracteres)", "status": "pending" },
+    { "item": "Configurar categoria principal: 'Clínica veterinária'", "status": "pending" },
+    { "item": "Adicionar 6 categorias secundárias (lista deste JSON)", "status": "pending" },
+    { "item": "Ativar atributos confirmáveis: 'Atendimento por agendamento', formas de pagamento, gerência feminina", "status": "pending" },
+    { "item": "Confirmar e ativar atributos pendentes [E]: estacionamento, acessibilidade cadeirante, Wi-Fi", "status": "blocked", "notes": "Aguardando validação da Kelly sobre infraestrutura física." },
+    { "item": "Cadastrar 9 serviços com nome, descrição e preço (lista deste JSON)", "status": "pending" },
+    { "item": "Subir mínimo 10 fotos: capa (Dra. Nathalia atendendo), logo, fachada, sala de espera, consultório felino, consultório geral, equipe, internação cat-friendly, foto da equipe (Nathalia + Loíse + Kelly), bastidores", "status": "pending", "notes": "Briefing.brand.assets_inventory: 29 fotos profissionais já existem. Selecionar e subir as melhores." },
+    { "item": "Publicar Post 1 (apresentação) — semana 1", "status": "pending" },
+    { "item": "Publicar Post 2 (educativo: gato esconde dor) — semana 2", "status": "pending" },
+    { "item": "Publicar Post 3 (prova social: 1.186 tutores) — semana 3", "status": "pending" },
+    { "item": "Publicar Post 4 (oferta: consulta com Dra. Nathalia) — semana 4", "status": "pending" },
+    { "item": "Pré-popular as 5 Q&As (postar como pergunta + resposta da própria Zenvet)", "status": "pending" },
+    { "item": "Configurar mensagem padrão de resposta a reviews (positivo + neutro/negativo)", "status": "pending" },
+    { "item": "Solicitar avaliações dos 1.186 tutores ativos via campanha de WhatsApp segmentada [E — combinar com a Kelly]", "status": "pending", "notes": "Top of mind: começar pelos 'best_customers' do briefing — Luciano, Daniela Diaz, Débora Raya." },
+    { "item": "Verificar perfil completo: rodar checklist do GMB e atingir 100% de completude", "status": "pending" },
+    { "item": "Acompanhamento D+7: validar publicação dos 4 posts, descrição, serviços, Q&As e fotos", "status": "pending" }
+  ]
+}
