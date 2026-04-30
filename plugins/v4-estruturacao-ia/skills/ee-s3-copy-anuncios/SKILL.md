@@ -59,6 +59,26 @@ Tom: direto, urgência real, benefício claro.
 
 **REGRAS DE COPY APLICADAS:** Liste as 5 principais regras aplicadas para que o consultor entenda a lógica.
 
+### Convenção de contagem (`total_variations` + `variations_breakdown`)
+
+`total_variations` conta **anúncios completos prontos pra subir**, não elementos textuais. A regra:
+
+- **1 Meta Ad** = 1 variação (texto + headline + descrição + CTA — entregue inteiro).
+- **1 Google RSA** = 1 variação (mesmo tendo 5 headlines + 3 descriptions dentro — o algoritmo rotaciona, mas é 1 anúncio).
+
+Sempre incluir `variations_breakdown` para desambiguar, exemplo:
+```json
+"total_variations": 14,
+"variations_breakdown": {
+  "meta_ads": 11,
+  "google_ads_rsa": 3,
+  "google_ads_textual_elements": 24,
+  "note": "1 Meta = 1 anúncio; 1 RSA = 1 anúncio com múltiplos elementos rotacionados."
+}
+```
+
+**Por quê:** versões anteriores contavam cada headline/description Google como variação separada — número inflado (35 em vez de 14) confundia o cliente, que abria o portal procurando 35 cards e via 14. Manter a contagem honesta evita que o cliente "perca" anúncios mentalmente.
+
 ### Pareamento copy ↔ criativo (`pair_with_creative`)
 
 Se a skill `ee-s3-criativos-anuncios` já gerou `produced_creatives` (PNGs prontos com IDs `feed-0N` / `story-0N`), adicione em cada variação Meta Ads o array `pair_with_creative` com os IDs dos criativos que casam com aquela copy. Exemplo:

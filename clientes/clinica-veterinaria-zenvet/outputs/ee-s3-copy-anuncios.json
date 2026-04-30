@@ -1,8 +1,8 @@
 {
-  "summary": "35 variações de copy para Zenvet (11 Meta Ads + 24 elementos Google Ads Responsivo) cobrindo Topo (esconde-dor / hospital 24h surpresa / pesquisa-antes-de-confiar), Meio (40 min vs 15 min / item-a-item / gato ≠ cachorro), Fundo (consulta R$220 / WhatsApp Loíse 30min / acompanhamento D+1) e Remarketing (você pesquisou no Insta + lembrete suave). Hooks ancorados na quote da Mariana ('gato não é cachorro') e no diagnóstico de criativos S2 (0% retenção 3s — todos os topos abrem com problema, não com produto).",
+  "summary": "14 anúncios prontos para Zenvet — 11 Meta Ads (texto + headline + descrição cada) e 3 Google Ads RSA (cada uma com 5 headlines + 3 descriptions = 24 elementos textuais que o Google rotaciona). Cobertura: Topo (esconde-dor / hospital 24h surpresa / pesquisa-antes-de-confiar), Meio (40 min vs 15 min / item-a-item / gato ≠ cachorro), Fundo (consulta R$220 / WhatsApp Loíse 30min / acompanhamento D+1) e Remarketing (você pesquisou no Insta + lembrete suave). Hooks ancorados na quote da Mariana ('gato não é cachorro') e no diagnóstico de criativos S2 (0% retenção 3s — todos os topos abrem com problema, não com produto).",
   "how_to_read_this_doc": {
     "title": "Como usar este manual de copy",
-    "intro": "Este documento entrega 35 variações de copy prontas para subir no Meta Ads e Google Ads, organizadas pela jornada da Mariana (tutora de felino). Cada variação tem hook (ângulo emocional), texto, headline, descrição e CTA — todos com char_count auditado e, quando aplicável, vinculado ao criativo visual correspondente em 'Criativos Produzidos'.",
+    "intro": "Este documento entrega 14 anúncios prontos para subir — 11 Meta Ads (cada um com texto + headline + descrição + CTA) e 3 Google Ads RSA (cada uma com 5 headlines + 3 descriptions que o Google rotaciona automaticamente). Organizados pela jornada da Mariana (tutora de felino), com char_count auditado em cada elemento e, quando aplicável, vinculados ao criativo visual correspondente em 'Criativos Produzidos'.",
     "structure": [
       { "section": "funnel_stages", "what": "4 etapas (Topo · Meio · Fundo · Remarketing) com objetivo, tom e variações por plataforma.", "why": "Não são 35 anúncios soltos — é um sistema. Topo educa sem vender, Meio compara, Fundo converte, Remarketing recupera. Misturar etapas no mesmo adset queima budget." },
       { "section": "variations[].pair_with_creative", "what": "IDs dos criativos visuais (ex: feed-05, story-02) que rodam com aquela copy.", "why": "Copy + criativo são uma unidade. Os PNGs prontos estão na seção 'Criativos Produzidos'. Quando uma variação não tem par direto, use um criativo neutro do mesmo funil." },
@@ -252,7 +252,13 @@
     "Limites respeitados: Meta texto ≤125 chars, headline ≤40, descrição ≤30; Google headline ≤30, descrição ≤90. Cada variação tem char_count auditado.",
     "Remarketing reconhece comportamento de pesquisa da Mariana (Insta por 3 dias) e adiciona uma objeção sub-comunicada (atendimento domiciliar) — não repete copy fria nem oferece desconto."
   ],
-  "total_variations": 35,
+  "total_variations": 14,
+  "variations_breakdown": {
+    "meta_ads": 11,
+    "google_ads_rsa": 3,
+    "google_ads_textual_elements": 24,
+    "note": "total_variations conta anúncios completos prontos pra subir (1 Meta = 1 anúncio; 1 RSA Google = 1 anúncio com múltiplos elementos rotacionados pelo algoritmo). Os 24 elementos textuais Google (5 headlines × 3 RSAs + 3 descriptions × 3 RSAs) ficam DENTRO das 3 RSAs."
+  },
   "char_limits_reference": {
     "meta_ads": {
       "primary_text_max": 125,

@@ -5337,7 +5337,21 @@ const R = {
     h += sc(guide.title || 'Como usar este documento', inner);
   }
 
-  if (d.total_variations) h += '<div class="gr gr--2">'+mt(d.total_variations,'Total de Variações','red')+mt((d.funnel_stages||[]).length,'Etapas do Funil','')+'</div>';
+  if (d.total_variations) {
+    const br = d.variations_breakdown || {};
+    const meta = br.meta_ads != null ? br.meta_ads : null;
+    const goog = br.google_ads_rsa != null ? br.google_ads_rsa : null;
+    const googElems = br.google_ads_textual_elements;
+    if (meta != null && goog != null) {
+      h += '<div class="gr gr--3">'
+        + mt(d.total_variations,'Anúncios Prontos','red')
+        + mt(meta,'Meta Ads','blue','1 variação = 1 anúncio completo (texto + headline + descrição + CTA).')
+        + mt(goog+(googElems?' ('+googElems+' elem.)':''),'Google Ads RSA','blue','1 RSA = 1 anúncio com 5 headlines + 3 descriptions que o Google rotaciona.')
+        + '</div>';
+    } else {
+      h += '<div class="gr gr--2">'+mt(d.total_variations,'Anúncios Prontos','red')+mt((d.funnel_stages||[]).length,'Etapas do Funil','')+'</div>';
+    }
+  }
 
   // Lookup de criativos do output ee-s3-criativos-anuncios (cross-skill)
   const allCreatives = {};

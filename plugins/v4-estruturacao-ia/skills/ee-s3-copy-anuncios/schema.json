@@ -159,8 +159,18 @@
     },
     "total_variations": {
       "type": "integer",
-      "description": "Total de variações geradas.",
-      "minimum": 30
+      "description": "Total de ANÚNCIOS COMPLETOS prontos pra subir (não conta cada elemento textual). 1 Meta = 1 anúncio. 1 Google RSA = 1 anúncio (mesmo tendo 5 headlines + 3 descriptions dentro). Use 'variations_breakdown' para detalhar a composição.",
+      "minimum": 1
+    },
+    "variations_breakdown": {
+      "type": "object",
+      "description": "Quebra detalhada da contagem de total_variations — desambigua 'anúncio completo' vs 'elemento textual'.",
+      "properties": {
+        "meta_ads": { "type": "integer", "description": "Quantidade de anúncios Meta (cada um é uma variação completa)." },
+        "google_ads_rsa": { "type": "integer", "description": "Quantidade de RSAs Google (cada uma é 1 anúncio que rotaciona internamente)." },
+        "google_ads_textual_elements": { "type": "integer", "description": "Soma dos headlines + descriptions DENTRO das RSAs (informativo — não conta como anúncio separado)." },
+        "note": { "type": "string", "description": "Explicação curta da convenção de contagem." }
+      }
     },
     "sheets_url": {
       "type": "string",
