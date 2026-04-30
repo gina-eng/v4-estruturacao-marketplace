@@ -1291,7 +1291,55 @@ const SLIDES: Slide[] = [
 
 export default function SlideDeck() {
   const [idx, setIdx] = useState(0);
+  const [printMode, setPrintMode] = useState(false);
   const total = SLIDES.length;
+
+  // Detecta ?print=1 no client (não SSR pra evitar mismatch)
+  useEffect(() => {
+    if (typeof window !== "undefined" && window.location.search.includes("print")) {
+      setPrintMode(true);
+    }
+  }, []);
+
+  // Modo print: renderiza todos os slides empilhados, cada um em frame 1920x1080 com page break
+  if (printMode) {
+    return (
+      <div className="bg-white">
+        {SLIDES.map((s) => (
+          <div
+            key={s.id}
+            style={{
+              width: "1920px",
+              height: "1080px",
+              pageBreakAfter: "always",
+              breakAfter: "page",
+              overflow: "hidden",
+              position: "relative",
+            }}
+          >
+            {s.render()}
+          </div>
+        ))}
+        <style jsx global>{`
+          @page {
+            size: 1920px 1080px;
+            margin: 0;
+          }
+          html, body {
+            margin: 0 !important;
+            padding: 0 !important;
+            background: white !important;
+          }
+          @media print {
+            html, body {
+              width: 1920px;
+              height: auto;
+            }
+          }
+        `}</style>
+      </div>
+    );
+  }
 
   const go = useCallback(
     (dir: 1 | -1) => {
