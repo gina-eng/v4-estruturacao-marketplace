@@ -98,9 +98,49 @@ Revise o output. O que está errado, exagerado ou faltando?
 2. Gera pelo menos 4 opções por variação
 3. Seleciona a melhor imagem de cada
 4. Monta no Canva seguindo o guia
-5. Exporta em 3 formatos: 1080x1080, 1080x1350, 1080x1920
+5. Exporta em 3 formatos: 1080x1080 (square), 1080x1350 (feed_portrait), 1080x1920 (stories)
 
 Após o operador gerar e montar, organize o pack (inventário por variação × formato, tabela de copy resumida) e confirme checklist final.
+
+## Registro dos criativos produzidos (`produced_creatives`)
+
+Depois que o operador entrega os PNGs finais, atualize o JSON com o bloco `produced_creatives`. Esse bloco é o que o portal renderiza como grid visual + download direto e é o que `ee-s3-copy-anuncios` referencia via `pair_with_creative`.
+
+**Convenção de hospedagem:**
+- Salvar PNGs em `clientes/{slug}/landing-{slug}/public/photos/criativos/`
+- Naming: `feed-0N.png` (5 unidades, 1080×1350) e `story-0N.png` (3 unidades, 1080×1920)
+- URL pública: `https://{slug}-landing.vercel.app/photos/criativos/{id}.png` após o próximo deploy da landing
+
+**Estrutura do bloco:**
+```json
+"produced_creatives": {
+  "summary": "1-2 frases — quantos foram, formatos, onde estão hospedados.",
+  "feed_instagram": [
+    {
+      "id": "feed-01",
+      "url": "https://{slug}-landing.vercel.app/photos/criativos/feed-01.png",
+      "format": "feed_portrait",
+      "dimensions": "1080×1350",
+      "linked_variation": "social_proof",
+      "caption_label": "Frase curta resumindo o conceito (vai no card)",
+      "use_with_copy": "Hook MOFU prova social — '70% felina + 4,9★ + +1.200'"
+    }
+  ],
+  "stories_instagram": [
+    {
+      "id": "story-01",
+      "url": "...",
+      "format": "stories",
+      "dimensions": "1080×1920",
+      "linked_variation": "dor",
+      "caption_label": "...",
+      "use_with_copy": "..."
+    }
+  ]
+}
+```
+
+**Por que existe:** sem esse bloco, o portal de entregáveis renderiza só copy/donut/variações textuais — o cliente não vê o criativo produzido. `linked_variation` cruza com o `hook_type` da variação correspondente; `use_with_copy` orienta o gestor de tráfego a parear copy + criativo.
 
 ## Finalização
 
@@ -136,7 +176,12 @@ Operador aprova (com ou sem ajustes).
     "test_duration": "7 dias",
     "cut_criteria": "string"
   },
-  "total_pieces": 15
+  "total_pieces": 15,
+  "produced_creatives": {
+    "summary": "string — só após produção. Ausente até o operador entregar os PNGs.",
+    "feed_instagram": [{ "id": "feed-01", "url": "...", "format": "feed_portrait", "dimensions": "1080×1350", "linked_variation": "social_proof", "caption_label": "...", "use_with_copy": "..." }],
+    "stories_instagram": [{ "id": "story-01", "url": "...", "format": "stories", "dimensions": "1080×1920", "linked_variation": "dor", "caption_label": "...", "use_with_copy": "..." }]
+  }
 }
 ```
 

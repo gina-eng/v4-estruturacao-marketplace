@@ -5308,12 +5308,54 @@ const R = {
 },
 
 'ee-s3-copy-anuncios'(d) {
+  const TURQ_LOCAL = '#00B8BD', PURPLE_LOCAL = '#4B1C7D';
   let h = '';
   if (d.summary) h += sm(d.summary);
-  if (d.total_variations) h += mt(d.total_variations,'Total de Variações','red');
+
+  // Bloco didático: como ler este manual
+  if (d.how_to_read_this_doc) {
+    const guide = d.how_to_read_this_doc;
+    let inner = '';
+    if (guide.intro) inner += '<p style="margin:0 0 .875rem;line-height:1.55;color:var(--text-secondary);font-size:.875rem">'+E(guide.intro)+'</p>';
+    if (guide.structure?.length) {
+      inner += '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:.625rem;margin:.5rem 0 .875rem">'
+        + guide.structure.map(s =>
+          '<div style="background:var(--bg-elevated);border:1px solid var(--border);border-left:3px solid '+TURQ_LOCAL+';border-radius:6px;padding:.625rem .75rem">'
+          +'<code style="font-size:.6875rem;color:'+TURQ_LOCAL+';font-weight:700">'+E(s.section)+'</code>'
+          +'<div style="font-size:.75rem;color:var(--text-primary);margin:.25rem 0;line-height:1.4"><strong>O que é:</strong> '+E(s.what)+'</div>'
+          +'<div style="font-size:.6875rem;color:var(--text-muted);line-height:1.45"><strong>Por quê:</strong> '+E(s.why)+'</div>'
+          +'</div>'
+        ).join('')
+        + '</div>';
+    }
+    if (guide.workflow_recommended?.length) {
+      inner += '<div style="font-size:.6875rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--text-muted);margin:.75rem 0 .375rem">Fluxo recomendado</div>'
+        + '<ol style="margin:0;padding-left:1.25rem;line-height:1.6;font-size:.8125rem;color:var(--text-secondary)">'
+        + guide.workflow_recommended.map(s => '<li>'+E(s.replace(/^\d+\)\s*/,''))+'</li>').join('')
+        + '</ol>';
+    }
+    h += sc(guide.title || 'Como usar este documento', inner);
+  }
+
+  if (d.total_variations) h += '<div class="gr gr--2">'+mt(d.total_variations,'Total de Variações','red')+mt((d.funnel_stages||[]).length,'Etapas do Funil','')+'</div>';
+
+  // Lookup de criativos do output ee-s3-criativos-anuncios (cross-skill)
+  const allCreatives = {};
+  try {
+    const cr = (window.PORTAL_DATA && PORTAL_DATA.outputs && PORTAL_DATA.outputs['ee-s3-criativos-anuncios'] && PORTAL_DATA.outputs['ee-s3-criativos-anuncios'].produced_creatives) || {};
+    [].concat(cr.feed_instagram||[], cr.stories_instagram||[]).forEach(c => { allCreatives[c.id] = c; });
+  } catch(e) {}
+  const pairChip = (cid) => {
+    const c = allCreatives[cid];
+    if (!c) return '<code style="background:var(--bg-elevated);border:1px solid var(--border);border-radius:4px;padding:.125rem .375rem;font-size:.6875rem;color:var(--text-muted)">'+E(cid)+'</code>';
+    return '<a href="'+E(c.url)+'" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.25rem;background:var(--bg-elevated);border:1px solid var(--border);border-radius:4px;padding:.125rem .375rem;font-size:.6875rem;color:'+TURQ_LOCAL+';text-decoration:none;font-weight:600" title="'+E(c.caption_label||'')+'">'
+      +'<span style="display:inline-block;width:14px;height:14px;border-radius:2px;background:#FBF4E4 url(\''+E(c.url)+'\') center/cover no-repeat;flex-shrink:0"></span>'
+      +'<code>'+E(cid)+'</code>'
+      +'</a>';
+  };
+
   if (d.funnel_stages?.length) {
     const fn = {topo_de_funil:'Topo de Funil',meio_de_funil:'Meio de Funil',fundo_de_funil:'Fundo de Funil',remarketing:'Remarketing'};
-    // Donut: distribuição de variações por estágio
     const toneByStage = {topo_de_funil:'blue',meio_de_funil:'yellow',fundo_de_funil:'green',remarketing:'red'};
     const stageData = d.funnel_stages.map(s=>{
       const count = (s.platforms||[]).reduce((sum,p)=>sum+(p.variations?.length||0),0);
@@ -5328,18 +5370,119 @@ const R = {
         insight(chartDonut(stageData, {title:'Variações por Funil'}),
           distInsight, fund && fund.value < top.value/2 ? 'warn' : 'good'));
     }
+
+    const hookLbl = {dor:'Dor',resultado:'Resultado',curiosidade:'Curiosidade',social_proof:'Prova Social',prova_social:'Prova Social',urgencia:'Urgência',indignacao:'Indignação',reconhecimento:'Reconhecimento',comparacao:'Comparação',transparencia:'Transparência',oferta_direta:'Oferta Direta',facilitacao:'Facilitação',secundaria_caes:'Cães',reconhecimento_continuidade:'Reconhecimento',objecao_estresse:'Objeção'};
+    const hookTone = {dor:'danger',prova_social:'green',resultado:'green',oferta_direta:'green',transparencia:'blue',comparacao:'yellow',facilitacao:'blue',reconhecimento:'gray',reconhecimento_continuidade:'gray',indignacao:'danger',objecao_estresse:'yellow',secundaria_caes:'gray',social_proof:'green',curiosidade:'yellow',urgencia:'danger'};
+
     d.funnel_stages.forEach(stage => {
-      let rows = [];
+      const stageName = fn[stage.name] || stage.name;
+      let stageInner = '';
+      if (stage.objective) stageInner += '<p style="margin:0 0 .375rem;font-size:.8125rem;color:var(--text-secondary);line-height:1.55"><strong style="color:var(--text-primary)">Objetivo:</strong> '+E(stage.objective)+'</p>';
+      if (stage.tone) stageInner += '<p style="margin:0 0 .875rem;font-size:.75rem;color:var(--text-muted);line-height:1.5"><strong>Tom:</strong> '+E(stage.tone)+'</p>';
+
       (stage.platforms||[]).forEach(plat => {
+        const platName = plat.name === 'meta_ads' ? 'Meta Ads' : (plat.name === 'google_ads' ? 'Google Ads (RSA)' : plat.name);
+        const platColor = plat.name === 'meta_ads' ? TURQ_LOCAL : PURPLE_LOCAL;
+        stageInner += '<div style="font-size:.6875rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:'+platColor+';margin:.875rem 0 .5rem">'+E(platName)+'</div>';
+
         (plat.variations||[]).forEach(v => {
-          rows.push([E(plat.name),E(v.type),E(v.headline||v.text||'').substring(0,80)+(v.headline?.length>80?'...':''),E(v.cta||'')]);
+          if (plat.name === 'google_ads') {
+            stageInner += '<div style="background:var(--bg-elevated);border:1px solid var(--border);border-radius:8px;padding:.75rem .875rem;margin-bottom:.5rem">';
+            if (v.match_intent) stageInner += '<div style="font-size:.6875rem;color:var(--text-muted);margin-bottom:.5rem;font-style:italic"><strong>Intenção:</strong> '+E(v.match_intent)+'</div>';
+            if (v.headlines?.length) {
+              stageInner += '<div style="font-size:.6875rem;color:var(--text-muted);font-weight:600;margin:.25rem 0">Headlines (≤30 chars)</div>'
+                + '<ul style="margin:0 0 .625rem;padding-left:1rem;font-size:.8125rem;line-height:1.55">'
+                + v.headlines.map((hd,i) => '<li>'+E(hd)+' <span style="color:var(--text-muted);font-size:.625rem">('+(v.char_count_headlines?.[i]!=null?v.char_count_headlines[i]:hd.length)+')</span></li>').join('')
+                + '</ul>';
+            }
+            if (v.descriptions?.length) {
+              stageInner += '<div style="font-size:.6875rem;color:var(--text-muted);font-weight:600;margin:.25rem 0">Descriptions (≤90 chars)</div>'
+                + '<ul style="margin:0;padding-left:1rem;font-size:.8125rem;line-height:1.55">'
+                + v.descriptions.map((dx,i) => '<li>'+E(dx)+' <span style="color:var(--text-muted);font-size:.625rem">('+(v.char_count_descriptions?.[i]!=null?v.char_count_descriptions[i]:dx.length)+')</span></li>').join('')
+                + '</ul>';
+            }
+            stageInner += '</div>';
+          } else {
+            const accent = (v.hook_type==='dor'||v.hook_type==='indignacao') ? 'var(--danger)' : TURQ_LOCAL;
+            stageInner += '<div style="background:var(--bg-elevated);border:1px solid var(--border);border-left:3px solid '+accent+';border-radius:6px;padding:.75rem .875rem;margin-bottom:.5rem">'
+              + '<div style="display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;margin-bottom:.5rem">'
+                + (v.hook_type ? tg(hookLbl[v.hook_type]||v.hook_type, hookTone[v.hook_type]||'gray') : '')
+                + (v.type ? '<code style="font-size:.625rem;color:var(--text-muted)">'+E(v.type)+'</code>' : '')
+              + '</div>'
+              + (v.text ? '<p style="margin:0 0 .5rem;font-size:.875rem;line-height:1.5;color:var(--text-primary)">'+E(v.text)+'</p>' : '')
+              + '<div style="display:flex;flex-wrap:wrap;gap:.875rem;font-size:.75rem;color:var(--text-secondary);margin-bottom:.25rem">'
+                + (v.headline ? '<span><strong style="color:var(--text-muted)">Headline:</strong> '+E(v.headline)+'</span>' : '')
+                + (v.description ? '<span><strong style="color:var(--text-muted)">Desc:</strong> '+E(v.description)+'</span>' : '')
+                + (v.cta ? '<span><strong style="color:var(--text-muted)">CTA:</strong> '+E(v.cta)+'</span>' : '')
+              + '</div>'
+              + (v.char_count ? '<div style="font-size:.625rem;color:var(--text-muted);margin-top:.25rem">char_count — text: '+(v.char_count.text!=null?v.char_count.text:'?')+' · headline: '+(v.char_count.headline!=null?v.char_count.headline:'?')+' · desc: '+(v.char_count.description!=null?v.char_count.description:'?')+'</div>' : '')
+              + (v.pair_with_creative?.length ? '<div style="margin-top:.5rem;display:flex;flex-wrap:wrap;gap:.25rem;align-items:center"><span style="font-size:.625rem;color:var(--text-muted);font-weight:600;text-transform:uppercase;letter-spacing:.05em;margin-right:.25rem">Pareia com:</span>'+v.pair_with_creative.map(pairChip).join('')+'</div>' : '')
+              + '</div>';
+          }
         });
       });
-      if (rows.length) h += sc((fn[stage.name]||stage.name)+' — '+E(stage.tone||''), tb(['Plataforma','Tipo','Copy','CTA'],rows));
+
+      h += sc(stageName, stageInner);
     });
   }
+
+  // Limites de caracteres
+  if (d.char_limits_reference) {
+    const lim = d.char_limits_reference;
+    let limInner = '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.75rem">';
+    if (lim.meta_ads) {
+      limInner += '<div style="background:var(--bg-elevated);border:1px solid var(--border);border-radius:8px;padding:.75rem .875rem">'
+        +'<div style="font-size:.6875rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:'+TURQ_LOCAL+';margin-bottom:.5rem">Meta Ads</div>'
+        +'<div style="font-size:.8125rem;line-height:1.7;color:var(--text-secondary)">'
+          +'<div>Texto: ≤<strong>'+E(lim.meta_ads.primary_text_max)+'</strong> chars</div>'
+          +'<div>Headline: ≤<strong>'+E(lim.meta_ads.headline_max)+'</strong> chars</div>'
+          +'<div>Descrição: ≤<strong>'+E(lim.meta_ads.description_max)+'</strong> chars</div>'
+        +'</div>'
+        +(lim.meta_ads.note?'<div style="font-size:.6875rem;color:var(--text-muted);margin-top:.5rem;font-style:italic">'+E(lim.meta_ads.note)+'</div>':'')
+      +'</div>';
+    }
+    if (lim.google_ads) {
+      limInner += '<div style="background:var(--bg-elevated);border:1px solid var(--border);border-radius:8px;padding:.75rem .875rem">'
+        +'<div style="font-size:.6875rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:'+PURPLE_LOCAL+';margin-bottom:.5rem">Google Ads (RSA)</div>'
+        +'<div style="font-size:.8125rem;line-height:1.7;color:var(--text-secondary)">'
+          +'<div>Headline: ≤<strong>'+E(lim.google_ads.headline_max)+'</strong> chars</div>'
+          +'<div>Descrição: ≤<strong>'+E(lim.google_ads.description_max)+'</strong> chars</div>'
+        +'</div>'
+        +(lim.google_ads.note?'<div style="font-size:.6875rem;color:var(--text-muted);margin-top:.5rem;font-style:italic">'+E(lim.google_ads.note)+'</div>':'')
+      +'</div>';
+    }
+    limInner += '</div>';
+    h += sc('Limites de Caracteres', limInner);
+  }
+
+  // Estratégia de teste
+  if (d.test_strategy) {
+    const ts = d.test_strategy;
+    let tsInner = '<div style="display:flex;flex-wrap:wrap;gap:.75rem;margin-bottom:.875rem">';
+    if (ts.duration_min_days) tsInner += mt(ts.duration_min_days+' dias','Duração mínima','blue');
+    if (ts.min_budget_per_adset_brl) tsInner += mt('R$ '+ts.min_budget_per_adset_brl+'/dia','Budget min/adset','blue');
+    tsInner += '</div>';
+    tsInner += '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:.75rem">';
+    if (ts.kpis_kill_criteria?.length) {
+      tsInner += '<div style="background:var(--bg-elevated);border:1px solid var(--danger);border-radius:8px;padding:.75rem .875rem">'
+        +'<div style="font-size:.6875rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--danger);margin-bottom:.5rem">Critérios de pausa</div>'
+        +'<ul style="margin:0;padding-left:1.125rem;font-size:.8125rem;line-height:1.55;color:var(--text-secondary)">'
+        + ts.kpis_kill_criteria.map(k=>'<li>'+E(k)+'</li>').join('')
+        +'</ul></div>';
+    }
+    if (ts.kpis_winners?.length) {
+      tsInner += '<div style="background:var(--bg-elevated);border:1px solid var(--success);border-radius:8px;padding:.75rem .875rem">'
+        +'<div style="font-size:.6875rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--success);margin-bottom:.5rem">Critérios de winner</div>'
+        +'<ul style="margin:0;padding-left:1.125rem;font-size:.8125rem;line-height:1.55;color:var(--text-secondary)">'
+        + ts.kpis_winners.map(k=>'<li>'+E(k)+'</li>').join('')
+        +'</ul></div>';
+    }
+    tsInner += '</div>';
+    h += sc('Estratégia de Teste', tsInner);
+  }
+
   if (d.copy_rules_applied?.length) {
-    h += sc('Regras Aplicadas', '<ul class="cl">'+d.copy_rules_applied.map(r=>'<li><span class="cl__icon cl__icon--done">&#10003;</span><span>'+E(r)+'</span></li>').join('')+'</ul>');
+    h += sc('Regras de Copy Aplicadas', '<ul class="cl">'+d.copy_rules_applied.map(r=>'<li><span class="cl__icon cl__icon--done">&#10003;</span><span>'+E(r)+'</span></li>').join('')+'</ul>');
   }
   return h;
 },
@@ -5372,6 +5515,25 @@ const R = {
       +'<div style="margin-top:.375rem"><strong>Headline:</strong> '+E(v.headline)+' | <strong>CTA:</strong> '+E(v.button_cta)+'</div>'
       +'<div class="cd__meta">Formato: '+E(v.recommended_format)+'</div></div></div>'
     ).join(''));
+  }
+  if (d.produced_creatives) {
+    const pc = d.produced_creatives;
+    const hk2 = {dor:'danger',resultado:'green',curiosidade:'yellow',social_proof:'green',urgencia:'red'};
+    const hkLbl = {dor:'Dor',resultado:'Resultado',curiosidade:'Curiosidade',social_proof:'Prova Social',urgencia:'Urgência'};
+    const cCard = (c, ar) => '<div style="background:var(--bg-elevated);border:1px solid var(--border);border-radius:8px;overflow:hidden;display:flex;flex-direction:column">'
+      +'<div style="aspect-ratio:'+ar+';background:#FBF4E4 url(\''+E(c.url)+'\') center/cover no-repeat"></div>'
+      +'<div style="padding:.5rem .625rem;display:flex;flex-direction:column;gap:.25rem">'
+      +'<div style="display:flex;align-items:center;gap:.375rem"><span style="font-size:.625rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:.05em">'+E(c.id)+'</span>'+(c.linked_variation?tg(hkLbl[c.linked_variation]||c.linked_variation, hk2[c.linked_variation]||'gray'):'')+'</div>'
+      +(c.caption_label?'<div style="font-size:.75rem;color:var(--text-primary);line-height:1.35">'+E(c.caption_label)+'</div>':'')
+      +(c.use_with_copy?'<div style="font-size:.6875rem;color:var(--text-muted);line-height:1.4">'+E(c.use_with_copy)+'</div>':'')
+      +'<a href="'+E(c.url)+'" download target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.25rem;font-size:.6875rem;color:var(--accent);text-decoration:none;font-weight:600;margin-top:.125rem">&#x2B07; Baixar PNG</a>'
+      +'</div></div>';
+    const cLabel = t => '<div style="font-size:.6875rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--text-muted);margin:.5rem 0">'+E(t)+'</div>';
+    let inner = '';
+    if (pc.summary) inner += '<p style="margin:0 0 .75rem;color:var(--text-secondary);font-size:.875rem;line-height:1.5">'+E(pc.summary)+'</p>';
+    if (pc.feed_instagram?.length) inner += cLabel('Feed Instagram · 4:5 · 1080×1350')+'<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:.75rem;margin-bottom:1rem">'+pc.feed_instagram.map(c=>cCard(c,'4/5')).join('')+'</div>';
+    if (pc.stories_instagram?.length) inner += cLabel('Stories Instagram · 9:16 · 1080×1920')+'<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:.75rem">'+pc.stories_instagram.map(c=>cCard(c,'9/16')).join('')+'</div>';
+    h += sc('Criativos Produzidos', inner);
   }
   if (d.ab_test_guide) {
     const g = d.ab_test_guide;

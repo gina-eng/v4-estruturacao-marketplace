@@ -116,6 +116,29 @@
                             "type": "integer"
                           }
                         }
+                      },
+                      "hook_type": {
+                        "type": "string",
+                        "description": "Ângulo emocional/argumentativo do copy (dor, prova_social, oferta_direta, etc). Cruza com 'linked_variation' do produced_creatives."
+                      },
+                      "match_intent": {
+                        "type": "string",
+                        "description": "(Google Ads) Intenção de busca alvo desta RSA — informacional, comparativa, transacional."
+                      },
+                      "char_count_headlines": {
+                        "type": "array",
+                        "items": { "type": "integer" },
+                        "description": "(Google Ads) Contagem de chars por headline, na ordem do array."
+                      },
+                      "char_count_descriptions": {
+                        "type": "array",
+                        "items": { "type": "integer" },
+                        "description": "(Google Ads) Contagem de chars por description, na ordem do array."
+                      },
+                      "pair_with_creative": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "description": "IDs dos criativos visuais (feed-0N / story-0N) que devem rodar com esta copy. Cruza com produced_creatives.feed_instagram[].id e .stories_instagram[].id em ee-s3-criativos-anuncios. Omitir quando não houver criativo dedicado."
                       }
                     }
                   }
@@ -147,6 +170,65 @@
     "summary": {
       "type": "string",
       "description": "Resumo de 1-2 frases da copy de anúncios. Inclui número de variações geradas e principais ganchos usados."
+    },
+    "how_to_read_this_doc": {
+      "type": "object",
+      "description": "Bloco didático que explica ao cliente como ler e usar este documento. Renderizado como primeira seção da skill no portal.",
+      "properties": {
+        "title": { "type": "string" },
+        "intro": { "type": "string", "description": "1 parágrafo — o que o doc entrega e como conecta com criativos." },
+        "structure": {
+          "type": "array",
+          "description": "Explicação seção-a-seção do JSON. Cada item: section (nome do campo), what (o que é), why (por que está aqui).",
+          "items": {
+            "type": "object",
+            "required": ["section", "what", "why"],
+            "properties": {
+              "section": { "type": "string" },
+              "what": { "type": "string" },
+              "why": { "type": "string" }
+            }
+          }
+        },
+        "workflow_recommended": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Passos numerados de uso prático (validar → exportar → subir → parear → testar)."
+        }
+      }
+    },
+    "char_limits_reference": {
+      "type": "object",
+      "description": "Limites oficiais de caracteres por plataforma — referência rápida ao lado das variações.",
+      "properties": {
+        "meta_ads": {
+          "type": "object",
+          "properties": {
+            "primary_text_max": { "type": "integer" },
+            "headline_max": { "type": "integer" },
+            "description_max": { "type": "integer" },
+            "note": { "type": "string" }
+          }
+        },
+        "google_ads": {
+          "type": "object",
+          "properties": {
+            "headline_max": { "type": "integer" },
+            "description_max": { "type": "integer" },
+            "note": { "type": "string" }
+          }
+        }
+      }
+    },
+    "test_strategy": {
+      "type": "object",
+      "description": "Critérios para rodar A/B com essas copies — duração, budget e KPIs de kill/winner.",
+      "properties": {
+        "duration_min_days": { "type": "integer", "minimum": 1 },
+        "min_budget_per_adset_brl": { "type": "number", "minimum": 0 },
+        "kpis_kill_criteria": { "type": "array", "items": { "type": "string" }, "description": "Quando pausar (ex: CTR <1% após 1k impressões)." },
+        "kpis_winners": { "type": "array", "items": { "type": "string" }, "description": "Quando escalar (ex: CTR ≥1,8%)." }
+      }
     }
   }
 }

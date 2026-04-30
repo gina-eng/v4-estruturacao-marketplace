@@ -59,6 +59,43 @@ Tom: direto, urgência real, benefício claro.
 
 **REGRAS DE COPY APLICADAS:** Liste as 5 principais regras aplicadas para que o consultor entenda a lógica.
 
+### Pareamento copy ↔ criativo (`pair_with_creative`)
+
+Se a skill `ee-s3-criativos-anuncios` já gerou `produced_creatives` (PNGs prontos com IDs `feed-0N` / `story-0N`), adicione em cada variação Meta Ads o array `pair_with_creative` com os IDs dos criativos que casam com aquela copy. Exemplo:
+
+```json
+{ "hook_type": "prova_social", "text": "70% da base é tutora de gato. ...", "pair_with_creative": ["feed-01", "feed-04"] }
+```
+
+**Regra:** parear pelo hook_type (criativo `linked_variation` deve casar com a copy `hook_type`). Quando não houver criativo dedicado, **não invente** — omita o campo (o portal vai instruir o gestor a usar criativo neutro do funil).
+
+### Bloco didático `how_to_read_this_doc`
+
+Inclua no topo do JSON um bloco que explica ao cliente como ler o documento. É o que o portal renderiza como primeira seção da skill — vira manual de uso, não só dump de dados.
+
+```json
+"how_to_read_this_doc": {
+  "title": "Como usar este manual de copy",
+  "intro": "1 parágrafo explicando o que o doc entrega e como ele se conecta com criativos.",
+  "structure": [
+    { "section": "funnel_stages", "what": "...", "why": "..." },
+    { "section": "variations[].pair_with_creative", "what": "...", "why": "..." },
+    { "section": "char_limits_reference", "what": "...", "why": "..." },
+    { "section": "test_strategy", "what": "...", "why": "..." },
+    { "section": "copy_rules_applied", "what": "...", "why": "..." }
+  ],
+  "workflow_recommended": [
+    "1) Validar destination_url e CTA padrão.",
+    "2) Exportar para Sheets e revisar com gestor de tráfego.",
+    "3) Subir no Meta em adsets separados por hook_type.",
+    "4) Parear copy + criativo conforme pair_with_creative.",
+    "5) Rodar 7 dias com test_strategy.kpis_kill_criteria diários."
+  ]
+}
+```
+
+**Por quê:** o cliente que abre o portal não é copywriter. Sem essa seção, ele lê 35 textos sem saber a lógica de uso. Com ela, ele entende em 30s o sistema antes de mergulhar no detalhe.
+
 ### Revisão em formato de planilha
 
 Apresente todas organizadas:
@@ -118,6 +155,13 @@ Operador aprova (com ou sem ajustes).
 
 ```json
 {
+  "summary": "string",
+  "how_to_read_this_doc": {
+    "title": "string",
+    "intro": "string",
+    "structure": [{ "section": "string", "what": "string", "why": "string" }],
+    "workflow_recommended": ["string"]
+  },
   "funnel_stages": [
     {
       "name": "topo_de_funil",
@@ -126,16 +170,35 @@ Operador aprova (com ou sem ajustes).
       "platforms": [
         {
           "name": "meta_ads",
-          "variations": [{ "type": "text_primary", "text": "string", "headline": "string", "description": "string", "cta": "string", "char_count": { "text": 98, "headline": 34, "description": 28 } }]
+          "variations": [{
+            "type": "text_primary",
+            "hook_type": "dor",
+            "text": "string",
+            "headline": "string",
+            "description": "string",
+            "cta": "string",
+            "char_count": { "text": 98, "headline": 34, "description": 28 },
+            "pair_with_creative": ["feed-05", "story-01"]
+          }]
         },
         {
           "name": "google_ads",
-          "variations": [{ "type": "responsive_search", "headlines": ["string x5"], "descriptions": ["string x3"] }]
+          "variations": [{ "type": "responsive_search", "match_intent": "string", "headlines": ["string x5"], "descriptions": ["string x3"], "char_count_headlines": [29,25,26,28,23], "char_count_descriptions": [85,84,80] }]
         }
       ]
     }
   ],
   "copy_rules_applied": ["string — 5 regras aplicadas"],
+  "char_limits_reference": {
+    "meta_ads": { "primary_text_max": 125, "headline_max": 40, "description_max": 30, "note": "string" },
+    "google_ads": { "headline_max": 30, "description_max": 90, "note": "string" }
+  },
+  "test_strategy": {
+    "duration_min_days": 7,
+    "min_budget_per_adset_brl": 30,
+    "kpis_kill_criteria": ["string"],
+    "kpis_winners": ["string"]
+  },
   "total_variations": 30,
   "sheets_url": "string — link do Google Sheets"
 }
