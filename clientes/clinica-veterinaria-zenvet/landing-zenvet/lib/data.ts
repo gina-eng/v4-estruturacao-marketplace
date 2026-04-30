@@ -13,8 +13,8 @@ export const sectionByName = (name: string) =>
   SECTIONS.find((s: any) => s.name === name);
 
 export const ADDRESS = "Av. Pascoal Ardito, 792 — São Manoel, Americana-SP";
-export const HOURS = "Seg a Sex · 8h às 18h";
-export const PHONE_DISPLAY = "(19) 99579-5483";
+export const HOURS = "Seg a Seg · 8h às 20h";
+export const PHONE_DISPLAY = "(19) 98979-0105";
 export const INSTAGRAM = "@clinicazenvet";
 export const GMAPS_URL =
   "https://www.google.com/maps/search/?api=1&query=Av.+Pascoal+Ardito+792+Americana+SP";

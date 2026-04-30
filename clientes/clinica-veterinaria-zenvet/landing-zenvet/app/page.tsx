@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import StatsTransition from "@/components/StatsTransition";
 import Problem from "@/components/Problem";
 import DraNathalia from "@/components/DraNathalia";
 import Solution from "@/components/Solution";
@@ -9,7 +10,6 @@ import SocialProof from "@/components/SocialProof";
 import ForDogs from "@/components/ForDogs";
 import FAQ from "@/components/FAQ";
 import FinalCTA from "@/components/FinalCTA";
-import LocationMap from "@/components/LocationMap";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 
@@ -19,6 +19,7 @@ export default function HomePage() {
       <Header />
       <main>
         <Hero />
+        <StatsTransition />
         <Problem />
         <DraNathalia />
         <Solution />
@@ -28,7 +29,6 @@ export default function HomePage() {
         <ForDogs />
         <FAQ />
         <FinalCTA />
-        <LocationMap />
       </main>
       <Footer />
       <WhatsAppFloat />

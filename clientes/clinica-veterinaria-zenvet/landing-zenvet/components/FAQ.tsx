@@ -17,7 +17,7 @@ export default function FAQ() {
             Tira dúvidas <em className="italic font-normal">antes de marcar.</em>
           </h2>
           <p className="text-base md:text-lg text-graphite/75">
-            Se sua dúvida não está aqui, manda no WhatsApp — a Loíse responde em até 30 min.
+            Se sua dúvida não está aqui, manda no WhatsApp — a Louíse responde em até 30 min.
           </p>
         </header>
         <div className="border-y border-purple-deep/15">

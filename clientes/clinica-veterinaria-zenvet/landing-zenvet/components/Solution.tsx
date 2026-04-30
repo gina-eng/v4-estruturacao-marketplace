@@ -1,11 +1,12 @@
 import { sectionByName } from "@/lib/data";
-import { Stethoscope, Heart, ListChecks, Clock } from "lucide-react";
+import { Stethoscope, Heart, ListChecks, Clock, Home } from "lucide-react";
 
 const ICONS: Record<string, any> = {
   stethoscope: Stethoscope,
   heart: Heart,
   "list-check": ListChecks,
   clock: Clock,
+  home: Home,
 };
 
 export default function Solution() {
@@ -27,19 +28,40 @@ export default function Solution() {
         <div className="grid md:grid-cols-2 gap-5">
           {s.benefits.map((b: any, i: number) => {
             const Icon = ICONS[b.icon] || Heart;
+            const isHighlight = b.icon === "home";
             return (
               <div
                 key={i}
-                className="bg-white border border-purple-deep/10 rounded-card p-6 flex gap-4"
+                className={`rounded-card p-6 flex gap-4 ${
+                  isHighlight
+                    ? "md:col-span-2 bg-purple-deep text-white border border-purple-deep"
+                    : "bg-white border border-purple-deep/10"
+                }`}
               >
-                <div className="w-12 h-12 rounded-full bg-turquoise-mist text-turquoise-dark flex items-center justify-center flex-shrink-0">
+                <div
+                  className={`w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 ${
+                    isHighlight
+                      ? "bg-turquoise text-purple-shadow"
+                      : "bg-turquoise-mist text-turquoise-dark"
+                  }`}
+                >
                   <Icon size={22} />
                 </div>
                 <div>
-                  <h3 className="text-lg font-serif font-medium !text-purple-deep mb-2">
+                  <h3
+                    className={`text-lg font-serif font-medium mb-2 ${
+                      isHighlight ? "!text-white" : "!text-purple-deep"
+                    }`}
+                  >
                     {b.title}
                   </h3>
-                  <p className="text-graphite/75 text-sm leading-relaxed">{b.body}</p>
+                  <p
+                    className={`text-sm leading-relaxed ${
+                      isHighlight ? "text-white/85" : "text-graphite/75"
+                    }`}
+                  >
+                    {b.body}
+                  </p>
                 </div>
               </div>
             );

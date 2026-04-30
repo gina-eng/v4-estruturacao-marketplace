@@ -3,7 +3,7 @@
   "sections": [
     {
       "name": "hero",
-      "eyebrow": "Atendimento humanizado · Americana / SP",
+      "eyebrow": "Atendimento na clínica + domiciliar · Americana / SP",
       "headline": "Seu gato merece uma vet que entende de gato.",
       "subheadline": "A Dra. Nathalia é especialista em felinos. Atende sem afobação, explica cada conduta — e cuida do seu gato como se fosse dela.",
       "cta_primary": "Agendar com a Dra. Nathalia",
@@ -42,12 +42,11 @@
       "name": "dra_nathalia",
       "eyebrow": "A profissional",
       "headline": "Dra. Nathalia. A vet em quem seu gato confia.",
-      "subheadline": "Especialista em medicina felina, dedicada a gatos como prioridade clínica há anos. Ambiente cat-friendly — sem cachorro latindo na sala ao lado, sem cheiro de canil, sem mesa fria de aço.",
+      "subheadline": "Especialista em medicina felina, dedicada a gatos como prioridade clínica há anos — e também recebe cães com a mesma escuta e o mesmo tempo de consulta. Atende na clínica em Americana e em domicílio, no conforto do seu pet.",
       "credentials": [
         { "year": "Graduação", "title": "Medicina Veterinária" },
-        { "year": "Aprimoramento", "title": "Medicina Felina (ABFel)" },
-        { "year": "Pós-graduação", "title": "Clínica e Cirurgia de Pequenos Animais — ênfase felinos" },
-        { "year": "Certificação", "title": "Cat-Friendly Practice (ISFM)" }
+        { "year": "Aprimoramento", "title": "Medicina Felina (Qualittas)" },
+        { "year": "Pós-graduação", "title": "Clínica e Cirurgia de Pequenos Animais (Qualittas)" }
       ],
       "cta_primary": "Agendar com a Dra. Nathalia"
     },
@@ -60,12 +59,17 @@
         {
           "icon": "stethoscope",
           "title": "Especialização Felina Declarada",
-          "body": "A Dra. Nathalia é pós-graduanda em clínica e cirurgia de pequenos animais com ênfase em medicina felina. 70% da nossa base é gato — toda decisão clínica considera o comportamento da espécie."
+          "body": "A Dra. Nathalia é pós-graduada em clínica e cirurgia de pequenos animais e em medicina felina (Qualittas). 70% da nossa base é gato — toda decisão clínica considera o comportamento da espécie."
         },
         {
           "icon": "heart",
           "title": "Medicina Humanizada",
           "body": "Cada paciente tem nome, histórico e a mesma veterinária do começo ao fim. Nada de 'mais um bicho na fila' — chamamos seu gato pelo nome desde a 2ª visita."
+        },
+        {
+          "icon": "home",
+          "title": "Na clínica ou na sua casa",
+          "body": "Para gatos que estressam no transporte, oferecemos atendimento domiciliar com a mesma Dra. Nathalia. Consulta completa na sua sala, sem caixa de transporte, sem espera — combinada antes pelo WhatsApp."
         },
         {
           "icon": "list-check",
@@ -125,7 +129,7 @@
       "name": "final_cta",
       "eyebrow": "Vamos cuidar do seu gato juntas?",
       "headline": "Em Americana, gato é com a gente.",
-      "subheadline": "Resposta no WhatsApp em até 30 min — sem bot, sem fila. Loíse atende Seg a Sex, 8h às 18h.",
+      "subheadline": "Resposta no WhatsApp em até 30 min — sem bot, sem fila. Louíse atende de Segunda a Segunda, das 8h às 20h. Atendimento na clínica ou domiciliar, você escolhe.",
       "cta_primary": "Agendar pelo WhatsApp",
       "cta_secondary": "Como chegar (Google Maps) →"
     }
@@ -133,23 +137,23 @@
   "faq": [
     {
       "question": "Quanto custa a consulta especialista em felinos?",
-      "answer": "A consulta com a Dra. Nathalia é R$ 220 e dura 40 minutos. Inclui exame clínico, conversa sobre comportamento, plano de tratamento por escrito e acompanhamento no WhatsApp em D+1. Se precisar exame complementar, o valor é mostrado e aprovado antes da execução — nunca há conta surpresa."
+      "answer": "O valor da consulta é informado na hora do agendamento — combinamos tudo de forma transparente antes de você confirmar a vaga, junto com o que está incluído (40 min com a Dra. Nathalia, plano por escrito e acompanhamento no WhatsApp em D+1). Mande uma mensagem que a Louíse te passa o valor atualizado e tira qualquer dúvida antes."
     },
     {
       "question": "Atendem só gatos mesmo?",
-      "answer": "A Dra. Nathalia é dedicada principalmente a felinos. A clínica também atende cães em outros consultórios — mas o ambiente felino é separado, silencioso e sem cheiro de cachorro."
+      "answer": "Não — atendemos cães também, com o mesmo cuidado humanizado, hora marcada e orçamento item a item. Felinos são a especialização declarada da Dra. Nathalia, mas cães são bem-vindos: o ambiente felino é separado e silencioso, então gato e cachorro não se cruzam dentro da clínica."
     },
     {
       "question": "Vocês fazem exames lá ou enviam para fora?",
       "answer": "Os exames simples são feitos na própria clínica. Para exames especializados (ultrassom, ressonância, biopsia) trabalhamos com laboratórios parceiros de confiança da Dra. Nathalia. Você sempre aprova o orçamento item a item antes — incluindo o custo do exame externo."
     },
     {
-      "question": "Atendimento domiciliar para felinos — como funciona?",
-      "answer": "Para gatos que estressam muito no transporte ou são mais sensíveis, oferecemos atendimento domiciliar com a Dra. Nathalia. Inclui consulta completa na sua casa + acompanhamento posterior. Mande mensagem no WhatsApp contando sobre seu gato — a Loíse explica a logística e o valor antes."
+      "question": "Atendimento domiciliar — como funciona?",
+      "answer": "A Zenvet atende tanto na clínica quanto na sua casa. Para gatos que estressam no transporte (ou cães mais idosos / sensíveis), a Dra. Nathalia faz a consulta completa em domicílio com acompanhamento posterior — sem caixa de transporte, sem espera, no ambiente em que o pet já se sente seguro. Mande mensagem no WhatsApp contando o caso e a Louíse combina a logística e o valor antes."
     },
     {
       "question": "Vocês atendem emergência 24 horas?",
-      "answer": "Não. A Zenvet é uma clínica com hora marcada, das 8h às 18h de Segunda a Sexta. Para emergência fora do horário, recomendamos os hospitais 24h da região. Quando seu pet estabilizar, volta a falar com a gente para um check-up — explicamos tudo direitinho."
+      "answer": "Não. A Zenvet é uma clínica com hora marcada, das 8h às 20h, de Segunda a Segunda. Para emergência fora do horário, recomendamos os hospitais 24h da região. Quando seu pet estabilizar, volta a falar com a gente para um check-up — explicamos tudo direitinho."
     },
     {
       "question": "Posso cancelar ou reagendar?",
@@ -195,5 +199,5 @@
     "og_type": "website"
   },
   "deploy_url": "https://zenvet-landing.vercel.app",
-  "whatsapp_link": "https://wa.me/5519995795483?text=Oi%21%20Vi%20a%20p%C3%A1gina%20da%20Zenvet%20e%20queria%20agendar%20consulta%20para%20meu%20pet."
+  "whatsapp_link": "https://wa.me/5519989790105?text=Oi%21%20Vi%20a%20p%C3%A1gina%20da%20Zenvet%20e%20queria%20agendar%20consulta%20para%20meu%20pet."
 }

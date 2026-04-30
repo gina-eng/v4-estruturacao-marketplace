@@ -1,12 +1,15 @@
 import { sectionByName, WHATSAPP_LINK, ADDRESS, HOURS, PHONE_DISPLAY, INSTAGRAM, GMAPS_URL } from "@/lib/data";
 import { MessageCircle, MapPin, Clock, Instagram } from "lucide-react";
 
+const MAP_EMBED_URL =
+  "https://www.google.com/maps?q=Av.+Pascoal+Ardito,+792,+Americana+SP&output=embed";
+
 export default function FinalCTA() {
   const s: any = sectionByName("final_cta");
   return (
     <section id="agendar" className="bg-purple-deep text-white relative overflow-hidden">
       <div className="container-content section relative z-10">
-        <div className="grid md:grid-cols-2 gap-10 items-center">
+        <div className="grid md:grid-cols-2 gap-10 items-start">
           <div>
             <h2 className="text-3xl md:text-5xl font-bold mb-5 !text-white leading-tight">
               {s.headline}
@@ -25,27 +28,42 @@ export default function FinalCTA() {
             </div>
           </div>
 
-          <div className="bg-white/5 border border-white/10 rounded-card p-6 backdrop-blur-sm">
-            <ul className="flex flex-col gap-4 text-sm md:text-base">
-              <li className="flex gap-3">
-                <MapPin size={18} className="text-turquoise flex-shrink-0 mt-0.5" />
-                <span className="text-white/90">{ADDRESS}</span>
-              </li>
-              <li className="flex gap-3">
-                <Clock size={18} className="text-turquoise flex-shrink-0 mt-0.5" />
-                <span className="text-white/90">{HOURS}</span>
-              </li>
-              <li className="flex gap-3">
-                <MessageCircle size={18} className="text-turquoise flex-shrink-0 mt-0.5" />
-                <span className="text-white/90">WhatsApp · {PHONE_DISPLAY}</span>
-              </li>
-              <li className="flex gap-3">
-                <Instagram size={18} className="text-turquoise flex-shrink-0 mt-0.5" />
-                <a href={`https://instagram.com/${INSTAGRAM.replace("@", "")}`} target="_blank" rel="noopener" className="text-white/90 hover:underline">
-                  {INSTAGRAM}
-                </a>
-              </li>
-            </ul>
+          <div className="flex flex-col gap-5">
+            <div className="bg-white/5 border border-white/10 rounded-card p-6 backdrop-blur-sm">
+              <ul className="flex flex-col gap-4 text-sm md:text-base">
+                <li className="flex gap-3">
+                  <MapPin size={18} className="text-turquoise flex-shrink-0 mt-0.5" />
+                  <span className="text-white/90">{ADDRESS}</span>
+                </li>
+                <li className="flex gap-3">
+                  <Clock size={18} className="text-turquoise flex-shrink-0 mt-0.5" />
+                  <span className="text-white/90">{HOURS}</span>
+                </li>
+                <li className="flex gap-3">
+                  <MessageCircle size={18} className="text-turquoise flex-shrink-0 mt-0.5" />
+                  <span className="text-white/90">WhatsApp · {PHONE_DISPLAY}</span>
+                </li>
+                <li className="flex gap-3">
+                  <Instagram size={18} className="text-turquoise flex-shrink-0 mt-0.5" />
+                  <a href={`https://instagram.com/${INSTAGRAM.replace("@", "")}`} target="_blank" rel="noopener" className="text-white/90 hover:underline">
+                    {INSTAGRAM}
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div className="rounded-card overflow-hidden border border-white/10 shadow-lg aspect-[16/10]">
+              <iframe
+                title="Localização da Clínica Zenvet no Google Maps"
+                src={MAP_EMBED_URL}
+                width="100%"
+                height="100%"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                style={{ border: 0, display: "block" }}
+                allowFullScreen
+              />
+            </div>
           </div>
         </div>
       </div>
