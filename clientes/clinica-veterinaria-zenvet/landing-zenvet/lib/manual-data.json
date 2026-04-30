@@ -1,0 +1,658 @@
+{
+  "summary": "Manual de Marca da Clínica Veterinária Zenvet unificando Brandbook estratégico e MIV técnico em 5 blocos (Fundamentos · Verbal · Visual · Aplicações · Governança). Reúsa 100% das decisões aprovadas em S1/S2 (persona Mariana, território Felino · Humano · Transparente, PUV, paleta atual roxo+turquesa+bege+magenta) e adiciona arquétipos (Cuidador dominante + Sábio secundário), 4 pilares de marca, 5 valores com comportamento sim/não, 4 pilares de tom de voz, vocabulário categorizado em 3 funções, sistema cromático com WCAG calculado e proporção 60-30-10, tipografia Fraunces+Inter formalizada, galeria de 6 usos incorretos do logo, e 8 aplicações com mockups contextuais (cartão, e-mail signature, IG avatar+bio, post de feed, story, favicon scaling, WhatsApp Business, GMB).",
+  "scope": "early-stage",
+  "block1_strategic_foundations": {
+    "presentation": {
+      "opening_letter": "Para a Dra. Nathalia, Kelly e o time da Zenvet: este manual existe para garantir que cada peça que sai da clínica — um post no Instagram, um cartão de visita, uma resposta da Loíse no WhatsApp, um anúncio no Google — soe e pareça como a Zenvet de verdade. Ele não é decoração: é a régua de execução que sustenta a combinação proprietária da marca (especialização felina + medicina humanizada + transparência + acompanhamento pós-consulta). Quando o time crescer, este manual mantém a coerência. Quando um fornecedor entrar, este manual encurta o briefing. Quando uma decisão criativa estiver em dúvida, este manual responde. — V4 Company, abril/2026.",
+      "manifesto_short": "Em Americana, somos a clínica para quem trata gato como filho da casa — e quer ser tratada como adulta que decide com informação.",
+      "manifesto_narrative": "Tutora de gato em Americana vive um problema invisível: o pet apresenta sinal — para de comer, esconde, vomita — e ela sabe que precisa levar a um veterinário. Mas em qual? O hospital 24h da avenida cobra R$ 70 na consulta e R$ 800 quando ela sai. A clínica do bairro não entende que gato esconde dor por instinto. A última experiência foi de retenção do animal até o pagamento à vista. // A Zenvet existe para um tipo específico de tutor: o que decide com informação. A consulta é com a Dra. Nathalia, pós-graduanda em medicina felina, dura 40 minutos e custa R$ 180-250. Cada exame é justificado, cada procedimento é aprovado item a item antes da execução. No dia seguinte, a Nathalia manda mensagem perguntando como o pet está. // Não é um diferencial isolado: é a combinação. Especialização felina declarada + medicina humanizada + transparência item a item + acompanhamento ativo pós-consulta. Em uma só clínica, em uma só veterinária. // A tutora sai sabendo o que o gato tem, com plano de tratamento que cabe na rotina, sem dúvida sobre o que pagou. Em 30 dias, indica para uma amiga sem ser perguntada. A clínica deixa de ser uma despesa periódica imprevisível e vira parte da rotina familiar.",
+      "navigation_instructions": "Designers e fornecedores de criativo consultam o Bloco 3 (Identidade Visual) e o Bloco 4 (Aplicações). Copywriters e a Loíse no WhatsApp consultam o Bloco 2 (Identidade Verbal). Novos parceiros e o time comercial começam pelo Bloco 1 (Fundamentos). A Dra. Nathalia consulta o Bloco 5 (Governança) sempre que houver dúvida sobre aprovação de peça."
+    },
+    "essence": {
+      "purpose": "Existimos para que tutoras de gato em Americana parem de aceitar atendimento veterinário genérico — porque cada gato esconde dor por instinto e merece uma profissional que enxergue isso antes que seja tarde, e cada tutora merece decidir com informação, não com susto.",
+      "vision": "Ser a referência consolidada de medicina felina premium-humanizada da microrregião de Americana, SBO e Nova Odessa em até 18 meses, com Dra. Nathalia titulada pela ABFel/CFMV e a clínica certificada Cat Friendly Practice (AAFP) — blindando a combinação proprietária antes que LM+ ou a concorrente orgânica escalem digital.",
+      "mission": "Atender cada paciente felino com 40 minutos de consulta consultiva, orçamento aprovado item a item antes da execução e acompanhamento ativo pós-consulta no WhatsApp da Dra. Nathalia — todas as vezes, sem exceção.",
+      "values": [
+        {
+          "name": "Especialização real",
+          "behavior_yes": "Nathalia se aprofunda em medicina felina (pós-graduação, conteúdo educativo, ABFel em roadmap). Comunicamos só o que sabemos fazer.",
+          "behavior_no": "Nunca fingimos expertise que não temos. Não dizemos 'qualquer pet com excelência' — dizemos 'felinos e cães, cada um com o atendimento que merece'."
+        },
+        {
+          "name": "Cuidado humano",
+          "behavior_yes": "Chamamos o paciente pelo nome desde a 2ª visita. Mandamos mensagem D+1 perguntando como ele está. Sentamos na altura do gato.",
+          "behavior_no": "Nunca tratamos 'mais um bicho na fila'. Não usamos diminutivo infantilizante (peludinho, bichinho, consultinha) — gato é paciente, tutora é tutora."
+        },
+        {
+          "name": "Transparência radical",
+          "behavior_yes": "Mostramos cada exame com justificativa antes de executar. Aprovação item a item. Comunicamos preço claro no atendimento e nas peças.",
+          "behavior_no": "Nunca cobramos exame que não faz sentido. Não usamos 'sujeito a verificação no momento do atendimento' — preço é o que está no orçamento aprovado."
+        },
+        {
+          "name": "Decisão informada",
+          "behavior_yes": "Explicamos cada decisão clínica em linguagem do tutor. Damos opções quando há (procedimento agora vs. monitorar). Respeitamos o limite financeiro.",
+          "behavior_no": "Nunca decidimos pelo tutor sem aprovação. Não impomos 'precisa fazer isso e ponto'."
+        }
+      ],
+      "promise": "Você sai daqui sabendo o que seu gato tem, com cada item da conta aprovado antes da execução e a Dra. Nathalia te acompanhando no WhatsApp depois. Todas as vezes.",
+      "big_idea": "Medicina felina é diferente. A gente sabe disso desde antes de você precisar ouvir.",
+      "brand_pillars": [
+        {
+          "name": "Especialização Felina Declarada",
+          "description": "Dra. Nathalia é pós-graduanda em medicina felina com ênfase em clínica e cirurgia. 70% da base é gato. Toda decisão clínica considera o comportamento da espécie."
+        },
+        {
+          "name": "Medicina Humanizada",
+          "description": "Paciente tem nome, histórico e a mesma veterinária do começo ao fim. Acompanhamento ativo pós-consulta no WhatsApp da própria Nathalia."
+        },
+        {
+          "name": "Transparência Item a Item",
+          "description": "Orçamento aprovado pelo tutor antes da execução. Cada exame justificado em linguagem clara. Nunca há conta surpresa."
+        },
+        {
+          "name": "Tempo de Consulta Real",
+          "description": "40 minutos com a Nathalia — tempo o suficiente para examinar, conversar, explicar e construir plano de tratamento que cabe na rotina."
+        }
+      ]
+    },
+    "positioning": {
+      "statement": "Para tutoras de gatos de Americana, SBO e Nova Odessa que tratam o pet como filho da casa, a Zenvet é a clínica especialista em felinos que combina diagnóstico consultivo, ambiente preparado para gatos e acompanhamento ativo pós-consulta — porque a Dra. Nathalia tem formação felina declarada (pós-graduanda em clínica e cirurgia de pequenos animais com ênfase em felinos) e a clínica foi estruturada para reduzir o estresse do gato em cada detalhe.",
+      "territory": "Felino · Humano · Transparente — quadrante NE (Especialista Felino × Premium-Humanizado), com presença digital estruturada como 4º pilar. A diferenciação proprietária é a COMBINAÇÃO completa, não a especialização isolada.",
+      "archetype_dominant": {
+        "name": "Cuidador (Caregiver)",
+        "justification": "O Cuidador atende ao desejo de cuidar do outro — valoriza compaixão, generosidade e proteção do vulnerável. Para a Mariana, que vê o Simba como filho da casa e tem pavor de explorar 'mãe gato', o Cuidador entrega a postura emocional certa: empatia ativa (mensagem D+1), proteção contra exploração (transparência item a item), e cuidado que se estende além do procedimento (acompanhamento ativo). Risco: o Cuidador puro pode soar paternalista. Por isso o secundário (Sábio) é essencial para temperar."
+      },
+      "archetype_secondary": {
+        "name": "Sábio (Sage)",
+        "justification": "O Sábio busca a verdade pelo conhecimento — autoridade técnica, especialização, busca racional. Para Nathalia, que é pós-graduanda em medicina felina e tem o claim 'especialista em felinos' como diferencial proprietário, o Sábio entrega a postura técnica que falta no Cuidador puro: explicação consultiva, conteúdo educativo de comportamento felino, decisão informada. Combinados, Cuidador + Sábio comunicam 'cuido como se fosse meu, mas decido com base em ciência'."
+      },
+      "competitive_matrix": {
+        "axis_x": "Generalista → Especialista em Felinos",
+        "axis_y": "Commodity/Preço → Premium/Humanizado",
+        "client_position": "NE",
+        "competitors": [
+          { "name": "Zenvet", "quadrant": "NE", "is_client": true },
+          { "name": "Concorrente felina orgânica (não nomeada)", "quadrant": "NE parcial — sem digital" },
+          { "name": "LM+ Hospital Veterinário", "quadrant": "NO" },
+          { "name": "Riedog (oncologia)", "quadrant": "NO" },
+          { "name": "Cantinho do Mascote", "quadrant": "SO" },
+          { "name": "Shop Dog 24h", "quadrant": "SO" },
+          { "name": "Xodog Saúde Animal", "quadrant": "SO" },
+          { "name": "Clínica Meu Pet SBO (pública)", "quadrant": "SO" }
+        ]
+      },
+      "puv": "A Zenvet combina formação felina declarada da Dra. Nathalia (pós-graduanda em clínica e cirurgia com ênfase em medicina felina) com acompanhamento ativo pós-consulta no WhatsApp e orçamento aprovado item a item para resolver a ansiedade da tutora de gato em decidir bem com o pet que ela trata como filho da casa, eliminando a conta surpresa do hospital 24h e o atendimento genérico que não diferencia gato de cachorro."
+    },
+    "audience_persona": {
+      "primary_persona": {
+        "name": "Mariana",
+        "photo_description": "Mulher 34-38 anos, cabelo cacheado preso no alto, sorrindo com naturalidade enquanto segura um gato SRD laranja no colo. Sala de casa, luz natural, camiseta de cor sólida. Expressão tranquila, carinhosa.",
+        "age": "36 anos",
+        "income": "R$ 5.000-12.000/mês (classe média a média-alta)",
+        "occupation": "Professora do ensino fundamental em Americana",
+        "main_pain": "Tem medo de levar o Simba (gato SRD laranja, 4 anos, filho da casa) num lugar que não entende de gato — veterinários generalistas erram diagnóstico porque tratam felino como cão. Já foi explorada em hospital 24h (R$70 na consulta, R$800 ao sair, animal retido até pagamento). Pesquisa horas no Instagram e Google Maps antes de confiar.",
+        "purchase_motivators": "Quer encontrar uma veterinária que realmente entende de felinos e a trate como adulta que decide com informação. Aceita pagar premium se entender o porquê — em emergência, paga o que for preciso. Indica para amigas tutoras quando tem boa experiência (canal mais forte de aquisição da Zenvet hoje).",
+        "key_message": "Seu gato merece uma veterinária que entende de felinos — não de bicho em geral.",
+        "quote": "Eu não levo o Simba em qualquer lugar não. Gato não é cachorro, e tem muito veterinário que não entende isso."
+      },
+      "secondary_persona": {
+        "name": "Carlos",
+        "age": "43 anos",
+        "income": "R$ 4.000-10.000/mês",
+        "occupation": "Gerente comercial em indústria local, mora em SBO",
+        "main_pain": "Os hospitais 24h da avenida usam consulta isca de R$ 70 e depois enchem de exames — a conta explode sem avisar. Fila de espera de 3 horas com o cachorro no colo.",
+        "purchase_motivators": "Hora marcada, atendimento sem fila, valor explicado antes de aprovar. Decisão prática e racional — escolhe por proximidade, indicação de vizinho ou familiar.",
+        "quote": "Veterinário bom é aquele que me diz o que o Thor tem, quanto vai custar e me manda embora rápido. Sem enrolação."
+      },
+      "anti_persona": {
+        "description": "Perfis que NÃO devem ser atendidos ativamente — drenam margem, geram churn ou exigem política que quebra o posicionamento premium.",
+        "profiles": [
+          { "label": "Caçador de preço — 'Consulta R$70'", "redirect": "Loíse responde com valor sem desconto: 'Nossa consulta especialista começa em R$180 — o que inclui é diferente do plano R$70 dos hospitais 24h.'" },
+          { "label": "Emergência única sem vínculo", "redirect": "Mensagem automática direciona para hospitais 24h parceiros." },
+          { "label": "Tutor 'Dr. Google' de controle total", "redirect": "Não atendemos ativamente — mina autoridade técnica da Nathalia." }
+        ]
+      },
+      "buyer_journey_summary": "6 estágios mapeados em ee-s1-persona-icp: Gatilho (mesmo dia, gato esconde dor) → Consideração (3-7 dias, vazamento crítico do funil) → Decisão/primeiro contato (24h, WhatsApp) → Primeira visita (40min consulta, momento da verdade) → Pós-consulta (D+1 mensagem da Nathalia, fideliza) → Retenção+advocacy (indicação orgânica, motor atual de aquisição)."
+    },
+    "history_culture": {
+      "origin": "A Clínica Veterinária Zenvet foi fundada pela Dra. Nathalia Alves em Americana com o foco em medicina felina humanizada — preenchendo um vazio claro na microrregião onde os hospitais 24h operavam em volume genérico e as clínicas de bairro não diferenciavam gato de cão. Em 12 meses de operação, a base ativa cresceu para 1.186 pacientes (70% gatos), com show rate praticamente 100% e ticket médio premium (consulta felinos R$180-250, mix total R$500).",
+      "milestones": [
+        "Operação madura desde 2025 — clínica com identidade visual própria, 29 fotos profissionais, primeiros vídeos produzidos.",
+        "2026-04 — Início da estruturação estratégica com a V4 Company (Diagnóstico V4MOS, posicionamento Felino · Humano · Transparente, PUV aprovada).",
+        "Roadmap 12-18m — Conclusão da pós-graduação em medicina felina pela Dra. Nathalia, busca do título oficial ABFel/CFMV, certificação Cat Friendly Practice (AAFP)."
+      ],
+      "culture": "Cultura organizacional centrada em 'cuidar como se fosse seu, decidir com base em ciência'. Atendimento humano não é argumento de venda — é método operacional: chamar pelo nome, sentar na altura do gato, explicar antes de fazer, mandar mensagem D+1.",
+      "legacy": "Queremos deixar Americana como uma cidade onde tutora de gato sabe que tem para onde ir — e onde a régua de medicina felina premium-humanizada está consolidada. Que seja referência regional, não apenas local."
+    }
+  },
+  "block2_verbal_identity": {
+    "personality": {
+      "scales": [
+        { "trait_low": "Formal", "trait_high": "Casual", "position": 4 },
+        { "trait_low": "Sério", "trait_high": "Bem-humorado", "position": 5 },
+        { "trait_low": "Técnico", "trait_high": "Coloquial", "position": 5 },
+        { "trait_low": "Reservado", "trait_high": "Caloroso", "position": 7 },
+        { "trait_low": "Tradicional", "trait_high": "Contemporâneo", "position": 7 },
+        { "trait_low": "Neutro", "trait_high": "Opinativo", "position": 6 },
+        { "trait_low": "Discreto", "trait_high": "Expressivo", "position": 5 }
+      ],
+      "archetype_applied": "O Cuidador na voz manifesta-se em frases que validam a preocupação do tutor antes de dar a solução ('entendo que isso preocupe...'). O Sábio manifesta-se em frases que explicam o porquê ('gato esconde dor por instinto, então...'). O par Cuidador+Sábio resulta em uma voz que cuida sem ser piegas e ensina sem ser arrogante.",
+      "as_a_person": "Se a Zenvet fosse uma pessoa, seria a Dra. Nathalia em pessoa — uma mulher 30-40 anos, cacheada, óculos discretos, vestindo jaleco branco sobre camiseta de algodão. Em uma festa, escutaria mais do que falaria, mas quando perguntada sobre seu trabalho, falaria por horas com clareza e exemplos concretos. Não usa jargão para impressionar. Lê livros de medicina felina e biografias. No celular, segue perfis científicos no Instagram e responde mensagens de tutoras pacientes em D+1 sem reclamar. Acredita em explicar o porquê e respeitar o limite financeiro de cada família — odeia veterinário que cobra exame que não faz sentido."
+    },
+    "tone_of_voice": {
+      "pillars": [
+        {
+          "name": "Especialista",
+          "definition": "não arrogante",
+          "manifestation": "Nathalia explica conceitos de medicina felina sem jargão e sem condescendência. Em vez de 'o paciente apresenta hiporexia', diz 'ele está comendo menos — e isso costuma ser sinal de dor, porque gato esconde por instinto'. A autoridade vem da clareza, não da distância técnica."
+        },
+        {
+          "name": "Humano",
+          "definition": "não infantilizado",
+          "manifestation": "Chama o gato pelo nome real (Simba, não 'peludinho'), trata o tutor como adulto que decide (não como cliente que precisa ser agradado), e nunca usa diminutivos como 'castraçãozinha' ou 'consultinha'. Calor humano se manifesta em cuidado real (lembrar do nome, mandar mensagem D+1) — não em emoji ou apelido."
+        },
+        {
+          "name": "Transparente",
+          "definition": "não burocrático",
+          "manifestation": "Mostra o valor antes da execução, item a item, em linguagem direta. 'A consulta é R$ 220 e dura 40 min — o exame complementar X custa R$ 90 e indico se sair indício no físico'. Nunca 'sujeito a verificação no momento do atendimento'. Transparência é palavra cumprida em microcopy, não em política impressa."
+        },
+        {
+          "name": "Próximo",
+          "definition": "não invasivo",
+          "manifestation": "WhatsApp é canal de cuidado da Nathalia — D+1 com pergunta aberta ('como o Simba está hoje?') e D+7 se for caso clínico que pediu retorno. Não é canal de promoção: nunca '10% off na próxima consulta!' em mensagem de acompanhamento. Frequência baixa, intencionalidade alta."
+        }
+      ],
+      "channel_variations": [
+        { "channel": "Instagram (feed e Reels)", "adaptation": "Casual, educativo, emocional. Começa com o problema que o tutor vive (vômito, comportamento) e só depois traz a explicação técnica. Caption respirada, máximo 4 linhas por bloco." },
+        { "channel": "Google Ads (search)", "adaptation": "Funcional, intenção informacional. Headline com keyword + diferencial específico ('veterinário gatos americana — consulta especialista 40min')." },
+        { "channel": "Meta Ads (anúncios)", "adaptation": "Emocional + território proprietário. Headline com mensagem-chave ('Seu gato merece uma veterinária que entende de felinos'). Sub-headline com diferencial." },
+        { "channel": "WhatsApp (Loíse)", "adaptation": "Consultivo, paciente, resolutivo. Saudação que reforça especialização ('Aqui é a Loíse da Zenvet, clínica especializada em gatos e cães em Americana. Quem é seu pet?'). Resposta em até 30 min no horário comercial." },
+        { "channel": "WhatsApp (Nathalia D+1)", "adaptation": "Pergunta aberta sobre o paciente pelo nome ('Como o Simba está hoje? Conseguiu comer?'). Sem call-to-action comercial." },
+        { "channel": "Google Meu Negócio (GMB)", "adaptation": "Institucional + SEO-friendly. Descrição curta com 'especialista em felinos' + Americana + transparência. Resposta a reviews humanizada e específica ao paciente." }
+      ],
+      "say_dont_say": [
+        { "situation": "Apresentação da clínica", "say": "Clínica veterinária especialista em felinos de Americana — atendemos gatos e cães com hora marcada, transparência de preço e acompanhamento pós-consulta.", "dont_say": "Clínica veterinária para qualquer pet com excelência!", "reason": "Especialização em felinos é o território proprietário. 'Qualquer pet' apaga o diferencial." },
+        { "situation": "Resposta a 'quanto custa?' no WhatsApp", "say": "A consulta especialista é R$ 220, dura 40 min com a Dra. Nathalia e inclui acompanhamento pelo WhatsApp depois. Quer que eu agende?", "dont_say": "O valor da consulta é a partir de R$ 220, sujeito a verificação no momento do atendimento.", "reason": "Clareza absoluta de preço é uma das 3 promessas centrais. 'Sujeito a' soa contratual." },
+        { "situation": "Conteúdo educativo sobre comportamento felino", "say": "Ele está comendo menos — pode ser dor, gato esconde por instinto. Vale uma consulta para investigar.", "dont_say": "Hiporexia em felinos exige investigação clínica imediata e eventual ultrassonografia abdominal.", "reason": "Tutor não é veterinário. Termo técnico sem tradução afasta." },
+        { "situation": "Acompanhamento D+1 no WhatsApp", "say": "Como o Simba está hoje? Conseguiu comer alguma coisa?", "dont_say": "Olá! Tudo bem? Aproveite 10% off na próxima consulta!", "reason": "WhatsApp é canal de cuidado, não de vendas." },
+        { "situation": "Comunicação para tutor de cachorro", "say": "Atendemos cães também — com hora marcada, sem fila e valor explicado antes.", "dont_say": "Atendemos qualquer pet com excelência!", "reason": "Mensagem específica para Carlos preserva o território felino sem perdê-lo na comunicação." },
+        { "situation": "Resposta a objeção 'já fui explorada em outra clínica'", "say": "Sinto muito que passou por isso. Aqui, a Dra. Nathalia explica cada procedimento antes de fazer e mostra o valor estimado. Você aprova item a item antes de executar.", "dont_say": "Aqui a gente é honesto.", "reason": "Promessa específica ancora confiança. 'Honesto' é palavra vazia que qualquer um diz." },
+        { "situation": "Comunicação de emergência (fora do horário)", "say": "No momento estamos fechados — em emergência, recomendamos [hospital parceiro]. Volta a falar com a gente quando o pet estabilizar para um check-up.", "dont_say": "Não atendemos emergência. Procure outro lugar.", "reason": "Direcionamento humano + ponte para vínculo futuro mantém relacionamento." },
+        { "situation": "Apresentação de diferencial", "say": "Consulta de 40 min com a Dra. Nathalia, pós-graduanda em medicina felina, com orçamento aprovado antes de qualquer exame.", "dont_say": "Atendimento humanizado e de qualidade.", "reason": "Específico vence genérico. 'Humanizado' qualquer clínica diz; '40 min com a Nathalia' só a Zenvet." },
+        { "situation": "Reposta a review positivo", "say": "Obrigada, [Nome]! Que alegria saber que o [paciente] está bem. Qualquer coisa, é só chamar a Nathalia no WhatsApp.", "dont_say": "Obrigada pela avaliação! 🐾❤️✨", "reason": "Personalização vence emoji. Cluster de emoji parece automático." },
+        { "situation": "Convite para agendamento em conteúdo", "say": "Se o seu gato está diferente há mais de 3 dias, vale agendar. WhatsApp na bio.", "dont_say": "Agende já! Não perca tempo!", "reason": "Conselho consultivo respeita autonomia. Pressão soa de venda agressiva." },
+        { "situation": "Comunicação sobre preço premium", "say": "A consulta especialista é R$ 220 — inclui 40 min com a Dra. Nathalia, exame completo, plano de tratamento e acompanhamento no WhatsApp.", "dont_say": "Consulta a R$ 220 — barato!", "reason": "Justificativa do preço ancora valor. 'Barato' para Mariana soa como a consulta R$70 do 24h." },
+        { "situation": "Headline de anúncio Meta", "say": "Seu gato merece uma veterinária que entende de felinos — não de bicho em geral.", "dont_say": "A melhor clínica veterinária da região!", "reason": "Mensagem-chave ativa território proprietário. 'A melhor' é claim genérico não defensável." }
+      ]
+    },
+    "editorial_guidelines": {
+      "vocabulary_categorized": {
+        "essence_words": [
+          "Felino",
+          "Especialista",
+          "Humano",
+          "Transparente",
+          "Acompanhamento",
+          "Consultiva",
+          "Decisão informada"
+        ],
+        "valued_repeated": [
+          "Especialista em felinos",
+          "Dra. Nathalia",
+          "40 minutos",
+          "Sem conta surpresa",
+          "Acompanhamento no WhatsApp",
+          "Aprovação item a item",
+          "Esconde dor por instinto"
+        ],
+        "audience_connection": [
+          "Seu gato",
+          "Filho da casa",
+          "Tutora",
+          "Paciente",
+          "Sua tutora",
+          "Quando ele",
+          "Como ele está"
+        ]
+      },
+      "official_glossary": [
+        { "term": "Felino", "definition": "Em vez de 'gatos' quando o foco é técnico ou de posicionamento." },
+        { "term": "Tutor / tutora", "definition": "Em vez de 'dono'. Reflete o vínculo (filho da casa)." },
+        { "term": "Paciente", "definition": "Em vez de 'animal' ou 'pet' em comunicação clínica. Sempre que souber, chamar pelo nome." },
+        { "term": "Consulta especialista", "definition": "Em vez de 'consulta'. Reforça os 40 min e a formação felina declarada." },
+        { "term": "Acompanhamento (pós-consulta)", "definition": "Em vez de 'follow-up' ou 'pós-venda'. Termo humano e sistematizado." },
+        { "term": "Orçamento aprovado item a item", "definition": "Em vez de 'preço fechado'. Comunica o protocolo de transparência." },
+        { "term": "Esconde dor por instinto", "definition": "Frase-chave educativa em conteúdo top-of-funnel sobre comportamento felino." },
+        { "term": "Ambiente preparado para felinos", "definition": "Em vez de 'cat friendly' (jargão). Quando referir estrutura física." },
+        { "term": "Medicina felina", "definition": "Em vez de 'tratamento de gato'. Termo correto, indexável em SEO." }
+      ],
+      "forbidden_terms": [
+        { "term": "peludo / peludinho", "use_instead": "felino, gato, paciente (ou nome quando souber)" },
+        { "term": "dono", "use_instead": "tutor / tutora" },
+        { "term": "bichinho / bichano", "use_instead": "gato, pet, paciente, nome do paciente" },
+        { "term": "pet em geral / qualquer pet", "use_instead": "felinos e cães (ou felino quando para Mariana)" },
+        { "term": "consulta básica", "use_instead": "consulta especialista" },
+        { "term": "promoção", "use_instead": "pacote (anual, castração, vacinação)" },
+        { "term": "preço fechado", "use_instead": "orçamento aprovado item a item" },
+        { "term": "follow-up", "use_instead": "acompanhamento" },
+        { "term": "consultinha / castraçãozinha (diminutivos infantilizantes)", "use_instead": "consulta, castração (sem diminutivo)" },
+        { "term": "cliente (em peças externas)", "use_instead": "tutor / tutora" }
+      ],
+      "form_of_address": "Você. Nunca 'senhor/senhora' (cria distância e parece cobrança), nunca 'amigo/amiga' (informalidade que finge intimidade). 'Você' funciona com Mariana, Carlos e tutor mais velho.",
+      "emoji_punctuation": "Uso parcimonioso de emoji. 🐱 e 🐾 OK em posts educativos felinos e na bio. Proibido cluster ('🐱❤️✨'), proibido 😍 🥰 (infantilizam). Em comunicação de orçamento, agendamento ou clínica: zero emoji. Reticências (...) e exclamação (!) com extrema parcimônia: máximo 1 por peça e só com motivo emocional real. CAPS LOCK proibido em qualquer contexto.",
+      "grammar_rules": "Frases curtas a médias (8-18 palavras). Em educativo, 1 ideia por frase. Travessão (—) para criar respiração. Itálico só para nome do paciente em narrativa. Vírgula de Oxford permitida quando ajuda a clareza. Anglicismos evitados (use 'acompanhamento', não 'follow-up'). Gerúndio aceito em fala natural ('estou olhando os exames') mas evitado em headlines."
+    },
+    "naming_taxonomy": {
+      "rule": "A marca master é 'Zenvet'. Sub-marcas e linhas de serviço usam o formato '{NOME_DA_LINHA} pela Zenvet' — ex: 'Atendimento Domiciliar Felinos pela Zenvet', 'Pacote Anual de Vacinação pela Zenvet'. Evitar siglas, nomes em inglês e diminutivos.",
+      "examples_yes": [
+        "Atendimento Domiciliar Felinos",
+        "Pacote Anual de Vacinação",
+        "Castração com Pós-Operatório Monitorado",
+        "Check-up Anual do Gato Senior"
+      ],
+      "examples_no": [
+        "ZenCare (anglicismo)",
+        "ZenKit (sigla sem clareza)",
+        "Pacotinho Anual (diminutivo)"
+      ]
+    },
+    "storytelling": {
+      "story_arc": {
+        "act1_before": "Tutora de gato em Americana vive um problema invisível: o pet apresenta sinal e ela não sabe em qual veterinário levar. O hospital 24h cobra R$70 e sai R$800. A clínica do bairro não entende que gato esconde dor.",
+        "act2_different": "A Zenvet existe para um tipo específico de tutor: o que decide com informação. Consulta de 40 min com a Dra. Nathalia, orçamento item a item antes da execução, acompanhamento no WhatsApp depois.",
+        "act3_after": "A tutora sai sabendo o que o gato tem, sem dúvida sobre o que pagou. Em D+1 recebe mensagem da Nathalia. Em 30 dias, indica para uma amiga sem ser perguntada."
+      },
+      "frameworks": [
+        "Problema (esconde dor) → Reframing (40 min de conversa aprofundada) → Resolução (orçamento aprovado + acompanhamento)",
+        "Mariana se reconhece (pesquisa por dias) → Nathalia entrega o que ela busca (especialização declarada) → Indicação orgânica vira motor"
+      ],
+      "opening_hooks": [
+        "Seu gato passou a comer menos. Você nota há uns dias, mas ele tá ali — andando, dormindo no lugar de sempre.",
+        "Hospital 24h cobra R$ 70 na consulta. E sai R$ 800. A diferença é o que você já sabia mas decidiu ignorar.",
+        "Gato esconde dor por instinto. Quando ele demonstra, geralmente já passou do ponto fácil de resolver.",
+        "Você pesquisou no Instagram por 3 dias antes de agendar. A gente entende — e respeita.",
+        "Em Americana, há uma diferença entre veterinário que atende gato e veterinário que entende de gato."
+      ]
+    },
+    "slogan_tagline_signatures": {
+      "slogan": "Em campanha: 'Em Americana, gato é com a gente.' (uso restrito a campanhas pontuais)",
+      "tagline": "Seu gato merece uma veterinária que entende de felinos.",
+      "verbal_signatures": [
+        "— Zenvet · Clínica especialista em felinos · Americana",
+        "Seu gato merece. — Zenvet",
+        "Medicina felina. Humana. Em Americana."
+      ]
+    }
+  },
+  "block3_visual_identity_core": {
+    "logo": {
+      "concept": "O logo da Zenvet expressa visualmente a combinação proprietária do território Felino · Humano · Transparente: tipografia serif contemporânea (autoridade técnica + calor humano), cor de assinatura roxa (sofisticação felina + premium), e geometria balanceada entre forma e contra-forma (transparência sem ser sterilizada). O logo atual já existe e atende ao conceito — este manual formaliza as regras de uso e sugere 3 direções de evolução para o operador testar.",
+      "style_description": "O logo segue a linguagem 'serif contemporâneo + traço minimalista' — uma direção visual que combina autoridade tipográfica (peso editorial das serifas humanistas tipo Fraunces ou Recoleta) com a delicadeza de um símbolo felino em traço único. Não é um mascote nem uma ilustração realista: é uma marca tipográfica com elemento gráfico discreto, que funciona em escala de favicon (16px) até banner de fachada (1m+) sem perder personalidade. A construção é flat (zero gradientes, zero sombras, zero efeitos), com hierarquia visual clara entre símbolo e wordmark. O wordmark 'Zenvet' carrega o peso institucional; o símbolo carrega o reconhecimento de espécie (felino) sem cair no clichê pet shop.",
+      "visual_attributes": {
+        "form_language": "Geométrico-orgânico — geometria racional na construção (proporções, alinhamento, grid) com toques orgânicos nas curvas (terminações arredondadas, fluidez de traço) que evitam a frieza do design corporativo puro.",
+        "weight": "Médio a robusto — o wordmark em peso Bold/SemiBold projeta autoridade sem virar agressivo; o símbolo em traço de peso uniforme (não fino, não pesado) sustenta a presença em escalas pequenas.",
+        "balance": "Assimétrico controlado — o lockup horizontal coloca símbolo e wordmark em proporção desigual mas equilibrada visualmente (símbolo ~30% da largura, wordmark ~65%, espaço entre 5%).",
+        "negative_space": "Generoso — área de proteção mínima ao redor do logo igual à altura da letra 'Z'; respiração interna entre símbolo e wordmark para evitar congestionamento visual.",
+        "color_application": "Monocromático na maioria dos usos — Roxo Profundo (#4B1C7D) sobre fundo branco, bege ou roxo escuro. Evitar duas cores no logo principal (mantém a sobriedade premium). Versão monocromática preto e branco para limitações de impressão.",
+        "personality_in_form": "Especialista (não arrogante) traduzido em forma: serif contemporânea = autoridade técnica sem rigidez. Humano (não infantilizado) traduzido em forma: traços com ligeira humanidade, evitando geometria militar. Transparente (não burocrático) traduzido em forma: legibilidade absoluta, zero ornamento decorativo.",
+        "scalability": "Otimizado para escala — funciona em 16px (favicon), 32px (app icon), 120px (mínimo lockup), 25mm (impresso), até 1m+ (fachada). Acima de 500px, o detalhe do símbolo deve ser revisto para preservar legibilidade do traço.",
+        "differentiation_from_competitors": "Nenhum concorrente local (LM+, Cantinho, Xodog, Shop Dog, Riedog) usa serif contemporâneo + roxo profundo — a maioria usa sans-serif corporativo + azul/verde. A combinação serif premium + roxo + traço felino delicado é proprietária no microrregional."
+      },
+      "design_principles": [
+        "Sobriedade premium acima de fofura — evitar mascote, ilustração realista, antropomorfização",
+        "Tipografia faz o trabalho pesado — o wordmark tem que ser memorável sozinho (sem o símbolo)",
+        "Símbolo é reconhecimento de espécie, não decoração — felino estilizado mínimo, nunca cabeça de gato cute",
+        "Flat e atemporal — zero efeitos da década (gradiente do iOS 7, neumorphism, glassmorphism)",
+        "Legibilidade vence beleza — em qualquer dúvida entre 'mais bonito' e 'mais legível', escolher legível"
+      ],
+      "anatomy": {
+        "symbol": "Marca gráfica felina estilizada — atualmente um gato em traço único. Pode ser usado isoladamente em contextos restritos (favicon, sticker, app icon).",
+        "wordmark": "'Zenvet' em tipografia serif contemporânea (família Fraunces ou similar) com peso Bold/SemiBold. Pode ser usado isoladamente em contextos longos (papelaria, rodapé de e-mail).",
+        "lockup": "Símbolo + wordmark em assinatura horizontal. Versão padrão para a maioria dos usos. Versão vertical disponível para layouts quadrados (avatar IG, GMB)."
+      },
+      "construction_grid": "Grid modular de 12 unidades de altura, com símbolo ocupando 6 unidades centrais e wordmark ocupando 12 unidades de largura. Espaçamento entre símbolo e wordmark = 1 unidade.",
+      "clear_space": "Área de proteção mínima ao redor do logo = altura da letra 'Z' do wordmark, em todas as direções. Nada (texto, imagem, elemento gráfico) deve invadir essa área.",
+      "min_max_size": {
+        "min_digital_px": "120px de largura para o lockup horizontal. 32px para o símbolo isolado (favicon). Abaixo desses valores, perde legibilidade.",
+        "min_print_mm": "25mm de largura para o lockup horizontal. 8mm para o símbolo isolado.",
+        "max_recommended": "Sem limite máximo, mas em peças muito grandes (banner de evento, fachada) avaliar se faz sentido escalar o símbolo separado do wordmark para preservar legibilidade."
+      },
+      "official_versions": [
+        { "name": "Principal — lockup horizontal colorido", "use_case": "Padrão para a maioria dos usos: site, redes sociais, papelaria, anúncios." },
+        { "name": "Vertical — símbolo acima do wordmark", "use_case": "Layouts quadrados ou verticais: avatar IG, GMB, app icon Android." },
+        { "name": "Símbolo isolado", "use_case": "Favicon, sticker, app icon (16-180px), assinatura mínima em peças com pouco espaço." },
+        { "name": "Monocromático preto (#2E2E33)", "use_case": "Impressão em uma só cor: timbrado simples, fax, documentos legais, carimbos." },
+        { "name": "Monocromático branco", "use_case": "Aplicação sobre fundo escuro: roxo profundo, fotografia escura, banner com overlay." },
+        { "name": "Negativo — símbolo branco com wordmark branco", "use_case": "Aplicação sobre cor primária ou imagem. Usar com moderação — sempre validar contraste WCAG." }
+      ],
+      "logo_directions": [
+        {
+          "direction": "Minimalista Geométrico — Felino em Linha Contínua",
+          "concept": "Gato estilizado em traço único, formando silhueta sentada de perfil, contida por moldura geométrica suave que ancora o símbolo sem prendê-lo.",
+          "prompt": "minimalist single continuous line drawing logo of a stylized cat sitting in profile, geometric purity, contained within a soft rounded square frame, deep purple (#4B1C7D) on warm cream background (#F6EAD8), modern veterinary clinic identity, scalable vector style, balanced negative space, clean professional, premium humanized feel, flat 2D, no gradients, no realistic textures, generous whitespace, suitable for app icon and small favicon scaling --ar 1:1 --v 7 --no shadows realism photorealistic 3d gradient watercolor mascot cute kawaii anthropomorphic cartoon"
+        },
+        {
+          "direction": "Tipográfico-Simbólico — Wordmark com Detalhe Felino",
+          "concept": "Logotipo 'Zenvet' em serif contemporâneo, com uma letra sutilmente transformada — um detalhe felino integrado ao alfabeto sem virar mascote.",
+          "prompt": "sophisticated wordmark logo for 'Zenvet' veterinary clinic, contemporary serif typography reminiscent of Fraunces or DM Serif Display, the dot of letter 'i' or curve of letter 'e' subtly transformed into a minimalist cat ear silhouette or single whisker line, deep purple (#4B1C7D) lettering on white background, single-color flat design, editorial premium feel, balanced kerning, feminine humanized aesthetic, vector logotype, suitable for letterhead and Instagram bio --ar 1:1 --v 7 --no icon mascot illustration cartoon shadow gradient handwriting script childish curly hand-drawn"
+        },
+        {
+          "direction": "Ícone Abstrato — Cuidado e Felino Fundidos",
+          "concept": "Símbolo abstrato que funde pata felina e coração em um único traço fluido — sugere cuidado humano sem ilustrar literalmente gato ou veterinário.",
+          "prompt": "abstract symbolic logo combining a paw print silhouette and a heart shape merged into one continuous fluid stroke, suggesting feline care and human warmth, organic curves with geometric precision, deep purple (#4B1C7D) primary stroke with subtle turquoise accent (#00B8BD), modern veterinary brand mark, single weight line work, suitable for app icon and favicon scaling, premium boutique clinic identity, flat 2D vector, generous negative space, white background --ar 1:1 --v 7 --no realism mascot text typography cute illustration literal cat face cartoon photorealistic 3d gradient"
+        }
+      ],
+      "chosen_direction": "pendente — operador escolhe e gera 4 variações no Midjourney/Ideogram"
+    },
+    "incorrect_uses": [
+      { "rule": "Não distorcer (esticar/achatar)", "visual_demo": "distort_x", "reason": "Distorção horizontal quebra a proporção tipográfica do wordmark e descaracteriza a marca." },
+      { "rule": "Não recolorir fora da paleta oficial", "visual_demo": "recolor_red", "reason": "Cor é assinatura. Mudar o roxo para qualquer outra cor desconecta a peça do sistema visual." },
+      { "rule": "Não aplicar sombras, brilhos ou efeitos", "visual_demo": "drop_shadow", "reason": "A marca é flat e sóbria. Efeitos pesam o logo e remetem a estilo amador 'PowerPoint 2007'." },
+      { "rule": "Não usar em fundos de baixo contraste", "visual_demo": "low_contrast", "reason": "Roxo sobre bege em proporção errada não atinge WCAG AA. Sempre validar contraste >= 4.5:1." },
+      { "rule": "Não rotacionar ou inclinar", "visual_demo": "rotated", "reason": "Marca sempre na horizontal. Inclinação (mesmo de 5°) parece erro de aplicação." },
+      { "rule": "Não criar variações próprias (versões temáticas)", "visual_demo": "outlined", "reason": "Versão 'só contorno' ou 'temática' (Halloween, Natal) não foi aprovada e fragmenta o sistema. Use só as versões oficiais." }
+    ],
+    "color_system": {
+      "primary": [
+        {
+          "name": "Roxo Profundo",
+          "hex": "#4B1C7D",
+          "rgb": "75, 28, 125",
+          "cmyk": "85, 95, 0, 25",
+          "pantone": "Pantone 2685 C (aproximação)",
+          "hsl": "270, 63%, 30%",
+          "role": "primary",
+          "justification": "Cor de assinatura — já consolidada no logo e nos materiais. Roxo profundo carrega sofisticação e tom premium, com associação cultural a mistério e elegância felina. Diferencia a Zenvet do azul corporativo/clínico genérico do setor e do verde de farmácia veterinária."
+        }
+      ],
+      "secondary": [
+        {
+          "name": "Roxo Sombra",
+          "hex": "#2E0F55",
+          "rgb": "46, 15, 85",
+          "cmyk": "94, 100, 0, 50",
+          "role": "secondary",
+          "justification": "Tom escuro do roxo primário. Usar em headlines sobre fundos claros, em camadas de profundidade do design e em backgrounds institucionais."
+        },
+        {
+          "name": "Turquesa Cuidado",
+          "hex": "#00B8BD",
+          "rgb": "0, 184, 189",
+          "cmyk": "100, 3, 0, 26",
+          "role": "secondary",
+          "justification": "Sustenta a paleta com associação universal de saúde, frescor e cuidado médico — sem cair no verde-farmácia amador. Funciona em ícones de serviço, badges de status (vacina em dia, exame agendado), gráficos e elementos de UI da LP."
+        }
+      ],
+      "neutrals": [
+        {
+          "name": "Bege Acolhedor",
+          "hex": "#F6EAD8",
+          "rgb": "246, 234, 216",
+          "cmyk": "0, 5, 12, 4",
+          "role": "background",
+          "justification": "Humaniza o premium. Usar como fundo de seções respiráveis (about, equipe, depoimentos), de cards educativos e de Stories e Reels — onde a marca quer se aproximar do tutor sem perder o premium."
+        },
+        {
+          "name": "Grafite Texto",
+          "hex": "#2E2E33",
+          "rgb": "46, 46, 51",
+          "cmyk": "10, 10, 0, 80",
+          "role": "neutral",
+          "justification": "Cinza-grafite para corpo de texto e elementos de UI neutros. Garante contraste WCAG AA (>7:1) em fundos branco e bege e legibilidade superior ao preto puro em premium-humanizado."
+        },
+        {
+          "name": "Branco Puro",
+          "hex": "#FFFFFF",
+          "rgb": "255, 255, 255",
+          "cmyk": "0, 0, 0, 0",
+          "role": "background",
+          "justification": "Fundo padrão de LP, e-mail e papelaria. Maximiza contraste com roxo e grafite."
+        }
+      ],
+      "functional": [
+        { "name": "Magenta Ação", "hex": "#A8358C", "rgb": "168, 53, 140", "cmyk": "0, 68, 17, 34", "role": "accent", "justification": "Cor exclusiva para CTAs primários (agendamento, WhatsApp). Magenta dialoga com o roxo (mesma família cromática) mas tem energia para conversão. Reservar para ação." },
+        { "name": "Verde Sucesso", "hex": "#10B981", "rgb": "16, 185, 129", "cmyk": "91, 0, 30, 27", "role": "accent", "justification": "Estados positivos: agendamento confirmado, vacina em dia, exame normal. Não usar como cor primária." },
+        { "name": "Vermelho Erro", "hex": "#DC2626", "rgb": "220, 38, 38", "cmyk": "0, 83, 83, 14", "role": "accent", "justification": "Estados de erro/alerta crítico em UI. Nunca em comunicação de marketing — vermelho gera ansiedade na Mariana." },
+        { "name": "Amarelo Atenção", "hex": "#F59E0B", "rgb": "245, 158, 11", "cmyk": "0, 36, 96, 4", "role": "accent", "justification": "Estados de atenção em UI: lembrete de vacina próxima, retorno pendente." }
+      ],
+      "proportions": {
+        "dominant_pct": 60,
+        "support_pct": 30,
+        "accent_pct": 10,
+        "dominant_color": "#FFFFFF",
+        "support_color": "#4B1C7D",
+        "accent_color": "#A8358C",
+        "rule": "Em peças padrão, 60% branco (background dominante), 30% roxo profundo (headlines, blocos institucionais, símbolo do logo), 10% magenta (CTAs e destaques). Em peças mais quentes (about, depoimentos), substituir 60% branco por 60% bege acolhedor mantendo a mesma proporção do roxo e magenta."
+      },
+      "wcag_contrast_matrix": [
+        { "foreground": "#4B1C7D", "background": "#FFFFFF", "label": "Roxo sobre Branco", "ratio": 12.2, "level": "AAA" },
+        { "foreground": "#4B1C7D", "background": "#F6EAD8", "label": "Roxo sobre Bege", "ratio": 10.0, "level": "AAA" },
+        { "foreground": "#2E2E33", "background": "#FFFFFF", "label": "Grafite sobre Branco", "ratio": 13.3, "level": "AAA" },
+        { "foreground": "#2E2E33", "background": "#F6EAD8", "label": "Grafite sobre Bege", "ratio": 10.9, "level": "AAA" },
+        { "foreground": "#FFFFFF", "background": "#4B1C7D", "label": "Branco sobre Roxo", "ratio": 12.2, "level": "AAA" },
+        { "foreground": "#FFFFFF", "background": "#A8358C", "label": "Branco sobre Magenta", "ratio": 5.0, "level": "AA" },
+        { "foreground": "#A8358C", "background": "#FFFFFF", "label": "Magenta sobre Branco", "ratio": 5.0, "level": "AA" },
+        { "foreground": "#00B8BD", "background": "#FFFFFF", "label": "Turquesa sobre Branco", "ratio": 2.4, "level": "Fail" },
+        { "foreground": "#00B8BD", "background": "#4B1C7D", "label": "Turquesa sobre Roxo", "ratio": 5.1, "level": "AA Large" }
+      ]
+    },
+    "typography": {
+      "primary_family": {
+        "name": "Fraunces",
+        "source": "Google Fonts",
+        "google_fonts_url": "https://fonts.google.com/specimen/Fraunces",
+        "embed_url": "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap",
+        "weights_permitted": ["SemiBold 600", "Bold 700"],
+        "license": "Open Font License — gratuita para uso comercial."
+      },
+      "secondary_family": {
+        "name": "Inter",
+        "source": "Google Fonts",
+        "google_fonts_url": "https://fonts.google.com/specimen/Inter",
+        "embed_url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap",
+        "weights_permitted": ["Regular 400", "Medium 500", "SemiBold 600"],
+        "license": "Open Font License — gratuita para uso comercial."
+      },
+      "hierarchy": [
+        { "level": "H1 (Display)", "font": "Fraunces", "weight": "Bold 700", "size_px": 56, "line_height": "1.1", "use_case": "Headline principal de LP, capa de deck, banner principal." },
+        { "level": "H2", "font": "Fraunces", "weight": "Bold 700", "size_px": 36, "line_height": "1.2", "use_case": "Títulos de seção em LP e papelaria." },
+        { "level": "H3", "font": "Fraunces", "weight": "SemiBold 600", "size_px": 24, "line_height": "1.3", "use_case": "Subtítulos de bloco e cards." },
+        { "level": "Body", "font": "Inter", "weight": "Regular 400", "size_px": 17, "line_height": "1.6", "use_case": "Corpo de texto em LP, e-mail e materiais de venda." },
+        { "level": "Body Mobile", "font": "Inter", "weight": "Regular 400", "size_px": 16, "line_height": "1.6", "use_case": "Corpo em telas pequenas." },
+        { "level": "Caption", "font": "Inter", "weight": "Medium 500", "size_px": 13, "line_height": "1.4", "use_case": "Legendas, microcopy, footnotes, badges." },
+        { "level": "CTA", "font": "Inter", "weight": "SemiBold 600", "size_px": 16, "line_height": "1.0", "use_case": "Texto de botões e links principais." }
+      ],
+      "fallbacks": "Caso Fraunces ou Inter não carreguem, fallback CSS: Fraunces → Georgia, 'Times New Roman', serif. Inter → -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif. Em documentos do Office, substitutas: Cambria (no lugar de Fraunces) e Calibri (no lugar de Inter).",
+      "justification": "Fraunces é serif contemporâneo com tecnologia variable font (optical sizing), curvas humanas e personalidade editorial — afasta a marca do hospital institucional sem cair no pet shop carismático. Reforça os adjetivos 'humano' e 'especialista'. Inter é sans-serif neutro otimizado para tela, com legibilidade testada em UI e microcopy — sustenta o adjetivo 'transparente'. O par Fraunces (calor) + Inter (clareza) traduz visualmente a tensão produtiva entre 'medicina técnica' e 'medicina humana'."
+    },
+    "iconography": {
+      "style": "Linha contínua, peso uniforme, terminações arredondadas. Estilo similar a Lucide Icons ou Phosphor Icons (regular weight). Sem preenchimento sólido em ícones de UI — preserva leveza e harmoniza com Fraunces+Inter.",
+      "stroke_weight_px": 1.75,
+      "corner_style": "rounded",
+      "grid": "24×24px (ícones de UI) e 32×32px (ícones de serviço com mais detalhe)",
+      "color_default": "#4B1C7D — Roxo Profundo. Ativar Magenta (#A8358C) apenas em ícones de CTA e Turquesa (#00B8BD) em estados positivos.",
+      "do_dont": [
+        { "type": "do", "rule": "Use linhas com peso uniforme (1.75px) e terminações arredondadas." },
+        { "type": "do", "rule": "Estilize gato e cão em traço único, sem realismo." },
+        { "type": "dont", "rule": "Não preencha ícones com cor sólida — vira mascote." },
+        { "type": "dont", "rule": "Não misture ícones de outline com filled na mesma peça." }
+      ]
+    },
+    "graphic_system": {
+      "auxiliary_elements": "Linhas finas (1px) em Roxo Profundo para divisores. Pontilhados em Turquesa para indicar fluxo (jornada, série). Cantos arredondados de 8-12px em cards e botões.",
+      "patterns": "Padrão de pegadas felinas em escala muito reduzida (5% opacidade, Roxo Sombra) para fundos de seção secundária. Não usar em fundos primários — perde sobriedade.",
+      "borders_radius": "8px (cards e botões pequenos), 12px (cards grandes), 16px (modais)."
+    },
+    "photography": {
+      "art_direction": "Fotografia documental real da clínica e dos pacientes — luz natural, sem flash duro, expressões espontâneas. Mariana como referência visual: tutora 30-40 anos, ambiente doméstico, gato no colo. Nathalia em jaleco branco, cabelo solto ou meio-preso, sentada ou agachada na altura do gato (nunca em pé sobre o paciente).",
+      "mood_keywords": [
+        "luz natural",
+        "intimidade doméstica",
+        "expressão espontânea",
+        "altura do gato",
+        "jaleco como camiseta de algodão (próximo, não institucional)",
+        "paleta quente (bege, off-white, madeira clara)"
+      ],
+      "color_treatment": "Tratamento sutil — não filtrar para 'preto e branco', não saturar. LUT ideal: leve aumento de calor (+5 amarelo), redução discreta de saturação (-10%) para evitar 'photo studio'.",
+      "stock_rules": "Evitar bancos genéricos quando a clínica tem 29 fotos profissionais próprias. Quando precisar de stock, evitar 'veterinário sorrindo segurando estetoscópio em pose forçada' e 'gato perfeito de pelo branco em fundo branco'.",
+      "do_dont": [
+        { "type": "do", "rule": "Use fotografia real da Dra. Nathalia com pacientes (já existem 29 fotos profissionais)." },
+        { "type": "do", "rule": "Mostre pacientes com nome real (Simba, Tom, Maju) quando autorizado pela tutora." },
+        { "type": "do", "rule": "Capture momentos de cuidado: Nathalia agachada na altura do gato, mão na cabeça do paciente, conversa com a tutora." },
+        { "type": "dont", "rule": "Não use stock photo genérico de 'veterinário com estetoscópio sorrindo'." },
+        { "type": "dont", "rule": "Não use ilustração 3D de animal — quebra o tom humano-real." },
+        { "type": "dont", "rule": "Não filtre para sépia ou preto-e-branco — Mariana lê isso como 'foto antiga' ou 'datada'." }
+      ]
+    },
+    "illustration": {
+      "style": "Ilustração linear minimalista, peso uniforme, paleta restrita à secundária (roxo + turquesa). Usada em conteúdo educativo (sinais felinos, calendário de vacinas, jornada do tutor). Nunca como personagem mascote — preservar tom humano-real.",
+      "use_cases": ["Conteúdo educativo no Instagram (carrosseis)", "Diagramas em LP", "E-book e PDF de guia gratuito", "Microilustrações em e-mail"]
+    }
+  },
+  "block4_applications": {
+    "principle": "Toda aplicação documentada aqui tem 2 camadas: técnica (specs exatas) + contextual (mockup mostrando a aplicação em uso real). Manuais que mostram só a camada técnica viram referência de designer; manuais com a camada contextual viram inspiração de toda a empresa — Loíse, fornecedores, parceiros conseguem visualizar a marca 'viva'.",
+    "applications": [
+      {
+        "category": "stationery",
+        "name": "Cartão de visita — Dra. Nathalia",
+        "specs": "85×54mm. Frente: lockup horizontal centralizado em fundo branco; nome + título embaixo do lockup em Inter Medium 14px. Verso: fundo Roxo Profundo, mensagem-chave em Fraunces Bold 18px branco; WhatsApp + Instagram em Inter Regular 12px. Acabamento: papel 350g, laminação fosca, hot stamping opcional na cor magenta para o nome (premium).",
+        "mockup": {
+          "type": "business_card",
+          "description": "Cartão de visita frente e verso renderizado no portal, em proporção 85×54mm.",
+          "data": {
+            "name": "Dra. Nathalia Alves",
+            "title": "Veterinária — Pós-graduanda em medicina felina",
+            "phone": "(19) 99579-5483",
+            "instagram": "@clinicazenvet",
+            "site": "clinicazenvet.com.br",
+            "address": "Av. Pascoal Ardito, 792 — São Manoel, Americana-SP",
+            "back_message": "Seu gato merece uma veterinária que entende de felinos."
+          }
+        }
+      },
+      {
+        "category": "stationery",
+        "name": "Assinatura de e-mail",
+        "specs": "Largura máxima 600px. Lockup do logo na esquerda (60px altura). Nome em Inter SemiBold 14px Roxo Profundo, título em Inter Regular 13px Grafite. Telefone WhatsApp + Instagram + site em Inter Regular 12px Grafite. Linha divisória 1px Roxo Sombra acima da linha de contato.",
+        "mockup": {
+          "type": "email_signature",
+          "description": "Assinatura HTML real renderizada no portal.",
+          "data": {
+            "name": "Dra. Nathalia Alves",
+            "title": "Veterinária — Pós-graduanda em medicina felina",
+            "phone": "(19) 99579-5483",
+            "instagram": "@clinicazenvet",
+            "site": "clinicazenvet.com.br"
+          }
+        }
+      },
+      {
+        "category": "social_media",
+        "name": "Avatar e Bio do Instagram (@clinicazenvet)",
+        "specs": "Avatar: símbolo isolado em fundo Roxo Profundo, 320×320px (Instagram comprime para 110×110). Bio: máximo 150 caracteres, com emoji 🐱 inicial, 1 linha de posicionamento ('Especialista em felinos · Americana SP'), 1 linha de diferencial ('Consulta 40min · Acompanhamento WhatsApp'), 1 linha de localização + horário, link wa.me clicável.",
+        "mockup": {
+          "type": "ig_avatar_bio",
+          "description": "Avatar circular + bio block como aparece no Instagram mobile.",
+          "data": {
+            "username": "clinicazenvet",
+            "display_name": "Zenvet · Clínica Veterinária",
+            "bio_lines": [
+              "🐱 Especialista em felinos · Americana SP",
+              "Consulta 40min · Acompanhamento WhatsApp",
+              "Av. Pascoal Ardito, 792 · Seg–Sex 8h–18h"
+            ],
+            "link_text": "wa.me/5519995795483",
+            "stats": { "posts": 142, "followers": 2840, "following": 312 }
+          }
+        }
+      },
+      {
+        "category": "social_media",
+        "name": "Post de Feed Educativo — Instagram",
+        "specs": "1080×1080px (1:1). Fundo bege acolhedor. Headline em Fraunces Bold 64px roxo profundo, máximo 2 linhas. Sub-headline em Inter Medium 32px grafite, máximo 2 linhas. Logo no rodapé em Roxo Profundo. CTA implícito 'Continue lendo →' no canto inferior direito em Inter SemiBold 24px Magenta.",
+        "mockup": {
+          "type": "ig_feed_post",
+          "description": "Post 1:1 renderizado em SVG no portal — exemplo educativo.",
+          "data": {
+            "headline": "Seu gato esconde dor por instinto.",
+            "subheadline": "Quando ele demonstra, geralmente já passou do ponto fácil de resolver.",
+            "cta": "Continue lendo →",
+            "background": "#F6EAD8"
+          }
+        }
+      },
+      {
+        "category": "social_media",
+        "name": "Story Highlight — Instagram",
+        "specs": "1080×1920px (9:16). Fundo Roxo Profundo. Headline em Fraunces Bold 84px branco, máximo 2 linhas. Texto auxiliar em Inter Regular 36px branco. Logo + CTA wa.me no rodapé em Inter SemiBold 28px branco com fundo Magenta.",
+        "mockup": {
+          "type": "ig_story",
+          "description": "Story 9:16 renderizado em SVG.",
+          "data": {
+            "headline": "40 minutos com a Dra. Nathalia.",
+            "subheadline": "Tempo que muda o diagnóstico.",
+            "cta": "Agende no WhatsApp"
+          }
+        }
+      },
+      {
+        "category": "digital_ui",
+        "name": "Favicon e App Icons",
+        "specs": "Favicon: símbolo isolado, 32×32 e 16×16px (PNG + ICO). App icon iOS: 180×180px com símbolo sobre fundo Roxo Profundo. App icon Android adaptive: 192×192px e 512×512px com layer de fundo Roxo Profundo + foreground símbolo branco. Splash screen: lockup horizontal centralizado, fundo Roxo Profundo.",
+        "mockup": {
+          "type": "favicon_scaling",
+          "description": "5 tamanhos de favicon/app icon renderizados em sequência: 16, 32, 64, 180, 512px.",
+          "data": {
+            "sizes": [16, 32, 64, 180, 512],
+            "background": "#4B1C7D",
+            "foreground": "#FFFFFF"
+          }
+        }
+      },
+      {
+        "category": "digital_ui",
+        "name": "WhatsApp Business — Foto de capa e descrição",
+        "specs": "Foto de capa: 1280×720px. Lockup horizontal centralizado em fundo bege acolhedor com pequena moldura roxa. Descrição: 256 caracteres máximo. Mensagem de saudação automática com tom consultivo (script da Loíse). Mensagem de ausência fora do horário direcionando para hospitais 24h parceiros.",
+        "mockup": {
+          "type": "whatsapp_business",
+          "description": "Cover banner + caixa de saudação WhatsApp.",
+          "data": {
+            "cover_message": "Especialista em felinos · Americana",
+            "greeting": "Oi! Aqui é a Loíse da Zenvet, clínica especialista em gatos e cães em Americana. Quem é seu pet? 🐱",
+            "away": "No momento estamos fechados. Em emergência, recomendamos os hospitais 24h da região. Volta a falar com a gente quando o pet estabilizar — temos hora marcada e a Dra. Nathalia explica tudo direitinho."
+          }
+        }
+      },
+      {
+        "category": "social_media",
+        "name": "Google Meu Negócio (GMB) — Card de Resultado",
+        "specs": "Foto de capa: foto real da fachada ou da Nathalia atendendo (16:9, 1920×1080). Nome: 'Zenvet · Clínica Veterinária Especialista em Felinos'. Categoria primária: Clínica veterinária. Categorias secundárias: Veterinário · Médico veterinário felino. Descrição (750 chars): texto institucional com 'especialista em felinos' + Americana + 'consulta 40min com a Dra. Nathalia' + 'transparência de preço'. Resposta a reviews humanizada e específica ao paciente.",
+        "mockup": {
+          "type": "gmb_card",
+          "description": "Simulação do card como aparece em busca do Google.",
+          "data": {
+            "name": "Zenvet · Clínica Veterinária Especialista em Felinos",
+            "rating": 4.9,
+            "reviews_count": 87,
+            "category": "Clínica veterinária",
+            "address": "Av. Pascoal Ardito, 792 — São Manoel, Americana",
+            "hours": "Seg–Sex 8h–18h",
+            "phone": "(19) 99579-5483",
+            "tag": "Especialista em felinos"
+          }
+        }
+      }
+    ]
+  },
+  "block5_governance": {
+    "brand_owner": "Dra. Nathalia Alves (proprietária e veterinária) é a guardiã final da marca. Decisões estratégicas (mudanças de tagline, paleta, posicionamento, novo serviço com sub-marca) passam por ela. Decisões táticas (criação de peças dentro das regras já documentadas, posts de Instagram, respostas no WhatsApp) são delegadas à Loíse (atendimento) e à V4 (executor Rafael Corazza) com checagem por amostragem semanal.",
+    "approval_process": [
+      { "step": "Solicitação interna ou da V4", "responsible": "Loíse / Rafael (V4)", "estimated_time": "imediato" },
+      { "step": "Validação contra regras do manual", "responsible": "Auto-validação pelo solicitante usando o portal", "estimated_time": "5–15 min" },
+      { "step": "Revisão da Dra. Nathalia (apenas se for nova categoria, sub-marca ou desvio do manual)", "responsible": "Dra. Nathalia", "estimated_time": "até 24h" },
+      { "step": "Publicação", "responsible": "Loíse / Rafael (V4)", "estimated_time": "imediato após aprovação" }
+    ],
+    "review_cadence": "Manual revisado a cada trimestre (4x/ano) ou quando houver mudança estrutural (novo serviço, certificação ABFel obtida, expansão para 2ª unidade). Cada revisão gera novo número de versão e changelog em history[] do client.json.",
+    "committee": null
+  }
+}
