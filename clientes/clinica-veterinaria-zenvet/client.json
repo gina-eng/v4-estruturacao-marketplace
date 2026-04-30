@@ -2131,17 +2131,18 @@
         "completed_at": "2026-04-29T20:11:47.011481Z"
       },
       "ee-s3-crm-setup": {
-        "status": "pending",
-        "checkpoint": 0,
-        "started_at": null,
-        "completed_at": null
+        "status": "completed",
+        "checkpoint": 1,
+        "version": 1,
+        "started_at": "2026-04-30T14:50:00Z",
+        "completed_at": "2026-04-30T14:50:00Z"
       },
       "ee-s3-forecast-midia": {
         "status": "completed",
         "checkpoint": 1,
-        "version": 3,
+        "version": 4,
         "started_at": "2026-04-30T13:30:00Z",
-        "completed_at": "2026-04-30T14:15:00Z"
+        "completed_at": "2026-04-30T14:35:00Z"
       },
       "ee-s3-gmb-otimizacao": {
         "status": "completed",
@@ -2370,6 +2371,20 @@
       "action": "refined",
       "version": 3,
       "note": "v3 (cenário conservador): leads 80→130 (era 100→188), CPL R$37→R$23 (era R$30→R$16), atendimentos 11→31 (era 17→54). Campanhas reduzidas de 9 para 5 — concentração em vez de pulverização: Google em Search Felinos Americana (R$1.050) + Search Brand & Diferenciais consolidada (R$900) + Demand Gen Vacinação (R$150); Meta em Conversões Felinos (R$700, com Lookalike incorporado depois) + Retargeting (R$200). Acumulado 6m: 630 leads, 126 atendimentos, CAC mídia médio R$143. Renderer atualizado: cards de canal redesenhados, donut com R$/mês na legenda, gráfico unificado (funil+custos no mesmo SVG), tabela horizontal (KPIs em linhas, meses em colunas)."
+    },
+    {
+      "ts": "2026-04-30T14:35:00Z",
+      "skill": "ee-s3-forecast-midia",
+      "action": "refined",
+      "version": 4,
+      "note": "v4 ULTRA conservador: M1 começa ABAIXO do baseline atual (65 leads vs 72 hoje, CPL R$46 vs R$26 hoje) refletindo custo real da transição. Estabilização só no M4 (CPL R$30 = benchmark Pet/Vet). M6: 120 leads, CPL R$25, 26 atendimentos. Acumulado 6m: 557 leads, 100 atendimentos, CAC mídia médio R$180."
+    },
+    {
+      "ts": "2026-04-30T14:50:00Z",
+      "skill": "ee-s3-crm-setup",
+      "action": "marked_completed",
+      "version": 1,
+      "note": "Marcado como concluído pelo operador. Configuração do CRM (Kommo) realizada externamente — pipeline + réguas de boas-vindas e nutrição configurados, Loíse com script consultivo. Detalhes da execução não documentados no output desta skill."
     }
   ],
   "page_audit": {

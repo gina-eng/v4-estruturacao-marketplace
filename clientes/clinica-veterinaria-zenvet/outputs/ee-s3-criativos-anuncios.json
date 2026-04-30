@@ -1,5 +1,5 @@
 {
-  "summary": "Pack de 5 criativos para Zenvet (4 felinas + 1 cães), 15 peças totais (3 formatos × 5 variações: feed quadrado 1080×1080, feed retrato 1080×1350, stories 1080×1920). Cada variação testa 1 hook diferente — Dor / Resultado / Curiosidade / Prova Social / Urgência. Direção: estática-first com foto real da Dra. Nathalia (corrige 0% retenção dos vídeos atuais), hook explícito no 1º segundo em Fraunces serif itálico, paleta da marca (roxo #4B1C7D, turquesa #00B8BD, bege #F6EAD8). Cada prompt referencia explicitamente os assets do repo via URL Vercel pública (CDN rápido) — pronta pra colar em Midjourney/Ideogram com --cref/upload de imagem.",
+  "summary": "Pack de 5 criativos para Zenvet (4 felinas + 1 cães), 8 peças produzidas (5 feed retrato 1080×1350 + 3 stories 1080×1920 — formato feed quadrado descartado nesta rodada por baixo histórico de retenção). Cada variação testa 1 hook diferente — Dor / Resultado / Curiosidade / Prova Social / Urgência. Direção: estática-first com foto real da Dra. Nathalia (corrige 0% retenção dos vídeos atuais), hook explícito no 1º segundo em Fraunces serif itálico, paleta da marca (roxo #4B1C7D, turquesa #00B8BD, bege #F6EAD8). Cada prompt referencia explicitamente os assets do repo via URL Vercel pública (CDN rápido) — pronta pra colar em Midjourney/Ideogram com --cref/upload de imagem.",
   "client_name": "Clínica Veterinária Zenvet",
   "campaign_focus": "Felinos-first (4 de 5 variações felinas, 1 cães secundária) · Meta Ads · Estática-first",
   "diagnostic_anchor": "S2 ee-s2-diagnostico-criativos: 0% retenção 3s nos 43 anúncios atuais, estáticas convertem 2x mais que vídeos, hospitais 24h da região rodam 22 anúncios cada vs 5 da Zenvet. Resposta: hook explícito no 1s, foto real (não stock), texto curto sobreposto, sem música, sem vídeo na 1ª rodada.",
@@ -307,7 +307,7 @@
     "test_duration": "7 dias mínimo por conjunto (mínimo R$ 30/dia para Meta entregar relevância). Total da rodada inicial: R$ 30 × 4 conjuntos × 7 dias = R$ 840 (cabe no R$ 800/mês contratado mas deve subir para ~R$ 1.200 pra dar volume estatístico).",
     "cut_criteria": "Pausar variação se: (a) CTR < 1% após 1.000 imp, OU (b) Retenção 3s < 15% (hook falhou — redesenhar visual, NÃO copy), OU (c) CPL > R$ 80 após 50 cliques. Vencedora vai pro Conjunto D de otimização de formato."
   },
-  "total_pieces": 15,
+  "total_pieces": 8,
   "production_notes": {
     "assets_already_available_with_urls": [
       "Var 1 (Dor): https://zenvet-landing.vercel.app/photos/dra-com-gato.png",
