@@ -1,6 +1,55 @@
 {
-  "summary": "Zenvet tem o MAIOR engagement proxy dos 3 (1,202% vs LM+ 0,781% e Cantinho 1,108%) e o maior volume (19 posts/90d vs 4 do LM+ e 10 do Cantinho) — o feed organico ja performa acima da concorrencia local. Gap critico: zero carrosseis educativos em 90 dias enquanto Cantinho faz 20% do mix nesse formato, e nenhum post coloca 'felinos' no centro do briefing apesar de ser o posicionamento declarado. Acao prioritaria: lancar serie mensal de 4 carrosseis felinos (Mariana-first) nos proximos 30 dias.",
   "client_name": "Clínica Veterinária Zenvet",
+  "summary": "Zenvet tem o MAIOR engagement proxy dos 3 (1,202% vs LM+ 0,781% e Cantinho 1,108%) e o maior volume (19 posts/90d vs 4 do LM+ e 10 do Cantinho) — o feed organico ja performa acima da concorrencia local. Gap critico: zero carrosseis educativos em 90 dias enquanto Cantinho faz 20% do mix nesse formato, e nenhum post coloca 'felinos' no centro do briefing apesar de ser o posicionamento declarado. Acao prioritaria: lancar serie mensal de 4 carrosseis felinos (Mariana-first) nos proximos 30 dias.",
+  "summary_headline": "Instagram Zenvet líder em engagement (1,202%) e volume (19 posts/90d) na microrregião — falta calendário e UGC.",
+  "summary_highlights": [
+    {
+      "category": "vantagem",
+      "label": "Engagement",
+      "value": "1,202%",
+      "subtext": "Vs LM+ 0,781% e Cantinho 1,108%",
+      "tone": "green"
+    },
+    {
+      "category": "posicao",
+      "label": "Volume 90d",
+      "value": "19 posts",
+      "subtext": "Maior cadência da microrregião analisada",
+      "tone": "green"
+    },
+    {
+      "category": "oportunidade",
+      "label": "Padrões faltantes",
+      "value": "UGC + Reels educativos",
+      "subtext": "Concorrência usa, Zenvet ainda não",
+      "tone": "yellow"
+    },
+    {
+      "category": "maturidade",
+      "label": "Calendário editorial",
+      "value": "Ausente",
+      "subtext": "Posts saem por intuição, não por plano",
+      "tone": "yellow"
+    }
+  ],
+  "summary_key_findings": [
+    {
+      "category": "vantagem",
+      "text": "Maior engagement proxy entre os 3 perfis analisados — autoridade orgânica sustenta posicionamento sem precisar pagar mídia pra construir."
+    },
+    {
+      "category": "contexto",
+      "text": "Concorrentes batem em UGC e Reels educativos felino-first — Zenvet ainda não usa esses formatos."
+    },
+    {
+      "category": "acao",
+      "text": "Implementar calendário editorial semanal com 3 pilares: educação felina, bastidores da clínica e UGC de tutoras."
+    },
+    {
+      "category": "vantagem",
+      "text": "Top posts mostram que conteúdo de bastidor + Dra. Nathalia gera mais conexão que feed institucional."
+    }
+  ],
   "period": {
     "start": "2026-01-21",
     "end": "2026-04-21",

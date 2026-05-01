@@ -8,9 +8,89 @@
     "sections",
     "faq",
     "social_proof",
-    "meta"
+    "meta",
+    "client_name",
+    "summary_headline",
+    "summary_highlights",
+    "summary_key_findings"
   ],
   "properties": {
+    "client_name": {
+      "type": "string",
+      "description": "Nome do cliente — sempre presente em todo output."
+    },
+    "summary": {
+      "type": "string",
+      "description": "Resumo de 1-2 frases da landing page. Inclui proposta central da página e número de seções criadas."
+    },
+    "summary_headline": {
+      "type": "string",
+      "description": "Manchete em 1 linha (~120 caracteres) com o veredito da skill."
+    },
+    "summary_highlights": {
+      "type": "array",
+      "description": "KPIs em destaque (4-6 itens). Categorias: posicao | competicao | janela | maturidade | oportunidade | risco.",
+      "minItems": 3,
+      "items": {
+        "type": "object",
+        "required": [
+          "category",
+          "label",
+          "value",
+          "tone"
+        ],
+        "properties": {
+          "category": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string"
+          },
+          "subtext": {
+            "type": "string"
+          },
+          "tone": {
+            "type": "string",
+            "enum": [
+              "green",
+              "yellow",
+              "red",
+              "blue",
+              "gray"
+            ]
+          }
+        }
+      }
+    },
+    "summary_key_findings": {
+      "type": "array",
+      "description": "3-5 achados categorizados (vantagem | contexto | ameaca | acao).",
+      "minItems": 3,
+      "items": {
+        "type": "object",
+        "required": [
+          "category",
+          "text"
+        ],
+        "properties": {
+          "category": {
+            "type": "string",
+            "enum": [
+              "vantagem",
+              "contexto",
+              "ameaca",
+              "acao"
+            ]
+          },
+          "text": {
+            "type": "string"
+          }
+        }
+      }
+    },
     "sections": {
       "type": "array",
       "description": "Seções da LP em ordem de exibição.",
@@ -47,10 +127,17 @@
             "description": "Stats inline da seção (ex: hero stats — alternativa a social_proof.stats).",
             "items": {
               "type": "object",
-              "required": ["number", "label"],
+              "required": [
+                "number",
+                "label"
+              ],
               "properties": {
-                "number": { "type": "string" },
-                "label": { "type": "string" }
+                "number": {
+                  "type": "string"
+                },
+                "label": {
+                  "type": "string"
+                }
               }
             }
           },
@@ -58,8 +145,12 @@
             "type": "object",
             "description": "Card flutuante com credencial (ex: nome do profissional + CRMV).",
             "properties": {
-              "name": { "type": "string" },
-              "role": { "type": "string" }
+              "name": {
+                "type": "string"
+              },
+              "role": {
+                "type": "string"
+              }
             }
           },
           "credentials": {
@@ -67,10 +158,17 @@
             "description": "Timeline de credenciais (formato 'year' + 'title' — usado em seções de autoridade).",
             "items": {
               "type": "object",
-              "required": ["year", "title"],
+              "required": [
+                "year",
+                "title"
+              ],
               "properties": {
-                "year": { "type": "string" },
-                "title": { "type": "string" }
+                "year": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                }
               }
             }
           },
@@ -328,10 +426,6 @@
     "whatsapp_link": {
       "type": "string",
       "description": "Link completo do WhatsApp com mensagem pré-formatada"
-    },
-    "summary": {
-      "type": "string",
-      "description": "Resumo de 1-2 frases da landing page. Inclui proposta central da página e número de seções criadas."
     }
   }
 }

@@ -14,12 +14,99 @@
     "threats",
     "unexploited_opportunity",
     "market_jtbd",
-    "real_differentials"
+    "real_differentials",
+    "summary_headline",
+    "summary_highlights",
+    "summary_key_findings"
   ],
   "properties": {
     "client_name": {
       "type": "string",
       "description": "Nome do cliente"
+    },
+    "summary": {
+      "type": "string",
+      "description": "Resumo de 1-2 frases da pesquisa de mercado. Inclui oportunidade principal e diferencial real do cliente."
+    },
+    "summary_headline": {
+      "type": "string",
+      "maxLength": 200,
+      "description": "Manchete em 1 linha com o veredito da pesquisa (para hero do resumo executivo no portal)"
+    },
+    "summary_highlights": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 8,
+      "description": "KPIs visuais categorizados para o resumo executivo",
+      "items": {
+        "type": "object",
+        "required": [
+          "category",
+          "label",
+          "value"
+        ],
+        "properties": {
+          "category": {
+            "type": "string",
+            "enum": [
+              "posicao",
+              "competicao",
+              "janela",
+              "maturidade",
+              "oportunidade",
+              "risco"
+            ]
+          },
+          "label": {
+            "type": "string",
+            "maxLength": 40
+          },
+          "value": {
+            "type": "string"
+          },
+          "subtext": {
+            "type": "string",
+            "maxLength": 80
+          },
+          "tone": {
+            "type": "string",
+            "enum": [
+              "green",
+              "yellow",
+              "red",
+              "blue",
+              "gray"
+            ]
+          }
+        }
+      }
+    },
+    "summary_key_findings": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 6,
+      "description": "Achados categorizados por intenção (vantagem/contexto/ameaça/ação)",
+      "items": {
+        "type": "object",
+        "required": [
+          "category",
+          "text"
+        ],
+        "properties": {
+          "category": {
+            "type": "string",
+            "enum": [
+              "vantagem",
+              "contexto",
+              "ameaca",
+              "acao"
+            ]
+          },
+          "text": {
+            "type": "string"
+          }
+        }
+      }
     },
     "segment": {
       "type": "string",
@@ -439,55 +526,6 @@
       "type": "string",
       "format": "date-time",
       "description": "Data/hora de conclusao"
-    },
-    "summary": {
-      "type": "string",
-      "description": "Resumo de 1-2 frases da pesquisa de mercado. Inclui oportunidade principal e diferencial real do cliente."
-    },
-    "summary_headline": {
-      "type": "string",
-      "maxLength": 200,
-      "description": "Manchete em 1 linha com o veredito da pesquisa (para hero do resumo executivo no portal)"
-    },
-    "summary_highlights": {
-      "type": "array",
-      "minItems": 3,
-      "maxItems": 8,
-      "description": "KPIs visuais categorizados para o resumo executivo",
-      "items": {
-        "type": "object",
-        "required": ["category", "label", "value"],
-        "properties": {
-          "category": {
-            "type": "string",
-            "enum": ["posicao", "competicao", "janela", "maturidade", "oportunidade", "risco"]
-          },
-          "label": { "type": "string", "maxLength": 40 },
-          "value": { "type": "string" },
-          "subtext": { "type": "string", "maxLength": 80 },
-          "tone": {
-            "type": "string",
-            "enum": ["green", "yellow", "red", "blue", "gray"]
-          }
-        }
-      }
-    },
-    "summary_key_findings": {
-      "type": "array",
-      "minItems": 3,
-      "maxItems": 6,
-      "description": "Achados categorizados por intenção (vantagem/contexto/ameaça/ação)",
-      "items": {
-        "type": "object",
-        "required": ["category", "text"],
-        "properties": {
-          "category": {
-            "type": "string",
-            "enum": ["vantagem", "contexto", "ameaca", "acao"]
-          },
-          "text": { "type": "string" }
-        }
-      }
     },
     "market_share": {
       "type": "object",

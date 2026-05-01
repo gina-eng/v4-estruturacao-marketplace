@@ -1,6 +1,51 @@
 {
-  "summary": "Pack de 5 criativos para Zenvet (4 felinas + 1 cães), 8 peças produzidas (5 feed retrato 1080×1350 + 3 stories 1080×1920 — formato feed quadrado descartado nesta rodada por baixo histórico de retenção). Cada variação testa 1 hook diferente — Dor / Resultado / Curiosidade / Prova Social / Urgência. Direção: estática-first com foto real da Dra. Nathalia (corrige 0% retenção dos vídeos atuais), hook explícito no 1º segundo em Fraunces serif itálico, paleta da marca (roxo #4B1C7D, turquesa #00B8BD, bege #F6EAD8). Cada prompt referencia explicitamente os assets do repo via URL Vercel pública (CDN rápido) — pronta pra colar em Midjourney/Ideogram com --cref/upload de imagem.",
   "client_name": "Clínica Veterinária Zenvet",
+  "summary": "Pack de 5 criativos para Zenvet (4 felinas + 1 cães), 8 peças produzidas (5 feed retrato 1080×1350 + 3 stories 1080×1920 — formato feed quadrado descartado nesta rodada por baixo histórico de retenção). Cada variação testa 1 hook diferente — Dor / Resultado / Curiosidade / Prova Social / Urgência. Direção: estática-first com foto real da Dra. Nathalia (corrige 0% retenção dos vídeos atuais), hook explícito no 1º segundo em Fraunces serif itálico, paleta da marca (roxo #4B1C7D, turquesa #00B8BD, bege #F6EAD8). Cada prompt referencia explicitamente os assets do repo via URL Vercel pública (CDN rápido) — pronta pra colar em Midjourney/Ideogram com --cref/upload de imagem.",
+  "summary_headline": "8 peças produzidas (5 feed 1080×1350 + 3 stories 1080×1920) — pack felino-first com 1 peça canina, prontas pra subir.",
+  "summary_highlights": [
+    {
+      "category": "oportunidade",
+      "label": "Peças produzidas",
+      "value": "8",
+      "subtext": "5 feed + 3 stories, formato Meta-ready",
+      "tone": "green"
+    },
+    {
+      "category": "posicao",
+      "label": "Distribuição",
+      "value": "4 felinas + 1 canina",
+      "subtext": "Reflete proporção 70-30 do ICP",
+      "tone": "blue"
+    },
+    {
+      "category": "maturidade",
+      "label": "Spec técnica",
+      "value": "100% dentro",
+      "subtext": "1080×1350 feed / 1080×1920 stories",
+      "tone": "green"
+    },
+    {
+      "category": "competicao",
+      "label": "Padrão visual",
+      "value": "Diferenciado",
+      "subtext": "Roxo + turquesa + foto real, sem stock",
+      "tone": "green"
+    }
+  ],
+  "summary_key_findings": [
+    {
+      "category": "vantagem",
+      "text": "Foto real da Dra. Nathalia + pacientes em todos os criativos — diferencial visual claro vs concorrência genérica."
+    },
+    {
+      "category": "contexto",
+      "text": "Cada peça tem variação A/B documentada — facilita teste de hook (medo vs cuidado vs especialização)."
+    },
+    {
+      "category": "acao",
+      "text": "Subir as 5 felinas no Meta primeiro, esperar primeiros 1k impressões antes de ativar a canina."
+    }
+  ],
   "campaign_focus": "Felinos-first (4 de 5 variações felinas, 1 cães secundária) · Meta Ads · Estática-first",
   "diagnostic_anchor": "S2 ee-s2-diagnostico-criativos: 0% retenção 3s nos 43 anúncios atuais, estáticas convertem 2x mais que vídeos, hospitais 24h da região rodam 22 anúncios cada vs 5 da Zenvet. Resposta: hook explícito no 1s, foto real (não stock), texto curto sobreposto, sem música, sem vídeo na 1ª rodada.",
   "asset_registry": {

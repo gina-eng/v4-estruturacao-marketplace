@@ -20,12 +20,87 @@
     "copy_audit",
     "trust_analysis",
     "test_hypotheses",
-    "wireframe_improvements"
+    "wireframe_improvements",
+    "summary_headline",
+    "summary_highlights",
+    "summary_key_findings"
   ],
   "properties": {
     "client_name": {
       "type": "string",
       "description": "Nome do cliente"
+    },
+    "summary": {
+      "type": "string",
+      "description": "Resumo de 1-2 frases do diagnóstico de CRO. Inclui principal gap de conversão e ação prioritária."
+    },
+    "summary_headline": {
+      "type": "string",
+      "description": "Manchete em 1 linha (~120 caracteres) com o veredito da skill."
+    },
+    "summary_highlights": {
+      "type": "array",
+      "description": "KPIs em destaque (4-6 itens). Categorias: posicao | competicao | janela | maturidade | oportunidade | risco.",
+      "minItems": 3,
+      "items": {
+        "type": "object",
+        "required": [
+          "category",
+          "label",
+          "value",
+          "tone"
+        ],
+        "properties": {
+          "category": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string"
+          },
+          "subtext": {
+            "type": "string"
+          },
+          "tone": {
+            "type": "string",
+            "enum": [
+              "green",
+              "yellow",
+              "red",
+              "blue",
+              "gray"
+            ]
+          }
+        }
+      }
+    },
+    "summary_key_findings": {
+      "type": "array",
+      "description": "3-5 achados categorizados (vantagem | contexto | ameaca | acao).",
+      "minItems": 3,
+      "items": {
+        "type": "object",
+        "required": [
+          "category",
+          "text"
+        ],
+        "properties": {
+          "category": {
+            "type": "string",
+            "enum": [
+              "vantagem",
+              "contexto",
+              "ameaca",
+              "acao"
+            ]
+          },
+          "text": {
+            "type": "string"
+          }
+        }
+      }
     },
     "segment": {
       "type": "string",
@@ -59,55 +134,163 @@
     "technical_audit": {
       "type": "object",
       "description": "Dados brutos do audit tecnico automatizado (PageSpeed Insights + on-page). Preenchido a partir de client.json.page_audit.",
-      "required": ["fetched_at", "pagespeed"],
+      "required": [
+        "fetched_at",
+        "pagespeed"
+      ],
       "properties": {
-        "fetched_at": { "type": "string", "description": "ISO timestamp do audit" },
-        "cache_file": { "type": "string", "description": "Caminho relativo do cache raw" },
+        "fetched_at": {
+          "type": "string",
+          "description": "ISO timestamp do audit"
+        },
+        "cache_file": {
+          "type": "string",
+          "description": "Caminho relativo do cache raw"
+        },
         "pagespeed": {
           "type": "object",
           "properties": {
             "mobile_scores": {
-              "type": ["object", "null"],
+              "type": [
+                "object",
+                "null"
+              ],
               "properties": {
-                "performance": { "type": ["integer", "null"] },
-                "accessibility": { "type": ["integer", "null"] },
-                "best_practices": { "type": ["integer", "null"] },
-                "seo": { "type": ["integer", "null"] }
+                "performance": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ]
+                },
+                "accessibility": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ]
+                },
+                "best_practices": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ]
+                },
+                "seo": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ]
+                }
               }
             },
             "desktop_scores": {
-              "type": ["object", "null"],
+              "type": [
+                "object",
+                "null"
+              ],
               "properties": {
-                "performance": { "type": ["integer", "null"] },
-                "accessibility": { "type": ["integer", "null"] },
-                "best_practices": { "type": ["integer", "null"] },
-                "seo": { "type": ["integer", "null"] }
+                "performance": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ]
+                },
+                "accessibility": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ]
+                },
+                "best_practices": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ]
+                },
+                "seo": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ]
+                }
               }
             },
             "mobile_cwv_lab": {
-              "type": ["object", "null"],
+              "type": [
+                "object",
+                "null"
+              ],
               "description": "Core Web Vitals lab data (Lighthouse)",
               "properties": {
-                "lcp_ms": { "type": ["number", "null"] },
-                "fcp_ms": { "type": ["number", "null"] },
-                "tbt_ms": { "type": ["number", "null"] },
-                "cls": { "type": ["number", "null"] },
-                "speed_index_ms": { "type": ["number", "null"] },
-                "tti_ms": { "type": ["number", "null"] },
-                "ttfb_ms": { "type": ["number", "null"] }
+                "lcp_ms": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "fcp_ms": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "tbt_ms": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "cls": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "speed_index_ms": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "tti_ms": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "ttfb_ms": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                }
               }
             },
-            "desktop_cwv_lab": { "type": ["object", "null"] },
+            "desktop_cwv_lab": {
+              "type": [
+                "object",
+                "null"
+              ]
+            },
             "mobile_cwv_field": {
-              "type": ["object", "null"],
+              "type": [
+                "object",
+                "null"
+              ],
               "description": "CrUX field data (usuarios reais), null se sem dados suficientes"
             },
-            "desktop_cwv_field": { "type": ["object", "null"] },
+            "desktop_cwv_field": {
+              "type": [
+                "object",
+                "null"
+              ]
+            },
             "mobile_top_opportunities": {
               "type": "array",
               "description": "Top opportunities do Lighthouse mobile ordenadas por savings_ms"
             },
-            "desktop_top_opportunities": { "type": "array" }
+            "desktop_top_opportunities": {
+              "type": "array"
+            }
           }
         }
       }
@@ -117,35 +300,146 @@
       "description": "Analise on-page SEO (mobile/desktop via parser HTML). Preenchido a partir de client.json.page_audit.onpage.",
       "properties": {
         "mobile": {
-          "type": ["object", "null"],
+          "type": [
+            "object",
+            "null"
+          ],
           "properties": {
-            "title": { "type": ["string", "null"] },
-            "title_length": { "type": ["integer", "null"] },
-            "meta_description": { "type": ["string", "null"] },
-            "meta_description_length": { "type": ["integer", "null"] },
-            "canonical": { "type": ["string", "null"] },
-            "lang": { "type": ["string", "null"] },
-            "viewport": { "type": ["string", "null"] },
-            "favicon": { "type": ["string", "null"] },
-            "og": { "type": "object", "description": "Open Graph tags" },
-            "twitter": { "type": "object", "description": "Twitter card tags" },
-            "schema_types": { "type": "array", "items": { "type": "string" } },
-            "h1_count": { "type": ["integer", "null"] },
-            "h2_count": { "type": ["integer", "null"] },
-            "h3_count": { "type": ["integer", "null"] },
-            "images_total": { "type": ["integer", "null"] },
-            "images_without_alt": { "type": ["integer", "null"] },
-            "links_internal": { "type": ["integer", "null"] },
-            "links_external": { "type": ["integer", "null"] },
-            "links_nofollow": { "type": ["integer", "null"] },
-            "html_size_kb": { "type": ["number", "null"] },
-            "response_time_ms": { "type": ["number", "null"] }
+            "title": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "title_length": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "meta_description": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "meta_description_length": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "canonical": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "lang": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "viewport": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "favicon": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "og": {
+              "type": "object",
+              "description": "Open Graph tags"
+            },
+            "twitter": {
+              "type": "object",
+              "description": "Twitter card tags"
+            },
+            "schema_types": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "h1_count": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "h2_count": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "h3_count": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "images_total": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "images_without_alt": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "links_internal": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "links_external": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "links_nofollow": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "html_size_kb": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "response_time_ms": {
+              "type": [
+                "number",
+                "null"
+              ]
+            }
           }
         },
-        "desktop": { "type": ["object", "null"] },
+        "desktop": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
         "divergences": {
           "type": "array",
-          "items": { "type": "string" },
+          "items": {
+            "type": "string"
+          },
           "description": "Diferencas significativas entre versao mobile e desktop (title, h1, canonical, etc.)"
         }
       }
@@ -154,15 +448,60 @@
       "type": "object",
       "description": "Analise de headers HTTP de seguranca. Preenchido a partir de client.json.page_audit.security.",
       "properties": {
-        "https": { "type": "boolean" },
-        "hsts": { "type": ["string", "null"], "description": "Valor do Strict-Transport-Security ou null se ausente" },
-        "csp": { "type": ["string", "null"] },
-        "x_frame_options": { "type": ["string", "null"] },
-        "x_content_type_options": { "type": ["string", "null"] },
-        "referrer_policy": { "type": ["string", "null"] },
-        "permissions_policy": { "type": ["string", "null"] },
-        "score": { "type": ["integer", "null"], "minimum": 0, "maximum": 10 },
-        "issues": { "type": "array", "items": { "type": "string" } }
+        "https": {
+          "type": "boolean"
+        },
+        "hsts": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Valor do Strict-Transport-Security ou null se ausente"
+        },
+        "csp": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "x_frame_options": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "x_content_type_options": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "referrer_policy": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "permissions_policy": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "score": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 10
+        },
+        "issues": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
       }
     },
     "technical_diagnosis": {
@@ -526,20 +865,57 @@
           "type": "object",
           "description": "IDs extraidos: gtm, ga4, ua, google_ads, meta_pixel, tiktok_pixel, linkedin_partner",
           "properties": {
-            "gtm": { "type": "array", "items": { "type": "string" } },
-            "ga4": { "type": "array", "items": { "type": "string" } },
-            "ua": { "type": "array", "items": { "type": "string" } },
-            "google_ads": { "type": "array", "items": { "type": "string" } },
-            "meta_pixel": { "type": "array", "items": { "type": "string" } },
-            "tiktok_pixel": { "type": "array", "items": { "type": "string" } },
-            "linkedin_partner": { "type": "array", "items": { "type": "string" } }
+            "gtm": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "ga4": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "ua": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "google_ads": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "meta_pixel": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "tiktok_pixel": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "linkedin_partner": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
           }
         },
         "categories_summary": {
           "type": "object",
           "description": "Agrupamento por categoria: tracking, analytics, ads, heatmap, chat, cms, ecommerce, framework, lp_builder, cmp, hosting"
         },
-        "total_tools": { "type": "integer" },
+        "total_tools": {
+          "type": "integer"
+        },
         "setup_diagnosis": {
           "type": "string",
           "description": "Diagnostico narrativo do setup: coberturas, gaps, contradicoes. Ex: 'GTM presente mas sem GA4 — cliente opera cego.'"
@@ -550,15 +926,23 @@
       "type": "object",
       "description": "Eventos GA4 e Meta Pixel disparados durante navegacao.",
       "properties": {
-        "ga4_event_count": { "type": "integer" },
-        "meta_event_count": { "type": "integer" },
+        "ga4_event_count": {
+          "type": "integer"
+        },
+        "meta_event_count": {
+          "type": "integer"
+        },
         "ga4_event_names": {
           "type": "array",
-          "items": { "type": "string" }
+          "items": {
+            "type": "string"
+          }
         },
         "meta_event_names": {
           "type": "array",
-          "items": { "type": "string" }
+          "items": {
+            "type": "string"
+          }
         },
         "events_diagnosis": {
           "type": "string",
@@ -566,7 +950,9 @@
         },
         "expected_events_missing": {
           "type": "array",
-          "items": { "type": "string" },
+          "items": {
+            "type": "string"
+          },
           "description": "Eventos que DEVERIAM existir mas nao aparecem (ex: 'page_view', 'PageView', 'generate_lead')"
         }
       }
@@ -576,12 +962,32 @@
       "description": "Red flags de qualidade do tagueamento (UA legacy, pixel duplicado, GTM sem analytics, etc.)",
       "items": {
         "type": "object",
-        "required": ["severity", "flag", "title", "detail"],
+        "required": [
+          "severity",
+          "flag",
+          "title",
+          "detail"
+        ],
         "properties": {
-          "severity": { "type": "string", "enum": ["critical", "high", "medium", "low"] },
-          "flag": { "type": "string", "description": "Identificador curto do flag" },
-          "title": { "type": "string" },
-          "detail": { "type": "string" }
+          "severity": {
+            "type": "string",
+            "enum": [
+              "critical",
+              "high",
+              "medium",
+              "low"
+            ]
+          },
+          "flag": {
+            "type": "string",
+            "description": "Identificador curto do flag"
+          },
+          "title": {
+            "type": "string"
+          },
+          "detail": {
+            "type": "string"
+          }
         }
       }
     },
@@ -589,8 +995,18 @@
       "type": "object",
       "description": "Analise profunda de elementos CRO via Playwright (CTAs, forms, WhatsApp, prova social, confianca, urgencia).",
       "properties": {
-        "desktop": { "type": ["object", "null"] },
-        "mobile": { "type": ["object", "null"] },
+        "desktop": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "mobile": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
         "cta_diagnosis": {
           "type": "string",
           "description": "Avaliacao: quantidade de CTAs, above-fold, clareza, consistencia de texto"
@@ -613,21 +1029,40 @@
       "type": "object",
       "description": "Auditoria de compliance LGPD: CMP presente + scripts pre-consent.",
       "properties": {
-        "status": { "type": "string", "enum": ["compliant", "partial", "non_compliant"] },
-        "score": { "type": "integer", "minimum": 0, "maximum": 10 },
-        "has_cmp": { "type": "boolean" },
+        "status": {
+          "type": "string",
+          "enum": [
+            "compliant",
+            "partial",
+            "non_compliant"
+          ]
+        },
+        "score": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 10
+        },
+        "has_cmp": {
+          "type": "boolean"
+        },
         "cmps_detected": {
           "type": "array",
-          "items": { "type": "string" }
+          "items": {
+            "type": "string"
+          }
         },
         "pre_consent_trackers": {
           "type": "object",
           "description": "Trackers que disparam ANTES de qualquer consentimento {pattern: [urls]}"
         },
-        "pre_consent_tracker_count": { "type": "integer" },
+        "pre_consent_tracker_count": {
+          "type": "integer"
+        },
         "issues": {
           "type": "array",
-          "items": { "type": "string" }
+          "items": {
+            "type": "string"
+          }
         },
         "recommendation": {
           "type": "string",
@@ -646,10 +1081,6 @@
       "type": "string",
       "format": "date-time",
       "description": "Data/hora de conclusao"
-    },
-    "summary": {
-      "type": "string",
-      "description": "Resumo de 1-2 frases do diagnóstico de CRO. Inclui principal gap de conversão e ação prioritária."
     }
   }
 }

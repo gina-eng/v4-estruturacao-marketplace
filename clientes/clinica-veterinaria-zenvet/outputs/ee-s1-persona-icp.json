@@ -1,5 +1,55 @@
 {
+  "client_name": "Clínica Veterinária Zenvet",
   "summary": "ICP principal: tutoras de gatos 25-55 anos (80% mulheres / 20% homens), classe média-alta, Americana/SBO/Nova Odessa. Job emocional central: encontrar veterinária que entende de felinos de verdade. Maior dor: medo de ser explorada com exames desnecessários (trauma com concorrentes 24h). Mensagem-chave escolhida: 'Seu gato merece uma veterinária que entende de felinos — não de bicho em geral.' ICP secundário: tutores de cães 35-55 anos, perfil mais prático, prioridade em agilidade e preço transparente.",
+  "summary_headline": "ICP felino-first: tutoras 25-55, classe média-alta, dor central 'medo de não ser ouvida' — willingness to pay R$ 200-280/consulta.",
+  "summary_highlights": [
+    {
+      "category": "posicao",
+      "label": "ICP principal",
+      "value": "Tutoras de gatos",
+      "subtext": "25-55 anos, 80% F / 20% M, classe média-alta",
+      "tone": "blue"
+    },
+    {
+      "category": "oportunidade",
+      "label": "Willingness to pay",
+      "value": "R$ 200-280",
+      "subtext": "Consulta especialista — acima do mercado genérico",
+      "tone": "green"
+    },
+    {
+      "category": "competicao",
+      "label": "Persona secundária",
+      "value": "Tutores de cães",
+      "subtext": "Mesma microrregião, ticket similar",
+      "tone": "blue"
+    },
+    {
+      "category": "janela",
+      "label": "Job emocional",
+      "value": "Ser ouvida",
+      "subtext": "Dor central que o mercado ignora",
+      "tone": "yellow"
+    }
+  ],
+  "summary_key_findings": [
+    {
+      "category": "vantagem",
+      "text": "Job emocional 'medo de não ser ouvida' é específico de tutoras felinas — ninguém na microrregião comunica isso."
+    },
+    {
+      "category": "contexto",
+      "text": "Persona pesquisa antes de confiar: Google + Instagram + reviews. Convertemos quem chega já 'pré-vendido'."
+    },
+    {
+      "category": "ameaca",
+      "text": "Anti-persona (caçador de preço) é 30% do volume hoje — converte mal e desgasta a equipe."
+    },
+    {
+      "category": "acao",
+      "text": "Mensagem-chave: 'A vet que entende de gato' — usar em todo material de aquisição daqui pra frente."
+    }
+  ],
   "icp": {
     "segment_label": "Tutoras de gatos — 70% da base atual",
     "demographics": {

@@ -1,6 +1,6 @@
 # Visão Consolidada — Clínica Veterinária Zenvet
 
-*Gerado em 2026-04-30 14:09 UTC · Ciclo atual: Semana 3 · Cliente: `clinica-veterinaria-zenvet`*
+*Gerado em 2026-05-01 15:35 UTC · Ciclo atual: Semana 3 · Cliente: `clinica-veterinaria-zenvet`*
 
 > Este documento consolida tudo que foi produzido para o cliente ao longo do projeto.
 > Cada seção referencia o output estruturado original em `outputs/` para auditabilidade.

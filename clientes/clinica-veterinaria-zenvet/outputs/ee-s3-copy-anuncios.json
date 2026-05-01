@@ -1,14 +1,80 @@
 {
+  "client_name": "Clínica Veterinária Zenvet",
   "summary": "14 anúncios prontos para Zenvet — 11 Meta Ads (texto + headline + descrição cada) e 3 Google Ads RSA (cada uma com 5 headlines + 3 descriptions = 24 elementos textuais que o Google rotaciona). Cobertura: Topo (esconde-dor / hospital 24h surpresa / pesquisa-antes-de-confiar), Meio (40 min vs 15 min / item-a-item / gato ≠ cachorro), Fundo (consulta R$220 / WhatsApp Loíse 30min / acompanhamento D+1) e Remarketing (você pesquisou no Insta + lembrete suave). Hooks ancorados na quote da Mariana ('gato não é cachorro') e no diagnóstico de criativos S2 (0% retenção 3s — todos os topos abrem com problema, não com produto).",
+  "summary_headline": "14 anúncios prontos: 11 Meta Ads (4 etapas funil) + 3 Google Ads RSA — cada um dentro dos limites de caracteres por plataforma.",
+  "summary_highlights": [
+    {
+      "category": "oportunidade",
+      "label": "Anúncios prontos",
+      "value": "14",
+      "subtext": "11 Meta + 3 Google RSA, prontos pra subir",
+      "tone": "green"
+    },
+    {
+      "category": "maturidade",
+      "label": "Etapas do funil",
+      "value": "4",
+      "subtext": "Topo · Meio · Fundo · Remarketing",
+      "tone": "blue"
+    },
+    {
+      "category": "posicao",
+      "label": "Variações",
+      "value": "30+ headlines",
+      "subtext": "5 por RSA + 3 descriptions cada Google",
+      "tone": "blue"
+    },
+    {
+      "category": "risco",
+      "label": "Limite Meta",
+      "value": "125 chars",
+      "subtext": "Toda copy já dentro do corte de feed",
+      "tone": "green"
+    }
+  ],
+  "summary_key_findings": [
+    {
+      "category": "vantagem",
+      "text": "Cada anúncio aponta pra criativo específico (feed-XX / story-XX) — copy + criativo formam unidade testável."
+    },
+    {
+      "category": "contexto",
+      "text": "Estratégia de teste documentada: kill após 1k impressões com CTR <1%, escalar quando CTR >1.8%."
+    },
+    {
+      "category": "acao",
+      "text": "Subir os 14 em waves de 3-4 anúncios por adset pra dar fôlego de aprendizado ao algoritmo."
+    }
+  ],
   "how_to_read_this_doc": {
     "title": "Como usar este manual de copy",
     "intro": "Este documento entrega 14 anúncios prontos para subir — 11 Meta Ads (cada um com texto + headline + descrição + CTA) e 3 Google Ads RSA (cada uma com 5 headlines + 3 descriptions que o Google rotaciona automaticamente). Organizados pela jornada da Mariana (tutora de felino), com char_count auditado em cada elemento e, quando aplicável, vinculados ao criativo visual correspondente em 'Criativos Produzidos'.",
     "structure": [
-      { "section": "funnel_stages", "what": "4 etapas (Topo · Meio · Fundo · Remarketing) com objetivo, tom e variações por plataforma.", "why": "Não são 35 anúncios soltos — é um sistema. Topo educa sem vender, Meio compara, Fundo converte, Remarketing recupera. Misturar etapas no mesmo adset queima budget." },
-      { "section": "variations[].pair_with_creative", "what": "IDs dos criativos visuais (ex: feed-05, story-02) que rodam com aquela copy.", "why": "Copy + criativo são uma unidade. Os PNGs prontos estão na seção 'Criativos Produzidos'. Quando uma variação não tem par direto, use um criativo neutro do mesmo funil." },
-      { "section": "char_limits_reference", "what": "Limites oficiais de caracteres por plataforma.", "why": "Meta corta texto >125 chars no feed; Google rejeita headline >30. Cada variação já está dentro do limite — char_count está auditado em todas." },
-      { "section": "test_strategy", "what": "Duração mínima, budget por adset, KPIs de kill e de winner.", "why": "Define quando pausar (CTR <1% após 1k impressões) e quando escalar (CTR ≥1,8%). Sem isso, decisão vira vibe e vibe queima budget." },
-      { "section": "copy_rules_applied", "what": "Regras não-negociáveis que regem TODA a copy desta sprint.", "why": "Documenta o porquê (ex: 'topo nunca menciona a Zenvet') pra que próximas levas mantenham coerência sem precisar reler 35 textos." }
+      {
+        "section": "funnel_stages",
+        "what": "4 etapas (Topo · Meio · Fundo · Remarketing) com objetivo, tom e variações por plataforma.",
+        "why": "Não são 35 anúncios soltos — é um sistema. Topo educa sem vender, Meio compara, Fundo converte, Remarketing recupera. Misturar etapas no mesmo adset queima budget."
+      },
+      {
+        "section": "variations[].pair_with_creative",
+        "what": "IDs dos criativos visuais (ex: feed-05, story-02) que rodam com aquela copy.",
+        "why": "Copy + criativo são uma unidade. Os PNGs prontos estão na seção 'Criativos Produzidos'. Quando uma variação não tem par direto, use um criativo neutro do mesmo funil."
+      },
+      {
+        "section": "char_limits_reference",
+        "what": "Limites oficiais de caracteres por plataforma.",
+        "why": "Meta corta texto >125 chars no feed; Google rejeita headline >30. Cada variação já está dentro do limite — char_count está auditado em todas."
+      },
+      {
+        "section": "test_strategy",
+        "what": "Duração mínima, budget por adset, KPIs de kill e de winner.",
+        "why": "Define quando pausar (CTR <1% após 1k impressões) e quando escalar (CTR ≥1,8%). Sem isso, decisão vira vibe e vibe queima budget."
+      },
+      {
+        "section": "copy_rules_applied",
+        "what": "Regras não-negociáveis que regem TODA a copy desta sprint.",
+        "why": "Documenta o porquê (ex: 'topo nunca menciona a Zenvet') pra que próximas levas mantenham coerência sem precisar reler 35 textos."
+      }
     ],
     "workflow_recommended": [
       "1) Validar destination_url e CTA padrão com o operador.",
@@ -18,7 +84,6 @@
       "5) Rodar 7 dias com R$30/dia mínimo por adset. Aplicar test_strategy.kpis_kill_criteria diariamente."
     ]
   },
-  "client_name": "Clínica Veterinária Zenvet",
   "campaign_focus": "Felinos-first (4 das 5 angles felinas, 1 cães secundária) · Meta Ads primeiro · Google Ads Responsive Search em paralelo",
   "destination_url": "Landing Page Zenvet (a definir domínio antes do go-live)",
   "whatsapp_link": "https://wa.me/5519995795483?text=Oi%21%20Vi%20a%20p%C3%A1gina%20da%20Zenvet%20e%20queria%20agendar%20consulta%20para%20meu%20pet.",
@@ -38,8 +103,15 @@
               "headline": "Gato não é cachorro.",
               "description": "Medicina felina · Americana",
               "cta": "Saiba mais",
-              "char_count": { "text": 122, "headline": 21, "description": 28 },
-              "pair_with_creative": ["feed-05", "story-01"]
+              "char_count": {
+                "text": 122,
+                "headline": 21,
+                "description": 28
+              },
+              "pair_with_creative": [
+                "feed-05",
+                "story-01"
+              ]
             },
             {
               "type": "text_primary",
@@ -48,7 +120,11 @@
               "headline": "R$70 que viraram R$800",
               "description": "A diferença é o que você sabia",
               "cta": "Saiba mais",
-              "char_count": { "text": 124, "headline": 22, "description": 30 }
+              "char_count": {
+                "text": 124,
+                "headline": 22,
+                "description": 30
+              }
             },
             {
               "type": "text_primary",
@@ -57,7 +133,11 @@
               "headline": "Pesquisar antes é normal.",
               "description": "Medicina felina · Americana",
               "cta": "Saiba mais",
-              "char_count": { "text": 119, "headline": 25, "description": 28 }
+              "char_count": {
+                "text": 119,
+                "headline": 25,
+                "description": 28
+              }
             }
           ]
         },
@@ -79,8 +159,18 @@
                 "A clínica especialista em medicina felina de Americana. 40 min com a Dra. Nathalia.",
                 "Gato não é cachorro. Atendimento cat-friendly em Americana, sem cheiro de canil."
               ],
-              "char_count_headlines": [29, 25, 26, 28, 23],
-              "char_count_descriptions": [85, 84, 80]
+              "char_count_headlines": [
+                29,
+                25,
+                26,
+                28,
+                23
+              ],
+              "char_count_descriptions": [
+                85,
+                84,
+                80
+              ]
             }
           ]
         }
@@ -101,8 +191,15 @@
               "headline": "40 min, não 15.",
               "description": "Medicina felina · Americana",
               "cta": "Enviar mensagem",
-              "char_count": { "text": 115, "headline": 16, "description": 28 },
-              "pair_with_creative": ["feed-02", "story-02"]
+              "char_count": {
+                "text": 115,
+                "headline": 16,
+                "description": 28
+              },
+              "pair_with_creative": [
+                "feed-02",
+                "story-02"
+              ]
             },
             {
               "type": "text_primary",
@@ -111,7 +208,11 @@
               "headline": "Item a item, sem surpresa.",
               "description": "Você aprova antes",
               "cta": "Enviar mensagem",
-              "char_count": { "text": 112, "headline": 26, "description": 18 }
+              "char_count": {
+                "text": 112,
+                "headline": 26,
+                "description": 18
+              }
             },
             {
               "type": "text_primary",
@@ -120,8 +221,15 @@
               "headline": "Felina por escolha técnica.",
               "description": "70% da base é gato",
               "cta": "Enviar mensagem",
-              "char_count": { "text": 104, "headline": 27, "description": 18 },
-              "pair_with_creative": ["feed-01", "feed-04"]
+              "char_count": {
+                "text": 104,
+                "headline": 27,
+                "description": 18
+              },
+              "pair_with_creative": [
+                "feed-01",
+                "feed-04"
+              ]
             }
           ]
         },
@@ -143,8 +251,18 @@
                 "Consulta R$220 — 40 min, plano por escrito, acompanhamento no WhatsApp em D+1.",
                 "70% felina por escolha técnica. 4,9★ no Google. Em Americana, gato é com a gente."
               ],
-              "char_count_headlines": [23, 23, 21, 22, 22],
-              "char_count_descriptions": [82, 79, 82]
+              "char_count_headlines": [
+                23,
+                23,
+                21,
+                22,
+                22
+              ],
+              "char_count_descriptions": [
+                82,
+                79,
+                82
+              ]
             }
           ]
         }
@@ -165,8 +283,14 @@
               "headline": "Agende com a Dra. Nathalia",
               "description": "R$220 · 40 min · D+1",
               "cta": "Enviar mensagem",
-              "char_count": { "text": 105, "headline": 26, "description": 22 },
-              "pair_with_creative": ["feed-02"]
+              "char_count": {
+                "text": 105,
+                "headline": 26,
+                "description": 22
+              },
+              "pair_with_creative": [
+                "feed-02"
+              ]
             },
             {
               "type": "text_primary",
@@ -175,7 +299,11 @@
               "headline": "Loíse responde em 30 min.",
               "description": "Sem bot · Sem fila",
               "cta": "Enviar mensagem",
-              "char_count": { "text": 124, "headline": 25, "description": 19 }
+              "char_count": {
+                "text": 124,
+                "headline": 25,
+                "description": 19
+              }
             },
             {
               "type": "text_primary",
@@ -184,7 +312,11 @@
               "headline": "Cães também: hora marcada.",
               "description": "Sem fila · Valor antes",
               "cta": "Enviar mensagem",
-              "char_count": { "text": 104, "headline": 26, "description": 22 }
+              "char_count": {
+                "text": 104,
+                "headline": 26,
+                "description": 22
+              }
             }
           ]
         },
@@ -206,8 +338,18 @@
                 "Especialista em felinos · Americana SP. Orçamento item a item, sem conta surpresa. Agende.",
                 "Acompanhamento no WhatsApp em D+1 — sem custo. Atendimento humanizado da Dra. Nathalia."
               ],
-              "char_count_headlines": [23, 22, 22, 23, 17],
-              "char_count_descriptions": [89, 88, 87]
+              "char_count_headlines": [
+                23,
+                22,
+                22,
+                23,
+                17
+              ],
+              "char_count_descriptions": [
+                89,
+                88,
+                87
+              ]
             }
           ]
         }
@@ -228,8 +370,15 @@
               "headline": "Sem pressa pra decidir.",
               "description": "WhatsApp quando quiser",
               "cta": "Enviar mensagem",
-              "char_count": { "text": 108, "headline": 23, "description": 22 },
-              "pair_with_creative": ["feed-03", "story-03"]
+              "char_count": {
+                "text": 108,
+                "headline": 23,
+                "description": 22
+              },
+              "pair_with_creative": [
+                "feed-03",
+                "story-03"
+              ]
             },
             {
               "type": "text_primary",
@@ -238,7 +387,11 @@
               "headline": "Atende em domicílio.",
               "description": "Sem estresse de transporte",
               "cta": "Enviar mensagem",
-              "char_count": { "text": 99, "headline": 20, "description": 26 }
+              "char_count": {
+                "text": 99,
+                "headline": 20,
+                "description": 26
+              }
             }
           ]
         }

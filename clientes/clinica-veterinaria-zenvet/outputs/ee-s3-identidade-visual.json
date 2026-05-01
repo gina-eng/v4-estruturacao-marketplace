@@ -1,5 +1,51 @@
 {
+  "client_name": "Clínica Veterinária Zenvet",
   "summary": "Identidade visual da Clínica Veterinária Zenvet ancorada na paleta atual já implantada (Roxo Profundo #4B1C7D + Turquesa Cuidado #00B8BD + Bege Acolhedor #F6EAD8 + Magenta Ação #A8358C) — formalizada como sistema com tipografia Fraunces (títulos serif contemporâneo) + Inter (corpo sans-serif) e diretrizes de forma balanceadas. Conceito criativo 'Felino Premium Humanizado' traduz visualmente a combinação proprietária do território Felino · Humano · Transparente: roxo lidera (sofisticação felina), turquesa sustenta (saúde médica), bege quente humaniza (acolhimento doméstico) e magenta ativa apenas CTAs. 3 direções de logo prontas para Midjourney aguardam escolha do operador.",
+  "summary_headline": "Identidade Zenvet: paleta atual mantida (Roxo #4B1C7D + Turquesa #00B8BD + Bege) + Fraunces serif + Inter sans + 3 logo prompts.",
+  "summary_highlights": [
+    {
+      "category": "posicao",
+      "label": "Paleta",
+      "value": "3 cores-base",
+      "subtext": "Roxo Profundo + Turquesa Cuidado + Bege Acolhedor",
+      "tone": "blue"
+    },
+    {
+      "category": "maturidade",
+      "label": "Tipografia",
+      "value": "2 famílias",
+      "subtext": "Fraunces (serifa) + Inter (sans)",
+      "tone": "blue"
+    },
+    {
+      "category": "oportunidade",
+      "label": "Logo prompts",
+      "value": "3 direções",
+      "subtext": "Mantém DNA atual sem retrabalho de marca",
+      "tone": "green"
+    },
+    {
+      "category": "competicao",
+      "label": "Diferenciação",
+      "value": "Alta",
+      "subtext": "Nenhum concorrente da microrregião usa serifa premium",
+      "tone": "green"
+    }
+  ],
+  "summary_key_findings": [
+    {
+      "category": "vantagem",
+      "text": "Manter paleta atual evita custo de retrabalho de marca e preserva reconhecimento já construído com a base."
+    },
+    {
+      "category": "contexto",
+      "text": "Combinação Fraunces + Inter cria contraste premium-acolhedor — diferencial vs concorrentes que usam fontes genéricas."
+    },
+    {
+      "category": "acao",
+      "text": "Aplicar no/dos & don'ts em todo material visual antes de delegar pra fornecedor externo."
+    }
+  ],
   "creative_concept": "Felino Premium Humanizado — identidade que comunica especialização clínica e calor humano simultaneamente, sem cair no asséptico hospitalar nem no infantil pet shop. Roxo Profundo lidera (sofisticação felina, premium), Turquesa sustenta (saúde, frescor médico), Bege Quente humaniza (acolhimento doméstico) e Magenta ativa apenas CTAs. Tradução visual da combinação proprietária 'Felino · Humano · Transparente' — premium sem ser frio, técnico sem ser distante.",
   "color_palette": [
     {

@@ -3,15 +3,102 @@
   "title": "ClienteOculto",
   "description": "Output estruturado da skill cliente-oculto: simulacao de mystery shopping com perfil do comprador, script de simulacao e avaliacao detalhada.",
   "type": "object",
-  "required": ["summary", "buyer_profile", "simulation_script", "evaluation"],
+  "required": [
+    "summary",
+    "buyer_profile",
+    "simulation_script",
+    "evaluation",
+    "client_name",
+    "summary_headline",
+    "summary_highlights",
+    "summary_key_findings"
+  ],
   "properties": {
+    "client_name": {
+      "type": "string",
+      "description": "Nome do cliente — sempre presente em todo output."
+    },
     "summary": {
       "type": "string",
       "description": "Resumo executivo de 2-3 frases: nota geral, principal ponto forte, principal ponto critico e impacto estimado do SDR IA."
     },
+    "summary_headline": {
+      "type": "string",
+      "description": "Manchete em 1 linha (~120 caracteres) com o veredito da skill."
+    },
+    "summary_highlights": {
+      "type": "array",
+      "description": "KPIs em destaque (4-6 itens). Categorias: posicao | competicao | janela | maturidade | oportunidade | risco.",
+      "minItems": 3,
+      "items": {
+        "type": "object",
+        "required": [
+          "category",
+          "label",
+          "value",
+          "tone"
+        ],
+        "properties": {
+          "category": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string"
+          },
+          "subtext": {
+            "type": "string"
+          },
+          "tone": {
+            "type": "string",
+            "enum": [
+              "green",
+              "yellow",
+              "red",
+              "blue",
+              "gray"
+            ]
+          }
+        }
+      }
+    },
+    "summary_key_findings": {
+      "type": "array",
+      "description": "3-5 achados categorizados (vantagem | contexto | ameaca | acao).",
+      "minItems": 3,
+      "items": {
+        "type": "object",
+        "required": [
+          "category",
+          "text"
+        ],
+        "properties": {
+          "category": {
+            "type": "string",
+            "enum": [
+              "vantagem",
+              "contexto",
+              "ameaca",
+              "acao"
+            ]
+          },
+          "text": {
+            "type": "string"
+          }
+        }
+      }
+    },
     "buyer_profile": {
       "type": "object",
-      "required": ["name", "situation", "urgency", "budget", "main_objection"],
+      "required": [
+        "name",
+        "situation",
+        "urgency",
+        "budget",
+        "main_objection"
+      ],
       "properties": {
         "name": {
           "type": "string",
@@ -23,7 +110,11 @@
         },
         "urgency": {
           "type": "string",
-          "enum": ["high", "medium", "low"],
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ],
           "description": "Nivel de urgencia do comprador simulado."
         },
         "urgency_reason": {
@@ -40,14 +131,23 @@
         },
         "knowledge_level": {
           "type": "string",
-          "enum": ["low", "medium", "high"],
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ],
           "description": "Nivel de conhecimento do comprador sobre o produto/servico."
         }
       }
     },
     "simulation_script": {
       "type": "object",
-      "required": ["opening_message", "followup_30min", "followup_2h", "questions"],
+      "required": [
+        "opening_message",
+        "followup_30min",
+        "followup_2h",
+        "questions"
+      ],
       "properties": {
         "opening_message": {
           "type": "string",
@@ -66,7 +166,10 @@
           "minItems": 3,
           "items": {
             "type": "object",
-            "required": ["question", "objective"],
+            "required": [
+              "question",
+              "objective"
+            ],
             "properties": {
               "question": {
                 "type": "string",
@@ -82,7 +185,9 @@
         },
         "buyer_behavior_rules": {
           "type": "array",
-          "items": { "type": "string" },
+          "items": {
+            "type": "string"
+          },
           "description": "Regras de comportamento do comprador simulado (atraso de resposta, cautela, etc.)."
         }
       }
@@ -115,7 +220,12 @@
     },
     "evaluation": {
       "type": "object",
-      "required": ["overall_score", "strengths", "critical_improvements", "sdr_impact_per_improvement"],
+      "required": [
+        "overall_score",
+        "strengths",
+        "critical_improvements",
+        "sdr_impact_per_improvement"
+      ],
       "properties": {
         "overall_score": {
           "type": "number",
@@ -125,14 +235,24 @@
         },
         "classification": {
           "type": "string",
-          "enum": ["excellent", "good", "regular", "poor", "critical"],
+          "enum": [
+            "excellent",
+            "good",
+            "regular",
+            "poor",
+            "critical"
+          ],
           "description": "Classificacao textual baseada na nota."
         },
         "criteria_scores": {
           "type": "array",
           "items": {
             "type": "object",
-            "required": ["criterion", "score", "observation"],
+            "required": [
+              "criterion",
+              "score",
+              "observation"
+            ],
             "properties": {
               "criterion": {
                 "type": "string",
@@ -179,7 +299,11 @@
           "minItems": 1,
           "items": {
             "type": "object",
-            "required": ["improvement", "sdr_solution", "estimated_impact"],
+            "required": [
+              "improvement",
+              "sdr_solution",
+              "estimated_impact"
+            ],
             "properties": {
               "improvement": {
                 "type": "string",

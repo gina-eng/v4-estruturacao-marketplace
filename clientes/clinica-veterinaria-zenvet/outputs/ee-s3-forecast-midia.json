@@ -1,12 +1,58 @@
 {
+  "client_name": "Clínica Veterinária Zenvet",
   "summary": "Forecast operacional de 6 meses (Mai–Out/2026) da Clínica Veterinária Zenvet sobre verba total de R$ 3.000/mês, com distribuição 70% Google / 30% Meta. Cenário ULTRA conservador — Mês 1 começa ABAIXO do baseline atual (65 leads vs 72 hoje, porque a transição de agência + Pixel novo + criativos não validados custa volume nas primeiras semanas). CPL inicial R$ 46 (acima do R$ 26 atual) só estabiliza no Mês 4 (R$ 30, dentro do benchmark). Saída M6: 120 leads, CPL R$ 25, 26 atendimentos. Acumulado 6m: 557 leads, 100 atendimentos, CAC mídia médio R$ 180. 4 campanhas concentradas (2 Google + 2 Meta) — verba pequena exige direcionamento, não pulverização.",
   "summary_headline": "R$ 3.000/mês × 6m (ultra conservador): leads 65→120 (M1 ABAIXO do atual por causa da transição), CPL R$ 46→R$ 25, atendimentos 8→26/mês. Estabilização real só no M4. Sem modelagem financeira nesta versão.",
-
-  "client_name": "Clínica Veterinária Zenvet",
+  "summary_highlights": [
+    {
+      "category": "oportunidade",
+      "label": "Verba mensal",
+      "value": "R$ 3.000",
+      "subtext": "70% Google · 30% Meta — concentrado em 4 campanhas",
+      "tone": "blue"
+    },
+    {
+      "category": "janela",
+      "label": "Estabilização real",
+      "value": "Mês 4",
+      "subtext": "Antes disso CPL R$ 46 (acima do atual R$ 26)",
+      "tone": "yellow"
+    },
+    {
+      "category": "maturidade",
+      "label": "Saída M6",
+      "value": "120 leads/mês",
+      "subtext": "+66% vs hoje, CPL R$ 25 dentro do benchmark",
+      "tone": "green"
+    },
+    {
+      "category": "risco",
+      "label": "Postura",
+      "value": "ULTRA conservador",
+      "subtext": "M1 abaixo do baseline atual em volume",
+      "tone": "red"
+    }
+  ],
+  "summary_key_findings": [
+    {
+      "category": "contexto",
+      "text": "Acumulado 6 meses: 557 leads, 100 atendimentos, CAC mídia médio R$ 180."
+    },
+    {
+      "category": "ameaca",
+      "text": "Mês 1 começa ABAIXO do baseline (65 leads vs 72 hoje) por causa da transição de agência + Pixel novo + criativos não validados."
+    },
+    {
+      "category": "vantagem",
+      "text": "Verba pequena ainda permite saída M6 com 120 leads/mês — escala vem da concentração, não da pulverização."
+    },
+    {
+      "category": "acao",
+      "text": "4 campanhas focadas (2 Google + 2 Meta) — algoritmo precisa de R$30/dia mínimo por campanha pra aprender."
+    }
+  ],
   "horizon": "Maio/2026 — Outubro/2026 (6 meses)",
   "currency": "BRL",
   "scenario_stance": "ULTRA conservador — Mês 1 começa ABAIXO do baseline atual em VOLUME (65 leads vs 72 hoje) e ACIMA em CPL (R$ 46 vs R$ 26 hoje). A premissa é que toda transição de agência + instalação de Pixel + lançamento de criativos novos não validados PIORA performance temporariamente, antes de melhorar. Estabilização real só no Mês 4. Sem assumir Lookalike alta-correlação ou MQL Rate >70% ao fim. Volume final M6 (120 leads) ainda é +66% vs hoje, mas com CPL R$ 25 (próximo do atual R$ 26).",
-
   "channel_split": {
     "total_monthly_budget": 3000,
     "rationale": "70/30 Google/Meta porque o ICP Mariana 'pesquisa antes de confiar' (S1 persona) — Google captura intenção de busca direta + brand terms + cluster Felinos Americana. Meta entra como construção de território felino + retargeting da base. Histórico Zenvet reforça: CPA Google R$ 14,51 saudável vs Meta sem Pixel (CPL real desconhecido). Conforme Pixel matura, podemos rebalancear no mês 4+.",
@@ -25,7 +71,6 @@
       }
     ]
   },
-
   "campaigns": {
     "concentration_note": "Verba de R$ 3.000/mês é pequena para o segmento — algoritmo precisa de pelo menos R$ 30/dia por campanha para aprender. Por isso, 4 campanhas focadas (2 Google + 2 Meta), em vez das 9 da v2. Removidas/consolidadas: Search Genéricas (alto custo, baixo qualificador), Demand Gen Vacinação (vira ação orgânica/CRM, não consome verba paga) e Search Marca + Domicílio + Serviços (consolidadas em 'Brand & Diferenciais'). Lookalike sai como campanha separada e entra como audience adicional na campanha Conversões Felinos quando Pixel maturar (mês 3+).",
     "google_ads": {
@@ -85,25 +130,97 @@
       ]
     }
   },
-
   "tracking_metrics": {
     "description": "12 indicadores monitorados semanalmente. Operador deve montar dashboard com esses KPIs no Looker Studio (alimentado por Google Ads + Meta Ads + planilha manual da Loíse para MQL/Agendamento/Show).",
     "metrics": [
-      { "id": 1,  "metric": "Impressões",                "definition": "Total de vezes que os anúncios foram exibidos (Google + Meta consolidado)",                                                          "source": "Google Ads + Meta Ads Manager",                       "frequency": "diária"  },
-      { "id": 2,  "metric": "Cliques",                   "definition": "Total de cliques nos anúncios",                                                                                                       "source": "Google Ads + Meta Ads Manager",                       "frequency": "diária"  },
-      { "id": 3,  "metric": "CTR (Click-Through Rate)",  "definition": "Cliques ÷ Impressões — qualidade do anúncio + segmentação",                                                                          "source": "Google Ads + Meta Ads Manager",                       "frequency": "semanal" },
-      { "id": 4,  "metric": "CPC (Custo por Clique)",    "definition": "Investimento ÷ Cliques — eficiência da plataforma + concorrência no leilão",                                                          "source": "Google Ads + Meta Ads Manager",                       "frequency": "semanal" },
-      { "id": 5,  "metric": "Leads",                     "definition": "Conversões registradas — preenchimento de formulário, clique em WhatsApp ou ligação rastreada",                                       "source": "Google Ads (Conversions) + Meta Ads (Leads/Messages)", "frequency": "diária"  },
-      { "id": 6,  "metric": "CPL (Custo por Lead)",      "definition": "Investimento ÷ Leads — eficiência total do funil de mídia",                                                                           "source": "Google Ads + Meta Ads Manager",                       "frequency": "semanal", "benchmark_pet_vet": "R$ 5–25 (referência S2 diagnóstico)" },
-      { "id": 7,  "metric": "MQL Rate (taxa de qualificação)", "definition": "% de leads que respondem à 1ª abordagem da Loíse e demonstram intenção real (não são curiosos / casos fora do escopo)",       "source": "Planilha manual da Loíse (até implantação Kommo via ee-s3-crm-setup)", "frequency": "semanal" },
-      { "id": 8,  "metric": "MQLs (Marketing Qualified Leads)", "definition": "Leads × MQL Rate — volume absoluto de leads qualificados que entram no pipeline comercial",                                  "source": "Planilha Loíse / Kommo",                              "frequency": "semanal" },
-      { "id": 9,  "metric": "Agendamentos",              "definition": "MQLs que efetivamente marcaram consulta (data confirmada na agenda)",                                                                "source": "Vetsoft (sistema de prontuário) + planilha Loíse",    "frequency": "diária"  },
-      { "id": 10, "metric": "Show Rate",                 "definition": "% de agendamentos que viraram atendimento real (compareceram na consulta)",                                                           "source": "Vetsoft",                                             "frequency": "semanal", "baseline": "~95–100% (histórico Zenvet — quem agenda, vai)" },
-      { "id": 11, "metric": "Atendimentos efetivados",   "definition": "Agendamentos × Show Rate — clientes realmente atendidos no consultório/domicílio",                                                    "source": "Vetsoft",                                             "frequency": "semanal" },
-      { "id": 12, "metric": "CAC mídia (Custo de Aquisição via Mídia)", "definition": "Investimento total mídia ÷ Atendimentos efetivados — quanto a clínica gasta em mídia para conquistar 1 cliente atendido", "source": "Cálculo derivado (Investimento ÷ Atendimentos)",   "frequency": "mensal"  }
+      {
+        "id": 1,
+        "metric": "Impressões",
+        "definition": "Total de vezes que os anúncios foram exibidos (Google + Meta consolidado)",
+        "source": "Google Ads + Meta Ads Manager",
+        "frequency": "diária"
+      },
+      {
+        "id": 2,
+        "metric": "Cliques",
+        "definition": "Total de cliques nos anúncios",
+        "source": "Google Ads + Meta Ads Manager",
+        "frequency": "diária"
+      },
+      {
+        "id": 3,
+        "metric": "CTR (Click-Through Rate)",
+        "definition": "Cliques ÷ Impressões — qualidade do anúncio + segmentação",
+        "source": "Google Ads + Meta Ads Manager",
+        "frequency": "semanal"
+      },
+      {
+        "id": 4,
+        "metric": "CPC (Custo por Clique)",
+        "definition": "Investimento ÷ Cliques — eficiência da plataforma + concorrência no leilão",
+        "source": "Google Ads + Meta Ads Manager",
+        "frequency": "semanal"
+      },
+      {
+        "id": 5,
+        "metric": "Leads",
+        "definition": "Conversões registradas — preenchimento de formulário, clique em WhatsApp ou ligação rastreada",
+        "source": "Google Ads (Conversions) + Meta Ads (Leads/Messages)",
+        "frequency": "diária"
+      },
+      {
+        "id": 6,
+        "metric": "CPL (Custo por Lead)",
+        "definition": "Investimento ÷ Leads — eficiência total do funil de mídia",
+        "source": "Google Ads + Meta Ads Manager",
+        "frequency": "semanal",
+        "benchmark_pet_vet": "R$ 5–25 (referência S2 diagnóstico)"
+      },
+      {
+        "id": 7,
+        "metric": "MQL Rate (taxa de qualificação)",
+        "definition": "% de leads que respondem à 1ª abordagem da Loíse e demonstram intenção real (não são curiosos / casos fora do escopo)",
+        "source": "Planilha manual da Loíse (até implantação Kommo via ee-s3-crm-setup)",
+        "frequency": "semanal"
+      },
+      {
+        "id": 8,
+        "metric": "MQLs (Marketing Qualified Leads)",
+        "definition": "Leads × MQL Rate — volume absoluto de leads qualificados que entram no pipeline comercial",
+        "source": "Planilha Loíse / Kommo",
+        "frequency": "semanal"
+      },
+      {
+        "id": 9,
+        "metric": "Agendamentos",
+        "definition": "MQLs que efetivamente marcaram consulta (data confirmada na agenda)",
+        "source": "Vetsoft (sistema de prontuário) + planilha Loíse",
+        "frequency": "diária"
+      },
+      {
+        "id": 10,
+        "metric": "Show Rate",
+        "definition": "% de agendamentos que viraram atendimento real (compareceram na consulta)",
+        "source": "Vetsoft",
+        "frequency": "semanal",
+        "baseline": "~95–100% (histórico Zenvet — quem agenda, vai)"
+      },
+      {
+        "id": 11,
+        "metric": "Atendimentos efetivados",
+        "definition": "Agendamentos × Show Rate — clientes realmente atendidos no consultório/domicílio",
+        "source": "Vetsoft",
+        "frequency": "semanal"
+      },
+      {
+        "id": 12,
+        "metric": "CAC mídia (Custo de Aquisição via Mídia)",
+        "definition": "Investimento total mídia ÷ Atendimentos efetivados — quanto a clínica gasta em mídia para conquistar 1 cliente atendido",
+        "source": "Cálculo derivado (Investimento ÷ Atendimentos)",
+        "frequency": "mensal"
+      }
     ]
   },
-
   "forecast_6_months": {
     "description": "Evolução mensal ULTRA CONSERVADORA dos 12 indicadores ao longo de 6 meses. Curva NÃO LINEAR — meses 1–2 ficam ABAIXO do desempenho atual em volume e ACIMA em CPL por causa da transição (troca de agência, Pixel novo, criativos sem histórico, Loíse ainda no script antigo). M3 é ponto de inflexão (Lookalike + script Loíse). Estabilização real só no M4 (CPL volta para zona aceitável R$ 30). M5–M6 maturam com pequenos ganhos de eficiência. Premissa: cliente cumpre R$ 3.000/mês contratado, Pixel sobe na S1, base 1.186 carregada na S2, Loíse adota script consultivo via ee-s3-crm-setup.",
     "evolution_logic": "M1 (queda): transição de agência + setup completo CUSTA volume. 65 leads (abaixo dos 72 atuais), CPL R$ 46 (acima dos R$ 26 atuais). M2 (recuperação parcial): Pixel coletando 30d, criativos piores pausados, leve melhoria mas ainda abaixo da eficiência atual. M3 (ponto de inflexão): Lookalike 1% incorporada, script consultivo Loíse implementado (depende ee-s3-crm-setup). M4 (estabilização): CPL R$ 30 — volta ao benchmark Pet/Vet. M5 (maturação): Pixel 90d, refinamento marginal. M6 (eficiência): CPL R$ 25, próximo do atual mas com 66% mais volume. CAC mídia M6 em R$ 115 (vs R$ 156 atual reportado pela cliente em fontes mistas).",
@@ -114,8 +231,8 @@
         "phase": "Transição — performance ABAIXO do atual (troca de agência, Pixel novo, criativos sem histórico)",
         "impressions": 45000,
         "clicks": 810,
-        "ctr_pct": 1.80,
-        "cpc": 3.70,
+        "ctr_pct": 1.8,
+        "cpc": 3.7,
         "leads": 65,
         "cpl": 46.15,
         "mql_rate_pct": 50,
@@ -134,7 +251,7 @@
         "ctr_pct": 1.85,
         "cpc": 3.24,
         "leads": 75,
-        "cpl": 40.00,
+        "cpl": 40.0,
         "mql_rate_pct": 53,
         "mqls": 40,
         "appointments": 11,
@@ -149,7 +266,7 @@
         "impressions": 53000,
         "clicks": 1034,
         "ctr_pct": 1.95,
-        "cpc": 2.90,
+        "cpc": 2.9,
         "leads": 87,
         "cpl": 34.48,
         "mql_rate_pct": 57,
@@ -165,10 +282,10 @@
         "phase": "Estabilização — CPL volta ao benchmark Pet/Vet (R$ 30)",
         "impressions": 59000,
         "clicks": 1180,
-        "ctr_pct": 2.00,
+        "ctr_pct": 2.0,
         "cpc": 2.54,
         "leads": 100,
-        "cpl": 30.00,
+        "cpl": 30.0,
         "mql_rate_pct": 60,
         "mqls": 60,
         "appointments": 19,
@@ -182,7 +299,7 @@
         "phase": "Maturação — Pixel 90d, refinamento marginal",
         "impressions": 60000,
         "clicks": 1260,
-        "ctr_pct": 2.10,
+        "ctr_pct": 2.1,
         "cpc": 2.38,
         "leads": 110,
         "cpl": 27.27,
@@ -202,7 +319,7 @@
         "ctr_pct": 2.15,
         "cpc": 2.21,
         "leads": 120,
-        "cpl": 25.00,
+        "cpl": 25.0,
         "mql_rate_pct": 65,
         "mqls": 78,
         "appointments": 27,
@@ -227,7 +344,6 @@
       "avg_cac_media": 180
     }
   },
-
   "assumptions_and_dependencies": [
     "Budget contratado de R$ 3.000/mês é cumprido a partir de Maio. Hoje gasto real é R$ 1.875/mês — o forecast assume preenchimento total. Confirmar com Nathalia ANTES do go-live.",
     "Pixel Meta + GTM instalados até D+7 da Semana 1. Sem Pixel não há retargeting (mês 2) nem Lookalike (mês 3+). Atraso de 2 semanas empurra toda a curva para a direita.",
@@ -240,7 +356,6 @@
     "Sazonalidade não modelada: Junho/Julho são mais frios em Americana → vacinação + dermatologia rendem mais. Outubro pré-veraneio acelera demanda. Pode acelerar curva levemente.",
     "Concorrência: 2 hospitais 24h + 1 clínica orgânica especialista felina (descoberta em S2). Se elas sobem investimento digital, CPC Google pode subir 15–25% — modelagem assume cenário base sem reação."
   ],
-
   "_metadata": {
     "skill": "ee-s3-forecast-midia",
     "version": 4,

@@ -1,5 +1,51 @@
 {
+  "client_name": "Clínica Veterinária Zenvet",
   "summary": "Manual de Marca da Clínica Veterinária Zenvet unificando Brandbook estratégico e MIV técnico em 5 blocos (Fundamentos · Verbal · Visual · Aplicações · Governança). Reúsa 100% das decisões aprovadas em S1/S2 (persona Mariana, território Felino · Humano · Transparente, PUV, paleta atual roxo+turquesa+bege+magenta) e adiciona arquétipos (Cuidador dominante + Sábio secundário), 4 pilares de marca, 5 valores com comportamento sim/não, 4 pilares de tom de voz, vocabulário categorizado em 3 funções, sistema cromático com WCAG calculado e proporção 60-30-10, tipografia Fraunces+Inter formalizada, galeria de 6 usos incorretos do logo, e 8 aplicações com mockups contextuais (cartão, e-mail signature, IG avatar+bio, post de feed, story, favicon scaling, WhatsApp Business, GMB).",
+  "summary_headline": "Manual de Marca Zenvet em 5 blocos (Fundamentos · Verbal · Visual · Aplicações · Governança) unificando Brandbook + MIV.",
+  "summary_highlights": [
+    {
+      "category": "maturidade",
+      "label": "Blocos do manual",
+      "value": "5",
+      "subtext": "Fundamentos · Verbal · Visual · Aplicações · Governança",
+      "tone": "green"
+    },
+    {
+      "category": "oportunidade",
+      "label": "Formato",
+      "value": "PDF + Web",
+      "subtext": "Operador pode compartilhar com fornecedores",
+      "tone": "green"
+    },
+    {
+      "category": "posicao",
+      "label": "Escopo",
+      "value": "Brandbook + MIV",
+      "subtext": "Estratégia + execução técnica em um só lugar",
+      "tone": "blue"
+    },
+    {
+      "category": "competicao",
+      "label": "Governança",
+      "value": "Documentada",
+      "subtext": "Quem aprova o quê, em qual canal",
+      "tone": "yellow"
+    }
+  ],
+  "summary_key_findings": [
+    {
+      "category": "vantagem",
+      "text": "Unificação de Brandbook + MIV em manual único elimina ambiguidade entre estratégia (tom, narrativa) e execução (cores exatas, specs)."
+    },
+    {
+      "category": "contexto",
+      "text": "Bloco 5 (Governança) define ritual mínimo de aprovação — evita drift de marca quando equipe cresce."
+    },
+    {
+      "category": "acao",
+      "text": "Compartilhar manual com qualquer fornecedor de criativo/copy/social media antes de qualquer briefing."
+    }
+  ],
   "scope": "early-stage",
   "block1_strategic_foundations": {
     "presentation": {
@@ -1091,7 +1137,8 @@
       }
     ],
     "review_cadence": "Manual revisado a cada trimestre (4x/ano) ou quando houver mudança estrutural (novo serviço, certificação ABFel obtida, expansão para 2ª unidade). Cada revisão gera novo número de versão e changelog em history[] do client.json.",
-    "committee": null
+    "committee": null,
+    "committee_note": "Cliente ainda sem comitê de marca formal — operação centralizada na Dra. Nathalia + sócia. Aprovação por amostragem semanal pela V4. Reavaliar quando equipe crescer."
   },
   "manual_pdf_url": "https://zenvet-landing.vercel.app/manual-zenvet.pdf",
   "manual_web_url": "https://zenvet-landing.vercel.app/marca"

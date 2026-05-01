@@ -7,9 +7,89 @@
     "summary",
     "variations",
     "ab_test_guide",
-    "total_pieces"
+    "total_pieces",
+    "client_name",
+    "summary_headline",
+    "summary_highlights",
+    "summary_key_findings"
   ],
   "properties": {
+    "client_name": {
+      "type": "string",
+      "description": "Nome do cliente — sempre presente em todo output."
+    },
+    "summary": {
+      "type": "string",
+      "description": "Resumo de 1-2 frases do briefing de criativos. Inclui número de variações e formato/gancho principal."
+    },
+    "summary_headline": {
+      "type": "string",
+      "description": "Manchete em 1 linha (~120 caracteres) com o veredito da skill."
+    },
+    "summary_highlights": {
+      "type": "array",
+      "description": "KPIs em destaque (4-6 itens). Categorias: posicao | competicao | janela | maturidade | oportunidade | risco.",
+      "minItems": 3,
+      "items": {
+        "type": "object",
+        "required": [
+          "category",
+          "label",
+          "value",
+          "tone"
+        ],
+        "properties": {
+          "category": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string"
+          },
+          "subtext": {
+            "type": "string"
+          },
+          "tone": {
+            "type": "string",
+            "enum": [
+              "green",
+              "yellow",
+              "red",
+              "blue",
+              "gray"
+            ]
+          }
+        }
+      }
+    },
+    "summary_key_findings": {
+      "type": "array",
+      "description": "3-5 achados categorizados (vantagem | contexto | ameaca | acao).",
+      "minItems": 3,
+      "items": {
+        "type": "object",
+        "required": [
+          "category",
+          "text"
+        ],
+        "properties": {
+          "category": {
+            "type": "string",
+            "enum": [
+              "vantagem",
+              "contexto",
+              "ameaca",
+              "acao"
+            ]
+          },
+          "text": {
+            "type": "string"
+          }
+        }
+      }
+    },
     "variations": {
       "type": "array",
       "description": "5 variações de criativo, cada uma com um tipo de hook diferente.",
@@ -140,29 +220,57 @@
       "description": "Total de peças no pack (variações × formatos)",
       "minimum": 15
     },
-    "summary": {
-      "type": "string",
-      "description": "Resumo de 1-2 frases do briefing de criativos. Inclui número de variações e formato/gancho principal."
-    },
     "produced_creatives": {
       "type": "object",
       "description": "Registro dos PNGs efetivamente produzidos (após etapa semi-manual de geração). Opcional — só presente após operador entregar os assets. Cruza com ee-s3-copy-anuncios via 'linked_variation' e 'pair_with_creative'.",
       "properties": {
-        "summary": { "type": "string", "description": "1-2 frases — quantos foram, formatos, onde estão hospedados." },
+        "summary": {
+          "type": "string",
+          "description": "1-2 frases — quantos foram, formatos, onde estão hospedados."
+        },
         "feed_instagram": {
           "type": "array",
           "description": "Criativos de feed Instagram (4:5 / 1080×1350).",
           "items": {
             "type": "object",
-            "required": ["id", "url"],
+            "required": [
+              "id",
+              "url"
+            ],
             "properties": {
-              "id": { "type": "string", "pattern": "^feed-\\d{2}$", "description": "Convenção: feed-01, feed-02, ..." },
-              "url": { "type": "string", "format": "uri", "description": "URL pública do PNG (Vercel CDN da landing-{slug})." },
-              "format": { "type": "string", "enum": ["feed_square", "feed_portrait"] },
-              "dimensions": { "type": "string", "description": "Ex: '1080×1350'." },
-              "linked_variation": { "type": "string", "description": "hook_type da variação correspondente em 'variations[]'." },
-              "caption_label": { "type": "string", "description": "Frase curta resumindo o conceito visual (vai no card do portal)." },
-              "use_with_copy": { "type": "string", "description": "Orientação de pareamento com copy (etapa funil + hook)." }
+              "id": {
+                "type": "string",
+                "pattern": "^feed-\\d{2}$",
+                "description": "Convenção: feed-01, feed-02, ..."
+              },
+              "url": {
+                "type": "string",
+                "format": "uri",
+                "description": "URL pública do PNG (Vercel CDN da landing-{slug})."
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "feed_square",
+                  "feed_portrait"
+                ]
+              },
+              "dimensions": {
+                "type": "string",
+                "description": "Ex: '1080×1350'."
+              },
+              "linked_variation": {
+                "type": "string",
+                "description": "hook_type da variação correspondente em 'variations[]'."
+              },
+              "caption_label": {
+                "type": "string",
+                "description": "Frase curta resumindo o conceito visual (vai no card do portal)."
+              },
+              "use_with_copy": {
+                "type": "string",
+                "description": "Orientação de pareamento com copy (etapa funil + hook)."
+              }
             }
           }
         },
@@ -171,15 +279,38 @@
           "description": "Criativos de stories Instagram (9:16 / 1080×1920).",
           "items": {
             "type": "object",
-            "required": ["id", "url"],
+            "required": [
+              "id",
+              "url"
+            ],
             "properties": {
-              "id": { "type": "string", "pattern": "^story-\\d{2}$", "description": "Convenção: story-01, story-02, ..." },
-              "url": { "type": "string", "format": "uri" },
-              "format": { "type": "string", "enum": ["stories"] },
-              "dimensions": { "type": "string" },
-              "linked_variation": { "type": "string" },
-              "caption_label": { "type": "string" },
-              "use_with_copy": { "type": "string" }
+              "id": {
+                "type": "string",
+                "pattern": "^story-\\d{2}$",
+                "description": "Convenção: story-01, story-02, ..."
+              },
+              "url": {
+                "type": "string",
+                "format": "uri"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "stories"
+                ]
+              },
+              "dimensions": {
+                "type": "string"
+              },
+              "linked_variation": {
+                "type": "string"
+              },
+              "caption_label": {
+                "type": "string"
+              },
+              "use_with_copy": {
+                "type": "string"
+              }
             }
           }
         }

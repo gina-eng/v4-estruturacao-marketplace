@@ -3,18 +3,107 @@
   "title": "DiagnosticoComercial",
   "description": "Output estruturado da skill diagnostico-comercial: diagnostico do funil de vendas com benchmarks, mapa de objecoes, criterios de qualificacao e SLA.",
   "type": "object",
-  "required": ["summary", "funnel_diagnosis", "objection_map", "qualification_criteria", "sla", "action_plan"],
+  "required": [
+    "summary",
+    "funnel_diagnosis",
+    "objection_map",
+    "qualification_criteria",
+    "sla",
+    "action_plan",
+    "client_name",
+    "summary_headline",
+    "summary_highlights",
+    "summary_key_findings"
+  ],
   "properties": {
+    "client_name": {
+      "type": "string",
+      "description": "Nome do cliente — sempre presente em todo output."
+    },
     "summary": {
       "type": "string",
       "description": "Resumo executivo de 2-3 frases do diagnostico. Inclui gargalo principal, criterio 5 estrelas resumido e SLA de 5 estrelas."
+    },
+    "summary_headline": {
+      "type": "string",
+      "description": "Manchete em 1 linha (~120 caracteres) com o veredito da skill."
+    },
+    "summary_highlights": {
+      "type": "array",
+      "description": "KPIs em destaque (4-6 itens). Categorias: posicao | competicao | janela | maturidade | oportunidade | risco.",
+      "minItems": 3,
+      "items": {
+        "type": "object",
+        "required": [
+          "category",
+          "label",
+          "value",
+          "tone"
+        ],
+        "properties": {
+          "category": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string"
+          },
+          "subtext": {
+            "type": "string"
+          },
+          "tone": {
+            "type": "string",
+            "enum": [
+              "green",
+              "yellow",
+              "red",
+              "blue",
+              "gray"
+            ]
+          }
+        }
+      }
+    },
+    "summary_key_findings": {
+      "type": "array",
+      "description": "3-5 achados categorizados (vantagem | contexto | ameaca | acao).",
+      "minItems": 3,
+      "items": {
+        "type": "object",
+        "required": [
+          "category",
+          "text"
+        ],
+        "properties": {
+          "category": {
+            "type": "string",
+            "enum": [
+              "vantagem",
+              "contexto",
+              "ameaca",
+              "acao"
+            ]
+          },
+          "text": {
+            "type": "string"
+          }
+        }
+      }
     },
     "funnel_diagnosis": {
       "type": "array",
       "minItems": 3,
       "items": {
         "type": "object",
-        "required": ["stage", "current_rate", "benchmark", "bottleneck", "root_cause"],
+        "required": [
+          "stage",
+          "current_rate",
+          "benchmark",
+          "bottleneck",
+          "root_cause"
+        ],
         "properties": {
           "stage": {
             "type": "string",
@@ -38,7 +127,12 @@
           },
           "status": {
             "type": "string",
-            "enum": ["above_benchmark", "at_benchmark", "below_benchmark", "critical"],
+            "enum": [
+              "above_benchmark",
+              "at_benchmark",
+              "below_benchmark",
+              "critical"
+            ],
             "description": "Classificacao do desempenho da etapa."
           },
           "bottleneck": {
@@ -79,7 +173,13 @@
       "minItems": 3,
       "items": {
         "type": "object",
-        "required": ["objection", "type", "funnel_moment", "recommended_response", "sdr_prevention"],
+        "required": [
+          "objection",
+          "type",
+          "funnel_moment",
+          "recommended_response",
+          "sdr_prevention"
+        ],
         "properties": {
           "objection": {
             "type": "string",
@@ -87,17 +187,33 @@
           },
           "type": {
             "type": "string",
-            "enum": ["price", "urgency", "authority", "trust", "need", "competitor"],
+            "enum": [
+              "price",
+              "urgency",
+              "authority",
+              "trust",
+              "need",
+              "competitor"
+            ],
             "description": "Tipo da objecao segundo classificacao BANT+."
           },
           "funnel_moment": {
             "type": "string",
-            "enum": ["first_contact", "qualification", "proposal", "negotiation"],
+            "enum": [
+              "first_contact",
+              "qualification",
+              "proposal",
+              "negotiation"
+            ],
             "description": "Em que momento do funil a objecao tipicamente aparece."
           },
           "frequency": {
             "type": "string",
-            "enum": ["high", "medium", "low"],
+            "enum": [
+              "high",
+              "medium",
+              "low"
+            ],
             "description": "Frequencia estimada com que essa objecao aparece."
           },
           "recommended_response": {
@@ -148,11 +264,21 @@
     },
     "qualification_criteria": {
       "type": "object",
-      "required": ["five_star", "four_star", "three_star", "one_two_star"],
+      "required": [
+        "five_star",
+        "four_star",
+        "three_star",
+        "one_two_star"
+      ],
       "properties": {
         "five_star": {
           "type": "object",
-          "required": ["profile", "mandatory_signals", "action", "example"],
+          "required": [
+            "profile",
+            "mandatory_signals",
+            "action",
+            "example"
+          ],
           "properties": {
             "profile": {
               "type": "string",
@@ -160,7 +286,9 @@
             },
             "mandatory_signals": {
               "type": "array",
-              "items": { "type": "string" },
+              "items": {
+                "type": "string"
+              },
               "description": "Sinais obrigatorios — TODOS devem estar presentes."
             },
             "action": {
@@ -175,7 +303,13 @@
         },
         "four_star": {
           "type": "object",
-          "required": ["profile", "signals", "min_signals", "action", "example"],
+          "required": [
+            "profile",
+            "signals",
+            "min_signals",
+            "action",
+            "example"
+          ],
           "properties": {
             "profile": {
               "type": "string",
@@ -183,7 +317,9 @@
             },
             "signals": {
               "type": "array",
-              "items": { "type": "string" },
+              "items": {
+                "type": "string"
+              },
               "description": "Sinais possiveis — pelo menos min_signals devem estar presentes."
             },
             "min_signals": {
@@ -202,7 +338,13 @@
         },
         "three_star": {
           "type": "object",
-          "required": ["profile", "signals", "min_signals", "action", "example"],
+          "required": [
+            "profile",
+            "signals",
+            "min_signals",
+            "action",
+            "example"
+          ],
           "properties": {
             "profile": {
               "type": "string",
@@ -210,7 +352,9 @@
             },
             "signals": {
               "type": "array",
-              "items": { "type": "string" },
+              "items": {
+                "type": "string"
+              },
               "description": "Sinais possiveis para 3 estrelas."
             },
             "min_signals": {
@@ -229,7 +373,12 @@
         },
         "one_two_star": {
           "type": "object",
-          "required": ["profile", "disqualification_signals", "action", "example"],
+          "required": [
+            "profile",
+            "disqualification_signals",
+            "action",
+            "example"
+          ],
           "properties": {
             "profile": {
               "type": "string",
@@ -237,7 +386,9 @@
             },
             "disqualification_signals": {
               "type": "array",
-              "items": { "type": "string" },
+              "items": {
+                "type": "string"
+              },
               "description": "Sinais de desqualificacao — qualquer um e suficiente."
             },
             "action": {
@@ -267,7 +418,11 @@
     },
     "sla": {
       "type": "object",
-      "required": ["five_star_minutes", "four_star_hours", "three_star_hours"],
+      "required": [
+        "five_star_minutes",
+        "four_star_hours",
+        "three_star_hours"
+      ],
       "properties": {
         "five_star_minutes": {
           "type": "integer",
@@ -313,7 +468,12 @@
       "maxItems": 5,
       "items": {
         "type": "object",
-        "required": ["action", "responsible", "timeline", "measurement"],
+        "required": [
+          "action",
+          "responsible",
+          "timeline",
+          "measurement"
+        ],
         "properties": {
           "priority": {
             "type": "integer",

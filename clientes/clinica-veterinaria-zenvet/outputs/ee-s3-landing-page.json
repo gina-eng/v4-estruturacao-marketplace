@@ -1,5 +1,51 @@
 {
+  "client_name": "Clínica Veterinária Zenvet",
   "summary": "LP de conversão da Clínica Veterinária Zenvet, deployada em produção no Vercel (https://zenvet-landing.vercel.app). 12 seções felino-first em Next.js 16 + Tailwind 3: Header scroll-aware com tema light/dark por seção, Hero com foto real da Dra. Nathalia + card flutuante de credencial + 3 stats (8 anos · +1.200 · 4,9★), Problem (3 cards 'sem letra miúda / sem exame que não faz sentido / sem clínica fria'), seção dedicada da Dra. Nathalia (autoridade — fundo roxo + retrato + timeline de 4 credenciais), Solution (4 benefícios em fundo bege com cards brancos), HowItWorks (4 passos cat-friendly), Deliverables (6 itens), SocialProof com 3 depoimentos REAIS do Google Reviews (Amanda da Silva, Katia Leite, Amanda Carolina) com fotos dos pets, ForDogs em fundo turquesa, FAQ acordeão controlado (1 aberto), FinalCTA WhatsApp + LocationMap com Google Maps embed, Footer 3-colunas, e botão WhatsApp flutuante com pulse. Copy 100% alinhada ao manual de marca (Fraunces+Inter, vocabulário felino-first, sem diminutivos).",
+  "summary_headline": "LP Zenvet em produção (zenvet-landing.vercel.app): 12 seções felino-first + galeria da equipe + carrossel — pronta pra escala.",
+  "summary_highlights": [
+    {
+      "category": "oportunidade",
+      "label": "Status deploy",
+      "value": "Em produção",
+      "subtext": "https://zenvet-landing.vercel.app",
+      "tone": "green"
+    },
+    {
+      "category": "maturidade",
+      "label": "Seções",
+      "value": "12",
+      "subtext": "Hero · Stats · Problem · Dra · Galeria · Solution · etc.",
+      "tone": "green"
+    },
+    {
+      "category": "posicao",
+      "label": "Posicionamento",
+      "value": "Felino-first",
+      "subtext": "Mensagem coerente em toda a página",
+      "tone": "green"
+    },
+    {
+      "category": "competicao",
+      "label": "Diferenciação",
+      "value": "Foto real + manual de marca",
+      "subtext": "Sem stock, sem template genérico",
+      "tone": "green"
+    }
+  ],
+  "summary_key_findings": [
+    {
+      "category": "vantagem",
+      "text": "LP usa o manual de marca em 100% das aplicações — paleta, tipografia, copy 100% alinhados ao posicionamento."
+    },
+    {
+      "category": "contexto",
+      "text": "Galeria da equipe (9 fotos) e carrossel horizontal humanizam a clínica — cobre a etapa 'comparar' do funil."
+    },
+    {
+      "category": "acao",
+      "text": "Próximo passo: instalar Pixel + GA4 nesta LP antes de subir verba — sem tracking, conversões não atribuem."
+    }
+  ],
   "sections": [
     {
       "name": "hero",
@@ -229,7 +275,8 @@
       }
     ],
     "stats": [],
-    "_stats_note": "LP final intencionalmente sem cards de stats (decisão do operador). Stats do hero substituem (8 anos / +1.200 / 4,9★)."
+    "_stats_note": "LP final intencionalmente sem cards de stats (decisão do operador). Stats do hero substituem (8 anos / +1.200 / 4,9★).",
+    "stats_note": "Stats numéricos foram movidos para a seção StatsTransition (Hero → contadores animados 8 anos / +1.200 / 4,9★). Não duplicar em social_proof."
   },
   "meta": {
     "title": "Veterinário Especialista em Felinos · Zenvet · Americana",

@@ -1,5 +1,51 @@
 {
+  "client_name": "Clínica Veterinária Zenvet",
   "summary": "Otimização completa do perfil GMB da Clínica Veterinária Zenvet (Americana-SP) com foco em medicina felina: descrição SEO ancorada em 'especialista em felinos' + transparência (item a item) + área de cobertura (3 cidades), 1 categoria principal + 6 secundárias, 8 atributos, 9 serviços (todos 'Sob consulta' — preço apurado pelo WhatsApp), 4 posts (apresentação · educativo · prova social · oferta) e 5 Q&As que endereçam as 4 objeções principais da Mariana (especialização real, conta surpresa, exames desnecessários, gato estressa).",
+  "summary_headline": "Perfil GMB Zenvet otimizado: descrição SEO 645 chars + 9 serviços + 4 posts + 5 Q&As — pronto pra dominar busca local.",
+  "summary_highlights": [
+    {
+      "category": "oportunidade",
+      "label": "Descrição",
+      "value": "645 chars",
+      "subtext": "Quase no limite (750) — ancorada em felinos",
+      "tone": "green"
+    },
+    {
+      "category": "maturidade",
+      "label": "Serviços listados",
+      "value": "9",
+      "subtext": "Cobre felino + cães + domiciliar + exames",
+      "tone": "green"
+    },
+    {
+      "category": "posicao",
+      "label": "Q&As pré-cadastradas",
+      "value": "5",
+      "subtext": "Antecipam dúvidas comuns de busca",
+      "tone": "blue"
+    },
+    {
+      "category": "competicao",
+      "label": "Posts ativados",
+      "value": "4 inicial",
+      "subtext": "Cadência semanal recomendada",
+      "tone": "yellow"
+    }
+  ],
+  "summary_key_findings": [
+    {
+      "category": "vantagem",
+      "text": "Descrição GMB ancorada em 'especialista em felinos' melhora ranqueamento para buscas locais com intent qualificado."
+    },
+    {
+      "category": "acao",
+      "text": "Operador deve manter cadência de 1 post/semana — perfis ativos rankeiam melhor no pack do Google Maps."
+    },
+    {
+      "category": "contexto",
+      "text": "Q&As cadastradas reduzem fricção pré-agendamento — tutoras leem antes de chamar no WhatsApp."
+    }
+  ],
   "profile_description": "Clínica Veterinária Zenvet — especialista em medicina felina em Americana, SP. Consultas com a Dra. Nathalia: rotina, especializada em felinos e dermatologia. Exames hematológicos, ultrassom abdominal, radiografia. Também atendemos cães. Vacinação preventiva, internação e cirurgias. Cada exame e procedimento é aprovado item a item antes do início — você só paga o que aprovou. Atendimento humanizado e cat-friendly, com 40 minutos por consulta. Acompanhamento pós-consulta no WhatsApp em D+1, sem custo extra. Atendemos Americana, Santa Bárbara d'Oeste e Nova Odessa. Av. Pascoal Ardito, 792 — São Manoel. Agende pelo WhatsApp (19) 99579-5483.",
   "categories": {
     "primary": "Clínica veterinária",
@@ -118,28 +164,102 @@
     }
   ],
   "implementation_checklist": [
-    { "item": "Verificar se o perfil GMB já está reivindicado (briefing diz 'gmb: true' — confirmar acesso da Dra. Nathalia ou Kelly)", "status": "pending", "notes": "Pré-requisito. Sem acesso, nada do checklist sai do papel." },
-    { "item": "Atualizar nome do estabelecimento exatamente como na razão social: 'Clínica Veterinária Zenvet'", "status": "pending" },
-    { "item": "Configurar endereço: Av. Pascoal Ardito, 792, São Manoel, Americana-SP", "status": "pending" },
-    { "item": "Adicionar telefone principal: (19) 99579-5483 (mesmo do WhatsApp)", "status": "pending" },
-    { "item": "Adicionar site: https://clinicazenvet.com.br", "status": "pending" },
-    { "item": "Configurar horário de atendimento [E — confirmar com operador: 'Seg-Sex 8h às 18h' aparece na copy mas não há registro de sábado]", "status": "pending", "notes": "Confirmar com Kelly antes de publicar." },
-    { "item": "Ativar mensagens (botão WhatsApp) com link wa.me/5519995795483", "status": "pending" },
-    { "item": "Publicar descrição SEO (texto deste JSON, 644 caracteres)", "status": "pending" },
-    { "item": "Configurar categoria principal: 'Clínica veterinária'", "status": "pending" },
-    { "item": "Adicionar 6 categorias secundárias (lista deste JSON)", "status": "pending" },
-    { "item": "Ativar atributos confirmáveis: 'Atendimento por agendamento', formas de pagamento, gerência feminina", "status": "pending" },
-    { "item": "Confirmar e ativar atributos pendentes [E]: estacionamento, acessibilidade cadeirante, Wi-Fi", "status": "blocked", "notes": "Aguardando validação da Kelly sobre infraestrutura física." },
-    { "item": "Cadastrar 9 serviços com nome, descrição e preço (lista deste JSON)", "status": "pending" },
-    { "item": "Subir mínimo 10 fotos: capa (Dra. Nathalia atendendo), logo, fachada, sala de espera, consultório felino, consultório geral, equipe, internação cat-friendly, foto da equipe (Nathalia + Loíse + Kelly), bastidores", "status": "pending", "notes": "Briefing.brand.assets_inventory: 29 fotos profissionais já existem. Selecionar e subir as melhores." },
-    { "item": "Publicar Post 1 (apresentação) — semana 1", "status": "pending" },
-    { "item": "Publicar Post 2 (educativo: gato esconde dor) — semana 2", "status": "pending" },
-    { "item": "Publicar Post 3 (prova social: 1.186 tutores) — semana 3", "status": "pending" },
-    { "item": "Publicar Post 4 (oferta: consulta com Dra. Nathalia) — semana 4", "status": "pending" },
-    { "item": "Pré-popular as 5 Q&As (postar como pergunta + resposta da própria Zenvet)", "status": "pending" },
-    { "item": "Configurar mensagem padrão de resposta a reviews (positivo + neutro/negativo)", "status": "pending" },
-    { "item": "Solicitar avaliações dos 1.186 tutores ativos via campanha de WhatsApp segmentada [E — combinar com a Kelly]", "status": "pending", "notes": "Top of mind: começar pelos 'best_customers' do briefing — Luciano, Daniela Diaz, Débora Raya." },
-    { "item": "Verificar perfil completo: rodar checklist do GMB e atingir 100% de completude", "status": "pending" },
-    { "item": "Acompanhamento D+7: validar publicação dos 4 posts, descrição, serviços, Q&As e fotos", "status": "pending" }
+    {
+      "item": "Verificar se o perfil GMB já está reivindicado (briefing diz 'gmb: true' — confirmar acesso da Dra. Nathalia ou Kelly)",
+      "status": "pending",
+      "notes": "Pré-requisito. Sem acesso, nada do checklist sai do papel."
+    },
+    {
+      "item": "Atualizar nome do estabelecimento exatamente como na razão social: 'Clínica Veterinária Zenvet'",
+      "status": "pending"
+    },
+    {
+      "item": "Configurar endereço: Av. Pascoal Ardito, 792, São Manoel, Americana-SP",
+      "status": "pending"
+    },
+    {
+      "item": "Adicionar telefone principal: (19) 99579-5483 (mesmo do WhatsApp)",
+      "status": "pending"
+    },
+    {
+      "item": "Adicionar site: https://clinicazenvet.com.br",
+      "status": "pending"
+    },
+    {
+      "item": "Configurar horário de atendimento [E — confirmar com operador: 'Seg-Sex 8h às 18h' aparece na copy mas não há registro de sábado]",
+      "status": "pending",
+      "notes": "Confirmar com Kelly antes de publicar."
+    },
+    {
+      "item": "Ativar mensagens (botão WhatsApp) com link wa.me/5519995795483",
+      "status": "pending"
+    },
+    {
+      "item": "Publicar descrição SEO (texto deste JSON, 644 caracteres)",
+      "status": "pending"
+    },
+    {
+      "item": "Configurar categoria principal: 'Clínica veterinária'",
+      "status": "pending"
+    },
+    {
+      "item": "Adicionar 6 categorias secundárias (lista deste JSON)",
+      "status": "pending"
+    },
+    {
+      "item": "Ativar atributos confirmáveis: 'Atendimento por agendamento', formas de pagamento, gerência feminina",
+      "status": "pending"
+    },
+    {
+      "item": "Confirmar e ativar atributos pendentes [E]: estacionamento, acessibilidade cadeirante, Wi-Fi",
+      "status": "blocked",
+      "notes": "Aguardando validação da Kelly sobre infraestrutura física."
+    },
+    {
+      "item": "Cadastrar 9 serviços com nome, descrição e preço (lista deste JSON)",
+      "status": "pending"
+    },
+    {
+      "item": "Subir mínimo 10 fotos: capa (Dra. Nathalia atendendo), logo, fachada, sala de espera, consultório felino, consultório geral, equipe, internação cat-friendly, foto da equipe (Nathalia + Loíse + Kelly), bastidores",
+      "status": "pending",
+      "notes": "Briefing.brand.assets_inventory: 29 fotos profissionais já existem. Selecionar e subir as melhores."
+    },
+    {
+      "item": "Publicar Post 1 (apresentação) — semana 1",
+      "status": "pending"
+    },
+    {
+      "item": "Publicar Post 2 (educativo: gato esconde dor) — semana 2",
+      "status": "pending"
+    },
+    {
+      "item": "Publicar Post 3 (prova social: 1.186 tutores) — semana 3",
+      "status": "pending"
+    },
+    {
+      "item": "Publicar Post 4 (oferta: consulta com Dra. Nathalia) — semana 4",
+      "status": "pending"
+    },
+    {
+      "item": "Pré-popular as 5 Q&As (postar como pergunta + resposta da própria Zenvet)",
+      "status": "pending"
+    },
+    {
+      "item": "Configurar mensagem padrão de resposta a reviews (positivo + neutro/negativo)",
+      "status": "pending"
+    },
+    {
+      "item": "Solicitar avaliações dos 1.186 tutores ativos via campanha de WhatsApp segmentada [E — combinar com a Kelly]",
+      "status": "pending",
+      "notes": "Top of mind: começar pelos 'best_customers' do briefing — Luciano, Daniela Diaz, Débora Raya."
+    },
+    {
+      "item": "Verificar perfil completo: rodar checklist do GMB e atingir 100% de completude",
+      "status": "pending"
+    },
+    {
+      "item": "Acompanhamento D+7: validar publicação dos 4 posts, descrição, serviços, Q&As e fotos",
+      "status": "pending"
+    }
   ]
 }

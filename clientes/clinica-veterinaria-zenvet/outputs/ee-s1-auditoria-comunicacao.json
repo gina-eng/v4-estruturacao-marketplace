@@ -1,5 +1,55 @@
 {
+  "client_name": "Clínica Veterinária Zenvet",
   "summary": "Score médio: 35/100. Três hemorragias confirmadas: Meta Ads com link 404 (R$800/mês destruídos), zero tracking em todos os canais, e mensagem-chave de especialização felina ausente em todos os pontos de contato. Instagram ativo e consistente é o único ponto positivo — mas fala de 'pets' não de felinos. 5 Quick Wins executáveis esta semana sem custo.",
+  "summary_headline": "Comunicação Zenvet em 35/100 — Meta Ads com link 404 destrói R$ 800/mês e tracking zero em todos os canais.",
+  "summary_highlights": [
+    {
+      "category": "maturidade",
+      "label": "Score geral",
+      "value": "35/100",
+      "subtext": "Crítico — abaixo do baseline do setor",
+      "tone": "red"
+    },
+    {
+      "category": "risco",
+      "label": "Hemorragia ativa",
+      "value": "R$ 800/mês",
+      "subtext": "Meta Ads com link 404 + zero tracking",
+      "tone": "red"
+    },
+    {
+      "category": "competicao",
+      "label": "Canais auditados",
+      "value": "5 canais",
+      "subtext": "Site, Instagram, Google Ads, Meta Ads, GMB",
+      "tone": "blue"
+    },
+    {
+      "category": "oportunidade",
+      "label": "Quick wins",
+      "value": "3 itens",
+      "subtext": "Pixel + GA4 + corrigir link Meta = ROI imediato",
+      "tone": "green"
+    }
+  ],
+  "summary_key_findings": [
+    {
+      "category": "ameaca",
+      "text": "Meta Ads investe R$ 800/mês com link de destino 404 — toda verba descartada antes da landing page."
+    },
+    {
+      "category": "ameaca",
+      "text": "GA4, Pixel e GTM ausentes em todos os canais — não há como atribuir conversão nem otimizar campanha."
+    },
+    {
+      "category": "contexto",
+      "text": "Mensagem fragmentada entre canais: site fala 'felinos', Instagram fala 'pets', Google Ads fala 'veterinária 24h'."
+    },
+    {
+      "category": "acao",
+      "text": "Antes de subir mídia nova, tapar buraco: corrigir Meta link, instalar Pixel + GA4, alinhar copy entre canais."
+    }
+  ],
   "quick_wins": [
     {
       "action": "Corrigir URL dos anúncios Meta Ads — trocar destino 404 pelo site funcional",

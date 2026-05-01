@@ -109,7 +109,8 @@
         "source": "meta_ads_library",
         "fetched_at": null,
         "notes": "Preview não disponível: pack analisado a partir de descrição textual (documentação). Solicitar arquivos originais ao cliente para anexar.",
-        "instagram_permalink_url": "https://www.instagram.com/p/DXAMNhVjO5D/"
+        "instagram_permalink_url": "https://www.instagram.com/p/DXAMNhVjO5D/",
+        "platforms_note": "Criativo conceitual — preview de plataforma será definido na produção (ver ee-s3-criativos-anuncios)."
       },
       "instagram_permalink_url": "https://www.instagram.com/p/DXAMNhVjO5D/",
       "ad_name": "AD05 - Vídeo -"
@@ -150,7 +151,8 @@
         "source": "meta_ads_library",
         "fetched_at": null,
         "notes": "Preview não disponível: pack analisado a partir de descrição textual (documentação). Solicitar arquivos originais ao cliente para anexar.",
-        "instagram_permalink_url": "https://www.instagram.com/p/DITeyZnszoB/"
+        "instagram_permalink_url": "https://www.instagram.com/p/DITeyZnszoB/",
+        "platforms_note": "Criativo conceitual — preview de plataforma será definido na produção (ver ee-s3-criativos-anuncios)."
       },
       "instagram_permalink_url": "https://www.instagram.com/p/DITeyZnszoB/",
       "ad_name": "Publicação do Instagram: 🚨 Algo INCRÍVEL está..."
@@ -191,7 +193,8 @@
         "source": "meta_ads_library",
         "fetched_at": null,
         "notes": "Preview não disponível: pack analisado a partir de descrição textual (documentação). Solicitar arquivos originais ao cliente para anexar.",
-        "instagram_permalink_url": "https://www.instagram.com/p/DWhPWWUDOqG/"
+        "instagram_permalink_url": "https://www.instagram.com/p/DWhPWWUDOqG/",
+        "platforms_note": "Criativo conceitual — preview de plataforma será definido na produção (ver ee-s3-criativos-anuncios)."
       },
       "instagram_permalink_url": "https://www.instagram.com/p/DWhPWWUDOqG/",
       "ad_name": "AD04 - Vídeo - pet"
@@ -232,7 +235,8 @@
         "source": "meta_ads_library",
         "fetched_at": null,
         "notes": "Preview não disponível: pack analisado a partir de descrição textual (documentação). Solicitar arquivos originais ao cliente para anexar.",
-        "instagram_permalink_url": "https://www.instagram.com/p/DWhPWQnjLJV/"
+        "instagram_permalink_url": "https://www.instagram.com/p/DWhPWQnjLJV/",
+        "platforms_note": "Criativo conceitual — preview de plataforma será definido na produção (ver ee-s3-criativos-anuncios)."
       },
       "instagram_permalink_url": "https://www.instagram.com/p/DWhPWQnjLJV/",
       "ad_name": "AD05 - Vídeo -  especialista em felinos"
@@ -273,7 +277,8 @@
         "source": "meta_ads_library",
         "fetched_at": null,
         "notes": "Preview não disponível: pack analisado a partir de descrição textual (documentação). Solicitar arquivos originais ao cliente para anexar.",
-        "instagram_permalink_url": "https://www.instagram.com/p/DKDG91rsq8Y/"
+        "instagram_permalink_url": "https://www.instagram.com/p/DKDG91rsq8Y/",
+        "platforms_note": "Criativo conceitual — preview de plataforma será definido na produção (ver ee-s3-criativos-anuncios)."
       },
       "instagram_permalink_url": "https://www.instagram.com/p/DKDG91rsq8Y/",
       "ad_name": "AD03 - IMAGEM | Atendimento Veterinário"
@@ -314,7 +319,8 @@
         "source": "meta_ads_library",
         "fetched_at": null,
         "notes": "Preview não disponível: pack analisado a partir de descrição textual (documentação). Solicitar arquivos originais ao cliente para anexar.",
-        "instagram_permalink_url": "https://www.instagram.com/p/C3Gdonag_Ku/"
+        "instagram_permalink_url": "https://www.instagram.com/p/C3Gdonag_Ku/",
+        "platforms_note": "Criativo conceitual — preview de plataforma será definido na produção (ver ee-s3-criativos-anuncios)."
       },
       "instagram_permalink_url": "https://www.instagram.com/p/C3Gdonag_Ku/",
       "ad_name": "Atendimento a domicílio"
@@ -431,7 +437,8 @@
       "sample_ads": [],
       "data_source": "meta_ads_library_scrape",
       "fetched_at": "2026-04-22T02:40:36.349870+00:00",
-      "notes": "Nenhum anúncio ativo detectado na Meta Ads Library (buscas: \"LM Hospital Veterinario 24h\", \"lmveterinaria\"). Pode indicar: (a) page_id distinto do suposto, (b) ausência de mídia paga no período, (c) uso apenas de Google Ads."
+      "notes": "Nenhum anúncio ativo detectado na Meta Ads Library (buscas: \"LM Hospital Veterinario 24h\", \"lmveterinaria\"). Pode indicar: (a) page_id distinto do suposto, (b) ausência de mídia paga no período, (c) uso apenas de Google Ads.",
+      "sample_ads_note": "Concorrente sem anúncios coletáveis ativos no Meta Ad Library / Google Ads Transparency Center na janela analisada."
     },
     {
       "competitor": "Cantinho do Mascote (Clínica Veterinária 24h)",
@@ -570,7 +577,8 @@
       "sample_ads": [],
       "data_source": "meta_ads_library_scrape",
       "fetched_at": "2026-04-22T02:40:36.349870+00:00",
-      "notes": "Busca por \"Xodog\" retornou 1 anúncio, mas de negócio distinto (XoDog — food/restaurante). Página do concorrente vet \"Xodog Pet\" não identificada automaticamente. Confirmar handle com o operador."
+      "notes": "Busca por \"Xodog\" retornou 1 anúncio, mas de negócio distinto (XoDog — food/restaurante). Página do concorrente vet \"Xodog Pet\" não identificada automaticamente. Confirmar handle com o operador.",
+      "sample_ads_note": "Concorrente sem anúncios coletáveis ativos no Meta Ad Library / Google Ads Transparency Center na janela analisada."
     }
   ],
   "competitor_patterns_missing": [

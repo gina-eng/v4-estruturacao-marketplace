@@ -881,7 +881,7 @@ def render(client_path):
         f.write(out)
     print(f"OK — consolidated.md gerado em {client_path}/consolidated.md ({len(out)} chars)")
 
-    # Gera consolidated.html (portal linear + aprofundamento)
+    # Gera consolidated.html (portal linear, apenas visualizações executivas)
     try:
         html = build_consolidated_html(client, outputs, ident, generated, current_week)
         with open(os.path.join(client_path, "consolidated.html"), "w", encoding="utf-8") as f:
@@ -1813,14 +1813,7 @@ function DEEP_fallback(d) {
       }
       parts.push('</div>');
 
-      // Deep dive
-      parts.push('<div class="cs-deep">');
-      parts.push('<div class="cs-deep__label">Aprofundamento</div>');
-      const deepFn = DEEP[sk.id] || DEEP_fallback;
-      try { parts.push(deepFn(sk.data)); }
-      catch(e) { parts.push('<div class="cs-skill__error">Erro no aprofundamento: ' + CSE(e.message) + '</div>'); }
-      parts.push('</div>');
-
+      // Aprofundamento removido — entrega consolidada usa apenas a renderização executiva.
       parts.push('</section>');
     });
 
@@ -1881,7 +1874,7 @@ def _extract_portal_assets():
 
 
 def build_consolidated_html(client, outputs, ident, generated_at, current_week):
-    """Gera consolidated.html herdando CSS + renderers do portal.html + camada de aprofundamento."""
+    """Gera consolidated.html herdando CSS + renderers executivos do portal.html (sem aprofundamento)."""
     portal_css, portal_js = _extract_portal_assets()
 
     # Monta PORTAL_DATA como o portal faz
@@ -1918,7 +1911,7 @@ def build_consolidated_html(client, outputs, ident, generated_at, current_week):
     <div class="cs-hero__eyebrow">V4 Company · Estruturação Estratégica</div>
     <h1 id="cs-client-name">{client_name_html}</h1>
     <div class="cs-hero__meta">Visão Consolidada · Gerado em {generated_at} · Semana atual: {current_week}</div>
-    <div class="cs-hero__note">Este documento reúne tudo que foi produzido para o cliente — visualizações do portal + aprofundamento com todos os dados estruturados, para entrega e auditabilidade completa.</div>
+    <div class="cs-hero__note">Este documento reúne tudo que foi produzido para o cliente — todas as entregas em uma só visualização, para entrega e auditabilidade.</div>
   </header>
 
   <div class="cs-layout">

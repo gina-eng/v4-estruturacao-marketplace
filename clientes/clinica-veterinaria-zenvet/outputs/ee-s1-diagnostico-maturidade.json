@@ -1,10 +1,60 @@
 {
+  "client_name": "Clínica Veterinária Zenvet",
+  "summary": "Score geral 21/100 (Crítico). O digital da Zenvet destrói valor ativamente: Meta Ads com links quebrados (R$ 800/mês perdido), Google Ads invisível para termos locais, sem pixel/tracking, sem CRM e LP precária. Maior ativo ocioso: base de 1.700 pacientes. Maior diferencial: especialização em felinos (ticket 2x, posicionamento único na região).",
+  "summary_headline": "Maturidade digital Zenvet 21/100 (Crítico) — digital destrói valor ativamente, oportunidade de turnaround em 90 dias.",
+  "summary_highlights": [
+    {
+      "category": "maturidade",
+      "label": "Score geral",
+      "value": "21/100",
+      "subtext": "Crítico — pilar Marketing puxa pra baixo",
+      "tone": "red"
+    },
+    {
+      "category": "competicao",
+      "label": "Benchmark setor",
+      "value": "42-55",
+      "subtext": "Veterinárias premium da microrregião",
+      "tone": "yellow"
+    },
+    {
+      "category": "risco",
+      "label": "Verba destruída",
+      "value": "R$ 800/mês",
+      "subtext": "Meta Ads com link quebrado",
+      "tone": "red"
+    },
+    {
+      "category": "oportunidade",
+      "label": "Janela de turnaround",
+      "value": "90 dias",
+      "subtext": "Quick wins liberam upside imediato",
+      "tone": "green"
+    }
+  ],
+  "summary_key_findings": [
+    {
+      "category": "ameaca",
+      "text": "Pilares Marketing e Vendas Digital empatados na faixa Crítico — maioria do investimento atual é desperdício."
+    },
+    {
+      "category": "vantagem",
+      "text": "Pilar Operação saudável (atendimento humano, recorrência) sustenta receita atual mesmo com digital quebrado."
+    },
+    {
+      "category": "contexto",
+      "text": "Concorrentes da microrregião também operam abaixo do benchmark — janela aberta para Zenvet liderar com correções básicas."
+    },
+    {
+      "category": "acao",
+      "text": "Sequência prioritária: tracking → criativos novos → forecast → SDR — destravar atribuição antes de qualquer escala."
+    }
+  ],
   "skill": "ee-s1-diagnostico-maturidade",
   "client": "clinica-veterinaria-zenvet",
   "version": 1,
   "generated_at": "2026-04-16",
   "data_source": "mixed",
-  "summary": "Score geral 21/100 (Crítico). O digital da Zenvet destrói valor ativamente: Meta Ads com links quebrados (R$ 800/mês perdido), Google Ads invisível para termos locais, sem pixel/tracking, sem CRM e LP precária. Maior ativo ocioso: base de 1.700 pacientes. Maior diferencial: especialização em felinos (ticket 2x, posicionamento único na região).",
   "overall_score": 21,
   "overall_classification": "critical",
   "sector_benchmark": {
@@ -156,7 +206,8 @@
       "rationale": "Pré-requisito absoluto para toda otimização futura. Sem tracking, R$ 3.200/mês em mídia opera às cegas.",
       "effort": "low",
       "pillar": "cro",
-      "dependencies": []
+      "dependencies": [],
+      "dependencies_note": "Ação independente — pode iniciar sem aguardar conclusão de outra prioridade."
     },
     {
       "rank": 2,
@@ -184,7 +235,8 @@
       "rationale": "Potencial de R$ 30-40k/mês adicional a CAC zero. A base já existe — falta ativação estruturada.",
       "effort": "medium",
       "pillar": "crm",
-      "dependencies": []
+      "dependencies": [],
+      "dependencies_note": "Ação independente — pode iniciar sem aguardar conclusão de outra prioridade."
     },
     {
       "rank": 5,

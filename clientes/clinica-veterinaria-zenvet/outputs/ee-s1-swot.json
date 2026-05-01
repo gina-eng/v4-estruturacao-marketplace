@@ -1,5 +1,55 @@
 {
+  "client_name": "Clínica Veterinária Zenvet",
   "summary": "Jogada principal: ocupar o território 'veterinária especialista em gatos de Americana COM presença digital estruturada e acompanhamento humanizado' antes dos concorrentes, eliminando hemorragias digitais (tracking zero, Meta Ads com link quebrado, LP genérica) e construindo ativos proprietários (CRM, conteúdo educativo, GMB). O diferencial técnico da Nathalia é real; a descoberta da entrega S2 (22/04) mostrou que existe concorrente orgânica felina local também especializada — portanto o que é proprietário é a COMBINAÇÃO (felino + digital + humano + pós-consulta sistematizado), não a especialização isolada. A combinação ainda não está comunicada onde o ICP procura.",
+  "summary_headline": "Jogada SWOT: ocupar 'veterinária especialista em gatos de Americana COM digital estruturado' — janela de 12-18 meses.",
+  "summary_highlights": [
+    {
+      "category": "oportunidade",
+      "label": "Whitespace",
+      "value": "12-18 meses",
+      "subtext": "Antes que LM+ ou orgânica concorrente escale",
+      "tone": "green"
+    },
+    {
+      "category": "posicao",
+      "label": "Força central",
+      "value": "Especialização felina",
+      "subtext": "Declarada e única na microrregião",
+      "tone": "green"
+    },
+    {
+      "category": "risco",
+      "label": "Fraqueza crítica",
+      "value": "Tracking zero",
+      "subtext": "Não sabemos quanto investir nem onde",
+      "tone": "red"
+    },
+    {
+      "category": "competicao",
+      "label": "Ameaça macro",
+      "value": "Apps low-cost",
+      "subtext": "Pet Anjo, Petlove podem chegar à microrregião",
+      "tone": "yellow"
+    }
+  ],
+  "summary_key_findings": [
+    {
+      "category": "vantagem",
+      "text": "Combinação SO mais assimétrica: especialização felina × tutoras buscando 'veterinária de gato' no Google sem encontrar resposta clara."
+    },
+    {
+      "category": "ameaca",
+      "text": "Combinação WT mais perigosa: tracking zero × LM+ aprendendo digital — eles vão escalar enquanto Zenvet 'tatear no escuro'."
+    },
+    {
+      "category": "contexto",
+      "text": "Cenário base 90 dias: investir R$ 3k/mês com correções básicas tira o digital do zero, sem precisar dobrar verba."
+    },
+    {
+      "category": "acao",
+      "text": "Top 3 ações: (1) corrigir tracking, (2) lançar criativos felino-first, (3) ativar GMB com posts semanais."
+    }
+  ],
   "strengths": [
     "Nathalia — profissional com formação felina declarada (pós-graduanda em clínica e cirurgia com ênfase em felinos; título oficial ABFel em roadmap 12-18m) COMBINADA a acompanhamento humanizado sistematizado e presença digital em estruturação. Descoberta S2 (22/04): existe concorrente orgânica felina local também especializada, o que reenquadra o diferencial da Zenvet como a COMBINAÇÃO dos 4 elementos (especialização + digital + humano + pós-consulta), não a especialização isolada.",
     {
@@ -404,7 +454,8 @@
         "reversibility": "trivial",
         "score": 8,
         "ranking_rationale": "Baixo esforço, retorno gradual garantido. Canal orgânico com evidência de demanda."
-      }
+      },
+      "dependencies_note": "Ação independente — não bloqueia nem é bloqueada por outras priority_actions."
     },
     {
       "action": "Lançar série de conteúdo educativo felino: 8 Reels/mês com Nathalia como autoridade técnica",

@@ -9,9 +9,89 @@
     "tags",
     "welcome_sequence",
     "nurture_sequence",
-    "test_checklist"
+    "test_checklist",
+    "client_name",
+    "summary_headline",
+    "summary_highlights",
+    "summary_key_findings"
   ],
   "properties": {
+    "client_name": {
+      "type": "string",
+      "description": "Nome do cliente — sempre presente em todo output."
+    },
+    "summary": {
+      "type": "string",
+      "description": "Resumo de 1-2 frases do setup do CRM. Inclui número de etapas do pipeline e réguas configuradas."
+    },
+    "summary_headline": {
+      "type": "string",
+      "description": "Manchete em 1 linha (~120 caracteres) com o veredito da skill."
+    },
+    "summary_highlights": {
+      "type": "array",
+      "description": "KPIs em destaque (4-6 itens). Categorias: posicao | competicao | janela | maturidade | oportunidade | risco.",
+      "minItems": 3,
+      "items": {
+        "type": "object",
+        "required": [
+          "category",
+          "label",
+          "value",
+          "tone"
+        ],
+        "properties": {
+          "category": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string"
+          },
+          "subtext": {
+            "type": "string"
+          },
+          "tone": {
+            "type": "string",
+            "enum": [
+              "green",
+              "yellow",
+              "red",
+              "blue",
+              "gray"
+            ]
+          }
+        }
+      }
+    },
+    "summary_key_findings": {
+      "type": "array",
+      "description": "3-5 achados categorizados (vantagem | contexto | ameaca | acao).",
+      "minItems": 3,
+      "items": {
+        "type": "object",
+        "required": [
+          "category",
+          "text"
+        ],
+        "properties": {
+          "category": {
+            "type": "string",
+            "enum": [
+              "vantagem",
+              "contexto",
+              "ameaca",
+              "acao"
+            ]
+          },
+          "text": {
+            "type": "string"
+          }
+        }
+      }
+    },
     "pipeline_stages": {
       "type": "array",
       "description": "Etapas do pipeline de vendas no Kommo.",
@@ -205,10 +285,6 @@
           }
         }
       }
-    },
-    "summary": {
-      "type": "string",
-      "description": "Resumo de 1-2 frases do setup do CRM. Inclui número de etapas do pipeline e réguas configuradas."
     }
   }
 }

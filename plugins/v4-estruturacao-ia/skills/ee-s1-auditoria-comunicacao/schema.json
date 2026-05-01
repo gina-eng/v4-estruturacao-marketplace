@@ -8,12 +8,100 @@
     "channels_audited",
     "gap_matrix",
     "executive_summary",
-    "quick_wins"
+    "quick_wins",
+    "client_name",
+    "summary_headline",
+    "summary_highlights",
+    "summary_key_findings"
   ],
   "properties": {
+    "client_name": {
+      "type": "string",
+      "description": "Nome do cliente — sempre presente em todo output."
+    },
     "summary": {
       "type": "string",
       "description": "Resumo de 1-2 frases da auditoria. Usado como referência rápida por outras skills."
+    },
+    "summary_headline": {
+      "type": "string",
+      "maxLength": 200,
+      "description": "Manchete em 1 linha com o veredito desta skill (hero do resumo executivo no portal). Ver plugins/v4-estruturacao-ia/shared-templates/PADRAO-OUTPUT.md"
+    },
+    "summary_highlights": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 8,
+      "description": "KPIs visuais categorizados para o resumo executivo. Cada item: {category, label, value, subtext, tone}.",
+      "items": {
+        "type": "object",
+        "required": [
+          "category",
+          "label",
+          "value"
+        ],
+        "properties": {
+          "category": {
+            "type": "string",
+            "enum": [
+              "posicao",
+              "competicao",
+              "janela",
+              "maturidade",
+              "oportunidade",
+              "risco"
+            ]
+          },
+          "label": {
+            "type": "string",
+            "maxLength": 40
+          },
+          "value": {
+            "type": "string"
+          },
+          "subtext": {
+            "type": "string",
+            "maxLength": 80
+          },
+          "tone": {
+            "type": "string",
+            "enum": [
+              "green",
+              "yellow",
+              "red",
+              "blue",
+              "gray"
+            ]
+          }
+        }
+      }
+    },
+    "summary_key_findings": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 6,
+      "description": "Achados categorizados por intenção (vantagem/contexto/ameaça/ação). Pelo menos 3 dos 4 tipos cobertos.",
+      "items": {
+        "type": "object",
+        "required": [
+          "category",
+          "text"
+        ],
+        "properties": {
+          "category": {
+            "type": "string",
+            "enum": [
+              "vantagem",
+              "contexto",
+              "ameaca",
+              "acao"
+            ]
+          },
+          "text": {
+            "type": "string"
+          }
+        }
+      }
     },
     "icp_reference": {
       "type": "string",
@@ -678,86 +766,6 @@
         }
       },
       "description": "Ações implementáveis em menos de 1 semana sem custo adicional."
-    },
-    "summary_headline": {
-      "type": "string",
-      "maxLength": 200,
-      "description": "Manchete em 1 linha com o veredito desta skill (hero do resumo executivo no portal). Ver plugins/v4-estruturacao-ia/shared-templates/PADRAO-OUTPUT.md"
-    },
-    "summary_highlights": {
-      "type": "array",
-      "minItems": 3,
-      "maxItems": 8,
-      "description": "KPIs visuais categorizados para o resumo executivo. Cada item: {category, label, value, subtext, tone}.",
-      "items": {
-        "type": "object",
-        "required": [
-          "category",
-          "label",
-          "value"
-        ],
-        "properties": {
-          "category": {
-            "type": "string",
-            "enum": [
-              "posicao",
-              "competicao",
-              "janela",
-              "maturidade",
-              "oportunidade",
-              "risco"
-            ]
-          },
-          "label": {
-            "type": "string",
-            "maxLength": 40
-          },
-          "value": {
-            "type": "string"
-          },
-          "subtext": {
-            "type": "string",
-            "maxLength": 80
-          },
-          "tone": {
-            "type": "string",
-            "enum": [
-              "green",
-              "yellow",
-              "red",
-              "blue",
-              "gray"
-            ]
-          }
-        }
-      }
-    },
-    "summary_key_findings": {
-      "type": "array",
-      "minItems": 3,
-      "maxItems": 6,
-      "description": "Achados categorizados por intenção (vantagem/contexto/ameaça/ação). Pelo menos 3 dos 4 tipos cobertos.",
-      "items": {
-        "type": "object",
-        "required": [
-          "category",
-          "text"
-        ],
-        "properties": {
-          "category": {
-            "type": "string",
-            "enum": [
-              "vantagem",
-              "contexto",
-              "ameaca",
-              "acao"
-            ]
-          },
-          "text": {
-            "type": "string"
-          }
-        }
-      }
     },
     "key_insight": {
       "type": "object",

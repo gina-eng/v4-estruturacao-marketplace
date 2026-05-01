@@ -377,7 +377,8 @@
       "origem_achado": "evolucao",
       "referencia_evolucao": "E3",
       "decisao_operador": "aceita",
-      "valor_final_aplicado": "CAC R$266 é reporte histórico do cliente, não validado pelo V4MOS (que mede apenas CPL de plataforma, sem integração ERP). Revisitar quando ERP for integrado. CPL real S2 (V4MOS): R$26."
+      "valor_final_aplicado": "CAC R$266 é reporte histórico do cliente, não validado pelo V4MOS (que mede apenas CPL de plataforma, sem integração ERP). Revisitar quando ERP for integrado. CPL real S2 (V4MOS): R$26.",
+      "valor_antigo_note": "Campo novo — não havia valor anterior nesta entrega antes desta revisão."
     },
     {
       "id": "U5",
@@ -391,7 +392,8 @@
       "origem_achado": "evolucao",
       "referencia_evolucao": "E3",
       "decisao_operador": "aceita",
-      "valor_final_aplicado": "Projeção ROI 20.7x foi calculada com CAC estimado R$266 (S1, sem validação ERP). V4MOS confirmou CPL R$26 na plataforma, mas conversão lead→venda não é rastreada. Payback real só será confiável após integração ERP."
+      "valor_final_aplicado": "Projeção ROI 20.7x foi calculada com CAC estimado R$266 (S1, sem validação ERP). V4MOS confirmou CPL R$26 na plataforma, mas conversão lead→venda não é rastreada. Payback real só será confiável após integração ERP.",
+      "valor_antigo_note": "Campo novo — não havia valor anterior nesta entrega antes desta revisão."
     },
     {
       "id": "U6",
@@ -433,7 +435,8 @@
       "origem_achado": "evolucao",
       "referencia_evolucao": "E7",
       "decisao_operador": "aceita",
-      "valor_final_aplicado": "[refinado em Semana 2] Bio real capturada pelo diagnóstico orgânico: '🩺 Esp. em felinos 🐱 Clinica geral de cães🐶.' Mensagem felina presente; item restante: remover menção a cães e adicionar link wa.me."
+      "valor_final_aplicado": "[refinado em Semana 2] Bio real capturada pelo diagnóstico orgânico: '🩺 Esp. em felinos 🐱 Clinica geral de cães🐶.' Mensagem felina presente; item restante: remover menção a cães e adicionar link wa.me.",
+      "valor_antigo_note": "Campo novo — não havia valor anterior nesta entrega antes desta revisão."
     },
     {
       "id": "U9",
@@ -447,7 +450,8 @@
       "origem_achado": "evolucao",
       "referencia_evolucao": "E1",
       "decisao_operador": "aceita",
-      "valor_final_aplicado": "Validação quantitativa (S2, ee-s2-diagnostico-midia): 63,8% dos cliques em Meta são mulheres; concentração etária 30-45 anos. Confirma Mariana como persona primária."
+      "valor_final_aplicado": "Validação quantitativa (S2, ee-s2-diagnostico-midia): 63,8% dos cliques em Meta são mulheres; concentração etária 30-45 anos. Confirma Mariana como persona primária.",
+      "valor_antigo_note": "Campo novo — não havia valor anterior nesta entrega antes desta revisão."
     },
     {
       "id": "U10",
@@ -461,7 +465,8 @@
       "origem_achado": "evolucao",
       "referencia_evolucao": "E1",
       "decisao_operador": "aceita",
-      "valor_final_aplicado": "Hipótese briefing: 'classe média a média alta'. Evidência S1 + S2: tutora de gato 30-45, R$5-12K/mês, dominância feminina confirmada em Meta (63,8%). Decisão: ICP primário fechado; anti-personas ativadas como exclusão em campanhas."
+      "valor_final_aplicado": "Hipótese briefing: 'classe média a média alta'. Evidência S1 + S2: tutora de gato 30-45, R$5-12K/mês, dominância feminina confirmada em Meta (63,8%). Decisão: ICP primário fechado; anti-personas ativadas como exclusão em campanhas.",
+      "valor_antigo_note": "Campo novo — não havia valor anterior nesta entrega antes desta revisão."
     },
     {
       "id": "U11",
@@ -475,7 +480,8 @@
       "origem_achado": "evolucao",
       "referencia_evolucao": "E6",
       "decisao_operador": "aceita",
-      "valor_final_aplicado": "Ticket R$500 do briefing é resultado do mix consulta+exames+procedimentos; consulta felinos isolada posicionada no range R$180-250 (willingness_to_pay validada em ee-s1-persona-icp > primary_persona). Comunicação externa não deve expor R$500 como preço de consulta."
+      "valor_final_aplicado": "Ticket R$500 do briefing é resultado do mix consulta+exames+procedimentos; consulta felinos isolada posicionada no range R$180-250 (willingness_to_pay validada em ee-s1-persona-icp > primary_persona). Comunicação externa não deve expor R$500 como preço de consulta.",
+      "valor_antigo_note": "Campo novo — não havia valor anterior nesta entrega antes desta revisão."
     },
     {
       "id": "U12",
@@ -489,7 +495,8 @@
       "origem_achado": "evolucao",
       "referencia_evolucao": "E4",
       "decisao_operador": "aceita",
-      "valor_final_aplicado": "Migração silenciosa de tutoras premium para 4 clínicas especializadas em Campinas (MedCat Cat Friendly Gold, ClinFel, Gattare, Estimma) a 45-60min — ameaça estrutural identificada na S2 pesquisa de mercado."
+      "valor_final_aplicado": "Migração silenciosa de tutoras premium para 4 clínicas especializadas em Campinas (MedCat Cat Friendly Gold, ClinFel, Gattare, Estimma) a 45-60min — ameaça estrutural identificada na S2 pesquisa de mercado.",
+      "valor_antigo_note": "Campo novo — não havia valor anterior nesta entrega antes desta revisão."
     },
     {
       "id": "U13",
@@ -503,7 +510,8 @@
       "origem_achado": "evolucao",
       "referencia_evolucao": "E4",
       "decisao_operador": "aceita",
-      "valor_final_aplicado": "Clínica Meu Pet SBO (pública, jun/2024) atende felinos mas mira baixa renda — risco indireto de desvio de search intent caso o ICP premium confunda as propostas em pesquisas locais."
+      "valor_final_aplicado": "Clínica Meu Pet SBO (pública, jun/2024) atende felinos mas mira baixa renda — risco indireto de desvio de search intent caso o ICP premium confunda as propostas em pesquisas locais.",
+      "valor_antigo_note": "Campo novo — não havia valor anterior nesta entrega antes desta revisão."
     },
     {
       "id": "U14",
@@ -544,7 +552,8 @@
       "origem_achado": "evolucao",
       "referencia_evolucao": "E8",
       "decisao_operador": "aceita",
-      "valor_final_aplicado": "Dayparting: concentrar entregas Meta em Qua/Qui (35% dos cliques históricos) sem afetar a operação física de pico Seg/Sáb. Testar por 14d e comparar CPL."
+      "valor_final_aplicado": "Dayparting: concentrar entregas Meta em Qua/Qui (35% dos cliques históricos) sem afetar a operação física de pico Seg/Sáb. Testar por 14d e comparar CPL.",
+      "valor_antigo_note": "Campo novo — não havia valor anterior nesta entrega antes desta revisão."
     },
     {
       "id": "U17",
@@ -558,7 +567,8 @@
       "origem_achado": "evolucao",
       "referencia_evolucao": "E5",
       "decisao_operador": "aceita",
-      "valor_final_aplicado": "ABFel + Cat Friendly Practice em roadmap 12-18m não são opcionais: sem essas certificações, o claim 'especialista em felinos' é vulnerável a reação de LM+. Tratar como ação defensiva prioritária."
+      "valor_final_aplicado": "ABFel + Cat Friendly Practice em roadmap 12-18m não são opcionais: sem essas certificações, o claim 'especialista em felinos' é vulnerável a reação de LM+. Tratar como ação defensiva prioritária.",
+      "valor_antigo_note": "Campo novo — não havia valor anterior nesta entrega antes desta revisão."
     },
     {
       "id": "U18",
@@ -585,7 +595,8 @@
       "severidade": "media",
       "origem_achado": "narrativa",
       "decisao_operador": "aceita",
-      "valor_final_aplicado": "[refinado em Semana 2] H1 atual do site ('Clínica Veterinária para cachorros e gatos em Americana SP') contradiz o posicionamento felino aprovado — identificado em ee-s2-diagnostico-cro > quality_flags (severity: high)."
+      "valor_final_aplicado": "[refinado em Semana 2] H1 atual do site ('Clínica Veterinária para cachorros e gatos em Americana SP') contradiz o posicionamento felino aprovado — identificado em ee-s2-diagnostico-cro > quality_flags (severity: high).",
+      "valor_antigo_note": "Campo novo — não havia valor anterior nesta entrega antes desta revisão."
     },
     {
       "id": "U20",
@@ -599,7 +610,8 @@
       "origem_achado": "evolucao",
       "referencia_evolucao": "E6",
       "decisao_operador": "aceita",
-      "valor_final_aplicado": "Comunicar 'consulta R$500' em mídia paga ou bio — afastaria Mariana. Preço de consulta felinos comunicado na faixa R$180-250 com ancoragem contra consulta isca R$70 dos 24h."
+      "valor_final_aplicado": "Comunicar 'consulta R$500' em mídia paga ou bio — afastaria Mariana. Preço de consulta felinos comunicado na faixa R$180-250 com ancoragem contra consulta isca R$70 dos 24h.",
+      "valor_antigo_note": "Campo novo — não havia valor anterior nesta entrega antes desta revisão."
     },
     {
       "id": "U21",
@@ -613,7 +625,8 @@
       "origem_achado": "evolucao",
       "referencia_evolucao": "E7",
       "decisao_operador": "aceita",
-      "valor_final_aplicado": "Refinar bio: remover 'Clinica geral de cães' (dilui o posicionamento felino declarado no posicionamento S2) e adicionar link wa.me clicável com CTA explícito."
+      "valor_final_aplicado": "Refinar bio: remover 'Clinica geral de cães' (dilui o posicionamento felino declarado no posicionamento S2) e adicionar link wa.me clicável com CTA explícito.",
+      "valor_antigo_note": "Campo novo — não havia valor anterior nesta entrega antes desta revisão."
     },
     {
       "id": "U22",
@@ -627,7 +640,8 @@
       "origem_achado": "evolucao",
       "referencia_evolucao": "E6",
       "decisao_operador": "aceita",
-      "valor_final_aplicado": "Importante distinguir consulta isolada (R$180-250) vs ticket médio total (R$500 registrado no briefing, que inclui exames/procedimentos). Comunicação externa usa apenas o range da consulta."
+      "valor_final_aplicado": "Importante distinguir consulta isolada (R$180-250) vs ticket médio total (R$500 registrado no briefing, que inclui exames/procedimentos). Comunicação externa usa apenas o range da consulta.",
+      "valor_antigo_note": "Campo novo — não havia valor anterior nesta entrega antes desta revisão."
     },
     {
       "id": "U23",
@@ -641,7 +655,8 @@
       "origem_achado": "evolucao",
       "referencia_evolucao": "E2",
       "decisao_operador": "aceita",
-      "valor_final_aplicado": "A Semana 1 descreveu Meta como 'R$800/mês desperdiçado' com CAC reportado R$266 (não validado por ERP). Após correção do fetch V4MOS, este diagnóstico inverteu a leitura: Meta subescalado (R$424/mês real), CPL de plataforma R$26. V4MOS não mede conversão lead→venda; portanto o CAC real continua sem validação até integração ERP. Decisão: escalar Meta com tracking, não pausar — usando CPL como baseline de mídia."
+      "valor_final_aplicado": "A Semana 1 descreveu Meta como 'R$800/mês desperdiçado' com CAC reportado R$266 (não validado por ERP). Após correção do fetch V4MOS, este diagnóstico inverteu a leitura: Meta subescalado (R$424/mês real), CPL de plataforma R$26. V4MOS não mede conversão lead→venda; portanto o CAC real continua sem validação até integração ERP. Decisão: escalar Meta com tracking, não pausar — usando CPL como baseline de mídia.",
+      "valor_antigo_note": "Campo novo — não havia valor anterior nesta entrega antes desta revisão."
     },
     {
       "id": "U24",
@@ -662,7 +677,8 @@
         "ts": "2026-04-22T15:00:00Z",
         "semana": 2,
         "note": "Revisão semanal S2 aplicou U1, U5, U6, U12, U13 sobre este output (pendente decisão do operador)."
-      }
+      },
+      "valor_antigo_note": "Campo novo — não havia valor anterior nesta entrega antes desta revisão."
     }
   ],
   "_refinement_history": [
@@ -672,7 +688,8 @@
       "updates_aplicadas": 0,
       "updates_rejeitadas": 0,
       "evolutions_applied": [],
-      "note": "Primeira execução da revisão semanal da S2. Nenhuma alteração aplicada — apenas mapeamento. 8 evoluções estratégicas, 5 divergências factuais, 9 gaps narrativos, 24 atualizações propostas aguardando decisão do operador."
+      "note": "Primeira execução da revisão semanal da S2. Nenhuma alteração aplicada — apenas mapeamento. 8 evoluções estratégicas, 5 divergências factuais, 9 gaps narrativos, 24 atualizações propostas aguardando decisão do operador.",
+      "evolutions_applied_note": "Primeira revisão semanal — sem evoluções anteriores aplicadas. Lista preenche a partir da próxima revisão."
     },
     {
       "ts": "2026-04-22T13:34:56Z",

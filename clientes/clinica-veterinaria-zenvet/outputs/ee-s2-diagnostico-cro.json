@@ -1,6 +1,55 @@
 {
-  "summary": "Zenvet: LP com arquitetura CRO básica mas tagueamento fantasma (GTM sem GA4/Pixel), zero compliance LGPD (risco de multa ANPD) e H1 contradizendo posicionamento felino aprovado. Prioridade P1: (1) trocar H1 para reforçar PUV Especialista em Felinos, (2) instalar GA4+Meta Pixel + Consent Mode v2, (3) adicionar depoimentos reais e CNPJ/política LGPD.",
   "client_name": "Clínica Veterinária Zenvet",
+  "summary": "Zenvet: LP com arquitetura CRO básica mas tagueamento fantasma (GTM sem GA4/Pixel), zero compliance LGPD (risco de multa ANPD) e H1 contradizendo posicionamento felino aprovado. Prioridade P1: (1) trocar H1 para reforçar PUV Especialista em Felinos, (2) instalar GA4+Meta Pixel + Consent Mode v2, (3) adicionar depoimentos reais e CNPJ/política LGPD.",
+  "summary_headline": "LP Zenvet: arquitetura CRO básica OK mas tagueamento fantasma + zero LGPD compliance + H1 contradiz PUV.",
+  "summary_highlights": [
+    {
+      "category": "risco",
+      "label": "Tagueamento",
+      "value": "Fantasma",
+      "subtext": "GTM presente sem GA4/Pixel — não há eventos",
+      "tone": "red"
+    },
+    {
+      "category": "risco",
+      "label": "LGPD",
+      "value": "Zero compliance",
+      "subtext": "Sem CMP, sem cookie banner, sem política",
+      "tone": "red"
+    },
+    {
+      "category": "oportunidade",
+      "label": "Quick win",
+      "value": "Corrigir H1",
+      "subtext": "Hoje contradiz PUV — perde clareza acima da dobra",
+      "tone": "yellow"
+    },
+    {
+      "category": "maturidade",
+      "label": "On-page SEO",
+      "value": "Básico",
+      "subtext": "Mobile OK, schema ausente, sem divergências graves",
+      "tone": "blue"
+    }
+  ],
+  "summary_key_findings": [
+    {
+      "category": "ameaca",
+      "text": "GTM instalado mas vazio — nenhum evento de conversão sendo disparado. Toda otimização CRO depende de tracking real."
+    },
+    {
+      "category": "ameaca",
+      "text": "Risco de multa ANPD por ausência total de compliance LGPD — banner, política e CMP precisam entrar antes de escalar tráfego."
+    },
+    {
+      "category": "vantagem",
+      "text": "Stack técnica enxuta e mobile-first — não há débito de plataforma que impeça ajustes de copy/UX."
+    },
+    {
+      "category": "acao",
+      "text": "Sprint 1 CRO: instalar Pixel + GA4 + 4 eventos críticos, corrigir H1 e adicionar prova social acima da dobra."
+    }
+  ],
   "segment": "Saúde Animal & Pet Care",
   "url": "https://clinicazenvet.com.br",
   "current_conversion_rate": null,
@@ -117,7 +166,8 @@
       "links_external": 5,
       "links_nofollow": 0,
       "html_size_kb": 101.3,
-      "response_time_ms": 178
+      "response_time_ms": 178,
+      "schema_types_note": "Sem JSON-LD/microdata detectado — perda de rich snippets em busca local."
     },
     "desktop": {
       "title": "Clínica Veterinária em Americana SP | Zenvet | 24h",
@@ -137,7 +187,8 @@
       "html_size_kb": 101.3,
       "response_time_ms": 179
     },
-    "divergences": []
+    "divergences": [],
+    "divergences_note": "Title e meta description estáveis entre rastreios — sem divergências relevantes detectadas."
   },
   "security_headers": {
     "https": true,
@@ -547,7 +598,12 @@
       ],
       "meta_pixel": [],
       "tiktok_pixel": [],
-      "linkedin_partner": []
+      "linkedin_partner": [],
+      "ga4_note": "Auditoria do site não detectou IDs deste tipo no DOM nem no GTM. Compatível com diagnóstico geral de tagueamento fantasma.",
+      "ua_note": "Auditoria do site não detectou IDs deste tipo no DOM nem no GTM. Compatível com diagnóstico geral de tagueamento fantasma.",
+      "meta_pixel_note": "Auditoria do site não detectou IDs deste tipo no DOM nem no GTM. Compatível com diagnóstico geral de tagueamento fantasma.",
+      "tiktok_pixel_note": "Auditoria do site não detectou IDs deste tipo no DOM nem no GTM. Compatível com diagnóstico geral de tagueamento fantasma.",
+      "linkedin_partner_note": "Auditoria do site não detectou IDs deste tipo no DOM nem no GTM. Compatível com diagnóstico geral de tagueamento fantasma."
     },
     "categories_summary": {
       "tracking": [
@@ -581,7 +637,9 @@
       "PageView (Meta Pixel)",
       "scroll (GA4 enhanced measurement)",
       "Lead / generate_lead (quando clica no WhatsApp)"
-    ]
+    ],
+    "ga4_event_names_note": "Nenhum evento disparando — coerente com tagueamento fantasma diagnosticado.",
+    "meta_event_names_note": "Nenhum evento disparando — coerente com tagueamento fantasma diagnosticado."
   },
   "quality_flags": [
     {
@@ -845,7 +903,8 @@
       "  • googletagmanager.com/gtm.js: 1 request(s)",
       "  • doubleclick.net: 1 request(s)"
     ],
-    "recommendation": "URGENTE — Risco LGPD: sem CMP e com GTM + Google Ads disparando pré-consent, Zenvet está em não-conformidade explícita. Ação em 2 passos: (1) Instalar Cookiebot gratuito (plano Premium free até 500k pageviews/mês) ou OneTrust; (2) Configurar gtag('consent', 'default', {ad_storage:'denied', analytics_storage:'denied'}) + Consent Mode v2 no GTM. Custo zero, mitigação total. Sem ação, risco de multa ANPD até R$50M ou 2% do faturamento (art. 52 LGPD)."
+    "recommendation": "URGENTE — Risco LGPD: sem CMP e com GTM + Google Ads disparando pré-consent, Zenvet está em não-conformidade explícita. Ação em 2 passos: (1) Instalar Cookiebot gratuito (plano Premium free até 500k pageviews/mês) ou OneTrust; (2) Configurar gtag('consent', 'default', {ad_storage:'denied', analytics_storage:'denied'}) + Consent Mode v2 no GTM. Custo zero, mitigação total. Sem ação, risco de multa ANPD até R$50M ou 2% do faturamento (art. 52 LGPD).",
+    "cmps_detected_note": "Nenhum CMP (consent management platform) detectado — risco de multa ANPD."
   },
   "ga4_unavailable_reason": "GA4 não instalado — métricas de conversão/bounce/tempo não coletadas",
   "unavailable_reason": "Várias métricas dependem de GA4/instrumentação não instalados — ver campos específicos e suas notas",

@@ -1,5 +1,51 @@
 {
+  "client_name": "Clínica Veterinária Zenvet",
   "summary": "Brandbook da Clínica Veterinária Zenvet com 4 adjetivos de tom (Especialista · Humano · Transparente · Próximo), narrativa em 3 atos centrada na ansiedade da tutora de gato em decidir bem, e banco de copy de 30 headlines + 25 CTAs + 7 frases-chave + vocabulário com 12 termos a usar e 12 a evitar — tudo ancorado na PUV 'A clínica veterinária privada especialista em felinos de Americana — com medicina humana, acompanhamento pós-consulta e sem conta surpresa.' Diferencial verbal proprietário: combinação 'especialista sem arrogância + humano sem infantilização + transparente sem burocracia + próximo sem invasão' — traduz em linguagem aplicável a Loíse no WhatsApp e a Nathalia em conteúdo, sem deixar para 'sentido editorial'.",
+  "summary_headline": "Brandbook Zenvet: 4 adjetivos de tom + narrativa em 3 atos centrada na Dra. Nathalia + copy bank com 30+ snippets prontos.",
+  "summary_highlights": [
+    {
+      "category": "posicao",
+      "label": "Adjetivos de tom",
+      "value": "4",
+      "subtext": "Especialista · Humano · Transparente · Próximo",
+      "tone": "blue"
+    },
+    {
+      "category": "maturidade",
+      "label": "Narrativa",
+      "value": "3 atos",
+      "subtext": "Origem · Diferencial · Promessa",
+      "tone": "green"
+    },
+    {
+      "category": "oportunidade",
+      "label": "Copy bank",
+      "value": "30+ snippets",
+      "subtext": "Prontos pra reuso em ads, lp, posts, GMB",
+      "tone": "green"
+    },
+    {
+      "category": "competicao",
+      "label": "Identidade verbal",
+      "value": "Diferenciada",
+      "subtext": "Sem diminutivos pet, sem termos genéricos de mercado",
+      "tone": "green"
+    }
+  ],
+  "summary_key_findings": [
+    {
+      "category": "vantagem",
+      "text": "4 adjetivos de tom dão à equipe um filtro deterministico para qualquer copy — reduz variância entre canais."
+    },
+    {
+      "category": "contexto",
+      "text": "Narrativa em 3 atos coloca Dra. Nathalia como protagonista — facilita reuso em entrevistas, depoimentos, conteúdo orgânico."
+    },
+    {
+      "category": "acao",
+      "text": "Copy bank deve ser fonte única para qualquer copy futura — reescrever do zero quebra coerência de marca."
+    }
+  ],
   "purpose": {
     "why_we_exist": "Existimos para que tutores de gato em Americana parem de aceitar atendimento veterinário genérico — porque cada gato esconde dor por instinto e merece uma profissional que enxergue isso antes que seja tarde, e cada tutora merece decidir com informação, não com susto.",
     "for_whom": "Para tutoras como a Mariana, que tratam o gato como filho da casa, pesquisam por dias antes de confiar e querem decidir com informação — não com susto. E para tutores como o Carlos, que querem hora marcada, sem fila e conta sem surpresa para cuidar do cachorro da família.",
@@ -165,32 +211,104 @@
     ],
     "vocabulary": {
       "always_use": [
-        { "word": "felino / felinos", "context": "Em vez de 'gatos' quando o foco é técnico ou de posicionamento. 'Especialista em felinos', 'medicina felina', 'comportamento felino'." },
-        { "word": "tutor / tutora", "context": "Em vez de 'dono'. Reflete o vínculo (filho da casa) e respeita o pet." },
-        { "word": "paciente", "context": "Em vez de 'animal' ou 'pet' em comunicação clínica. Sempre que souber, chamar pelo nome ('o Simba', 'o Thor')." },
-        { "word": "consulta especialista", "context": "Em vez de 'consulta' apenas, em peças comerciais e na LP. Reforça os 40 min e a formação felina declarada." },
-        { "word": "acompanhamento (pós-consulta)", "context": "Em vez de 'follow-up' ou 'pós-venda'. Termo humano e sistematizado." },
-        { "word": "orçamento aprovado item a item", "context": "Em vez de 'preço fechado' ou 'tabela'. Comunica o protocolo de transparência da clínica." },
-        { "word": "histórico", "context": "Em vez de 'prontuário'. Linguagem mais humana e relacional na comunicação externa." },
-        { "word": "esconde dor por instinto", "context": "Frase-chave educativa em conteúdo top-of-funnel sobre comportamento felino." },
-        { "word": "ambiente preparado para felinos", "context": "Em vez de 'cat friendly' (jargão). Quando referir estrutura física ou roadmap de adaptação." },
-        { "word": "medicina felina", "context": "Em vez de 'tratamento de gato'. Termo correto, mais técnico-comercial e indexável em SEO." },
-        { "word": "Dra. Nathalia", "context": "Sempre com o título 'Dra.'. Personalização do atendimento e identidade do negócio." },
-        { "word": "filho da casa", "context": "Frase de espelhamento em narrativa, prefixada por 'que tratam o pet como'. Ativa identificação imediata da Mariana sem virar clichê." }
+        {
+          "word": "felino / felinos",
+          "context": "Em vez de 'gatos' quando o foco é técnico ou de posicionamento. 'Especialista em felinos', 'medicina felina', 'comportamento felino'."
+        },
+        {
+          "word": "tutor / tutora",
+          "context": "Em vez de 'dono'. Reflete o vínculo (filho da casa) e respeita o pet."
+        },
+        {
+          "word": "paciente",
+          "context": "Em vez de 'animal' ou 'pet' em comunicação clínica. Sempre que souber, chamar pelo nome ('o Simba', 'o Thor')."
+        },
+        {
+          "word": "consulta especialista",
+          "context": "Em vez de 'consulta' apenas, em peças comerciais e na LP. Reforça os 40 min e a formação felina declarada."
+        },
+        {
+          "word": "acompanhamento (pós-consulta)",
+          "context": "Em vez de 'follow-up' ou 'pós-venda'. Termo humano e sistematizado."
+        },
+        {
+          "word": "orçamento aprovado item a item",
+          "context": "Em vez de 'preço fechado' ou 'tabela'. Comunica o protocolo de transparência da clínica."
+        },
+        {
+          "word": "histórico",
+          "context": "Em vez de 'prontuário'. Linguagem mais humana e relacional na comunicação externa."
+        },
+        {
+          "word": "esconde dor por instinto",
+          "context": "Frase-chave educativa em conteúdo top-of-funnel sobre comportamento felino."
+        },
+        {
+          "word": "ambiente preparado para felinos",
+          "context": "Em vez de 'cat friendly' (jargão). Quando referir estrutura física ou roadmap de adaptação."
+        },
+        {
+          "word": "medicina felina",
+          "context": "Em vez de 'tratamento de gato'. Termo correto, mais técnico-comercial e indexável em SEO."
+        },
+        {
+          "word": "Dra. Nathalia",
+          "context": "Sempre com o título 'Dra.'. Personalização do atendimento e identidade do negócio."
+        },
+        {
+          "word": "filho da casa",
+          "context": "Frase de espelhamento em narrativa, prefixada por 'que tratam o pet como'. Ativa identificação imediata da Mariana sem virar clichê."
+        }
       ],
       "never_use": [
-        { "word": "peludo / peludinho", "use_instead": "felino, gato, paciente (ou nome quando souber)" },
-        { "word": "dono", "use_instead": "tutor / tutora" },
-        { "word": "bichinho / bichano", "use_instead": "gato, pet, paciente, nome do paciente" },
-        { "word": "pet em geral / qualquer pet", "use_instead": "felinos e cães (ou felino quando comunicação for específica para Mariana)" },
-        { "word": "consulta básica", "use_instead": "consulta especialista" },
-        { "word": "promoção", "use_instead": "pacote (anual, castração, vacinação) ou condição" },
-        { "word": "preço fechado", "use_instead": "valor do serviço, orçamento aprovado item a item" },
-        { "word": "exame de rotina", "use_instead": "exame complementar (quando houver indicação clínica)" },
-        { "word": "urgência (em comunicação proativa)", "use_instead": "emergência (e contextualizar que a clínica não atende 24h)" },
-        { "word": "follow-up", "use_instead": "acompanhamento" },
-        { "word": "cliente (em peças externas)", "use_instead": "tutor / tutora; 'cliente' fica restrito a fala financeira interna" },
-        { "word": "diminutivos infantilizantes (consultinha, castraçãozinha, vacinhazinha)", "use_instead": "consulta, castração, vacina (sem diminutivo)" }
+        {
+          "word": "peludo / peludinho",
+          "use_instead": "felino, gato, paciente (ou nome quando souber)"
+        },
+        {
+          "word": "dono",
+          "use_instead": "tutor / tutora"
+        },
+        {
+          "word": "bichinho / bichano",
+          "use_instead": "gato, pet, paciente, nome do paciente"
+        },
+        {
+          "word": "pet em geral / qualquer pet",
+          "use_instead": "felinos e cães (ou felino quando comunicação for específica para Mariana)"
+        },
+        {
+          "word": "consulta básica",
+          "use_instead": "consulta especialista"
+        },
+        {
+          "word": "promoção",
+          "use_instead": "pacote (anual, castração, vacinação) ou condição"
+        },
+        {
+          "word": "preço fechado",
+          "use_instead": "valor do serviço, orçamento aprovado item a item"
+        },
+        {
+          "word": "exame de rotina",
+          "use_instead": "exame complementar (quando houver indicação clínica)"
+        },
+        {
+          "word": "urgência (em comunicação proativa)",
+          "use_instead": "emergência (e contextualizar que a clínica não atende 24h)"
+        },
+        {
+          "word": "follow-up",
+          "use_instead": "acompanhamento"
+        },
+        {
+          "word": "cliente (em peças externas)",
+          "use_instead": "tutor / tutora; 'cliente' fica restrito a fala financeira interna"
+        },
+        {
+          "word": "diminutivos infantilizantes (consultinha, castraçãozinha, vacinhazinha)",
+          "use_instead": "consulta, castração, vacina (sem diminutivo)"
+        }
       ],
       "call_customers": "tutor / tutora — sempre, em comunicação interna e externa. 'Cliente' fica restrito a fala financeira interna; nunca em peças, copy ou WhatsApp.",
       "call_product": "consulta especialista, atendimento, acompanhamento — nunca 'serviço' em peças externas. Para o pet: 'paciente' (com nome quando souber)."
