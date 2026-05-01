@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import StatsTransition from "@/components/StatsTransition";
 import Problem from "@/components/Problem";
 import DraNathalia from "@/components/DraNathalia";
+import TeamCarousel from "@/components/TeamCarousel";
 import Solution from "@/components/Solution";
 import HowItWorks from "@/components/HowItWorks";
 import Deliverables from "@/components/Deliverables";
@@ -22,6 +23,7 @@ export default function HomePage() {
         <StatsTransition />
         <Problem />
         <DraNathalia />
+        <TeamCarousel />
         <Solution />
         <HowItWorks />
         <Deliverables />
