@@ -5,7 +5,7 @@ import { Star } from "lucide-react";
 export default function SocialProof() {
   const { testimonials } = SOCIAL_PROOF as any;
   return (
-    <section className="bg-cream">
+    <section id="social-proof" className="bg-beige">
       <div className="container-content section">
         <header className="max-w-3xl mb-10">
           <div className="text-[11px] uppercase tracking-[0.15em] font-semibold text-turquoise-dark mb-3">

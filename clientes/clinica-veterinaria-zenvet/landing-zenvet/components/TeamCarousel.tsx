@@ -73,7 +73,7 @@ export default function TeamCarousel() {
   }, []);
 
   return (
-    <section id="bastidores" className="bg-cream relative overflow-hidden">
+    <section id="bastidores" className="bg-turquoise-mist relative overflow-hidden">
       <div className="container-content section">
         <header className="max-w-3xl mb-8 md:mb-10">
           <div className="text-[11px] uppercase tracking-[0.18em] font-semibold text-turquoise-dark mb-3">

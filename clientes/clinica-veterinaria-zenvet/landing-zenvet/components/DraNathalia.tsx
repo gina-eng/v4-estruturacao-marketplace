@@ -10,15 +10,14 @@ export default function DraNathalia() {
       className="bg-purple-deep text-white relative overflow-hidden"
     >
       <div className="container-content section grid md:grid-cols-[1fr_1.2fr] gap-12 md:gap-16 items-center relative z-10">
-        {/* Photo — bottom-anchored, extends to section's bottom edge */}
-        <div className="relative aspect-[4/5] self-end -mb-16 md:-mb-24">
+        {/* Photo — vertically centered with text */}
+        <div className="relative aspect-[3/4] w-full max-w-md mx-auto md:max-w-none">
           <Image
-            src="/photos/dra-retrato-cutout-v2.png"
+            src="/photos/dra-nathalia-retrato.png"
             alt="Dra. Nathalia — retrato profissional"
             fill
-            sizes="(min-width: 768px) 50vw, 100vw"
-            className="object-contain object-bottom drop-shadow-2xl"
-            style={{ transform: "scale(1.3)", transformOrigin: "bottom center" }}
+            sizes="(min-width: 768px) 45vw, 100vw"
+            className="object-contain object-center drop-shadow-2xl"
           />
         </div>
 

@@ -4,7 +4,7 @@ import { Check } from "lucide-react";
 export default function Deliverables() {
   const s: any = sectionByName("deliverables");
   return (
-    <section id="deliverables" className="bg-beige">
+    <section id="deliverables" className="bg-turquoise-mist">
       <div className="container-content section">
         <header className="max-w-3xl mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">{s.headline}</h2>

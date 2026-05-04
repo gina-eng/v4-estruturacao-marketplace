@@ -5,9 +5,14 @@
       "name": "hero",
       "eyebrow": "Atendimento na clínica + domiciliar · Americana / SP",
       "headline": "Seu gato merece uma vet que entende de gato.",
-      "subheadline": "A Dra. Nathalia é especialista em felinos. Atende sem afobação, explica cada conduta — e cuida do seu gato como se fosse dela.",
+      "subheadline": "Atendimento felino especializado, sem afobação, com explicações claras e cuidado individualizado para cada paciente.",
       "cta_primary": "Agendar com a Dra. Nathalia",
       "cta_secondary": "Conhecer a Dra. ↓",
+      "pills": [
+        { "icon": "cat", "label": "Especialista em felinos" },
+        { "icon": "heart", "label": "Consulta sem estresse" },
+        { "icon": "home", "label": "Atendimento acolhedor" }
+      ],
       "stats": [
         { "number": "8 anos", "label": "dedicada a felinos" },
         { "number": "+1.200", "label": "gatos atendidos" },
@@ -15,7 +20,21 @@
       ],
       "credential_card": {
         "name": "Dra. Nathalia Alves",
-        "role": "CRMV-SP · Med. Veterinária"
+        "role": "CRMV-SP · Méd. Veterinária"
+      },
+      "social_bar": {
+        "rating": 5,
+        "text_prefix": "Mais de",
+        "text_number": "1.000",
+        "text_suffix": "tutores atendidos com carinho e atenção",
+        "avatars": [
+          "/photos/testimonials/gato-amanda-silva.webp",
+          "/photos/testimonials/xareu-amanda-carolina.webp",
+          "/photos/testimonials/arlete-katia-leite.webp",
+          "/photos/testimonials/gato-amanda-silva.webp"
+        ],
+        "badge": "+1k",
+        "tail": "e contando…"
       }
     },
     {

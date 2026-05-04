@@ -12,13 +12,62 @@ const NAV = [
   { label: "FAQ", href: "#faq" },
 ];
 
-const DARK_SECTIONS = new Set(["dra-nathalia", "agendar"]);
+type Theme = "beige" | "purple" | "white" | "mint";
+
+const SECTION_THEME: Record<string, Theme> = {
+  hero: "beige",
+  stats: "purple",
+  problem: "white",
+  "dra-nathalia": "purple",
+  bastidores: "mint",
+  solution: "beige",
+  "how-it-works": "white",
+  deliverables: "mint",
+  "social-proof": "beige",
+  "for-dogs": "mint",
+  faq: "white",
+  agendar: "purple",
+};
+
+const THEME_STYLES: Record<
+  Theme,
+  { bar: string; text: string; navText: string; cta: string; logoWhite: boolean }
+> = {
+  beige: {
+    bar: "bg-beige/90 border-purple-deep/10",
+    text: "text-graphite",
+    navText: "text-graphite hover:text-purple-deep",
+    cta: "bg-purple-deep text-white hover:opacity-90",
+    logoWhite: false,
+  },
+  white: {
+    bar: "bg-white/90 border-purple-deep/10",
+    text: "text-graphite",
+    navText: "text-graphite hover:text-purple-deep",
+    cta: "bg-purple-deep text-white hover:opacity-90",
+    logoWhite: false,
+  },
+  mint: {
+    bar: "bg-turquoise-mist/90 border-purple-deep/10",
+    text: "text-graphite",
+    navText: "text-graphite hover:text-purple-deep",
+    cta: "bg-purple-deep text-white hover:opacity-90",
+    logoWhite: false,
+  },
+  purple: {
+    bar: "bg-purple-deep/90 border-white/10",
+    text: "text-white",
+    navText: "text-white/80 hover:text-white",
+    cta: "bg-turquoise text-purple-shadow hover:opacity-90",
+    logoWhite: true,
+  },
+};
 
 const SHOW_AFTER_PX = 180;
 
 export default function Header() {
   const [visible, setVisible] = useState(false);
-  const [isDark, setIsDark] = useState(false);
+  const [theme, setTheme] = useState<Theme>("beige");
 
   useEffect(() => {
     const handle = () => {
@@ -33,7 +82,7 @@ export default function Header() {
           break;
         }
       }
-      setIsDark(DARK_SECTIONS.has(activeId));
+      setTheme(SECTION_THEME[activeId] ?? "beige");
     };
     handle();
     window.addEventListener("scroll", handle, { passive: true });
@@ -44,23 +93,21 @@ export default function Header() {
     };
   }, []);
 
+  const t = THEME_STYLES[theme];
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-40 backdrop-blur-md border-b transition-all duration-300 ${
         visible
           ? "translate-y-0 opacity-100 pointer-events-auto"
           : "-translate-y-full opacity-0 pointer-events-none"
-      } ${
-        isDark
-          ? "bg-purple-deep/90 border-white/10"
-          : "bg-beige/90 border-purple-deep/10"
-      }`}
+      } ${t.bar}`}
     >
       <div className="container-content flex items-center justify-between gap-6 px-6 py-3 md:py-4">
         <a href="#" aria-label="Zenvet — início" className="flex items-center">
           <Image
             src={
-              isDark
+              t.logoWhite
                 ? "/logo/zenvet_horizontal_white.svg"
                 : "/logo/zenvet_horizontal.svg"
             }
@@ -76,11 +123,7 @@ export default function Header() {
             <a
               key={item.href}
               href={item.href}
-              className={`text-sm font-medium transition ${
-                isDark
-                  ? "text-white/80 hover:text-white"
-                  : "text-graphite hover:text-purple-deep"
-              }`}
+              className={`text-sm font-medium transition ${t.navText}`}
             >
               {item.label}
             </a>
@@ -90,11 +133,7 @@ export default function Header() {
           href={WHATSAPP_LINK}
           target="_blank"
           rel="noopener"
-          className={`inline-flex items-center gap-2 text-xs md:text-sm font-semibold px-4 md:px-5 py-2.5 rounded-full transition ${
-            isDark
-              ? "bg-turquoise text-purple-shadow hover:opacity-90"
-              : "bg-purple-deep text-white hover:opacity-90"
-          }`}
+          className={`inline-flex items-center gap-2 text-xs md:text-sm font-semibold px-4 md:px-5 py-2.5 rounded-full transition ${t.cta}`}
         >
           <span className="hidden sm:inline">Agendar consulta</span>
           <span className="sm:hidden">Agendar</span>
