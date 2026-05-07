@@ -2152,10 +2152,11 @@
         "version": 1
       },
       "ee-s4-diagnostico-comercial": {
-        "status": "pending",
-        "checkpoint": 0,
-        "started_at": null,
-        "completed_at": null
+        "status": "completed",
+        "checkpoint": 1,
+        "version": 2,
+        "started_at": "2026-05-07T17:46:44Z",
+        "completed_at": "2026-05-07T19:47:31Z"
       },
       "ee-s4-cliente-oculto": {
         "status": "pending",
@@ -2385,6 +2386,20 @@
       "action": "marked_completed",
       "version": 1,
       "note": "Marcado como concluído pelo operador. Configuração do CRM (Kommo) realizada externamente — pipeline + réguas de boas-vindas e nutrição configurados, Loíse com script consultivo. Detalhes da execução não documentados no output desta skill."
+    },
+    {
+      "ts": "2026-05-07T17:46:44Z",
+      "skill": "ee-s4-diagnostico-comercial",
+      "action": "completed",
+      "version": 1,
+      "note": "Diagnóstico comercial Zenvet com dados validados pela cliente: 72 leads → 50 contatados (69%) → 12 agendados (24% Contato→Agendamento, CRÍTICO -18,5pp vs benchmark Saúde 35-50%) → 100% show. DOIS gargalos: (1) Contato→Agendamento principal (sem script + sem follow-up + sem CRM, 38 leads/mês somem após contato); (2) Lead→Contato secundário (22 leads/mês silenciosamente perdidos antes do contato — janela morta 22h-8h + simultaneidade presencial + canais paralelos). Vantagens confirmadas: tempo 1ª resposta 2-10min (já cumpre meta DRO 3 V4MOS), show ~100%, cobertura 12h/dia/7d. Critério 5★ validado pela Nathalia: 'tutor que trata o animal como filho e não mede esforços' (= Mariana plena). Plano 5 ações: Follow-up Kommo 24h/72h/7d (P1, 30d) · Script consultivo S5 (P2, 20d) · Treinamento qualificação 1-5★ (P3, 15d) · Tabela preços transparente WhatsApp (P4, 15d) · SDR IA Patagon re-priorizado para COBERTURA dos 22 silenciosos, não velocidade (P5, 60d). Receita recuperável: +R$3.500 a +R$7.000/mês. Portal deployado: https://portal-zenvet.vercel.app"
+    },
+    {
+      "ts": "2026-05-07T19:47:31Z",
+      "skill": "ee-s4-diagnostico-comercial",
+      "action": "refined",
+      "version": 2,
+      "note": "Adicionado funnel_extended (7 chevrons R→L estilo 'Destrava Receita') em base mensal coerente. Etapas: Exposição (52.929 imp/mês Google+Meta) → Atenção (1.064 cliques/mês, CTR 2,01%) → Interesse (~1.064 visitas/mês [E], sem GA4) → Qualificação (72 leads) → Compromisso (12 agendados, 16,67%, RESTRIÇÃO ATIVA) → Decisão (12 consultas pagas) → Retenção (~150 retornos/mês [E] sobre base 1.186 ativos = 12,65%). Renderer ganhou função chartChevronFunnel() — pinta chevrons R→L com destaque visual da restrição e padrão diagonal nas estimativas. Tabela detalhada de 4 etapas mantida como complemento."
     }
   ],
   "page_audit": {

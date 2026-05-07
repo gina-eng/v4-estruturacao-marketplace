@@ -72,6 +72,16 @@ if marker not in template:
 
 result = template.replace(marker, data_json)
 
+# Inject Funnel "Destrava Receita" SVG inline as JSON-stringified literal
+# (filters/feGaussianBlur só renderizam confiavelmente quando o SVG é inline, não em data: URLs)
+funnel_svg_path = os.path.join(os.path.dirname(template_path), 'assets', 'funil-destrava-receita.svg')
+if os.path.isfile(funnel_svg_path):
+    with open(funnel_svg_path, 'r', encoding='utf-8') as f:
+        svg_content = f.read()
+    svg_js_literal = json.dumps(svg_content, ensure_ascii=False)
+    result = result.replace('/*%%FUNNEL_SVG_INLINE%%*/""', svg_js_literal)
+    result = result.replace('/*%%FUNNEL_SVG_INLINE%%*/', svg_js_literal)
+
 os.makedirs(os.path.dirname(output_path) or '.', exist_ok=True)
 with open(output_path, 'w', encoding='utf-8') as f:
     f.write(result)

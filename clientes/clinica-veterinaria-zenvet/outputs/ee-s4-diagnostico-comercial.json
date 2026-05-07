@@ -1,0 +1,375 @@
+{
+  "client_name": "Clínica Veterinária Zenvet",
+  "summary": "Funil da Zenvet: 72 leads/mês entram, 50 são contatados pela Loíse (69%), 12 agendam (24% contato→agendamento) e ~100% comparecem. DOIS gargalos: (1) Lead→Contato 69% no piso do benchmark Saúde (65-80%) — 22 leads/mês somem antes de a Loíse falar com eles; (2) Contato→Agendamento 24% vs 35-50% — onde mora o 'lead some sem retorno'. Vantagem confirmada: tempo de 1ª resposta 2-10min (acima da meta DRO 3 V4MOS de 90% ≤10min). Critério 5★ validado pela Nathalia: 'tutor que trata o animal como filho e não mede esforços para cuidar' — perfil Mariana plena. Receita recuperável corrigindo os dois gargalos: +R$3.500 a +R$7.000/mês.",
+  "summary_headline": "Resposta em 2-10min é vantagem real, mas 22 leads/mês somem antes do contato e 76% dos contatados não agendam — perde R$3,5k-7k/mês.",
+  "summary_highlights": [
+    {
+      "category": "risco",
+      "label": "Contato → Agendamento",
+      "value": "24%",
+      "subtext": "Benchmark Saúde/Estética: 35-50%. Status: CRÍTICO (-18,5pp). Dos 50 leads contatados, só 12 agendam.",
+      "tone": "red"
+    },
+    {
+      "category": "risco",
+      "label": "Lead → Contato",
+      "value": "69%",
+      "subtext": "Benchmark: 65-80%. Status: piso do benchmark. 22 leads/mês somem antes de a Loíse responder — gargalo secundário, +R$1k/mês recuperável.",
+      "tone": "yellow"
+    },
+    {
+      "category": "oportunidade",
+      "label": "Receita recuperável (2 gargalos)",
+      "value": "+R$3.500 a +R$7.000/mês",
+      "subtext": "Conservador (Lead→Contato 75% + Contato→Agendamento 35%): +R$3,5k. Otimista (80% + 45%): +R$7k. Ticket R$500.",
+      "tone": "red"
+    },
+    {
+      "category": "vantagem",
+      "label": "Tempo de 1ª resposta",
+      "value": "2-10min",
+      "subtext": "Confirmado pela Nathalia. Já cumpre meta DRO 3 V4MOS (90% ≤10min). Vantagem real vs PME comum — quando Loíse responde, ela responde rápido.",
+      "tone": "green"
+    },
+    {
+      "category": "vantagem",
+      "label": "Show rate (agendamento → atendimento)",
+      "value": "~100%",
+      "subtext": "Acima do benchmark Saúde (70-85%). Quem agenda, comparece e paga consulta.",
+      "tone": "green"
+    },
+    {
+      "category": "maturidade",
+      "label": "Processo comercial",
+      "value": "0/5",
+      "subtext": "Sem script consultivo · sem CRM de funil (Vetsoft é prontuário) · sem follow-up estruturado · 1 vendedora · auto-mensagem genérica como único filtro.",
+      "tone": "red"
+    }
+  ],
+  "summary_key_findings": [
+    {
+      "category": "vantagem",
+      "text": "Tempo de 1ª resposta da Loíse: 2-10min (confirmado pela Nathalia). Já está acima da meta DRO 3 V4MOS de 90% ≤10min. Show rate ~100% e cobertura 12h/dia/7d completam o quadro: o problema NÃO é velocidade nem qualidade do atendimento que acontece — é volume de atendimento que NÃO acontece."
+    },
+    {
+      "category": "ameaca",
+      "text": "GARGALO PRIMÁRIO: 24% Contato→Agendamento vs benchmark 35-50% (CRÍTICO, -18,5pp). Dos 50 leads que a Loíse contata por mês, 38 não agendam. Este é o ralo que o forecast S3 v4 (65→120 leads/mês em 6 meses) vai amplificar se não corrigir antes."
+    },
+    {
+      "category": "ameaca",
+      "text": "GARGALO SECUNDÁRIO INVISÍVEL: 22 leads/mês (30% do volume) NÃO recebem resposta da Loíse — ficam fora dos 50 contatados. Causas prováveis: (a) leads fora do horário 8h-20h; (b) simultaneidade quando Loíse está em atendimento presencial; (c) leads em canais paralelos (Instagram DM, formulário do site) que não chegam ao WhatsApp da Loíse. Sem CRM comercial, é gargalo silencioso."
+    },
+    {
+      "category": "contexto",
+      "text": "Loíse usa auto-mensagem fixa ('cão ou gato? domicílio ou clínica?') como único filtro de qualificação. Sem script consultivo para preço/concorrência, sem follow-up dos que somem, sem CRM comercial. Vetsoft é prontuário clínico, não funil de vendas. Critério 5★ validado pela Nathalia: tutor que 'trata o animal como filho e não mede esforços' — perfil Mariana plena confirmado."
+    },
+    {
+      "category": "acao",
+      "text": "Plano combinado (Follow-up 24h/72h/7d + Script consultivo + Qualificação 1-5★ + SDR IA cobrindo 22 leads silenciosos) deve subir Lead→Contato para 75-80% e Contato→Agendamento para 30-35% em 60 dias. Impacto: +7 a +14 agendamentos/mês = +R$3.500 a +R$7.000 receita inicial + LTV recorrente (retenção média 12 meses)."
+    }
+  ],
+  "funnel_diagnosis": [
+    {
+      "stage": "Lead → Primeiro Contato",
+      "current_rate": 69,
+      "benchmark": 72.5,
+      "gap": -3.5,
+      "status": "below_benchmark",
+      "bottleneck": "GARGALO SECUNDÁRIO. Confirmado pela Nathalia: dos 72 leads/mês, só ~50 são respondidos pela Loíse. 22 leads/mês (30%) somem sem qualquer contato — gargalo silencioso porque não há CRM que registre o lead que chegou e não foi atendido.",
+      "root_cause": "Três causas prováveis sobrepostas, sem possibilidade de medir qual pesa mais sem CRM: (a) leads chegando fora do horário 8h-20h (22h-8h é janela morta de 10h/dia); (b) Loíse acumula recepção presencial + WhatsApp — simultaneidade durante consulta presencial enfileira mensagens; (c) leads em canais não-unificados (Instagram DM, formulário do site clinicazenvet.com.br) podem não cair no mesmo WhatsApp que ela monitora. Tempo de resposta para os que SÃO atendidos é excelente (2-10min, confirmado), o que reforça que o problema é cobertura/captura, não velocidade.",
+      "financial_impact_monthly": 1000
+    },
+    {
+      "stage": "Primeiro Contato → Agendamento",
+      "current_rate": 24,
+      "benchmark": 42.5,
+      "gap": -18.5,
+      "status": "critical",
+      "bottleneck": "GARGALO PRINCIPAL. Dos 50 leads contatados pela Loíse, só 12 agendam (24%). Lead conversa, ouve preço, some — sem follow-up. Auto-mensagem fixa 'cão ou gato?' é técnica, não consultiva: não constrói valor antes do preço aparecer, não posiciona a especialização felina da Nathalia, não trata objeção 'caro vs 24h'.",
+      "root_cause": "Combinação tripla: (a) sem script consultivo para diferenciação ANTES do preço; (b) sem follow-up sistemático para os que pedem informação e somem ('lead some sem retorno' está no churn_reasons do briefing); (c) sem CRM comercial — Vetsoft é prontuário clínico, então o lead que não fechou simplesmente desaparece da régua.",
+      "financial_impact_monthly": 2750
+    },
+    {
+      "stage": "Agendamento → Comparecimento",
+      "current_rate": 100,
+      "benchmark": 77.5,
+      "gap": 22.5,
+      "status": "above_benchmark",
+      "bottleneck": "Sem gargalo — quem agenda comparece. Confirmado em duas reuniões (V4MOS + Kickoff).",
+      "root_cause": "Modelo Zenvet: ciclo imediato (mesmo dia ou próximo). Sem janela longa para o lead 'desistir mentalmente' entre agendar e comparecer. Cuidar para não degradar isso quando o SDR IA passar a operar.",
+      "financial_impact_monthly": 0
+    },
+    {
+      "stage": "Comparecimento → Fechamento",
+      "current_rate": 100,
+      "benchmark": 50,
+      "gap": 50,
+      "status": "above_benchmark",
+      "bottleneck": "No modelo Zenvet, comparecer = pagar a consulta (R$500 ticket médio, R$180-300 consulta isolada, até R$1.000 felinos+procedimentos). 'Fechamento' não é evento separado de proposta como em ciclo médio/longo — é colapsado no atendimento.",
+      "root_cause": "Vantagem estrutural do modelo. Implicação: recuperar o gargalo anterior (Contato→Agendamento) tem efeito direto e quase 1:1 em receita, sem fricção adicional na etapa final.",
+      "financial_impact_monthly": 0
+    }
+  ],
+  "funnel_extended": [
+    {
+      "stage": "Exposição",
+      "volume": 52929,
+      "volume_label": "52.929/mês",
+      "rate_label": "base",
+      "subtext": "Impressões mensais Google Ads + Meta Ads (média dos últimos 90 dias do diagnóstico de mídia S2)",
+      "status": null,
+      "estimated": false,
+      "is_active_constraint": false
+    },
+    {
+      "stage": "Atenção",
+      "volume": 1064,
+      "volume_label": "1.064/mês",
+      "rate_label": "2,01% CTR",
+      "subtext": "Cliques nos anúncios Google + Meta (S2 90d ÷ 3). CTR consolidado abaixo do benchmark 2,75%.",
+      "status": null,
+      "estimated": false,
+      "is_active_constraint": false
+    },
+    {
+      "stage": "Interesse",
+      "volume": 1064,
+      "volume_label": "~1.064/mês",
+      "rate_label": "100% [E]",
+      "subtext": "Estimativa de visitas à LP igual ao número de cliques — sem GA4/Pixel instalados (P1 do diagnóstico CRO S2). Instrumentação recomendada para medir o gap real Atenção→Interesse.",
+      "status": null,
+      "estimated": true,
+      "is_active_constraint": false
+    },
+    {
+      "stage": "Qualificação",
+      "volume": 72,
+      "volume_label": "72/mês",
+      "rate_label": "6,77%",
+      "subtext": "Leads gerados/mês (briefing V4MOS). Conversão Cliques→Leads abaixo do benchmark de Saúde (10-15%) — provavelmente pela falta de transparência de preço na LP e pelo CRO sem rastreamento.",
+      "status": null,
+      "estimated": false,
+      "is_active_constraint": false
+    },
+    {
+      "stage": "Compromisso",
+      "volume": 12,
+      "volume_label": "12/mês",
+      "rate_label": "16,67%",
+      "subtext": "Leads que agendam consulta (Lead→Agendamento). Internamente: 50 contatados (69%) → 12 agendados (24%). Gargalo principal: Contato→Agendamento 24% vs benchmark Saúde 35-50%. Ver tabela detalhada abaixo.",
+      "status": "critical",
+      "estimated": false,
+      "is_active_constraint": true
+    },
+    {
+      "stage": "Decisão",
+      "volume": 12,
+      "volume_label": "12/mês",
+      "rate_label": "100%",
+      "subtext": "Consulta paga (R$500 ticket médio). Show rate ~100% e Comparecimento→Fechamento colapsado no modelo PDV — quem comparece paga. Vantagem estrutural acima do benchmark.",
+      "status": "above_benchmark",
+      "estimated": false,
+      "is_active_constraint": false
+    },
+    {
+      "stage": "Retenção",
+      "volume": 150,
+      "volume_label": "~150/mês",
+      "rate_label": "12,65% [E]",
+      "subtext": "Estimativa de retornos mensais: faturamento R$81.657 ÷ ticket R$500 ≈ 163 atendimentos − 12 consultas novas = ~150 retornos. Taxa sobre base de 1.186 pacientes ativos. Vetsoft tem o número real — exportação fora do escopo desta entrega.",
+      "status": "above_benchmark",
+      "estimated": true,
+      "is_active_constraint": false
+    }
+  ],
+  "primary_bottleneck": {
+    "stage": "Primeiro Contato → Agendamento",
+    "description": "Dos 50 leads que a Loíse contata por mês, só 12 agendam (24%). Lead conversa, ouve preço, some — sem follow-up. Atual 24% vs benchmark Saúde 35-50% (CRÍTICO, -18,5pp). A objeção 'caro vs hospital 24h R$70' aparece antes de qualquer construção de valor sobre a especialização felina da Nathalia. Sem script consultivo, Loíse responde reativamente; sem CRM comercial, o lead some sem rastro; sem régua de follow-up, ninguém o resgata. Note: tempo de 1ª resposta (2-10min, confirmado) NÃO é o problema — quando ela responde, responde rápido; o que falta é a CONVERSA estruturada depois.",
+    "estimated_improvement": "Subir Contato→Agendamento de 24% para 35% (mediana benchmark Saúde) = de 12 para 17,5 agendamentos/mês na base atual de 50 contatados = +5,5 × R$500 = +R$2.750/mês. Combinado com gargalo secundário (Lead→Contato 69%→75-80%): +R$3.500 a +R$7.000/mês total. Considerando retenção média de 12 meses (briefing), LTV adicional anual estimado ~R$30-65k. DRO 3 do V4MOS já fixou meta de 35% em 60 dias."
+  },
+  "objection_map": [
+    {
+      "objection": "Está muito caro comparado ao hospital 24h (consulta R$70)",
+      "type": "price",
+      "funnel_moment": "first_contact",
+      "frequency": "high",
+      "recommended_response": "A consulta com a Dra. Nathalia (única especialista em felinos da região) dura 40 min, com diagnóstico aprofundado e sem exame de tela. Os R$70 do hospital 24h incluem só a consulta básica — quando precisa exame, soma rápido. Posso te mandar 2 reviews de tutoras que vieram de lá?",
+      "sdr_prevention": "Antes do preço sair, o SDR IA já abre com diferencial: 'Aqui você fala direto com a Dra. Nathalia, especialista em felinos. Consulta 40min, sem exame que não precisa, valor item-a-item antes de qualquer procedimento.' Posiciona valor e transparência ANTES da pergunta de preço.",
+      "example_dialogue": {
+        "lead_says": "Quanto custa a consulta? Vi que no [hospital 24h] tá R$70.",
+        "sdr_responds": "Oi! Consulta especialista em felinos com a Dra. Nathalia: R$180-300, e você sabe o valor de cada exame ANTES de aprovar — nada surpresa. A diferença é a especialização: 40min de consulta, foco em gato (não 'pet em geral'). Se quiser, te mando 2 reviews de tutoras da região pra você comparar antes de decidir."
+      }
+    },
+    {
+      "objection": "Já fui em clínica que reteve o animal até pagar — tenho medo de exames desnecessários",
+      "type": "trust",
+      "funnel_moment": "qualification",
+      "frequency": "high",
+      "recommended_response": "Sinto muito que passou por isso. Na Zenvet a Dra. Nathalia explica cada procedimento ANTES de fazer e mostra o valor estimado. Você aprova item a item, e se precisar internar, combina o custo direto com você. Sem surpresa.",
+      "sdr_prevention": "SDR IA inclui de saída a frase 'aqui você aprova item a item antes de qualquer exame ou procedimento' nas primeiras 3 mensagens. Compartilha link/imagem da tabela de preços transparente do GMB (output S3-gmb-otimizacao já implementou). Cita o ICP secundário 'Mariana' para quem se identifica.",
+      "example_dialogue": {
+        "lead_says": "Já levei meu gato em outro lugar, fizeram exame que nem precisava e a conta veio absurda.",
+        "sdr_responds": "Entendo o trauma. Aqui é diferente: a Dra. Nathalia explica cada exame e mostra o valor antes — você aprova um a um. Se ela achar que algo não precisa, ela diz. Quer que eu te mande nossa tabela de preços pra ver com transparência?"
+      }
+    },
+    {
+      "objection": "Lead pede informação e some sem retorno (ghosting)",
+      "type": "trust",
+      "funnel_moment": "qualification",
+      "frequency": "high",
+      "recommended_response": "Não é uma objeção verbal — é comportamento. A Loíse precisa retomar ATIVAMENTE: 24h depois ('Oi! Lembrei do seu gato, conseguiu pensar? Posso reservar amanhã 14h?'), 72h ('Tô com 2 horários só pra felinos essa semana, te encaixo?'), 7d ('Conteúdo educativo: por que gato esconde dor — link'). Desistir só após 3 tentativas em 14 dias.",
+      "sdr_prevention": "SDR IA cria automaticamente tarefa de follow-up 24h/72h/7d para qualquer lead que parou de responder após receber preço/informação. Sem necessidade de Loíse lembrar. Mensagem de cada follow-up varia: insistência sutil → escassez → conteúdo de valor.",
+      "example_dialogue": {
+        "lead_says": "[silêncio depois de receber valor]",
+        "sdr_responds": "[24h depois] Oi! Não quero te encher, mas lembrei do seu gato — quer que eu reserve amanhã 14h pra Dra. Nathalia? Se não der, sem problema."
+      }
+    },
+    {
+      "objection": "Receio de demora no atendimento",
+      "type": "urgency",
+      "funnel_moment": "first_contact",
+      "frequency": "medium",
+      "recommended_response": "Atendemos no mesmo dia, normalmente. Vou te mandar 2 horários hoje — qual prefere? Se for urgência, encaixo agora.",
+      "sdr_prevention": "SDR IA já oferece 2 opções de horário concretas na primeira mensagem após qualificação ('hoje 16h ou amanhã 9h?'). Reduz fricção de 'tenho que pesquisar agenda' e bloqueia procrastinação.",
+      "example_dialogue": {
+        "lead_says": "Vocês conseguem me atender essa semana? Tô com pressa.",
+        "sdr_responds": "Conseguimos hoje mesmo. Tenho 16h e 18h — qual encaixa? Se for urgência, posso falar com a Dra. Nathalia agora pra adiantar."
+      }
+    },
+    {
+      "objection": "Insegurança sobre especialização — 'vocês entendem mesmo de gato?'",
+      "type": "trust",
+      "funnel_moment": "first_contact",
+      "frequency": "high",
+      "recommended_response": "A Dra. Nathalia é a única especialista em felinos da região (Americana/SBO/Nova Odessa) com formação dedicada. 70% dos pacientes da clínica são gatos — não é 'vet que atende gato', é vet de gato. Te mando o perfil dela?",
+      "sdr_prevention": "Bio do SDR IA já apresenta credenciais felinas no primeiro contato. Compartilha foto/credencial da Nathalia automaticamente quando o lead menciona 'gato'. Reviews filtrados por 'gato' enviados como prova social.",
+      "example_dialogue": {
+        "lead_says": "Vocês são especialistas em gato mesmo? Meu gato é difícil.",
+        "sdr_responds": "Sim — a Dra. Nathalia é especialista em felinos, é o que ela mais faz. 70% dos nossos pacientes são gatos. Se ele estressa muito, ela tem sala separada de cães e atende a domicílio quando precisa. Quer ver o perfil dela?"
+      }
+    },
+    {
+      "objection": "Meu gato estressa muito pra vir ao vet",
+      "type": "need",
+      "funnel_moment": "qualification",
+      "frequency": "medium",
+      "recommended_response": "Você tá no lugar certo — temos sala separada de cães pra reduzir estresse, e se mesmo assim ele for muito sensível, a Dra. Nathalia faz atendimento domiciliar. Quer que eu te explique como funciona?",
+      "sdr_prevention": "SDR IA detecta menção de estresse e oferece automaticamente as duas alternativas (sala separada + domicílio). Trata como sinal de comprometimento do tutor (anti-anti-persona) — geralmente é Mariana.",
+      "example_dialogue": {
+        "lead_says": "Meu gato fica muito estressado, talvez nem consiga levar.",
+        "sdr_responds": "Imagina, isso é super comum. Aqui a gente tem sala só de gatos, separada dos cães — já reduz bastante. Se mesmo assim ele for muito sensível, a Dra. Nathalia atende a domicílio. Posso te explicar as duas opções?"
+      }
+    }
+  ],
+  "objection_pattern": {
+    "most_frequent_type": "trust",
+    "most_critical_moment": "first_contact e qualification — 4 das 6 objeções aparecem nessa transição (preço comparado, especialização, exames desnecessários, lead some)",
+    "deal_killer_objection": "'Está caro vs hospital 24h (R$70)' — chega antes da construção de valor e mata na entrada. Combinada com a ausência de follow-up, vira o 'lead some sem retorno' que está no churn_reasons.",
+    "main_recommendation": "Inverter a ordem da conversa: hoje a Loíse responde reativamente (lead pergunta preço → ela responde preço → lead some). O SDR IA precisa abrir construindo valor (especialização Nathalia + transparência item-a-item + 40min consulta) ANTES do preço aparecer. E qualquer lead que não fechar entra automaticamente em régua 24h/72h/7d — sem isso, o gargalo persiste mesmo com script bom."
+  },
+  "qualification_criteria": {
+    "five_star": {
+      "profile": "Mariana plena: tutora de gato (70% do mix de receita) OU tutor de cão com perfil preventivo declarado, na região atendida, com sinal de intenção de agendar e demonstração de vínculo emocional com o pet.",
+      "mandatory_signals": [
+        "Tutor de gato (ticket maior, especialização Nathalia) OU tutor de cão que menciona prevenção/check-up (não emergência única)",
+        "Localização: Americana, Santa Bárbara d'Oeste ou Nova Odessa",
+        "Pergunta sobre AGENDAMENTO/HORÁRIO/disponibilidade (não apenas preço isolado)",
+        "Menciona o pet pelo nome OU descreve sintoma/contexto específico (vínculo demonstrado)"
+      ],
+      "action": "Loíse responde em até 5 minutos no WhatsApp já oferecendo 2 horários concretos ('hoje 16h ou amanhã 9h?'). Para felinos com sintoma sério ou caso especializado, escalar para Nathalia validar prioridade. Não pedir nada além do necessário pra agendar.",
+      "example": "Perfil confirmado pela Nathalia como 'última venda boa fechada': tutor que TRATA O ANIMAL COMO FILHO E NÃO MEDE ESFORÇOS PARA CUIDAR. Exemplo: tutora de gato em Americana — 'Oi! Meu gato Simba (4 anos, SRD) tá vomitando há 3 dias e quero levar pra Dra. Nathalia que vi no Instagram. Tem horário essa semana? Pago o que precisar pra ele ficar bem.' — gato + Americana + horário + nome do pet + sintoma específico + vínculo emocional/disposição declarada = 5★ canônico. Loíse responde em ≤5min com 2 horários, sem demorar pra orçar. Esse perfil é a Mariana plena do ICP S1: 'paga o que for preciso desde que entenda por quê'."
+    },
+    "four_star": {
+      "profile": "Lead qualificado mas com algum sinal ainda em construção. Geralmente tutor da região com necessidade real, mas ainda em pesquisa ativa ou sem clareza de urgência.",
+      "signals": [
+        "Tutor de gato OU cão na região (Americana/SBO/Nova Odessa)",
+        "Tem necessidade real declarada (vacina vencida, sintoma, pet idoso, recém-mudou de cidade, indicação de amigo)",
+        "Menciona estar pesquisando ('estou olhando algumas clínicas', 'amiga me indicou')",
+        "Aceita receber informação detalhada (não para na primeira mensagem)"
+      ],
+      "min_signals": 3,
+      "action": "Loíse responde em 1h no WhatsApp. Antes de orçar, faz 1-2 perguntas consultivas ('é gato ou cão? primeira consulta com a gente?') e ABRE com diferencial Zenvet (especialização felina + transparência). Se receber preço e silenciar, follow-up automático em 24h.",
+      "example": "Tutor de gato em SBO: 'Oi, queria saber sobre vacina pro meu gato. Estou olhando algumas clínicas.' — gato + região + pesquisa ativa + necessidade real (3 sinais) = 4★. Responder em 1h, abrir com 'aqui a Dra. Nathalia é especialista em felinos, vacinação completa felina é R$X', e oferecer agendamento."
+    },
+    "three_star": {
+      "profile": "Lead morno: pergunta genérica sobre serviço, ainda não decidiu, preço aparece como dúvida central. Pode virar 5★ com nutrição certa.",
+      "signals": [
+        "Pergunta genérica ('quanto custa consulta?') sem contexto de pet ou urgência",
+        "Tutor da região (ou não declara localização)",
+        "Salva contato e some após receber preço",
+        "Origem Meta Ads (canal de atenção, gera mais curiosos — Kickoff registrou: 'Meta gera curiosos; maioria salva contato e não agenda')"
+      ],
+      "min_signals": 2,
+      "action": "Loíse responde em 4h. Após o silêncio inicial, lead entra em régua automática: 48h ('lembrei do seu pet, posso te encaixar essa semana?'), 7d (conteúdo educativo: 'por que gato esconde dor — link Reels'), 15d (depoimento de tutora similar + reviews Google). 3 tentativas máx em 14 dias.",
+      "example": "Lead vindo do Meta Ads: 'Oi, vi anúncio de vocês. Quanto a consulta?' — pergunta genérica + origem Meta + sem contexto = 3★. Responder em 4h com valor + diferencial + se sumir, régua automática. Não escalar prioridade humana."
+    },
+    "one_two_star": {
+      "profile": "Anti-persona ou fora de fit. Drena tempo da Loíse sem retorno proporcional. Tratar com cordialidade mas sem investir esforço comercial.",
+      "disqualification_signals": [
+        "Caçador de preço explícito: compara diretamente com R$70 do hospital 24h e insiste em desconto antes de agendar",
+        "Emergência fora do horário (22h-8h) sem histórico prévio com a clínica — Zenvet não é 24h",
+        "Localização fora da região atendida e sem possibilidade de domicílio",
+        "Tutor 'Dr. Google' que recusa orientação técnica e quer apenas comprar exame/medicação específica decidida por conta própria"
+      ],
+      "action": "Resposta cordial e curta. Para caçador de preço: 'Nossa consulta especialista começa em R$180, é diferente do plano R$70 dos hospitais 24h. Se quiser entender melhor, te explico — senão, compreendo.' Para emergência: redirecionar para hospitais 24h parceiros e seguir com convite para check-up quando estabilizar. Para fora-de-região: encerrar cordialmente. Sem follow-up.",
+      "example": "Lead Meta Ads: 'Quanto a consulta? Na VetX é R$70.' [insiste em desconto] — caçador de preço explícito = 1-2★. Responder uma vez com posicionamento sem desconto, e se insistir, encerrar cordial. Não entra em régua."
+    },
+    "tiebreaker_rules": {
+      "three_vs_four": "Se o lead é tutor de GATO (ticket maior + especialização Nathalia), considere 4★ mesmo com apenas 2 sinais — espécie estratégica desempata pra cima. Se é tutor de cão de baixa renda declarada (caçador de preço sutil), considere 3★ mesmo com 3 sinais.",
+      "two_vs_three": "Se o lead está em região atendida E não é caçador de preço explícito, mantenha em 3★ com régua automática mesmo sem outros sinais — custo da régua é baixo e pode converter com tempo. Só rebaixe pra 2★ se houver sinal claro de desqualificação."
+    }
+  },
+  "sla": {
+    "five_star_minutes": 5,
+    "five_star_responsible": "Loíse (vendedora atual). Para casos felinos especializados (sintoma grave, cirurgia potencial), escalar para validação rápida com Nathalia.",
+    "five_star_channel": "WhatsApp direto, com 2 horários concretos já na primeira mensagem.",
+    "four_star_hours": 1,
+    "four_star_responsible": "Loíse (Vendedora atual). SDR IA quando implementado pode pré-qualificar antes da Loíse pegar.",
+    "three_star_hours": 4,
+    "escalation_5star_minutes": 15,
+    "escalation_4star_hours": 4,
+    "escalation_responsible": "Nathalia (proprietária) — escalar para validação rápida se Loíse estiver em atendimento presencial e SLA estourar. Kelly (financeiro/irmã) como apoio em horários de pico."
+  },
+  "action_plan": [
+    {
+      "priority": 1,
+      "action": "Implementar follow-up estruturado 24h/72h/7d para 100% dos leads que receberam informação e não agendaram. Configurar régua no Kommo (já em uso pós-S3) com mensagens-template variando insistência sutil → escassez → conteúdo educativo. Limite de 3 tentativas em 14 dias antes de marcar como descarte.",
+      "responsible": "Loíse (execução) + Rafael Corazza/V4 (configuração técnica do Kommo)",
+      "timeline": "30 dias (configuração + treinamento Loíse)",
+      "measurement": "% de leads recuperados via follow-up (target: 15-20% dos 38 que somem por mês). KPI agregado: aumento da taxa Contato→Agendamento de 24% para ≥30% em 30 dias.",
+      "expected_impact": "+4 a +6 agendamentos/mês (de 12 para 16-18) recuperando ghosting na base de 50 contatados. Receita inicial adicional: +R$2-3k/mês. Ataca diretamente o churn_reason 'lead some sem retorno' do briefing."
+    },
+    {
+      "priority": 2,
+      "action": "Substituir auto-mensagem fixa ('cão ou gato? domicílio ou clínica?') por script consultivo de abertura que posiciona diferencial Zenvet ANTES do preço aparecer: especialização felina Nathalia + transparência item-a-item + 40min consulta. Script de bolso para Loíse com 6 cenários (preço comparado, exames, especialização, estresse, urgência, ghosting) — todos derivados do objection_map deste diagnóstico.",
+      "responsible": "Loíse (execução) + ee-s5-scripts-sdr (gera o material)",
+      "timeline": "20 dias (depende de iniciar S5)",
+      "measurement": "Taxa Contato→Agendamento (target: 30% em 60 dias, 35% em 90 dias — meta DRO 3 V4MOS). Tempo médio de conversa por lead (proxy de qualidade de conversa). Frequência da objeção de preço por conversa.",
+      "expected_impact": "+3 a +5 agendamentos/mês adicionais (combinado com follow-up totaliza +7 a +11). Subir Contato→Agendamento de 24% para 30-35% em 60d. Receita inicial adicional projetada combinada: +R$3,5 a +R$5,5k/mês."
+    },
+    {
+      "priority": 3,
+      "action": "Treinar Loíse na qualificação 1-5★ com checklist mental: espécie + região + pergunta de horário + nome do pet/sintoma. Implementar tag de score no Kommo no primeiro contato. SLA por score visível pra Loíse: 5★ em 5min, 4★ em 1h, 3★ em 4h, 1-2★ resposta cordial sem investir esforço.",
+      "responsible": "Loíse (execução) + Nathalia (validação dos critérios na prática)",
+      "timeline": "15 dias (treinamento + implementação no Kommo)",
+      "measurement": "% de 5★ atendidos em ≤5min (target: 90% — meta DRO 3). Distribuição de scores: target 20% 5★, 30% 4★, 30% 3★, 20% 1-2★ (calibrar após 30 dias de uso).",
+      "expected_impact": "Priorização correta evita perder os quentes para concorrência (consulta isca R$70 dos hospitais 24h converte rápido — se Zenvet demorar 1h pra responder um 5★, perde para o 24h). Reduz churn_reason 'foram para outro' do briefing."
+    },
+    {
+      "priority": 4,
+      "action": "Tabela de preços transparente disponível no WhatsApp como anexo/imagem (já implementada no GMB pelo S3 — replicar no atendimento). Loíse envia automaticamente quando objeção 'caro' aparecer, ANTES de discutir desconto. Reforça posicionamento da Mariana ('paga o que for preciso desde que entenda por quê' — ICP S1).",
+      "responsible": "Loíse (execução) + Nathalia (validar valores) + Rafael Corazza (organizar arte)",
+      "timeline": "15 dias",
+      "measurement": "Frequência da objeção de preço por lead (target: cair de 'high' para 'medium'). Conversão de leads com objeção de preço: target 25% (de baseline desconhecido — medir nas primeiras 30 ocorrências).",
+      "expected_impact": "Neutraliza deal-killer 'caro vs 24h' transformando objeção em oportunidade de demonstrar transparência (diferencial vs prática 'reter animal até pagar' dos concorrentes — registrada como dor da Mariana no ICP)."
+    },
+    {
+      "priority": 5,
+      "action": "Implementar SDR IA via Patagon (S5 — ee-s5-scripts-sdr + ee-s5-sdr-ia-config) com cobertura 24/7 PRIORITARIAMENTE para resgatar os 22 leads/mês que hoje somem antes do contato. Resposta automática em ≤5seg (não substitui os 2-10min da Loíse — complementa cobrindo janela morta 20h-8h, simultaneidade durante atendimento presencial e canais paralelos como Instagram DM). Qualificação automática 1-5★ via critérios deste diagnóstico; handoff para Loíse apenas em 4★/5★ qualificados.",
+      "responsible": "V4 (Rafael Corazza implementação) + Loíse (supervisão e revisão dos handoffs)",
+      "timeline": "60 dias (depende de S4 cliente-oculto + S5 scripts + S5 config Patagon)",
+      "measurement": "Taxa Lead→Contato: subir de 69% para ≥80% (target: capturar pelo menos 8 dos 22 leads silenciosos hoje). Cobertura 24/7 garantida. Distribuição de fonte do contato: % atendido por SDR IA vs Loíse (esperado: SDR IA pega ~30% volume — janela morta + simultaneidade — e Loíse foca no consultivo qualificado).",
+      "expected_impact": "Recupera ~8 leads/mês hoje silenciosamente perdidos = +2 agendamentos/mês na conversão atual = +R$1.000/mês imediato. Mais importante: libera Loíse para fechamento dos 4★/5★ (consultivo) em vez de filtragem inicial. Sustenta o crescimento projetado no forecast S3 v4 (65→120 leads/mês em 6 meses) sem precisar contratar 2ª pessoa — sem SDR IA, com volume crescendo, o gargalo Lead→Contato AUMENTA proporcionalmente."
+    }
+  ]
+}

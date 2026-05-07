@@ -1007,6 +1007,8 @@ const PCT = n => n != null ? n.toFixed(1).replace('.',',') + '%' : '—';
 
 const CLS = {critical:'Crítico',low:'Baixo',medium:'Médio',good:'Bom',excellent:'Excelente'};
 const CLC = {critical:'red',low:'danger',medium:'yellow',good:'green',excellent:'green'};
+const BENCH_LBL = {critical:'Crítico',below_benchmark:'Abaixo do Benchmark',at_benchmark:'No Benchmark',above_benchmark:'Acima do Benchmark'};
+const BENCH_CLR = {critical:'red',below_benchmark:'yellow',at_benchmark:'gray',above_benchmark:'green'};
 const IMP = {high:'Alto',medium:'Médio',low:'Baixo'};
 const IMC = {high:'red',medium:'yellow',low:'green'};
 const PRI = {high:'red',medium:'yellow',normal:'gray',P1:'red',P2:'yellow',P3:'gray'};
@@ -1298,6 +1300,70 @@ function chartFunnel(stages) {
       +'<div style="font-size:.8125rem;font-weight:700;text-align:right;color:'+col+'">'+(typeof s.value==='number'?N(s.value):E(String(s.value||'—')))+'</div>'
       +'</div>';
   }).join('')+'</div>';
+}
+
+// SVG inline do Funil Destrava Receita (injetado pelo render_portal.sh — JSON-stringified)
+const FUNNEL_SVG_INLINE = /*%%FUNNEL_SVG_INLINE%%*/"";
+
+// CHEVRON FUNNEL (estilo "Destrava Receita"): lê da DIREITA para ESQUERDA
+// stages: [{stage, volume, volume_label, rate_label, subtext, status, estimated, is_active_constraint}]
+// Métricas inseridas via <foreignObject> DENTRO do SVG — sistema de coordenadas único garante alinhamento perfeito
+function chartChevronFunnel(stages) {
+  if (!stages?.length || !FUNNEL_SVG_INLINE) return '';
+  const n = stages.length;
+  // Centros X dos 7 chevrons em coords do viewBox 1716x593 — posições espelhadas (simetria)
+  // Ordem: idx 0 = mais à DIREITA (Exposição), idx 6 = mais à ESQUERDA (Retenção)
+  // Direita validada visualmente: 1491, 1285, 1081. Esquerda em mirror: 225, 431, 635.
+  const centers7 = [1491, 1285, 1081, 858, 635, 431, 225];
+  const cxArr = n === 7 ? centers7 : Array.from({length:n}, (_,i) => 1579 - (i * (1443/(n-1||1))));
+  // Larguras: extremos um pouco mais estreitos, centro mais largo
+  const widths7 = [240, 240, 240, 300, 240, 240, 240];
+  const wArr = n === 7 ? widths7 : Array(n).fill(220);
+  const cy = 296, panelH = 170;
+  const overlay = stages.map((s, i) => {
+    const cx = cxArr[i];
+    const panelW = wArr[i];
+    const x = cx - panelW/2;
+    const y = cy - panelH/2;
+    const isConstraint = !!s.is_active_constraint;
+    const isEstimated = !!s.estimated;
+    const constraintBadge = isConstraint
+      ? '<div style="display:inline-block;background:#dc2626;color:#fff;padding:2px 8px;border-radius:3px;font-size:11px;font-weight:800;letter-spacing:.05em;white-space:nowrap;box-shadow:0 0 14px rgba(220,38,38,.95);margin-bottom:5px">&#9733; RESTRIÇÃO</div>'
+      : '';
+    const estTag = isEstimated ? '<span style="opacity:.7;font-weight:500"> [E]</span>' : '';
+    // Volume sem "/mês" — fica só o número (a unidade temporal já está no header "base mensal")
+    const rawVol = s.volume_label || (typeof s.volume === 'number' ? N(s.volume) : (s.volume || '—'));
+    const volLabel = String(rawVol).replace(/\s*\/\s*m[eê]s\s*/i, '').replace(/^~\s*/, '~');
+    return '<foreignObject x="'+x+'" y="'+y+'" width="'+panelW+'" height="'+panelH+'">'
+      + '<div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;text-align:center;color:#fff;text-shadow:0 2px 6px rgba(0,0,0,.95),0 0 12px rgba(0,0,0,.7);font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif">'
+      + constraintBadge
+      + '<div style="font-size:16px;text-transform:uppercase;letter-spacing:.06em;opacity:.95;font-weight:700;line-height:1;margin-bottom:6px">'+E(s.stage)+estTag+'</div>'
+      + '<div style="font-size:32px;font-weight:800;line-height:1.05">'+E(volLabel)+'</div>'
+      + '<div style="font-size:14px;font-weight:600;opacity:.95;margin-top:6px;line-height:1">'+E(s.rate_label||'')+'</div>'
+      + '</div>'
+      + '</foreignObject>';
+  }).join('');
+  const legendHtml = stages.map((s,i) =>
+    '<div style="margin-bottom:.4rem;font-size:.75rem;line-height:1.5">'
+    + '<strong style="color:var(--text-primary)">'+(i+1)+'. '+E(s.stage)
+    + (s.estimated ? ' <span style="color:var(--text-muted);font-weight:500">[E]</span>' : '')
+    + (s.is_active_constraint ? ' <span style="color:#dc2626">&#9733;</span>' : '')
+    + ':</strong> '
+    + '<span style="color:var(--text-secondary)">'+E(s.subtext||'')+'</span>'
+    + '</div>'
+  ).join('');
+  // Inserir overlay (foreignObjects) ANTES de </svg> + adicionar styling no <svg> root
+  const svgWrapped = FUNNEL_SVG_INLINE
+    .replace('<svg ', '<svg style="display:block;width:100%;height:auto" preserveAspectRatio="xMidYMid meet" ')
+    .replace('</svg>', overlay + '</svg>');
+  return '<div style="background:#000;padding:1.25rem .5rem 1rem;border-radius:6px;color:#fff">'
+    + '<div style="text-align:center;font-size:.6875rem;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.55);font-weight:700;margin-bottom:.85rem">← Lê-se da direita para a esquerda · base mensal</div>'
+    +   svgWrapped
+    + '</div>'
+    + '<div style="margin-top:.5rem;padding:.85rem 1rem;background:rgba(0,0,0,.04);border-radius:4px">'
+    + '<div style="font-size:.625rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700;color:var(--text-muted);margin-bottom:.55rem">Detalhamento das etapas</div>'
+    + legendHtml
+    + '</div>';
 }
 
 // RADAR: comparar scores multi-dimensionais (ex: pilares, competitor)
@@ -5912,35 +5978,46 @@ const R = {
   let h = '';
   if (d.summary) h += sm(d.summary);
   if (d.funnel_diagnosis?.length) {
-    // Funnel: simular volume decaindo com base em current_rate
-    let simVol = 100;
-    const funnelStages = d.funnel_diagnosis.map((f,i)=>{
-      const stage = {name: f.stage, volume: Math.round(simVol), highlight: f.status==='critical'||f.status==='low'};
-      if (f.current_rate!=null) simVol = simVol * f.current_rate;
-      return stage;
-    });
-    // Pior gap
-    const worst = [...d.funnel_diagnosis].filter(f=>f.gap!=null).sort((a,b)=>a.gap-b.gap)[0];
-    const funnelInsight = worst
-      ? 'Maior gargalo: "'+worst.stage+'" com gap de '+worst.gap.toFixed(1)+'pp vs benchmark. '+(worst.bottleneck||'').substring(0,100)
-      : '';
+    let funnelChart;
+    let funnelInsight;
+    if (d.funnel_extended?.length) {
+      funnelChart = chartChevronFunnel(d.funnel_extended);
+      const constraint = d.funnel_extended.find(s=>s.is_active_constraint);
+      funnelInsight = constraint
+        ? 'Restrição ativa: "'+constraint.stage+'" — '+(constraint.subtext||'').substring(0,160)
+        : '';
+    } else {
+      let simVol = 100;
+      const funnelStages = d.funnel_diagnosis.map((f,i)=>{
+        const stage = {name: f.stage, volume: Math.round(simVol), highlight: f.status==='critical'||f.status==='low'};
+        if (f.current_rate!=null) simVol = simVol * f.current_rate;
+        return stage;
+      });
+      funnelChart = chartFunnel(funnelStages, {title:'Afunilamento (% retenção)', fmt:v=>v+'%'});
+      const worst = [...d.funnel_diagnosis].filter(f=>f.gap!=null).sort((a,b)=>a.gap-b.gap)[0];
+      funnelInsight = worst
+        ? 'Maior gargalo: "'+worst.stage+'" com gap de '+worst.gap.toFixed(1)+'pp vs benchmark. '+(worst.bottleneck||'').substring(0,100)
+        : '';
+    }
+    const worstGap = [...d.funnel_diagnosis].filter(f=>f.gap!=null).sort((a,b)=>a.gap-b.gap)[0];
+    const insightTone = worstGap && worstGap.gap<-10 ? 'bad' : worstGap && worstGap.gap<0 ? 'warn' : 'good';
     h += sc('Funil de Vendas',
-      insight(chartFunnel(funnelStages, {title:'Afunilamento (% retenção)', fmt:v=>v+'%'}),
-        funnelInsight, worst && worst.gap<-10?'bad':worst && worst.gap<0?'warn':'good')
+      insight(funnelChart, funnelInsight, insightTone)
       +tb(['Etapa','Taxa Atual','Benchmark','Gap','Status','Gargalo'],
       d.funnel_diagnosis.map(f=>[E(f.stage),PCT(f.current_rate),PCT(f.benchmark),
         '<span style="color:var(--'+(f.gap>=0?'success':'danger')+')">'+((f.gap>=0?'+':'')+N(f.gap))+'pp</span>',
-        tg(CLS[f.status]||f.status,CLC[f.status]),E(f.bottleneck)])));
+        tg(BENCH_LBL[f.status]||CLS[f.status]||f.status, BENCH_CLR[f.status]||CLC[f.status]),E(f.bottleneck)])));
   }
   if (d.primary_bottleneck) {
     h += cd('Gargalo Principal','<strong>'+E(d.primary_bottleneck.stage)+':</strong> '+E(d.primary_bottleneck.description)
       +'<div class="cd__meta">'+E(d.primary_bottleneck.estimated_improvement)+'</div>','danger');
   }
   if (d.objection_map?.length) {
+    const objTypeColor = {price:'red',urgency:'yellow',authority:'gray',trust:'yellow',need:'red',competitor:'yellow'};
     h += sc('Mapa de Objeções', d.objection_map.map(o=>
-      cd(o.objection+' '+tg(o.type,{price:'red',urgency:'yellow',authority:'gray',trust:'yellow',need:'red',competitor:'yellow'}[o.type]),
-        '<strong>Resposta:</strong> '+E(o.recommended_response)+'<br><strong>Prevenção SDR:</strong> '+E(o.sdr_prevention),
-        {price:'danger',trust:'yellow'}[o.type])
+      cd(o.objection,
+        '<div style="margin-bottom:.5rem">'+tg(o.type, objTypeColor[o.type])+'</div>'
+        +'<strong>Resposta:</strong> '+E(o.recommended_response)+'<br><strong>Prevenção SDR:</strong> '+E(o.sdr_prevention))
     ).join(''));
   }
   if (d.qualification_criteria) {
