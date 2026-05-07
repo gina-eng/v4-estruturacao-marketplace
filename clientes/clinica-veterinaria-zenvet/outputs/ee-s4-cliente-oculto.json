@@ -1,0 +1,221 @@
+{
+  "client_name": "Clínica Veterinária Zenvet",
+  "summary": "Cliente oculto Zenvet (Camila — tutora de gato em SBO simulando quadro clínico de FLUTD/cistite). Nota 5,9/10 (REGULAR). Tempo de 1ª resposta excelente (2 min, cumpre meta DRO 3 V4MOS), CTA inicial específico (18:30 hoje), defesa de preço sem desconto (FELV+especialização). Mas: 0 captura de nome, 0 perguntas clínicas, 0 reconhecimento de gatilho de urgência (sintoma sugestivo de FLUTD em felino), encerramento passivo no 'vou pensar' e ZERO follow-up em 24h. Confirma empiricamente o gargalo principal do diagnóstico S4 (lead some sem retorno). SDR IA endereça os 6 pontos críticos com impacto projetado +R$5,5k/mês.",
+  "summary_headline": "5,9/10 REGULAR · resposta excelente, fechamento passivo · 0 captura de nome, 0 follow-up 24h, 0 reconhecimento clínico — confirma gargalo S4.",
+  "summary_highlights": [
+    {
+      "category": "posicao",
+      "label": "Nota Geral",
+      "value": "5,9/10",
+      "subtext": "Classificação: REGULAR (5.0–6.9). Funciona, mas perde vendas por falta de processo. SDR IA terá alto impacto.",
+      "tone": "yellow"
+    },
+    {
+      "category": "vantagem",
+      "label": "Tempo de 1ª resposta",
+      "value": "2 min",
+      "subtext": "Excelente — já cumpre meta DRO 3 V4MOS de 90% ≤10min. Ponto forte real do atendimento.",
+      "tone": "green"
+    },
+    {
+      "category": "risco",
+      "label": "Captura de nome",
+      "value": "0",
+      "subtext": "Loíse não pediu nem o nome da tutora nem o nome da gata. Sem identificação, follow-up estruturado é impossível.",
+      "tone": "red"
+    },
+    {
+      "category": "risco",
+      "label": "Follow-up em 24h",
+      "value": "Nenhum",
+      "subtext": "Confirma o churn_reason 'lead some sem retorno' do briefing + gargalo Contato→Agendamento (24%) do diagnóstico S4.",
+      "tone": "red"
+    },
+    {
+      "category": "risco",
+      "label": "Reconhecimento clínico",
+      "value": "0/10",
+      "subtext": "Camila descreveu xixi fora da caixa há 2 sem + anorexia (gatilho FLUTD/cistite). Em clínica especialista em felinos, esperava-se reflexo de urgência. Foi tratado como agendamento de rotina.",
+      "tone": "red"
+    },
+    {
+      "category": "oportunidade",
+      "label": "Impacto projetado SDR IA",
+      "value": "+R$5,5k/mês",
+      "subtext": "Endereça os 6 pontos críticos. Combinado com Actions 1+2 do diagnóstico S4 (follow-up Kommo + script consultivo).",
+      "tone": "blue"
+    }
+  ],
+  "summary_key_findings": [
+    {
+      "category": "vantagem",
+      "text": "Loíse demonstra fundamentos comerciais sólidos: respondeu em 2 minutos (15:29 → 15:31), apresentou-se pessoalmente ('Meu nome é Louise sou secretária da Zenvet'), ofereceu horário concreto na 2ª mensagem (18:30 hoje), e defendeu valor sem ceder desconto na objeção 'caro vs Animed'. O problema não é capacidade individual — é falta de processo estruturado."
+    },
+    {
+      "category": "ameaca",
+      "text": "Camila descreveu quadro clínico clássico de urgência felina (xixi fora da caixa há 2 semanas + parou de comer = sinal sugestivo de FLUTD/cistite, potencial obstrução urinária). Em uma clínica que se posiciona como especialista em felinos, é razoável esperar reflexo: 'eu te encaixo HOJE, esses casos não devem esperar'. Em vez disso, recebeu tratamento de agendamento de rotina (18:30 como sugestão genérica). Falha estrutural de senso clínico-comercial."
+    },
+    {
+      "category": "ameaca",
+      "text": "Zero captura de identificação (nome da tutora, nome da gata, idade, há quanto tempo, sexo) torna IMPOSSÍVEL personalizar follow-up estruturado, alimentar CRM ou disparar régua de nutrição. Conecta diretamente ao gargalo principal do diagnóstico S4: dos 50 leads contatados/mês, 38 não agendam — sem identificação, viram fantasmas no funil."
+    },
+    {
+      "category": "ameaca",
+      "text": "Encerramento passivo no 'vou pensar' (Loíse: 'Sem problemas, ficamos à disposição ☺️') + ZERO follow-up em 24h confirma empiricamente o churn_reason 'lead some sem retorno' do briefing e o gargalo principal do S4. Em ciclo curto da Zenvet (consulta mesmo dia), 24h sem retomada = lead perdido para concorrente ou desistência. O correto seria: 'Ficou alguma outra dúvida que te ajudaria a trazer ela hoje ainda? Esses casos de bexiga podem ser urgentes, recomendo trazer o quanto antes.'"
+    },
+    {
+      "category": "acao",
+      "text": "SDR IA endereça os 6 pontos críticos com impacto cumulativo projetado de +R$5,5k/mês: (1) captura de nome na 2ª mensagem; (2) matriz de red flags clínicos felinos pra reconhecer urgência automaticamente; (3) playbook de objeção de preço em 3 movimentos (contexto + prova social + custo da inação); (4) follow-up automático 24h/72h/7d via Kommo; (5) detecção de 'vou pensar' com fechamento ativo + escassez; (6) 3 perguntas obrigatórias de aprofundamento clínico antes de orçar."
+    }
+  ],
+  "buyer_profile": {
+    "name": "Camila Lima",
+    "situation": "Tutora de gato, 33 anos, professora, residente em Santa Bárbara d'Oeste. Gata castrada chamada 'Mel' (5 anos, SRD) com xixi fora da caixa há 2 semanas e diminuição de apetite (sinal sugestivo de FLUTD/cistite). Já levou em outro veterinário ('pet em geral') e ficou desconfortável — procurando especialista em felinos. Encontrou Zenvet via Instagram.",
+    "urgency": "medium",
+    "urgency_reason": "Sintoma persistente há 2 semanas, com piora (anorexia) — quadro sugestivo de problema urinário em felino, urgência clínica relativa (não emergência absoluta, mas requer atendimento na semana).",
+    "budget": "Implícito — vai comparar com hospital concorrente (Animed) que oferece consulta R$ 70. Testar reação à objeção de preço (deal-killer mapeado no diagnóstico S4).",
+    "main_objection": "Preço acima do hospital 24h vizinho (Animed R$ 70 vs Zenvet R$ 140) + receio de exames desnecessários (trauma com clínicas anteriores que retiveram animal até pagamento)",
+    "knowledge_level": "medium"
+  },
+  "simulation_script": {
+    "opening_message": "Oi, boa tarde! 🙂 Vi vocês no Instagram e queria saber se atendem gata. A minha gata tá fazendo xixi fora da caixa há umas duas semanas e parou de comer direito, tô preocupada. Vocês têm horário essa semana? Quanto fica a consulta?",
+    "followup_30min": "Oi, ainda tô esperando. Me responde quando puder? 🙏",
+    "followup_2h": "Oi pessoal, ninguém respondeu ainda. Vou ver outras opções — me chama se ainda puder atender essa semana.",
+    "questions": [
+      {
+        "question": "Vocês têm vet especialista em gato mesmo? Eu já levei a Mel num lugar que falaram que era 'pet em geral' e não me senti segura.",
+        "objective": "Testa identificação automática do diferencial Zenvet (especialização Nathalia em felinos) — a Loíse precisa saber posicionar isso espontaneamente."
+      },
+      {
+        "question": "Olha, eu vi no [hospital 24h da avenida / Animed] que a consulta tá R$70. Aqui fica mais? Por quê?",
+        "objective": "Deal-killer principal mapeado no diagnóstico S4 (objeção de preço vs concorrente). Testa se Loíse defende valor sem ceder desconto, posiciona transparência item-a-item, usa prova social."
+      },
+      {
+        "question": "Vocês acham que vai precisar de exame logo de cara? Tenho receio de gastar muito de uma vez sem saber se precisa mesmo...",
+        "objective": "Trust + objeção 'exames desnecessários' (trauma da Mariana no ICP S1). Testa se Loíse comunica transparência item-a-item antes de qualquer procedimento."
+      },
+      {
+        "question": "Hmm, deixa eu pensar e te respondo. (parar de responder por 7 dias)",
+        "objective": "Follow-up test — testa se há régua estruturada (24h/72h/7d) para resgate de leads que hesitam. Critério central do DRO 3 V4MOS."
+      }
+    ],
+    "buyer_behavior_rules": [
+      "Atraso realista entre mensagens: 5-15min em horário comercial (multitasking de tutora real)",
+      "Não revelar que é teste em nenhum momento",
+      "Inventar dados consistentes quando perguntar (Camila Lima, SBO, gata Mel 5 anos castrada SRD)",
+      "Não oferecer informação sem ser perguntada — só responder o que é perguntado",
+      "Após pergunta #4 ('vou pensar'): PARAR de responder por 7 dias completos, anotar follow-ups em 24h/72h/7d",
+      "Documentar TODA a conversa com horários (print do WhatsApp ou anotação)"
+    ]
+  },
+  "simulation_metadata": {
+    "date": "2026-05-07",
+    "channel": "WhatsApp",
+    "attendant_name": "Louise (Loíse no briefing)",
+    "total_duration_minutes": 30,
+    "conversation_transcript": "[15:26] Camila → Zenvet: 'Oi! Vi a página da Zenvet e queria agendar consulta para meu pet.'\n\n[15:26] Auto-mensagem Zenvet: 'Olá! 🐾✨ Seja muito bem-vindo(a)! 😊 🐶 Temos clínica geral de cães 🐱 E temos especialista em felinos! Para agilizar seu atendimento, me conte por favor: 👉 É para cão ou gato? 👉 Prefere atendimento a domicílio ou na clínica? Se desejar, você também pode me dizer como podemos ajudar hoje: 1️⃣ Agendar uma consulta 2️⃣ Saber mais sobre nossos serviços 3️⃣ Falar sobre um atendimento em andamento'\n\n[15:26] Camila: '1'\n\n[15:27] Louise: 'Ola boa tarde tudo bem?'\n[15:27] Louise: 'Meu nome é Louise sou secretária da zenvet e vou dar andamento ao seu atendimento 😏'\n[15:27] Louise: 'Como podemos te ajudar hoje?'\n\n[15:29] Camila: 'Oi, boa tarde! Vi vocês no Instagram e queria saber se atendem gata, ela tá fazendo xixi fora da caixa há umas duas semanas e parou de comer direito, tô preocupada. Vocês têm horário essa semana? Quanto fica a consulta?'\n\n[15:31] Louise: 'Claro temos sim'\n[15:32] Louise: 'A dra nathalia é especializada em felinos e com certeza vai te ajudar 😊'\n[15:32] Louise: 'Hoje ainda temos horario as 18:30'\n[15:32] Louise: 'Daria certo para voce?'\n\n[15:41] Camila: 'Ah que bom que ela é especialista! Mas antes de marcar, você consegue me passar quanto fica a consulta?'\n\n[15:41] Louise: 'Claro'\n[15:41] Louise: 'Olá! 💬🐱 A consulta com nossa especialista em felinos tem o valor de R$ 140,00. Inclui avaliação completa, análise de exames anteriores e orientações específicas para o bem-estar do seu gato. ✅ Retorno: Você tem direito a 1 retorno gratuito em até 30 dias (para o mesmo caso clínico). Gostaria de reservar um horário para hoje? Me avise e já agendamos por aqui! 🗓️ ✨'\n\n[15:46] Camila: 'Fica um pouco mais caro que o Animed, né? Sabe me dizer pq?'\n\n[15:47] Louise: 'Na consulta da Dra Nathalia ja esta incluso o teste de FELV, e esse valor é por ela ser especialista também.'\n\n[15:50] Camila: 'Ah, FELV é o teste de leucemia felina, né? E se a Dra. achar que precisa de outros exames além desse, vocês falam o valor antes? Tenho receio de gastar muito de uma vez sem saber se precisa mesmo...'\n\n[15:52] Louise: 'Isso o teste é esse mesmo'\n[15:52] Louise: 'Sobre exames a dra so consegue te passar o que será necessário na consulta, pois ela faz todo o exame físico primeiro para entender a necessidade de exames'\n[15:53] Louise: 'Caso seja necessário ela te passa todos os valores antes de realizar'\n[15:53] Louise: 'E voce verifica se consegue fazer ou não'\n\n[15:56] Camila: 'Entendi'\n[15:56] Camila: 'Ta bom'\n[15:56] Camila: 'Deixa eu pensar aqui e te respondo, tá? Obrigada pelas informações 🙂'\n\n[~15:57] Louise: 'Sem problemas, ficamos à disposição ☺️'\n\n[+24h — 2026-05-08 ~15:57]: NENHUM follow-up da Loíse. Janela 24h fechada sem retomada do contato."
+  },
+  "evaluation": {
+    "overall_score": 5.9,
+    "classification": "regular",
+    "criteria_scores": [
+      {
+        "criterion": "Tempo de Primeira Resposta",
+        "score": 9,
+        "observation": "Auto-mensagem instantânea (15:26) + resposta humana em 2 minutos após mensagem com sintomas clínicos específicos (15:29 → 15:31). Já cumpre a meta DRO 3 do V4MOS (90% ≤10min). Ponto forte mais consistente do atendimento.",
+        "evidence": "Camila (15:29) → Louise (15:31): 2 min decorridos. Toda a conversa subsequente teve respostas em 1-3 min."
+      },
+      {
+        "criterion": "Qualidade da Abordagem Inicial",
+        "score": 6,
+        "observation": "Auto-msg estruturada com bem-vinda + qualificação inicial (cão/gato + domicílio/clínica) + menu numerado. Loíse se apresentou pessoalmente ('Meu nome é Louise sou secretária da Zenvet'). Mas: NÃO PEDIU O NOME da tutora nem da gata — sem identificação não há personalização.",
+        "evidence": "Louise (15:27): 'Ola boa tarde tudo bem? Meu nome é Louise...' — apresentação ok. Nenhuma das mensagens da Louise solicita nome do lead."
+      },
+      {
+        "criterion": "Identificação de Necessidade",
+        "score": 3,
+        "observation": "Camila descreveu sintoma específico e potencialmente grave (xixi fora da caixa há 2 semanas + anorexia em felina). Loíse fez ZERO perguntas de aprofundamento clínico (idade da gata? sexo? há quanto tempo? frequência? sangue na urina?) e foi direto pra agendar. Em clínica especialista em felinos, essa descrição deveria disparar alerta de FLUTD/cistite — falha estrutural de senso clínico-comercial.",
+        "evidence": "Após sintoma descrito (15:29), resposta da Louise (15:31-15:32) foi: 'Claro temos sim' + 'A dra nathalia é especializada em felinos' + 'Hoje ainda temos horario as 18:30 — Daria certo para voce?'. Sem perguntas, sem reconhecimento de urgência."
+      },
+      {
+        "criterion": "Conhecimento do Produto",
+        "score": 7,
+        "observation": "Mencionou com segurança: especialização Nathalia em felinos, FELV incluído (teste de leucemia felina), retorno gratuito 30d, exame físico antes de pedir exames. Sem hesitar. Faltou: exemplos concretos, tempo de experiência da Dra., casos similares, números de atendimento.",
+        "evidence": "Louise (15:32): 'A dra nathalia é especializada em felinos'. (15:41): bloco com FELV + retorno 30d. (15:52-15:53): 'ela faz todo o exame físico primeiro para entender a necessidade de exames'."
+      },
+      {
+        "criterion": "Tratamento de Objeção de Preço",
+        "score": 5,
+        "observation": "Não cedeu desconto (✓). Justificou valor com 2 ancoragens factuais: FELV incluído + especialização da Dra. Mas: não pediu contexto da comparação (Animed inclui o quê?), sem prova social (reviews de tutoras felinas), sem ancoragem com custo da inação (cistite não tratada custa 5x mais), sem detalhamento item-a-item. Defesa correta mas superficial.",
+        "evidence": "Camila (15:46): 'Fica um pouco mais caro que o Animed, né? Sabe me dizer pq?'. Louise (15:47): 'Na consulta da Dra Nathalia ja esta incluso o teste de FELV, e esse valor é por ela ser especialista também.' — uma frase, sem sondagem."
+      },
+      {
+        "criterion": "CTA e Avanço de Funil",
+        "score": 7,
+        "observation": "CTA INICIAL FORTE: 'Hoje ainda temos horario as 18:30 — Daria certo para voce?' (específico, com data/hora, factível). REFORÇO PÓS-PREÇO: 'Gostaria de reservar um horário para hoje?'. MAS: encerramento PASSIVO quando Camila hesitou — 'Sem problemas, ficamos à disposição ☺️'. Em quadro com sinal clínico de urgência, o correto seria: 'Ficou alguma outra dúvida que te ajudaria a trazer ela hoje ainda? Esses casos de bexiga podem ser urgentes, recomendo o quanto antes.'",
+        "evidence": "CTA inicial em 15:32. Reforço em 15:41. Encerramento passivo após Camila (15:56) 'Deixa eu pensar e te respondo' → Louise (~15:57): 'Sem problemas, ficamos à disposição ☺️'."
+      },
+      {
+        "criterion": "Follow-up Após Conversa",
+        "score": 2,
+        "observation": "ZERO follow-up em 24h após Camila sumir. Em ciclo curto (Saúde/Vet, consulta mesmo dia), 24h sem retomada = lead perdido para concorrente ou desistência. Confirma o churn_reason 'lead some sem retorno' do briefing e o gargalo Contato→Agendamento (24%) do diagnóstico S4. Causa raiz: sem CRM comercial nem régua estruturada, leads em hesitação não são resgatados ativamente.",
+        "evidence": "Janela +24h após 'vou pensar' (15:56 do dia 2026-05-07 até ~15:57 do dia 2026-05-08): nenhuma mensagem da Loíse. Lead esfriou."
+      }
+    ],
+    "strengths": [
+      "Tempo de primeira resposta: 2 minutos de Camila (15:29) até Louise (15:31), com mensagem que continha sintomas clínicos específicos. Excelente em contexto de PME — já cumpre meta DRO 3 V4MOS de 90% ≤10min.",
+      "Auto-mensagem inicial bem estruturada com menu numerado (Agendar/Saber mais/Atendimento em andamento) e qualificação dupla (cão/gato + domicílio/clínica). Filtra interesse sem fricção.",
+      "Apresentação pessoal explícita: 'Meu nome é Louise sou secretária da Zenvet'. Cria identidade humana após o bot — bom contraste.",
+      "CTA inicial específico e factível na 2ª mensagem: 'Hoje ainda temos horario as 18:30 — Daria certo para voce?'. Não deixou Camila procrastinar com 'me passa horários disponíveis'.",
+      "Não cedeu desconto na objeção 'caro vs Animed'. Defendeu valor com ancoragens factuais (FELV incluído + especialização da Dra. + retorno gratuito 30d).",
+      "Comunicou transparência item-a-item nos exames: 'a Dra. só consegue te passar o que será necessário na consulta... Caso seja necessário ela te passa todos os valores antes de realizar.' — trata diretamente o trauma da Mariana (objeção #2 do diagnóstico S4)."
+    ],
+    "critical_improvements": [
+      "[CRÍTICO] Não capturou nome da tutora nem da gata em nenhuma mensagem da conversa — sem identificação, é IMPOSSÍVEL personalizar follow-up estruturado, alimentar CRM ou criar régua de nutrição. Conecta diretamente ao gargalo principal do diagnóstico S4: 38 leads/mês entram em conversa, ouvem preço, somem sem rastro.",
+      "[CRÍTICO] Não reconheceu sinal clínico de urgência. Quadro descrito pela Camila (xixi fora da caixa há 2 semanas + parou de comer em felina) é gatilho clássico de FLUTD/cistite/obstrução urinária. Em clínica especialista em felinos, o reflexo esperado é 'eu te encaixo HOJE, esses casos não devem esperar' — Loíse tratou como agendamento de rotina (oferta genérica de 18:30).",
+      "[CRÍTICO] Nenhum follow-up em 24h após 'vou pensar'. Confirma empiricamente o churn_reason 'lead some sem retorno' do briefing e o gargalo Contato→Agendamento (24%) do diagnóstico S4. Em ciclo curto da Zenvet, 24h sem retomada = lead perdido.",
+      "[ALTO] Encerramento passivo no 'vou pensar': 'Sem problemas, ficamos à disposição ☺️'. O correto, em quadro com sinal clínico, seria fechamento ativo: 'Ficou alguma outra dúvida que te ajudaria a trazer ela hoje ainda? Esses casos de bexiga podem ser um pouco urgentes, recomendo trazer o quanto antes.' — combina pergunta aberta + urgência apropriada + recomendação + CTA ativo.",
+      "[ALTO] Zero perguntas de aprofundamento clínico. Não perguntou idade da gata, sexo, raça, há quanto tempo o sintoma, frequência da micção, presença de sangue, se está medicando, se já fez exame anterior. Vai direto pra agendar — perde oportunidade de criar vínculo consultivo (chave do posicionamento Zenvet).",
+      "[MÉDIO] Resposta de preço sem profundidade consultiva. Defendeu valor (FELV+especialização) mas sem pedir contexto da comparação ('A Animed inclui FELV? Você foi lá antes?'), sem prova social (reviews de tutoras felinas), sem ancoragem com custo da inação. Defesa factual mas não consultiva."
+    ],
+    "sdr_impact_per_improvement": [
+      {
+        "improvement": "Não capturou nome da tutora/pet",
+        "sdr_solution": "SDR IA captura nome da tutora e do pet logo na 2ª mensagem ('Antes de tudo, me conta seu nome e o nome do(a) bichano(a)? 🐱'). Persiste no Kommo, alimenta a régua de follow-up personalizada com nome real ('Oi Camila, lembrei da Mel...').",
+        "estimated_impact": "+15-20% recuperação de leads em régua de follow-up"
+      },
+      {
+        "improvement": "Não reconheceu sinal clínico de urgência",
+        "sdr_solution": "SDR IA com matriz de 'red flags clínicos' felinos (xixi fora da caixa + anorexia + sangue na urina + apatia + vômito persistente) → quando detecta, oferece encaixe imediato + escala automaticamente para a Nathalia validar urgência.",
+        "estimated_impact": "+30% taxa Contato→Agendamento em casos sintomáticos (10-15% do volume mensal)"
+      },
+      {
+        "improvement": "Encerramento passivo no 'vou pensar'",
+        "sdr_solution": "SDR IA detecta intenção de pausa ('vou pensar', 'deixa eu ver', 'depois te respondo') e dispara fechamento ativo: 'Antes de você decidir, posso te tirar mais alguma dúvida? Se for caso urgente como esse de bexiga, recomendo encaixar hoje ainda — esses sintomas em gato pioram rápido.' Combinado com follow-up automático em 24h.",
+        "estimated_impact": "Recupera ~40% dos leads que dizem 'vou pensar'"
+      },
+      {
+        "improvement": "Zero perguntas de aprofundamento clínico",
+        "sdr_solution": "Script consultivo do SDR IA com 3 perguntas obrigatórias antes de orçar: (1) Idade do pet? (2) Há quanto tempo o sintoma e qual a frequência? (3) Já levou em outro lugar ou medicou por conta? Cria vínculo consultivo + qualifica nível de urgência + diferencia da concorrência transacional.",
+        "estimated_impact": "+20% taxa de comparecimento (lead se sente cuidado, menos cancelamento)"
+      },
+      {
+        "improvement": "Nenhum follow-up em 24h",
+        "sdr_solution": "SDR IA dispara follow-up automático em 24h/72h/7d configurado no Kommo (Action 1 do diagnóstico S4). Variações de mensagem: lembrete sutil → escassez ('só tenho 2 horários felinos essa semana') → conteúdo educativo ('por que gato esconde dor — link Reels'). Limite 3 tentativas em 14d.",
+        "estimated_impact": "+R$2-3k/mês receita inicial recuperada"
+      },
+      {
+        "improvement": "Resposta de preço factual mas sem consultoria",
+        "sdr_solution": "SDR IA com playbook de objeção 'caro vs concorrente' em 3 movimentos: (1) Pedir contexto ('A Animed também inclui FELV?'). (2) Ancorar em prova social ('temos 3 reviews só dessa semana de tutoras de felinos'). (3) Custo da inação ('cistite não tratada vira obstrução urinária — internação custa 5x'). Tudo item-a-item transparente.",
+        "estimated_impact": "+R$3,5-5,5k/mês (Action 2 do diagnóstico S4 combinado com follow-up)"
+      }
+    ],
+    "overall_sdr_impact": {
+      "response_time_before": "2 min em horário comercial (excelente, mas requer Loíse disponível e sem atendimento presencial simultâneo)",
+      "response_time_after": "<5 segundos 24/7 (SDR IA cobre janela morta 22h-8h e simultaneidade durante atendimentos presenciais)",
+      "contact_rate_before": 69,
+      "contact_rate_after": 80,
+      "financial_impact_monthly": 5500
+    }
+  }
+}
