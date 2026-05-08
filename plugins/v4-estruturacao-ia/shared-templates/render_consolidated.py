@@ -28,7 +28,9 @@ SECTIONS = [
     ("9. Mídia Paga", "paid"),
     ("10. CRO & Landing Page", "cro"),
     ("11. Marca & Identidade Visual", "brand"),
-    ("12. Roadmap de Evolução", "roadmap"),
+    ("12. Diagnóstico Comercial & Funil", "diagnostico_comercial"),
+    ("13. Cliente Oculto — Avaliação do Atendimento", "cliente_oculto"),
+    ("14. Roadmap de Evolução", "roadmap"),
 ]
 
 
@@ -798,6 +800,189 @@ def section_brand(client, outputs):
     return "\n".join(md)
 
 
+def section_diagnostico_comercial(client, outputs):
+    d = outputs.get("ee-s4-diagnostico-comercial") or {}
+    if not d:
+        return "*Skill `ee-s4-diagnostico-comercial` ainda não executada.*"
+    md = []
+    if d.get("summary_headline"):
+        md.append(f"> **{d['summary_headline']}**")
+        md.append("")
+    if d.get("summary"):
+        md.append(d["summary"])
+        md.append("")
+    # Funnel extended (chevrons "Destrava Receita")
+    fe = d.get("funnel_extended") or []
+    if fe:
+        md.append("### Funil em base mensal — Exposição → Retenção")
+        md.append("")
+        md.append("| Etapa | Volume | Taxa | Status | Observação |")
+        md.append("|---|---|---|---|---|")
+        for st in fe:
+            status = st.get("status") or "—"
+            stage = st.get("stage", "—")
+            if st.get("is_active_constraint"):
+                stage = f"🔴 **{stage}** (restrição ativa)"
+            md.append(
+                f"| {stage} | {safe(st.get('volume_label'))} | {safe(st.get('rate_label'))} | {safe(status)} | {safe(st.get('subtext')).replace(chr(10), ' ')} |"
+            )
+        md.append("")
+    # Funil detalhado por etapa (com gap vs benchmark)
+    fd = d.get("funnel_diagnosis") or []
+    if fd:
+        md.append("### Diagnóstico detalhado por etapa")
+        md.append("")
+        md.append("| Etapa | Atual | Benchmark | Gap | Status | Impacto Mensal |")
+        md.append("|---|---|---|---|---|---|")
+        for st in fd:
+            cur = st.get("current_rate")
+            bm = st.get("benchmark")
+            gap = st.get("gap")
+            cur_s = f"{cur}%" if cur is not None else "—"
+            bm_s = f"{bm}%" if bm is not None else "—"
+            gap_s = f"{gap:+}pp" if isinstance(gap, (int, float)) else "—"
+            impact = st.get("financial_impact_monthly")
+            impact_s = fmt_brl(impact) if impact else "—"
+            md.append(
+                f"| {safe(st.get('stage'))} | {cur_s} | {bm_s} | {gap_s} | {safe(st.get('status'))} | {impact_s} |"
+            )
+        md.append("")
+    # Critérios de qualificação 1-5★
+    qc = d.get("qualification_criteria") or {}
+    if qc:
+        md.append("### Critérios de Qualificação (1–5★) — validados pela cliente")
+        md.append("")
+        for star_key, label in [
+            ("five_star", "⭐⭐⭐⭐⭐ 5★ — Qualificado pleno"),
+            ("four_star", "⭐⭐⭐⭐ 4★ — Qualificado em construção"),
+            ("three_star", "⭐⭐⭐ 3★ — Morno"),
+            ("one_two_star", "⭐⭐ / ⭐ — Anti-persona / Frio"),
+        ]:
+            c = qc.get(star_key) or {}
+            if not c:
+                continue
+            md.append(f"**{label}**")
+            if c.get("profile"):
+                md.append(f"- Perfil: {c['profile']}")
+            if c.get("action"):
+                md.append(f"- Ação: {c['action']}")
+            if c.get("example"):
+                md.append(f"- Exemplo canônico: *\"{c['example']}\"*")
+            md.append("")
+    # SLA
+    sla = d.get("sla") or {}
+    if sla:
+        md.append("### SLA por estrela")
+        md.append("")
+        md.append(f"- **5★:** {safe(sla.get('five_star_minutes'))} min · responsável: {safe(sla.get('five_star_responsible'))}")
+        md.append(f"- **4★:** {safe(sla.get('four_star_hours'))} h · responsável: {safe(sla.get('four_star_responsible'))}")
+        md.append(f"- **3★:** {safe(sla.get('three_star_hours'))} h")
+        if sla.get("escalation_5star_minutes") or sla.get("escalation_4star_hours"):
+            md.append(f"- Escalação: 5★ {safe(sla.get('escalation_5star_minutes'))} min / 4★ {safe(sla.get('escalation_4star_hours'))} h — {safe(sla.get('escalation_responsible'))}")
+        md.append("")
+    # Top 3 objeções
+    om = d.get("objection_map") or []
+    if om:
+        md.append("### Top objeções mapeadas")
+        md.append("")
+        for o in om[:3]:
+            md.append(f"**{o.get('objection', '—')}** {f'_(tipo: {o.get(chr(34)+chr(116)+chr(121)+chr(112)+chr(101)+chr(34))})_' if o.get('type') else ''}")
+            if o.get("recommended_response"):
+                md.append(f"- *Resposta recomendada:* {o['recommended_response']}")
+            if o.get("sdr_prevention"):
+                md.append(f"- *Prevenção pelo SDR IA:* {o['sdr_prevention']}")
+            md.append("")
+    # Plano de ação 5 prioridades
+    ap = d.get("action_plan") or []
+    if ap:
+        md.append("### Plano de ação")
+        md.append("")
+        md.append("| # | Ação | Responsável | Prazo | Impacto Esperado |")
+        md.append("|---|---|---|---|---|")
+        for a in ap:
+            md.append(
+                f"| {safe(a.get('priority'))} | {safe(a.get('action'))} | {safe(a.get('responsible'))} | {safe(a.get('timeline'))} | {safe(a.get('expected_impact')).replace(chr(10), ' ')} |"
+            )
+        md.append("")
+    # Gargalo primário
+    pb = d.get("primary_bottleneck") or {}
+    if pb:
+        md.append("### Gargalo primário")
+        md.append("")
+        md.append(f"**Etapa:** {safe(pb.get('stage'))}")
+        md.append("")
+        if pb.get("description"):
+            md.append(pb["description"])
+            md.append("")
+        if pb.get("estimated_improvement"):
+            md.append(f"**Impacto estimado da correção:** {pb['estimated_improvement']}")
+            md.append("")
+    return "\n".join(md)
+
+
+def section_cliente_oculto(client, outputs):
+    d = outputs.get("ee-s4-cliente-oculto") or {}
+    if not d:
+        return "*Skill `ee-s4-cliente-oculto` ainda não executada.*"
+    md = []
+    if d.get("summary_headline"):
+        md.append(f"> **{d['summary_headline']}**")
+        md.append("")
+    if d.get("summary"):
+        md.append(d["summary"])
+        md.append("")
+    ev = d.get("evaluation") or {}
+    if ev:
+        score = ev.get("overall_score")
+        cls = ev.get("classification") or "—"
+        cls_label = {"excelente": "EXCELENTE", "bom": "BOM", "regular": "REGULAR", "ruim": "RUIM", "critico": "CRÍTICO"}.get(str(cls).lower(), cls.upper())
+        md.append("### Avaliação geral")
+        md.append("")
+        md.append(f"- **Nota:** {score}/10")
+        md.append(f"- **Classificação:** {cls_label}")
+        md.append("")
+        cs = ev.get("criteria_scores") or []
+        if cs:
+            md.append("### Notas por critério")
+            md.append("")
+            md.append("| Critério | Nota | Observação |")
+            md.append("|---|---|---|")
+            for c in cs:
+                md.append(
+                    f"| {safe(c.get('criterion'))} | **{safe(c.get('score'))}/10** | {safe(c.get('observation')).replace(chr(10), ' ')} |"
+                )
+            md.append("")
+        strengths = ev.get("strengths") or []
+        if strengths:
+            md.append("### Pontos fortes")
+            md.append(bullets(strengths))
+            md.append("")
+        critical = ev.get("critical_improvements") or []
+        if critical:
+            md.append("### Melhorias críticas identificadas")
+            md.append(bullets(critical))
+            md.append("")
+        impact = ev.get("overall_sdr_impact") or {}
+        if impact:
+            md.append("### Impacto projetado pelo SDR IA")
+            md.append("")
+            md.append(f"- Tempo de resposta antes: **{safe(impact.get('response_time_before'))}** → depois: **{safe(impact.get('response_time_after'))}**")
+            md.append(f"- Taxa Lead→Contato: **{safe(impact.get('contact_rate_before'))}%** → **{safe(impact.get('contact_rate_after'))}%**")
+            if impact.get("financial_impact_monthly"):
+                md.append(f"- **Impacto financeiro mensal estimado:** {fmt_brl(impact['financial_impact_monthly'])}")
+            md.append("")
+    bp = d.get("buyer_profile") or {}
+    if bp:
+        md.append("### Perfil simulado")
+        md.append(f"- Nome: {safe(bp.get('name'))} · Pet: {safe(bp.get('pet'))} · Cidade: {safe(bp.get('city'))}")
+        if bp.get("scenario"):
+            md.append(f"- Cenário: {bp['scenario']}")
+        if bp.get("urgency"):
+            md.append(f"- Urgência: {bp['urgency']}")
+        md.append("")
+    return "\n".join(md)
+
+
 def section_roadmap(client, outputs):
     progress = client.get("progress", {}) or {}
     skills = progress.get("skills", {}) or {}
@@ -832,6 +1017,8 @@ RENDERERS = {
     "paid": section_paid,
     "cro": section_cro,
     "brand": section_brand,
+    "diagnostico_comercial": section_diagnostico_comercial,
+    "cliente_oculto": section_cliente_oculto,
     "roadmap": section_roadmap,
 }
 

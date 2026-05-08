@@ -1,6 +1,6 @@
 # Visão Consolidada — Clínica Veterinária Zenvet
 
-*Gerado em 2026-05-08 17:38 UTC · Ciclo atual: Semana 3 · Cliente: `clinica-veterinaria-zenvet`*
+*Gerado em 2026-05-08 18:18 UTC · Ciclo atual: Semana 3 · Cliente: `clinica-veterinaria-zenvet`*
 
 > Este documento consolida tudo que foi produzido para o cliente ao longo do projeto.
 > Cada seção referencia o output estruturado original em `outputs/` para auditabilidade.
@@ -21,7 +21,9 @@
 - [9. Mídia Paga](#9-mídia-paga)
 - [10. CRO & Landing Page](#10-cro-landing-page)
 - [11. Marca & Identidade Visual](#11-marca-identidade-visual)
-- [12. Roadmap de Evolução](#12-roadmap-de-evolucao)
+- [12. Diagnóstico Comercial & Funil](#12-diagnóstico-comercial-funil)
+- [13. Cliente Oculto — Avaliação do Atendimento](#13-cliente-oculto-—-avaliacao-do-atendimento)
+- [14. Roadmap de Evolução](#14-roadmap-de-evolucao)
 
 ---
 
@@ -476,12 +478,12 @@ Descoberta da entrega S2 (22/04/2026): existe concorrente orgânica felina local
 - **Unavailable reason:** ROAS indisponível — cliente não reporta receita atribuída, apenas CPL e volume de leads
 
 ### Principais achados
+- **Pixel ausente:** BLOQUEIO P0 — Sem retargeting · sem lookalike · sem validação de CVR LP — alavanca crítica antes de escalar
 - **CPL real:** R$ 26 — Topo do benchmark Pet/Vet (R$ 5–25)
 - **Subinvestimento:** -41% — R$ 1875/mês vs R$ 3200 contratado
 - **Google pausado:** 5 de 6 — Incluindo flyvet.gdm-vacinação (CPA R$ 3,19)
 - **CTR Meta:** 1.28% — Abaixo do piso 1,5%, mas recuperando (mar/abr 1,18-1,41%)
 - **Leads mês →:** 72 → 145 — Realocação B + reativar Google + Pixel Meta
-- **Ramp-up:** 30-60d — Semana 1: reativa Google + Pixel. Semana 3: LP felinos
 
 ### Diagnóstico por dimensão
 - **Account structure:** Google tem 6 campanhas com lógica válida (Geral, Serviços, Vacinação, Institucional, Reconhecimento) mas 5 estão pausadas sem critério técnico claro. Meta tem 15 campanhas fragmentadas, maior parte sendo boost de posts antigos (2024/2025) com objetivo MESSAGES/ENGAGEMENT — inadequado para gerar leads mensuráveis.
@@ -556,45 +558,186 @@ Descoberta da entrega S2 (22/04/2026): existe concorrente orgânica felina local
 *Status:* Base criada na Semana 1 — carece de brandbook consolidado e expansão por linha de serviço
 
 
-## 12. Roadmap de Evolução
+## 12. Diagnóstico Comercial & Funil
+
+> **Resposta em 2-10min é vantagem real, mas 22 leads/mês somem antes do contato e 76% dos contatados não agendam — perde R$3,5k-7k/mês.**
+
+Funil da Zenvet: 72 leads/mês entram, 50 são contatados pela Louíse (69%), 12 agendam (24% contato→agendamento) e ~100% comparecem. DOIS gargalos: (1) Lead→Contato 69% no piso do benchmark Saúde (65-80%) — 22 leads/mês somem antes de a Louíse falar com eles; (2) Contato→Agendamento 24% vs 35-50% — onde mora o 'lead some sem retorno'. Vantagem confirmada: tempo de 1ª resposta 2-10min (acima da meta DRO 3 V4MOS de 90% ≤10min). Critério 5★ validado pela Nathalia: 'tutor que trata o animal como filho e não mede esforços para cuidar' — perfil Mariana plena. Receita recuperável corrigindo os dois gargalos: +R$3.500 a +R$7.000/mês.
+
+### Funil em base mensal — Exposição → Retenção
+
+| Etapa | Volume | Taxa | Status | Observação |
+|---|---|---|---|---|
+| Exposição | 52.929/mês | base | — | Impressões mensais Google Ads + Meta Ads (média dos últimos 90 dias do diagnóstico de mídia S2) |
+| Atenção | 1.064/mês | 2,01% CTR | — | Cliques nos anúncios Google + Meta (S2 90d ÷ 3). CTR consolidado abaixo do benchmark 2,75%. |
+| Interesse | ~1.064/mês | 100% [E] | — | Estimativa de visitas à LP igual ao número de cliques — sem GA4/Pixel instalados (P1 do diagnóstico CRO S2). Instrumentação recomendada para medir o gap real Atenção→Interesse. |
+| Qualificação | 72/mês | 6,77% | — | Leads gerados/mês (briefing V4MOS). Conversão Cliques→Leads abaixo do benchmark de Saúde (10-15%) — provavelmente pela falta de transparência de preço na LP e pelo CRO sem rastreamento. |
+| 🔴 **Compromisso** (restrição ativa) | 12/mês | 16,67% | critical | Leads que agendam consulta (Lead→Agendamento). Internamente: 50 contatados (69%) → 12 agendados (24%). Gargalo principal: Contato→Agendamento 24% vs benchmark Saúde 35-50%. Ver tabela detalhada abaixo. |
+| Decisão | 12/mês | 100% | above_benchmark | Consulta paga (R$500 ticket médio). Show rate ~100% e Comparecimento→Fechamento colapsado no modelo PDV — quem comparece paga. Vantagem estrutural acima do benchmark. |
+| Retenção | ~150/mês | 12,65% [E] | above_benchmark | Estimativa de retornos mensais: faturamento R$81.657 ÷ ticket R$500 ≈ 163 atendimentos − 12 consultas novas = ~150 retornos. Taxa sobre base de 1.186 pacientes ativos. Vetsoft tem o número real — exportação fora do escopo desta entrega. |
+
+### Diagnóstico detalhado por etapa
+
+| Etapa | Atual | Benchmark | Gap | Status | Impacto Mensal |
+|---|---|---|---|---|---|
+| Lead → Primeiro Contato | 69% | 72.5% | -3.5pp | below_benchmark | R$ 1 mil |
+| Primeiro Contato → Agendamento | 24% | 42.5% | -18.5pp | critical | R$ 3 mil |
+| Agendamento → Comparecimento | 100% | 77.5% | +22.5pp | above_benchmark | — |
+| Comparecimento → Fechamento | 100% | 50% | +50pp | above_benchmark | — |
+
+### Critérios de Qualificação (1–5★) — validados pela cliente
+
+**⭐⭐⭐⭐⭐ 5★ — Qualificado pleno**
+- Perfil: Mariana plena: tutora de gato (70% do mix de receita) OU tutor de cão com perfil preventivo declarado, na região atendida, com sinal de intenção de agendar e demonstração de vínculo emocional com o pet.
+- Ação: Louíse responde em até 5 minutos no WhatsApp já oferecendo 2 horários concretos ('hoje 16h ou amanhã 9h?'). Para felinos com sintoma sério ou caso especializado, escalar para Nathalia validar prioridade. Não pedir nada além do necessário pra agendar.
+- Exemplo canônico: *"Perfil confirmado pela Nathalia como 'última venda boa fechada': tutor que TRATA O ANIMAL COMO FILHO E NÃO MEDE ESFORÇOS PARA CUIDAR. Exemplo: tutora de gato em Americana — 'Oi! Meu gato Simba (4 anos, SRD) tá vomitando há 3 dias e quero levar pra Dra. Nathalia que vi no Instagram. Tem horário essa semana? Pago o que precisar pra ele ficar bem.' — gato + Americana + horário + nome do pet + sintoma específico + vínculo emocional/disposição declarada = 5★ canônico. Louíse responde em ≤5min com 2 horários, sem demorar pra orçar. Esse perfil é a Mariana plena do ICP S1: 'paga o que for preciso desde que entenda por quê'."*
+
+**⭐⭐⭐⭐ 4★ — Qualificado em construção**
+- Perfil: Lead qualificado mas com algum sinal ainda em construção. Geralmente tutor da região com necessidade real, mas ainda em pesquisa ativa ou sem clareza de urgência.
+- Ação: Louíse responde em 1h no WhatsApp. Antes de orçar, faz 1-2 perguntas consultivas ('é gato ou cão? primeira consulta com a gente?') e ABRE com diferencial Zenvet (especialização felina + transparência). Se receber preço e silenciar, follow-up automático em 24h.
+- Exemplo canônico: *"Tutor de gato em SBO: 'Oi, queria saber sobre vacina pro meu gato. Estou olhando algumas clínicas.' — gato + região + pesquisa ativa + necessidade real (3 sinais) = 4★. Responder em 1h, abrir com 'aqui a Dra. Nathalia é especialista em felinos, vacinação completa felina é R$X', e oferecer agendamento."*
+
+**⭐⭐⭐ 3★ — Morno**
+- Perfil: Lead morno: pergunta genérica sobre serviço, ainda não decidiu, preço aparece como dúvida central. Pode virar 5★ com nutrição certa.
+- Ação: Louíse responde em 4h. Após o silêncio inicial, lead entra em régua automática: 48h ('lembrei do seu pet, posso te encaixar essa semana?'), 7d (conteúdo educativo: 'por que gato esconde dor — link Reels'), 15d (depoimento de tutora similar + reviews Google). 3 tentativas máx em 14 dias.
+- Exemplo canônico: *"Lead vindo do Meta Ads: 'Oi, vi anúncio de vocês. Quanto a consulta?' — pergunta genérica + origem Meta + sem contexto = 3★. Responder em 4h com valor + diferencial + se sumir, régua automática. Não escalar prioridade humana."*
+
+**⭐⭐ / ⭐ — Anti-persona / Frio**
+- Perfil: Anti-persona ou fora de fit. Drena tempo da Louíse sem retorno proporcional. Tratar com cordialidade mas sem investir esforço comercial.
+- Ação: Resposta cordial e curta. Para caçador de preço: 'Nossa consulta especialista começa em R$180, é diferente do plano R$70 dos hospitais 24h. Se quiser entender melhor, te explico — senão, compreendo.' Para emergência: redirecionar para hospitais 24h parceiros e seguir com convite para check-up quando estabilizar. Para fora-de-região: encerrar cordialmente. Sem follow-up.
+- Exemplo canônico: *"Lead Meta Ads: 'Quanto a consulta? Na VetX é R$70.' [insiste em desconto] — caçador de preço explícito = 1-2★. Responder uma vez com posicionamento sem desconto, e se insistir, encerrar cordial. Não entra em régua."*
+
+### SLA por estrela
+
+- **5★:** 5 min · responsável: Louíse (vendedora atual). Para casos felinos especializados (sintoma grave, cirurgia potencial), escalar para validação rápida com Nathalia.
+- **4★:** 1 h · responsável: Louíse (Vendedora atual). SDR IA quando implementado pode pré-qualificar antes da Louíse pegar.
+- **3★:** 4 h
+- Escalação: 5★ 15 min / 4★ 4 h — Nathalia (proprietária) — escalar para validação rápida se Louíse estiver em atendimento presencial e SLA estourar. Kelly (financeiro/irmã) como apoio em horários de pico.
+
+### Top objeções mapeadas
+
+**Está muito caro comparado ao hospital 24h (consulta R$70)** _(tipo: None)_
+- *Resposta recomendada:* A consulta com a Dra. Nathalia (única especialista em felinos da região) dura 40 min, com diagnóstico aprofundado e sem exame de tela. Os R$70 do hospital 24h incluem só a consulta básica — quando precisa exame, soma rápido. Posso te mandar 2 reviews de tutoras que vieram de lá?
+- *Prevenção pelo SDR IA:* Antes do preço sair, o SDR IA já abre com diferencial: 'Aqui você fala direto com a Dra. Nathalia, especialista em felinos. Consulta 40min, sem exame que não precisa, valor item-a-item antes de qualquer procedimento.' Posiciona valor e transparência ANTES da pergunta de preço.
+
+**Já fui em clínica que reteve o animal até pagar — tenho medo de exames desnecessários** _(tipo: None)_
+- *Resposta recomendada:* Sinto muito que passou por isso. Na Zenvet a Dra. Nathalia explica cada procedimento ANTES de fazer e mostra o valor estimado. Você aprova item a item, e se precisar internar, combina o custo direto com você. Sem surpresa.
+- *Prevenção pelo SDR IA:* SDR IA inclui de saída a frase 'aqui você aprova item a item antes de qualquer exame ou procedimento' nas primeiras 3 mensagens. Compartilha link/imagem da tabela de preços transparente do GMB (output S3-gmb-otimizacao já implementou). Cita o ICP secundário 'Mariana' para quem se identifica.
+
+**Lead pede informação e some sem retorno (ghosting)** _(tipo: None)_
+- *Resposta recomendada:* Não é uma objeção verbal — é comportamento. A Louíse precisa retomar ATIVAMENTE: 24h depois ('Oi! Lembrei do seu gato, conseguiu pensar? Posso reservar amanhã 14h?'), 72h ('Tô com 2 horários só pra felinos essa semana, te encaixo?'), 7d ('Conteúdo educativo: por que gato esconde dor — link'). Desistir só após 3 tentativas em 14 dias.
+- *Prevenção pelo SDR IA:* SDR IA cria automaticamente tarefa de follow-up 24h/72h/7d para qualquer lead que parou de responder após receber preço/informação. Sem necessidade de Louíse lembrar. Mensagem de cada follow-up varia: insistência sutil → escassez → conteúdo de valor.
+
+### Plano de ação
+
+| # | Ação | Responsável | Prazo | Impacto Esperado |
+|---|---|---|---|---|
+| 1 | Implementar follow-up estruturado 24h/72h/7d para 100% dos leads que receberam informação e não agendaram. Configurar régua no Kommo (já em uso pós-S3) com mensagens-template variando insistência sutil → escassez → conteúdo educativo. Limite de 3 tentativas em 14 dias antes de marcar como descarte. | Louíse (execução) + Rafael Corazza/V4 (configuração técnica do Kommo) | 30 dias (configuração + treinamento Louíse) | +4 a +6 agendamentos/mês (de 12 para 16-18) recuperando ghosting na base de 50 contatados. Receita inicial adicional: +R$2-3k/mês. Ataca diretamente o churn_reason 'lead some sem retorno' do briefing. |
+| 2 | Substituir auto-mensagem fixa ('cão ou gato? domicílio ou clínica?') por script consultivo de abertura que posiciona diferencial Zenvet ANTES do preço aparecer: especialização felina Nathalia + transparência item-a-item + 40min consulta. Script de bolso para Louíse com 6 cenários (preço comparado, exames, especialização, estresse, urgência, ghosting) — todos derivados do objection_map deste diagnóstico. | Louíse (execução) + ee-s5-scripts-sdr (gera o material) | 20 dias (depende de iniciar S5) | +3 a +5 agendamentos/mês adicionais (combinado com follow-up totaliza +7 a +11). Subir Contato→Agendamento de 24% para 30-35% em 60d. Receita inicial adicional projetada combinada: +R$3,5 a +R$5,5k/mês. |
+| 3 | Treinar Louíse na qualificação 1-5★ com checklist mental: espécie + região + pergunta de horário + nome do pet/sintoma. Implementar tag de score no Kommo no primeiro contato. SLA por score visível pra Louíse: 5★ em 5min, 4★ em 1h, 3★ em 4h, 1-2★ resposta cordial sem investir esforço. | Louíse (execução) + Nathalia (validação dos critérios na prática) | 15 dias (treinamento + implementação no Kommo) | Priorização correta evita perder os quentes para concorrência (consulta isca R$70 dos hospitais 24h converte rápido — se Zenvet demorar 1h pra responder um 5★, perde para o 24h). Reduz churn_reason 'foram para outro' do briefing. |
+| 4 | Tabela de preços transparente disponível no WhatsApp como anexo/imagem (já implementada no GMB pelo S3 — replicar no atendimento). Louíse envia automaticamente quando objeção 'caro' aparecer, ANTES de discutir desconto. Reforça posicionamento da Mariana ('paga o que for preciso desde que entenda por quê' — ICP S1). | Louíse (execução) + Nathalia (validar valores) + Rafael Corazza (organizar arte) | 15 dias | Neutraliza deal-killer 'caro vs 24h' transformando objeção em oportunidade de demonstrar transparência (diferencial vs prática 'reter animal até pagar' dos concorrentes — registrada como dor da Mariana no ICP). |
+| 5 | Implementar SDR IA via Patagon (S5 — ee-s5-scripts-sdr + ee-s5-sdr-ia-config) com cobertura 24/7 PRIORITARIAMENTE para resgatar os 22 leads/mês que hoje somem antes do contato. Resposta automática em ≤5seg (não substitui os 2-10min da Louíse — complementa cobrindo janela morta 20h-8h, simultaneidade durante atendimento presencial e canais paralelos como Instagram DM). Qualificação automática 1-5★ via critérios deste diagnóstico; handoff para Louíse apenas em 4★/5★ qualificados. | V4 (Rafael Corazza implementação) + Louíse (supervisão e revisão dos handoffs) | 60 dias (depende de S4 cliente-oculto + S5 scripts + S5 config Patagon) | Recupera ~8 leads/mês hoje silenciosamente perdidos = +2 agendamentos/mês na conversão atual = +R$1.000/mês imediato. Mais importante: libera Louíse para fechamento dos 4★/5★ (consultivo) em vez de filtragem inicial. Sustenta o crescimento projetado no forecast S3 v4 (65→120 leads/mês em 6 meses) sem precisar contratar 2ª pessoa — sem SDR IA, com volume crescendo, o gargalo Lead→Contato AUMENTA proporcionalmente. |
+
+### Gargalo primário
+
+**Etapa:** Primeiro Contato → Agendamento
+
+Dos 50 leads que a Louíse contata por mês, só 12 agendam (24%). Lead conversa, ouve preço, some — sem follow-up. Atual 24% vs benchmark Saúde 35-50% (CRÍTICO, -18,5pp). A objeção 'caro vs hospital 24h R$70' aparece antes de qualquer construção de valor sobre a especialização felina da Nathalia. Sem script consultivo, Louíse responde reativamente; sem CRM comercial, o lead some sem rastro; sem régua de follow-up, ninguém o resgata. Note: tempo de 1ª resposta (2-10min, confirmado) NÃO é o problema — quando ela responde, responde rápido; o que falta é a CONVERSA estruturada depois.
+
+**Impacto estimado da correção:** Subir Contato→Agendamento de 24% para 35% (mediana benchmark Saúde) = de 12 para 17,5 agendamentos/mês na base atual de 50 contatados = +5,5 × R$500 = +R$2.750/mês. Combinado com gargalo secundário (Lead→Contato 69%→75-80%): +R$3.500 a +R$7.000/mês total. Considerando retenção média de 12 meses (briefing), LTV adicional anual estimado ~R$30-65k. DRO 3 do V4MOS já fixou meta de 35% em 60 dias.
+
+
+
+## 13. Cliente Oculto — Avaliação do Atendimento
+
+> **5,9/10 REGULAR · resposta excelente, fechamento passivo · 0 captura de nome, 0 follow-up 24h, 0 reconhecimento clínico — confirma gargalo S4.**
+
+Cliente oculto Zenvet (Camila — tutora de gato em SBO simulando quadro clínico de FLUTD/cistite). Nota 5,9/10 (REGULAR). Tempo de 1ª resposta excelente (2 min, cumpre meta DRO 3 V4MOS), CTA inicial específico (18:30 hoje), defesa de preço sem desconto (FELV+especialização). Mas: 0 captura de nome, 0 perguntas clínicas, 0 reconhecimento de gatilho de urgência (sintoma sugestivo de FLUTD em felino), encerramento passivo no 'vou pensar' e ZERO follow-up em 24h. Confirma empiricamente o gargalo principal do diagnóstico S4 (lead some sem retorno). SDR IA endereça os 6 pontos críticos com impacto projetado +R$5,5k/mês.
+
+### Avaliação geral
+
+- **Nota:** 5.9/10
+- **Classificação:** REGULAR
+
+### Notas por critério
+
+| Critério | Nota | Observação |
+|---|---|---|
+| Tempo de Primeira Resposta | **9/10** | Auto-mensagem instantânea (15:26) + resposta humana em 2 minutos após mensagem com sintomas clínicos específicos (15:29 → 15:31). Já cumpre a meta DRO 3 do V4MOS (90% ≤10min). Ponto forte mais consistente do atendimento. |
+| Qualidade da Abordagem Inicial | **6/10** | Auto-msg estruturada com bem-vinda + qualificação inicial (cão/gato + domicílio/clínica) + menu numerado. Louíse se apresentou pessoalmente ('Meu nome é Louise sou secretária da Zenvet'). Mas: NÃO PEDIU O NOME da tutora nem da gata — sem identificação não há personalização. |
+| Identificação de Necessidade | **3/10** | Camila descreveu sintoma específico e potencialmente grave (xixi fora da caixa há 2 semanas + anorexia em felina). Louíse fez ZERO perguntas de aprofundamento clínico (idade da gata? sexo? há quanto tempo? frequência? sangue na urina?) e foi direto pra agendar. Em clínica especialista em felinos, essa descrição deveria disparar alerta de FLUTD/cistite — falha estrutural de senso clínico-comercial. |
+| Conhecimento do Produto | **7/10** | Mencionou com segurança: especialização Nathalia em felinos, FELV incluído (teste de leucemia felina), retorno gratuito 30d, exame físico antes de pedir exames. Sem hesitar. Faltou: exemplos concretos, tempo de experiência da Dra., casos similares, números de atendimento. |
+| Tratamento de Objeção de Preço | **5/10** | Não cedeu desconto (✓). Justificou valor com 2 ancoragens factuais: FELV incluído + especialização da Dra. Mas: não pediu contexto da comparação (Animed inclui o quê?), sem prova social (reviews de tutoras felinas), sem ancoragem com custo da inação (cistite não tratada custa 5x mais), sem detalhamento item-a-item. Defesa correta mas superficial. |
+| CTA e Avanço de Funil | **7/10** | CTA INICIAL FORTE: 'Hoje ainda temos horario as 18:30 — Daria certo para voce?' (específico, com data/hora, factível). REFORÇO PÓS-PREÇO: 'Gostaria de reservar um horário para hoje?'. MAS: encerramento PASSIVO quando Camila hesitou — 'Sem problemas, ficamos à disposição ☺️'. Em quadro com sinal clínico de urgência, o correto seria: 'Ficou alguma outra dúvida que te ajudaria a trazer ela hoje ainda? Esses casos de bexiga podem ser urgentes, recomendo o quanto antes.' |
+| Follow-up Após Conversa | **2/10** | ZERO follow-up em 24h após Camila sumir. Em ciclo curto (Saúde/Vet, consulta mesmo dia), 24h sem retomada = lead perdido para concorrente ou desistência. Confirma o churn_reason 'lead some sem retorno' do briefing e o gargalo Contato→Agendamento (24%) do diagnóstico S4. Causa raiz: sem CRM comercial nem régua estruturada, leads em hesitação não são resgatados ativamente. |
+
+### Pontos fortes
+- Tempo de primeira resposta: 2 minutos de Camila (15:29) até Louise (15:31), com mensagem que continha sintomas clínicos específicos. Excelente em contexto de PME — já cumpre meta DRO 3 V4MOS de 90% ≤10min.
+- Auto-mensagem inicial bem estruturada com menu numerado (Agendar/Saber mais/Atendimento em andamento) e qualificação dupla (cão/gato + domicílio/clínica). Filtra interesse sem fricção.
+- Apresentação pessoal explícita: 'Meu nome é Louise sou secretária da Zenvet'. Cria identidade humana após o bot — bom contraste.
+- CTA inicial específico e factível na 2ª mensagem: 'Hoje ainda temos horario as 18:30 — Daria certo para voce?'. Não deixou Camila procrastinar com 'me passa horários disponíveis'.
+- Não cedeu desconto na objeção 'caro vs Animed'. Defendeu valor com ancoragens factuais (FELV incluído + especialização da Dra. + retorno gratuito 30d).
+- Comunicou transparência item-a-item nos exames: 'a Dra. só consegue te passar o que será necessário na consulta... Caso seja necessário ela te passa todos os valores antes de realizar.' — trata diretamente o trauma da Mariana (objeção #2 do diagnóstico S4).
+
+### Melhorias críticas identificadas
+- [CRÍTICO] Não capturou nome da tutora nem da gata em nenhuma mensagem da conversa — sem identificação, é IMPOSSÍVEL personalizar follow-up estruturado, alimentar CRM ou criar régua de nutrição. Conecta diretamente ao gargalo principal do diagnóstico S4: 38 leads/mês entram em conversa, ouvem preço, somem sem rastro.
+- [CRÍTICO] Não reconheceu sinal clínico de urgência. Quadro descrito pela Camila (xixi fora da caixa há 2 semanas + parou de comer em felina) é gatilho clássico de FLUTD/cistite/obstrução urinária. Em clínica especialista em felinos, o reflexo esperado é 'eu te encaixo HOJE, esses casos não devem esperar' — Louíse tratou como agendamento de rotina (oferta genérica de 18:30).
+- [CRÍTICO] Nenhum follow-up em 24h após 'vou pensar'. Confirma empiricamente o churn_reason 'lead some sem retorno' do briefing e o gargalo Contato→Agendamento (24%) do diagnóstico S4. Em ciclo curto da Zenvet, 24h sem retomada = lead perdido.
+- [ALTO] Encerramento passivo no 'vou pensar': 'Sem problemas, ficamos à disposição ☺️'. O correto, em quadro com sinal clínico, seria fechamento ativo: 'Ficou alguma outra dúvida que te ajudaria a trazer ela hoje ainda? Esses casos de bexiga podem ser um pouco urgentes, recomendo trazer o quanto antes.' — combina pergunta aberta + urgência apropriada + recomendação + CTA ativo.
+- [ALTO] Zero perguntas de aprofundamento clínico. Não perguntou idade da gata, sexo, raça, há quanto tempo o sintoma, frequência da micção, presença de sangue, se está medicando, se já fez exame anterior. Vai direto pra agendar — perde oportunidade de criar vínculo consultivo (chave do posicionamento Zenvet).
+- [MÉDIO] Resposta de preço sem profundidade consultiva. Defendeu valor (FELV+especialização) mas sem pedir contexto da comparação ('A Animed inclui FELV? Você foi lá antes?'), sem prova social (reviews de tutoras felinas), sem ancoragem com custo da inação. Defesa factual mas não consultiva.
+
+### Impacto projetado pelo SDR IA
+
+- Tempo de resposta antes: **2 min em horário comercial (excelente, mas requer Louíse disponível e sem atendimento presencial simultâneo)** → depois: **<5 segundos 24/7 (SDR IA cobre janela morta 22h-8h e simultaneidade durante atendimentos presenciais)**
+- Taxa Lead→Contato: **69%** → **80%**
+- **Impacto financeiro mensal estimado:** R$ 6 mil
+
+### Perfil simulado
+- Nome: Camila Lima · Pet: — · Cidade: —
+- Urgência: medium
+
+
+
+## 14. Roadmap de Evolução
 
 ### Skills concluídas
-- ✅ **ee-s1-diagnostico-maturidade** — concluída em 2026-04-16
-- ✅ **ee-s1-swot** — concluída em 2026-04-18
-- ✅ **ee-s1-persona-icp** — concluída em 2026-04-18
-- ✅ **ee-s1-auditoria-comunicacao** — concluída em 2026-04-18
-- ✅ **ee-s2-pesquisa-mercado** — concluída em 2026-04-20
-- ✅ **ee-s2-posicionamento** — concluída em 2026-04-20
-- ✅ **ee-s2-diagnostico-midia** — concluída em 2026-04-21
+- ✅ **ee-s1-diagnostico-maturidade** — concluída em 2026-05-08T18:18:15Z
+- ✅ **ee-s1-swot** — concluída em 2026-05-08T18:18:15Z
+- ✅ **ee-s1-persona-icp** — concluída em 2026-05-08T18:18:15Z
+- ✅ **ee-s1-auditoria-comunicacao** — concluída em 2026-05-08T18:18:15Z
+- ✅ **ee-s2-pesquisa-mercado** — concluída em 2026-05-08T18:18:15Z
+- ✅ **ee-s2-posicionamento** — concluída em 2026-05-08T18:18:15Z
+- ✅ **ee-s2-diagnostico-midia** — concluída em 2026-05-08T18:18:15Z
 - ✅ **ee-s2-diagnostico-criativos** — concluída em 2026-04-22T02:42:00.268295+00:00
 - ✅ **ee-s2-diagnostico-organico-ig** — concluída em 2026-04-21T20:10:00+00:00
 - ✅ **ee-s2-diagnostico-cro** — concluída em 2026-04-21T18:39:46.704257+00:00
 - ✅ **ee-s3-identidade-visual** — concluída em 2026-04-28T00:00:00Z
-- ✅ **ee-s3-brandbook** — concluída em 2026-04-28T00:00:00Z
-- ✅ **ee-s3-landing-page** — concluída em 2026-04-29T22:12:00.763457Z
-- ✅ **ee-s3-copy-anuncios** — concluída em 2026-04-29T20:02:26.166797Z
+- ✅ **ee-s3-brandbook** — concluída em 2026-05-08T18:18:15Z
+- ✅ **ee-s3-landing-page** — concluída em 2026-05-08T18:18:15Z
+- ✅ **ee-s3-copy-anuncios** — concluída em 2026-05-08T18:18:15Z
 - ✅ **ee-s3-criativos-anuncios** — concluída em 2026-04-29T20:11:47.011481Z
 - ✅ **ee-s3-crm-setup** — concluída em 2026-04-30T14:50:00Z
-- ✅ **ee-s3-forecast-midia** — concluída em 2026-04-30T14:35:00Z
-- ✅ **ee-s3-gmb-otimizacao** — concluída em 2026-04-30T13:49:44.009568Z
-- ✅ **ee-s4-diagnostico-comercial** — concluída em 2026-05-07T19:47:31Z
-- ✅ **ee-s4-cliente-oculto** — concluída em 2026-05-07T20:57:48Z
+- ✅ **ee-s3-forecast-midia** — concluída em 2026-05-08T18:18:15Z
+- ✅ **ee-s3-gmb-otimizacao** — concluída em 2026-05-08T18:18:15Z
+- ✅ **ee-s4-diagnostico-comercial** — concluída em 2026-05-08T18:18:15Z
+- ✅ **ee-s4-cliente-oculto** — concluída em 2026-05-08T18:18:15Z
 - ✅ **ee-s5-scripts-sdr** — concluída em 2026-05-08T15:31:12Z
 - ✅ **ee-s5-sdr-ia-config** — concluída em 2026-05-08T15:50:21Z
 - ✅ **ee-revisao-semanal** — concluída em 2026-04-22T13:35:14Z
-- ✅ **ee-s3-manual-marca** — concluída em 2026-04-28T15:00:00Z
+- ✅ **ee-s3-manual-marca** — concluída em 2026-05-08T18:18:15Z
 
 **Semana atual:** 3
 
 ### Histórico de refinamentos
-- *2026-04-30T14:35:00Z* — **ee-s3-forecast-midia** (refined): v4 ULTRA conservador: M1 começa ABAIXO do baseline atual (65 leads vs 72 hoje, CPL R$46 vs R$26 hoje) refletindo custo real da transição. Estabilização só no M4 (CPL R$30 = benchmark Pet/Vet). M6: 120 leads, CPL R$25, 26 atendimentos. Acumulado 6m: 557 leads, 100 atendimentos, CAC mídia médio R$180.
-- *2026-04-30T14:50:00Z* — **ee-s3-crm-setup** (marked_completed): Marcado como concluído pelo operador. Configuração do CRM (Kommo) realizada externamente — pipeline + réguas de boas-vindas e nutrição configurados, Louíse com script consultivo. Detalhes da execução não documentados no output desta skill.
-- *2026-05-07T17:46:44Z* — **ee-s4-diagnostico-comercial** (completed): Diagnóstico comercial Zenvet com dados validados pela cliente: 72 leads → 50 contatados (69%) → 12 agendados (24% Contato→Agendamento, CRÍTICO -18,5pp vs benchmark Saúde 35-50%) → 100% show. DOIS gargalos: (1) Contato→Agendamento principal (sem script + sem follow-up + sem CRM, 38 leads/mês somem após contato); (2) Lead→Contato secundário (22 leads/mês silenciosamente perdidos antes do contato — janela morta 22h-8h + simultaneidade presencial + canais paralelos). Vantagens confirmadas: tempo 1ª resposta 2-10min (já cumpre meta DRO 3 V4MOS), show ~100%, cobertura 12h/dia/7d. Critério 5★ validado pela Nathalia: 'tutor que trata o animal como filho e não mede esforços' (= Mariana plena). Plano 5 ações: Follow-up Kommo 24h/72h/7d (P1, 30d) · Script consultivo S5 (P2, 20d) · Treinamento qualificação 1-5★ (P3, 15d) · Tabela preços transparente WhatsApp (P4, 15d) · SDR IA Patagon re-priorizado para COBERTURA dos 22 silenciosos, não velocidade (P5, 60d). Receita recuperável: +R$3.500 a +R$7.000/mês. Portal deployado: https://portal-zenvet.vercel.app
-- *2026-05-07T19:47:31Z* — **ee-s4-diagnostico-comercial** (refined): Adicionado funnel_extended (7 chevrons R→L estilo 'Destrava Receita') em base mensal coerente. Etapas: Exposição (52.929 imp/mês Google+Meta) → Atenção (1.064 cliques/mês, CTR 2,01%) → Interesse (~1.064 visitas/mês [E], sem GA4) → Qualificação (72 leads) → Compromisso (12 agendados, 16,67%, RESTRIÇÃO ATIVA) → Decisão (12 consultas pagas) → Retenção (~150 retornos/mês [E] sobre base 1.186 ativos = 12,65%). Renderer ganhou função chartChevronFunnel() — pinta chevrons R→L com destaque visual da restrição e padrão diagonal nas estimativas. Tabela detalhada de 4 etapas mantida como complemento.
-- *2026-05-07T20:57:48Z* — **ee-s4-cliente-oculto** (completed): Cliente oculto Zenvet executado pela operadora no WhatsApp 19-99579-5483 em 2026-05-07 15:26-15:56 (~30min). Perfil: Camila (33a, SBO, gata Mel 5a com xixi fora da caixa há 2 semanas + anorexia = sintoma sugestivo de FLUTD/cistite). Atendente: Louise (Louíse no briefing). Nota: 5,9/10 REGULAR. C1 Tempo 9, C2 Abordagem 6, C3 Necessidade 3, C4 Conhecimento 7, C5 Preço 5, C6 CTA 7, C7 Follow-up 2 (24h sem retomada). Pontos fortes: 2min de resposta + CTA específico (18:30) + sem desconto na objeção 'caro vs Animed' + comunicou transparência item-a-item. Críticos: 0 captura de nome + 0 reconhecimento de urgência clínica + encerramento passivo no 'vou pensar' + 0 follow-up em 24h. Confirma empiricamente o gargalo Contato→Agendamento (24%) do diagnóstico S4. SDR IA endereça 6 pontos críticos com impacto +R$5,5k/mês.
-- *2026-05-08T11:23:55Z* — **ee-s5-scripts-sdr** (completed): Scripts SDR IA Zenvet — agente Bia (recepcionista digital), tom 4 adjetivos brandbook (Especialista · Humano · Transparente · Próximo). 5 perguntas de qualificação (need + urgência clínica com red flags felinos + trust + identificação obrigatória + agendamento), 6 objeções tratadas (preço vs 24h, exames desnecessários, especialização, estresse, autoridade familiar, ghosting/vou pensar), score 1-5★ com escalonamento clínico imediato pra Dra. Nathalia em red flags (xixi fora da caixa + anorexia, vômito persistente, prostração, sangue). Endereça os 6 pontos críticos do cliente oculto (5,9/10): captura nome da tutora + nome do pet na P4, fechamento ativo no vou pensar com lembrete clínico, acompanhamento automático 1h/24h/3d via Kommo. Louíse permanece como humana, Bia faz handoff natural sem revelar IA. Próximo passo: aprovação Nathalia → ee-s5-sdr-ia-config (Patagon + Kommo).
-- *2026-05-08T15:31:12Z* — **ee-s5-scripts-sdr** (refined): v2 — Ajustes pós-decisão da operadora: (1) consulta felinos R$ 140 (valor atual cobrado, confirmado no cliente oculto); (2) Bia agenda APENAS consulta de felinos — para cães, vacinação, castração, atendimento domiciliar, check-up senior, cirurgia e demais serviços, faz handoff direto pra Louíse; (3) novos campos service_scope, qualification_criteria (5 estrelas validadas pela Nathalia), anti_persona_profiles (4 perfis: caçador de preço, emergência única, Dr. Google, fora de região), distribution_target (20/30/30/10/10 sobre base mensal de 72 leads); (4) escalation_rules ganhou regra on_non_consultation_service; (5) human_handoff_message ganhou non_consultation_service_handoff. Renderer do portal ee-s5-scripts-sdr expandido pra mostrar tudo: highlights, key findings, escopo de atendimento, identidade do agente, perguntas com tabela de scoring inline, critérios qualitativos por estrela com definição validada pela Nathalia, sistema de pontos, anti-persona, distribuição alvo, fluxos por score, objeções, escalonamento, follow-ups e handoff messages.
-- *2026-05-08T15:50:21Z* — **ee-s5-sdr-ia-config** (completed): Configuração da Bia (SDR IA) PLANEJADA para Kommo IA nativa — decisão da operadora 2026-05-08 substituindo opção Patagon original. Output documenta: agente Bia (recepcionista digital) · system prompt apontando pra diretrizes-bia.html · 28 custom fields a criar · 12 estágios de pipeline · 30+ triggers/Salesbot · template de alerta pra Louíse · 5 testes simulados planejados (5★ red flag, 4★ cão, 3★ pesquisador, 1★ caçador, objeção forte) · checklist de 16 itens de configuração com responsáveis e bloqueantes (aprovação Nathalia, placeholders, execução técnica Rafael Corazza). Status: configuração ainda não executada — aguarda (1) aprovação Nathalia sobre scripts e red flags, (2) confirmação dos 4 placeholders pendentes (horário, hospital 24h parceiro, parcelamento, convênios), (3) execução técnica Rafael Corazza, (4) testes em sandbox. Renderer do portal atualizado: Patagon → Kommo IA, botão destacado pras diretrizes operacionais, checklist visual categorizado com status icons (✅⏳❌), painel de bloqueantes pendentes.
+- *2026-05-08T18:18:15Z* — **ee-s3-gmb-otimizacao** (refined): Correção de grafia: replace global "Loíse" → "Louíse" em todos os campos do output. Sem mudança de conteúdo substantivo. Parte de housekeeping em lote 2026-05-08.
+- *2026-05-08T18:18:15Z* — **ee-s3-landing-page** (refined): Correção de grafia: replace global "Loíse" → "Louíse" em todos os campos do output. Sem mudança de conteúdo substantivo. Parte de housekeeping em lote 2026-05-08.
+- *2026-05-08T18:18:15Z* — **ee-s3-manual-marca** (refined): Correção de grafia: replace global "Loíse" → "Louíse" em todos os campos do output. Sem mudança de conteúdo substantivo. Parte de housekeeping em lote 2026-05-08.
+- *2026-05-08T18:18:15Z* — **ee-s4-cliente-oculto** (refined): Correção de grafia: replace global "Loíse" → "Louíse" em todos os campos do output. Sem mudança de conteúdo substantivo. Parte de housekeeping em lote 2026-05-08.
+- *2026-05-08T18:18:15Z* — **ee-s4-diagnostico-comercial** (refined): Correção de grafia: replace global "Loíse" → "Louíse" em todos os campos do output. Sem mudança de conteúdo substantivo. Parte de housekeeping em lote 2026-05-08.
+- *2026-05-08T18:18:15Z* — **ee-s1-swot** (refined): Loíse→Louíse + enriquecimento: adicionada finding categoria "vantagem" sobre atendimento domiciliar felino como diferencial sub-comunicado validado nas semanas S2/S3 (alavanca de margem + resolve dor #1 da Mariana).
+- *2026-05-08T18:18:15Z* — **ee-s1-diagnostico-maturidade** (refined): Loíse→Louíse + enriquecimento: adicionado highlight categoria "oportunidade" com potencial de turnaround (+66% leads em 90 dias com mesma verba ao corrigir Pixel + Google + LP).
+- *2026-05-08T18:18:15Z* — **ee-s2-diagnostico-midia** (refined): Loíse→Louíse + enriquecimento: highlight "Pixel ausente — BLOQUEIO P0" inserido em 1ª posição (sem retargeting, sem lookalike, sem validação de CVR LP). Reflete o achado crítico sub-comunicado no v1.
 
 ---
 

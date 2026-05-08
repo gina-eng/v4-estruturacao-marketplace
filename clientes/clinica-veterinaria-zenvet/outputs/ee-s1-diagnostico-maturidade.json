@@ -30,6 +30,13 @@
       "value": "90 dias",
       "subtext": "Quick wins liberam upside imediato",
       "tone": "green"
+    },
+    {
+      "category": "oportunidade",
+      "label": "Potencial com tracking",
+      "value": "+66% leads",
+      "subtext": "Projetado em 90 dias com mesma verba — corrigindo Pixel + Google + LP",
+      "tone": "green"
     }
   ],
   "summary_key_findings": [

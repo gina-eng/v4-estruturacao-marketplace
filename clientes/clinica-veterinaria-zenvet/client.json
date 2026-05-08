@@ -2028,49 +2028,50 @@
         "status": "completed",
         "checkpoint": 1,
         "started_at": "2026-04-16",
-        "completed_at": "2026-04-16"
+        "completed_at": "2026-05-08T18:18:15Z",
+        "version": 1
       },
       "ee-s1-swot": {
         "status": "completed",
         "checkpoint": 1,
         "started_at": "2026-04-18",
-        "completed_at": "2026-04-18",
-        "version": 2
+        "completed_at": "2026-05-08T18:18:15Z",
+        "version": 3
       },
       "ee-s1-persona-icp": {
         "status": "completed",
         "checkpoint": 0,
         "started_at": null,
-        "completed_at": "2026-04-18",
-        "version": 3
+        "completed_at": "2026-05-08T18:18:15Z",
+        "version": 4
       },
       "ee-s1-auditoria-comunicacao": {
         "status": "completed",
         "checkpoint": 1,
         "started_at": "2026-04-18",
-        "completed_at": "2026-04-18",
-        "version": 1
+        "completed_at": "2026-05-08T18:18:15Z",
+        "version": 2
       },
       "ee-s2-pesquisa-mercado": {
         "status": "completed",
         "checkpoint": 1,
         "started_at": "2026-04-20",
-        "completed_at": "2026-04-20",
-        "version": 4
+        "completed_at": "2026-05-08T18:18:15Z",
+        "version": 5
       },
       "ee-s2-posicionamento": {
         "status": "completed",
         "checkpoint": 1,
         "started_at": "2026-04-20",
-        "completed_at": "2026-04-20",
-        "version": 2
+        "completed_at": "2026-05-08T18:18:15Z",
+        "version": 3
       },
       "ee-s2-diagnostico-midia": {
         "status": "completed",
         "checkpoint": 1,
         "started_at": "2026-04-18",
-        "completed_at": "2026-04-21",
-        "version": 2
+        "completed_at": "2026-05-08T18:18:15Z",
+        "version": 3
       },
       "ee-s2-diagnostico-criativos": {
         "status": "completed",
@@ -2106,8 +2107,8 @@
         "status": "completed",
         "checkpoint": 0,
         "started_at": "2026-04-28T00:00:00Z",
-        "completed_at": "2026-04-28T00:00:00Z",
-        "version": 1,
+        "completed_at": "2026-05-08T18:18:15Z",
+        "version": 2,
         "superseded_by": "ee-s3-manual-marca",
         "superseded_at": "2026-04-28T15:00:00Z"
       },
@@ -2115,14 +2116,14 @@
         "status": "completed",
         "checkpoint": 0,
         "started_at": "2026-04-29T17:00:00Z",
-        "completed_at": "2026-04-29T22:12:00.763457Z",
-        "version": 2
+        "completed_at": "2026-05-08T18:18:15Z",
+        "version": 3
       },
       "ee-s3-copy-anuncios": {
         "status": "completed",
-        "version": 1,
+        "version": 2,
         "started_at": "2026-04-29T20:02:26.166797Z",
-        "completed_at": "2026-04-29T20:02:26.166797Z"
+        "completed_at": "2026-05-08T18:18:15Z"
       },
       "ee-s3-criativos-anuncios": {
         "status": "completed",
@@ -2140,30 +2141,30 @@
       "ee-s3-forecast-midia": {
         "status": "completed",
         "checkpoint": 1,
-        "version": 4,
+        "version": 5,
         "started_at": "2026-04-30T13:30:00Z",
-        "completed_at": "2026-04-30T14:35:00Z"
+        "completed_at": "2026-05-08T18:18:15Z"
       },
       "ee-s3-gmb-otimizacao": {
         "status": "completed",
         "checkpoint": 0,
         "started_at": "2026-04-30T13:49:44.009568Z",
-        "completed_at": "2026-04-30T13:49:44.009568Z",
-        "version": 1
+        "completed_at": "2026-05-08T18:18:15Z",
+        "version": 2
       },
       "ee-s4-diagnostico-comercial": {
         "status": "completed",
         "checkpoint": 1,
-        "version": 2,
+        "version": 3,
         "started_at": "2026-05-07T17:46:44Z",
-        "completed_at": "2026-05-07T19:47:31Z"
+        "completed_at": "2026-05-08T18:18:15Z"
       },
       "ee-s4-cliente-oculto": {
         "status": "completed",
         "checkpoint": 1,
-        "version": 1,
+        "version": 2,
         "started_at": "2026-05-07T15:26:00Z",
-        "completed_at": "2026-05-07T20:57:48Z"
+        "completed_at": "2026-05-08T18:18:15Z"
       },
       "ee-s5-scripts-sdr": {
         "status": "completed",
@@ -2188,9 +2189,9 @@
       },
       "ee-s3-manual-marca": {
         "status": "completed",
-        "version": 1,
+        "version": 2,
         "started_at": "2026-04-28T15:00:00Z",
-        "completed_at": "2026-04-28T15:00:00Z"
+        "completed_at": "2026-05-08T18:18:15Z"
       }
     }
   },
@@ -2432,6 +2433,111 @@
       "action": "completed",
       "version": 1,
       "note": "Configuração da Bia (SDR IA) PLANEJADA para Kommo IA nativa — decisão da operadora 2026-05-08 substituindo opção Patagon original. Output documenta: agente Bia (recepcionista digital) · system prompt apontando pra diretrizes-bia.html · 28 custom fields a criar · 12 estágios de pipeline · 30+ triggers/Salesbot · template de alerta pra Louíse · 5 testes simulados planejados (5★ red flag, 4★ cão, 3★ pesquisador, 1★ caçador, objeção forte) · checklist de 16 itens de configuração com responsáveis e bloqueantes (aprovação Nathalia, placeholders, execução técnica Rafael Corazza). Status: configuração ainda não executada — aguarda (1) aprovação Nathalia sobre scripts e red flags, (2) confirmação dos 4 placeholders pendentes (horário, hospital 24h parceiro, parcelamento, convênios), (3) execução técnica Rafael Corazza, (4) testes em sandbox. Renderer do portal atualizado: Patagon → Kommo IA, botão destacado pras diretrizes operacionais, checklist visual categorizado com status icons (✅⏳❌), painel de bloqueantes pendentes."
+    },
+    {
+      "ts": "2026-05-08T18:18:15Z",
+      "skill": "ee-s1-persona-icp",
+      "action": "refined",
+      "version": 4,
+      "note": "Correção de grafia: replace global \"Loíse\" → \"Louíse\" em todos os campos do output. Sem mudança de conteúdo substantivo. Parte de housekeeping em lote 2026-05-08."
+    },
+    {
+      "ts": "2026-05-08T18:18:15Z",
+      "skill": "ee-s1-auditoria-comunicacao",
+      "action": "refined",
+      "version": 2,
+      "note": "Correção de grafia: replace global \"Loíse\" → \"Louíse\" em todos os campos do output. Sem mudança de conteúdo substantivo. Parte de housekeeping em lote 2026-05-08."
+    },
+    {
+      "ts": "2026-05-08T18:18:15Z",
+      "skill": "ee-s2-pesquisa-mercado",
+      "action": "refined",
+      "version": 5,
+      "note": "Correção de grafia: replace global \"Loíse\" → \"Louíse\" em todos os campos do output. Sem mudança de conteúdo substantivo. Parte de housekeeping em lote 2026-05-08."
+    },
+    {
+      "ts": "2026-05-08T18:18:15Z",
+      "skill": "ee-s2-posicionamento",
+      "action": "refined",
+      "version": 3,
+      "note": "Correção de grafia: replace global \"Loíse\" → \"Louíse\" em todos os campos do output. Sem mudança de conteúdo substantivo. Parte de housekeeping em lote 2026-05-08."
+    },
+    {
+      "ts": "2026-05-08T18:18:15Z",
+      "skill": "ee-s3-brandbook",
+      "action": "refined",
+      "version": 2,
+      "note": "Correção de grafia: replace global \"Loíse\" → \"Louíse\" em todos os campos do output. Sem mudança de conteúdo substantivo. Parte de housekeeping em lote 2026-05-08."
+    },
+    {
+      "ts": "2026-05-08T18:18:15Z",
+      "skill": "ee-s3-copy-anuncios",
+      "action": "refined",
+      "version": 2,
+      "note": "Correção de grafia: replace global \"Loíse\" → \"Louíse\" em todos os campos do output. Sem mudança de conteúdo substantivo. Parte de housekeeping em lote 2026-05-08."
+    },
+    {
+      "ts": "2026-05-08T18:18:15Z",
+      "skill": "ee-s3-forecast-midia",
+      "action": "refined",
+      "version": 5,
+      "note": "Correção de grafia: replace global \"Loíse\" → \"Louíse\" em todos os campos do output. Sem mudança de conteúdo substantivo. Parte de housekeeping em lote 2026-05-08."
+    },
+    {
+      "ts": "2026-05-08T18:18:15Z",
+      "skill": "ee-s3-gmb-otimizacao",
+      "action": "refined",
+      "version": 2,
+      "note": "Correção de grafia: replace global \"Loíse\" → \"Louíse\" em todos os campos do output. Sem mudança de conteúdo substantivo. Parte de housekeeping em lote 2026-05-08."
+    },
+    {
+      "ts": "2026-05-08T18:18:15Z",
+      "skill": "ee-s3-landing-page",
+      "action": "refined",
+      "version": 3,
+      "note": "Correção de grafia: replace global \"Loíse\" → \"Louíse\" em todos os campos do output. Sem mudança de conteúdo substantivo. Parte de housekeeping em lote 2026-05-08."
+    },
+    {
+      "ts": "2026-05-08T18:18:15Z",
+      "skill": "ee-s3-manual-marca",
+      "action": "refined",
+      "version": 2,
+      "note": "Correção de grafia: replace global \"Loíse\" → \"Louíse\" em todos os campos do output. Sem mudança de conteúdo substantivo. Parte de housekeeping em lote 2026-05-08."
+    },
+    {
+      "ts": "2026-05-08T18:18:15Z",
+      "skill": "ee-s4-cliente-oculto",
+      "action": "refined",
+      "version": 2,
+      "note": "Correção de grafia: replace global \"Loíse\" → \"Louíse\" em todos os campos do output. Sem mudança de conteúdo substantivo. Parte de housekeeping em lote 2026-05-08."
+    },
+    {
+      "ts": "2026-05-08T18:18:15Z",
+      "skill": "ee-s4-diagnostico-comercial",
+      "action": "refined",
+      "version": 3,
+      "note": "Correção de grafia: replace global \"Loíse\" → \"Louíse\" em todos os campos do output. Sem mudança de conteúdo substantivo. Parte de housekeeping em lote 2026-05-08."
+    },
+    {
+      "ts": "2026-05-08T18:18:15Z",
+      "skill": "ee-s1-swot",
+      "action": "refined",
+      "version": 3,
+      "note": "Loíse→Louíse + enriquecimento: adicionada finding categoria \"vantagem\" sobre atendimento domiciliar felino como diferencial sub-comunicado validado nas semanas S2/S3 (alavanca de margem + resolve dor #1 da Mariana)."
+    },
+    {
+      "ts": "2026-05-08T18:18:15Z",
+      "skill": "ee-s1-diagnostico-maturidade",
+      "action": "refined",
+      "version": 1,
+      "note": "Loíse→Louíse + enriquecimento: adicionado highlight categoria \"oportunidade\" com potencial de turnaround (+66% leads em 90 dias com mesma verba ao corrigir Pixel + Google + LP)."
+    },
+    {
+      "ts": "2026-05-08T18:18:15Z",
+      "skill": "ee-s2-diagnostico-midia",
+      "action": "refined",
+      "version": 3,
+      "note": "Loíse→Louíse + enriquecimento: highlight \"Pixel ausente — BLOQUEIO P0\" inserido em 1ª posição (sem retargeting, sem lookalike, sem validação de CVR LP). Reflete o achado crítico sub-comunicado no v1."
     }
   ],
   "page_audit": {

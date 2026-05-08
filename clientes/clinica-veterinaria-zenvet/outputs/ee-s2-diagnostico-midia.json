@@ -22,6 +22,13 @@
   "summary_headline": "Zenvet subinveste 41% em mídia (R$ 1875 real vs R$ 3200 contratado). Reativar 2 Google pausadas + instalar Pixel + migrar Meta para LEADS destrava 2x leads sem +1 real de teto.",
   "summary_highlights": [
     {
+      "category": "risco",
+      "label": "Pixel ausente",
+      "value": "BLOQUEIO P0",
+      "subtext": "Sem retargeting · sem lookalike · sem validação de CVR LP — alavanca crítica antes de escalar",
+      "tone": "red"
+    },
+    {
       "category": "posicao",
       "label": "CPL real",
       "value": "R$ 26",

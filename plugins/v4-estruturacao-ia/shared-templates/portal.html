@@ -979,6 +979,7 @@ const WEEKS = [
     {id:'ee-s2-diagnostico-criativos', name:'Diagnóstico de Criativos'},
     {id:'ee-s2-diagnostico-organico-ig', name:'Diagnóstico de Conteúdo Orgânico (Instagram)'},
     {id:'ee-s2-diagnostico-cro', name:'Diagnóstico de CRO'},
+    {id:'ee-revisao-semanal', name:'Revisão Semanal — evoluções, divergências e atualizações'},
   ]},
   { n:3, title:'Produção', desc:'Criação de ativos estratégicos', skills:[
     {id:'ee-s3-manual-marca', name:'Manual de Marca (Brandbook + MIV)'},
@@ -2610,7 +2611,7 @@ const R = {
 },
 
 'ee-s2-pesquisa-mercado'(d) {
-  let h = '';
+  let h = renderLeituraEstrategica(d, { verdictLabel: 'Veredito da Pesquisa de Mercado' });
 
   // ══════════════════════════════════════════════════════════
   // 1. ESTUDO DE MERCADO — TAM / SAM / SOM (com explicações)
@@ -3154,7 +3155,7 @@ const R = {
     return tb(headers, trows);
   }
 
-  let h = '';
+  let h = renderLeituraEstrategica(d, { verdictLabel: 'Veredito da Mídia Paga' });
 
   // Period header
   if (d.data_period) {
@@ -4794,7 +4795,7 @@ const R = {
     + '<p style="margin:0;font-family:Fraunces,Georgia,serif;font-style:italic;font-size:1.125rem;line-height:1.5;color:var(--text-primary)">'+esc(text)+'</p>'
     + '</div>';
 
-  let h = '';
+  let h = renderLeituraEstrategica(d, { verdictLabel: 'Veredito do Manual de Marca' });
 
   // ─── PDF button + Web link + wrapper open ───
   // Se houver manual_pdf_url no output canônico, usa link direto pro PDF hospedado
@@ -6112,6 +6113,88 @@ const R = {
     h += sc('Impacto do SDR IA', tb(['Melhoria','Solução SDR','Impacto'],
       d.evaluation.sdr_impact_per_improvement.map(i=>[E(i.improvement),E(i.sdr_solution),tg(i.estimated_impact,'green')])));
   }
+  return h;
+},
+
+'ee-revisao-semanal'(d) {
+  let h = renderLeituraEstrategica(d, { verdictLabel: 'Veredito da Revisão' });
+
+  // Header da revisão
+  if (d.semana_revisada || d.data_revisao || d.skills_revisadas?.length) {
+    h += '<div class="gr gr--3">'
+      + (d.semana_revisada ? mt('Semana '+E(d.semana_revisada), 'Semana revisada', 'blue') : '')
+      + (d.data_revisao ? mt(E(String(d.data_revisao).slice(0,10)), 'Data', '') : '')
+      + (d.skills_revisadas?.length ? mt(E(d.skills_revisadas.length), 'Skills revisadas', 'blue', d.skills_revisadas.join(' · ')) : '')
+      + '</div>';
+  }
+
+  // 8 Evoluções estratégicas
+  if (d.evolucao_estrategica?.length) {
+    h += sc('Evoluções Estratégicas ('+d.evolucao_estrategica.length+')', d.evolucao_estrategica.map(ev =>
+      cd(
+        '<span style="font-family:Menlo,monospace;font-size:.75rem;color:var(--accent)">'+E(ev.id||'')+'</span> · '+E(ev.tema||'—'),
+        (ev.hipotese_inicial?.conteudo ? '<p style="font-size:.75rem;margin:.25rem 0"><strong>Hipótese inicial '+(ev.hipotese_inicial.camada?'('+E(ev.hipotese_inicial.camada)+')':'')+':</strong> '+E(ev.hipotese_inicial.conteudo)+'</p>' : '')
+        + (ev.evidencia_diagnostico?.conteudo ? '<p style="font-size:.75rem;margin:.25rem 0"><strong>Evidência '+(ev.evidencia_diagnostico.camada?'('+E(ev.evidencia_diagnostico.camada)+')':'')+':</strong> '+E(ev.evidencia_diagnostico.conteudo)+'</p>' : '')
+        + (ev.decisao_atual?.conteudo ? '<p style="font-size:.75rem;margin:.25rem 0"><strong>Decisão atual:</strong> '+E(ev.decisao_atual.conteudo)+'</p>' : '')
+        + (ev.impacto_estrategico ? '<p style="font-size:.75rem;margin:.5rem 0;color:var(--accent)"><strong>Impacto:</strong> '+E(ev.impacto_estrategico)+'</p>' : '')
+        + (ev.narrativa_sugerida ? '<details style="margin-top:.375rem"><summary style="cursor:pointer;font-size:.6875rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--text-muted)">Narrativa sugerida</summary><p style="font-size:.75rem;margin:.375rem 0;color:var(--text-secondary)">'+E(ev.narrativa_sugerida)+'</p></details>' : '')
+      )
+    ).join(''));
+  }
+
+  // 5 Divergências factuais (tabela)
+  if (d.divergencias_factuais?.length) {
+    const sevColor = {critica:'red', alta:'red', media:'yellow', média:'yellow', baixa:'gray'};
+    h += sc('Divergências Factuais ('+d.divergencias_factuais.length+')',
+      tb(['ID','Categoria','Campo afetado','Valor atual','Valor recomendado','Severidade'],
+        d.divergencias_factuais.map(f => [
+          '<span style="font-family:Menlo,monospace;font-size:.7rem;color:var(--accent)">'+E(f.id||'')+'</span>',
+          E(f.categoria||'—'),
+          '<code style="font-size:.7rem">'+E(f.campo||'—')+'</code>',
+          E(f.valor_atual||'—'),
+          E(f.valor_recomendado||'—'),
+          tg(f.severidade||'—', sevColor[(f.severidade||'').toLowerCase()] || 'gray'),
+        ])));
+  }
+
+  // 9 Gaps narrativos (cards)
+  if (d.gaps_narrativos?.length) {
+    h += sc('Gaps Narrativos ('+d.gaps_narrativos.length+')', d.gaps_narrativos.map(g =>
+      cd(
+        '<span style="font-family:Menlo,monospace;font-size:.75rem;color:var(--accent)">'+E(g.id||'')+'</span> · '+E(g.tipo||'gap'),
+        (g.localizacao ? '<p style="font-size:.7rem;color:var(--text-muted);margin:.125rem 0"><strong>Localização:</strong> <code>'+E(g.localizacao)+'</code></p>' : '')
+        + (g.descricao ? '<p style="font-size:.75rem;margin:.25rem 0">'+E(g.descricao)+'</p>' : '')
+        + (g.ajuste_proposto ? '<p style="font-size:.75rem;margin:.25rem 0;color:var(--text-secondary);background:rgba(22,163,74,0.06);padding:.5rem .625rem;border-left:3px solid var(--success);border-radius:3px"><strong>Ajuste proposto:</strong> '+E(g.ajuste_proposto)+'</p>' : '')
+        + (g.arquivo_afetado ? '<p style="font-size:.6875rem;color:var(--text-muted);margin:.125rem 0"><strong>Arquivo:</strong> <code>'+E(g.arquivo_afetado)+'</code></p>' : '')
+      )
+    ).join(''));
+  }
+
+  // 24 Atualizações propostas (tabela com status)
+  if (d.atualizacoes_propostas?.length) {
+    const decisaoColor = {aceita:'green', aplicada:'green', rejeitada:'red', pendente:'yellow', adiada:'gray'};
+    const sevColor = {critica:'red', alta:'red', media:'yellow', média:'yellow', baixa:'gray'};
+    const aplicadasCount = d.atualizacoes_propostas.filter(u => u.decisao_operador === 'aceita' || u.decisao_operador === 'aplicada').length;
+    const pendenteCount = d.atualizacoes_propostas.filter(u => !u.decisao_operador || u.decisao_operador === 'pendente').length;
+
+    h += sc('Atualizações Propostas ('+d.atualizacoes_propostas.length+')',
+      '<div class="gr gr--3" style="margin-bottom:.75rem">'
+      + mt(d.atualizacoes_propostas.length, 'Total', 'blue')
+      + mt(aplicadasCount, 'Aceitas/aplicadas', aplicadasCount===d.atualizacoes_propostas.length?'green':'yellow')
+      + mt(pendenteCount, 'Pendentes', pendenteCount===0?'green':'red')
+      + '</div>'
+      + tb(['ID','Arquivo','Ação','Valor antigo','Valor novo','Severidade','Decisão'],
+        d.atualizacoes_propostas.map(u => [
+          '<span style="font-family:Menlo,monospace;font-size:.7rem;color:var(--accent)">'+E(u.id||'')+'</span>',
+          '<code style="font-size:.7rem">'+E(u.arquivo||'—')+'</code>',
+          E(u.acao||'—'),
+          E((u.valor_antigo||'—')).slice(0,90)+(String(u.valor_antigo||'').length>90?'…':''),
+          E((u.valor_final_aplicado || u.valor_novo || '—')).slice(0,90)+(String(u.valor_final_aplicado || u.valor_novo || '').length>90?'…':''),
+          tg(u.severidade||'—', sevColor[(u.severidade||'').toLowerCase()] || 'gray'),
+          tg(u.decisao_operador||'pendente', decisaoColor[(u.decisao_operador||'pendente').toLowerCase()] || 'gray'),
+        ])));
+  }
+
   return h;
 },
 
