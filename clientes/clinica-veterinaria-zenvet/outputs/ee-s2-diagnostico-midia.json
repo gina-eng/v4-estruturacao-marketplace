@@ -1614,7 +1614,7 @@
         "delta_vs_base_pct": -21
       },
       {
-        "scenario": "Loíse sai da clínica durante o sprint",
+        "scenario": "Louíse sai da clínica durante o sprint",
         "variable_change": "Risco humano — único ponto de qualificação de leads",
         "impact_on_leads": "75 leads/mês convertendo (-48%)",
         "impact_on_cpl": "R$ 22 (inalterado — mídia funciona)",
@@ -1622,7 +1622,7 @@
         "delta_vs_base_pct": -48
       }
     ],
-    "dominant_sensitivity": "O forecast é mais sensível à execução operacional (WhatsApp + LP + Pixel) do que ao budget de mídia. Dobrar budget sem LP felinos entrega só +20%; manter budget e implementar LP + Pixel entrega +100%. A ordem de risco é: 1) Acessos Meta, 2) LP felinos, 3) Criativos novos, 4) Pixel, 5) Permanência da Loíse."
+    "dominant_sensitivity": "O forecast é mais sensível à execução operacional (WhatsApp + LP + Pixel) do que ao budget de mídia. Dobrar budget sem LP felinos entrega só +20%; manter budget e implementar LP + Pixel entrega +100%. A ordem de risco é: 1) Acessos Meta, 2) LP felinos, 3) Criativos novos, 4) Pixel, 5) Permanência da Louíse."
   },
   "realistic_goal": {
     "target_cpl": 22,
@@ -1633,7 +1633,7 @@
       "Pixel Meta instalado e com 30+ dias de dados até Semana 5",
       "4 criativos felinos novos produzidos e aprovados até Semana 3",
       "Acessos Meta e Google liberados na Semana 1",
-      "Script consultivo da Loíse aumenta conv lead→agendamento de 16,6% para 22% até S4"
+      "Script consultivo da Louíse aumenta conv lead→agendamento de 16,6% para 22% até S4"
     ],
     "risk_factors": [
       "Acesso Meta Business não liberado (dependência forte do cliente remover agência anterior)",
@@ -1656,7 +1656,7 @@
       "Pixel instalado e com 30+ dias de dados na Semana 2",
       "Meta Ads com objetivo correto e 13 ads focados (hoje são 43)",
       "2 campanhas Google pausadas reativadas na Semana 1",
-      "Loíse com script consultivo convertendo lead→agendamento em 22%"
+      "Louíse com script consultivo convertendo lead→agendamento em 22%"
     ],
     "alert": "Acessos Meta e Google são pré-requisito absoluto. Se Nathalia não conseguir liberar nos 3 primeiros dias, o forecast Cenário B cai para Cenário A (+49% de leads). Além disso, o cliente precisa aprovar preencher o budget contratado — 41% abaixo hoje sugere que pode haver decisão ativa de segurar spend, o que inviabiliza o Cenário B."
   },

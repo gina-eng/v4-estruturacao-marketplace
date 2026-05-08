@@ -258,7 +258,7 @@
           "Compara explicitamente: 'Na VetX cobra R$70'"
         ],
         "why_not": "Ticket médio esperado de R$200-500 não é compatível com expectativa de R$70. Gera atrito, review ruim ('caro, não voltei') e normaliza pressão de preço no time.",
-        "redirect": "Loíse responde com valor sem descontar: 'Nossa consulta especialista começa em R$180 — o que inclui é diferente do plano R$70 dos hospitais 24h. Se puder me contar o que seu pet tem, posso te orientar se nossa abordagem faz sentido antes de você decidir.'"
+        "redirect": "Louíse responde com valor sem descontar: 'Nossa consulta especialista começa em R$180 — o que inclui é diferente do plano R$70 dos hospitais 24h. Se puder me contar o que seu pet tem, posso te orientar se nossa abordagem faz sentido antes de você decidir.'"
       },
       {
         "label": "Emergência única — sem intenção de vínculo",
@@ -282,7 +282,7 @@
         "why_not": "Mina a autoridade técnica da Nathalia, que é o ativo principal do negócio. Alta probabilidade de review negativo quando o diagnóstico dele errar."
       }
     ],
-    "operational_rule": "Loíse sinaliza no WhatsApp quando detecta sinal de anti-persona (tag 'AP' no Kommo). Nathalia revê semanalmente — se repetido, desqualifica no SLA para priorizar ICP principal."
+    "operational_rule": "Louíse sinaliza no WhatsApp quando detecta sinal de anti-persona (tag 'AP' no Kommo). Nathalia revê semanalmente — se repetido, desqualifica no SLA para priorizar ICP principal."
   },
   "buyer_journey": {
     "description": "Jornada da Mariana do primeiro sinal de necessidade até advocacy. Cada estágio mapeia gatilho, canal preferido, dúvida dominante e intervenção ideal da Zenvet.",
@@ -313,7 +313,7 @@
         "mental_state": "Cautelosa mas decidida. Quer confirmar que a primeira interação bate com o que viu online.",
         "primary_channel": "WhatsApp (preferido), ligação só se WhatsApp demorar",
         "dominant_question": "Tem horário hoje/amanhã? Quanto custa? Vocês atendem gato mesmo ou é só pet em geral?",
-        "zenvet_intervention": "Loíse com script consultivo: saudação que reforça especialização ('Oi! Aqui é a Loíse da Zenvet, clínica especializada em gatos e cães em Americana. Quem é seu pet?'), qualificação felina, agendamento no mesmo contato.",
+        "zenvet_intervention": "Louíse com script consultivo: saudação que reforça especialização ('Oi! Aqui é a Louíse da Zenvet, clínica especializada em gatos e cães em Americana. Quem é seu pet?'), qualificação felina, agendamento no mesmo contato.",
         "friction_today": "Sem script. Resposta genérica. Em 16,6% converte — 83,4% não agendam.",
         "duration_estimate": "mesmo dia ou 24h"
       },
@@ -412,7 +412,7 @@
     "strategic_implication": "A alavanca estratégica principal NÃO é 'revisar preços de rotina +15%' (ainda vale, mas é tática de margem). É CONVERTER CRÍTICO EM RECORRÊNCIA: capturar Mariana no momento de emergência (onde não há teto de WTP), entregar acompanhamento humanizado pós-evento, e fidelizá-la em rotina (check-up anual, vacinação, domicílio). Implicações para a S3: (1) comunicação de mídia paga deve priorizar captura de intenção crítica ('veterinário gatos emergência Americana', 'meu gato não está comendo') tanto quanto rotina — ticket e LTV são maiores; (2) a LP precisa de seção dedicada a emergência/crítico com mensagem de disponibilidade + parcelamento, não só consulta de rotina; (3) o CRM precisa ter régua pós-emergência específica (D+1, D+7, D+30) pra converter o vínculo emocional da crise em cliente fiel; (4) no brandbook, tom de voz precisa servir tanto o momento racional (rotina) quanto o momento emocional (crise) — a Mariana que chega pedindo vacina é outra pessoa emocionalmente que a Mariana que chega com Simba prostrado. Prioridade tática mantida: domicílio felinos (margem alta + dor crítica)."
   },
   "objection_library": {
-    "description": "Biblioteca de objeções com resposta consultiva pronta para a Loíse usar no WhatsApp. Cada resposta preserva posicionamento (não desconta, não compete em preço), valida a preocupação do tutor, e redireciona para valor.",
+    "description": "Biblioteca de objeções com resposta consultiva pronta para a Louíse usar no WhatsApp. Cada resposta preserva posicionamento (não desconta, não compete em preço), valida a preocupação do tutor, e redireciona para valor.",
     "objections": [
       {
         "objection": "Está muito caro comparado a [concorrente 24h]",

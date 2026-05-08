@@ -1244,7 +1244,9 @@ function chartGauge(value, benchmark, max, opts) {
   const cx = w/2, cy = h*0.78, r = w*0.40;
   const pct = Math.min(1, Math.max(0, value/max));
   const benchPct = benchmark!=null ? Math.min(1, Math.max(0, benchmark/max)) : null;
-  const angleStart = Math.PI, angleEnd = 0;
+  // SVG Y-down: ângulo cresce no sentido horário visual.
+  // Para gauge superior, vamos de π (LEFT, 9h) até 2π (RIGHT, 3h), passando por 3π/2 (TOP, 12h).
+  const angleStart = Math.PI, angleEnd = 2 * Math.PI;
   const valAngle = angleStart + (angleEnd-angleStart)*pct;
   // Inverted logic: for CPL/CPA lower is better
   const invert = opts.invert;
@@ -1255,7 +1257,9 @@ function chartGauge(value, benchmark, max, opts) {
   const arcPath = (a1, a2, rad) => {
     const x1 = cx+rad*Math.cos(a1), y1 = cy+rad*Math.sin(a1);
     const x2 = cx+rad*Math.cos(a2), y2 = cy+rad*Math.sin(a2);
-    const large = Math.abs(a2-a1) > Math.PI ? 1 : 0;
+    const delta = Math.abs(a2-a1);
+    const large = delta >= Math.PI - 0.0001 ? 1 : 0;
+    // a2 > a1 = ângulo crescente = horário visual em SVG = sweep=1 (passa pelo TOP indo de LEFT a RIGHT via 3π/2)
     const sweep = a2 > a1 ? 1 : 0;
     return 'M '+x1+' '+y1+' A '+rad+' '+rad+' 0 '+large+' '+sweep+' '+x2+' '+y2;
   };
@@ -1311,38 +1315,66 @@ const FUNNEL_SVG_INLINE = /*%%FUNNEL_SVG_INLINE%%*/"";
 function chartChevronFunnel(stages) {
   if (!stages?.length || !FUNNEL_SVG_INLINE) return '';
   const n = stages.length;
-  // Centros X dos 7 chevrons em coords do viewBox 1716x593 — posições espelhadas (simetria)
-  // Ordem: idx 0 = mais à DIREITA (Exposição), idx 6 = mais à ESQUERDA (Retenção)
-  // Direita validada visualmente: 1491, 1285, 1081. Esquerda em mirror: 225, 431, 635.
+  // Subtítulos descritores do framework Destrava Receita (mapeados pelo nome da etapa)
+  const subtitles = {
+    'Exposição':    'Pessoas Impactadas',
+    'Atenção':      'Pessoas Engajadas',
+    'Interesse':    'Solicitaram Conversa',
+    'Qualificação': 'Pessoas Qualificadas',
+    'Compromisso':  'Contatos Realizados',
+    'Decisão':      'Vendas Realizadas',
+    'Retenção':     'Recompra'
+  };
+  // Centros X dos 7 chevrons em coords do viewBox 1716x593 (espelhados)
+  // Ordem: idx 0 = DIREITA (Exposição), idx 6 = ESQUERDA (Retenção)
   const centers7 = [1491, 1285, 1081, 858, 635, 431, 225];
-  const cxArr = n === 7 ? centers7 : Array.from({length:n}, (_,i) => 1579 - (i * (1443/(n-1||1))));
-  // Larguras: extremos um pouco mais estreitos, centro mais largo
-  const widths7 = [240, 240, 240, 300, 240, 240, 240];
-  const wArr = n === 7 ? widths7 : Array(n).fill(220);
-  const cy = 296, panelH = 170;
-  const overlay = stages.map((s, i) => {
+  const cxArr = n === 7 ? centers7 : Array.from({length:n}, (_,i) => 1491 - (i * (1266/(n-1||1))));
+  // Cabeçalhos (acima dos chevrons): nome em uppercase + subtítulo descritor + (se for restrição) badge
+  const headersHtml = stages.map((s, i) => {
+    const xPct = (cxArr[i] / 1716 * 100).toFixed(2);
+    const subtitle = subtitles[s.stage] || '';
+    return '<div style="position:absolute;left:'+xPct+'%;top:0;transform:translateX(-50%);text-align:center;width:13%;min-width:92px">'
+      + '<div style="font-size:.8125rem;font-weight:800;color:#1a1a1a;text-transform:uppercase;letter-spacing:.05em;line-height:1.1">'+E(s.stage)+'</div>'
+      + (subtitle ? '<div style="font-size:.6875rem;color:#666;margin-top:.25rem;line-height:1.2">'+E(subtitle)+'</div>' : '')
+      + (s.is_active_constraint ? '<div style="display:inline-block;background:#dc2626;color:#fff;padding:1px 6px;border-radius:3px;font-size:.5625rem;font-weight:800;letter-spacing:.06em;margin-top:.3rem;box-shadow:0 0 8px rgba(220,38,38,.5)">&#9733; RESTRIÇÃO</div>' : '')
+      + '</div>';
+  }).join('');
+  // Volumes dentro dos chevrons como pílulas vermelhas (foreignObject — coords do SVG)
+  const cy = 296, panelW = 200, panelH = 60;
+  const volumesOverlay = stages.map((s, i) => {
     const cx = cxArr[i];
-    const panelW = wArr[i];
     const x = cx - panelW/2;
     const y = cy - panelH/2;
-    const isConstraint = !!s.is_active_constraint;
     const isEstimated = !!s.estimated;
-    const constraintBadge = isConstraint
-      ? '<div style="display:inline-block;background:#dc2626;color:#fff;padding:2px 8px;border-radius:3px;font-size:11px;font-weight:800;letter-spacing:.05em;white-space:nowrap;box-shadow:0 0 14px rgba(220,38,38,.95);margin-bottom:5px">&#9733; RESTRIÇÃO</div>'
-      : '';
-    const estTag = isEstimated ? '<span style="opacity:.7;font-weight:500"> [E]</span>' : '';
-    // Volume sem "/mês" — fica só o número (a unidade temporal já está no header "base mensal")
     const rawVol = s.volume_label || (typeof s.volume === 'number' ? N(s.volume) : (s.volume || '—'));
     const volLabel = String(rawVol).replace(/\s*\/\s*m[eê]s\s*/i, '').replace(/^~\s*/, '~');
     return '<foreignObject x="'+x+'" y="'+y+'" width="'+panelW+'" height="'+panelH+'">'
-      + '<div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;text-align:center;color:#fff;text-shadow:0 2px 6px rgba(0,0,0,.95),0 0 12px rgba(0,0,0,.7);font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif">'
-      + constraintBadge
-      + '<div style="font-size:16px;text-transform:uppercase;letter-spacing:.06em;opacity:.95;font-weight:700;line-height:1;margin-bottom:6px">'+E(s.stage)+estTag+'</div>'
-      + '<div style="font-size:32px;font-weight:800;line-height:1.05">'+E(volLabel)+'</div>'
-      + '<div style="font-size:14px;font-weight:600;opacity:.95;margin-top:6px;line-height:1">'+E(s.rate_label||'')+'</div>'
+      + '<div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:center;justify-content:center;height:100%;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif">'
+      + '<div style="background:#9b1c1c;color:#fff;padding:7px 18px;border-radius:6px;font-size:24px;font-weight:800;line-height:1;box-shadow:0 2px 10px rgba(0,0,0,.25);white-space:nowrap">'
+      + E(volLabel)
+      + (isEstimated ? '<span style="font-size:11px;font-weight:500;opacity:.85;margin-left:6px">[E]</span>' : '')
+      + '</div>'
       + '</div>'
       + '</foreignObject>';
   }).join('');
+  // Transições (taxas) entre chevrons consecutivos — n-1 transições no ponto médio entre cada par
+  const transitions = [];
+  for (let i = 0; i < n - 1; i++) {
+    const cxMid = (cxArr[i] + cxArr[i+1]) / 2;
+    transitions.push({
+      xPct: (cxMid / 1716 * 100).toFixed(2),
+      fromStage: stages[i].stage,
+      toStage: stages[i+1].stage,
+      rate: stages[i+1].rate_label || '—'
+    });
+  }
+  const transitionsHtml = transitions.map(t =>
+    '<div style="position:absolute;left:'+t.xPct+'%;top:0;transform:translateX(-50%);text-align:center;width:11%;min-width:80px">'
+    + '<div style="font-size:.9375rem;font-weight:800;color:#dc2626;line-height:1">'+E(t.rate)+'</div>'
+    + '<div style="font-size:.625rem;color:#666;margin-top:.35rem;line-height:1.25">'+E(t.fromStage)+' &rarr; '+E(t.toStage)+'</div>'
+    + '</div>'
+  ).join('');
+  // Legenda de detalhamento
   const legendHtml = stages.map((s,i) =>
     '<div style="margin-bottom:.4rem;font-size:.75rem;line-height:1.5">'
     + '<strong style="color:var(--text-primary)">'+(i+1)+'. '+E(s.stage)
@@ -1352,15 +1384,17 @@ function chartChevronFunnel(stages) {
     + '<span style="color:var(--text-secondary)">'+E(s.subtext||'')+'</span>'
     + '</div>'
   ).join('');
-  // Inserir overlay (foreignObjects) ANTES de </svg> + adicionar styling no <svg> root
+  // SVG inline com overlay de pílulas
   const svgWrapped = FUNNEL_SVG_INLINE
     .replace('<svg ', '<svg style="display:block;width:100%;height:auto" preserveAspectRatio="xMidYMid meet" ')
-    .replace('</svg>', overlay + '</svg>');
-  return '<div style="background:#000;padding:1.25rem .5rem 1rem;border-radius:6px;color:#fff">'
-    + '<div style="text-align:center;font-size:.6875rem;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.55);font-weight:700;margin-bottom:.85rem">← Lê-se da direita para a esquerda · base mensal</div>'
-    +   svgWrapped
+    .replace('</svg>', volumesOverlay + '</svg>');
+  return '<div style="padding:1rem .5rem 0;color:#1a1a1a">'
+    + '<div style="text-align:center;font-size:.6875rem;text-transform:uppercase;letter-spacing:.08em;color:#888;font-weight:700;margin-bottom:.75rem">Lê-se da direita para a esquerda &middot; base mensal</div>'
+    + '<div style="position:relative;width:100%;height:64px;margin-bottom:.25rem">' + headersHtml + '</div>'
+    + '<div style="position:relative;width:100%;aspect-ratio:1716/593">' + svgWrapped + '</div>'
+    + '<div style="position:relative;width:100%;height:48px;margin-top:.5rem">' + transitionsHtml + '</div>'
     + '</div>'
-    + '<div style="margin-top:.5rem;padding:.85rem 1rem;background:rgba(0,0,0,.04);border-radius:4px">'
+    + '<div style="margin-top:.75rem;padding:.85rem 1rem;background:rgba(0,0,0,.04);border-radius:4px">'
     + '<div style="font-size:.625rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700;color:var(--text-muted);margin-bottom:.55rem">Detalhamento das etapas</div>'
     + legendHtml
     + '</div>';
@@ -3944,8 +3978,7 @@ const R = {
 },
 
 'ee-s2-diagnostico-organico-ig'(d) {
-  let h = '';
-  if (d.summary) h += sm(d.summary);
+  let h = renderLeituraEstrategica(d, { verdictLabel: 'Veredito do Orgânico' });
 
   const period = d.period || {};
   const client = d.client_account || {};
@@ -4172,8 +4205,7 @@ const R = {
 },
 
 'ee-s2-diagnostico-cro'(d) {
-  let h = '';
-  if (d.summary) h += sm(d.summary);
+  let h = renderLeituraEstrategica(d, { verdictLabel: 'Veredito de CRO' });
 
   const scoreTone = v => v==null?'gray':v>=90?'green':v>=50?'yellow':'red';
   const cwvTone = (val, good, ni) => val==null?'gray':val<=good?'green':val<=ni?'yellow':'red';
@@ -5351,8 +5383,7 @@ const R = {
 },
 
 'ee-s3-landing-page'(d) {
-  let h = '';
-  if (d.summary) h += sm(d.summary);
+  let h = renderLeituraEstrategica(d, { verdictLabel: 'Veredito da Landing Page' });
   if (d.deploy_url) {
     h += '<div class="sum" style="border-left-color:var(--success)"><div class="sum__tag" style="color:var(--success)">Landing Page Deployada</div>'
       +'<p class="sum__text"><a href="'+E(d.deploy_url)+'" target="_blank" style="font-size:1.125rem">'+E(d.deploy_url)+'</a></p></div>';
@@ -5375,8 +5406,7 @@ const R = {
 
 'ee-s3-copy-anuncios'(d) {
   const TURQ_LOCAL = '#00B8BD', PURPLE_LOCAL = '#4B1C7D';
-  let h = '';
-  if (d.summary) h += sm(d.summary);
+  let h = renderLeituraEstrategica(d, { verdictLabel: 'Veredito do Copy' });
 
   // Bloco didático: como ler este manual
   if (d.how_to_read_this_doc) {
@@ -5568,8 +5598,7 @@ const R = {
 },
 
 'ee-s3-criativos-anuncios'(d) {
-  let h = '';
-  if (d.summary) h += sm(d.summary);
+  let h = renderLeituraEstrategica(d, { verdictLabel: 'Veredito dos Criativos' });
   if (d.total_pieces) h += '<div class="gr gr--2">'+mt(d.total_pieces,'Peças no Pack','red')+mt((d.variations||[]).length,'Variações de Hook','')+'</div>';
   if (d.variations?.length) {
     const hk = {dor:'danger',resultado:'green',curiosidade:'yellow',social_proof:'green',urgencia:'red'};
@@ -5625,8 +5654,7 @@ const R = {
 },
 
 'ee-s3-crm-setup'(d) {
-  let h = '';
-  if (d.summary) h += sm(d.summary);
+  let h = renderLeituraEstrategica(d, { verdictLabel: 'Veredito do CRM' });
   if (d.pipeline_stages?.length) {
     // Funnel simulado para representar progressão
     const simStages = d.pipeline_stages.map((s,i)=>({
@@ -5660,9 +5688,7 @@ const R = {
 },
 
 'ee-s3-forecast-midia'(d) {
-  let h = '';
-  if (d.summary) h += sm(d.summary);
-  if (d.summary_headline) h += co(d.summary_headline);
+  let h = renderLeituraEstrategica(d, { verdictLabel: 'Veredito do Forecast' });
 
   // === Distribuição por canal (channel_split) ===
   if (d.channel_split?.channels?.length) {
@@ -5848,8 +5874,7 @@ const R = {
 
 'ee-s3-gmb-otimizacao'(d) {
   const TURQ_LOCAL = '#00B8BD', PURPLE_LOCAL = '#4B1C7D';
-  let h = '';
-  if (d.summary) h += sm(d.summary);
+  let h = renderLeituraEstrategica(d, { verdictLabel: 'Veredito do GMB' });
   if (d.profile_description) {
     const len = d.profile_description.length;
     h += sc('Descrição do perfil (SEO)', '<div style="background:var(--bg-elevated);border:1px solid var(--border);border-left:3px solid '+TURQ_LOCAL+';border-radius:6px;padding:.875rem 1rem;line-height:1.6;color:var(--text-primary);font-size:.9375rem;white-space:pre-wrap">'+E(d.profile_description)+'</div>'
@@ -5975,8 +6000,7 @@ const R = {
 },
 
 'ee-s4-diagnostico-comercial'(d) {
-  let h = '';
-  if (d.summary) h += sm(d.summary);
+  let h = renderLeituraEstrategica(d, { verdictLabel: 'Veredito Comercial' });
   if (d.funnel_diagnosis?.length) {
     let funnelChart;
     let funnelInsight;
@@ -6034,8 +6058,7 @@ const R = {
 },
 
 'ee-s4-cliente-oculto'(d) {
-  let h = '';
-  if (d.summary) h += sm(d.summary);
+  let h = renderLeituraEstrategica(d, { verdictLabel: 'Veredito do Cliente Oculto' });
   if (d.evaluation?.overall_score != null) {
     const s = d.evaluation.overall_score;
     h += '<div class="gr gr--3">'
@@ -6095,103 +6118,478 @@ const R = {
 'ee-s5-scripts-sdr'(d) {
   let h = '';
   if (d.summary) h += sm(d.summary);
-  if (d.agent_name || d.tone_of_voice) {
-    h += '<div class="gr gr--2">'+mt(d.agent_name||'—','Nome do Agente','red')+mt(d.tone_of_voice||'—','Tom de Voz','')+'</div>';
+
+  // Highlights em cards
+  if (d.summary_highlights?.length) {
+    h += sc('Visão Geral', '<div class="gr gr--3">'+d.summary_highlights.map(hl=>
+      mt(hl.value||'—', hl.label||'', hl.tone||'gray', hl.subtext||'')
+    ).join('')+'</div>');
   }
-  if (d.welcome_message) {
-    h += sc('Mensagem de Boas-Vindas', chatBubbles([{from:'sdr',name:d.agent_name||'SDR IA',text:d.welcome_message}]));
-  }
-  if (d.qualification_questions?.length) {
-    h += sc('Perguntas de Qualificação', d.qualification_questions.map(q=>
-      cd((q.order?q.order+'. ':'')+q.question,
-        '<strong>Revela:</strong> '+E(q.reveals)+(q.dimension?' '+tg(q.dimension,'gray'):''))
+
+  // Key findings como cards categorizados
+  if (d.summary_key_findings?.length) {
+    const catColor = {vantagem:'green', contexto:'blue', ameaca:'red', acao:'yellow'};
+    const catLabel = {vantagem:'Vantagem', contexto:'Contexto', ameaca:'Atenção', acao:'Ação'};
+    h += sc('Achados-Chave', d.summary_key_findings.map(f=>
+      cd(catLabel[f.category]||f.category||'Achado', E(f.text), catColor[f.category]||'gray')
     ).join(''));
   }
+
+  // Identidade do agente
+  if (d.agent_name || d.tone_of_voice) {
+    h += sc('Identidade do Agente', '<div class="gr gr--1">'
+      + mt(d.agent_name||'—', 'Nome do Agente', 'blue')
+      + (d.tone_of_voice ? '<div class="cd"><div class="cd__title">Tom de Voz</div><div class="cd__body" style="font-size:.8125rem;line-height:1.55">'+E(d.tone_of_voice)+'</div></div>' : '')
+      + '</div>');
+  }
+
+  // Botão de acesso às diretrizes operacionais completas (system prompt Kommo IA)
+  h += '<div style="margin:1rem 0;padding:1rem 1.25rem;background:linear-gradient(135deg,#4B1C7D 0%,#A8358C 100%);border-radius:8px;color:#fff;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.75rem">'
+    + '<div style="flex:1;min-width:240px">'
+    +   '<div style="font-size:.6875rem;letter-spacing:.15em;text-transform:uppercase;opacity:.75;margin-bottom:.25rem">Documento Operacional</div>'
+    +   '<div style="font-size:.9375rem;font-weight:600;line-height:1.35">Diretrizes completas da Bia para a Kommo IA</div>'
+    +   '<div style="font-size:.75rem;opacity:.85;margin-top:.25rem">System prompt + custom fields + pipeline + triggers + FAQ + 6 exemplos de conversa</div>'
+    + '</div>'
+    + '<a href="diretrizes-bia.html" target="_blank" rel="noopener" style="background:#fff;color:#4B1C7D;padding:.625rem 1.125rem;border-radius:6px;font-weight:600;font-size:.8125rem;text-decoration:none;display:inline-flex;align-items:center;gap:.375rem;white-space:nowrap">'
+    +   'Abrir diretrizes <span style="font-size:1rem">→</span>'
+    + '</a>'
+    + '</div>';
+
+  // ESCOPO: o que a Bia agenda direto vs handoff humano
+  if (d.service_scope) {
+    const ss = d.service_scope;
+    let scopeHtml = '';
+    if (ss.description) scopeHtml += '<p style="font-size:.8125rem;color:var(--text-muted);margin-bottom:.75rem">'+E(ss.description)+'</p>';
+    if (ss.direct_booking?.length) {
+      scopeHtml += '<h4 style="margin:.75rem 0 .5rem;color:var(--text);font-size:.875rem">'+tg('Bia agenda direto','green')+' Agendamento direto</h4>';
+      scopeHtml += ss.direct_booking.map(s=>cd(
+        E(s.service)+(s.value?' — '+tg(s.value,'green'):'')+(s.duration?' '+tg(s.duration,'blue'):''),
+        (s.includes?'<p style="font-size:.8125rem"><strong>Inclui:</strong> '+E(s.includes)+'</p>':'')
+        +(s.bia_action?'<p style="font-size:.8125rem;color:var(--text-muted)"><strong>Ação da Bia:</strong> '+E(s.bia_action)+'</p>':''),
+        'green'
+      )).join('');
+    }
+    if (ss.human_handoff?.length) {
+      scopeHtml += '<h4 style="margin:1rem 0 .5rem;color:var(--text);font-size:.875rem">'+tg('Handoff humano','yellow')+' Direcionamento pra atendimento humano</h4>';
+      scopeHtml += ss.human_handoff.map(s=>cd(
+        E(s.service),
+        (s.bia_action?'<p style="font-size:.8125rem"><strong>Ação da Bia:</strong> '+E(s.bia_action)+'</p>':'')
+        +(s.reason?'<p style="font-size:.8125rem;color:var(--text-muted)"><strong>Razão:</strong> '+E(s.reason)+'</p>':''),
+        'yellow'
+      )).join('');
+    }
+    h += sc('Escopo de Atendimento da Bia', scopeHtml);
+  }
+
+  // Mensagem de boas-vindas (escolhida + alternativas)
+  if (d.welcome_message) {
+    let welcomeHtml = chatBubbles([{from:'sdr',name:d.agent_name||'SDR IA',text:d.welcome_message}]);
+    if (d.welcome_alternatives?.length) {
+      welcomeHtml += '<div style="margin-top:.75rem">';
+      welcomeHtml += '<h4 style="font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;color:var(--text-muted);margin:.5rem 0">Alternativas</h4>';
+      welcomeHtml += d.welcome_alternatives.filter(a=>a.message!==d.welcome_message).map(a=>
+        cd(E(a.approach||'').toUpperCase(), E(a.message), 'gray')
+      ).join('');
+      welcomeHtml += '</div>';
+    }
+    h += sc('Mensagem de Boas-Vindas', welcomeHtml);
+  }
+
+  // 5 perguntas de qualificação com scoring inline
+  if (d.qualification_questions?.length) {
+    h += sc('Perguntas de Qualificação (com scoring)', d.qualification_questions.map(q=>{
+      let body = '<p style="font-size:.8125rem;margin:.25rem 0"><strong>Revela:</strong> '+E(q.reveals)+'</p>';
+      if (q.dimension) body += '<p style="margin:.25rem 0">'+tg(q.dimension,'blue')+'</p>';
+      if (q.score_influence) {
+        const si = q.score_influence;
+        body += '<table class="tw" style="margin-top:.5rem;font-size:.75rem;width:100%"><thead><tr>'
+          +'<th style="background:#dcfce7;color:#15803d">+2</th>'
+          +'<th style="background:#fef9c3;color:#854d0e">+1</th>'
+          +'<th style="background:#f1f5f9;color:#475569">0</th>'
+          +'<th style="background:#fee2e2;color:#991b1b">-1</th>'
+          +'</tr></thead><tbody><tr>'
+          +'<td style="vertical-align:top">'+E(si.plus_2||'—')+'</td>'
+          +'<td style="vertical-align:top">'+E(si.plus_1||'—')+'</td>'
+          +'<td style="vertical-align:top">'+E(si.zero||'—')+'</td>'
+          +'<td style="vertical-align:top">'+E(si.minus_1||'—')+'</td>'
+          +'</tr></tbody></table>';
+      }
+      if (q.transition_phrase) body += '<p style="font-size:.75rem;font-style:italic;color:var(--text-muted);margin-top:.5rem"><strong>Transição:</strong> '+E(q.transition_phrase)+'</p>';
+      return cd((q.order?'P'+q.order+'. ':'')+q.question, body);
+    }).join(''));
+  }
+
+  // CRITÉRIOS QUALITATIVOS por estrela (validados pela Nathalia)
+  if (d.qualification_criteria) {
+    const qc = d.qualification_criteria;
+    let qcHtml = '';
+    if (qc.description) qcHtml += '<p style="font-size:.8125rem;color:var(--text-muted);margin-bottom:.75rem">'+E(qc.description)+'</p>';
+    const stars = [
+      {key:'five_star', stars:'★★★★★'},
+      {key:'four_star', stars:'★★★★'},
+      {key:'three_star', stars:'★★★'},
+      {key:'two_star', stars:'★★'},
+      {key:'one_star', stars:'★'},
+    ];
+    qcHtml += stars.map(s=>{
+      const c = qc[s.key]; if (!c) return '';
+      let body = '';
+      if (c.definition_nathalia) body += '<p style="font-style:italic;border-left:3px solid var(--accent,#A8358C);padding-left:.625rem;margin:.25rem 0;font-size:.8125rem">"'+E(c.definition_nathalia)+'" <span style="color:var(--text-muted);font-size:.6875rem">— Dra. Nathalia</span></p>';
+      else if (c.definition) body += '<p style="font-size:.8125rem;margin:.25rem 0">'+E(c.definition)+'</p>';
+      if (c.profile) body += '<p style="font-size:.8125rem;margin:.5rem 0"><strong>Perfil:</strong> '+E(c.profile)+'</p>';
+      if (c.mandatory_signals?.length) body += '<p style="font-size:.75rem;margin:.5rem 0 .25rem"><strong>Sinais'+(c.min_signals?' (mín. '+c.min_signals+')':'')+':</strong></p><ul style="font-size:.75rem;margin:0;padding-left:1.25rem">'+c.mandatory_signals.map(sig=>'<li>'+E(sig)+'</li>').join('')+'</ul>';
+      if (c.canonical_example) body += '<p style="font-size:.75rem;margin:.5rem 0;background:var(--bg-soft,#f8fafc);padding:.5rem;border-radius:4px"><strong>Exemplo canônico:</strong> "'+E(c.canonical_example)+'"</p>';
+      if (c.operational_action) body += '<p style="font-size:.75rem;color:var(--text-muted);margin:.25rem 0"><strong>Ação:</strong> '+E(c.operational_action)+'</p>';
+      if (c.sla && c.sla !== '—') body += '<p style="margin:.25rem 0">'+tg('SLA: '+c.sla, c.tone||'gray')+'</p>';
+      return cd(s.stars+' '+(c.label||s.key), body, c.tone||'gray');
+    }).join('');
+    if (qc.tiebreaker_rules?.length) {
+      qcHtml += '<h4 style="margin-top:1rem;font-size:.875rem;color:var(--text)">Regras de desempate</h4>';
+      qcHtml += '<ul style="font-size:.8125rem;margin:.25rem 0;padding-left:1.25rem">'+qc.tiebreaker_rules.map(r=>'<li>'+E(r)+'</li>').join('')+'</ul>';
+    }
+    h += sc('Critérios de Qualificação do Lead (1-5★)', qcHtml);
+  }
+
+  // Tabela de scoring
+  if (d.scoring_table) {
+    const st = d.scoring_table;
+    let stHtml = tb(['Estrela','Faixa de pontos','Ação predominante'],[
+      ['★★★★★ 5★', E(st.five_star_range||'—'), 'Handoff Louíse imediato · escala Nathalia se red flag'],
+      ['★★★★ 4★', E(st.four_star_range||'—'), 'Handoff Louíse'],
+      ['★★★ 3★', E(st.three_star_range||'—'), 'Bia conduz + régua warm 24h/72h/7d'],
+      ['★★ 2★', E(st.two_star_range||'—'), 'Resposta cordial, base passiva e-mail'],
+      ['★ 1★', E(st.one_star_range||'—'), 'Posiciona uma vez, descarta, tag AP'],
+    ]);
+    if (st._rules?.length) {
+      stHtml += '<h4 style="margin-top:.75rem;font-size:.8125rem;color:var(--text)">Regras gerais</h4>';
+      stHtml += '<ul style="font-size:.8125rem;margin:.25rem 0;padding-left:1.25rem">'+st._rules.map(r=>'<li>'+E(r)+'</li>').join('')+'</ul>';
+    }
+    h += sc('Sistema de Pontos', stHtml);
+  }
+
+  // Anti-persona
+  if (d.anti_persona_profiles?.length) {
+    h += sc('Anti-persona — Perfis a Desqualificar', d.anti_persona_profiles.map(ap=>{
+      let body = '';
+      if (ap.signals?.length) body += '<p style="font-size:.75rem;margin:.25rem 0"><strong>Sinais:</strong></p><ul style="font-size:.75rem;margin:0;padding-left:1.25rem">'+ap.signals.map(s=>'<li>'+E(s)+'</li>').join('')+'</ul>';
+      if (ap.why_disqualify) body += '<p style="font-size:.75rem;margin:.5rem 0;color:var(--text-muted)"><strong>Por que desqualificar:</strong> '+E(ap.why_disqualify)+'</p>';
+      if (ap.bia_response) body += '<div style="margin-top:.5rem">'+chatBubbles([{from:'sdr',name:'Bia',text:ap.bia_response}])+'</div>';
+      if (ap.kommo_action) body += '<p style="font-size:.75rem;color:var(--text-muted);margin:.25rem 0"><strong>Kommo:</strong> '+E(ap.kommo_action)+'</p>';
+      return cd(E(ap.label||'—'), body, 'red');
+    }).join(''));
+  }
+
+  // Distribuição alvo
+  if (d.distribution_target) {
+    const dt = d.distribution_target;
+    let dtHtml = '';
+    if (dt.description) dtHtml += '<p style="font-size:.8125rem;color:var(--text-muted);margin-bottom:.5rem">'+E(dt.description)+'</p>';
+    if (dt.monthly_volume_total) dtHtml += '<p style="font-size:.8125rem;margin:.5rem 0">Volume mensal de referência: <strong>'+E(dt.monthly_volume_total)+' leads</strong></p>';
+    if (dt.buckets?.length) {
+      dtHtml += tb(['Estrela','% alvo','Volume estimado','Ação predominante'],
+        dt.buckets.map(b=>[
+          tg(E(b.star||''), b.tone||'gray'),
+          E(b.pct)+'%',
+          E(b.estimated_volume||'—'),
+          E(b.predominant_action||''),
+        ]));
+    }
+    if (dt.imbalance_signals?.length) {
+      dtHtml += '<h4 style="margin-top:.75rem;font-size:.8125rem;color:var(--text)">Sinais de desbalanceamento (ajustar mídia)</h4>';
+      dtHtml += '<ul style="font-size:.8125rem;margin:.25rem 0;padding-left:1.25rem">'+dt.imbalance_signals.map(s=>'<li>'+E(s)+'</li>').join('')+'</ul>';
+    }
+    h += sc('Distribuição Alvo de Leads', dtHtml);
+  }
+
+  // Score flows (chat bubbles)
   if (d.score_flows) {
     const sf = d.score_flows;
-    const renderFlow = (label, flow, color) => flow ? sc(label,
-      chatBubbles((flow.script||[]).map(msg=>({from:'sdr',name:d.agent_name||'SDR',text:msg})))
-      +(flow.next_step?'<p style="font-size:.8125rem;color:var(--text-muted)"><strong>Próximo passo:</strong> '+E(flow.next_step)+'</p>':'')
-      +(flow.nurture_action?'<p style="font-size:.8125rem;color:var(--text-muted)"><strong>Nutrição:</strong> '+E(flow.nurture_action)+'</p>':'')
+    const renderFlow = (label, flow) => flow ? sc(label,
+      chatBubbles((flow.script||[]).map(msg=>({from:'sdr',name:d.agent_name||'Bia',text:msg})))
+      +(flow.score_range?'<p style="font-size:.75rem;color:var(--text-muted);margin:.25rem 0"><strong>Faixa:</strong> '+E(flow.score_range)+'</p>':'')
+      +(flow.next_step?'<p style="font-size:.8125rem;color:var(--text-muted);margin:.25rem 0"><strong>Próximo passo:</strong> '+E(flow.next_step)+'</p>':'')
+      +(flow.nurture_action?'<p style="font-size:.8125rem;color:var(--text-muted);margin:.25rem 0"><strong>Nutrição:</strong> '+E(flow.nurture_action)+'</p>':'')
     ) : '';
-    h += renderFlow('Fluxo — Lead Qualificado (4-5★)',sf.qualified,'green')
-      +renderFlow('Fluxo — Lead Morno (3★)',sf.warm,'yellow')
-      +renderFlow('Fluxo — Lead Frio (1-2★)',sf.cold,'red');
+    h += renderFlow('Fluxo — Lead Qualificado (4-5★)', sf.qualified)
+      + renderFlow('Fluxo — Lead Morno (3★)', sf.warm)
+      + renderFlow('Fluxo — Lead Frio (1-2★)', sf.cold);
   }
+
+  // Objeções
   if (d.objection_responses?.length) {
-    h += sc('Respostas a Objeções', d.objection_responses.map(o=>
-      chatBubbles([{from:'lead',name:'Lead',text:o.objection},{from:'sdr',name:d.agent_name||'SDR',text:o.response}])
-    ).join(''));
+    h += sc('Respostas a Objeções', d.objection_responses.map(o=>{
+      const typeColor = {price:'red',trust:'yellow',need:'blue',authority:'gray',urgency:'green',competitor:'red'};
+      let header = E(o.objection);
+      if (o.type) header = tg(o.type, typeColor[o.type]||'gray')+' '+header;
+      let body = chatBubbles([
+        {from:'lead',name:'Lead',text:o.objection},
+        {from:'sdr',name:d.agent_name||'Bia',text:o.response}
+      ]);
+      if (o.escalation_response) body += '<p style="font-size:.75rem;color:var(--text-muted);margin:.25rem 0"><strong>Se insistir:</strong></p>'
+        + chatBubbles([{from:'sdr',name:'Bia (2ª resposta)',text:o.escalation_response}]);
+      return cd(header, body);
+    }).join(''));
   }
+
+  // Objeção não mapeada
+  if (d.unmapped_objection_response) {
+    h += sc('Objeção Não Mapeada (resposta padrão)',
+      chatBubbles([{from:'sdr',name:d.agent_name||'Bia',text:d.unmapped_objection_response}]));
+  }
+
+  // Regras de escalonamento
+  if (d.escalation_rules) {
+    const er = d.escalation_rules;
+    const ruleCards = [];
+    if (er.on_clinical_red_flag) ruleCards.push(cd(tg('RED FLAG','red')+' Sinais clínicos felinos urgentes', E(er.on_clinical_red_flag), 'red'));
+    if (er.on_frustration) ruleCards.push(cd(tg('IRRITAÇÃO','red')+' Lead irritado', E(er.on_frustration), 'red'));
+    if (er.on_human_request) ruleCards.push(cd(tg('PEDIU HUMANO','yellow')+' Lead solicita atendimento humano', E(er.on_human_request), 'yellow'));
+    if (er.after_2_insistences) ruleCards.push(cd(tg('2× INSISTÊNCIA','yellow')+' Lead repete a mesma objeção 2 vezes', E(er.after_2_insistences), 'yellow'));
+    if (er.on_non_consultation_service) ruleCards.push(cd(tg('OUTRO SERVIÇO','blue')+' Pediu serviço que não é consulta felinos', E(er.on_non_consultation_service), 'blue'));
+    h += sc('Regras de Escalonamento', ruleCards.join(''));
+  }
+
+  // Follow-ups (mensagens + regras)
   if (d.followup_messages) {
     const f = d.followup_messages;
-    h += sc('Follow-ups', chatBubbles([
+    let fHtml = chatBubbles([
       ...(f.after_1h?[{from:'sdr',name:'Após 1h',text:f.after_1h}]:[]),
       ...(f.after_24h?[{from:'sdr',name:'Após 24h',text:f.after_24h}]:[]),
       ...(f.after_3d?[{from:'sdr',name:'Após 3 dias',text:f.after_3d}]:[]),
-    ]));
+    ]);
+    if (f.rules?.length) {
+      fHtml += '<h4 style="margin-top:.75rem;font-size:.8125rem;color:var(--text)">Regras da régua</h4>';
+      fHtml += '<ul style="font-size:.8125rem;margin:.25rem 0;padding-left:1.25rem">'+f.rules.map(r=>'<li>'+E(r)+'</li>').join('')+'</ul>';
+    }
+    h += sc('Acompanhamento (Follow-ups)', fHtml);
   }
+
+  // Handoff messages
+  if (d.human_handoff_message) {
+    const hh = d.human_handoff_message;
+    const handoffs = [
+      {label:'Lead qualificado → Louíse', text:hh.qualified_handoff},
+      {label:'Lead pediu humano', text:hh.requested_handoff},
+      {label:'Bia não sabe responder', text:hh.limitation_handoff},
+      {label:'Serviço não-consulta-felinos', text:hh.non_consultation_service_handoff},
+    ].filter(x=>x.text);
+    h += sc('Mensagens de Handoff pra Humano', handoffs.map(x=>
+      cd(E(x.label), chatBubbles([{from:'sdr',name:d.agent_name||'Bia',text:x.text}]))
+    ).join(''));
+  }
+
   return h;
 },
 
 'ee-s5-sdr-ia-config'(d) {
   let h = '';
   if (d.summary) h += sm(d.summary);
+
+  // Highlights em cards
+  if (d.summary_highlights?.length) {
+    h += sc('Visão Geral', '<div class="gr gr--3">'+d.summary_highlights.map(hl=>
+      mt(hl.value||'—', hl.label||'', hl.tone||'gray', hl.subtext||'')
+    ).join('')+'</div>');
+  }
+
+  // Key findings categorizados
+  if (d.summary_key_findings?.length) {
+    const catColor = {vantagem:'green', contexto:'blue', ameaca:'red', acao:'yellow'};
+    const catLabel = {vantagem:'Vantagem', contexto:'Contexto', ameaca:'Atenção', acao:'Ação'};
+    h += sc('Achados-Chave', d.summary_key_findings.map(f=>
+      cd(catLabel[f.category]||f.category||'Achado', E(f.text), catColor[f.category]||'gray')
+    ).join(''));
+  }
+
+  // BOTÃO DESTACADO PARA AS DIRETRIZES OPERACIONAIS
+  h += '<div style="margin:1rem 0;padding:1.25rem 1.5rem;background:linear-gradient(135deg,#4B1C7D 0%,#A8358C 100%);border-radius:8px;color:#fff;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.75rem">'
+    + '<div style="flex:1;min-width:240px">'
+    +   '<div style="font-size:.6875rem;letter-spacing:.15em;text-transform:uppercase;opacity:.75;margin-bottom:.25rem">📘 Documento Operacional Completo</div>'
+    +   '<div style="font-size:1rem;font-weight:600;line-height:1.35">Diretrizes da Bia para Kommo IA</div>'
+    +   '<div style="font-size:.8125rem;opacity:.9;margin-top:.375rem">1.574 linhas · system prompt + 28 custom fields + 12 estágios pipeline + 30+ triggers + FAQ + 6 exemplos de conversa por estrela</div>'
+    + '</div>'
+    + '<a href="diretrizes-bia.html" target="_blank" rel="noopener" style="background:#fff;color:#4B1C7D;padding:.75rem 1.25rem;border-radius:6px;font-weight:600;font-size:.875rem;text-decoration:none;display:inline-flex;align-items:center;gap:.375rem;white-space:nowrap">'
+    +   'Abrir diretrizes <span style="font-size:1.1rem">→</span>'
+    + '</a>'
+    + '</div>';
+
+  // Header com plataforma + status do agente
   if (d.patagon_config) {
     const p = d.patagon_config;
-    h += '<div class="gr gr--2">'+mt(p.agent_name||'—','Agente Patagon','red')
-      +(d.overall_test_result?mt(d.overall_test_result==='approved'?'Aprovado':d.overall_test_result==='needs_adjustments'?'Ajustes':'Falhou','Resultado dos Testes',
-        {approved:'green',needs_adjustments:'yellow',failed:'red'}[d.overall_test_result]):'')
-      +'</div>';
+    const platformLabel = d.platform ? d.platform : 'Kommo IA nativa';
+    h += '<div class="gr gr--3">'
+      + mt(p.agent_name||'—', 'Agente SDR IA', 'blue')
+      + mt('Kommo IA', 'Plataforma', 'blue', platformLabel)
+      + (d.overall_test_result?mt(
+          d.overall_test_result==='approved'?'Aprovado':d.overall_test_result==='needs_adjustments'?'Ajustes pendentes':'Falhou',
+          'Resultado dos Testes',
+          {approved:'green',needs_adjustments:'yellow',failed:'red'}[d.overall_test_result]):'')
+      + '</div>';
+    if (p.agent_description) {
+      h += '<div class="cd"><div class="cd__title">Descrição do Agente</div><div class="cd__body" style="font-size:.8125rem;line-height:1.55">'+E(p.agent_description)+'</div></div>';
+    }
+    if (p.persona_instructions) {
+      h += '<div class="cd"><div class="cd__title">Instruções de Persona (system prompt)</div><div class="cd__body" style="font-size:.8125rem;line-height:1.55">'+E(p.persona_instructions)+'</div></div>';
+    }
   }
+
+  // CHECKLIST DE CONFIGURAÇÃO (status visual de cada item)
+  if (d.configuration_checklist?.length) {
+    const cats = {};
+    d.configuration_checklist.forEach(item=>{
+      if (!cats[item.category]) cats[item.category] = [];
+      cats[item.category].push(item);
+    });
+    const statusIcon = {done:'✅', in_progress:'🔄', pending:'⏳', blocked:'❌'};
+    const statusColor = {done:'green', in_progress:'blue', pending:'yellow', blocked:'red'};
+    const statusLabel = {done:'Concluído', in_progress:'Em andamento', pending:'Pendente', blocked:'Bloqueado'};
+    let checkHtml = '';
+    Object.keys(cats).forEach(cat=>{
+      checkHtml += '<h4 style="margin:1rem 0 .5rem;font-size:.875rem;color:var(--text)">'+E(cat)+'</h4>';
+      checkHtml += '<div style="display:flex;flex-direction:column;gap:.375rem">';
+      cats[cat].forEach(item=>{
+        const st = item.status||'pending';
+        const blockBadge = item.blocking ? tg('BLOQUEANTE','red') : '';
+        checkHtml += '<div style="display:flex;align-items:flex-start;gap:.625rem;padding:.625rem;background:var(--surface,#f8fafc);border-radius:6px;border-left:3px solid var(--'+(statusColor[st]==='green'?'success':statusColor[st]==='red'?'danger':statusColor[st]==='yellow'?'warning':'primary')+',#94a3b8)">'
+          + '<span style="font-size:1rem;flex-shrink:0">'+statusIcon[st]+'</span>'
+          + '<div style="flex:1;min-width:0">'
+          +   '<div style="font-size:.8125rem;line-height:1.4">'+E(item.item)+'</div>'
+          +   '<div style="font-size:.6875rem;color:var(--text-muted);margin-top:.125rem">Responsável: '+E(item.owner||'—')+' '+blockBadge+' '+tg(statusLabel[st],statusColor[st])+'</div>'
+          + '</div>'
+          + '</div>';
+      });
+      checkHtml += '</div>';
+    });
+    const totalItems = d.configuration_checklist.length;
+    const doneCount = d.configuration_checklist.filter(i=>i.status==='done').length;
+    const blockingPending = d.configuration_checklist.filter(i=>i.status==='pending' && i.blocking).length;
+    let summary = '<div class="gr gr--3" style="margin-bottom:.75rem">'
+      + mt(doneCount+'/'+totalItems, 'Concluídos', doneCount===totalItems?'green':'yellow')
+      + mt(blockingPending, 'Bloqueantes pendentes', blockingPending===0?'green':'red')
+      + mt(d.configuration_checklist.filter(i=>i.status==='pending'&&!i.blocking).length, 'Não-bloqueantes pendentes', 'gray')
+      + '</div>';
+    h += sc('Checklist de Configuração', summary+checkHtml);
+  }
+
+  // Perguntas configuradas
+  if (d.patagon_config?.qualification_questions?.length) {
+    h += sc('Perguntas Configuradas no Fluxo', d.patagon_config.qualification_questions.map(q=>
+      cd('P'+(q.order||'?')+'. '+E(q.question), q.required?tg('Obrigatória','red'):tg('Opcional','gray'))
+    ).join(''));
+  }
+
+  // Scoring rules
+  if (d.patagon_config?.scoring_rules) {
+    const sr = d.patagon_config.scoring_rules;
+    const stars = [
+      {key:'five_star', stars:'★★★★★', tone:'green'},
+      {key:'four_star', stars:'★★★★', tone:'green'},
+      {key:'three_star', stars:'★★★', tone:'yellow'},
+      {key:'two_star', stars:'★★', tone:'gray'},
+      {key:'one_star', stars:'★', tone:'red'},
+    ];
+    h += sc('Regras de Scoring Configuradas', stars.map(s=>{
+      const r = sr[s.key]; if (!r) return '';
+      return cd(s.stars+' — '+s.key.replace('_',' '),
+        '<p style="font-size:.8125rem;margin:.25rem 0"><strong>Critérios:</strong> '+E(r.criteria||'—')+'</p>'
+        +'<p style="font-size:.8125rem;margin:.25rem 0;color:var(--text-muted)"><strong>Ação automática:</strong> '+E(r.action||'—')+'</p>',
+        s.tone);
+    }).join(''));
+  }
+
+  // Integração Kommo
   if (d.kommo_integration) {
     const k = d.kommo_integration;
-    h += sc('Integração Kommo', '<div class="gr gr--3">'
-      +mt(k.api_configured?'Conectado':'Pendente','API Kommo',k.api_configured?'green':'red')
-      +mt(k.pipeline_name||'—','Pipeline','')
-      +'</div>'
-      +(k.field_mapping?.length?tb(['Campo Patagon','Campo Kommo','Tipo'],
-        k.field_mapping.map(f=>[E(f.patagon_field),E(f.kommo_field),E(f.field_type)])):''));
+    let kHtml = '<div class="gr gr--3">'
+      + mt(k.api_configured?'Conectado':'Pendente', 'API Kommo', k.api_configured?'green':'yellow')
+      + mt(E(k.pipeline_name||'—'), 'Pipeline', '')
+      + mt((k.field_mapping?.length||0)+' campos', 'Field Mapping', 'blue')
+      + '</div>';
+    if (k.stage_mapping) {
+      const sm = k.stage_mapping;
+      kHtml += '<h4 style="margin:1rem 0 .5rem;font-size:.875rem">Mapeamento de Estágios</h4>';
+      kHtml += tb(['Score','Estágio do Pipeline'],[
+        ['4-5★ qualificado', E(sm.qualified_stage||'—')],
+        ['3★ morno', E(sm.nurture_stage||'—')],
+        ['1-2★ frio', E(sm.cold_stage||'—')],
+      ]);
+    }
+    if (k.field_mapping?.length) {
+      kHtml += '<h4 style="margin:1rem 0 .5rem;font-size:.875rem">Custom Fields a Criar no Kommo ('+k.field_mapping.length+')</h4>';
+      kHtml += tb(['Campo (lógico)','Nome no Kommo','Tipo','Custom?'],
+        k.field_mapping.map(f=>[
+          E(f.patagon_field),
+          E(f.kommo_field),
+          E(f.field_type),
+          f.is_custom_field?tg('Custom','blue'):tg('Nativo','gray')
+        ]));
+    }
+    if (k.auto_tags?.by_score) {
+      kHtml += '<h4 style="margin:1rem 0 .5rem;font-size:.875rem">Tags Automáticas por Score</h4>';
+      kHtml += tb(['Score','Tags'],
+        Object.entries(k.auto_tags.by_score).map(([score,tags])=>[
+          E(score),
+          (tags||[]).map(t=>tg(t,'blue')).join(' ')
+        ]));
+    }
+    h += sc('Integração Kommo', kHtml);
   }
+
+  // Alertas
   if (d.alerts_config) {
     const a = d.alerts_config;
-    h += sc('Alertas', '<div class="gr gr--3">'
-      +mt(a.sla_minutes?a.sla_minutes+'min':'—','SLA Resposta','red')
-      +mt(E(a.seller_name||'—'),'Vendedor','')
-      +(a.business_hours?mt(E((a.business_hours.start||'')+'–'+(a.business_hours.end||'')),'Horário',''):'')
-      +'</div>');
+    let aHtml = '<div class="gr gr--3">'
+      + mt(a.sla_minutes?a.sla_minutes+'min':'—', 'SLA Resposta', 'red')
+      + mt(E(a.seller_name||'—'), 'Destinatário Principal', '')
+      + (a.business_hours?mt(E((a.business_hours.start||'?')+' – '+(a.business_hours.end||'?')), 'Horário', ''):'')
+      + '</div>';
+    if (a.template) {
+      aHtml += '<h4 style="margin:1rem 0 .5rem;font-size:.875rem">Template do Alerta</h4>';
+      aHtml += '<pre style="background:var(--surface,#f8fafc);padding:.75rem;border-radius:6px;font-size:.75rem;line-height:1.5;white-space:pre-wrap;font-family:Menlo,Monaco,monospace">'+E(a.template)+'</pre>';
+    }
+    if (a.trigger_conditions?.length) {
+      aHtml += '<h4 style="margin:1rem 0 .5rem;font-size:.875rem">Condições de Disparo</h4>';
+      aHtml += '<ul style="font-size:.8125rem;margin:.25rem 0;padding-left:1.25rem">'+a.trigger_conditions.map(t=>'<li>'+E(t)+'</li>').join('')+'</ul>';
+    }
+    h += sc('Alertas pra Vendedor', aHtml);
   }
+
+  // Resultados dos testes
   if (d.test_results?.length) {
     const sc2 = {pass:'green',fail:'danger',partial:'yellow'};
-    // Donut do status dos testes
-    const statusCount = {};
-    d.test_results.forEach(t=>{ statusCount[t.status] = (statusCount[t.status]||0)+1; });
-    const statusLabel = {pass:'Passou',partial:'Parcial',fail:'Falhou'};
-    const statusTone = {pass:'green',partial:'yellow',fail:'red'};
-    const statusData = Object.keys(statusCount).map(k=>({
-      label: statusLabel[k]||k, value: statusCount[k], tone: statusTone[k]||'gray',
-    }));
-    const passPct = Math.round(((statusCount.pass||0)/d.test_results.length)*100);
-    const testInsight = passPct>=80
-      ? passPct+'% dos testes passaram — configuração SDR pronta para produção.'
-      : passPct>=50
-        ? passPct+'% de aprovação — ajustes pontuais antes de ir ao ar.'
-        : 'Apenas '+passPct+'% aprovados — config precisa ser refinada antes de expor a leads reais.';
-    h += sc('Resultados dos Testes',
-      (statusData.length >= 2
-        ? insight(chartDonut(statusData, {title:'Distribuição de Status'}),
-            testInsight, passPct>=80?'good':passPct>=50?'warn':'bad')
-        : '')
-      +tb(['#','Perfil','Score','Kommo','Alerta','Tempo','Tom','Status'],
-      d.test_results.map(t=>[E(t.lead_number),E(t.profile_description||''),E(t.score),
-        t.kommo_entry?tg('OK','green'):tg('Falha','danger'),
-        t.alert_sent?tg('Enviado','green'):tg('—','gray'),
-        E(t.response_time),t.tone_consistent?tg('OK','green'):tg('Falha','danger'),
-        tg(t.status,sc2[t.status])])));
+    const statusLabel2 = {pass:'Passou',partial:'Pendente',fail:'Falhou'};
+    h += sc('Resultados dos Testes Simulados',
+      tb(['#','Perfil','Score Esperado','Score Real','Kommo','Alerta','Tempo','Status','Observações'],
+      d.test_results.map(t=>[
+        E(t.lead_number),
+        E(t.profile_description||''),
+        E(t.expected_score||'—'),
+        E(t.score||'—'),
+        t.kommo_entry?tg('OK','green'):tg('—','gray'),
+        t.alert_sent?tg('OK','green'):tg('—','gray'),
+        E(t.response_time||'—'),
+        tg(statusLabel2[t.status]||t.status, sc2[t.status]),
+        E((t.issues||[]).join(' · '))
+      ])));
   }
+
+  // Plano de monitoramento pós go-live
+  if (d.go_live?.monitoring_plan?.length) {
+    let glHtml = '<div class="gr gr--2">'
+      + mt(d.go_live.approved?'Aprovado':'Pendente', 'Aprovação Go-live', d.go_live.approved?'green':'yellow')
+      + mt(d.go_live.activated_at||'—', 'Ativação', '')
+      + '</div>'
+      + '<h4 style="margin:1rem 0 .5rem;font-size:.875rem">Plano de Monitoramento Pós Go-live</h4>'
+      + '<ul style="font-size:.8125rem;margin:.25rem 0;padding-left:1.25rem">'+d.go_live.monitoring_plan.map(p=>'<li>'+E(p)+'</li>').join('')+'</ul>';
+    h += sc('Go-live e Monitoramento', glHtml);
+  }
+
+  // Problemas encontrados (pré-go-live)
   if (d.issues_found?.length) {
-    h += sc('Problemas Encontrados', '<ul class="cl">'+d.issues_found.map(i=>'<li><span class="cl__icon cl__icon--blocked">&#10007;</span><span>'+E(i)+'</span></li>').join('')+'</ul>');
+    h += sc('Pendências Bloqueantes Antes do Go-live',
+      '<ul class="cl">'+d.issues_found.map(i=>'<li><span class="cl__icon cl__icon--blocked">&#10007;</span><span>'+E(i)+'</span></li>').join('')+'</ul>');
   }
+
   return h;
 },
 

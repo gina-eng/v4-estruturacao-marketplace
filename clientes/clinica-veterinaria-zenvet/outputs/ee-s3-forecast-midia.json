@@ -131,7 +131,7 @@
     }
   },
   "tracking_metrics": {
-    "description": "12 indicadores monitorados semanalmente. Operador deve montar dashboard com esses KPIs no Looker Studio (alimentado por Google Ads + Meta Ads + planilha manual da Loíse para MQL/Agendamento/Show).",
+    "description": "12 indicadores monitorados semanalmente. Operador deve montar dashboard com esses KPIs no Looker Studio (alimentado por Google Ads + Meta Ads + planilha manual da Louíse para MQL/Agendamento/Show).",
     "metrics": [
       {
         "id": 1,
@@ -179,22 +179,22 @@
       {
         "id": 7,
         "metric": "MQL Rate (taxa de qualificação)",
-        "definition": "% de leads que respondem à 1ª abordagem da Loíse e demonstram intenção real (não são curiosos / casos fora do escopo)",
-        "source": "Planilha manual da Loíse (até implantação Kommo via ee-s3-crm-setup)",
+        "definition": "% de leads que respondem à 1ª abordagem da Louíse e demonstram intenção real (não são curiosos / casos fora do escopo)",
+        "source": "Planilha manual da Louíse (até implantação Kommo via ee-s3-crm-setup)",
         "frequency": "semanal"
       },
       {
         "id": 8,
         "metric": "MQLs (Marketing Qualified Leads)",
         "definition": "Leads × MQL Rate — volume absoluto de leads qualificados que entram no pipeline comercial",
-        "source": "Planilha Loíse / Kommo",
+        "source": "Planilha Louíse / Kommo",
         "frequency": "semanal"
       },
       {
         "id": 9,
         "metric": "Agendamentos",
         "definition": "MQLs que efetivamente marcaram consulta (data confirmada na agenda)",
-        "source": "Vetsoft (sistema de prontuário) + planilha Loíse",
+        "source": "Vetsoft (sistema de prontuário) + planilha Louíse",
         "frequency": "diária"
       },
       {
@@ -222,8 +222,8 @@
     ]
   },
   "forecast_6_months": {
-    "description": "Evolução mensal ULTRA CONSERVADORA dos 12 indicadores ao longo de 6 meses. Curva NÃO LINEAR — meses 1–2 ficam ABAIXO do desempenho atual em volume e ACIMA em CPL por causa da transição (troca de agência, Pixel novo, criativos sem histórico, Loíse ainda no script antigo). M3 é ponto de inflexão (Lookalike + script Loíse). Estabilização real só no M4 (CPL volta para zona aceitável R$ 30). M5–M6 maturam com pequenos ganhos de eficiência. Premissa: cliente cumpre R$ 3.000/mês contratado, Pixel sobe na S1, base 1.186 carregada na S2, Loíse adota script consultivo via ee-s3-crm-setup.",
-    "evolution_logic": "M1 (queda): transição de agência + setup completo CUSTA volume. 65 leads (abaixo dos 72 atuais), CPL R$ 46 (acima dos R$ 26 atuais). M2 (recuperação parcial): Pixel coletando 30d, criativos piores pausados, leve melhoria mas ainda abaixo da eficiência atual. M3 (ponto de inflexão): Lookalike 1% incorporada, script consultivo Loíse implementado (depende ee-s3-crm-setup). M4 (estabilização): CPL R$ 30 — volta ao benchmark Pet/Vet. M5 (maturação): Pixel 90d, refinamento marginal. M6 (eficiência): CPL R$ 25, próximo do atual mas com 66% mais volume. CAC mídia M6 em R$ 115 (vs R$ 156 atual reportado pela cliente em fontes mistas).",
+    "description": "Evolução mensal ULTRA CONSERVADORA dos 12 indicadores ao longo de 6 meses. Curva NÃO LINEAR — meses 1–2 ficam ABAIXO do desempenho atual em volume e ACIMA em CPL por causa da transição (troca de agência, Pixel novo, criativos sem histórico, Louíse ainda no script antigo). M3 é ponto de inflexão (Lookalike + script Louíse). Estabilização real só no M4 (CPL volta para zona aceitável R$ 30). M5–M6 maturam com pequenos ganhos de eficiência. Premissa: cliente cumpre R$ 3.000/mês contratado, Pixel sobe na S1, base 1.186 carregada na S2, Louíse adota script consultivo via ee-s3-crm-setup.",
+    "evolution_logic": "M1 (queda): transição de agência + setup completo CUSTA volume. 65 leads (abaixo dos 72 atuais), CPL R$ 46 (acima dos R$ 26 atuais). M2 (recuperação parcial): Pixel coletando 30d, criativos piores pausados, leve melhoria mas ainda abaixo da eficiência atual. M3 (ponto de inflexão): Lookalike 1% incorporada, script consultivo Louíse implementado (depende ee-s3-crm-setup). M4 (estabilização): CPL R$ 30 — volta ao benchmark Pet/Vet. M5 (maturação): Pixel 90d, refinamento marginal. M6 (eficiência): CPL R$ 25, próximo do atual mas com 66% mais volume. CAC mídia M6 em R$ 115 (vs R$ 156 atual reportado pela cliente em fontes mistas).",
     "monthly_evolution": [
       {
         "month": 1,
@@ -262,7 +262,7 @@
       {
         "month": 3,
         "label": "Julho/2026",
-        "phase": "Ponto de inflexão — Lookalike incorporada + script Loíse",
+        "phase": "Ponto de inflexão — Lookalike incorporada + script Louíse",
         "impressions": 53000,
         "clicks": 1034,
         "ctr_pct": 1.95,
@@ -350,7 +350,7 @@
     "Acessos Meta Business + Google Ads transferidos da agência anterior em D+3. Risco crítico apontado em sensitivity_analysis do diagnóstico de mídia.",
     "LP felinos (https://zenvet-landing.vercel.app — já no ar) atinge taxa de conversão estável em ~8% após 30d de tráfego. Forecast assume CVR LP plano em 8% — não otimista.",
     "Os 8 criativos S3 (5 feed + 3 stories) sobem nos primeiros 7 dias pareados com a copy aprovada (campo pair_with_creative).",
-    "MQL Rate sobe de 55% (mês 1) para 70% (mês 6) — aumento gradual e conservador. Depende de Loíse adotar script consultivo via skill ee-s3-crm-setup (ainda pendente).",
+    "MQL Rate sobe de 55% (mês 1) para 70% (mês 6) — aumento gradual e conservador. Depende de Louíse adotar script consultivo via skill ee-s3-crm-setup (ainda pendente).",
     "Base de 1.186 clientes inativos é exportada do Vetsoft até Semana 2 e carregada como Custom Audience.",
     "Capacidade operacional: 3 veterinários comportam até ~31 atendimentos novos/mês no mês 6. Folga grande (longe de gargalo físico) — espaço para cenário otimista no futuro.",
     "Sazonalidade não modelada: Junho/Julho são mais frios em Americana → vacinação + dermatologia rendem mais. Outubro pré-veraneio acelera demanda. Pode acelerar curva levemente.",
@@ -360,7 +360,7 @@
     "skill": "ee-s3-forecast-midia",
     "version": 4,
     "generated_at": "2026-04-30",
-    "version_notes": "v4 (30/04): cenário ULTRA conservador conforme novo feedback do operador. M1 começa ABAIXO do baseline atual (65 leads vs 72 hoje, CPL R$ 46 vs R$ 26 hoje) refletindo o custo real da transição: troca de agência, Pixel novo, criativos sem histórico, Loíse ainda no script antigo. Estabilização só no M4 (CPL R$ 30). M6: 120 leads, CPL R$ 25, 26 atendimentos. Acumulado 6m: 557 leads, 100 atendimentos, CAC mídia médio R$ 180. Demand Gen Vacinação removida (vira ação orgânica/CRM, não consome verba paga). Total: 4 campanhas (2 Google + 2 Meta). v3 → v4: -73 leads, -26 atendimentos, +R$ 37 no CAC médio.",
+    "version_notes": "v4 (30/04): cenário ULTRA conservador conforme novo feedback do operador. M1 começa ABAIXO do baseline atual (65 leads vs 72 hoje, CPL R$ 46 vs R$ 26 hoje) refletindo o custo real da transição: troca de agência, Pixel novo, criativos sem histórico, Louíse ainda no script antigo. Estabilização só no M4 (CPL R$ 30). M6: 120 leads, CPL R$ 25, 26 atendimentos. Acumulado 6m: 557 leads, 100 atendimentos, CAC mídia médio R$ 180. Demand Gen Vacinação removida (vira ação orgânica/CRM, não consome verba paga). Total: 4 campanhas (2 Google + 2 Meta). v3 → v4: -73 leads, -26 atendimentos, +R$ 37 no CAC médio.",
     "depends_on": [
       "ee-s2-diagnostico-midia (v2)",
       "ee-s1-persona-icp (v3)",

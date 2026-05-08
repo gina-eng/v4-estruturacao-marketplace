@@ -21,7 +21,7 @@
       "category": "risco",
       "label": "Captura de nome",
       "value": "0",
-      "subtext": "Loíse não pediu nem o nome da tutora nem o nome da gata. Sem identificação, follow-up estruturado é impossível.",
+      "subtext": "Louíse não pediu nem o nome da tutora nem o nome da gata. Sem identificação, follow-up estruturado é impossível.",
       "tone": "red"
     },
     {
@@ -49,7 +49,7 @@
   "summary_key_findings": [
     {
       "category": "vantagem",
-      "text": "Loíse demonstra fundamentos comerciais sólidos: respondeu em 2 minutos (15:29 → 15:31), apresentou-se pessoalmente ('Meu nome é Louise sou secretária da Zenvet'), ofereceu horário concreto na 2ª mensagem (18:30 hoje), e defendeu valor sem ceder desconto na objeção 'caro vs Animed'. O problema não é capacidade individual — é falta de processo estruturado."
+      "text": "Louíse demonstra fundamentos comerciais sólidos: respondeu em 2 minutos (15:29 → 15:31), apresentou-se pessoalmente ('Meu nome é Louise sou secretária da Zenvet'), ofereceu horário concreto na 2ª mensagem (18:30 hoje), e defendeu valor sem ceder desconto na objeção 'caro vs Animed'. O problema não é capacidade individual — é falta de processo estruturado."
     },
     {
       "category": "ameaca",
@@ -61,7 +61,7 @@
     },
     {
       "category": "ameaca",
-      "text": "Encerramento passivo no 'vou pensar' (Loíse: 'Sem problemas, ficamos à disposição ☺️') + ZERO follow-up em 24h confirma empiricamente o churn_reason 'lead some sem retorno' do briefing e o gargalo principal do S4. Em ciclo curto da Zenvet (consulta mesmo dia), 24h sem retomada = lead perdido para concorrente ou desistência. O correto seria: 'Ficou alguma outra dúvida que te ajudaria a trazer ela hoje ainda? Esses casos de bexiga podem ser urgentes, recomendo trazer o quanto antes.'"
+      "text": "Encerramento passivo no 'vou pensar' (Louíse: 'Sem problemas, ficamos à disposição ☺️') + ZERO follow-up em 24h confirma empiricamente o churn_reason 'lead some sem retorno' do briefing e o gargalo principal do S4. Em ciclo curto da Zenvet (consulta mesmo dia), 24h sem retomada = lead perdido para concorrente ou desistência. O correto seria: 'Ficou alguma outra dúvida que te ajudaria a trazer ela hoje ainda? Esses casos de bexiga podem ser urgentes, recomendo trazer o quanto antes.'"
     },
     {
       "category": "acao",
@@ -84,15 +84,15 @@
     "questions": [
       {
         "question": "Vocês têm vet especialista em gato mesmo? Eu já levei a Mel num lugar que falaram que era 'pet em geral' e não me senti segura.",
-        "objective": "Testa identificação automática do diferencial Zenvet (especialização Nathalia em felinos) — a Loíse precisa saber posicionar isso espontaneamente."
+        "objective": "Testa identificação automática do diferencial Zenvet (especialização Nathalia em felinos) — a Louíse precisa saber posicionar isso espontaneamente."
       },
       {
         "question": "Olha, eu vi no [hospital 24h da avenida / Animed] que a consulta tá R$70. Aqui fica mais? Por quê?",
-        "objective": "Deal-killer principal mapeado no diagnóstico S4 (objeção de preço vs concorrente). Testa se Loíse defende valor sem ceder desconto, posiciona transparência item-a-item, usa prova social."
+        "objective": "Deal-killer principal mapeado no diagnóstico S4 (objeção de preço vs concorrente). Testa se Louíse defende valor sem ceder desconto, posiciona transparência item-a-item, usa prova social."
       },
       {
         "question": "Vocês acham que vai precisar de exame logo de cara? Tenho receio de gastar muito de uma vez sem saber se precisa mesmo...",
-        "objective": "Trust + objeção 'exames desnecessários' (trauma da Mariana no ICP S1). Testa se Loíse comunica transparência item-a-item antes de qualquer procedimento."
+        "objective": "Trust + objeção 'exames desnecessários' (trauma da Mariana no ICP S1). Testa se Louíse comunica transparência item-a-item antes de qualquer procedimento."
       },
       {
         "question": "Hmm, deixa eu pensar e te respondo. (parar de responder por 7 dias)",
@@ -111,9 +111,9 @@
   "simulation_metadata": {
     "date": "2026-05-07",
     "channel": "WhatsApp",
-    "attendant_name": "Louise (Loíse no briefing)",
+    "attendant_name": "Louise (Louíse no briefing)",
     "total_duration_minutes": 30,
-    "conversation_transcript": "[15:26] Camila → Zenvet: 'Oi! Vi a página da Zenvet e queria agendar consulta para meu pet.'\n\n[15:26] Auto-mensagem Zenvet: 'Olá! 🐾✨ Seja muito bem-vindo(a)! 😊 🐶 Temos clínica geral de cães 🐱 E temos especialista em felinos! Para agilizar seu atendimento, me conte por favor: 👉 É para cão ou gato? 👉 Prefere atendimento a domicílio ou na clínica? Se desejar, você também pode me dizer como podemos ajudar hoje: 1️⃣ Agendar uma consulta 2️⃣ Saber mais sobre nossos serviços 3️⃣ Falar sobre um atendimento em andamento'\n\n[15:26] Camila: '1'\n\n[15:27] Louise: 'Ola boa tarde tudo bem?'\n[15:27] Louise: 'Meu nome é Louise sou secretária da zenvet e vou dar andamento ao seu atendimento 😏'\n[15:27] Louise: 'Como podemos te ajudar hoje?'\n\n[15:29] Camila: 'Oi, boa tarde! Vi vocês no Instagram e queria saber se atendem gata, ela tá fazendo xixi fora da caixa há umas duas semanas e parou de comer direito, tô preocupada. Vocês têm horário essa semana? Quanto fica a consulta?'\n\n[15:31] Louise: 'Claro temos sim'\n[15:32] Louise: 'A dra nathalia é especializada em felinos e com certeza vai te ajudar 😊'\n[15:32] Louise: 'Hoje ainda temos horario as 18:30'\n[15:32] Louise: 'Daria certo para voce?'\n\n[15:41] Camila: 'Ah que bom que ela é especialista! Mas antes de marcar, você consegue me passar quanto fica a consulta?'\n\n[15:41] Louise: 'Claro'\n[15:41] Louise: 'Olá! 💬🐱 A consulta com nossa especialista em felinos tem o valor de R$ 140,00. Inclui avaliação completa, análise de exames anteriores e orientações específicas para o bem-estar do seu gato. ✅ Retorno: Você tem direito a 1 retorno gratuito em até 30 dias (para o mesmo caso clínico). Gostaria de reservar um horário para hoje? Me avise e já agendamos por aqui! 🗓️ ✨'\n\n[15:46] Camila: 'Fica um pouco mais caro que o Animed, né? Sabe me dizer pq?'\n\n[15:47] Louise: 'Na consulta da Dra Nathalia ja esta incluso o teste de FELV, e esse valor é por ela ser especialista também.'\n\n[15:50] Camila: 'Ah, FELV é o teste de leucemia felina, né? E se a Dra. achar que precisa de outros exames além desse, vocês falam o valor antes? Tenho receio de gastar muito de uma vez sem saber se precisa mesmo...'\n\n[15:52] Louise: 'Isso o teste é esse mesmo'\n[15:52] Louise: 'Sobre exames a dra so consegue te passar o que será necessário na consulta, pois ela faz todo o exame físico primeiro para entender a necessidade de exames'\n[15:53] Louise: 'Caso seja necessário ela te passa todos os valores antes de realizar'\n[15:53] Louise: 'E voce verifica se consegue fazer ou não'\n\n[15:56] Camila: 'Entendi'\n[15:56] Camila: 'Ta bom'\n[15:56] Camila: 'Deixa eu pensar aqui e te respondo, tá? Obrigada pelas informações 🙂'\n\n[~15:57] Louise: 'Sem problemas, ficamos à disposição ☺️'\n\n[+24h — 2026-05-08 ~15:57]: NENHUM follow-up da Loíse. Janela 24h fechada sem retomada do contato."
+    "conversation_transcript": "[15:26] Camila → Zenvet: 'Oi! Vi a página da Zenvet e queria agendar consulta para meu pet.'\n\n[15:26] Auto-mensagem Zenvet: 'Olá! 🐾✨ Seja muito bem-vindo(a)! 😊 🐶 Temos clínica geral de cães 🐱 E temos especialista em felinos! Para agilizar seu atendimento, me conte por favor: 👉 É para cão ou gato? 👉 Prefere atendimento a domicílio ou na clínica? Se desejar, você também pode me dizer como podemos ajudar hoje: 1️⃣ Agendar uma consulta 2️⃣ Saber mais sobre nossos serviços 3️⃣ Falar sobre um atendimento em andamento'\n\n[15:26] Camila: '1'\n\n[15:27] Louise: 'Ola boa tarde tudo bem?'\n[15:27] Louise: 'Meu nome é Louise sou secretária da zenvet e vou dar andamento ao seu atendimento 😏'\n[15:27] Louise: 'Como podemos te ajudar hoje?'\n\n[15:29] Camila: 'Oi, boa tarde! Vi vocês no Instagram e queria saber se atendem gata, ela tá fazendo xixi fora da caixa há umas duas semanas e parou de comer direito, tô preocupada. Vocês têm horário essa semana? Quanto fica a consulta?'\n\n[15:31] Louise: 'Claro temos sim'\n[15:32] Louise: 'A dra nathalia é especializada em felinos e com certeza vai te ajudar 😊'\n[15:32] Louise: 'Hoje ainda temos horario as 18:30'\n[15:32] Louise: 'Daria certo para voce?'\n\n[15:41] Camila: 'Ah que bom que ela é especialista! Mas antes de marcar, você consegue me passar quanto fica a consulta?'\n\n[15:41] Louise: 'Claro'\n[15:41] Louise: 'Olá! 💬🐱 A consulta com nossa especialista em felinos tem o valor de R$ 140,00. Inclui avaliação completa, análise de exames anteriores e orientações específicas para o bem-estar do seu gato. ✅ Retorno: Você tem direito a 1 retorno gratuito em até 30 dias (para o mesmo caso clínico). Gostaria de reservar um horário para hoje? Me avise e já agendamos por aqui! 🗓️ ✨'\n\n[15:46] Camila: 'Fica um pouco mais caro que o Animed, né? Sabe me dizer pq?'\n\n[15:47] Louise: 'Na consulta da Dra Nathalia ja esta incluso o teste de FELV, e esse valor é por ela ser especialista também.'\n\n[15:50] Camila: 'Ah, FELV é o teste de leucemia felina, né? E se a Dra. achar que precisa de outros exames além desse, vocês falam o valor antes? Tenho receio de gastar muito de uma vez sem saber se precisa mesmo...'\n\n[15:52] Louise: 'Isso o teste é esse mesmo'\n[15:52] Louise: 'Sobre exames a dra so consegue te passar o que será necessário na consulta, pois ela faz todo o exame físico primeiro para entender a necessidade de exames'\n[15:53] Louise: 'Caso seja necessário ela te passa todos os valores antes de realizar'\n[15:53] Louise: 'E voce verifica se consegue fazer ou não'\n\n[15:56] Camila: 'Entendi'\n[15:56] Camila: 'Ta bom'\n[15:56] Camila: 'Deixa eu pensar aqui e te respondo, tá? Obrigada pelas informações 🙂'\n\n[~15:57] Louise: 'Sem problemas, ficamos à disposição ☺️'\n\n[+24h — 2026-05-08 ~15:57]: NENHUM follow-up da Louíse. Janela 24h fechada sem retomada do contato."
   },
   "evaluation": {
     "overall_score": 5.9,
@@ -128,13 +128,13 @@
       {
         "criterion": "Qualidade da Abordagem Inicial",
         "score": 6,
-        "observation": "Auto-msg estruturada com bem-vinda + qualificação inicial (cão/gato + domicílio/clínica) + menu numerado. Loíse se apresentou pessoalmente ('Meu nome é Louise sou secretária da Zenvet'). Mas: NÃO PEDIU O NOME da tutora nem da gata — sem identificação não há personalização.",
+        "observation": "Auto-msg estruturada com bem-vinda + qualificação inicial (cão/gato + domicílio/clínica) + menu numerado. Louíse se apresentou pessoalmente ('Meu nome é Louise sou secretária da Zenvet'). Mas: NÃO PEDIU O NOME da tutora nem da gata — sem identificação não há personalização.",
         "evidence": "Louise (15:27): 'Ola boa tarde tudo bem? Meu nome é Louise...' — apresentação ok. Nenhuma das mensagens da Louise solicita nome do lead."
       },
       {
         "criterion": "Identificação de Necessidade",
         "score": 3,
-        "observation": "Camila descreveu sintoma específico e potencialmente grave (xixi fora da caixa há 2 semanas + anorexia em felina). Loíse fez ZERO perguntas de aprofundamento clínico (idade da gata? sexo? há quanto tempo? frequência? sangue na urina?) e foi direto pra agendar. Em clínica especialista em felinos, essa descrição deveria disparar alerta de FLUTD/cistite — falha estrutural de senso clínico-comercial.",
+        "observation": "Camila descreveu sintoma específico e potencialmente grave (xixi fora da caixa há 2 semanas + anorexia em felina). Louíse fez ZERO perguntas de aprofundamento clínico (idade da gata? sexo? há quanto tempo? frequência? sangue na urina?) e foi direto pra agendar. Em clínica especialista em felinos, essa descrição deveria disparar alerta de FLUTD/cistite — falha estrutural de senso clínico-comercial.",
         "evidence": "Após sintoma descrito (15:29), resposta da Louise (15:31-15:32) foi: 'Claro temos sim' + 'A dra nathalia é especializada em felinos' + 'Hoje ainda temos horario as 18:30 — Daria certo para voce?'. Sem perguntas, sem reconhecimento de urgência."
       },
       {
@@ -159,7 +159,7 @@
         "criterion": "Follow-up Após Conversa",
         "score": 2,
         "observation": "ZERO follow-up em 24h após Camila sumir. Em ciclo curto (Saúde/Vet, consulta mesmo dia), 24h sem retomada = lead perdido para concorrente ou desistência. Confirma o churn_reason 'lead some sem retorno' do briefing e o gargalo Contato→Agendamento (24%) do diagnóstico S4. Causa raiz: sem CRM comercial nem régua estruturada, leads em hesitação não são resgatados ativamente.",
-        "evidence": "Janela +24h após 'vou pensar' (15:56 do dia 2026-05-07 até ~15:57 do dia 2026-05-08): nenhuma mensagem da Loíse. Lead esfriou."
+        "evidence": "Janela +24h após 'vou pensar' (15:56 do dia 2026-05-07 até ~15:57 do dia 2026-05-08): nenhuma mensagem da Louíse. Lead esfriou."
       }
     ],
     "strengths": [
@@ -172,7 +172,7 @@
     ],
     "critical_improvements": [
       "[CRÍTICO] Não capturou nome da tutora nem da gata em nenhuma mensagem da conversa — sem identificação, é IMPOSSÍVEL personalizar follow-up estruturado, alimentar CRM ou criar régua de nutrição. Conecta diretamente ao gargalo principal do diagnóstico S4: 38 leads/mês entram em conversa, ouvem preço, somem sem rastro.",
-      "[CRÍTICO] Não reconheceu sinal clínico de urgência. Quadro descrito pela Camila (xixi fora da caixa há 2 semanas + parou de comer em felina) é gatilho clássico de FLUTD/cistite/obstrução urinária. Em clínica especialista em felinos, o reflexo esperado é 'eu te encaixo HOJE, esses casos não devem esperar' — Loíse tratou como agendamento de rotina (oferta genérica de 18:30).",
+      "[CRÍTICO] Não reconheceu sinal clínico de urgência. Quadro descrito pela Camila (xixi fora da caixa há 2 semanas + parou de comer em felina) é gatilho clássico de FLUTD/cistite/obstrução urinária. Em clínica especialista em felinos, o reflexo esperado é 'eu te encaixo HOJE, esses casos não devem esperar' — Louíse tratou como agendamento de rotina (oferta genérica de 18:30).",
       "[CRÍTICO] Nenhum follow-up em 24h após 'vou pensar'. Confirma empiricamente o churn_reason 'lead some sem retorno' do briefing e o gargalo Contato→Agendamento (24%) do diagnóstico S4. Em ciclo curto da Zenvet, 24h sem retomada = lead perdido.",
       "[ALTO] Encerramento passivo no 'vou pensar': 'Sem problemas, ficamos à disposição ☺️'. O correto, em quadro com sinal clínico, seria fechamento ativo: 'Ficou alguma outra dúvida que te ajudaria a trazer ela hoje ainda? Esses casos de bexiga podem ser um pouco urgentes, recomendo trazer o quanto antes.' — combina pergunta aberta + urgência apropriada + recomendação + CTA ativo.",
       "[ALTO] Zero perguntas de aprofundamento clínico. Não perguntou idade da gata, sexo, raça, há quanto tempo o sintoma, frequência da micção, presença de sangue, se está medicando, se já fez exame anterior. Vai direto pra agendar — perde oportunidade de criar vínculo consultivo (chave do posicionamento Zenvet).",
@@ -211,7 +211,7 @@
       }
     ],
     "overall_sdr_impact": {
-      "response_time_before": "2 min em horário comercial (excelente, mas requer Loíse disponível e sem atendimento presencial simultâneo)",
+      "response_time_before": "2 min em horário comercial (excelente, mas requer Louíse disponível e sem atendimento presencial simultâneo)",
       "response_time_after": "<5 segundos 24/7 (SDR IA cobre janela morta 22h-8h e simultaneidade durante atendimentos presenciais)",
       "contact_rate_before": 69,
       "contact_rate_after": 80,

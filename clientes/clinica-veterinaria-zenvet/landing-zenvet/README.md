@@ -13,7 +13,7 @@ npm run dev
 ## Pendências antes de publicar
 
 1. **Foto do hero** — substituir `components/HeroPhoto.tsx` por `<Image>` apontando para uma das 29 fotos profissionais existentes (sugestão: Dra. Nathalia agachada na altura do gato, luz natural). Salvar em `public/photos/hero.jpg`.
-2. **Depoimentos** — `social_proof.testimonials` no JSON tem 3 placeholders. Coletar reais (Google Reviews / Loíse / IG) e atualizar o JSON; o componente já trata o estado "placeholder" visualmente.
+2. **Depoimentos** — `social_proof.testimonials` no JSON tem 3 placeholders. Coletar reais (Google Reviews / Louíse / IG) e atualizar o JSON; o componente já trata o estado "placeholder" visualmente.
 3. **Domínio** — definir antes do deploy: `clinicazenvet.com.br` (substitui site atual) ou subdomínio `agendar.clinicazenvet.com.br`.
 4. **Schema.org** — adicionar JSON-LD `Veterinarian` no layout para rich snippets do Google.
 

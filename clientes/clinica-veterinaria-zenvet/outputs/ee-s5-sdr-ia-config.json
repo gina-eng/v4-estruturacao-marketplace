@@ -1,0 +1,325 @@
+{
+  "client_name": "Clínica Veterinária Zenvet",
+  "platform": "Kommo IA nativa (substitui Patagon original — decisão 2026-05-08)",
+  "summary": "Configuração planejada da Bia (SDR IA) na Kommo IA nativa — substitui a opção Patagon original. Documento operacional completo (system prompt + 28 custom fields + 12 estágios de pipeline + tags + 30 triggers + FAQ + 6 exemplos de conversa) consolidado em diretrizes-bia.html. Configuração técnica no Kommo aguarda execução manual pelo Rafael Corazza, com aprovação prévia da Dra. Nathalia sobre scripts, red flags clínicos e placeholders pendentes (horário oficial, hospital 24h parceiro, política de parcelamento, convênios). 5 testes simulados planejados antes do go-live.",
+  "summary_headline": "Configuração planejada · Kommo IA nativa · 28 custom fields + 12 estágios + 30 triggers · aguarda aprovação Nathalia + execução técnica",
+  "summary_highlights": [
+    {
+      "category": "maturidade",
+      "label": "Plataforma escolhida",
+      "value": "Kommo IA",
+      "subtext": "IA nativa do CRM · substitui opção Patagon original",
+      "tone": "blue"
+    },
+    {
+      "category": "posicao",
+      "label": "Documento operacional",
+      "value": "1.574 linhas",
+      "subtext": "diretrizes-bia.html · 20 seções · system prompt completo + 6 exemplos de conversa",
+      "tone": "green"
+    },
+    {
+      "category": "oportunidade",
+      "label": "Custom fields no Kommo",
+      "value": "28 campos",
+      "subtext": "Identificação · sintoma · red flag · score · classificação · origem · acompanhamento",
+      "tone": "blue"
+    },
+    {
+      "category": "oportunidade",
+      "label": "Pipeline + automações",
+      "value": "12 estágios · 30+ triggers",
+      "subtext": "Lead Novo → Triagem Urgente → Pronto Agendar → Hesitando → Frio → Descartado · Salesbot por gatilho",
+      "tone": "blue"
+    },
+    {
+      "category": "risco",
+      "label": "Pré-requisitos pendentes",
+      "value": "3 bloqueios",
+      "subtext": "Aprovação Nathalia · placeholders (horário, hospital 24h, parcelamento, convênios) · execução técnica Rafael",
+      "tone": "yellow"
+    },
+    {
+      "category": "janela",
+      "label": "Status",
+      "value": "Aguarda execução",
+      "subtext": "Configuração planejada — testes 5 leads ainda não executados",
+      "tone": "yellow"
+    }
+  ],
+  "summary_key_findings": [
+    {
+      "category": "vantagem",
+      "text": "Decisão estratégica: usar Kommo IA nativa em vez de Patagon. Reduz custo de ferramenta (1 plataforma só), simplifica integração (Bia já vive no CRM, sem field mapping cross-tool) e usa o pipeline existente (criado na ee-s3-crm-setup) como fundação."
+    },
+    {
+      "category": "contexto",
+      "text": "Documento operacional completo (diretrizes-bia.html) cobre: identidade da Bia · tom + vocabulário · 5 perguntas de qualificação · sistema 1-5★ qualitativo + quantitativo · 24 gatilhos comportamentais · 12 red flags clínicos felinos · 10 objeções com playbook · FAQ catalogado · régua de acompanhamento · handoffs · §14-17 com configuração Kommo passo a passo · 6 exemplos de conversa por estrela."
+    },
+    {
+      "category": "acao",
+      "text": "Pré-requisitos antes da execução técnica: (1) aprovação da Dra. Nathalia sobre scripts, red flags e tom; (2) confirmação dos 4 placeholders pendentes — horário oficial seg-sáb, hospital 24h parceiro para encaminhamento, política de parcelamento, convênios pet aceitos; (3) Rafael Corazza configurar os 28 custom fields + 12 estágios + 30 triggers no Kommo seguindo §14-17 das diretrizes."
+    },
+    {
+      "category": "ameaca",
+      "text": "Risco operacional: red flags clínicos felinos são senso clínico-comercial, não diagnóstico — a Bia DEVE sempre escalar pra Nathalia em caso de dúvida, nunca dar conduta. Sandbox com 5 leads simulados antes do WhatsApp real é obrigatório pra calibrar matriz de red flags e tom. Sem testes, risco de Bia tratar caso urgente como rotina (falha do cliente oculto S4) ou tom desalinhado com brandbook."
+    },
+    {
+      "category": "acao",
+      "text": "Pós go-live: monitorar primeiros 20 leads reais nas 48h iniciais. Calibrar distribuição alvo (20% 5★ · 30% 4★ · 30% 3★ · 10% 2★ · 10% 1★) após 30 dias. Revisar matriz de red flags com Nathalia mensalmente. Coletar feedback da Louíse sobre qualidade do contexto no handoff. Métricas-alvo do diagnóstico S4: Lead→Contato 80%, Contato→Agendamento 35% em 60 dias."
+    }
+  ],
+  "patagon_config": {
+    "agent_name": "Bia",
+    "agent_description": "Recepcionista digital da Zenvet operando como IA nativa do Kommo CRM. Atende WhatsApp 24/7, qualifica leads via 5 perguntas estruturadas, detecta red flags clínicos felinos com escalonamento imediato pra Dra. Nathalia, agenda consulta especialista de felinos (R$ 140) e faz handoff humano pra Louíse em demais serviços (cães, vacinação, castração, domicílio, check-up senior, cirurgia, internação).",
+    "persona_instructions": "System prompt completo nas seções §1-13 do diretrizes-bia.html (1.574 linhas). Tom: Especialista (sem arrogância) · Humano (sem infantilização) · Transparente (sem burocracia) · Próximo (sem invasão). Vocabulário 100% alinhado ao brandbook: tutor/tutora, felino, paciente, consulta especialista, Dra. Nathalia, acompanhamento (nunca 'follow-up'), orçamento item a item. Proibido: peludinho, dono, bichinho, pet em geral, diminutivos infantilizantes, emoji em mensagens de orçamento/agendamento, CAPS LOCK, '!' decorativo. Tratamento sempre 'você'. Máx 3 frases por balão, 1 pergunta por mensagem, 8-18 palavras por frase. Nunca confirma que é IA. Nunca dá diagnóstico/prescrição. Nunca cede desconto.",
+    "welcome_message": "Oi! Aqui é a Bia da Zenvet. Sei que decidir veterinário pra um pet que a gente ama nunca é simples. Me conta o que tá acontecendo com ele(a) que a gente te ajuda a entender o melhor caminho.",
+    "qualification_questions": [
+      {"order": 1, "question": "Antes de tudo, é pra cão ou gato? E me conta rapidinho o que tá acontecendo com ele(a) — algo específico ou check-up de rotina?", "required": true},
+      {"order": 2, "question": "Há quanto tempo isso vem acontecendo? E ele(a) tá comendo e bebendo normal?", "required": true},
+      {"order": 3, "question": "É a primeira vez que vocês vão a um veterinário ou já levaram em outro lugar antes?", "required": true},
+      {"order": 4, "question": "Pra eu reservar o horário, me passa seu nome e o nome do(a) seu(sua) gato(a) ou cão(a)? E vocês são de Americana, Santa Bárbara d'Oeste ou Nova Odessa?", "required": true},
+      {"order": 5, "question": "[SE FELINO + CONSULTA] Tenho horário hoje [HORARIO_A] ou amanhã [HORARIO_B] com a Dra. Nathalia — qual encaixa melhor? · [SE CÃO ou OUTRO SERVIÇO] Vou passar com a Louíse, ela vai te confirmar valor e horário direto — te chama em até 1h.", "required": true}
+    ],
+    "scoring_rules": {
+      "five_star": {
+        "criteria": "Score 8-10. Tutor que trata o animal como filho e não mede esforços para cuidar (definição validada pela Dra. Nathalia). Tutor de gato OU cão preventivo + região atendida + pergunta sobre agendamento + menciona pet pelo nome OU descreve sintoma específico. Red flag clínico força classificação mínima 4★.",
+        "action": "Handoff imediato pra Louíse (≤5 min) com card no Kommo: score, classificação, perfil resumido, transcrição das 5 respostas, próxima ação sugerida. Se red flag clínico, escala paralela pra Dra. Nathalia validar urgência (SLA 15 min)."
+      },
+      "four_star": {
+        "criteria": "Score 5-7. Lead da região com necessidade real, mas ainda em pesquisa ativa ou sem clareza de urgência. Mín. 3 sinais: tutor de gato/cão + necessidade real + menciona pesquisar + aceita info detalhada.",
+        "action": "Handoff pra Louíse em ≤1 h. Bia abre com diferencial Zenvet (especialização felina + transparência) ANTES do preço. Se receber preço e silenciar, régua warm 24h dispara."
+      },
+      "three_star": {
+        "criteria": "Score 2-4. Lead com pergunta genérica, ainda não decidiu, preço aparece como dúvida central. Mín. 2 sinais: pergunta genérica sem contexto + origem Meta Ads + salva contato + região não-declarada.",
+        "action": "Bia continua nutrindo + régua warm automática 24h/72h/7d (insistência sutil → escassez → conteúdo educativo). Máx 3 tentativas em 14 dias. Não escala humano."
+      },
+      "two_star": {
+        "criteria": "Score 0-1. Lead sem fit claro, mas não-hostil. Pergunta valor, recebe, não responde mais.",
+        "action": "Resposta cordial única. Sem régua WhatsApp ativa. Entra em base passiva (e-mail mensal de conteúdo educativo se houver e-mail capturado)."
+      },
+      "one_star": {
+        "criteria": "Score ≤-1. Anti-persona / desqualificado. 4 perfis: caçador de preço explícito · emergência única sem vínculo · Dr. Google · fora de região atendida.",
+        "action": "Bia posiciona uma vez sem ceder, encerra cordial. Tag `AP` + estágio `Descartado`. Sem régua. Sem follow-up."
+      }
+    },
+    "objection_responses": [
+      {"objection": "Está caro vs hospital 24h R$ 70", "response": "A consulta com a Dra. Nathalia é especialista em felinos, dura 40 min e inclui FELV + orçamento item a item antes de qualquer exame — os R$ 70 do 24h são só a consulta básica e qualquer exame soma rápido. Posso te mandar 2 reviews?"},
+      {"objection": "Já fui em clínica que fez exames desnecessários", "response": "Sinto muito que passou por isso. Aqui a Dra. Nathalia explica cada exame antes de fazer e mostra o valor estimado — você aprova item a item, e se ela achar que algo não precisa, ela diz na hora."},
+      {"objection": "Vocês entendem mesmo de gato?", "response": "Sim — a Dra. Nathalia é pós-graduanda em medicina felina e 70% dos pacientes da clínica são gatos. Se seu pet estressa muito, ela tem sala separada de cães e atende a domicílio."},
+      {"objection": "Meu gato estressa muito pra vir", "response": "Você tá no lugar certo — temos sala separada de cães, e se o pet for muito sensível, a Dra. Nathalia atende a domicílio. A Louíse confirma valor + deslocamento direto com você."},
+      {"objection": "Tenho que falar com meu marido/esposa", "response": "Claro, alinhe sim. Pra você não perder a vaga: a próxima é [HORARIO] e a consulta é R$ 140 — se quiser, eu seguro até amanhã de manhã."},
+      {"objection": "Vou pensar e te respondo", "response": "Tranquilo. Antes de você decidir, ficou alguma dúvida que eu posso esclarecer agora? [Se red flag: 'Esses casos podem ser urgentes em felino, recomendo trazer o quanto antes.']"}
+    ],
+    "followup_config": {
+      "after_1h": "Oi, [NOME_TUTORA] — sei que o dia tá corrido. Quando puder, me responde aqui que eu te ajudo rapidinho a confirmar o horário do(a) [NOME_PET] com a Dra. Nathalia.",
+      "after_24h": "Oi, [NOME_TUTORA] — lembrei aqui do(a) [NOME_PET]. Tô com 2 horários só pra felinos essa semana com a Dra. Nathalia: [DIA_X] [HORA_X] ou [DIA_Y] [HORA_Y]. Te confirmo se algum encaixar?",
+      "after_3d": "Oi, [NOME_TUTORA] — só passando pra dizer que fico por aqui se precisar. Quando quiser retomar, é só me chamar. Cuidando bem do(a) [NOME_PET] aí!",
+      "max_followups": 3
+    },
+    "handoff_config": {
+      "handoff_message": "Perfeito, [NOME_TUTORA]! Pelo que você me contou do(a) [NOME_PET], a Louíse vai te confirmar o horário com a Dra. Nathalia daqui a pouquinho. Ela já vai estar com todo o contexto — você não precisa repetir nada. Te chama em até [SLA_MINUTOS] minutos.",
+      "destination_name": "Louíse (secretária comercial)",
+      "destination_whatsapp": "(19) 99579-5483 — WhatsApp Business da clínica"
+    }
+  },
+  "kommo_integration": {
+    "api_configured": false,
+    "pipeline_name": "Atendimento Zenvet (a configurar conforme §15 das diretrizes)",
+    "field_mapping": [
+      {"patagon_field": "nome_tutora", "kommo_field": "Nome da Tutora", "field_type": "texto", "is_custom_field": true},
+      {"patagon_field": "nome_pet", "kommo_field": "Nome do Pet", "field_type": "texto", "is_custom_field": true},
+      {"patagon_field": "especie", "kommo_field": "Espécie", "field_type": "lista (cão/gato/ambos)", "is_custom_field": true},
+      {"patagon_field": "regiao", "kommo_field": "Região", "field_type": "lista (Americana/SBO/Nova Odessa/outra)", "is_custom_field": true},
+      {"patagon_field": "cidade", "kommo_field": "Cidade", "field_type": "texto livre", "is_custom_field": true},
+      {"patagon_field": "bairro", "kommo_field": "Bairro", "field_type": "texto livre", "is_custom_field": true},
+      {"patagon_field": "motivo_contato", "kommo_field": "Motivo de Contato", "field_type": "lista (rotina/sintoma/preventivo/preço/comparação/outros)", "is_custom_field": true},
+      {"patagon_field": "descricao_sintoma", "kommo_field": "Descrição do Sintoma", "field_type": "texto longo", "is_custom_field": true},
+      {"patagon_field": "tempo_sintoma", "kommo_field": "Tempo do Sintoma", "field_type": "texto curto", "is_custom_field": true},
+      {"patagon_field": "red_flag_clinico", "kommo_field": "Red Flag Clínico", "field_type": "boolean", "is_custom_field": true},
+      {"patagon_field": "tipo_red_flag", "kommo_field": "Tipo de Red Flag", "field_type": "lista (xixi_fora_caixa/anorexia/vomito/prostração/sangue/respiratorio/convulsão/intoxicação/trauma/outros)", "is_custom_field": true},
+      {"patagon_field": "historico_vet", "kommo_field": "Histórico Veterinário", "field_type": "lista (primeiro/satisfeito/insatisfeito/comparando_preço)", "is_custom_field": true},
+      {"patagon_field": "nome_vet_anterior", "kommo_field": "Nome do Vet Anterior", "field_type": "texto livre", "is_custom_field": true},
+      {"patagon_field": "score_total", "kommo_field": "Score Total", "field_type": "número (-5 a 10)", "is_custom_field": true},
+      {"patagon_field": "classificacao", "kommo_field": "Classificação (Estrelas)", "field_type": "lista (1★/2★/3★/4★/5★)", "is_custom_field": true},
+      {"patagon_field": "horario_aceito", "kommo_field": "Horário Aceito", "field_type": "texto", "is_custom_field": true},
+      {"patagon_field": "prontidao_agendar", "kommo_field": "Prontidão pra Agendar", "field_type": "lista (alta/média/baixa)", "is_custom_field": true},
+      {"patagon_field": "origem_lead", "kommo_field": "Origem do Lead", "field_type": "lista (Meta Ads/Google Ads/Instagram/Indicação/WhatsApp Direto/Site)", "is_custom_field": true},
+      {"patagon_field": "nome_indicador", "kommo_field": "Nome de Quem Indicou", "field_type": "texto livre", "is_custom_field": true},
+      {"patagon_field": "aceita_dominio", "kommo_field": "Aceita Domicílio", "field_type": "boolean", "is_custom_field": true},
+      {"patagon_field": "forma_pagamento_perguntada", "kommo_field": "Perguntou Forma de Pagamento", "field_type": "boolean", "is_custom_field": true},
+      {"patagon_field": "convenio_perguntado", "kommo_field": "Perguntou Convênio", "field_type": "boolean", "is_custom_field": true},
+      {"patagon_field": "data_primeiro_contato", "kommo_field": "Data Primeiro Contato", "field_type": "datetime", "is_custom_field": true},
+      {"patagon_field": "data_ultima_interacao", "kommo_field": "Data Última Interação", "field_type": "datetime", "is_custom_field": false},
+      {"patagon_field": "numero_acompanhamentos", "kommo_field": "Nº de Acompanhamentos", "field_type": "número (0-3)", "is_custom_field": true},
+      {"patagon_field": "opt_out", "kommo_field": "Opt-out (não contactar)", "field_type": "boolean", "is_custom_field": true},
+      {"patagon_field": "telefone", "kommo_field": "Telefone", "field_type": "telefone (nativo)", "is_custom_field": false},
+      {"patagon_field": "transcricao_conversa", "kommo_field": "Transcrição da Conversa", "field_type": "nota (nativo)", "is_custom_field": false}
+    ],
+    "stage_mapping": {
+      "qualified_stage": "Pronto Agendar (4★/5★ · sem red flag)",
+      "nurture_stage": "Nutrição Ativa (3★ · régua warm 24h/72h/7d)",
+      "cold_stage": "Frio (2★ · base passiva e-mail) · Descartado (1★ · sem comunicação)"
+    },
+    "auto_tags": {
+      "by_score": {
+        "5_star": ["5★", "Lead Quente", "Mariana Plena"],
+        "4_star": ["4★", "Qualificado"],
+        "3_star": ["3★", "Morno", "EmRégua"],
+        "2_star": ["2★", "Frio"],
+        "1_star": ["1★", "AP"]
+      },
+      "by_source": {
+        "meta": "Meta Ads",
+        "google": "Google Ads",
+        "instagram": "Instagram (bio)",
+        "direct": "WhatsApp Direto",
+        "indication": "Indicação"
+      }
+    }
+  },
+  "alerts_config": {
+    "template": "🐾 LEAD [CLASSIFICACAO] · [NOME_TUTORA] (pet: [NOME_PET], [ESPECIE], [REGIAO])\n\nMotivo: [MOTIVO_CONTATO]\nSintoma: [DESCRICAO_SINTOMA] (há [TEMPO_SINTOMA])\nRed Flag: [SIM/NÃO — TIPO]\nHistórico: [HISTORICO_VET]\nScore: [SCORE_TOTAL]/10\nOrigem: [ORIGEM_LEAD]\nHorário aceito: [HORARIO_ACEITO]\n\nAção: [PROXIMA_ACAO_SUGERIDA]\nLink Kommo: [LINK_CARD]\nSLA: responder em [SLA_MINUTOS] min",
+    "seller_name": "Louíse (secretária comercial)",
+    "seller_whatsapp": "(19) 99579-5483",
+    "backup_name": "Dra. Nathalia (em red flag clínico ou irritação)",
+    "backup_whatsapp": "a confirmar com Nathalia",
+    "sla_minutes": 5,
+    "escalation_minutes": 15,
+    "business_hours": {
+      "start": "[A_CONFIRMAR — provável 8:00]",
+      "end": "[A_CONFIRMAR — provável 20:00]"
+    },
+    "trigger_conditions": [
+      "Red Flag Clínico = true → notifica Nathalia + Louíse [PRIORIDADE ALTA] (SLA 15 min)",
+      "Classificação = 5★ → notifica Louíse (SLA 5 min)",
+      "Classificação = 4★ → notifica Louíse (SLA 1 h)",
+      "Tag = Irritação → notifica Louíse [PRIORIDADE ALTA] via SMS (SLA 5 min)",
+      "Tag = PediuHumano → notifica Louíse (SLA 15 min)",
+      "Tag = Luto → notifica Nathalia (SLA 2 h, mensagem de empatia)",
+      "Tag = OrçamentoFormal → notifica Kelly (SLA 4 h)"
+    ]
+  },
+  "test_results": [
+    {
+      "lead_number": 1,
+      "profile_description": "5★ ICP gato + red flag (modelo Camila/Mel do cliente oculto S4)",
+      "expected_score": "8-10 (5★)",
+      "score": "—",
+      "score_correct": false,
+      "kommo_entry": false,
+      "kommo_fields_complete": false,
+      "kommo_stage_correct": false,
+      "alert_sent": false,
+      "response_time": "—",
+      "tone_consistent": false,
+      "status": "partial",
+      "issues": ["Aguardando execução manual em sandbox antes do go-live"]
+    },
+    {
+      "lead_number": 2,
+      "profile_description": "4★ ICP cão preventivo (vacina vencida + região)",
+      "expected_score": "5-7 (4★)",
+      "score": "—",
+      "score_correct": false,
+      "kommo_entry": false,
+      "kommo_fields_complete": false,
+      "kommo_stage_correct": false,
+      "alert_sent": false,
+      "response_time": "—",
+      "tone_consistent": false,
+      "status": "partial",
+      "issues": ["Aguardando execução manual em sandbox"]
+    },
+    {
+      "lead_number": 3,
+      "profile_description": "3★ pesquisador (origem Meta Ads, pergunta genérica de preço)",
+      "expected_score": "2-4 (3★)",
+      "score": "—",
+      "score_correct": false,
+      "kommo_entry": false,
+      "kommo_fields_complete": false,
+      "kommo_stage_correct": false,
+      "alert_sent": false,
+      "response_time": "—",
+      "tone_consistent": false,
+      "status": "partial",
+      "issues": ["Aguardando execução manual em sandbox"]
+    },
+    {
+      "lead_number": 4,
+      "profile_description": "1★ caçador de preço explícito (compara com Animed R$ 70)",
+      "expected_score": "≤-1 (1★ AP)",
+      "score": "—",
+      "score_correct": false,
+      "kommo_entry": false,
+      "kommo_fields_complete": false,
+      "kommo_stage_correct": false,
+      "alert_sent": false,
+      "response_time": "—",
+      "tone_consistent": false,
+      "status": "partial",
+      "issues": ["Aguardando execução manual em sandbox"]
+    },
+    {
+      "lead_number": 5,
+      "profile_description": "Lead com objeção forte de preço + insiste 2x (testar escalonamento)",
+      "expected_score": "Variável (3★ se cede valor / 1-2★ se insiste 3x)",
+      "score": "—",
+      "score_correct": false,
+      "kommo_entry": false,
+      "kommo_fields_complete": false,
+      "kommo_stage_correct": false,
+      "alert_sent": false,
+      "response_time": "—",
+      "tone_consistent": false,
+      "status": "partial",
+      "issues": ["Aguardando execução manual em sandbox"]
+    }
+  ],
+  "overall_test_result": "needs_adjustments",
+  "issues_found": [
+    "Aprovação da Dra. Nathalia sobre scripts, red flags clínicos e diretrizes — pendente",
+    "4 placeholders pendentes: horário oficial de funcionamento (seg-sáb), hospital 24h parceiro pra encaminhamento, política de parcelamento confirmada, lista de convênios pet aceitos",
+    "Configuração técnica no Kommo (28 custom fields, 12 estágios, 30+ triggers) ainda não executada — responsável Rafael Corazza",
+    "5 testes simulados em sandbox ainda não executados — pré-requisito do go-live",
+    "WhatsApp Business da clínica ainda não conectado ao Kommo (validar status do ee-s3-crm-setup)"
+  ],
+  "configuration_checklist": [
+    {"category": "Aprovação", "item": "Dra. Nathalia revisa e aprova scripts + diretrizes (especialmente §9 red flags clínicos)", "owner": "Nathalia + Leonardo (apresentação)", "status": "pending", "blocking": true},
+    {"category": "Placeholders", "item": "Confirmar horário oficial de funcionamento (seg-sáb)", "owner": "Nathalia", "status": "pending", "blocking": true},
+    {"category": "Placeholders", "item": "Definir hospital 24h parceiro pra encaminhamento de emergências fora do horário", "owner": "Nathalia", "status": "pending", "blocking": true},
+    {"category": "Placeholders", "item": "Confirmar política de parcelamento (cartão, Pix, débito, nº de parcelas)", "owner": "Nathalia + Kelly", "status": "pending", "blocking": false},
+    {"category": "Placeholders", "item": "Lista de convênios pet aceitos (Petlove Saúde, etc.)", "owner": "Nathalia + Kelly", "status": "pending", "blocking": false},
+    {"category": "Kommo · Setup", "item": "WhatsApp Business da clínica conectado ao Kommo + canal funcionando", "owner": "Rafael Corazza", "status": "pending", "blocking": true},
+    {"category": "Kommo · Setup", "item": "Criar 28 custom fields no Kommo conforme §14 das diretrizes", "owner": "Rafael Corazza", "status": "pending", "blocking": true},
+    {"category": "Kommo · Setup", "item": "Configurar 12 estágios do pipeline conforme §15 (Lead Novo → Triagem Urgente → Pronto Agendar → Hesitando → Frio → Descartado)", "owner": "Rafael Corazza", "status": "pending", "blocking": true},
+    {"category": "Kommo · Setup", "item": "Criar tags categorizadas conforme §16 (5 categorias: classificação, qualificação, comportamento, tema, sistema)", "owner": "Rafael Corazza", "status": "pending", "blocking": true},
+    {"category": "Kommo · IA", "item": "Colar §1-13 das diretrizes-bia.html como system prompt da IA do Kommo", "owner": "Rafael Corazza", "status": "pending", "blocking": true},
+    {"category": "Kommo · IA", "item": "Anexar §19 (6 exemplos de conversa) como few-shot pra calibrar comportamento", "owner": "Rafael Corazza", "status": "pending", "blocking": false},
+    {"category": "Kommo · Automação", "item": "Configurar 30+ triggers/Salesbot conforme §17 (entrada, qualificação, régua, handoff, pós-consulta, horário)", "owner": "Rafael Corazza", "status": "pending", "blocking": true},
+    {"category": "Sandbox", "item": "Executar 5 testes simulados (5★ red flag, 4★ cão preventivo, 3★ pesquisador, 1★ caçador, objeção forte)", "owner": "Rafael Corazza + Leonardo", "status": "pending", "blocking": true},
+    {"category": "Aprovação", "item": "Approval de go-live pela Dra. Nathalia após teste em sandbox", "owner": "Nathalia", "status": "pending", "blocking": true},
+    {"category": "Treinamento", "item": "Treinar Louíse pra receber handoff com card de contexto da Bia", "owner": "Leonardo + Louíse", "status": "pending", "blocking": false},
+    {"category": "Go-live", "item": "Ativar IA no WhatsApp Business real e monitorar primeiros 20 leads", "owner": "Rafael + Louíse + Nathalia", "status": "pending", "blocking": false}
+  ],
+  "documentation_links": [
+    {"label": "Diretrizes Operacionais Completas (1.574 linhas · system prompt + configuração Kommo + FAQ + 6 exemplos)", "url": "diretrizes-bia.html", "type": "primary"},
+    {"label": "Scripts SDR IA (JSON estruturado · base do system prompt)", "url": "#ee-s5-scripts-sdr", "type": "secondary"},
+    {"label": "Diagnóstico Comercial S4 (critérios de qualificação validados pela Nathalia)", "url": "#ee-s4-diagnostico-comercial", "type": "secondary"},
+    {"label": "Cliente Oculto S4 (5,9/10 · pontos críticos que a Bia endereça)", "url": "#ee-s4-cliente-oculto", "type": "secondary"}
+  ],
+  "go_live": {
+    "approved": false,
+    "activated_at": null,
+    "monitoring_plan": [
+      "Monitorar primeiros 20 leads reais nas primeiras 48h após ativação — Leonardo + Louíse acompanham em tempo real",
+      "Coletar feedback diário da Louíse na 1ª semana sobre qualidade do contexto no handoff (se ela precisou repetir perguntas que a Bia já fez = sinal de falha de field mapping)",
+      "Revisar métricas após 7 dias: taxa de qualificação 5★, SLA de resposta da Bia (target: <5 segundos), taxa de captura de identificação na P4 (target: >90%)",
+      "Calibrar matriz de red flags com Nathalia mensalmente — adicionar/remover sintomas conforme casos reais aparecem",
+      "Validar distribuição alvo após 30 dias (20% 5★ · 30% 4★ · 30% 3★ · 10% 2★ · 10% 1★) — desbalanceamento indica ajuste de mídia",
+      "Métricas-alvo do diagnóstico S4 a perseguir: Lead→Contato 80% (vs 69% baseline) e Contato→Agendamento 35% (vs 24% baseline) em 60 dias",
+      "Ajustar scripts baseados em dados reais a cada 14 dias nos primeiros 60 dias — versionar mudanças no JSON ee-s5-scripts-sdr"
+    ]
+  }
+}

@@ -82,7 +82,7 @@
     {
       "action": "Configurar mensagem de ausência WhatsApp: humanizada, com qualificação felino/cão e horário",
       "channel": "WhatsApp Business",
-      "who": "Loíse (cliente) — orientar Rafael",
+      "who": "Louíse (cliente) — orientar Rafael",
       "time_estimate": "19 min",
       "expected_impact": "Reduz leads perdidos fora do horário. Tom alinhado com posicionamento felinos."
     }
@@ -158,7 +158,7 @@
       "gap": "Sem script consultivo por serviço",
       "impact": "alto",
       "effort": "médio",
-      "recommended_action": "Treinar Loíse com script (Semana 3-4)"
+      "recommended_action": "Treinar Louíse com script (Semana 3-4)"
     },
     {
       "rank": 10,
@@ -284,7 +284,7 @@
         "competitor_avg_score": 30,
         "gap": 8,
         "gap_direction": "na frente",
-        "evidence": "24h usam WhatsApp massificado (resposta lenta, scripts genéricos). Zenvet tem atendimento pessoal da Loíse + pós-consulta da Nathalia — diferencial já percebido pelos clientes.",
+        "evidence": "24h usam WhatsApp massificado (resposta lenta, scripts genéricos). Zenvet tem atendimento pessoal da Louíse + pós-consulta da Nathalia — diferencial já percebido pelos clientes.",
         "immediate_win": "Sistematizar o diferencial com CRM preserva a vantagem enquanto escala — sem perder o tom pessoal."
       }
     ],
@@ -330,11 +330,11 @@
       },
       {
         "stage": "5. Resposta no WhatsApp",
-        "description": "Loíse responde e inicia qualificação",
+        "description": "Louíse responde e inicia qualificação",
         "current_volume_month": 72,
         "leakage_from_previous_pct": 0,
         "friction_level": "low",
-        "main_issue": "Loíse responde a praticamente 100%. Tempo médio estimado bom. Problema está na qualidade da resposta, não no volume.",
+        "main_issue": "Louíse responde a praticamente 100%. Tempo médio estimado bom. Problema está na qualidade da resposta, não no volume.",
         "leakage_fix": "OK neste estágio. Foco no próximo."
       },
       {
@@ -344,7 +344,7 @@
         "leakage_from_previous_pct": 83.4,
         "friction_level": "critical",
         "main_issue": "Conversão 16,6% vs. benchmark 30-40% setor. Sem script consultivo, sem follow-up de quem não respondeu, sem CRM para recontato programado.",
-        "leakage_fix": "Script consultivo Loíse (Semana 3-4) + CRM Kommo com follow-up D+1 e D+7 para leads frios. Projeção: 25-30% conversão = +10 agendamentos/mês."
+        "leakage_fix": "Script consultivo Louíse (Semana 3-4) + CRM Kommo com follow-up D+1 e D+7 para leads frios. Projeção: 25-30% conversão = +10 agendamentos/mês."
       },
       {
         "stage": "7. Comparecimento à consulta",
@@ -567,7 +567,7 @@
         "Sem script consultivo por tipo de serviço (felinos vs. cães)",
         "Sem follow-up de leads que não respondem",
         "Sem CRM — impossível rastrear funil ou fazer retargeting da base",
-        "Atendimento por 1 pessoa (Loíse) sem redundância"
+        "Atendimento por 1 pessoa (Louíse) sem redundância"
       ],
       "name": "WhatsApp Business",
       "recommendations": [

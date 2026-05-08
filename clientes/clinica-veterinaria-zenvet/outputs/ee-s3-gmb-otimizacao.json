@@ -65,7 +65,7 @@
     "Aceita débito",
     "Estacionamento [E — confirmar com operador se há vaga na fachada da Av. Pascoal Ardito]",
     "Acessível para cadeirantes [E — confirmar acessibilidade física]",
-    "Gerência feminina (Dra. Nathalia · Loíse · Kelly)",
+    "Gerência feminina (Dra. Nathalia · Louíse · Kelly)",
     "Wi-Fi para clientes [E — confirmar se já está disponível na sala de espera]"
   ],
   "services": [
@@ -144,15 +144,15 @@
   "qas": [
     {
       "question": "Vocês são especialistas em gatos de verdade ou atendem qualquer bicho?",
-      "answer": "A Dra. Nathalia tem foco clínico em medicina felina e 70% da nossa base de pacientes ativos é de gatos. Atendemos cães também, com o mesmo cuidado humanizado, mas a clínica foi montada com protocolo cat-friendly: consultas de 40 minutos, baia de internação separada e ambiente desenhado para reduzir estresse de felinos. Se quiser conversar antes de agendar, mande mensagem no WhatsApp (19) 99579-5483 — a Loíse responde em até 30 minutos."
+      "answer": "A Dra. Nathalia tem foco clínico em medicina felina e 70% da nossa base de pacientes ativos é de gatos. Atendemos cães também, com o mesmo cuidado humanizado, mas a clínica foi montada com protocolo cat-friendly: consultas de 40 minutos, baia de internação separada e ambiente desenhado para reduzir estresse de felinos. Se quiser conversar antes de agendar, mande mensagem no WhatsApp (19) 99579-5483 — a Louíse responde em até 30 minutos."
     },
     {
       "question": "Qual o valor da consulta?",
-      "answer": "Para apurar o valor da consulta e de qualquer exame ou procedimento adicional, mande mensagem no WhatsApp (19) 99579-5483 — a Loíse responde em até 30 minutos com o orçamento item a item antes de qualquer início. Você só paga o que aprovou previamente, sem conta surpresa. A consulta com a Dra. Nathalia tem 40 minutos, plano de tratamento por escrito e acompanhamento pós-consulta no WhatsApp em D+1, sem custo extra."
+      "answer": "Para apurar o valor da consulta e de qualquer exame ou procedimento adicional, mande mensagem no WhatsApp (19) 99579-5483 — a Louíse responde em até 30 minutos com o orçamento item a item antes de qualquer início. Você só paga o que aprovou previamente, sem conta surpresa. A consulta com a Dra. Nathalia tem 40 minutos, plano de tratamento por escrito e acompanhamento pós-consulta no WhatsApp em D+1, sem custo extra."
     },
     {
       "question": "Como funciona o agendamento?",
-      "answer": "O agendamento é feito pelo WhatsApp (19) 99579-5483 ou por telefone. A Loíse responde em até 30 minutos, de segunda a sexta, das 8h às 18h. Atendemos por hora marcada — você não fica em fila de espera. Atendemos tutores de Americana, Santa Bárbara d'Oeste e Nova Odessa."
+      "answer": "O agendamento é feito pelo WhatsApp (19) 99579-5483 ou por telefone. A Louíse responde em até 30 minutos, de segunda a sexta, das 8h às 18h. Atendemos por hora marcada — você não fica em fila de espera. Atendemos tutores de Americana, Santa Bárbara d'Oeste e Nova Odessa."
     },
     {
       "question": "Vocês fazem exames sem necessidade só pra cobrar mais?",
@@ -220,7 +220,7 @@
       "status": "pending"
     },
     {
-      "item": "Subir mínimo 10 fotos: capa (Dra. Nathalia atendendo), logo, fachada, sala de espera, consultório felino, consultório geral, equipe, internação cat-friendly, foto da equipe (Nathalia + Loíse + Kelly), bastidores",
+      "item": "Subir mínimo 10 fotos: capa (Dra. Nathalia atendendo), logo, fachada, sala de espera, consultório felino, consultório geral, equipe, internação cat-friendly, foto da equipe (Nathalia + Louíse + Kelly), bastidores",
       "status": "pending",
       "notes": "Briefing.brand.assets_inventory: 29 fotos profissionais já existem. Selecionar e subir as melhores."
     },

@@ -124,6 +124,16 @@ if [ -f "$VERCEL_CFG" ] && command -v vercel >/dev/null 2>&1; then
   if [ -f "$CONSOLIDATED_HTML" ]; then
     cp "$CONSOLIDATED_HTML" "$DEPLOY_DIR/consolidated.html"
   fi
+  # Copia páginas HTML adicionais do diretório raiz do cliente (ex: diretrizes-bia.html)
+  # — exclui portal.html (já virou index.html) e consolidated.html (já copiado acima)
+  for extra_html in "$CLIENT_DIR"/*.html; do
+    [ -f "$extra_html" ] || continue
+    base=$(basename "$extra_html")
+    case "$base" in
+      portal.html|consolidated.html) continue ;;
+      *) cp "$extra_html" "$DEPLOY_DIR/$base" ;;
+    esac
+  done
   # Copia assets (imagens de criativos, logos, etc) — paths relativos no portal dependem disso
   if [ -d "$CLIENT_DIR/assets" ]; then
     cp -R "$CLIENT_DIR/assets" "$DEPLOY_DIR/assets"

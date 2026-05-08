@@ -190,7 +190,7 @@
       "whatsapp_business": true
     },
     "sales_module": {
-      "active_sellers": "1 (Loíse — recepcionista/comercial)",
+      "active_sellers": "1 (Louíse — recepcionista/comercial)",
       "sales_process": "Atendimento reativo via WhatsApp. Qualificação automática inicial: cão ou gato? Domicílio ou clínica?",
       "objections": [
         "Preço vs concorrência",
@@ -199,7 +199,7 @@
       "conversion_rate": "16,6% lead → agendamento / ~100% agendamento → atendimento",
       "sales_cycle": "Imediato (mesmo dia ou próximos dias)",
       "has_scripts": false,
-      "needs": "Treinamento consultivo para Loíse, CRM, script por tipo de serviço, follow-up estruturado"
+      "needs": "Treinamento consultivo para Louíse, CRM, script por tipo de serviço, follow-up estruturado"
     }
   },
   "research": {
@@ -2166,16 +2166,19 @@
         "completed_at": "2026-05-07T20:57:48Z"
       },
       "ee-s5-scripts-sdr": {
-        "status": "pending",
-        "checkpoint": 0,
-        "started_at": null,
-        "completed_at": null
+        "status": "completed",
+        "checkpoint": 1,
+        "version": 2,
+        "started_at": "2026-05-08T11:23:55Z",
+        "completed_at": "2026-05-08T15:31:12Z"
       },
       "ee-s5-sdr-ia-config": {
-        "status": "pending",
-        "checkpoint": 0,
-        "started_at": null,
-        "completed_at": null
+        "status": "completed",
+        "checkpoint": 1,
+        "version": 1,
+        "started_at": "2026-05-08T15:50:21Z",
+        "completed_at": "2026-05-08T15:50:21Z",
+        "platform_adapted": "Kommo IA nativa (substituiu Patagon original)"
       },
       "ee-revisao-semanal": {
         "status": "completed",
@@ -2352,7 +2355,7 @@
       "ts": "2026-04-30T13:30:00Z",
       "skill": "ee-s3-forecast-midia",
       "action": "completed",
-      "note": "Forecast 90d sobre R$ 3.200/mês contratado (Cenário B Realista do diagnóstico). Ticket ponderado R$ 540 (70% felinos × R$ 600 + 30% cães × R$ 400). Saída: 145 leads/mês, CPL R$ 22, ROAS 5,4x mês 3. Acumulado 90d: 80 vendas, R$ 43.200 receita inicial, ROAS médio 4,5x. Pré-requisitos críticos: Pixel/GTM S1, acessos Meta+Google, base 1.186 → Custom Audience S2, Loíse com script consultivo (depende ee-s3-crm-setup). Sheets export pendente (gog CLI não disponível localmente)."
+      "note": "Forecast 90d sobre R$ 3.200/mês contratado (Cenário B Realista do diagnóstico). Ticket ponderado R$ 540 (70% felinos × R$ 600 + 30% cães × R$ 400). Saída: 145 leads/mês, CPL R$ 22, ROAS 5,4x mês 3. Acumulado 90d: 80 vendas, R$ 43.200 receita inicial, ROAS médio 4,5x. Pré-requisitos críticos: Pixel/GTM S1, acessos Meta+Google, base 1.186 → Custom Audience S2, Louíse com script consultivo (depende ee-s3-crm-setup). Sheets export pendente (gog CLI não disponível localmente)."
     },
     {
       "ts": "2026-04-30T13:50:00Z",
@@ -2386,7 +2389,7 @@
       "skill": "ee-s3-crm-setup",
       "action": "marked_completed",
       "version": 1,
-      "note": "Marcado como concluído pelo operador. Configuração do CRM (Kommo) realizada externamente — pipeline + réguas de boas-vindas e nutrição configurados, Loíse com script consultivo. Detalhes da execução não documentados no output desta skill."
+      "note": "Marcado como concluído pelo operador. Configuração do CRM (Kommo) realizada externamente — pipeline + réguas de boas-vindas e nutrição configurados, Louíse com script consultivo. Detalhes da execução não documentados no output desta skill."
     },
     {
       "ts": "2026-05-07T17:46:44Z",
@@ -2407,7 +2410,28 @@
       "skill": "ee-s4-cliente-oculto",
       "action": "completed",
       "version": 1,
-      "note": "Cliente oculto Zenvet executado pela operadora no WhatsApp 19-99579-5483 em 2026-05-07 15:26-15:56 (~30min). Perfil: Camila (33a, SBO, gata Mel 5a com xixi fora da caixa há 2 semanas + anorexia = sintoma sugestivo de FLUTD/cistite). Atendente: Louise (Loíse no briefing). Nota: 5,9/10 REGULAR. C1 Tempo 9, C2 Abordagem 6, C3 Necessidade 3, C4 Conhecimento 7, C5 Preço 5, C6 CTA 7, C7 Follow-up 2 (24h sem retomada). Pontos fortes: 2min de resposta + CTA específico (18:30) + sem desconto na objeção 'caro vs Animed' + comunicou transparência item-a-item. Críticos: 0 captura de nome + 0 reconhecimento de urgência clínica + encerramento passivo no 'vou pensar' + 0 follow-up em 24h. Confirma empiricamente o gargalo Contato→Agendamento (24%) do diagnóstico S4. SDR IA endereça 6 pontos críticos com impacto +R$5,5k/mês."
+      "note": "Cliente oculto Zenvet executado pela operadora no WhatsApp 19-99579-5483 em 2026-05-07 15:26-15:56 (~30min). Perfil: Camila (33a, SBO, gata Mel 5a com xixi fora da caixa há 2 semanas + anorexia = sintoma sugestivo de FLUTD/cistite). Atendente: Louise (Louíse no briefing). Nota: 5,9/10 REGULAR. C1 Tempo 9, C2 Abordagem 6, C3 Necessidade 3, C4 Conhecimento 7, C5 Preço 5, C6 CTA 7, C7 Follow-up 2 (24h sem retomada). Pontos fortes: 2min de resposta + CTA específico (18:30) + sem desconto na objeção 'caro vs Animed' + comunicou transparência item-a-item. Críticos: 0 captura de nome + 0 reconhecimento de urgência clínica + encerramento passivo no 'vou pensar' + 0 follow-up em 24h. Confirma empiricamente o gargalo Contato→Agendamento (24%) do diagnóstico S4. SDR IA endereça 6 pontos críticos com impacto +R$5,5k/mês."
+    },
+    {
+      "ts": "2026-05-08T11:23:55Z",
+      "skill": "ee-s5-scripts-sdr",
+      "action": "completed",
+      "version": 1,
+      "note": "Scripts SDR IA Zenvet — agente Bia (recepcionista digital), tom 4 adjetivos brandbook (Especialista · Humano · Transparente · Próximo). 5 perguntas de qualificação (need + urgência clínica com red flags felinos + trust + identificação obrigatória + agendamento), 6 objeções tratadas (preço vs 24h, exames desnecessários, especialização, estresse, autoridade familiar, ghosting/vou pensar), score 1-5★ com escalonamento clínico imediato pra Dra. Nathalia em red flags (xixi fora da caixa + anorexia, vômito persistente, prostração, sangue). Endereça os 6 pontos críticos do cliente oculto (5,9/10): captura nome da tutora + nome do pet na P4, fechamento ativo no vou pensar com lembrete clínico, acompanhamento automático 1h/24h/3d via Kommo. Louíse permanece como humana, Bia faz handoff natural sem revelar IA. Próximo passo: aprovação Nathalia → ee-s5-sdr-ia-config (Patagon + Kommo)."
+    },
+    {
+      "ts": "2026-05-08T15:31:12Z",
+      "skill": "ee-s5-scripts-sdr",
+      "action": "refined",
+      "version": 2,
+      "note": "v2 — Ajustes pós-decisão da operadora: (1) consulta felinos R$ 140 (valor atual cobrado, confirmado no cliente oculto); (2) Bia agenda APENAS consulta de felinos — para cães, vacinação, castração, atendimento domiciliar, check-up senior, cirurgia e demais serviços, faz handoff direto pra Louíse; (3) novos campos service_scope, qualification_criteria (5 estrelas validadas pela Nathalia), anti_persona_profiles (4 perfis: caçador de preço, emergência única, Dr. Google, fora de região), distribution_target (20/30/30/10/10 sobre base mensal de 72 leads); (4) escalation_rules ganhou regra on_non_consultation_service; (5) human_handoff_message ganhou non_consultation_service_handoff. Renderer do portal ee-s5-scripts-sdr expandido pra mostrar tudo: highlights, key findings, escopo de atendimento, identidade do agente, perguntas com tabela de scoring inline, critérios qualitativos por estrela com definição validada pela Nathalia, sistema de pontos, anti-persona, distribuição alvo, fluxos por score, objeções, escalonamento, follow-ups e handoff messages."
+    },
+    {
+      "ts": "2026-05-08T15:50:21Z",
+      "skill": "ee-s5-sdr-ia-config",
+      "action": "completed",
+      "version": 1,
+      "note": "Configuração da Bia (SDR IA) PLANEJADA para Kommo IA nativa — decisão da operadora 2026-05-08 substituindo opção Patagon original. Output documenta: agente Bia (recepcionista digital) · system prompt apontando pra diretrizes-bia.html · 28 custom fields a criar · 12 estágios de pipeline · 30+ triggers/Salesbot · template de alerta pra Louíse · 5 testes simulados planejados (5★ red flag, 4★ cão, 3★ pesquisador, 1★ caçador, objeção forte) · checklist de 16 itens de configuração com responsáveis e bloqueantes (aprovação Nathalia, placeholders, execução técnica Rafael Corazza). Status: configuração ainda não executada — aguarda (1) aprovação Nathalia sobre scripts e red flags, (2) confirmação dos 4 placeholders pendentes (horário, hospital 24h parceiro, parcelamento, convênios), (3) execução técnica Rafael Corazza, (4) testes em sandbox. Renderer do portal atualizado: Patagon → Kommo IA, botão destacado pras diretrizes operacionais, checklist visual categorizado com status icons (✅⏳❌), painel de bloqueantes pendentes."
     }
   ],
   "page_audit": {

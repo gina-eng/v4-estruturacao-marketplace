@@ -93,7 +93,7 @@
     "Meta Ads com tracking ausente e investimento subescalado — R$424/mês real vs R$800 contratado. [refinado em Semana 2: narrativa invertida de desperdício para subinvestimento escalável]",
     {
       "title": "Conversão lead→agendamento de apenas 16,6%",
-      "description": "72 leads/mês → 12 agendamentos. 60 leads qualificados descartados por mês sem follow-up. Loíse atende reativamente via WhatsApp sem script, sem CRM, sem retorno estruturado.",
+      "description": "72 leads/mês → 12 agendamentos. 60 leads qualificados descartados por mês sem follow-up. Louíse atende reativamente via WhatsApp sem script, sem CRM, sem retorno estruturado.",
       "implication": "Subir de 16,6% para 25% de conversão = +6 agendamentos/mês. Com ticket R$500 = +R$3.000/mês sem aumentar budget de mídia.",
       "severity": "high"
     },
@@ -191,7 +191,7 @@
     },
     {
       "title": "WhatsApp como único canal de conversão sem redundância",
-      "description": "Principal canal de conversão é WhatsApp reativo, operado por uma única pessoa (Loíse) sem script ou CRM. Risco de perda de leads por variação de qualidade de atendimento ou ausência da operadora.",
+      "description": "Principal canal de conversão é WhatsApp reativo, operado por uma única pessoa (Louíse) sem script ou CRM. Risco de perda de leads por variação de qualidade de atendimento ou ausência da operadora.",
       "implication": "Single point of failure no processo comercial. Script consultivo + CRM é proteção operacional urgente.",
       "probability": "medium",
       "impact": "medium"
@@ -272,7 +272,7 @@
         "code": "WT2",
         "title": "Remover single point of failure do funil comercial",
         "combines": "W3 (conversão 16,6% sem script) × T5 (WhatsApp single point of failure)",
-        "strategy": "Script consultivo por ICP (Mariana vs Carlos) + CRM Kommo com tarefas automáticas + Loíse treinada em qualificação 1-5 estrelas + alerta de SLA a cada 30 min. Redundância: plantão reverso se Loíse ausente (Nathalia responde)."
+        "strategy": "Script consultivo por ICP (Mariana vs Carlos) + CRM Kommo com tarefas automáticas + Louíse treinada em qualificação 1-5 estrelas + alerta de SLA a cada 30 min. Redundância: plantão reverso se Louíse ausente (Nathalia responde)."
       }
     ]
   },
@@ -298,7 +298,7 @@
         "Quick wins de comunicação (bio IG, GMB, mensagem ausência WhatsApp)",
         "LP felinos simples no domínio atual",
         "Série de 4 Reels educativos com Nathalia",
-        "Manual de atendimento consultivo para Loíse (sem CRM)"
+        "Manual de atendimento consultivo para Louíse (sem CRM)"
       ]
     },
     "realistic": {
@@ -323,7 +323,7 @@
         "Google Ads reativado flyvet.search-Geral + Performance Max + campanha felinos nova",
         "LP felinos Vercel com tracking nativo",
         "CRM Kommo + régua 486 inativos + régua pós-consulta",
-        "Scripts SDR para Loíse + Nathalia backup"
+        "Scripts SDR para Louíse + Nathalia backup"
       ]
     },
     "aggressive": {
@@ -508,7 +508,7 @@
       }
     },
     {
-      "action": "Treinar Loíse com script consultivo por tipo de serviço (felinos vs. cães) e qualificação adaptada",
+      "action": "Treinar Louíse com script consultivo por tipo de serviço (felinos vs. cães) e qualificação adaptada",
       "swot_basis": "Resolve F3 (conversão 16,6%), alavanca F2 (show rate 100%), mitiga A5 (WhatsApp como single point of failure)",
       "impact": "alto",
       "suggested_timeline": "Semana 3–4",

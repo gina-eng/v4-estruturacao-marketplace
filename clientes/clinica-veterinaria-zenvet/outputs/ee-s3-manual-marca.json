@@ -49,10 +49,10 @@
   "scope": "early-stage",
   "block1_strategic_foundations": {
     "presentation": {
-      "opening_letter": "Para a Dra. Nathalia, Kelly e o time da Zenvet: este manual existe para garantir que cada peça que sai da clínica — um post no Instagram, um cartão de visita, uma resposta da Loíse no WhatsApp, um anúncio no Google — soe e pareça como a Zenvet de verdade. Ele não é decoração: é a régua de execução que sustenta a combinação proprietária da marca (especialização felina + medicina humanizada + transparência + acompanhamento pós-consulta). Quando o time crescer, este manual mantém a coerência. Quando um fornecedor entrar, este manual encurta o briefing. Quando uma decisão criativa estiver em dúvida, este manual responde. — V4 Company, abril/2026.",
+      "opening_letter": "Para a Dra. Nathalia, Kelly e o time da Zenvet: este manual existe para garantir que cada peça que sai da clínica — um post no Instagram, um cartão de visita, uma resposta da Louíse no WhatsApp, um anúncio no Google — soe e pareça como a Zenvet de verdade. Ele não é decoração: é a régua de execução que sustenta a combinação proprietária da marca (especialização felina + medicina humanizada + transparência + acompanhamento pós-consulta). Quando o time crescer, este manual mantém a coerência. Quando um fornecedor entrar, este manual encurta o briefing. Quando uma decisão criativa estiver em dúvida, este manual responde. — V4 Company, abril/2026.",
       "manifesto_short": "Em Americana, somos a clínica para quem trata gato como filho da casa — e quer ser tratada como adulta que decide com informação.",
       "manifesto_narrative": "Tutora de gato em Americana vive um problema invisível: o pet apresenta sinal — para de comer, esconde, vomita — e ela sabe que precisa levar a um veterinário. Mas em qual? O hospital 24h da avenida cobra R$ 70 na consulta e R$ 800 quando ela sai. A clínica do bairro não entende que gato esconde dor por instinto. A última experiência foi de retenção do animal até o pagamento à vista. // A Zenvet existe para um tipo específico de tutor: o que decide com informação. A consulta é com a Dra. Nathalia, pós-graduanda em medicina felina, dura 40 minutos e custa R$ 180-250. Cada exame é justificado, cada procedimento é aprovado item a item antes da execução. No dia seguinte, a Nathalia manda mensagem perguntando como o pet está. // Não é um diferencial isolado: é a combinação. Especialização felina declarada + medicina humanizada + transparência item a item + acompanhamento ativo pós-consulta. Em uma só clínica, em uma só veterinária. // A tutora sai sabendo o que o gato tem, com plano de tratamento que cabe na rotina, sem dúvida sobre o que pagou. Em 30 dias, indica para uma amiga sem ser perguntada. A clínica deixa de ser uma despesa periódica imprevisível e vira parte da rotina familiar.",
-      "navigation_instructions": "Designers e fornecedores de criativo consultam o Bloco 3 (Identidade Visual) e o Bloco 4 (Aplicações). Copywriters e a Loíse no WhatsApp consultam o Bloco 2 (Identidade Verbal). Novos parceiros e o time comercial começam pelo Bloco 1 (Fundamentos). A Dra. Nathalia consulta o Bloco 5 (Governança) sempre que houver dúvida sobre aprovação de peça."
+      "navigation_instructions": "Designers e fornecedores de criativo consultam o Bloco 3 (Identidade Visual) e o Bloco 4 (Aplicações). Copywriters e a Louíse no WhatsApp consultam o Bloco 2 (Identidade Verbal). Novos parceiros e o time comercial começam pelo Bloco 1 (Fundamentos). A Dra. Nathalia consulta o Bloco 5 (Governança) sempre que houver dúvida sobre aprovação de peça."
     },
     "essence": {
       "purpose": "Existimos para que tutoras de gato em Americana parem de aceitar atendimento veterinário genérico — porque cada gato esconde dor por instinto e merece uma profissional que enxergue isso antes que seja tarde, e cada tutora merece decidir com informação, não com susto.",
@@ -180,7 +180,7 @@
         "profiles": [
           {
             "label": "Caçador de preço — 'Consulta R$70'",
-            "redirect": "Loíse responde com valor sem desconto: 'Nossa consulta especialista começa em R$180 — o que inclui é diferente do plano R$70 dos hospitais 24h.'"
+            "redirect": "Louíse responde com valor sem desconto: 'Nossa consulta especialista começa em R$180 — o que inclui é diferente do plano R$70 dos hospitais 24h.'"
           },
           {
             "label": "Emergência única sem vínculo",
@@ -284,8 +284,8 @@
           "adaptation": "Emocional + território proprietário. Headline com mensagem-chave ('Seu gato merece uma veterinária que entende de felinos'). Sub-headline com diferencial."
         },
         {
-          "channel": "WhatsApp (Loíse)",
-          "adaptation": "Consultivo, paciente, resolutivo. Saudação que reforça especialização ('Aqui é a Loíse da Zenvet, clínica especializada em gatos e cães em Americana. Quem é seu pet?'). Resposta em até 30 min no horário comercial."
+          "channel": "WhatsApp (Louíse)",
+          "adaptation": "Consultivo, paciente, resolutivo. Saudação que reforça especialização ('Aqui é a Louíse da Zenvet, clínica especializada em gatos e cães em Americana. Quem é seu pet?'). Resposta em até 30 min no horário comercial."
         },
         {
           "channel": "WhatsApp (Nathalia D+1)",
@@ -968,7 +968,7 @@
     }
   },
   "block4_applications": {
-    "principle": "Toda aplicação documentada aqui tem 2 camadas: técnica (specs exatas) + contextual (mockup mostrando a aplicação em uso real). Manuais que mostram só a camada técnica viram referência de designer; manuais com a camada contextual viram inspiração de toda a empresa — Loíse, fornecedores, parceiros conseguem visualizar a marca 'viva'.",
+    "principle": "Toda aplicação documentada aqui tem 2 camadas: técnica (specs exatas) + contextual (mockup mostrando a aplicação em uso real). Manuais que mostram só a camada técnica viram referência de designer; manuais com a camada contextual viram inspiração de toda a empresa — Louíse, fornecedores, parceiros conseguem visualizar a marca 'viva'.",
     "applications": [
       {
         "category": "stationery",
@@ -1080,13 +1080,13 @@
       {
         "category": "digital_ui",
         "name": "WhatsApp Business — Foto de capa e descrição",
-        "specs": "Foto de capa: 1280×720px. Lockup horizontal centralizado em fundo bege acolhedor com pequena moldura roxa. Descrição: 256 caracteres máximo. Mensagem de saudação automática com tom consultivo (script da Loíse). Mensagem de ausência fora do horário direcionando para hospitais 24h parceiros.",
+        "specs": "Foto de capa: 1280×720px. Lockup horizontal centralizado em fundo bege acolhedor com pequena moldura roxa. Descrição: 256 caracteres máximo. Mensagem de saudação automática com tom consultivo (script da Louíse). Mensagem de ausência fora do horário direcionando para hospitais 24h parceiros.",
         "mockup": {
           "type": "whatsapp_business",
           "description": "Cover banner + caixa de saudação WhatsApp.",
           "data": {
             "cover_message": "Especialista em felinos · Americana",
-            "greeting": "Oi! Aqui é a Loíse da Zenvet, clínica especialista em gatos e cães em Americana. Quem é seu pet? 🐱",
+            "greeting": "Oi! Aqui é a Louíse da Zenvet, clínica especialista em gatos e cães em Americana. Quem é seu pet? 🐱",
             "away": "No momento estamos fechados. Em emergência, recomendamos os hospitais 24h da região. Volta a falar com a gente quando o pet estabilizar — temos hora marcada e a Dra. Nathalia explica tudo direitinho."
           }
         }
@@ -1113,11 +1113,11 @@
     ]
   },
   "block5_governance": {
-    "brand_owner": "Dra. Nathalia Alves (proprietária e veterinária) é a guardiã final da marca. Decisões estratégicas (mudanças de tagline, paleta, posicionamento, novo serviço com sub-marca) passam por ela. Decisões táticas (criação de peças dentro das regras já documentadas, posts de Instagram, respostas no WhatsApp) são delegadas à Loíse (atendimento) e à V4 (executor Rafael Corazza) com checagem por amostragem semanal.",
+    "brand_owner": "Dra. Nathalia Alves (proprietária e veterinária) é a guardiã final da marca. Decisões estratégicas (mudanças de tagline, paleta, posicionamento, novo serviço com sub-marca) passam por ela. Decisões táticas (criação de peças dentro das regras já documentadas, posts de Instagram, respostas no WhatsApp) são delegadas à Louíse (atendimento) e à V4 (executor Rafael Corazza) com checagem por amostragem semanal.",
     "approval_process": [
       {
         "step": "Solicitação interna ou da V4",
-        "responsible": "Loíse / Rafael (V4)",
+        "responsible": "Louíse / Rafael (V4)",
         "estimated_time": "imediato"
       },
       {
@@ -1132,7 +1132,7 @@
       },
       {
         "step": "Publicação",
-        "responsible": "Loíse / Rafael (V4)",
+        "responsible": "Louíse / Rafael (V4)",
         "estimated_time": "imediato após aprovação"
       }
     ],

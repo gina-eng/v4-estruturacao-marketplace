@@ -1,6 +1,6 @@
 {
   "client_name": "Clínica Veterinária Zenvet",
-  "summary": "14 anúncios prontos para Zenvet — 11 Meta Ads (texto + headline + descrição cada) e 3 Google Ads RSA (cada uma com 5 headlines + 3 descriptions = 24 elementos textuais que o Google rotaciona). Cobertura: Topo (esconde-dor / hospital 24h surpresa / pesquisa-antes-de-confiar), Meio (40 min vs 15 min / item-a-item / gato ≠ cachorro), Fundo (consulta R$220 / WhatsApp Loíse 30min / acompanhamento D+1) e Remarketing (você pesquisou no Insta + lembrete suave). Hooks ancorados na quote da Mariana ('gato não é cachorro') e no diagnóstico de criativos S2 (0% retenção 3s — todos os topos abrem com problema, não com produto).",
+  "summary": "14 anúncios prontos para Zenvet — 11 Meta Ads (texto + headline + descrição cada) e 3 Google Ads RSA (cada uma com 5 headlines + 3 descriptions = 24 elementos textuais que o Google rotaciona). Cobertura: Topo (esconde-dor / hospital 24h surpresa / pesquisa-antes-de-confiar), Meio (40 min vs 15 min / item-a-item / gato ≠ cachorro), Fundo (consulta R$220 / WhatsApp Louíse 30min / acompanhamento D+1) e Remarketing (você pesquisou no Insta + lembrete suave). Hooks ancorados na quote da Mariana ('gato não é cachorro') e no diagnóstico de criativos S2 (0% retenção 3s — todos os topos abrem com problema, não com produto).",
   "summary_headline": "14 anúncios prontos: 11 Meta Ads (4 etapas funil) + 3 Google Ads RSA — cada um dentro dos limites de caracteres por plataforma.",
   "summary_highlights": [
     {
@@ -295,8 +295,8 @@
             {
               "type": "text_primary",
               "hook_type": "facilitacao",
-              "text": "Manda mensagem no WhatsApp. A Loíse responde em até 30 min, Seg a Sex de 8h às 18h. Sem bot, sem fila — atendimento de gente.",
-              "headline": "Loíse responde em 30 min.",
+              "text": "Manda mensagem no WhatsApp. A Louíse responde em até 30 min, Seg a Sex de 8h às 18h. Sem bot, sem fila — atendimento de gente.",
+              "headline": "Louíse responde em 30 min.",
               "description": "Sem bot · Sem fila",
               "cta": "Enviar mensagem",
               "char_count": {
@@ -334,7 +334,7 @@
                 "Seg–Sex 8h às 18h"
               ],
               "descriptions": [
-                "Agende no WhatsApp com a Loíse — resposta em até 30 min. Consulta R$220, 40 min com a Dra.",
+                "Agende no WhatsApp com a Louíse — resposta em até 30 min. Consulta R$220, 40 min com a Dra.",
                 "Especialista em felinos · Americana SP. Orçamento item a item, sem conta surpresa. Agende.",
                 "Acompanhamento no WhatsApp em D+1 — sem custo. Atendimento humanizado da Dra. Nathalia."
               ],
@@ -366,7 +366,7 @@
             {
               "type": "text_primary",
               "hook_type": "reconhecimento_continuidade",
-              "text": "Você viu nossa página. Tutora de gato pesquisa antes — a gente entende. Quando quiser, Loíse tá no WhatsApp.",
+              "text": "Você viu nossa página. Tutora de gato pesquisa antes — a gente entende. Quando quiser, Louíse tá no WhatsApp.",
               "headline": "Sem pressa pra decidir.",
               "description": "WhatsApp quando quiser",
               "cta": "Enviar mensagem",
