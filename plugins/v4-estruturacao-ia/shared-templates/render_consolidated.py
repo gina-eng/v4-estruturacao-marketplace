@@ -1119,18 +1119,24 @@ body.consolidated #progress-bar { display: none !important; }
   align-items: start;
 }
 .cs-toc {
-  /* Fixa na viewport — desce junto com o scroll independente do tamanho do conteúdo */
-  position: fixed;
-  top: 20px;
-  width: 260px;
-  /* Alinha com a 1ª coluna do .cs-layout (max-width 1280px centralizado, padding 32px) */
-  left: max(32px, calc((100vw - 1280px) / 2 + 32px));
+  /* Default: dentro do flow do grid (1ª coluna), abaixo do hero. */
+  position: relative;
+  align-self: start;
   max-height: calc(100vh - 40px);
   background: #fff; border: 1px solid rgba(0,0,0,0.08); border-radius: 12px;
   padding: 16px 12px;
   display: flex; flex-direction: column;
   font-size: 13px;
   z-index: 50;
+}
+.cs-toc.cs-toc--fixed {
+  /* Modo fixed: ativado via JS quando o hero rolou pra fora da viewport.
+     Barra "desce junto" com o scroll, sempre visível na mesma posição da tela. */
+  position: fixed;
+  top: 20px;
+  width: 260px;
+  /* Alinha com a 1ª coluna do .cs-layout (max-width 1280px centralizado, padding 32px) */
+  left: max(32px, calc((100vw - 1280px) / 2 + 32px));
 }
 .cs-toc__title {
   font-size: 10px; text-transform: uppercase; letter-spacing: 0.14em;
@@ -1265,6 +1271,9 @@ body.consolidated #progress-bar { display: none !important; }
 }
 
 .cs-main {
+  /* Sempre na 2ª coluna do grid — mesmo quando .cs-toc vira fixed (sai do flow).
+     Sem isso, ao virar fixed, o main colapsava pra 1ª coluna e ficava atrás da barra. */
+  grid-column: 2;
   min-width: 0;
   background: #fff;
   border: 1px solid rgba(0,0,0,0.08);
@@ -2308,6 +2317,20 @@ function DEEP_fallback(d) {
     }
 
     mainEl.innerHTML = parts.join('');
+
+    // ===== Sidebar híbrida: relative dentro do grid quando hero visível,
+    //       fixed na viewport quando hero rolou pra fora =====
+    const heroEl = document.querySelector('.cs-hero');
+    function updateTocFixed(){
+      if (!heroEl || !tocEl) return;
+      const heroBottom = heroEl.getBoundingClientRect().bottom;
+      // Quando o hero saiu (ou está quase saindo) pelo topo, fixa a barra
+      const shouldFix = heroBottom < 20;
+      tocEl.classList.toggle('cs-toc--fixed', shouldFix);
+    }
+    window.addEventListener('scroll', updateTocFixed, { passive: true });
+    window.addEventListener('resize', updateTocFixed, { passive: true });
+    updateTocFixed();
 
     // TOC active state on scroll — apenas links da lista principal (não do dropdown de busca)
     const tocListEl = document.getElementById('cs-toc-list');
