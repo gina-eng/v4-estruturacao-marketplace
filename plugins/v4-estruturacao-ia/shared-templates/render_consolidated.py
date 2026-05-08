@@ -2363,13 +2363,21 @@ function DEEP_fallback(d) {
 
 
 def _extract_portal_assets():
-    """Lê portal.html e extrai o bloco <style> e o script principal (o que contém PORTAL_DATA)."""
+    """Lê portal.html e extrai o bloco <style>, o script principal (PORTAL_DATA) e as tags de favicon."""
     with open(PORTAL_TEMPLATE_PATH, encoding="utf-8") as f:
         portal = f.read()
 
     # Extract CSS
     css_match = re.search(r"<style>(.*?)</style>", portal, re.DOTALL)
     css_block = css_match.group(1) if css_match else ""
+
+    # Extract favicon tags (logo V4 base64) — pega <link rel="icon"> e <link rel="apple-touch-icon">
+    favicon_tags = re.findall(
+        r'<link\s+rel="(?:icon|apple-touch-icon|shortcut icon)"[^>]*>',
+        portal,
+        re.IGNORECASE,
+    )
+    favicon_block = "\n  ".join(favicon_tags)
 
     # Encontra o <script> que contém PORTAL_DATA (ignora o pre-gate script inline de ~13 linhas)
     script_blocks = re.findall(r"<script>(.*?)</script>", portal, re.DOTALL)
@@ -2389,12 +2397,12 @@ def _extract_portal_assets():
         main_script,
     )
 
-    return css_block, main_script
+    return css_block, main_script, favicon_block
 
 
 def build_consolidated_html(client, outputs, ident, generated_at, current_week):
     """Gera consolidated.html herdando CSS + renderers executivos do portal.html (sem aprofundamento)."""
-    portal_css, portal_js = _extract_portal_assets()
+    portal_css, portal_js, favicon_block = _extract_portal_assets()
 
     # Monta PORTAL_DATA como o portal faz
     portal_data = {
@@ -2417,6 +2425,7 @@ def build_consolidated_html(client, outputs, ident, generated_at, current_week):
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Visão Consolidada — {client_name_html}</title>
+  {favicon_block}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
