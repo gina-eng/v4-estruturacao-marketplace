@@ -1111,7 +1111,7 @@ body.consolidated #progress-bar { display: none !important; }
 
 .cs-layout {
   display: grid;
-  grid-template-columns: 240px 1fr;
+  grid-template-columns: 260px 1fr;
   gap: 40px;
   max-width: 1280px;
   margin: 0 auto;
@@ -1121,13 +1121,26 @@ body.consolidated #progress-bar { display: none !important; }
 .cs-toc {
   position: sticky; top: 20px; align-self: start;
   background: #fff; border: 1px solid rgba(0,0,0,0.08); border-radius: 12px;
-  padding: 20px 14px; max-height: calc(100vh - 40px); overflow-y: auto;
+  padding: 16px 12px; max-height: calc(100vh - 40px);
+  display: flex; flex-direction: column;
   font-size: 13px;
+  z-index: 50;
 }
 .cs-toc__title {
   font-size: 10px; text-transform: uppercase; letter-spacing: 0.14em;
-  color: #909090; margin-bottom: 14px; font-weight: 700; padding: 0 8px;
+  color: #909090; margin: 4px 0 10px; font-weight: 700; padding: 0 8px;
 }
+.cs-toc__list {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  padding-right: 2px;
+  /* Custom scrollbar discreta */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0,0,0,0.15) transparent;
+}
+.cs-toc__list::-webkit-scrollbar { width: 6px; }
+.cs-toc__list::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.12); border-radius: 3px; }
+.cs-toc__list::-webkit-scrollbar-thumb:hover { background: rgba(0,0,0,0.22); }
 .cs-toc a {
   display: block; padding: 8px 10px; color: #606060; text-decoration: none;
   border-radius: 6px; border-left: 2px solid transparent; transition: all .15s;
@@ -1135,6 +1148,114 @@ body.consolidated #progress-bar { display: none !important; }
 }
 .cs-toc a:hover, .cs-toc a.active {
   background: rgba(251,46,10,0.08); color: #FB2E0A; border-left-color: #FB2E0A;
+}
+
+/* ===== Search box no topo do sumário ===== */
+.cs-search {
+  position: relative;
+  padding: 0 4px 12px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+.cs-search__input-wrap {
+  position: relative;
+  display: flex; align-items: center;
+}
+.cs-search__icon {
+  position: absolute; left: 10px;
+  width: 14px; height: 14px;
+  color: #909090; pointer-events: none;
+}
+.cs-search__input {
+  width: 100%;
+  padding: 8px 28px 8px 30px;
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 6px;
+  background: #FAFAFA;
+  font-size: 12.5px;
+  font-family: inherit;
+  color: #1E2124;
+  outline: none;
+  transition: all .15s;
+}
+.cs-search__input::placeholder { color: #B0B0B0; }
+.cs-search__input:focus {
+  background: #fff;
+  border-color: #FB2E0A;
+  box-shadow: 0 0 0 3px rgba(251,46,10,0.10);
+}
+.cs-search__clear {
+  position: absolute; right: 6px;
+  width: 18px; height: 18px;
+  border: none; background: transparent;
+  color: #909090; cursor: pointer;
+  font-size: 14px; line-height: 1;
+  display: none;
+  border-radius: 4px;
+}
+.cs-search__clear:hover { color: #FB2E0A; background: rgba(251,46,10,0.08); }
+.cs-search--has-value .cs-search__clear { display: flex; align-items: center; justify-content: center; }
+
+.cs-search__suggest {
+  position: absolute;
+  top: calc(100% - 6px);
+  left: 4px; right: 4px;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.10);
+  max-height: 320px;
+  overflow-y: auto;
+  z-index: 60;
+  display: none;
+  padding: 6px 0;
+}
+.cs-search--open .cs-search__suggest { display: block; }
+.cs-search__group {
+  padding: 8px 12px 4px;
+  font-size: 9.5px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.14em;
+  color: #B0B0B0;
+}
+.cs-search__item {
+  display: block;
+  padding: 8px 14px;
+  font-size: 12.5px;
+  color: #3a3f44;
+  text-decoration: none;
+  cursor: pointer;
+  line-height: 1.4;
+  border-left: 2px solid transparent;
+  transition: all .12s;
+}
+.cs-search__item:hover, .cs-search__item--focused {
+  background: rgba(251,46,10,0.06);
+  color: #FB2E0A;
+  border-left-color: #FB2E0A;
+}
+.cs-search__item-meta {
+  display: block;
+  font-size: 10.5px;
+  color: #909090;
+  margin-top: 2px;
+}
+.cs-search__item:hover .cs-search__item-meta,
+.cs-search__item--focused .cs-search__item-meta {
+  color: rgba(251,46,10,0.7);
+}
+.cs-search__item mark {
+  background: rgba(251,46,10,0.18);
+  color: #FB2E0A;
+  font-weight: 600;
+  padding: 0 1px;
+  border-radius: 2px;
+}
+.cs-search__empty {
+  padding: 14px 14px 12px;
+  font-size: 12px;
+  color: #909090;
+  text-align: center;
+  font-style: italic;
 }
 
 .cs-main {
@@ -1236,6 +1357,7 @@ body.consolidated #progress-bar { display: none !important; }
 @media (max-width: 960px) {
   .cs-layout { grid-template-columns: 1fr; }
   .cs-toc { position: relative; top: 0; max-height: none; }
+  .cs-toc__list { max-height: 240px; }
   .cs-skill { padding: 20px; }
   .cs-hero h1 { font-size: 26px; }
 }
@@ -1972,14 +2094,179 @@ function DEEP_fallback(d) {
       });
     });
 
-    // TOC flat — apenas título de cada seção
+    // TOC flat — apenas título de cada seção + search box com sugestões
     const tocEl = document.getElementById('cs-toc');
     if (tocEl) {
-      let tocHtml = '<div class="cs-toc__title">Sumário</div>';
+      // Mapeamento skill → semana para mostrar contexto na sugestão
+      const skillToWeek = {};
+      activeWeeks.forEach(function(w){
+        w.skills.forEach(function(sk){
+          skillToWeek[sk.id] = { n: w.n, title: w.title };
+        });
+      });
+
+      let tocHtml = ''
+        + '<div class="cs-toc__title">Sumário</div>'
+        + '<div class="cs-search" id="cs-search">'
+        +   '<div class="cs-search__input-wrap">'
+        +     '<svg class="cs-search__icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">'
+        +       '<circle cx="7" cy="7" r="5"/><line x1="11" y1="11" x2="14" y2="14"/>'
+        +     '</svg>'
+        +     '<input type="text" class="cs-search__input" id="cs-search-input" '
+        +       'placeholder="Buscar tópico…" autocomplete="off" spellcheck="false" '
+        +       'aria-label="Buscar tópicos no sumário" />'
+        +     '<button type="button" class="cs-search__clear" id="cs-search-clear" aria-label="Limpar busca">×</button>'
+        +   '</div>'
+        +   '<div class="cs-search__suggest" id="cs-search-suggest" role="listbox"></div>'
+        + '</div>'
+        + '<div class="cs-toc__list" id="cs-toc-list">';
       completedSkills.forEach(function(sk){
         tocHtml += '<a href="#' + sk.id + '">' + CSE(sk.name) + '</a>';
       });
+      tocHtml += '</div>';
       tocEl.innerHTML = tocHtml;
+
+      // ===== Search box: sugestões + navegação =====
+      const searchEl = document.getElementById('cs-search');
+      const inputEl = document.getElementById('cs-search-input');
+      const clearEl = document.getElementById('cs-search-clear');
+      const suggestEl = document.getElementById('cs-search-suggest');
+
+      // Highlight matches no nome da skill
+      function escRe(s){ return s.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&'); }
+      function highlight(text, query){
+        if (!query) return CSE(text);
+        const re = new RegExp('(' + escRe(query) + ')', 'gi');
+        // CSE primeiro, depois substitui — pra evitar que o <mark> vire &lt;mark&gt;
+        const safe = CSE(text);
+        return safe.replace(re, '<mark>$1</mark>');
+      }
+
+      // Filtro: por substring case-insensitive (com normalização de acentos)
+      function norm(s){
+        return String(s||'').normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase();
+      }
+      function filterSuggestions(query){
+        const q = norm(query.trim());
+        if (!q) return completedSkills.slice(0, 30);
+        return completedSkills.filter(function(sk){
+          return norm(sk.name).indexOf(q) !== -1 || norm(sk.id).indexOf(q) !== -1;
+        });
+      }
+
+      let focusedIdx = -1;
+      let currentItems = [];
+
+      function renderSuggestions(query){
+        currentItems = filterSuggestions(query);
+        focusedIdx = currentItems.length > 0 ? 0 : -1;
+        if (currentItems.length === 0) {
+          suggestEl.innerHTML = '<div class="cs-search__empty">Nenhum tópico encontrado</div>';
+          return;
+        }
+        let html = '';
+        const groupLabel = query.trim() ? 'Resultados' : 'Sugestões — todos os tópicos';
+        html += '<div class="cs-search__group">' + groupLabel + ' (' + currentItems.length + ')</div>';
+        currentItems.forEach(function(sk, i){
+          const w = skillToWeek[sk.id];
+          const meta = w ? ('Semana ' + w.n + ' · ' + CSE(w.title)) : '';
+          html += '<a class="cs-search__item' + (i === focusedIdx ? ' cs-search__item--focused' : '') + '" '
+            + 'href="#' + sk.id + '" data-idx="' + i + '" role="option">'
+            +   highlight(sk.name, query.trim())
+            + (meta ? '<span class="cs-search__item-meta">' + meta + '</span>' : '')
+            + '</a>';
+        });
+        suggestEl.innerHTML = html;
+      }
+
+      function openSuggest(){
+        searchEl.classList.add('cs-search--open');
+        renderSuggestions(inputEl.value || '');
+      }
+      function closeSuggest(){
+        searchEl.classList.remove('cs-search--open');
+        focusedIdx = -1;
+      }
+      function navigateTo(skillId){
+        const target = document.getElementById(skillId);
+        if (!target) return;
+        // Update hash sem disparar scroll nativo
+        if (history && history.pushState) {
+          history.pushState(null, '', '#' + skillId);
+        } else {
+          window.location.hash = '#' + skillId;
+        }
+        const top = target.getBoundingClientRect().top + window.scrollY - 12;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+        closeSuggest();
+        inputEl.blur();
+      }
+
+      // Eventos
+      inputEl.addEventListener('focus', openSuggest);
+      inputEl.addEventListener('click', openSuggest);
+      inputEl.addEventListener('input', function(){
+        const v = inputEl.value;
+        searchEl.classList.toggle('cs-search--has-value', v.length > 0);
+        renderSuggestions(v);
+        searchEl.classList.add('cs-search--open');
+      });
+      inputEl.addEventListener('keydown', function(e){
+        if (e.key === 'ArrowDown') {
+          e.preventDefault();
+          if (currentItems.length === 0) return;
+          focusedIdx = (focusedIdx + 1) % currentItems.length;
+          updateFocus();
+        } else if (e.key === 'ArrowUp') {
+          e.preventDefault();
+          if (currentItems.length === 0) return;
+          focusedIdx = (focusedIdx - 1 + currentItems.length) % currentItems.length;
+          updateFocus();
+        } else if (e.key === 'Enter') {
+          e.preventDefault();
+          if (focusedIdx >= 0 && currentItems[focusedIdx]) {
+            navigateTo(currentItems[focusedIdx].id);
+          }
+        } else if (e.key === 'Escape') {
+          e.preventDefault();
+          closeSuggest();
+          inputEl.blur();
+        }
+      });
+      function updateFocus(){
+        const items = suggestEl.querySelectorAll('.cs-search__item');
+        items.forEach(function(it, i){
+          it.classList.toggle('cs-search__item--focused', i === focusedIdx);
+          if (i === focusedIdx) it.scrollIntoView({ block: 'nearest' });
+        });
+      }
+      // Click numa sugestão
+      suggestEl.addEventListener('click', function(e){
+        const a = e.target.closest('.cs-search__item');
+        if (!a) return;
+        e.preventDefault();
+        const idx = parseInt(a.getAttribute('data-idx'), 10);
+        if (currentItems[idx]) navigateTo(currentItems[idx].id);
+      });
+      // Botão limpar
+      clearEl.addEventListener('click', function(){
+        inputEl.value = '';
+        searchEl.classList.remove('cs-search--has-value');
+        renderSuggestions('');
+        inputEl.focus();
+      });
+      // Fecha ao clicar fora
+      document.addEventListener('click', function(e){
+        if (!searchEl.contains(e.target)) closeSuggest();
+      });
+      // Atalho de teclado: "/" foca a busca (estilo GitHub/Linear)
+      document.addEventListener('keydown', function(e){
+        if (e.key === '/' && document.activeElement !== inputEl &&
+            !['INPUT','TEXTAREA','SELECT'].includes(document.activeElement?.tagName)) {
+          e.preventDefault();
+          inputEl.focus();
+        }
+      });
     }
 
     // Main: documento único fluido (sem cards/boxes por entrega)
@@ -2010,8 +2297,9 @@ function DEEP_fallback(d) {
 
     mainEl.innerHTML = parts.join('');
 
-    // TOC active state on scroll
-    const links = tocEl ? tocEl.querySelectorAll('a') : [];
+    // TOC active state on scroll — apenas links da lista principal (não do dropdown de busca)
+    const tocListEl = document.getElementById('cs-toc-list');
+    const links = tocListEl ? tocListEl.querySelectorAll('a') : [];
     const sections = document.querySelectorAll('.cs-skill');
     function updateActive(){
       let active = null;
@@ -2020,7 +2308,16 @@ function DEEP_fallback(d) {
         if (r.top < 120) active = s.id;
       });
       links.forEach(function(l){
-        l.classList.toggle('active', l.getAttribute('href') === '#' + active);
+        const isActive = l.getAttribute('href') === '#' + active;
+        l.classList.toggle('active', isActive);
+        if (isActive && tocListEl) {
+          // Scroll no sumário para manter o item ativo visível
+          const lr = l.getBoundingClientRect();
+          const cr = tocListEl.getBoundingClientRect();
+          if (lr.top < cr.top || lr.bottom > cr.bottom) {
+            l.scrollIntoView({ block: 'nearest' });
+          }
+        }
       });
     }
     window.addEventListener('scroll', updateActive, { passive: true });
