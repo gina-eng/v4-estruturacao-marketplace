@@ -1239,7 +1239,7 @@ body.consolidated #progress-bar { display: none !important; }
   <header class="cs-hero">
     <div class="cs-hero__eyebrow">V4 Company · Estruturação Estratégica</div>
     <h1 id="cs-client-name">Clínica Veterinária Zenvet</h1>
-    <div class="cs-hero__meta">Visão Consolidada · Gerado em 2026-05-08 19:33 UTC · Semana atual: 3</div>
+    <div class="cs-hero__meta">Visão Consolidada · Gerado em 2026-05-08 19:41 UTC · Semana atual: 3</div>
     <div class="cs-hero__note">Este documento reúne tudo que foi produzido para o cliente — todas as entregas em uma só visualização, para entrega e auditabilidade.</div>
   </header>
 
@@ -6434,8 +6434,9 @@ const R = {
   if (d.evolucao_estrategica?.length) {
     h += sc('Evoluções Estratégicas ('+d.evolucao_estrategica.length+')', d.evolucao_estrategica.map(ev =>
       cd(
-        '<span style="font-family:Menlo,monospace;font-size:.75rem;color:var(--accent)">'+E(ev.id||'')+'</span> · '+E(ev.tema||'—'),
-        (ev.hipotese_inicial?.conteudo ? '<p style="font-size:.75rem;margin:.25rem 0"><strong>Hipótese inicial '+(ev.hipotese_inicial.camada?'('+E(ev.hipotese_inicial.camada)+')':'')+':</strong> '+E(ev.hipotese_inicial.conteudo)+'</p>' : '')
+        ev.tema || '—',
+        (ev.id ? '<div style="margin-bottom:.5rem">'+tg(ev.id, 'red')+'</div>' : '')
+        + (ev.hipotese_inicial?.conteudo ? '<p style="font-size:.75rem;margin:.25rem 0"><strong>Hipótese inicial '+(ev.hipotese_inicial.camada?'('+E(ev.hipotese_inicial.camada)+')':'')+':</strong> '+E(ev.hipotese_inicial.conteudo)+'</p>' : '')
         + (ev.evidencia_diagnostico?.conteudo ? '<p style="font-size:.75rem;margin:.25rem 0"><strong>Evidência '+(ev.evidencia_diagnostico.camada?'('+E(ev.evidencia_diagnostico.camada)+')':'')+':</strong> '+E(ev.evidencia_diagnostico.conteudo)+'</p>' : '')
         + (ev.decisao_atual?.conteudo ? '<p style="font-size:.75rem;margin:.25rem 0"><strong>Decisão atual:</strong> '+E(ev.decisao_atual.conteudo)+'</p>' : '')
         + (ev.impacto_estrategico ? '<p style="font-size:.75rem;margin:.5rem 0;color:var(--accent)"><strong>Impacto:</strong> '+E(ev.impacto_estrategico)+'</p>' : '')
@@ -6463,8 +6464,9 @@ const R = {
   if (d.gaps_narrativos?.length) {
     h += sc('Gaps Narrativos ('+d.gaps_narrativos.length+')', d.gaps_narrativos.map(g =>
       cd(
-        '<span style="font-family:Menlo,monospace;font-size:.75rem;color:var(--accent)">'+E(g.id||'')+'</span> · '+E(g.tipo||'gap'),
-        (g.localizacao ? '<p style="font-size:.7rem;color:var(--text-muted);margin:.125rem 0"><strong>Localização:</strong> <code>'+E(g.localizacao)+'</code></p>' : '')
+        g.tipo || 'gap',
+        (g.id ? '<div style="margin-bottom:.5rem">'+tg(g.id, 'yellow')+'</div>' : '')
+        + (g.localizacao ? '<p style="font-size:.7rem;color:var(--text-muted);margin:.125rem 0"><strong>Localização:</strong> <code>'+E(g.localizacao)+'</code></p>' : '')
         + (g.descricao ? '<p style="font-size:.75rem;margin:.25rem 0">'+E(g.descricao)+'</p>' : '')
         + (g.ajuste_proposto ? '<p style="font-size:.75rem;margin:.25rem 0;color:var(--text-secondary);background:rgba(22,163,74,0.06);padding:.5rem .625rem;border-left:3px solid var(--success);border-radius:3px"><strong>Ajuste proposto:</strong> '+E(g.ajuste_proposto)+'</p>' : '')
         + (g.arquivo_afetado ? '<p style="font-size:.6875rem;color:var(--text-muted);margin:.125rem 0"><strong>Arquivo:</strong> <code>'+E(g.arquivo_afetado)+'</code></p>' : '')
@@ -6546,18 +6548,22 @@ const R = {
     let scopeHtml = '';
     if (ss.description) scopeHtml += '<p style="font-size:.8125rem;color:var(--text-muted);margin-bottom:.75rem">'+E(ss.description)+'</p>';
     if (ss.direct_booking?.length) {
-      scopeHtml += '<h4 style="margin:.75rem 0 .5rem;color:var(--text);font-size:.875rem">'+tg('Bia agenda direto','green')+' Agendamento direto</h4>';
+      scopeHtml += '<h4 style="margin:.75rem 0 .5rem;color:var(--text);font-size:.875rem;display:flex;align-items:center;gap:.5rem">'+tg('Bia agenda direto','green')+'<span>Agendamento direto</span></h4>';
       scopeHtml += ss.direct_booking.map(s=>cd(
-        E(s.service)+(s.value?' — '+tg(s.value,'green'):'')+(s.duration?' '+tg(s.duration,'blue'):''),
-        (s.includes?'<p style="font-size:.8125rem"><strong>Inclui:</strong> '+E(s.includes)+'</p>':'')
+        s.service,
+        ((s.value||s.duration)?'<div style="margin-bottom:.5rem;display:flex;gap:.375rem;flex-wrap:wrap">'
+          +(s.value?tg(s.value,'green'):'')
+          +(s.duration?tg(s.duration,'blue'):'')
+          +'</div>':'')
+        +(s.includes?'<p style="font-size:.8125rem"><strong>Inclui:</strong> '+E(s.includes)+'</p>':'')
         +(s.bia_action?'<p style="font-size:.8125rem;color:var(--text-muted)"><strong>Ação da Bia:</strong> '+E(s.bia_action)+'</p>':''),
         'green'
       )).join('');
     }
     if (ss.human_handoff?.length) {
-      scopeHtml += '<h4 style="margin:1rem 0 .5rem;color:var(--text);font-size:.875rem">'+tg('Handoff humano','yellow')+' Direcionamento pra atendimento humano</h4>';
+      scopeHtml += '<h4 style="margin:1rem 0 .5rem;color:var(--text);font-size:.875rem;display:flex;align-items:center;gap:.5rem">'+tg('Handoff humano','yellow')+'<span>Direcionamento pra atendimento humano</span></h4>';
       scopeHtml += ss.human_handoff.map(s=>cd(
-        E(s.service),
+        s.service,
         (s.bia_action?'<p style="font-size:.8125rem"><strong>Ação da Bia:</strong> '+E(s.bia_action)+'</p>':'')
         +(s.reason?'<p style="font-size:.8125rem;color:var(--text-muted)"><strong>Razão:</strong> '+E(s.reason)+'</p>':''),
         'yellow'
@@ -6704,15 +6710,16 @@ const R = {
   if (d.objection_responses?.length) {
     h += sc('Respostas a Objeções', d.objection_responses.map(o=>{
       const typeColor = {price:'red',trust:'yellow',need:'blue',authority:'gray',urgency:'green',competitor:'red'};
-      let header = E(o.objection);
-      if (o.type) header = tg(o.type, typeColor[o.type]||'gray')+' '+header;
-      let body = chatBubbles([
+      const typeLabel = {price:'Preço',trust:'Confiança',need:'Necessidade',authority:'Autoridade',urgency:'Urgência',competitor:'Concorrente'};
+      let body = '';
+      if (o.type) body += '<div style="margin-bottom:.5rem">'+tg(typeLabel[o.type]||o.type, typeColor[o.type]||'gray')+'</div>';
+      body += chatBubbles([
         {from:'lead',name:'Lead',text:o.objection},
         {from:'sdr',name:d.agent_name||'Bia',text:o.response}
       ]);
-      if (o.escalation_response) body += '<p style="font-size:.75rem;color:var(--text-muted);margin:.25rem 0"><strong>Se insistir:</strong></p>'
-        + chatBubbles([{from:'sdr',name:'Bia (2ª resposta)',text:o.escalation_response}]);
-      return cd(header, body);
+      if (o.escalation_response) body += '<p style="font-size:.75rem;color:var(--text-muted);margin:.5rem 0 .25rem"><strong>Se insistir:</strong></p>'
+        + chatBubbles([{from:'sdr',name:(d.agent_name||'Bia')+' (2ª resposta)',text:o.escalation_response}]);
+      return cd(o.objection, body);
     }).join(''));
   }
 
@@ -6725,12 +6732,17 @@ const R = {
   // Regras de escalonamento
   if (d.escalation_rules) {
     const er = d.escalation_rules;
+    const buildRule = (badge, badgeColor, title, text, variant) => cd(
+      title,
+      '<div style="margin-bottom:.5rem">'+tg(badge, badgeColor)+'</div>'+'<p style="font-size:.8125rem;line-height:1.55;margin:0">'+E(text)+'</p>',
+      variant
+    );
     const ruleCards = [];
-    if (er.on_clinical_red_flag) ruleCards.push(cd(tg('RED FLAG','red')+' Sinais clínicos felinos urgentes', E(er.on_clinical_red_flag), 'red'));
-    if (er.on_frustration) ruleCards.push(cd(tg('IRRITAÇÃO','red')+' Lead irritado', E(er.on_frustration), 'red'));
-    if (er.on_human_request) ruleCards.push(cd(tg('PEDIU HUMANO','yellow')+' Lead solicita atendimento humano', E(er.on_human_request), 'yellow'));
-    if (er.after_2_insistences) ruleCards.push(cd(tg('2× INSISTÊNCIA','yellow')+' Lead repete a mesma objeção 2 vezes', E(er.after_2_insistences), 'yellow'));
-    if (er.on_non_consultation_service) ruleCards.push(cd(tg('OUTRO SERVIÇO','blue')+' Pediu serviço que não é consulta felinos', E(er.on_non_consultation_service), 'blue'));
+    if (er.on_clinical_red_flag) ruleCards.push(buildRule('RED FLAG','red','Sinais clínicos felinos urgentes',er.on_clinical_red_flag,'red'));
+    if (er.on_frustration) ruleCards.push(buildRule('IRRITAÇÃO','red','Lead irritado',er.on_frustration,'red'));
+    if (er.on_human_request) ruleCards.push(buildRule('PEDIU HUMANO','yellow','Lead solicita atendimento humano',er.on_human_request,'yellow'));
+    if (er.after_2_insistences) ruleCards.push(buildRule('2× INSISTÊNCIA','yellow','Lead repete a mesma objeção 2 vezes',er.after_2_insistences,'yellow'));
+    if (er.on_non_consultation_service) ruleCards.push(buildRule('OUTRO SERVIÇO','blue','Pediu serviço que não é consulta felinos',er.on_non_consultation_service,'blue'));
     h += sc('Regras de Escalonamento', ruleCards.join(''));
   }
 
