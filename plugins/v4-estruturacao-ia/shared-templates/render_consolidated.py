@@ -1119,9 +1119,15 @@ body.consolidated #progress-bar { display: none !important; }
   align-items: start;
 }
 .cs-toc {
-  position: sticky; top: 20px; align-self: start;
+  /* Fixa na viewport — desce junto com o scroll independente do tamanho do conteúdo */
+  position: fixed;
+  top: 20px;
+  width: 260px;
+  /* Alinha com a 1ª coluna do .cs-layout (max-width 1280px centralizado, padding 32px) */
+  left: max(32px, calc((100vw - 1280px) / 2 + 32px));
+  max-height: calc(100vh - 40px);
   background: #fff; border: 1px solid rgba(0,0,0,0.08); border-radius: 12px;
-  padding: 16px 12px; max-height: calc(100vh - 40px);
+  padding: 16px 12px;
   display: flex; flex-direction: column;
   font-size: 13px;
   z-index: 50;
@@ -1356,7 +1362,13 @@ body.consolidated #progress-bar { display: none !important; }
 
 @media (max-width: 960px) {
   .cs-layout { grid-template-columns: 1fr; }
-  .cs-toc { position: relative; top: 0; max-height: none; }
+  .cs-toc {
+    position: relative;
+    top: 0;
+    left: auto;
+    width: auto;
+    max-height: none;
+  }
   .cs-toc__list { max-height: 240px; }
   .cs-skill { padding: 20px; }
   .cs-hero h1 { font-size: 26px; }
