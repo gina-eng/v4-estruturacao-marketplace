@@ -1,0 +1,341 @@
+{
+  "client_name": "Bombachas Farroupilha",
+  "skill": "ee-s1-diagnostico-maturidade",
+  "version": 2,
+  "generated_at": "2026-05-14T00:00:00Z",
+  "data_source": "mixed",
+  "summary": "Score geral 20/100 (Crítico, limite superior). Bombachas Farroupilha opera com canal digital praticamente inexistente — 99% da receita depende de 1 representante comercial físico. Porém, a LP recém-publicada (https://bombachasfarroupilha.com.br/) é melhor do que o briefing sugeria: já segmenta os 3 públicos B2B declarados, trata 5 objeções no FAQ, tem 4 diferenciais expostos e CTAs WhatsApp em múltiplos pontos. GTM-M7WTSW9C e Google Ads tag AW-17962419023 já estão instalados — falta GA4, Pixel Meta, eventos de conversão e campanhas reais.",
+  "summary_headline": "Maturidade digital Farroupilha 20/100 (Crítico) — canal digital inexistente, mas a LP B2B segmentada e a tag de Google Ads já instalada formam uma fundação melhor que a esperada.",
+  "summary_highlights": [
+    {
+      "category": "maturidade",
+      "label": "Score geral",
+      "value": "20/100",
+      "subtext": "Crítico — fundação técnica salva 4 pilares zerados",
+      "tone": "red"
+    },
+    {
+      "category": "competicao",
+      "label": "Benchmark setor",
+      "value": "~32",
+      "subtext": "B2B/têxtil regional — gap de -12 pts",
+      "tone": "yellow"
+    },
+    {
+      "category": "risco",
+      "label": "Concentração comercial",
+      "value": "99%",
+      "subtext": "Receita depende de 1 representante físico",
+      "tone": "red"
+    },
+    {
+      "category": "janela",
+      "label": "Janela demográfica",
+      "value": "5-6 anos",
+      "subtext": "Tempo até base atual de lojistas sair do mercado",
+      "tone": "red"
+    },
+    {
+      "category": "oportunidade",
+      "label": "LP B2B segmentada",
+      "value": "3 públicos",
+      "subtext": "Lojistas/Reps + CTGs/Invernadas endereçados na LP",
+      "tone": "green"
+    },
+    {
+      "category": "oportunidade",
+      "label": "Tag Google Ads pronta",
+      "value": "AW-17962419023",
+      "subtext": "Tag de remarketing já instalada — pronta para campanha sem retrabalho",
+      "tone": "green"
+    }
+  ],
+  "summary_key_findings": [
+    {
+      "category": "ameaca",
+      "text": "Dependência absoluta de 1 representante comercial cujos lojistas estão envelhecendo — sem canal digital ativo, a sucessão da carteira em 5-6 anos é existencial."
+    },
+    {
+      "category": "ameaca",
+      "text": "Pico de receita concentrado em jul-set (período farroupilha); com zero mídia paga, a marca não captura demanda fora do círculo do representante nem nas janelas de alta intenção sazonal."
+    },
+    {
+      "category": "vantagem",
+      "text": "LP recém-publicada já entrega o básico de CRO: proposta clara na primeira dobra, segmentação por público B2B, 4 diferenciais expostos, FAQ tratando 5 objeções e CTAs WhatsApp consistentes — fundação acima do esperado para o estágio digital da empresa."
+    },
+    {
+      "category": "vantagem",
+      "text": "Diferencial de produto sólido (Bombacha de Favo artesanal, prazo de 35 dias vs meses do mercado, pedido mínimo de 15 peças, parceria direta com a fábrica) — narrativa B2B competitiva e já presente na LP."
+    },
+    {
+      "category": "contexto",
+      "text": "Google Ads tag (AW-17962419023) já instalada na LP, mas origem desconhecida — pendente confirmar com Loreni se foi a V4, o desenvolvedor da LP ou outra agência. Acesso à conta Google Ads/Analytics ainda não enviado pelo cliente."
+    },
+    {
+      "category": "acao",
+      "text": "Como Meta nunca foi usado, não há atalho — qualquer estratégia de aquisição digital exige criar conta Meta Business + Pixel + criativos do zero. Google parte com vantagem (tag já no site), mas depende do cliente liberar o acesso."
+    }
+  ],
+  "overall_score": 20,
+  "overall_classification": "critical",
+  "pillar_scores": [
+    {
+      "pillar": "midia_paga",
+      "score": 8,
+      "classification": "critical",
+      "highlight": "Investimento R$ 0/mês. Meta nunca rodou (sem conta). Google Ads tag (AW-17962419023) já instalada na LP mas sem campanha — acesso à conta ainda pendente do cliente.",
+      "estimated": true,
+      "details": {
+        "strengths": [
+          "Google Ads tag (AW-17962419023) ativa na LP — pixel de remarketing já capturando visitantes mesmo sem campanha.",
+          "GTM-M7WTSW9C instalado — base técnica completa para receber Pixel Meta sem fricção."
+        ],
+        "weaknesses": [
+          "Zero plataformas de mídia ativa (Meta, Google, TikTok, LinkedIn).",
+          "Meta Ads nunca foi usado — não há conta Business Manager, pixel ou histórico.",
+          "Acesso à conta Google Ads ainda não foi enviado pelo cliente — bloqueia qualquer setup ou auditoria.",
+          "Origem da Google Ads tag desconhecida — pode ter sido configurada pelo dev da LP sem que o cliente saiba (a confirmar com Loreni).",
+          "Sem budget alocado para teste mínimo."
+        ],
+        "metrics": {
+          "investimento_mensal": "R$ 0",
+          "plataformas_ativas": 0,
+          "gtm_instalado": true,
+          "google_ads_tag": "AW-17962419023",
+          "pixel_meta": false,
+          "ga4_detectado": false,
+          "acesso_google_ads": "pendente_cliente"
+        }
+      }
+    },
+    {
+      "pillar": "criativos",
+      "score": 25,
+      "classification": "low",
+      "highlight": "Instagram orgânico ativo (@farroupilha_bombachas) e fotos próprias de boa qualidade na LP (Bombacha de Favo, kits invernada, linha completa). Repertório utilizável para anúncio, mas sem produção pensada para mídia paga.",
+      "estimated": true,
+      "details": {
+        "strengths": [
+          "Fotos próprias do produto na LP — não há uso de banco de imagens genérico.",
+          "Carrossel com 5 imagens adicionais de produto mostra repertório visual mínimo viável.",
+          "Produto é fotogênico (pilchas com identidade cultural forte, Bombacha de Favo com acabamento artesanal).",
+          "Produção orgânica regular no Instagram amplia o pool de referências."
+        ],
+        "weaknesses": [
+          "Zero criativos pensados para anúncio (não há volume, variedade de formatos nem A/B).",
+          "Sem identidade visual codificada (manual de marca, paleta, tipografia) — cada peça é improvisada.",
+          "Sem framework de copy (hook, benefício, prova social, CTA).",
+          "Sem produção de vídeo curto para Reels/Shorts — formato dominante em moda no segmento.",
+          "Erro de produção literal no código da LP: \"cole o link aqui\" deixado no preload do background mobile — sinaliza ausência de QA do desenvolvedor."
+        ],
+        "metrics": {
+          "criativos_ativos_em_anuncios": 0,
+          "instagram_organico_ativo": true,
+          "fotos_proprias_na_lp": true
+        }
+      }
+    },
+    {
+      "pillar": "cro",
+      "score": 38,
+      "classification": "low",
+      "highlight": "LP single-page com proposta de valor clara, segmentação B2B (lojistas/representantes vs CTGs/invernadas), 4 diferenciais, FAQ de 5 objeções e CTAs WhatsApp consistentes. Falta GA4, eventos de conversão, prova social estruturada e formulário.",
+      "estimated": true,
+      "details": {
+        "strengths": [
+          "Proposta de valor clara na primeira dobra: produto + diferenciais (pedido mínimo 15 peças, prazo 35 dias) + público.",
+          "Segmentação por público B2B explícita: blocos separados \"Para representantes e lojistas\" e \"Para CTGs e invernadas\".",
+          "4 diferenciais bem expostos (Prazo, Pedido pequeno, Acabamento Premium, Parceria Direta) com ícones.",
+          "FAQ tratando 5 objeções relevantes (pedido mínimo, prazo, tecidos/cores, vestido de prenda, pagamento).",
+          "CTAs WhatsApp em múltiplos pontos com mensagem pré-preenchida (\"Olá, vim pelo site e gostaria de um orçamento\").",
+          "HTTPS configurado.",
+          "LiteSpeed Cache + WebP otimizado — velocidade boa.",
+          "Mobile-first com viewport correto e versão mobile dedicada do hero.",
+          "GTM-M7WTSW9C e Google Ads tag (AW-17962419023) instalados — fundação técnica de tracking presente."
+        ],
+        "weaknesses": [
+          "Sem GA4 detectado (apenas tag de Google Ads) — sem fonte canônica de métricas de comportamento.",
+          "Eventos de conversão não configurados via GTM — clique no WhatsApp não é rastreado como conversão.",
+          "Zero prova social estruturada (sem depoimentos com nome+foto+resultado, sem cases, sem logos de lojistas).",
+          "Sem formulário — 100% das conversões caem no wa.me sem rastreamento de origem (lead pode ser de orgânico, direto, indicação — impossível distinguir).",
+          "Single-page sem páginas internas (sem /produtos, /sobre, /contato, /lojistas) — limita SEO e segmentação por intenção.",
+          "Sem heatmap, gravação de sessão ou histórico para basear otimizações.",
+          "Sem schema markup de produto/empresa.",
+          "Erro de produção: preload de imagem mobile contém literal \"cole o link aqui https://...\" — sinaliza falta de QA do desenvolvedor.",
+          "Footer minimalista (sem endereço físico, CNPJ, telefone fixo) — fragiliza confiança B2B."
+        ],
+        "metrics": {
+          "lp_ativa": true,
+          "https": true,
+          "gtm_instalado": true,
+          "google_ads_tag_instalada": true,
+          "ga4_configurado": false,
+          "eventos_conversao_rastreados": false,
+          "formulario_proprio": false,
+          "prova_social_estruturada": false,
+          "taxa_conversao_atual": null
+        }
+      }
+    },
+    {
+      "pillar": "crm",
+      "score": 5,
+      "classification": "critical",
+      "highlight": "Sem CRM. Operação 99% offline via 1 representante comercial — leads e clientes vivem no WhatsApp/agenda dele, sem visibilidade nem sucessão. Risco de continuidade do negócio.",
+      "estimated": true,
+      "details": {
+        "strengths": [
+          "Existe relação direta e personalizada com a base atual de lojistas (operada pelo representante)."
+        ],
+        "weaknesses": [
+          "Nenhuma ferramenta de CRM (HubSpot, RD, Kommo, Pipedrive ou similar).",
+          "Carteira de clientes não está digitalizada nem estruturada em pipeline.",
+          "Sem automação de follow-up, sem régua de reativação, sem nurturing.",
+          "Sem métricas: não se sabe quantos leads/mês entram, taxa de conversão por etapa, LTV, ticket médio por canal.",
+          "Risco de sucessão: se o representante sair, a carteira sai com ele — concentração de risco crítica.",
+          "Lead da LP cai direto no WhatsApp da Loreni (+55 54 9615-0025) sem etiqueta de origem nem etapa."
+        ],
+        "metrics": {
+          "crm_ferramenta": null,
+          "leads_mes_rastreados": null,
+          "pipeline_etapas": 0,
+          "automacoes_ativas": 0
+        }
+      }
+    },
+    {
+      "pillar": "seo",
+      "score": 18,
+      "classification": "critical",
+      "highlight": "Sem GMB. LP single-page sem blog nem páginas internas. WordPress garante canonical e sitemap-ready, mas autoridade praticamente zero — provável ranqueamento apenas para a própria marca.",
+      "estimated": true,
+      "details": {
+        "strengths": [
+          "Domínio próprio (bombachasfarroupilha.com.br) com HTTPS.",
+          "WordPress entrega canonical, sitemap-ready e robots configuráveis sem esforço extra.",
+          "GTM facilita configurar Search Console no futuro."
+        ],
+        "weaknesses": [
+          "Sem Google Meu Negócio (GMB) — perda de visibilidade local em Ciríaco/RS e em microrregiões com público gaúcho (incluindo MT, foco de expansão).",
+          "Single-page sem blog, sem cluster de conteúdo, sem páginas-categoria por linha (Bombacha de Favo, pilchas infantis, kits invernada).",
+          "Sem schema markup de produto/empresa.",
+          "Domínio recém-criado (uploads de abril/2026) — autoridade praticamente zero.",
+          "Sem estratégia de keywords para termos de intenção comercial (\"comprar bombacha\", \"fábrica bombachas\", \"pilcha CTG\", \"bombacha de favo atacado\").",
+          "Search Console não configurado (pendente acesso Google)."
+        ],
+        "metrics": {
+          "gmb_ativo": false,
+          "blog_ativo": false,
+          "paginas_indexadas": "1 (LP)",
+          "search_console_configurado": false,
+          "canonical_correto": true
+        }
+      }
+    }
+  ],
+  "executive_summary": "Bombachas Farroupilha entra na V4 com 20/100 de maturidade digital — score crítico, mas com uma diferença importante em relação à maioria dos clientes nessa faixa: o digital aqui não está destruindo valor, ele simplesmente não foi construído. Não há campanhas mal calibradas para corrigir, pixel mal instalado para reconfigurar, nem CRM bagunçado para limpar. Há, isso sim, uma LP recém-publicada que entrega o básico do CRO acima do esperado (proposta clara, segmentação B2B explícita, FAQ com 5 objeções, CTAs WhatsApp em pontos relevantes) e duas tags de tracking já plugadas — GTM-M7WTSW9C e Google Ads AW-17962419023. A receita anual de ~R$ 1MM é sustentada 99% por um único representante comercial físico cujos lojistas, segundo a própria Loreni, devem sair do mercado em 5-6 anos. Essa é a urgência real, não o ROAS trimestral.\n\nOs dois maiores gaps que travam crescimento agora são (1) ausência total de campanhas de mídia paga — Meta nunca foi usado (sem conta Business Manager, sem pixel, sem histórico), e Google tem a tag instalada mas a conta ainda não foi compartilhada com a V4, o que bloqueia qualquer auditoria ou setup; e (2) CRM em 5/100 — mesmo com a LP captando leads via WhatsApp, eles caem direto no celular da Loreni sem etiqueta de origem, sem pipeline, sem follow-up estruturado, repetindo digitalmente a concentração de risco que já existe no offline. Some-se a isso a ausência de GA4 (vejo gtag de Ads mas não G-XXXXX) e o fato de cliques no wa.me não serem rastreados como eventos — qualquer aquisição que acontecer hoje é invisível.\n\nOs dois pontos fortes que precisam ser aproveitados são (1) a fundação de CRO já entregue pela LP — proposta de valor, segmentação por público e diferenciais estão bem estruturados, permitindo que o investimento em mídia futura aterrisse em uma página que vende, não em uma genérica; e (2) o diferencial de produto, genuíno e competitivo no nicho — Bombacha de Favo artesanal, prazo de 35 dias contra meses dos concorrentes, pedido mínimo de 15 peças (acessível para lojista pequeno), linha completa do recém-nascido ao adulto e parceria direta com fábrica. O contrato é pontual (R$ 12.364, sem recorrência), então toda priorização do diagnóstico precisa assumir que a execução pós-Estruturação fica com o cliente — sem time interno de marketing — ou exige contratação separada. Isso muda o que faz sentido recomendar.",
+  "priorities": [
+    {
+      "rank": 1,
+      "action": "Destravar acesso à conta Google Ads/Analytics da Loreni (pendente envio pelo cliente) e investigar a origem da tag AW-17962419023 já instalada — confirmar se foi a V4, o dev da LP ou um terceiro. Sem esse acesso, qualquer auditoria/setup de mídia trava.",
+      "rationale": "É o bloqueador #1. A tag está plugada e capturando visitantes, mas sem acesso à conta não dá pra ver se há campanhas pausadas, públicos formados, ou pixels mal configurados. Custo: 1 mensagem objetiva à Loreni com o passo-a-passo de convite (Google Ads → Ferramentas → Acesso).",
+      "effort": "low",
+      "pillar": "midia_paga",
+      "dependencies": ["Loreni enviar o convite"]
+    },
+    {
+      "rank": 2,
+      "action": "Conectar Meta Business Manager + Google Ads ao V4MOS (workspace 5b3a7a61) — mesmo sem campanhas ativas, isso prepara a infraestrutura para as skills S2 (diagnóstico-mídia, diagnóstico-criativos, diagnóstico-cro) puxarem dados quando o cliente investir. Como Meta nunca foi usado, criar a conta do zero também é parte desse passo.",
+      "rationale": "Desbloqueia toda a Semana 2 de diagnósticos detalhados. Investimento de tempo do cliente: ~45 min para criar Meta Business + autorizar acessos.",
+      "effort": "low",
+      "pillar": "midia_paga",
+      "dependencies": ["Priority #1 resolvido"]
+    },
+    {
+      "rank": 3,
+      "action": "Definir ICP claro na call de kickoff com Loreni — escolher 1 dos 3 públicos B2B (lojistas, representantes, CTGs/invernadas) como foco prioritário para os 6 meses pós-Estruturação. A LP já segmenta os 3, mas sem priorização a verba futura se dispersa.",
+      "rationale": "Sem ICP definido, o diagnóstico comercial S4 (escopo contratado) e a auditoria de comunicação rodam sobre hipóteses. Hoje o briefing tem best_customers: null e persona: null.",
+      "effort": "low",
+      "pillar": "crm",
+      "dependencies": ["call kickoff com Loreni e Everton"]
+    },
+    {
+      "rank": 4,
+      "action": "Instalar GA4 + Pixel Meta via GTM-M7WTSW9C já presente; configurar eventos de conversão essenciais (PageView, ClickWhatsApp com captura de origem, ScrollDepth, ViewFAQ). Aproveitar para corrigir o erro de produção \"cole o link aqui\" no preload mobile.",
+      "rationale": "GA4 ausente é o gap mais barato de fechar com maior retorno — sem ele, nem o orgânico atual é rastreável. ClickWhatsApp como evento permite mensurar quantos leads a LP gera, hoje invisível. Custo técnico baixo (GTM já configurado), valor altíssimo para tudo que vem depois.",
+      "effort": "low",
+      "pillar": "cro",
+      "dependencies": ["Acesso de admin ao GTM-M7WTSW9C e ao WordPress"]
+    },
+    {
+      "rank": 5,
+      "action": "Estruturar CRM mínimo viável (Kommo free ou planilha estruturada) e digitalizar a carteira atual do representante. Definir pipeline B2B com etapas (lead → cotação → produção → pagamento → entrega) e etiquetar leads do WhatsApp com origem (LP, Instagram, indicação, representante).",
+      "rationale": "Mitiga o risco existencial #1 (concentração de 99% em 1 representante). Sem essa estrutura, qualquer captação digital futura recria o problema offline. Fora do escopo contratado — recomendação para o cliente executar internamente ou contratar pontualmente.",
+      "effort": "medium",
+      "pillar": "crm",
+      "dependencies": ["Persona/ICP definido (skill ee-s1-persona-icp)"]
+    },
+    {
+      "rank": 6,
+      "action": "Criar e verificar Google Meu Negócio (GMB) para a fábrica em Ciríaco/RS, com fotos do produto e categoria \"Fábrica de roupas\". Adicionar dados de footer na LP (endereço, CNPJ, telefone fixo) para reforçar confiança B2B.",
+      "rationale": "Custo zero, ganho imediato em buscas locais e regionais e em sinalização de empresa real (importante em B2B). GMB é a base SEO local mais ausente e mais acionável agora.",
+      "effort": "low",
+      "pillar": "seo",
+      "dependencies": []
+    }
+  ],
+  "sector_benchmark": {
+    "sector": "Indústria têxtil B2B / Moda tradicionalista regional",
+    "sector_average": 32,
+    "comparison": "significantly_below",
+    "pillar_comparison": [
+      {
+        "pillar": "midia_paga",
+        "client_score": 8,
+        "sector_average": 35,
+        "gap": -27,
+        "position": "critical_gap"
+      },
+      {
+        "pillar": "criativos",
+        "client_score": 25,
+        "sector_average": 32,
+        "gap": -7,
+        "position": "below"
+      },
+      {
+        "pillar": "cro",
+        "client_score": 38,
+        "sector_average": 35,
+        "gap": 3,
+        "position": "above"
+      },
+      {
+        "pillar": "crm",
+        "client_score": 5,
+        "sector_average": 28,
+        "gap": -23,
+        "position": "critical_gap"
+      },
+      {
+        "pillar": "seo",
+        "client_score": 18,
+        "sector_average": 38,
+        "gap": -20,
+        "position": "critical_gap"
+      }
+    ],
+    "key_insight": "Bombachas Farroupilha opera 12 pontos abaixo da média do setor (B2B/têxtil regional, ~32). Os 3 gaps críticos são Mídia Paga (-27), CRM (-23) e SEO (-20). Notável: CRO está marginalmente ACIMA da média (+3) graças à LP B2B segmentada — único pilar onde o cliente não começa em desvantagem. O diferencial competitivo de produto está sustentando o negócio sozinho, mas com data de validade clara: 5-6 anos até a base atual de lojistas envelhecer."
+  },
+  "key_insight": {
+    "headline": "A LP já vende — falta tudo que conecta o visitante a ela e o lead que sai dela.",
+    "context": "Em 90% dos clientes que chegam com score crítico, o problema é desfazer dívida técnica acumulada (pixel mal instalado, conta de Ads bagunçada, LP genérica, CRM com dados sujos). Em Farroupilha o quadro é diferente: a LP recém-publicada já entrega segmentação B2B, proposta clara e FAQ relevante; a fundação técnica de tracking (GTM + Google Ads tag) está instalada; o diferencial de produto é genuíno. O que falta é o resto da máquina: ninguém para mandar visitante pra LP (mídia zero), ninguém para rastrear quem clicou no WhatsApp (eventos ausentes), ninguém para receber o lead com pipeline (CRM zero). É construir um sistema em volta de uma peça que já funciona.",
+    "numbered_reasons": [
+      "(1) CRO está marginalmente acima da média do setor (+3 pts) graças à LP — quando mídia paga começar, o tráfego cai em uma página que vende, não em uma genérica que precisará ser refeita.",
+      "(2) Google Ads tag (AW-17962419023) e GTM já instalados: setup de Pixel Meta + GA4 + eventos de conversão custa <2h. Primeiros 90 dias de campanha já entregam dados limpos para lookalike e retargeting.",
+      "(3) CRM em 5/100 é o gargalo de sucessão: sem ele, qualquer mídia paga futura vai jogar leads no WhatsApp do mesmo representante atual — o mesmo modelo que está com data de validade demográfica."
+    ],
+    "discussion_anchor": "Loreni e Everton precisam validar a leitura: a Estruturação V4 entrega o plano completo (S1 → S4), mas a execução pós-contrato (criar Meta Business, rodar campanhas, montar CRM, criar GMB) precisa de comprometimento interno ou contratação de operação. Sem isso, o diagnóstico vira diagnóstico de gaveta — e o cronômetro demográfico continua correndo."
+  },
+  "honesty_alert": "Score 20/100 com 3 pilares em crítico, contrato pontual sem recorrência (R$ 12.364), cliente sem time de marketing interno e acesso à conta Google ainda não compartilhado. O risco real desta Estruturação é o diagnóstico ser aprovado, arquivado e nada ser executado depois — não por falta de qualidade do plano, mas por falta de mão para executar. Recomendação franca: durante a apresentação final (semana 5), abordar abertamente com Loreni qual será a operação responsável pela execução pós-contrato (V4 em proposta recorrente futura, agência local, freelancer, ou contratação interna) e calibrar o plano para o cenário real. Sem isso, o ROI da Estruturação tende a zero — independentemente da qualidade dos entregáveis."
+}

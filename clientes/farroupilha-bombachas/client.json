@@ -1,0 +1,382 @@
+{
+  "meta": {
+    "name": "Bombachas Farroupilha",
+    "razao_social": "Tapparo Bombachas",
+    "slug": "farroupilha-bombachas",
+    "workspace_id": "5b3a7a61-645d-4734-97bf-c41b2f1431cd",
+    "created_at": "2026-05-12",
+    "modulo_vendas": true,
+    "modulo_vendas_escopo": [
+      "ee-s4-diagnostico-comercial",
+      "ee-s4-cliente-oculto"
+    ]
+  },
+  "briefing": {
+    "identification": {
+      "name": "Bombachas Farroupilha",
+      "razao_social": "Tapparo Bombachas",
+      "contact_name": "Loreni",
+      "contact_role": "Sócia (co-decisora com Everton)",
+      "contact_financial": null,
+      "segment": "Indústria Têxtil — Moda Tradicionalista Gaúcha (Pilchas/Bombachas)",
+      "annual_revenue": "~R$ 1.000.000,00",
+      "monthly_revenue_avg": "~R$ 90.000,00",
+      "monthly_revenue_note": "Forte sazonalidade — pico julho a setembro (período farroupilha)",
+      "monthly_revenue_goal": null,
+      "annual_revenue_goal": null,
+      "years_in_market": "~15 anos (fundada em 2011)",
+      "location": "Ciríaco, RS",
+      "coverage_cities": null,
+      "website": "https://bombachasfarroupilha.com.br/",
+      "website_type": "Landing page (WordPress+Elementor, single-page com GTM-M7WTSW9C)",
+      "instagram": "@farroupilha_bombachas",
+      "whatsapp": "+55 54 9615-0025",
+      "email": "tapparobombachas@gmail.com",
+      "gmb": null,
+      "contract_value": "R$ 12.364,00 (pontual, sem recorrência)",
+      "contract_start": "2026-05-11",
+      "contract_paid": "2026-05-11",
+      "v4_team": {
+        "closer": "Carlos Badu",
+        "diagnostico": "Gina (gina@v4company.com)",
+        "executor": null
+      },
+      "address": null,
+      "links": {
+        "oportunidade_mktlab": "https://mktlab.app/crm/opportunities/79e9209e-bfc2-41b1-9cac-90197e922390",
+        "contrato": "https://assinador.somosb4.com.br/document/key/WJBVLWSZ5ZS7GB2UNPTD/sign?ticket=4351c15a-6a08-4ed5-9118-5cbb07ceba00",
+        "fps": "https://docs.google.com/document/d/1Wbo5ejBKkIq0tSm5Vpke0AWoX4GpwZjXolrQ8pwfJMg/edit?tab=t.tyakenz2fmze",
+        "whatsapp_group": "https://chat.whatsapp.com/J2YN6lX50esCFBrww39dv7"
+      }
+    },
+    "product": {
+      "main_product": "Bombachas tradicionais gaúchas, com especialidade na Bombacha de Favo (carro-chefe — produção técnico-manual). Linha completa de pilchas masculinas e femininas do recém-nascido ao adulto. Pilchas completas para CTGs/invernadas (bombacha + colete + camisa). Também produz saia de prenda com regulagem.",
+      "ticket": null,
+      "billing_model": "por pedido (B2B)",
+      "sales_cycle": "Produção: 35 dias. Ciclo comercial total: a confirmar.",
+      "active_customers": null,
+      "most_profitable": null,
+      "growth_potential": "Expansão geográfica via digital — mercados onde há público gaúcho mas não há representante físico (Mato Grosso prioritário). Captação de lojistas/CTGs/representantes de gerações mais novas para suceder a base atual.",
+      "mix_atual": null,
+      "services": [
+        "Bombacha de Favo (carro-chefe artesanal)",
+        "Pilchas para invernadas (kit bombacha + colete + camisa)",
+        "Linha completa (recém-nascido ao adulto, masculino e feminino)",
+        "Saia de prenda com regulagem"
+      ],
+      "pedido_minimo": "15 peças",
+      "prazo_producao": "35 dias"
+    },
+    "icp": {
+      "best_customers": null,
+      "not_customers": null,
+      "current_profile": "Lojistas com idade avançada atendidos por 1 único representante comercial terceirizado (concentração de risco extrema — 99% do faturamento).",
+      "desired_profile": "Lojistas/representantes mais jovens, CTGs e invernadas organizados, e mercado gaúcho fora do RS (MT prioritário).",
+      "persona": null,
+      "problems_before": null,
+      "results_after": null,
+      "churn_reasons": null,
+      "publicos_b2b_declarados": [
+        "Lojistas (revenda)",
+        "Representantes comerciais",
+        "CTGs / Invernadas (uso próprio do grupo)"
+      ]
+    },
+    "competition": {
+      "competitors": null,
+      "real_differential": "Prazo curto (35 dias vs meses do mercado), pedidos pequenos (a partir de 15 peças, sem exigir estoque grande do lojista), acabamento manual na Bombacha de Favo, parceria direta com fábrica.",
+      "why_choose_us": null,
+      "agencia_concorrente_no_processo_venda": "Cliente estava cotando em paralelo com agência de Passo Fundo — fechou com V4."
+    },
+    "brand": {
+      "adjectives": null,
+      "voice_tone": null,
+      "admired_brands": null,
+      "current_colors": null,
+      "has_logo": true,
+      "restrictions": null
+    },
+    "digital_situation": {
+      "paid_traffic": false,
+      "platforms": [],
+      "monthly_investment": "R$ 0",
+      "current_results": null,
+      "crm": null,
+      "lead_sources": "1 representante comercial físico (~99%), Instagram orgânico, indicações",
+      "conversion_rate": null,
+      "biggest_pain": "Dependência absoluta de 1 único representante comercial cujos lojistas estão envelhecendo. Público atual deve sair do mercado em 5-6 anos. Sem captação digital. Marketing inexistente.",
+      "canais_atuais": [
+        "Representante comercial físico",
+        "Instagram orgânico",
+        "LP recém-criada"
+      ],
+      "gtm_installed": "GTM-M7WTSW9C"
+    },
+    "accesses": {
+      "meta_business": false,
+      "google_ads": false,
+      "google_analytics": false,
+      "google_search_console": false,
+      "instagram_admin": false,
+      "website_admin": false,
+      "crm": false,
+      "gmb": false,
+      "whatsapp_business": false
+    },
+    "sales_module": {
+      "escopo_contratado": [
+        "diagnostico-comercial",
+        "cliente-oculto"
+      ],
+      "active_sellers": "1 representante comercial terceirizado",
+      "sales_process": null,
+      "objections": null,
+      "conversion_rate": null,
+      "sales_cycle": "Produção 35 dias. Ciclo comercial total a mapear.",
+      "has_scripts": false,
+      "contato_financeiro": null
+    }
+  },
+  "research": {
+    "fetched_at": "2026-05-12",
+    "site_content": "Capturada em base-de-conhecimento/2026-05-12-landing-page-conteudo.md",
+    "instagram": null,
+    "competitors": null,
+    "market": null,
+    "reputation": null,
+    "note": "Pesquisa automática profunda não foi executada na criação do cliente. Será feita dentro das skills da semana 2 (pesquisa-mercado, posicionamento)."
+  },
+  "connectors": {
+    "fetched_at": "2026-05-12T17:39:36Z",
+    "period": {
+      "start": "2026-02-11T00:00:00Z",
+      "end": "2026-05-12T23:59:59Z"
+    },
+    "google_ads": {
+      "total_campaigns": 0,
+      "total_cost": 0,
+      "total_clicks": 0,
+      "total_impressions": 0,
+      "total_conversions": 0,
+      "avg_cpa": null,
+      "avg_ctr": 0,
+      "campaigns": [],
+      "monthly_evolution": [],
+      "day_of_week": [
+        {
+          "day": "Seg",
+          "clicks": 0,
+          "impressions": 0,
+          "cost": 0,
+          "conversions": 0,
+          "pct": 0.0,
+          "ctr": 0
+        },
+        {
+          "day": "Ter",
+          "clicks": 0,
+          "impressions": 0,
+          "cost": 0,
+          "conversions": 0,
+          "pct": 0.0,
+          "ctr": 0
+        },
+        {
+          "day": "Qua",
+          "clicks": 0,
+          "impressions": 0,
+          "cost": 0,
+          "conversions": 0,
+          "pct": 0.0,
+          "ctr": 0
+        },
+        {
+          "day": "Qui",
+          "clicks": 0,
+          "impressions": 0,
+          "cost": 0,
+          "conversions": 0,
+          "pct": 0.0,
+          "ctr": 0
+        },
+        {
+          "day": "Sex",
+          "clicks": 0,
+          "impressions": 0,
+          "cost": 0,
+          "conversions": 0,
+          "pct": 0.0,
+          "ctr": 0
+        },
+        {
+          "day": "Sáb",
+          "clicks": 0,
+          "impressions": 0,
+          "cost": 0,
+          "conversions": 0,
+          "pct": 0.0,
+          "ctr": 0
+        },
+        {
+          "day": "Dom",
+          "clicks": 0,
+          "impressions": 0,
+          "cost": 0,
+          "conversions": 0,
+          "pct": 0.0,
+          "ctr": 0
+        }
+      ],
+      "gender_breakdown": [],
+      "top_keywords": []
+    },
+    "facebook_ads": {
+      "total_campaigns": 0,
+      "total_ads": 0,
+      "total_creatives": 0,
+      "total_spend": 0,
+      "total_impressions": 0,
+      "total_clicks": 0,
+      "total_reach": 0,
+      "avg_cpm": 0,
+      "avg_ctr": 0,
+      "campaigns": [],
+      "creatives": [],
+      "monthly_evolution": []
+    }
+  },
+  "progress": {
+    "current_week": 1,
+    "skills": {
+      "ee-s1-diagnostico-maturidade": {
+        "status": "completed",
+        "checkpoint": 1,
+        "version": 2,
+        "started_at": "2026-05-14T00:00:00Z",
+        "completed_at": "2026-05-14T00:00:00Z"
+      },
+      "ee-s1-swot": {
+        "status": "pending",
+        "checkpoint": 0,
+        "started_at": null,
+        "completed_at": null
+      },
+      "ee-s1-persona-icp": {
+        "status": "pending",
+        "checkpoint": 0,
+        "started_at": null,
+        "completed_at": null
+      },
+      "ee-s1-auditoria-comunicacao": {
+        "status": "pending",
+        "checkpoint": 0,
+        "started_at": null,
+        "completed_at": null
+      },
+      "ee-s2-pesquisa-mercado": {
+        "status": "pending",
+        "checkpoint": 0,
+        "started_at": null,
+        "completed_at": null
+      },
+      "ee-s2-posicionamento": {
+        "status": "pending",
+        "checkpoint": 0,
+        "started_at": null,
+        "completed_at": null
+      },
+      "ee-s2-diagnostico-midia": {
+        "status": "pending",
+        "checkpoint": 0,
+        "started_at": null,
+        "completed_at": null
+      },
+      "ee-s2-diagnostico-criativos": {
+        "status": "pending",
+        "checkpoint": 0,
+        "started_at": null,
+        "completed_at": null
+      },
+      "ee-s2-diagnostico-cro": {
+        "status": "pending",
+        "checkpoint": 0,
+        "started_at": null,
+        "completed_at": null
+      },
+      "ee-s3-identidade-visual": {
+        "status": "pending",
+        "checkpoint": 0,
+        "started_at": null,
+        "completed_at": null
+      },
+      "ee-s3-brandbook": {
+        "status": "pending",
+        "checkpoint": 0,
+        "started_at": null,
+        "completed_at": null
+      },
+      "ee-s3-landing-page": {
+        "status": "pending",
+        "checkpoint": 0,
+        "started_at": null,
+        "completed_at": null
+      },
+      "ee-s3-copy-anuncios": {
+        "status": "pending",
+        "checkpoint": 0,
+        "started_at": null,
+        "completed_at": null
+      },
+      "ee-s3-criativos-anuncios": {
+        "status": "pending",
+        "checkpoint": 0,
+        "started_at": null,
+        "completed_at": null
+      },
+      "ee-s3-crm-setup": {
+        "status": "pending",
+        "checkpoint": 0,
+        "started_at": null,
+        "completed_at": null
+      },
+      "ee-s3-forecast-midia": {
+        "status": "pending",
+        "checkpoint": 0,
+        "started_at": null,
+        "completed_at": null
+      },
+      "ee-s3-gmb-otimizacao": {
+        "status": "pending",
+        "checkpoint": 0,
+        "started_at": null,
+        "completed_at": null
+      },
+      "ee-s4-diagnostico-comercial": {
+        "status": "pending",
+        "checkpoint": 0,
+        "started_at": null,
+        "completed_at": null
+      },
+      "ee-s4-cliente-oculto": {
+        "status": "pending",
+        "checkpoint": 0,
+        "started_at": null,
+        "completed_at": null
+      }
+    }
+  },
+  "history": [
+    {
+      "ts": "2026-05-12T00:00:00Z",
+      "skill": "ee-novo-cliente",
+      "checkpoint": 0,
+      "decision": "Cliente cadastrado. FPS+call de vendas+LP salvas como base de conhecimento. Briefing parcialmente pré-preenchido a partir da FPS. Lacunas marcadas para Kick-Off."
+    },
+    {
+      "ts": "2026-05-14T00:00:00Z",
+      "skill": "ee-s1-diagnostico-maturidade",
+      "checkpoint": 1,
+      "decision": "Diagnóstico aprovado em v2 após análise da LP real (https://bombachasfarroupilha.com.br/). Score 20/100 (Crítico, limite superior). 4 pilares em crítico (Mídia 8, Criativos 25, CRM 5, SEO 18); CRO 38 — marginalmente acima do benchmark setor graças à LP B2B segmentada com proposta clara, 5 objeções no FAQ e CTAs WhatsApp. Achados-chave: Google Ads tag (AW-17962419023) e GTM já instalados, mas Meta nunca rodou e acesso à conta Google ainda pendente do cliente. honesty_alert sobre execução pós-contrato mantido. 3 afirmações marcadas como suposições a confirmar quando o acesso Google chegar (Google nunca rodou, GA4 ausente, origem da AW tag)."
+    }
+  ]
+}
