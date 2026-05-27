@@ -198,3 +198,29 @@ O validador `scripts/validate_output.py` roda junto do `render_portal.sh` e avis
 - `gray` — desativado/aspiracional/ausente
 
 Usar tons consistentemente: nunca pintar ameaça de verde ou vantagem de vermelho para "chamar atenção". O tom é semântico.
+
+---
+
+## Apresentação progressiva (apresentacao.html)
+
+O `render_portal.sh` gera 3 entregáveis em cada execução:
+1. `portal.html` — painel operacional do cliente
+2. `consolidated.html`/`consolidated.md` — visão narrativa end-to-end
+3. **`apresentacao.html`** — slide deck V4 navegável (← → · F para fullscreen)
+
+A apresentação cresce automaticamente conforme as skills S1/S2 são concluídas:
+- A partir da **primeira skill de S1 completa** (geralmente `ee-s1-diagnostico-maturidade`), o deck já existe com capa + pauta + slide de maturidade + fechamento.
+- Cada nova skill completa adiciona um ou mais slides na ordem canônica (Maturidade → SWOT → Persona → Auditoria → Mercado → Posicionamento → Mídia → Orgânico → CRO).
+- Skills sem output ainda → slides pulados silenciosamente, sem placeholder.
+
+### Campos consumidos pelo deck
+
+Os builders puxam principalmente:
+- `summary_headline` — usado em vários cards de "Leitura V4"
+- `summary_highlights` — KPIs em cards (Maturidade, Onde estamos)
+- `key_insight.headline` — destaque no rodapé de slides analíticos
+- Campos específicos da skill (e.g. `pillar_scores`, `tows_matrix`, `tam_sam_som`, `competitors`, `budget_reallocation_scenarios`, `client_account`, `competitor_accounts`, `competitor_patterns_missing`)
+
+**Implicação prática**: respeitar este `PADRAO-OUTPUT.md` ao escrever o JSON da skill garante que o slide correspondente saia bem-formado sem trabalho extra. Headlines genéricos ("análise concluída") aparecem feios no deck.
+
+Implementação: `plugins/v4-estruturacao-ia/shared-templates/render_apresentacao.py`.

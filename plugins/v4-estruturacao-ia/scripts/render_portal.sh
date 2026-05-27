@@ -115,6 +115,17 @@ if [ -f "$CONSOLIDATED_SCRIPT" ]; then
   fi
 fi
 
+# Gera/atualiza apresentacao.html (slide deck progressivo — cresce conforme skills S1/S2 completam)
+APRESENTACAO_SCRIPT="$SCRIPT_DIR/../shared-templates/render_apresentacao.py"
+APRESENTACAO_HTML="$CLIENT_DIR/apresentacao.html"
+if [ -f "$APRESENTACAO_SCRIPT" ]; then
+  if python3 "$APRESENTACAO_SCRIPT" "$CLIENT_DIR" >/dev/null 2>&1; then
+    echo "✓ Apresentação atualizada: $APRESENTACAO_HTML"
+  else
+    echo "⚠ Falha ao gerar apresentação (seguindo sem atualizar)" >&2
+  fi
+fi
+
 # Deploy para Vercel se existir vercel-project.json no diretório do cliente
 VERCEL_CFG="$CLIENT_DIR/vercel-project.json"
 if [ -f "$VERCEL_CFG" ] && command -v vercel >/dev/null 2>&1; then

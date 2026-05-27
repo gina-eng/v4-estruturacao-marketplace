@@ -109,6 +109,15 @@ Antes de iniciar uma skill, verifique `dependency_graph.json`. Se a skill depend
 - Landing Page → HTML deployado na Vercel
 - Scripts SDR → Markdown (configurado no Patagon)
 
+## Apresentação progressiva (sempre)
+
+A partir da primeira skill de S1 completa (em geral `ee-s1-diagnostico-maturidade`), o `render_portal.sh` gera/atualiza automaticamente `clientes/{cliente}/apresentacao.html` — slide deck V4 navegável (← → para navegar, F para fullscreen).
+
+- O deck inclui capa, pauta, slides por skill completada e fechamento.
+- Skills sem output ainda → slides pulados silenciosamente.
+- A cada nova skill aprovada e salva, o renderer roda junto do portal e o deck cresce. Operador NÃO precisa pedir — é parte do fluxo.
+- Implementação: `plugins/v4-estruturacao-ia/shared-templates/render_apresentacao.py` (builders por skill).
+
 ## Regras críticas
 
 - NUNCA gere output genérico. Todo output deve mencionar o cliente pelo nome e usar dados reais.
