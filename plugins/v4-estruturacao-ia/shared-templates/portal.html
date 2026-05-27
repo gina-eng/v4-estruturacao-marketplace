@@ -3291,9 +3291,9 @@ const R = {
       gaPaused = tb(['Campanha','CPA Histórico','Conversões','Nota'],
         ga.paused_campaigns_opportunity.map(c=>[
           E(c.name),
-          tg('R$'+c.cpa.toFixed(2),'green'),
-          N(c.conversions),
-          '<span style="font-size:.75rem;color:var(--text-muted)">'+E(c.note)+'</span>'
+          c.cpa!=null ? tg('R$'+c.cpa.toFixed(2),'green') : tg('—','gray'),
+          N(c.conversions||0),
+          '<span style="font-size:.75rem;color:var(--text-muted)">'+E(c.note||'')+'</span>'
         ]));
     }
 
@@ -6703,10 +6703,14 @@ function init() {
   const progress = data.progress || {};
   const outputs = data.outputs || {};
   const hasSales = client.modulo_vendas !== false;
+  const escopoVendas = Array.isArray(client.modulo_vendas_escopo) ? client.modulo_vendas_escopo : null;
 
   document.title = 'Portal V4 | ' + (client.name || 'Cliente') + ' | EE AI Powered';
 
-  const activeWeeks = WEEKS.filter(w => !w.sales || hasSales);
+  const activeWeeks = WEEKS
+    .map(w => (w.sales && escopoVendas) ? { ...w, skills: w.skills.filter(s => escopoVendas.includes(s.id)) } : w)
+    .map(w => ({ ...w, skills: w.skills.filter(s => (progress.skills?.[s.id]?.status) !== 'skipped') }))
+    .filter(w => (!w.sales || hasSales) && w.skills.length > 0);
 
   requestAnimationFrame(() => {
     PRES.build(activeWeeks, progress, outputs);
@@ -6716,6 +6720,7 @@ function init() {
 
 function renderSkill(skill, progress, outputs) {
   const st = progress.skills?.[skill.id]?.status || 'pending';
+  if (st === 'skipped') return '';
   const data = outputs[skill.id];
 
   const dots = { completed: 'done', in_progress: 'wip', pending: 'wait' };
@@ -6767,7 +6772,8 @@ const PRES = {
     const badges = { completed: ['done','Concluído'], in_progress: ['wip','Em andamento'], pending: ['wait','Pendente'] };
 
     // ── Slide 0: Resumo Executivo (único slide scrollável) ──
-    const allSkills = weeks.flatMap(w => w.skills);
+    const allSkills = weeks.flatMap(w => w.skills)
+      .filter(s => (progress.skills?.[s.id]?.status) !== 'skipped');
     const completedCount = allSkills.filter(s => (progress.skills?.[s.id]?.status) === 'completed').length;
     const totalCount = allSkills.length;
     const pctTotal = totalCount > 0 ? Math.round(completedCount / totalCount * 100) : 0;

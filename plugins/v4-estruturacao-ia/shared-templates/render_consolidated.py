@@ -2152,12 +2152,15 @@ function DEEP_fallback(d) {
     const progress = data.progress || {};
     const outputs = data.outputs || {};
     const hasSales = client.modulo_vendas !== false;
+    const escopoVendas = Array.isArray(client.modulo_vendas_escopo) ? client.modulo_vendas_escopo : null;
 
     document.title = 'Visão Consolidada — ' + (client.name || 'Cliente');
     const hN = document.getElementById('cs-client-name');
     if (hN) hN.textContent = client.name || 'Cliente';
 
-    const activeWeeks = WEEKS.filter(function(w){ return !w.sales || hasSales; });
+    const activeWeeks = WEEKS
+      .map(function(w){ return (w.sales && escopoVendas) ? Object.assign({}, w, { skills: w.skills.filter(function(s){ return escopoVendas.indexOf(s.id) !== -1; }) }) : w; })
+      .filter(function(w){ return (!w.sales || hasSales) && w.skills.length > 0; });
 
     // Lista flat de skills completadas (ignora pendentes no documento consolidado)
     const completedSkills = [];

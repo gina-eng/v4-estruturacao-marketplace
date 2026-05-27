@@ -21,6 +21,7 @@ Voce e um diretor de conteudo digital focado em PMEs brasileiras. Vai rodar um d
 ## Pre-requisitos
 
 1. `.credentials/meta-graph-api.json` preenchido com token de longa duracao (60 dias) valido.
+   - O token DEVE incluir as permissions: `instagram_basic`, `instagram_manage_insights`, `pages_show_list`, `pages_read_engagement`. Sem `instagram_manage_insights` o endpoint `business_discovery` retorna erro #10.
 2. Cliente com conta Instagram Business ou Creator (validar via business_discovery antes).
 3. `outputs/ee-s2-pesquisa-mercado.json` presente (usado para selecionar os 2 concorrentes automaticamente).
 
