@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estruturação IA — Dashboard Geral</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', system-ui, sans-serif; background: #0a0a0a; color: #e5e2e1; padding: 2rem; }
+  h1 { font-size: 1.5rem; margin-bottom: 1.5rem; color: #fff; }
+  .client-card { background: #1a1a1a; border: 1px solid #333; border-radius: 8px; padding: 1.5rem; margin-bottom: 1rem; }
+  .client-name { font-size: 1.2rem; font-weight: 700; color: #fff; }
+  .client-week { color: #888; font-size: 0.9rem; margin-top: 0.25rem; }
+  .progress-bar { height: 6px; background: #333; border-radius: 3px; margin: 0.75rem 0; overflow: hidden; }
+  .progress-fill { height: 100%; background: #FB2E0A; border-radius: 3px; transition: width 0.3s; }
+  .stats { display: flex; gap: 1rem; font-size: 0.8rem; color: #aaa; }
+</style>
+</head>
+<body>
+<h1>ESTRUTURAÇÃO IA — CLIENTES ATIVOS</h1>
+<div id="clients"></div>
+<script>
+const clients = [{
+  "name": "Clínica Veterinária Zenvet",
+  "slug": "clinica-veterinaria-zenvet",
+  "current_week": 3,
+  "skills": {
+    "ee-s1-diagnostico-maturidade": {
+      "status": "completed",
+      "checkpoint": 1,
+      "started_at": "2026-04-16",
+      "completed_at": "2026-05-08T18:18:15Z",
+      "version": 1
+    },
+    "ee-s1-swot": {
+      "status": "completed",
+      "checkpoint": 1,
+      "started_at": "2026-04-18",
+      "completed_at": "2026-05-08T18:18:15Z",
+      "version": 3
+    },
+    "ee-s1-persona-icp": {
+      "status": "completed",
+      "checkpoint": 0,
+      "started_at": null,
+      "completed_at": "2026-05-08T18:18:15Z",
+      "version": 4
+    },
+    "ee-s1-auditoria-comunicacao": {
+      "status": "completed",
+      "checkpoint": 1,
+      "started_at": "2026-04-18",
+      "completed_at": "2026-05-08T18:18:15Z",
+      "version": 2
+    },
+    "ee-s2-pesquisa-mercado": {
+      "status": "completed",
+      "checkpoint": 1,
+      "started_at": "2026-04-20",
+      "completed_at": "2026-05-08T18:18:15Z",
+      "version": 5
+    },
+    "ee-s2-posicionamento": {
+      "status": "completed",
+      "checkpoint": 1,
+      "started_at": "2026-04-20",
+      "completed_at": "2026-05-08T18:18:15Z",
+      "version": 3
+    },
+    "ee-s2-diagnostico-midia": {
+      "status": "completed",
+      "checkpoint": 1,
+      "started_at": "2026-04-18",
+      "completed_at": "2026-05-08T18:18:15Z",
+      "version": 3
+    },
+    "ee-s2-diagnostico-criativos": {
+      "status": "completed",
+      "checkpoint": 0,
+      "started_at": "2026-04-22T02:42:00.268295+00:00",
+      "completed_at": "2026-04-22T02:42:00.268295+00:00",
+      "version": 1
+    },
+    "ee-s2-diagnostico-organico-ig": {
+      "status": "completed",
+      "checkpoint": 1,
+      "started_at": "2026-04-21",
+      "completed_at": "2026-04-21T20:10:00+00:00",
+      "version": 1
+    },
+    "ee-s2-diagnostico-cro": {
+      "status": "completed",
+      "checkpoint": 0,
+      "started_at": null,
+      "completed_at": "2026-04-21T18:39:46.704257+00:00",
+      "version": 2
+    },
+    "ee-s3-identidade-visual": {
+      "status": "completed",
+      "checkpoint": 0,
+      "started_at": "2026-04-28T00:00:00Z",
+      "completed_at": "2026-04-28T00:00:00Z",
+      "version": 1,
+      "superseded_by": "ee-s3-manual-marca",
+      "superseded_at": "2026-04-28T15:00:00Z"
+    },
+    "ee-s3-brandbook": {
+      "status": "completed",
+      "checkpoint": 0,
+      "started_at": "2026-04-28T00:00:00Z",
+      "completed_at": "2026-05-08T18:18:15Z",
+      "version": 2,
+      "superseded_by": "ee-s3-manual-marca",
+      "superseded_at": "2026-04-28T15:00:00Z"
+    },
+    "ee-s3-landing-page": {
+      "status": "completed",
+      "checkpoint": 0,
+      "started_at": "2026-04-29T17:00:00Z",
+      "completed_at": "2026-05-08T18:18:15Z",
+      "version": 3
+    },
+    "ee-s3-copy-anuncios": {
+      "status": "completed",
+      "version": 2,
+      "started_at": "2026-04-29T20:02:26.166797Z",
+      "completed_at": "2026-05-08T18:18:15Z"
+    },
+    "ee-s3-criativos-anuncios": {
+      "status": "completed",
+      "version": 1,
+      "started_at": "2026-04-29T20:11:47.011481Z",
+      "completed_at": "2026-04-29T20:11:47.011481Z"
+    },
+    "ee-s3-crm-setup": {
+      "status": "completed",
+      "checkpoint": 1,
+      "version": 1,
+      "started_at": "2026-04-30T14:50:00Z",
+      "completed_at": "2026-04-30T14:50:00Z"
+    },
+    "ee-s3-forecast-midia": {
+      "status": "completed",
+      "checkpoint": 1,
+      "version": 5,
+      "started_at": "2026-04-30T13:30:00Z",
+      "completed_at": "2026-05-08T18:18:15Z"
+    },
+    "ee-s3-gmb-otimizacao": {
+      "status": "completed",
+      "checkpoint": 0,
+      "started_at": "2026-04-30T13:49:44.009568Z",
+      "completed_at": "2026-05-08T18:18:15Z",
+      "version": 2
+    },
+    "ee-s4-diagnostico-comercial": {
+      "status": "completed",
+      "checkpoint": 1,
+      "version": 3,
+      "started_at": "2026-05-07T17:46:44Z",
+      "completed_at": "2026-05-08T18:18:15Z"
+    },
+    "ee-s4-cliente-oculto": {
+      "status": "completed",
+      "checkpoint": 1,
+      "version": 2,
+      "started_at": "2026-05-07T15:26:00Z",
+      "completed_at": "2026-05-08T18:18:15Z"
+    },
+    "ee-s5-scripts-sdr": {
+      "status": "completed",
+      "checkpoint": 1,
+      "version": 2,
+      "started_at": "2026-05-08T11:23:55Z",
+      "completed_at": "2026-05-08T15:31:12Z"
+    },
+    "ee-s5-sdr-ia-config": {
+      "status": "completed",
+      "checkpoint": 1,
+      "version": 1,
+      "started_at": "2026-05-08T15:50:21Z",
+      "completed_at": "2026-05-08T15:50:21Z",
+      "platform_adapted": "Kommo IA nativa (substituiu Patagon original)"
+    },
+    "ee-revisao-semanal": {
+      "status": "completed",
+      "version": 1,
+      "started_at": "2026-04-22T13:35:14Z",
+      "completed_at": "2026-04-22T13:35:14Z"
+    },
+    "ee-s3-manual-marca": {
+      "status": "completed",
+      "version": 2,
+      "started_at": "2026-04-28T15:00:00Z",
+      "completed_at": "2026-05-08T18:18:15Z"
+    }
+  },
+  "created_at": "2026-04-16"
+},{
+  "name": "Bombachas Farroupilha",
+  "slug": "farroupilha-bombachas",
+  "current_week": 2,
+  "skills": {
+    "ee-s1-diagnostico-maturidade": {
+      "status": "completed",
+      "checkpoint": 1,
+      "version": 6,
+      "started_at": "2026-05-14T00:00:00Z",
+      "completed_at": "2026-05-25T00:00:00Z"
+    },
+    "ee-s1-swot": {
+      "status": "completed",
+      "checkpoint": 1,
+      "started_at": "2026-05-25T00:00:00Z",
+      "completed_at": "2026-05-25T00:00:00Z",
+      "version": 2
+    },
+    "ee-s1-persona-icp": {
+      "status": "completed",
+      "checkpoint": 1,
+      "version": 2,
+      "started_at": "2026-05-25T00:00:00Z",
+      "completed_at": "2026-05-25T00:00:00Z"
+    },
+    "ee-s1-auditoria-comunicacao": {
+      "status": "completed",
+      "checkpoint": 1,
+      "version": 2,
+      "started_at": "2026-05-25T00:00:00Z",
+      "completed_at": "2026-05-25T00:00:00Z"
+    },
+    "ee-s2-pesquisa-mercado": {
+      "status": "completed",
+      "checkpoint": 1,
+      "version": 2,
+      "started_at": "2026-05-25T00:00:00Z",
+      "completed_at": "2026-05-25T00:00:00Z"
+    },
+    "ee-s2-posicionamento": {
+      "status": "completed",
+      "checkpoint": 1,
+      "version": 1,
+      "started_at": "2026-05-25T00:00:00Z",
+      "completed_at": "2026-05-25T00:00:00Z"
+    },
+    "ee-s2-diagnostico-midia": {
+      "status": "completed",
+      "checkpoint": 1,
+      "version": 1,
+      "started_at": "2026-05-25T00:00:00Z",
+      "completed_at": "2026-05-25T00:00:00Z"
+    },
+    "ee-s2-diagnostico-cro": {
+      "status": "pending",
+      "checkpoint": 0,
+      "started_at": null,
+      "completed_at": null
+    },
+    "ee-s3-identidade-visual": {
+      "status": "pending",
+      "checkpoint": 0,
+      "started_at": null,
+      "completed_at": null
+    },
+    "ee-s3-brandbook": {
+      "status": "pending",
+      "checkpoint": 0,
+      "started_at": null,
+      "completed_at": null
+    },
+    "ee-s3-landing-page": {
+      "status": "pending",
+      "checkpoint": 0,
+      "started_at": null,
+      "completed_at": null
+    },
+    "ee-s3-copy-anuncios": {
+      "status": "pending",
+      "checkpoint": 0,
+      "started_at": null,
+      "completed_at": null
+    },
+    "ee-s3-criativos-anuncios": {
+      "status": "pending",
+      "checkpoint": 0,
+      "started_at": null,
+      "completed_at": null
+    },
+    "ee-s3-crm-setup": {
+      "status": "pending",
+      "checkpoint": 0,
+      "started_at": null,
+      "completed_at": null
+    },
+    "ee-s3-forecast-midia": {
+      "status": "pending",
+      "checkpoint": 0,
+      "started_at": null,
+      "completed_at": null
+    },
+    "ee-s3-gmb-otimizacao": {
+      "status": "pending",
+      "checkpoint": 0,
+      "started_at": null,
+      "completed_at": null
+    },
+    "ee-s4-diagnostico-comercial": {
+      "status": "pending",
+      "checkpoint": 0,
+      "started_at": null,
+      "completed_at": null
+    },
+    "ee-s4-cliente-oculto": {
+      "status": "pending",
+      "checkpoint": 0,
+      "started_at": null,
+      "completed_at": null
+    }
+  },
+  "created_at": "2026-05-12"
+},{
+  "name": "Lucena Advisory",
+  "slug": "lucena-advisory",
+  "current_week": 1,
+  "skills": {
+    "ee-s1-diagnostico-maturidade": {
+      "status": "pending",
+      "checkpoint": 0,
+      "started_at": null,
+      "completed_at": null
+    },
+    "ee-s1-swot": {
+      "status": "pending",
+      "checkpoint": 0,
+      "started_at": null,
+      "completed_at": null
+    },
+    "ee-s1-persona-icp": {
+      "status": "pending",
+      "checkpoint": 0,
+      "started_at": null,
+      "completed_at": null
+    },
+    "ee-s1-auditoria-comunicacao": {
+      "status": "pending",
+      "checkpoint": 0,
+      "started_at": null,
+      "completed_at": null
+    },
+    "ee-s2-pesquisa-mercado": {
+      "status": "pending",
+      "checkpoint": 0,
+      "started_at": null,
+      "completed_at": null
+    },
+    "ee-s2-posicionamento": {
+      "status": "pending",
+      "checkpoint": 0,
+      "started_at": null,
+      "completed_at": null
+    },
+    "ee-s2-diagnostico-midia": {
+      "status": "pending",
+      "checkpoint": 0,
+      "started_at": null,
+      "completed_at": null
+    },
+    "ee-s2-diagnostico-cro": {
+      "status": "pending",
+      "checkpoint": 0,
+      "started_at": null,
+      "completed_at": null
+    },
+    "ee-s3-identidade-visual": {
+      "status": "pending",
+      "checkpoint": 0,
+      "started_at": null,
+      "completed_at": null
+    },
+    "ee-s3-brandbook": {
+      "status": "pending",
+      "checkpoint": 0,
+      "started_at": null,
+      "completed_at": null
+    },
+    "ee-s3-landing-page": {
+      "status": "pending",
+      "checkpoint": 0,
+      "started_at": null,
+      "completed_at": null
+    },
+    "ee-s3-copy-anuncios": {
+      "status": "pending",
+      "checkpoint": 0,
+      "started_at": null,
+      "completed_at": null
+    },
+    "ee-s3-criativos-anuncios": {
+      "status": "pending",
+      "checkpoint": 0,
+      "started_at": null,
+      "completed_at": null
+    },
+    "ee-s3-crm-setup": {
+      "status": "pending",
+      "checkpoint": 0,
+      "started_at": null,
+      "completed_at": null
+    },
+    "ee-s3-forecast-midia": {
+      "status": "pending",
+      "checkpoint": 0,
+      "started_at": null,
+      "completed_at": null
+    },
+    "ee-s3-gmb-otimizacao": {
+      "status": "pending",
+      "checkpoint": 0,
+      "started_at": null,
+      "completed_at": null
+    },
+    "ee-s4-diagnostico-comercial": {
+      "status": "pending",
+      "checkpoint": 0,
+      "started_at": null,
+      "completed_at": null
+    }
+  },
+  "created_at": "2026-05-25"
+},{
+  "name": "Podium Educação",
+  "slug": "podium-educacao",
+  "current_week": 1,
+  "skills": {
+    "ee-s1-diagnostico-maturidade": {
+      "status": "pending",
+      "checkpoint": 0,
+      "started_at": null,
+      "completed_at": null
+    },
+    "ee-s1-swot": {
+      "status": "pending",
+      "checkpoint": 0,
+      "started_at": null,
+      "completed_at": null
+    },
+    "ee-s1-persona-icp": {
+      "status": "pending",
+      "checkpoint": 0,
+      "started_at": null,
+      "completed_at": null
+    },
+    "ee-s1-auditoria-comunicacao": {
+      "status": "pending",
+      "checkpoint": 0,
+      "started_at": null,
+      "completed_at": null
+    },
+    "ee-s2-pesquisa-mercado": {
+      "status": "pending",
+      "checkpoint": 0,
+      "started_at": null,
+      "completed_at": null
+    },
+    "ee-s2-posicionamento": {
+      "status": "pending",
+      "checkpoint": 0,
+      "started_at": null,
+      "completed_at": null
+    },
+    "ee-s2-diagnostico-midia": {
+      "status": "pending",
+      "checkpoint": 0,
+      "started_at": null,
+      "completed_at": null
+    },
+    "ee-s2-diagnostico-criativos": {
+      "status": "pending",
+      "checkpoint": 0,
+      "started_at": null,
+      "completed_at": null
+    },
+    "ee-s2-diagnostico-cro": {
+      "status": "pending",
+      "checkpoint": 0,
+      "started_at": null,
+      "completed_at": null
+    },
+    "ee-s3-identidade-visual": {
+      "status": "pending",
+      "checkpoint": 0,
+      "started_at": null,
+      "completed_at": null
+    },
+    "ee-s3-brandbook": {
+      "status": "pending",
+      "checkpoint": 0,
+      "started_at": null,
+      "completed_at": null
+    },
+    "ee-s3-landing-page": {
+      "status": "pending",
+      "checkpoint": 0,
+      "started_at": null,
+      "completed_at": null
+    },
+    "ee-s3-copy-anuncios": {
+      "status": "pending",
+      "checkpoint": 0,
+      "started_at": null,
+      "completed_at": null
+    },
+    "ee-s3-criativos-anuncios": {
+      "status": "pending",
+      "checkpoint": 0,
+      "started_at": null,
+      "completed_at": null
+    },
+    "ee-s3-crm-setup": {
+      "status": "pending",
+      "checkpoint": 0,
+      "started_at": null,
+      "completed_at": null
+    },
+    "ee-s3-forecast-midia": {
+      "status": "pending",
+      "checkpoint": 0,
+      "started_at": null,
+      "completed_at": null
+    },
+    "ee-s3-gmb-otimizacao": {
+      "status": "pending",
+      "checkpoint": 0,
+      "started_at": null,
+      "completed_at": null
+    },
+    "ee-s4-diagnostico-comercial": {
+      "status": "pending",
+      "checkpoint": 0,
+      "started_at": null,
+      "completed_at": null
+    },
+    "ee-s4-cliente-oculto": {
+      "status": "pending",
+      "checkpoint": 0,
+      "started_at": null,
+      "completed_at": null
+    }
+  },
+  "created_at": "2026-04-10"
+}];
+clients.forEach(c => {
+  const skills = Object.values(c.skills || {});
+  const total = skills.length;
+  const done = skills.filter(s => s.status === 'completed').length;
+  const wip = skills.filter(s => s.status === 'in_progress').length;
+  const pct = total > 0 ? Math.round((done / total) * 100) : 0;
+  document.getElementById('clients').innerHTML += `
+    <div class="client-card">
+      <div class="client-name">${c.name}</div>
+      <div class="client-week">Semana ${c.current_week || 1} · ${done}/${total} skills · ${pct}%</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:${pct}%"></div></div>
+      <div class="stats">
+        <span>${done} completas</span>
+        <span>${wip} em andamento</span>
+        <span>${total - done - wip} pendentes</span>
+      </div>
+    </div>`;
+});
+</script>
+</body>
+</html>
