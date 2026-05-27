@@ -1,0 +1,460 @@
+{
+  "client_name": "Bombachas Farroupilha",
+  "skill": "ee-s2-pesquisa-mercado",
+  "version": 2,
+  "generated_at": "2026-05-25T00:00:00Z",
+  "data_source": "websearch+formulario_v4mos+briefing+persona_icp_v2+swot+v4mos_googleads",
+  "summary": "Pesquisa de mercado v2 recalibrada com 3 concorrentes declarados pela Loreni no V4MOS (La Parceria, La Fronteira, Regalo Campeiro) + persona dupla aprovada (Mariana B2C principal + Diego B2B secundária). TAM ~R$ 1bi [E], SAM dividido: B2C R$ 200MM + B2B R$ 100MM = R$ 300MM. SOM consolidado R$ 4MM/ano com 70% via B2C novo (Mariana) e 30% via B2B base (Diego). Concorrente digital dominante: Regalo Campeiro (@regalocampeiro Instagram 26K) — janela para a Tapparo ocupar 'Bombacha de Favo autêntica + processo manual' antes que Regalo ou outro player narre isso primeiro estimada em 12-18 meses.",
+  "summary_headline": "Território vazio confirmado: 'Bombacha de Favo artesanal + processo manual narrado' — Regalo Campeiro (26K Instagram) domina catálogo, ninguém domina autenticidade.",
+  "summary_highlights": [
+    {
+      "category": "posicao",
+      "label": "Share atual / SAM",
+      "value": "0,42%",
+      "subtext": "R$ 1,27MM em SAM total R$ 300MM (B2C R$ 200MM + B2B R$ 100MM)",
+      "tone": "blue"
+    },
+    {
+      "category": "oportunidade",
+      "label": "SOM consolidado",
+      "value": "R$ 4MM/ano",
+      "subtext": "Triangulação: 70% via B2C Mariana + 30% via B2B Diego",
+      "tone": "green"
+    },
+    {
+      "category": "competicao",
+      "label": "Concorrente digital dominante",
+      "value": "Regalo Campeiro",
+      "subtext": "@regalocampeiro 26K seguidores Instagram — captura visual de Mariana",
+      "tone": "red"
+    },
+    {
+      "category": "janela",
+      "label": "Janela narrativa",
+      "value": "12-18 meses",
+      "subtext": "Antes que outro player ocupe 'Bombacha de Favo autêntica'",
+      "tone": "yellow"
+    },
+    {
+      "category": "oportunidade",
+      "label": "Crescimento setor",
+      "value": "+25%",
+      "subtext": "Expointer 2025 vs 2024 — tendência urbana sustenta Mariana",
+      "tone": "green"
+    },
+    {
+      "category": "risco",
+      "label": "Sazonalidade",
+      "value": "65-75%",
+      "subtext": "Receita concentrada em jul-set (Semana Farroupilha)",
+      "tone": "red"
+    }
+  ],
+  "summary_key_findings": [
+    {
+      "category": "vantagem",
+      "text": "Mapa competitivo revela território vazio defensável: 'Bombacha de Favo artesanal com processo manual narrado'. Regalo Campeiro (26K seguidores) domina volume de catálogo mas não comunica processo artesanal específico. La Fronteira (boutique) e La Parceria (verificar) atuam como varejo regional sem narrativa de fábrica. Tapparo é a única fábrica B2B+B2C com Bombacha de Favo como carro-chefe declarado — falta narrar."
+    },
+    {
+      "category": "contexto",
+      "text": "Estratégia dupla da Tapparo (B2C Mariana digital + B2B Diego físico) bate com perfil heterogêneo do SAM total de R$ 300MM. B2C representa 67% do SAM (R$ 200MM via consumidor final) e B2B 33% (R$ 100MM via lojistas/CTGs). O SOM de R$ 4MM se distribui ~70% B2C + 30% B2B nos próximos 24-36 meses — refletindo onde a aposta de crescimento ocorre, não onde está a receita atual."
+    },
+    {
+      "category": "ameaca",
+      "text": "Motivo de perda #1 declarado pela Loreni: 'preço'. Combinado com presença forte de Regalo Campeiro no digital, a tese é clara: Mariana compara Bombacha de Favo da Tapparo com produtos industriais de varejo grande (Renner, marketplaces) sem entender a diferença técnica. Sem narrativa visual de processo, a percepção de premium se erode rápido. Janela de 12-18 meses para ocupar a narrativa antes que outro player faça."
+    },
+    {
+      "category": "acao",
+      "text": "Quick win de pesquisa de mercado para implementar agora: adicionar bloco 'Para você que quer sua própria pilcha' na LP (corrige vazamento crítico identificado na persona-icp v2 — Mariana chega via Google Ads e não se vê na LP B2B). Junto: começar produção semanal de Reels mostrando trançado manual do favo — ataca o motivo de perda 'preço' com evidência visual e diferencia de Regalo Campeiro (que faz catálogo, não processo)."
+    },
+    {
+      "category": "contexto",
+      "text": "Cidades top 3 declaradas pela Loreni no V4MOS: Caxias do Sul, Alegrete, Passo Fundo. Esse triângulo cobre RS interior gaúcho-italiano (Caxias), fronteira gaúcha (Alegrete) e norte tradicionalista (Passo Fundo). Para mídia paga reestruturada, faz sentido geo-targeting nessas 3 + expansão declarada para MT (mercado virgem). Fora desse perímetro, ROAS provavelmente cai."
+    }
+  ],
+  "segment": "Indústria Têxtil — Moda Tradicionalista Gaúcha (Pilchas/Bombachas). Operação DUPLA: B2C (consumidor final tradicionalista — persona Mariana) + B2B (lojistas, CTGs, invernadas — persona Diego).",
+  "region": "Atual: RS interior (top 3 cidades declaradas Caxias do Sul, Alegrete, Passo Fundo). Sede da fábrica: Ciríaco/RS. Expansão declarada: SC oeste, PR e principalmente Mato Grosso (mercado gaúcho migrado, sem representante físico local).",
+  "tam_sam_som": {
+    "tam": {
+      "value_brl": 1000000000,
+      "description": "[E] Mercado brasileiro de vestuário tradicionalista gaúcho — pilchas completas (bombachas, coletes, camisas, prendas), saídas de prenda, e acessórios, somando B2C varejo final e B2B atacado. Estimativa derivada do recorte de nicho dentro do setor de vestuário brasileiro (~R$ 153bi em 2022, SEBRAE) + presença do MTG em 9 regiões (RS, MT, MS, PR, SC, RJ, SP, AM, NE) + ticket médio de pilcha completa R$ 600-800 (Jornal do Comércio 2025)."
+    },
+    "sam": {
+      "value_brl": 300000000,
+      "description": "[E] SAM brasileiro com perfis heterogêneos. Composto por: (a) B2C consumidor final tradicionalista (~R$ 200MM ou 67% do SAM — frente de crescimento NOVO da Tapparo, persona Mariana); (b) B2B atacado para lojistas/CTGs (~R$ 100MM ou 33% do SAM — base atual da Tapparo, persona Diego).",
+      "filters": [
+        "B2C: consumidoras finais 25-60 anos ligadas à cultura gaúcha (CTGs, baila, eventos farroupilha) — RS interior + capitais regionais + migrados (MT, MS, SP)",
+        "B2B: lojistas, representantes, CTGs/invernadas — RS + SC + PR + MT (foco)",
+        "Exclui souvenir turístico genérico, exclui dropshipping de marketplace, exclui atacarejo grande (volume > 150 peças incompatível com fábrica artesanal)"
+      ]
+    },
+    "som": {
+      "value_brl": 4000000,
+      "description": "[E] SOM consolidado mantido em R$ 4MM/ano com NOVA composição: ~70% via B2C (Mariana, frente de crescimento digital) = R$ 2,8MM + ~30% via B2B (Diego, base de manutenção+expansão via canal físico) = R$ 1,2MM. Triangulação por 3 métodos: (1) Capacidade operacional ~R$ 3-4MM/ano com expansão moderada de equipe; (2) Market share top-down: 1,33% do SAM total = R$ 4MM (factível em nicho premium); (3) Segmento premium artesanal (Bombacha de Favo) ~R$ 30MM nicho B2C + B2B = Tapparo pode capturar 10-15% disso = R$ 3-4,5MM. Os 3 métodos convergem em R$ 4MM nos próximos 24-36 meses.",
+      "assumptions": [
+        "Persona dupla aprovada: Mariana principal (digital) + Diego secundária (físico)",
+        "Bombacha de Favo segue como produto-âncora — narrar processo é central no posicionamento",
+        "Mato Grosso é ativado como praça-piloto B2C até final de 2026",
+        "Concorrência digital (Regalo Campeiro) NÃO narra processo artesanal nos próximos 12-18 meses",
+        "Loreni mantém atendimento humano direto + estrutura WhatsApp Business com filtro por persona"
+      ],
+      "operational_ceiling_note": "Capacidade operacional atual da fábrica estimada em ~R$ 3-4MM/ano com expansão moderada de equipe (validar com Loreni). Se Mariana decolar mais rápido que Diego, capacidade pode virar restrição interna antes de saturar mercado.",
+      "related_but_separate": {
+        "client_annual_revenue_goal_brl_v4mos": null,
+        "client_annual_revenue_goal_brl_v4mos_reason": "Campo 'Meta de faturamento para 12 meses' aparece como 'Não identificado no workspace' no formulário V4MOS (item 15). Validar na próxima call com Loreni.",
+        "client_annual_revenue_goal_source_v4mos": "Não declarada — formulário V4MOS item 15 sem resposta estruturada",
+        "client_monthly_revenue_goal_kickoff": "Não declarada na call de vendas / FPS — motivação foi estratégica (continuidade do negócio + iniciar B2C), sem número objetivo de meta",
+        "note": "Sem meta declarada. SOM de R$ 4MM é teto de MERCADO capturável (não meta da cliente). Pedir à Loreni para declarar meta na próxima call ancora S3 (forecast-midia se aplicável) e calibra ambição de B2C vs ritmo de execução."
+      }
+    },
+    "methodology": "mixed",
+    "sources": [
+      {
+        "name": "SEBRAE — Setor de vestuário",
+        "url": "https://sebrae.com.br/sites/PortalSebrae/conteudos/posts/setor-de-vestuario-tem-expectativa-de-fechar-2022-em-crescimento,742d357227ab4810VgnVCM100000d701210aRCRD",
+        "year": 2022
+      },
+      {
+        "name": "Jornal do Comércio — Indumentária gaúcha (Semana Farroupilha 2025)",
+        "url": "https://www.jornaldocomercio.com/especiais/semana-farroupilha/2025/09/1218430-indumentaria-gaucha-segue-tradicao-no-campo-e-vira-tendencia-na-cidade.html",
+        "year": 2025
+      },
+      {
+        "name": "AlegreteTudo — Lojas de pilchas aumentam faturamento",
+        "url": "https://www.alegretetudo.com.br/lojas-do-segmento-de-pilchas-gauchas-aumentam-faturamento-em-setembro/",
+        "year": 2025
+      },
+      {
+        "name": "MTG-RS (Movimento Tradicionalista Gaúcho)",
+        "url": "https://www.mtg.org.br/",
+        "year": 2025
+      },
+      {
+        "name": "MTG-MT (Mato Grosso)",
+        "url": "https://www.mtgmt.com.br/",
+        "year": 2025
+      },
+      {
+        "name": "ABIT — Perfil do Setor Têxtil e Confecção BR",
+        "url": "https://www.abit.org.br/cont/perfil-do-setor",
+        "year": 2025
+      },
+      {
+        "name": "Instagram @regalocampeiro (concorrente digital declarado pela Loreni no V4MOS)",
+        "url": "https://www.instagram.com/regalocampeiro/",
+        "year": 2026
+      },
+      {
+        "name": "Boutique de Pilchas La Fronteira (concorrente declarado pela Loreni no V4MOS)",
+        "url": "https://www.facebook.com/Boutiquelafronteira/",
+        "year": 2026
+      },
+      {
+        "name": "Formulário V4MOS preenchido pela Loreni (workspace 5b3a7a61)",
+        "url": "clientes/farroupilha-bombachas/base-de-conhecimento/2026-05-25-formulario-v4mos.md",
+        "year": 2026
+      }
+    ]
+  },
+  "competitors": [
+    {
+      "name": "Regalo Campeiro (@regalocampeiro)",
+      "positioning": "Distribuidor multimarca posicionado como 'mais completo do RS' em selaria, vestuário e artigos gaúchos. Não é fabricante exclusivo — agrega catálogo. Comunica volume e variedade no Instagram com produção visual consistente. Atinge consumidor final B2C e revendedor B2B no mesmo canal.",
+      "channels": [
+        "Instagram principal: @regalocampeiro com 26K seguidores e 449 posts (ativo, com cadência editorial)",
+        "Provável presença em Facebook e e-commerce regional [E]",
+        "Distribuição B2B + venda B2C híbrida"
+      ],
+      "strengths": [
+        "Base de 26K seguidores no Instagram — alcance orgânico forte no nicho",
+        "Cadência editorial consistente (449 posts) — maturidade de produção visual",
+        "Posicionamento amplo ('mais completo do RS') capta tanto consumidor final quanto pequeno revendedor",
+        "Reconhecimento de marca regional"
+      ],
+      "weaknesses": [
+        "Distribuidor multimarca — não controla produção nem tem narrativa de processo artesanal próprio",
+        "Posicionamento de variedade (não de especialização) — não comunica nenhum produto específico como carro-chefe defensável",
+        "Concorre com as próprias marcas que distribui",
+        "Margem comprimida pela camada de revenda"
+      ],
+      "estimated_pricing": "Varejo B2C consumidor final + atacado revendedor — ticket médio R$ 100-300/peça [E baseado em varejo regional]",
+      "digital_score": 8,
+      "digital_details": {
+        "website": "Não confirmado nas buscas — provavelmente concentra atividade no Instagram",
+        "instagram": "@regalocampeiro — 26K seguidores, 449 posts, posicionamento 'distribuidor mais completo do RS'",
+        "google": "Provável ranking para 'regalo campeiro' (marca) — não confirmado para keywords genéricas",
+        "active_ads": "Provável Instagram Ads dada cadência orgânica forte [E]"
+      }
+    },
+    {
+      "name": "La Fronteira (Boutique de Pilchas)",
+      "positioning": "Boutique de pilchas posicionada como 'especialista em artigos gaúchos diferenciados'. Loja regional com Facebook ativo. Sem indicação de fábrica própria — provavelmente revende marcas selecionadas.",
+      "channels": [
+        "Facebook: Boutique de Pilchas La Fronteira (página ativa)",
+        "Marca distribuída pela Rancho Gaúcho (ranchogaucho.com.br/marca/la-frontera.html) — confusão entre 'La Fronteira' (loja) e 'La Frontera' (marca distribuída)"
+      ],
+      "strengths": [
+        "Posicionamento de 'especialista em diferenciados' (boutique) — captura Mariana exigente",
+        "Presença ativa no Facebook (canal forte para 35-55 anos, faixa da Mariana)"
+      ],
+      "weaknesses": [
+        "Boutique = revenda, não fábrica — sem narrativa de processo nem controle de prazo",
+        "Distribuição limitada (não confirmada como nacional)",
+        "Comunicação digital provavelmente concentrada em Facebook — fraca em Instagram/Reels"
+      ],
+      "estimated_pricing": "Varejo boutique premium — ticket R$ 150-450/peça [E]",
+      "digital_score": 5,
+      "digital_details": {
+        "website": "Provavelmente sem site próprio (referência via Rancho Gaúcho como marca distribuída)",
+        "instagram": "Não confirmado",
+        "google": "Aparece como página comercial — não dominante em keywords",
+        "active_ads": "Não confirmado"
+      }
+    },
+    {
+      "name": "La Parceria (a confirmar grafia)",
+      "positioning": "Concorrente declarado pela Loreni no V4MOS — não localizado em pesquisa pública pelo nome exato. Possíveis grafias alternativas: 'La Parcería', 'A Parceria', 'Casa Parceria', 'Pilcharia Parceria'. Pode ser estabelecimento regional sem presença digital forte.",
+      "channels": [
+        "[A confirmar com Loreni — pesquisa pública não retornou resultados consistentes para 'La Parceria' como marca tradicionalista gaúcha]"
+      ],
+      "strengths": [
+        "[A confirmar — provável força regional/local não capturada em pesquisa digital]"
+      ],
+      "weaknesses": [
+        "Ausência de presença digital identificável é por si só uma fraqueza",
+        "Se for boutique regional, mesma dinâmica de La Fronteira: revenda, não fábrica"
+      ],
+      "estimated_pricing": "[E não disponível — depende da identificação correta]",
+      "digital_score": 3,
+      "digital_details": {
+        "website": "Não identificado",
+        "instagram": "Não identificado",
+        "google": "Não identificado por essa grafia",
+        "active_ads": "Não identificado"
+      }
+    },
+    {
+      "name": "Bombachas Gaúcho (Uruguaiana/RS) — concorrente B2B Diego",
+      "positioning": "Fábrica tradicional com 30+ anos, atacado para lojistas em todo o Brasil. Posicionamento de longevidade e tradição familiar. Concorre com Diego (B2B Tapparo) — não captura Mariana digital.",
+      "channels": [
+        "Site próprio (bombachasgaucho.com)",
+        "Instagram @bombachasgaucho",
+        "Distribuição B2B via lojistas em todo o Brasil"
+      ],
+      "strengths": [
+        "30+ anos de mercado — base de lojistas estabelecida",
+        "Distribuição nacional consolidada",
+        "Catálogo amplo",
+        "Marca conhecida no nicho B2B"
+      ],
+      "weaknesses": [
+        "Posicionamento genérico ('tradição' + 'atacado') sem ângulo defensável",
+        "Não comunica acabamento artesanal específico (favo manual)",
+        "Provavelmente exige pedido mínimo alto (>15 peças)",
+        "Sem foco em consumidor final B2C"
+      ],
+      "estimated_pricing": "Atacado tradicional — R$ 80-150/peça popular, R$ 200-300/peça premium [E]",
+      "digital_score": 6,
+      "digital_details": {
+        "website": "https://bombachasgaucho.com/ — atacado declarado",
+        "instagram": "@bombachasgaucho — ativo",
+        "google": "Ranqueado para a marca",
+        "active_ads": "Não confirmado [E]"
+      }
+    },
+    {
+      "name": "Bombachas Pampa Sul — concorrente híbrido",
+      "positioning": "Marca 'A moda gaúcha' com loja online própria + área dedicada ao lojista. Híbrido B2C+B2B no mesmo canal. Concorre tanto com Mariana quanto com Diego.",
+      "channels": [
+        "Site próprio (pampasul.ind.br) com 'Área do Lojista'",
+        "Loja online B2C (loja.pampasul.com)",
+        "Distribuição B2B para lojistas"
+      ],
+      "strengths": [
+        "Estrutura dupla B2C+B2B no mesmo domínio",
+        "Loja online B2C ativa permite alcance direto",
+        "Catálogo variado"
+      ],
+      "weaknesses": [
+        "Foco diluído entre B2B e B2C — sem narrativa única",
+        "Sem destaque para Bombacha de Favo específica",
+        "Concorre consigo mesma no leilão (B2C vs B2B) [E]"
+      ],
+      "estimated_pricing": "Varejo B2C + atacado B2B, ticket médio similar ao mercado [E]",
+      "digital_score": 7,
+      "digital_details": {
+        "website": "http://www.pampasul.ind.br/area-do-lojista + https://loja.pampasul.com/",
+        "instagram": "Provável presença ativa [E]",
+        "google": "Ranqueado para 'pampa sul'",
+        "active_ads": "Não confirmado [E]"
+      }
+    }
+  ],
+  "competitive_map": {
+    "axis_x": "Generalista (catálogo amplo / distribuidor) ↔ Especialista (Bombacha de Favo / produto-âncora narrado)",
+    "axis_y": "B2C (consumidor final) ↔ B2B (atacado / lojista)",
+    "positions": [
+      {
+        "name": "Regalo Campeiro",
+        "quadrant": "Generalista + Híbrido B2C (forte) + B2B (médio) — domina visual mas sem ângulo de especialização"
+      },
+      {
+        "name": "La Fronteira (Boutique)",
+        "quadrant": "Generalista + B2C boutique premium — revenda regional sem fabricação"
+      },
+      {
+        "name": "La Parceria",
+        "quadrant": "[A confirmar grafia] — provável Generalista + B2C regional"
+      },
+      {
+        "name": "Bombachas Gaúcho",
+        "quadrant": "Generalista + B2B atacado nacional — base consolidada sem narrativa de processo"
+      },
+      {
+        "name": "Bombachas Pampa Sul",
+        "quadrant": "Generalista + Híbrido B2C+B2B — diluído"
+      },
+      {
+        "name": "Bombachas Farroupilha (POSIÇÃO RECOMENDADA — DUPLA)",
+        "quadrant": "PRINCIPAL: Especialista + B2C (Mariana, Bombacha de Favo narrada). SECUNDÁRIA: Especialista + B2B (Diego, 35d + 15 peças + parceria fábrica). O quadrante 'Especialista + qualquer público' está VAZIO no mapa atual."
+      }
+    ],
+    "empty_spaces": "O eixo 'Especialista' está completamente vazio no mapa atual. Nenhum concorrente declarado nem identificado posiciona-se como 'especialista em Bombacha de Favo com processo manual narrado'. Esse é o território defensável da Tapparo nos próximos 12-18 meses — antes que Regalo Campeiro (que tem alcance) ou outro player narre primeiro.",
+    "crowded_spaces": "Quadrante 'Generalista + B2C' disputado por Regalo Campeiro (26K Instagram, líder digital), La Fronteira (boutique) e provavelmente La Parceria. Disputar nesse quadrante é jogo de incumbents com alcance maior — Tapparo precisa sair desse quadrante e ocupar 'Especialista' para criar diferenciação."
+  },
+  "trends": [
+    {
+      "trend": "Indumentária gaúcha se urbaniza — vira tendência fora do contexto tradicionalista clássico, mantendo essência. Cria pool ampliado de Marianas potenciais (não apenas tradicionalistas de longa data, mas mulheres urbanas que descobrem a pilcha)",
+      "evidence": "Jornal do Comércio (2025): 'A indumentária chegou na cidade como tendência da moda. Lojas que não são especializadas em produtos gaúchos começaram a vender bombachas.' Aumenta base potencial da persona Mariana — desde que comunicação não vire fashion sem identidade (anti-persona Curioso fashion)."
+    },
+    {
+      "trend": "Crescimento de +25% nas vendas do segmento de pilchas em eventos âncora (Expointer 2025 vs 2024)",
+      "evidence": "AlegreteTudo (2025) e veículos regionais reportam aumento expressivo de movimento. Bombachas são citadas como produto que mais vende, seguido de camisas e chapéus."
+    },
+    {
+      "trend": "Expansão do MTG (Movimento Tradicionalista Gaúcho) fora do RS — presente em 9 regiões ativas (RS, MT, MS, PR, SC, RJ, SP, AM, NE)",
+      "evidence": "MTG-RS (mtg.org.br) e MTG-MT (mtgmt.com.br) confirmam estrutura federada interestadual. MT especificamente tem federação ativa — pertinente ao foco de expansão declarado pela Tapparo (MT é mercado virgem sem representante físico)."
+    },
+    {
+      "trend": "Consumidoras finais 30-50 anos compram online cada vez mais — Instagram Shopping + checkout no WhatsApp Business expande funil B2C",
+      "evidence": "Tendência geral de e-commerce regional + dados V4MOS Google Ads mostrando 55,8% cliques femininos na campanha ALLURE = perfil Mariana já testado em mídia paga."
+    }
+  ],
+  "threats": [
+    {
+      "threat": "Regalo Campeiro (26K seguidores Instagram) ou outro player digital pode ocupar a narrativa de 'Bombacha de Favo autêntica' antes da Tapparo — janela estimada de 12-18 meses",
+      "potential_impact": "Se o concorrente narrar processo artesanal primeiro (mesmo sem fabricar — pode usar parceiros), Tapparo perde o argumento principal de diferenciação e fica forçada a competir por preço (motivo de perda #1 declarado). Impacto: SOM B2C pode cair de R$ 2,8MM para R$ 1-1,5MM."
+    },
+    {
+      "threat": "Sazonalidade severa concentra 65-75% do faturamento em jul-set (Semana Farroupilha) — entressafra de 8-9 meses pressiona margem e fluxo de caixa",
+      "potential_impact": "Sem produto premium sustentando margem na entressafra (Bombacha de Favo deveria fazer isso ano todo, mas hoje está digitalmente abandonada), fábrica vulnerável. Impacto: se ciclo 2026 não validar reestruturação, próximo ano repete padrão."
+    },
+    {
+      "threat": "Motivo de perda #1 declarado é 'preço' — sem narrativa de processo artesanal que justifique o premium, Mariana compara com varejo industrial (Renner, Shopee) e desiste",
+      "potential_impact": "Erosão contínua de margem. Sem reposicionamento via Reels de bastidores + bloco específico na LP, ticket médio R$ 100 se torna teto em vez de média, comprimindo SOM B2C."
+    },
+    {
+      "threat": "Marcas grandes consolidadas (Bombachas Gaúcho, Pampa Sul) podem profissionalizar digital nos próximos 12-18 meses no mercado B2B atacadista",
+      "potential_impact": "Diego (lojista B2B) perde argumentos exclusivos da Tapparo (35d + 15 peças) se concorrentes consolidados reduzirem pedido mínimo. Impacto: SOM B2B pode cair de R$ 1,2MM para R$ 700-800k."
+    }
+  ],
+  "unexploited_opportunity": {
+    "description": "Ocupar o território 'Bombacha de Favo artesanal com processo manual narrado' — combinação que NINGUÉM no mercado (declarado pela Loreni ou pesquisado externamente) comunica hoje. Regalo Campeiro tem alcance mas é distribuidor; La Fronteira é boutique de revenda; Bombachas Gaúcho/Pampa Sul são fábricas B2B sem narrativa visual. Tapparo é a única que JÁ TEM o ativo (favo verdadeiro feito à mão) e que pode narrar com autenticidade.",
+    "why_nobody_does_it": "(1) Distribuidores (Regalo Campeiro, La Fronteira, La Parceria) não fabricam — não têm processo próprio para mostrar. Mostrar processo do parceiro não cria diferenciação. (2) Fábricas B2B grandes (Bombachas Gaúcho, Pampa Sul, Gozzi) operam em escala — favo manual não escala, então não viraria narrativa central. (3) Concorrentes consolidados têm marca de 'tradição genérica' já estabelecida e não querem reposicionar a comunicação para 'um produto específico' — perderiam parte da base que compra linha popular.",
+    "feasibility": "alta"
+  },
+  "market_jtbd": {
+    "current_solutions": "MARIANA (B2C): hoje resolve o problema 'preciso de bombacha autêntica para evento' de 3 formas — (1) Compra em loja boutique especializada (La Fronteira tipo) pagando premium sem entender o porquê, (2) Compra em distribuidor multimarca (Regalo Campeiro) pelo alcance digital mas sem certeza de fábrica original, (3) Compra em varejo industrial (Renner, marketplaces) por preço e descobre depois que era fashion sem favo verdadeiro. DIEGO (B2B): resolve com fábricas B2B grandes (Bombachas Gaúcho, Pampa Sul, Gozzi) amarrando capital cedo + pedidos mínimos altos, ou divide com 2-3 fornecedores como hedge.",
+    "alternatives": [
+      {
+        "type": "direct",
+        "description": "MARIANA: comprar de Regalo Campeiro via Instagram (@regalocampeiro 26K) — alcance + variedade + entrega rápida, mas sem garantia de fábrica original nem processo declarado."
+      },
+      {
+        "type": "direct",
+        "description": "MARIANA: comprar de boutique local tipo La Fronteira — boutique premium regional, sem narrativa de processo, sem certeza de origem."
+      },
+      {
+        "type": "indirect",
+        "description": "MARIANA: comprar varejo industrial (Renner, marketplaces) — preço baixo, qualidade visual inferior, descobre o erro no evento."
+      },
+      {
+        "type": "diy",
+        "description": "MARIANA: herdar peça da família tradicionalista ou ter peça feita por costureira local — preço variável, sem padronização."
+      },
+      {
+        "type": "inaction",
+        "description": "MARIANA: usar peça antiga, comprar acessório (lenço, alpargata) em vez da bombacha — perde a centralidade do look gaúcho."
+      },
+      {
+        "type": "direct",
+        "description": "DIEGO: comprar de fábrica grande consolidada (Bombachas Gaúcho, Pampa Sul) — segurança de marca, mas pedido mínimo alto e prazo 2-4 meses."
+      },
+      {
+        "type": "indirect",
+        "description": "DIEGO: comprar de distribuidor multimarca (Atacado das Pilchas, Regalo Campeiro) — margem comprimida + sem relação direta com fábrica."
+      }
+    ],
+    "cost_of_inaction": "Para Mariana, não comprar bombacha autêntica significa entrar em evento tradicionalista com peça fashion mal feita — vergonha social e estética. Para Diego, não fechar fornecedor confiável significa perder 30-50% do faturamento anual no pico farroupilha. Para a Tapparo, não capturar Mariana significa deixar R$ 2,8MM/ano (70% do SOM) na mesa — capturados pelos 3 concorrentes declarados (Regalo Campeiro principalmente) ou pela inação da consumidora."
+  },
+  "real_differentials": [
+    {
+      "differential": "Bombacha de Favo artesanal — único ativo defensável real, mas hoje digitalmente abandonado",
+      "status": "confirmed",
+      "icp_relevance": "Mariana paga premium SE entender o porquê (motivo de perda #1 declarado é preço — significa que hoje ela NÃO entende). Diego ganha margem revendendo (75%+) vs popular industrializada.",
+      "action_needed": "Reels semanais mostrando trançado manual (operador/cliente produzem em conjunto) + bloco dedicado 'Para você que quer sua própria pilcha' na LP + grupo de anúncios Google dedicado à keyword 'bombacha de favo' em Exata (apontamento #2 SWOT v2)."
+    },
+    {
+      "differential": "Prazo de produção de 35 dias real — significativamente menor que 2-4 meses praticados pela concorrência B2B grande",
+      "status": "confirmed",
+      "icp_relevance": "Mariana com data marcada de evento + Diego pré-pico farroupilha — prazo cumprido elimina ansiedade e diferencia.",
+      "action_needed": "Comunicação proativa durante produção (dia 7, 21, 30) para reduzir ansiedade. Calendário 'compre até [data] para chegar antes da Semana Farroupilha' na LP — para Mariana."
+    },
+    {
+      "differential": "Pedido mínimo de 15 peças (B2B) e venda por peça única (B2C)",
+      "status": "confirmed",
+      "icp_relevance": "Diego: pedido pequeno preserva capital de giro vs concorrentes que exigem 50-100. Mariana: poder comprar 1 peça é DIFERENCIAL crítico — concorrência B2B não atende, varejo industrial atende mas sem favo verdadeiro.",
+      "action_needed": "Adicionar bloco na LP 'Para você que quer sua própria pilcha' com peça unitária explícita. WhatsApp Business com saudação que separa Mariana (B2C) de Diego (B2B) automaticamente."
+    },
+    {
+      "differential": "Fábrica direta sem intermediário + atendimento humano da Loreni",
+      "status": "confirmed",
+      "icp_relevance": "Mariana valoriza 'fala com a dona' (job emocional). Diego valoriza relação de longo prazo ('parceria sólida').",
+      "action_needed": "Estruturar WhatsApp Business mantendo o tom humano — saudação acolhedora + filtro por persona + mensagens rápidas por objeção. Loreni mantém relação, estrutura filtra anti-persona."
+    },
+    {
+      "differential": "Linha completa do recém-nascido ao adulto + saia de prenda com regulagem",
+      "status": "confirmed",
+      "icp_relevance": "Mariana compra para si + presente para filho/marido — linha completa permite ticket recorrente. Diego não perde cliente final por falta de 1 faixa.",
+      "action_needed": "Páginas internas por linha (/bombacha-de-favo, /linha-infantil, /saia-de-prenda) — SEO orgânico + comunicação de completude."
+    },
+    {
+      "differential": "Atendimento e suporte estruturado pós-venda (CRM + comunicação proativa)",
+      "status": "potential",
+      "icp_relevance": "Loreni declarou receio de 'empresas que somem após pagamento'. Mariana com prazo de evento + Diego em ciclo recorrente — ambos se beneficiam de pós-venda estruturado.",
+      "action_needed": "CRM mínimo (Kommo free) com pipeline DUPLO + régua proativa (apontamento da SWOT v2)."
+    },
+    {
+      "differential": "Mato Grosso como praça-piloto de expansão B2C digital — pioneirismo",
+      "status": "potential",
+      "icp_relevance": "MT tem comunidade gaúcha migrada com cultura tradicionalista ativa (MTG-MT confirmado) e nenhum fornecedor regional dedicado. Mariana de MT busca fábrica do RS via internet — espaço aberto.",
+      "action_needed": "Meta Ads geo-localizado em MT (Cuiabá, Sinop, Rondonópolis) com criativos de Reels da Bombacha de Favo. Lançamento até final de jul-2026."
+    }
+  ],
+  "market_share": {
+    "current_revenue_brl": 1270000,
+    "current_share_of_sam_pct": 0.42,
+    "target_share_of_sam_pct": 1.33,
+    "gap_to_som_brl": 2730000,
+    "gap_to_som_pct": 215,
+    "commentary": "Bombachas Farroupilha captura hoje 0,42% do SAM total estimado (R$ 1,27M em R$ 300MM). O SOM de R$ 4MM representa 1,33% do SAM — posição de nicho premium defensável. Crescer 3,2x (de R$ 1,27M para R$ 4MM) em 24-36 meses depende de 3 alavancas SIMULTÂNEAS: (a) Mariana B2C ativada via reorientação da campanha Google + bloco na LP + Reels semanais de processo; (b) Diego B2B mantido com prova social estruturada (depoimentos de lojistas) + Meta Ads em MT; (c) CRM mínimo com pipeline duplo para evitar vazamento do meio do funil. Sem as 3, cenário mais provável é crescimento orgânico modesto (+15-30%/ano) sem ocupar o território estratégico identificado.",
+    "client_annual_revenue_goal_brl": null,
+    "client_annual_revenue_goal_brl_reason": "Formulário V4MOS item 15 (Meta de faturamento 12 meses) aparece como 'Não identificado no workspace'. A Loreni não declarou meta — motivação foi estratégica (iniciar B2C + reduzir dependência B2B). Pedir à Loreni para declarar meta na próxima call.",
+    "client_annual_revenue_goal_source": "Não declarada — formulário V4MOS item 15 sem resposta estruturada",
+    "client_goal_vs_som_note": "Loreni declarou no V4MOS faturamento atual >R$ 1,27M mas não declarou meta para 12 meses. SOM de R$ 4MM é teto de mercado, não meta da cliente. Para ancorar planejamento de S3 (se houver forecast-midia), validar com Loreni qual faixa faz sentido perseguir: cenário conservador (manter B2B + crescer B2C 50% = ~R$ 1,9M), cenário moderado (R$ 2,5-3M) ou cenário ambicioso (chegar próximo do SOM R$ 4M em 24m).",
+    "enderecavel_value_brl": 200000000,
+    "enderecavel_composition": "[E] Subset do SAM onde a oferta DUPLA da Tapparo é genuinamente competitiva: (a) B2C consumidor final tradicionalista (subsegmento Mariana com poder de compra para premium) = R$ 150MM (75% do SAM B2C de R$ 200MM); (b) B2B lojistas PME com pedido 15-80 peças/ano = R$ 50MM (50% do SAM B2B de R$ 100MM). Total endereçável: R$ 200MM.",
+    "enderecavel_note": "O SAM de R$ 300MM tem perfis heterogêneos: consumidor B2C tradicionalista (alvo principal — Mariana), lojistas PME (alvo secundário — Diego), atacarejo grande (NÃO-alvo) e revendedor multimarca (não-alvo, vide anti-persona). A Tapparo escolhe NÃO competir com atacarejo (volume incompatível, margem comprimida) e com revendedor multimarca (Regalo Campeiro tipo — disputa de catálogo). O Mercado Endereçável de R$ 200MM é a base real onde os R$ 4MM do SOM serão capturados — separando barreira de escolha (SAM → Endereçável é decisão estratégica) de barreira competitiva (Endereçável → SOM é disputa real)."
+  },
+  "honesty_alert": "Esta v2 da pesquisa foi recalibrada com base no formulário V4MOS preenchido pela Loreni (2026-05-25). Os 3 concorrentes declarados (La Parceria, La Fronteira, Regalo Campeiro) substituem os 5 identificados externamente na v1 — porém apenas 2 dos 3 foram confirmados em pesquisa pública (La Fronteira e Regalo Campeiro). 'La Parceria' não foi encontrada pelo nome exato — pode ser grafia alternativa ('La Parcería', 'A Parceria', 'Casa Parceria') ou estabelecimento sem presença digital — pedir à Loreni clareza sobre o nome e localização. Os valores absolutos de TAM (R$ 1bi), SAM (R$ 300MM), Endereçável (R$ 200MM) e SOM (R$ 4MM) seguem como ESTIMATIVAS ordem-de-grandeza — sem fonte pública específica do nicho. A divisão B2C R$ 200MM + B2B R$ 100MM é inferência baseada em comportamento de consumo tradicionalista (mais ampla via varejo final que via lojistas concentrados). Persona Mariana ainda não validada com entrevistas reais — recomendado bate-papo com 5-10 consumidoras finais da base atual antes de finalizar copy da S3 (landing-page revisada + criativos Meta)."
+}

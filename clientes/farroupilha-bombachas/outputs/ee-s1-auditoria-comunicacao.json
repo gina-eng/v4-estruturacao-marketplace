@@ -1,0 +1,1010 @@
+{
+  "client_name": "Bombachas Farroupilha",
+  "skill": "ee-s1-auditoria-comunicacao",
+  "version": 2,
+  "generated_at": "2026-05-25T00:00:00Z",
+  "data_source": "briefing+lp+v4mos+persona_icp_v2+swot_v2+formulario_v4mos_2026-05-25",
+  "summary": "5 canais auditados, score médio 35/100 (subiu de 29 ao reconhecer GMB ativo). LP B2B é o canal mais maduro (55) mas precisa bloco específico para Mariana B2C — vazamento crítico. Google Ads (35) opera com lógica B2C alinhada à persona desejada (55,8% femininos = Mariana real), mas sem direcionamento específico nem Bombacha de Favo nos lances. WhatsApp (25) sem WA Business com filtro por persona. GMB (40) ativo declarado V4MOS — precisa otimização, não criação. Instagram (30) [E]. Plano: 5 quick wins independentes (operador V4 + Loreni) + 5 apontamentos para agência.",
+  "summary_headline": "Farroupilha: 5 canais, score médio 35/100. GMB ATIVO (não inexistente). Google Ads já mira persona desejada Mariana — falta direcionamento específico. 5 quick wins independentes da agência destravam meio do funil.",
+  "summary_highlights": [
+    {
+      "category": "maturidade",
+      "label": "Score médio canais",
+      "value": "35/100",
+      "subtext": "GMB 40 (ativo) · LP 55 · Anúncios 35 · IG 30 [E] · WA 25",
+      "tone": "yellow"
+    },
+    {
+      "category": "risco",
+      "label": "Vazamento crítico",
+      "value": "Mariana → LP",
+      "subtext": "Mariana via Google Ads chega na LP B2B e não se vê — não há bloco B2C",
+      "tone": "red"
+    },
+    {
+      "category": "oportunidade",
+      "label": "Quick wins independentes",
+      "value": "5 ações",
+      "subtext": "Bloco LP Mariana + Reels + WA Business + GMB otimizado + footer",
+      "tone": "green"
+    },
+    {
+      "category": "competicao",
+      "label": "Coerência de voz",
+      "value": "55/100",
+      "subtext": "LP boa, Reels não existem, anúncios alinhados a Mariana sem nomeá-la",
+      "tone": "yellow"
+    },
+    {
+      "category": "oportunidade",
+      "label": "Bombacha de Favo no Search",
+      "value": "7 impressões",
+      "subtext": "Carro-chefe fora dos lances — apontamento agência",
+      "tone": "green"
+    },
+    {
+      "category": "risco",
+      "label": "Motivo de perda #1",
+      "value": "Preço",
+      "subtext": "Reels de processo + bloco LP atacam essa objeção com narrativa",
+      "tone": "red"
+    }
+  ],
+  "summary_key_findings": [
+    {
+      "category": "vantagem",
+      "text": "Persona dupla aprovada (Mariana B2C principal + Diego B2B secundário) alinha-se ao que a campanha Google Ads já faz parcialmente (55,8% cliques femininos = Mariana real) e ao que a LP B2B já faz (segmentação por públicos B2B). O ativo de comunicação NÃO precisa ser refeito do zero — precisa ser refinado para honrar a estratégia dupla declarada no V4MOS."
+    },
+    {
+      "category": "ameaca",
+      "text": "Maior vazamento agora é entre Pesquisa B2C e Decisão: Mariana chega na LP via Google Ads (55,8% cliques femininos) mas a LP segmenta apenas blocos B2B (lojistas, CTGs). Não há bloco 'Para você que quer sua própria pilcha'. Mariana não se vê e sai. Estimativa: 60-70% dos cliques B2C qualificados são perdidos antes de chegar no WA."
+    },
+    {
+      "category": "contexto",
+      "text": "GMB ativo declarado pela Loreni no V4MOS — não inexistente como inferido na v1. Score sobe de 0 para 40 (existe mas provavelmente não otimizado). Precisa atualização de fotos, descrição alinhada à persona Mariana e Google Posts semanais — não criação do zero."
+    },
+    {
+      "category": "contexto",
+      "text": "Coerência de voz entre canais subiu de 42 para 55 após reconhecer que a campanha Google Ads B2C NÃO é desalinhada da brand voice — está alinhada com a persona Mariana desejada. Drift agora é mais sutil: copy não nomeia Mariana, Reels não existem para narrar processo, WhatsApp sem WA Business deixa Loreni atender Mariana e Diego na mesma fila."
+    },
+    {
+      "category": "acao",
+      "text": "5 quick wins independentes da agência (executados por operador V4 + Loreni em 1-2 semanas): (1) bloco LP Mariana, (2) Reels semanais de Bombacha de Favo, (3) WhatsApp Business com filtro por persona, (4) GMB otimizado com fotos e descrição Mariana, (5) footer LP + correção 'cole o link aqui'. 5 apontamentos paralelos para agência (Search por persona, Bombacha de Favo nos lances, GA4/UTM, PMax decisão, Meta MT)."
+    }
+  ],
+  "icp_reference": "Diego Tavares (38, lojista de pilcharia regional em Tupanciretã/RS, faturamento R$ 80k/mês com pico R$ 200k em setembro). Decide por capital de giro + previsibilidade de prazo. Cético com fornecedores (já se queimou 3x). Pesquisa no Google + Instagram + WhatsApp de outros lojistas. Mensagem-chave aprovada: 'Bombacha de favo direto da fábrica, em 35 dias, a partir de 15 peças'.",
+  "channels_audited": [
+    {
+      "name": "site",
+      "url_or_handle": "https://bombachasfarroupilha.com.br/",
+      "score": 55,
+      "classification": "medium",
+      "screenshots_analyzed": false,
+      "audit_details": {
+        "value_proposition": {
+          "present": true,
+          "clear": true,
+          "aligned_with_icp": true,
+          "notes": "Primeira dobra entrega 'Bombacha tradicional de favo, direto da fábrica' + 'Atendemos representantes comerciais, lojistas e CTGs/invernadas com pedido mínimo de 15 peças e prazo padrão de 35 dias'. Os 3 elementos da mensagem-chave aprovada (favo, 35 dias, 15 peças) já estão no hero — ponto forte raro em LPs de PME."
+        },
+        "social_proof": {
+          "present": false,
+          "type": "ausente",
+          "quality": "none",
+          "notes": "Zero depoimentos com nome/foto/loja, zero cases de lojistas parceiros, zero logos de pilcharias atendidas. Para Diego (cético por experiência), a confiança fica em 'palavra do site'. Maior gap qualitativo da LP."
+        },
+        "cta": {
+          "present": true,
+          "visible": true,
+          "action_oriented": true,
+          "notes": "CTA principal 'QUERO SOLICITAR ORÇAMENTO!' no hero + CTAs WhatsApp em múltiplos pontos com mensagem pré-preenchida ('Olá, vim pelo site e gostaria de um orçamento'). Bom para captura, mas envia 100% ao mesmo WhatsApp da Loreni sem qualificação por persona."
+        },
+        "visual_consistency": {
+          "consistent": true,
+          "professional": true,
+          "notes": "Fotos próprias do produto, paleta consistente (tons terrosos tradicionais), tipografia uniforme. Acima da média de LP de PME do setor."
+        },
+        "mobile_experience": {
+          "responsive": true,
+          "speed": "boa (LiteSpeed Cache + WebP otimizado)",
+          "notes": "Mobile-first com viewport correto e versão dedicada do hero. PORÉM: erro de produção literal 'cole o link aqui' deixado no preload do background mobile — sinaliza falta de QA do desenvolvedor."
+        },
+        "content_quality": {
+          "speaks_to_icp": true,
+          "frequency": "estática (LP única, sem blog)",
+          "engagement_level": "n/a (LP de captura, não conteúdo recorrente)",
+          "notes": "Linguagem alinhada ao ICP B2B (lojista, representante, CTG/invernada). FAQ trata 5 objeções relevantes (pedido mínimo, prazo, tecidos/cores, vestido de prenda, pagamento). Faltam páginas internas por linha (Bombacha de Favo, infantil, kits invernada)."
+        },
+        "additional_notes": "Footer minimalista — sem endereço físico, sem CNPJ, sem telefone fixo. Fragiliza confiança B2B significativamente. Sem schema markup de produto/empresa. Sem páginas internas (LP single-page) limita SEO e segmentação por intenção. WordPress + Elementor + LiteSpeed: stack adequado para PME, fácil de manter pelo cliente."
+      },
+      "gaps": [
+        {
+          "gap": "Zero prova social estruturada",
+          "evidence": "Não há depoimentos, cases, logos de lojistas atendidos nem indicadores de número de clientes/pedidos. Diego, cético por experiência, exige evidência.",
+          "impact": "high"
+        },
+        {
+          "gap": "Footer institucional incompleto",
+          "evidence": "Footer sem endereço físico, CNPJ ou telefone fixo. Para B2B com pedido a partir de R$ 5-10k, falta de informação institucional fragiliza confiança.",
+          "impact": "medium"
+        },
+        {
+          "gap": "Erro de produção 'cole o link aqui' no preload mobile",
+          "evidence": "Literal 'cole o link aqui https://...' deixado no código do preload de background mobile — sinaliza ausência de QA do desenvolvedor.",
+          "impact": "medium"
+        },
+        {
+          "gap": "Single-page sem páginas internas",
+          "evidence": "Não há /bombacha-de-favo, /kit-invernada, /sobre, /lojistas-parceiros. Limita SEO orgânico e segmentação por intenção de busca.",
+          "impact": "medium"
+        },
+        {
+          "gap": "Sem schema markup",
+          "evidence": "Sem JSON-LD de Product/Organization/LocalBusiness — perde rich snippets em SERP do Google.",
+          "impact": "low"
+        }
+      ],
+      "recommendations": [
+        {
+          "action": "Adicionar bloco de prova social com 3-5 depoimentos (nome do lojista, cidade, foto da loja ou da pilcha entregue, frase curta sobre prazo/qualidade). Pode ser print autorizado de WhatsApp.",
+          "priority": "immediate",
+          "effort": "low"
+        },
+        {
+          "action": "Completar footer com endereço da fábrica (Ciríaco/RS), CNPJ da Tapparo Bombachas, telefone fixo (se houver), e-mail comercial, link para Instagram.",
+          "priority": "immediate",
+          "effort": "low"
+        },
+        {
+          "action": "Corrigir o literal 'cole o link aqui' no preload do background mobile — passar para o desenvolvedor com QA antes do próximo deploy.",
+          "priority": "immediate",
+          "effort": "low"
+        },
+        {
+          "action": "Criar páginas internas por linha (/bombacha-de-favo, /kit-invernada-ctg, /linha-infantil) com keyword foco em cada uma — habilita SEO orgânico do nicho.",
+          "priority": "short_term",
+          "effort": "medium"
+        },
+        {
+          "action": "Adicionar schema markup JSON-LD (LocalBusiness para fábrica + Product para Bombacha de Favo) — ganho em rich snippets do Google.",
+          "priority": "short_term",
+          "effort": "low"
+        }
+      ]
+    },
+    {
+      "name": "instagram",
+      "url_or_handle": "@farroupilha_bombachas",
+      "score": 30,
+      "classification": "low",
+      "screenshots_analyzed": false,
+      "audit_details": {
+        "value_proposition": {
+          "present": true,
+          "clear": false,
+          "aligned_with_icp": false,
+          "notes": "[E] Briefing menciona Instagram orgânico ativo, mas screenshots não foram disponibilizados nesta auditoria. Avaliação a partir de menções da LP e FPS. Bio e estrutura de destaques precisam ser verificadas em uma próxima iteração com screenshot do perfil."
+        },
+        "social_proof": {
+          "present": false,
+          "type": "incerto",
+          "quality": "weak",
+          "notes": "[E] Instagram orgânico ativo (mencionado na FPS), mas não há registro de uso de depoimentos, marcações de lojistas parceiros ou reposts de pedidos entregues. Sem screenshot, é estimado."
+        },
+        "cta": {
+          "present": false,
+          "visible": false,
+          "action_oriented": false,
+          "notes": "[E] Provável CTA na bio é o link para a LP, mas não foi verificado. Falta CTA explícito por post (link na bio, sticker no Stories, swipe up se elegível)."
+        },
+        "visual_consistency": {
+          "consistent": false,
+          "professional": false,
+          "notes": "[E] Fotos próprias mencionadas na LP indicam repertório visual mínimo viável, mas sem identidade visual codificada (paleta, tipografia, framework de capa de Reels). Cada peça provável é improvisada."
+        },
+        "mobile_experience": {
+          "responsive": true,
+          "speed": "n/a — plataforma nativa",
+          "notes": "Instagram opera nativo no mobile — sem fricção técnica."
+        },
+        "content_quality": {
+          "speaks_to_icp": false,
+          "frequency": "[E] irregular — sem cadência declarada",
+          "engagement_level": "[E] baixo a moderado — sem dados objetivos",
+          "notes": "[E] Sem framework editorial: provável mix de fotos de produto + Stories pontuais sem cadência. Para captar Diego, precisa ter conteúdo de bastidores de fábrica (provando o '35 dias real'), Reels de Bombacha de Favo (mostrando o acabamento manual), e nutrição pré-pico (maio-julho) com 'estamos abrindo agenda do pico farroupilha'."
+        },
+        "additional_notes": "[E] Estimativa de score: 30/100. Necessário obter screenshots da bio + últimos 9 posts + Stories destacados em iteração futura com o operador para revisar este score com base em evidência observada."
+      },
+      "gaps": [
+        {
+          "gap": "Auditoria sem screenshots — score estimado",
+          "evidence": "Operador não forneceu screenshots do Instagram nesta iteração. Avaliação baseada em menções do briefing e da LP. Score 30 [E] precisa ser revisado com material visual.",
+          "impact": "medium"
+        },
+        {
+          "gap": "Sem framework editorial visível",
+          "evidence": "Sem cadência declarada, sem temas recorrentes (ex: 'Segunda da Fábrica', 'Quarta do Lojista'), sem padronização de capas de Reels.",
+          "impact": "high"
+        },
+        {
+          "gap": "Sem produção de Reels/Stories estratégicos",
+          "evidence": "Formato Reels é dominante em moda no nicho tradicionalista. Sem produção, perde alcance orgânico e relevância.",
+          "impact": "high"
+        },
+        {
+          "gap": "Sem destaques organizados",
+          "evidence": "[E] Não há registro de destaques (Stories destacados) organizados por tema — Produtos, FAQ, Lojistas, Bastidores, Pedidos.",
+          "impact": "medium"
+        }
+      ],
+      "recommendations": [
+        {
+          "action": "Operador (Gina): solicitar à Loreni screenshots da bio + grade de 9 últimos posts + destaques + 3 últimos Reels para auditoria visual completa em iteração futura.",
+          "priority": "immediate",
+          "effort": "low"
+        },
+        {
+          "action": "Estruturar 5 destaques temáticos: 'Bombacha de Favo' (mostrando produto + processo), 'Para Lojistas' (catálogo + processo de pedido), 'Para CTGs/Invernadas', 'FAQ Rápido' (5 objeções da LP em sticker), 'Lojistas Parceiros' (depoimentos quando começar a coletar).",
+          "priority": "short_term",
+          "effort": "medium"
+        },
+        {
+          "action": "Cadência mínima de 3 posts/semana + 5 Stories/semana, com Reels semanal mostrando bastidores de fábrica (especialmente o trançado manual do favo — é o ativo visual mais defensável e ainda não está sendo usado).",
+          "priority": "short_term",
+          "effort": "medium"
+        }
+      ]
+    },
+    {
+      "name": "anuncios",
+      "url_or_handle": "Google Ads (workspace V4MOS 5b3a7a61) — Campanha ALLURE - Bombachas - Search (ENABLED) + Campaign #1 PMax (PAUSED)",
+      "score": 35,
+      "classification": "low",
+      "screenshots_analyzed": false,
+      "audit_details": {
+        "value_proposition": {
+          "present": true,
+          "clear": false,
+          "aligned_with_icp": false,
+          "notes": "[E] Anúncios da Search não foram inspecionados via Google Ads Preview Tool nesta iteração. Inferência via comportamento: 55,8% dos cliques são femininos (consumidor final/prenda) — copy provavelmente é genérica B2C, não comunica os diferenciais B2B (35d, 15 peças, fábrica direta) ao público correto."
+        },
+        "social_proof": {
+          "present": false,
+          "type": "ausente",
+          "quality": "none",
+          "notes": "Search-only não comporta prova social em anúncio (limitação do formato). Mas extensões de anúncio (sitelinks, callouts) provavelmente também não são usadas. Verificar em iteração futura."
+        },
+        "cta": {
+          "present": true,
+          "visible": true,
+          "action_oriented": true,
+          "notes": "[E] CTAs típicos de Search ('Solicite Orçamento', 'Fale no WhatsApp') provavelmente presentes. Não verificados diretamente."
+        },
+        "visual_consistency": {
+          "consistent": true,
+          "professional": true,
+          "notes": "Search-only é texto; sem dimensão visual a auditar. A Performance Max pausada provavelmente teria criativos visuais que foram abandonados (R$ 5,30 gastos)."
+        },
+        "mobile_experience": {
+          "responsive": true,
+          "speed": "n/a — anúncio Google",
+          "notes": "Google Ads é responsivo nativo. LP de destino é otimizada para mobile (LiteSpeed)."
+        },
+        "content_quality": {
+          "speaks_to_icp": false,
+          "frequency": "campanha ativa contínua, R$ 30/dia",
+          "engagement_level": "CTR 2,22% (acima da média ~1,9%)",
+          "notes": "CTR 2,22% acima da média mostra que o anúncio responde a quem busca. 55,8% cliques femininos NÃO é desalinhamento — é alinhamento com a persona desejada Mariana (declarada no V4MOS após esta auditoria v1). Falta direcionamento de persona específica (não 'qualquer mulher' mas 'Mariana Tradicionalista') e Bombacha de Favo nos lances (7 impressões em 90d)."
+        },
+        "additional_notes": "Recalibração v2: campanha está VOLTADA para a persona desejada (B2C Mariana) — não é erro de operação. Apontamentos para agência são de DIRECIONAMENTO (segmentar por persona específica + Bombacha de Favo no centro + GA4/UTM) e não de 'correção para B2B'. Apontamentos da SWOT v2 cobrem as correções."
+      },
+      "gaps": [
+        {
+          "gap": "Estrutura monolítica sem segmentação por persona",
+          "evidence": "1 grupo único ('Grupo de anúncios 1', nome default), 23 keywords em Ampla, 0 keywords B2B ('bombacha atacado', 'fábrica bombachas', 'pilcha CTG' fora dos lances).",
+          "impact": "high"
+        },
+        {
+          "gap": "55,8% dos cliques fora do ICP",
+          "evidence": "Dados V4MOS: 399 de 725 cliques (90d) são femininos — perfil consumidor final/prenda, não lojista B2B. Apenas 5-10 dos ~33 leads/mês são ICP real (estimativa qualitativa).",
+          "impact": "high"
+        },
+        {
+          "gap": "Bombacha de Favo marginalizada",
+          "evidence": "Keyword 'bombacha de favo' tem 7 impressões em 90 dias. Diferencial declarado pelo cliente está fora dos lances.",
+          "impact": "high"
+        },
+        {
+          "gap": "Performance Max abandonada sem documentação",
+          "evidence": "Campaign #1 PMax criada com R$ 48,70/dia, rodou R$ 5,30, pausada sem registro de decisão.",
+          "impact": "medium"
+        },
+        {
+          "gap": "Sem rastreamento de origem por keyword no clique do WA",
+          "evidence": "Link wa.me sem UTM dinâmica — impossível atribuir conversão a keyword/campanha. 725 cliques sem leitura de retorno por origem.",
+          "impact": "high"
+        }
+      ],
+      "recommendations": [
+        {
+          "action": "Apontamentos #1, #2, #3 da SWOT (já documentados) — repassar à agência de Passo Fundo: segmentar Search por persona B2B, Bombacha de Favo nos lances, GA4+UTM dinâmica no wa.me.",
+          "priority": "immediate",
+          "effort": "low"
+        },
+        {
+          "action": "Solicitar à agência: relatório de Search Terms (termos reais que dispararam impressões) — permite identificar negativações imediatas para reduzir desperdício do cliques femininos.",
+          "priority": "immediate",
+          "effort": "low"
+        },
+        {
+          "action": "Solicitar à agência: definir o destino da Performance Max pausada (retomar com objetivo claro alimentando lookalike do pixel de 3 meses, ou arquivar com nota documentada).",
+          "priority": "short_term",
+          "effort": "low"
+        }
+      ]
+    },
+    {
+      "name": "google_meu_negocio",
+      "url_or_handle": "GMB ATIVO (declarado no formulário V4MOS — fábrica Tapparo Bombachas em Ciríaco/RS)",
+      "score": 40,
+      "classification": "low",
+      "screenshots_analyzed": false,
+      "audit_details": {
+        "value_proposition": {
+          "present": true,
+          "clear": false,
+          "aligned_with_icp": false,
+          "notes": "[E] GMB declarado ativo pela Loreni no V4MOS (item 40 do formulário: 'estruturas de captação ativas hoje' inclui 'Google Meu Negócio'). Necessário acesso ao painel para verificar completude da descrição, alinhamento à persona Mariana e atualização de informações. Score 40 reflete existência + assumindo otimização básica não madura."
+        },
+        "social_proof": {
+          "present": false,
+          "type": "incerto",
+          "quality": "weak",
+          "notes": "[E] Sem confirmação visual de reviews acumuladas no GMB. Recomenda-se solicitar à Loreni screenshot do painel + lista de reviews atuais."
+        },
+        "cta": {
+          "present": false,
+          "visible": false,
+          "action_oriented": false,
+          "notes": "[E] CTA do GMB depende da configuração — provavelmente link para LP. Não verificado diretamente."
+        },
+        "visual_consistency": {
+          "consistent": false,
+          "professional": false,
+          "notes": "[E] Quantidade e qualidade das fotos no GMB não verificadas. Geralmente PMEs têm 0-3 fotos básicas — abaixo do recomendado (8-12 produtos + 5 fábrica)."
+        },
+        "mobile_experience": {
+          "responsive": true,
+          "speed": "n/a — plataforma Google",
+          "notes": "GMB é responsivo nativo."
+        },
+        "content_quality": {
+          "speaks_to_icp": false,
+          "frequency": "[E] sem Google Posts semanais provavelmente",
+          "engagement_level": "[E] baixo sem dados",
+          "notes": "Descrição provavelmente não menciona persona Mariana nem Bombacha de Favo como produto-âncora — apontamento de otimização."
+        },
+        "additional_notes": "Reorientação principal: confirmar com Loreni o status do GMB (acesso ao painel, número de reviews, completude da descrição). Custo zero, ganho imediato em SEO local + confiança institucional B2B (Diego) e B2C (Mariana buscando 'fábrica de bombacha em Ciríaco RS')."
+      },
+      "gaps": [
+        {
+          "gap": "GMB ativo mas provavelmente não otimizado",
+          "evidence": "Declarado no formulário V4MOS como canal ativo. Sem acesso ao painel, assumimos baixa otimização (padrão PME): descrição básica, fotos limitadas, sem Google Posts, sem reviews acumulados em volume.",
+          "impact": "medium"
+        },
+        {
+          "gap": "Descrição provavelmente não nomeia persona Mariana nem destaca Bombacha de Favo",
+          "evidence": "Padrão PME — descrição genérica de produto sem persona-alvo nem produto-âncora narrado.",
+          "impact": "medium"
+        }
+      ],
+      "recommendations": [
+        {
+          "action": "Solicitar à Loreni acesso ao GMB ou screenshot do painel para auditoria visual completa em iteração futura.",
+          "priority": "immediate",
+          "effort": "low"
+        },
+        {
+          "action": "Otimizar descrição: 'Fábrica de Bombachas Tradicionais em Ciríaco/RS. Especializada na Bombacha de Favo artesanal, com prazo de 35 dias e pedido a partir de 15 peças. Atendemos consumidoras finais (Mariana) e lojistas/CTGs (Diego). Top 3 cidades de venda: Caxias do Sul, Alegrete, Passo Fundo.'",
+          "priority": "immediate",
+          "effort": "low"
+        },
+        {
+          "action": "Upload de 8-12 fotos de produto (Bombacha de Favo em destaque) + 5 fotos da fábrica/equipe. Pode usar mesmas fotos da LP + fotos novas dos bastidores (que serão usadas também nos Reels semanais).",
+          "priority": "immediate",
+          "effort": "low"
+        },
+        {
+          "action": "Solicitar reviews ao representante para 5-10 lojistas antigos (Diego B2B) e aos clientes consumidores finais (Mariana B2C) — incentivo: brinde ou desconto na próxima compra.",
+          "priority": "short_term",
+          "effort": "low"
+        },
+        {
+          "action": "Google Posts semanais (alternar Mariana B2C e Diego B2B): novidade de produto, evento próximo, depoimento, bastidor.",
+          "priority": "short_term",
+          "effort": "low"
+        }
+      ]
+    },
+    {
+      "name": "whatsapp",
+      "url_or_handle": "+55 54 9615-0025 (Loreni — sócia)",
+      "score": 25,
+      "classification": "low",
+      "screenshots_analyzed": false,
+      "audit_details": {
+        "value_proposition": {
+          "present": false,
+          "clear": false,
+          "aligned_with_icp": false,
+          "notes": "WhatsApp opera como canal de fechamento (LP → wa.me com mensagem pré-preenchida 'Olá, vim pelo site e gostaria de um orçamento'), mas não está claro se é WhatsApp Business com saudação automática, ausência configurada, mensagens rápidas e catálogo."
+        },
+        "social_proof": {
+          "present": false,
+          "type": "n/a — canal de conversação",
+          "quality": "none",
+          "notes": "n/a — não é canal de prova social, mas pode emitir links para casos/depoimentos como mensagem rápida."
+        },
+        "cta": {
+          "present": true,
+          "visible": true,
+          "action_oriented": true,
+          "notes": "CTA da LP usa mensagem pré-preenchida no link wa.me — bom para indicar contexto. Mas a partir dali, sem fluxo de qualificação automatizado."
+        },
+        "visual_consistency": {
+          "consistent": false,
+          "professional": false,
+          "notes": "[E] Sem foto de perfil do WhatsApp Business profissional confirmada. Sem catálogo de produtos visível dentro do app (Catalog do WhatsApp Business)."
+        },
+        "mobile_experience": {
+          "responsive": true,
+          "speed": "tempo de resposta variável (Loreni opera várias frentes)",
+          "notes": "Aplicativo é mobile-first. Velocidade de resposta da Loreni é o gargalo — Diego (cético, comparando 3 fornecedores) escolhe quem responder primeiro."
+        },
+        "content_quality": {
+          "speaks_to_icp": false,
+          "frequency": "responsivo (sem proatividade)",
+          "engagement_level": "1:1 humano",
+          "notes": "Atendimento da Loreni é o ponto forte do canal (relação direta com a fábrica — coerente com 'Parceria Direta' declarada na LP). Mas sem etiquetas de origem, sem qualificação por persona, sem follow-up estruturado. Diego entra na mesma fila que a consumidora final."
+        },
+        "additional_notes": "Apontamento #3 da SWOT (GA4+UTM dinâmica) habilita atribuição por keyword no link wa.me. Junto com saudação automatizada do WhatsApp Business com filtro de CNPJ (quick win), libera o tempo da Loreni para o ICP correto."
+      },
+      "gaps": [
+        {
+          "gap": "Sem saudação automatizada com filtro de CNPJ",
+          "evidence": "Lead da LP cai direto no WhatsApp pessoal da Loreni sem filtro. Consumidora final pedindo 1 peça e lojista B2B pedindo 25 peças entram na mesma fila.",
+          "impact": "high"
+        },
+        {
+          "gap": "Sem catálogo no WhatsApp Business",
+          "evidence": "Recurso nativo do WA Business (Catalog) permite mostrar Bombacha de Favo, kits invernada, linhas com preço a partir de — não está configurado.",
+          "impact": "medium"
+        },
+        {
+          "gap": "Sem etiquetas de organização de leads",
+          "evidence": "WhatsApp Business permite etiquetar contatos por etapa (Novo, Cotando, Aguardando pagamento, Em produção, Entregue). Sem isso, sem rastreio de pipeline.",
+          "impact": "medium"
+        },
+        {
+          "gap": "Sem ausência configurada",
+          "evidence": "Mensagem automática para fora do horário comercial não está clara — Diego mandando WA às 21h pode achar que a fábrica sumiu se não tiver resposta automática.",
+          "impact": "low"
+        },
+        {
+          "gap": "Sem follow-up estruturado",
+          "evidence": "Lead que cota e não fecha não recebe nutrição. Lojista que comprou uma vez não recebe régua de reativação no pré-pico do ano seguinte.",
+          "impact": "high"
+        }
+      ],
+      "recommendations": [
+        {
+          "action": "Migrar para WhatsApp Business (se não estiver) e configurar saudação automática perguntando: '1) Está comprando para sua loja ou uso pessoal? 2) Se loja, me passa o nome da loja e a cidade'. Filtra anti-persona Compradora de prenda e Caçador de preço na entrada.",
+          "priority": "immediate",
+          "effort": "low"
+        },
+        {
+          "action": "Configurar catálogo do WhatsApp Business com 5-8 produtos: Bombacha de Favo (carro-chefe), Bombacha popular, Kit Invernada, Saia de prenda, Linha infantil. Cada um com foto, preço a partir e descrição curta.",
+          "priority": "short_term",
+          "effort": "low"
+        },
+        {
+          "action": "Configurar mensagem de ausência fora do horário comercial: 'Oi! No momento estamos fora do horário (8h-18h, seg-sex). Te respondemos amanhã pela manhã. Se for urgente, me deixa uma prévia do que você precisa que já adianto.'",
+          "priority": "immediate",
+          "effort": "low"
+        },
+        {
+          "action": "Estruturar etiquetas no WA Business: Novo lead, Cotando, Aguardando pagamento, Em produção, Entregue, Recompra. Permite triagem manual estruturada até que CRM mínimo seja implementado.",
+          "priority": "short_term",
+          "effort": "low"
+        },
+        {
+          "action": "Criar 5 mensagens rápidas para objeções recorrentes da Objection Library da persona-icp (prazo 35d, pedido mínimo 15, qualidade, MT, como faço pedido) — Loreni cola e adapta em 10 segundos ao invés de digitar de novo.",
+          "priority": "short_term",
+          "effort": "low"
+        }
+      ]
+    }
+  ],
+  "gap_matrix": [
+    {
+      "rank": 1,
+      "channel": "site",
+      "gap": "LP sem bloco para Mariana B2C — vazamento crítico do funil",
+      "impact": "high",
+      "effort": "low",
+      "recommended_action": "Adicionar bloco 'Para você que quer sua própria pilcha' com mensagem-chave emocional + foto Bombacha de Favo + CTA WhatsApp para fluxo B2C. Executado por operador V4.",
+      "quadrant": "quick_win"
+    },
+    {
+      "rank": 2,
+      "channel": "instagram",
+      "gap": "Sem Reels semanais de Bombacha de Favo — ativo defensável digitalmente abandonado",
+      "impact": "high",
+      "effort": "low",
+      "recommended_action": "Começar produção de Reels semanais (60-90s) mostrando trançado manual. Operador V4 + Loreni produzem os 4 primeiros. Ataca motivo de perda #1 (preço) com narrativa de processo.",
+      "quadrant": "quick_win"
+    },
+    {
+      "rank": 3,
+      "channel": "whatsapp",
+      "gap": "Sem WA Business com filtro por persona — Mariana e Diego caem na mesma fila",
+      "impact": "high",
+      "effort": "low",
+      "recommended_action": "Migrar para WhatsApp Business + saudação automatizada que filtra Mariana (uso próprio) vs Diego (loja) vs anti-persona. Catálogo do WA + mensagens rápidas para 7 objeções.",
+      "quadrant": "quick_win"
+    },
+    {
+      "rank": 4,
+      "channel": "anuncios",
+      "gap": "Search sem direcionamento de persona específica + Bombacha de Favo fora dos lances",
+      "impact": "high",
+      "effort": "low",
+      "recommended_action": "Apontamento à agência: segmentar Search em 'B2C Mariana' (principal — grupo Bombacha de Favo + grupo Linha completa) + 'B2B Diego' (secundário). Match Frase/Exata. Bombacha de Favo em grupo dedicado.",
+      "quadrant": "quick_win"
+    },
+    {
+      "rank": 5,
+      "channel": "anuncios",
+      "gap": "Sem rastreamento de origem por keyword no clique do WA",
+      "impact": "high",
+      "effort": "low",
+      "recommended_action": "Apontamento agência + operador V4: GA4 via GTM + UTM dinâmica {keyword}{campaignid}{adgroupid} no link wa.me.",
+      "quadrant": "quick_win"
+    },
+    {
+      "rank": 6,
+      "channel": "google_meu_negocio",
+      "gap": "GMB ativo mas provavelmente não otimizado — descrição genérica, sem persona, sem fotos atualizadas, sem Google Posts",
+      "impact": "medium",
+      "effort": "low",
+      "recommended_action": "Loreni + operador V4: otimizar descrição alinhada à persona Mariana + Bombacha de Favo, upload de 8-12 fotos produto + 5 fábrica, Google Posts semanais, solicitar 5-10 reviews.",
+      "quadrant": "quick_win"
+    },
+    {
+      "rank": 7,
+      "channel": "site",
+      "gap": "Footer institucional incompleto + erro 'cole o link aqui' no preload mobile",
+      "impact": "medium",
+      "effort": "low",
+      "recommended_action": "Completar footer (endereço, CNPJ, telefone fixo, e-mail) e corrigir literal no preload mobile no mesmo deploy.",
+      "quadrant": "quick_win"
+    },
+    {
+      "rank": 8,
+      "channel": "whatsapp",
+      "gap": "Sem follow-up estruturado",
+      "impact": "high",
+      "effort": "medium",
+      "recommended_action": "Combinar com CRM mínimo da SWOT v2: pipeline B2B (Diego) e B2C (Mariana) no Kommo free com etapas e régua de reativação no pré-pico farroupilha.",
+      "quadrant": "strategic_project"
+    },
+    {
+      "rank": 9,
+      "channel": "site",
+      "gap": "Zero prova social estruturada",
+      "impact": "high",
+      "effort": "low",
+      "recommended_action": "Adicionar bloco de 3-5 depoimentos (Mariana + Diego). Print autorizado de WhatsApp + foto/cidade + frase curta.",
+      "quadrant": "quick_win"
+    },
+    {
+      "rank": 10,
+      "channel": "anuncios",
+      "gap": "Performance Max abandonada sem documentação",
+      "impact": "medium",
+      "effort": "low",
+      "recommended_action": "Apontamento à agência: decidir retomar (com audiência semente + criativos Reels) ou arquivar.",
+      "quadrant": "quick_win"
+    },
+    {
+      "rank": 11,
+      "channel": "whatsapp",
+      "gap": "Sem catálogo no WhatsApp Business",
+      "impact": "medium",
+      "effort": "low",
+      "recommended_action": "Configurar Catalog do WA Business com 5-8 produtos (Bombacha de Favo destaque, popular, Kit Invernada, saia de prenda, infantil).",
+      "quadrant": "quick_win"
+    },
+    {
+      "rank": 12,
+      "channel": "site",
+      "gap": "Single-page sem páginas internas",
+      "impact": "medium",
+      "effort": "medium",
+      "recommended_action": "Criar páginas internas /bombacha-de-favo, /kit-invernada-ctg, /linha-infantil — habilita SEO orgânico.",
+      "quadrant": "strategic_project"
+    },
+    {
+      "rank": 13,
+      "channel": "site",
+      "gap": "Sem schema markup",
+      "impact": "low",
+      "effort": "low",
+      "recommended_action": "Adicionar JSON-LD LocalBusiness + Product no head da LP.",
+      "quadrant": "fill_time"
+    }
+  ],
+  "executive_summary": {
+    "overall_assessment": "Bombachas Farroupilha tem comunicação digital com mais ativos do que parecia na v1: GMB ativo (não inexistente), Google Ads já mirando perfil de Mariana (55,8% femininos = persona desejada), LP B2B segmentada com CRO 38, Pixel formado em 3 meses, GTM-M7WTSW9C operando. Score médio sobe de 29 (v1) para 35 (v2) após reconhecimento do GMB. O padrão do funil é: a entrada de tráfego pago captura Mariana real, mas a LP não fala com ela (sem bloco B2C), o WA não filtra ela (sem WA Business), e a Bombacha de Favo (carro-chefe que justifica premium) está fora dos lances. 5 quick wins INDEPENDENTES da agência (operador V4 + Loreni executam em 1-2 semanas) destravam o meio do funil. 5 apontamentos paralelos para a agência cobrem reorientação de mídia paga. As 2 frentes em paralelo cobrem a janela pré-pico farroupilha de 45 dias.",
+    "top_problems": [
+      {
+        "problem": "LP B2B segmentada não tem bloco para Mariana B2C — vazamento crítico do funil entre Google Ads e Decisão",
+        "evidence": "Persona-icp v2: Mariana chega via Google Ads (55,8% femininos no V4MOS), mas LP segmenta apenas blocos 'Para Representantes e Lojistas' e 'Para CTGs e Invernadas'. Ela não se vê e sai antes do FAQ.",
+        "impact": "Estimativa qualitativa: 60-70% dos cliques B2C qualificados são perdidos. Quick win de operador V4 (Elementor + 1-2h) destrava conversão imediata.",
+        "action": "Adicionar bloco 'Para você que quer sua própria pilcha' com mensagem-chave emocional aprovada + foto Bombacha de Favo + CTA WhatsApp Business com fluxo B2C."
+      },
+      {
+        "problem": "Bombacha de Favo (carro-chefe declarado) digitalmente abandonada — 7 impressões em 90d no Google Ads e 0 Reels semanais",
+        "evidence": "V4MOS: keyword 'bombacha de favo' com 7 impressões em 90 dias. Instagram orgânico ativo mas sem Reels específicos do trançado manual. Concorrente Regalo Campeiro tem 26K seguidores narrando catálogo (não processo).",
+        "impact": "Ativo defensável mais forte da marca não está sendo usado para atacar o motivo de perda #1 declarado ('preço'). Janela 12-18 meses antes que outro player ocupe a narrativa.",
+        "action": "Triplo: (1) apontamento agência criar grupo Search dedicado à keyword 'bombacha de favo' em Exata; (2) operador V4 + Loreni produzem 4 Reels semanais de trançado manual nas primeiras 4 semanas; (3) bloco 'Como nasce a Bombacha de Favo' na LP."
+      },
+      {
+        "problem": "Motivo de perda #1 declarado é 'preço' — mas problema é tradução de valor, não precificação",
+        "evidence": "Loreni declarou no V4MOS: clientes 'acharam caro' e 'foram para outro'. Combinado com ausência de Reels de processo + Regalo Campeiro narrando catálogo + LP sem bloco Mariana = Mariana compara Bombacha de Favo com varejo industrial.",
+        "impact": "Sem reposicionamento, 70% do SOM B2C (R$ 2,8MM dos R$ 4MM totais) fica frustrado. Ticket médio R$ 100 declarado se torna teto em vez de média.",
+        "action": "Os 5 quick wins independentes (bloco LP + Reels + WA Business + GMB + footer) reforçam a narrativa simultaneamente. Sem 1 deles, ataque ao motivo de perda fica incompleto."
+      }
+    ],
+    "communication_score": 35
+  },
+  "competitor_benchmark": {
+    "description": "Benchmark canal-a-canal contra 2 grupos referenciais do setor têxtil tradicionalista. Os nomes específicos abaixo são placeholders representativos do tipo de concorrente — Loreni pode validar/substituir por nomes reais que ela conheça no setor. Scores estimados [E] com base em padrão observado no nicho de moda tradicionalista B2B.",
+    "groups": [
+      {
+        "name": "Fábricas tradicionalistas grandes (RS/SC)",
+        "members": [
+          "[E] Categoria: fábricas estabelecidas com 30+ anos, marca consolidada, distribuição via representantes regionais. Nomes reais a confirmar com Loreni — categoria inclui marcas como Pampeana, Vimara, Bagheras (validar)."
+        ],
+        "positioning": "Tradição + escala + variedade ampla. Comunicação focada em catálogo extenso, presença em feiras, e relacionamento com lojistas via representante físico. Digital fraco mas com nome estabelecido."
+      },
+      {
+        "name": "Pilcharias varejistas com Instagram forte",
+        "members": [
+          "[E] Categoria: lojas físicas regionais (não fábricas) que têm 30-100k seguidores no Instagram com produção visual profissional, conteúdo de moda gaúcha, e vendas tanto B2C quanto pequeno atacado para CTGs."
+        ],
+        "positioning": "Moda tradicionalista contemporânea, alto nível visual no Instagram, comunicação aspiracional. Não competem em B2B fábrica direta mas captam atenção do público que poderia ser ICP da Tapparo."
+      }
+    ],
+    "benchmark_by_channel": [
+      {
+        "channel": "site",
+        "client_score": 55,
+        "best_in_class_score": 70,
+        "gap": 15,
+        "best_practice_observed": "[E] Grupos com sites institucionais maduros (homepage + sobre + linhas + revendedores + contato) com seção de 'Onde Encontrar' listando lojistas parceiros por estado — vira prova social estrutural e SEO de cidade.",
+        "opportunity_for_client": "Manter a LP como entrada B2B principal e criar páginas internas (/bombacha-de-favo, /lojistas-parceiros, /kit-invernada-ctg) para SEO orgânico + prova social estruturada com depoimentos por região."
+      },
+      {
+        "channel": "instagram",
+        "client_score": 30,
+        "best_in_class_score": 75,
+        "gap": 45,
+        "best_practice_observed": "[E] Pilcharias varejistas com 30-100k seguidores produzem Reels semanais com pessoas usando o produto, conteúdo de bastidores e desfile em eventos tradicionalistas. Carrosséis bem editados com texto sobreposto.",
+        "opportunity_for_client": "O ativo mais defensável (trançado manual da Bombacha de Favo) é também o mais visualmente forte e ainda não está sendo usado. Reels semanal de bastidores do favo é diferenciação imediata — nenhum concorrente de fábrica grande está produzindo esse tipo de conteúdo."
+      },
+      {
+        "channel": "anuncios",
+        "client_score": 35,
+        "best_in_class_score": 60,
+        "gap": 25,
+        "best_practice_observed": "[E] Concorrentes maduros têm campanhas Search segmentadas por linha + intenção (atacado vs varejo) com Quality Score 7+. Performance Max alimentada por catálogo do Merchant Center quando há e-commerce B2C.",
+        "opportunity_for_client": "Apontamentos da SWOT (#1, #2, #3) levam a campanha Search para esse patamar. Sem catálogo e-commerce, PMax é menos relevante — focar excelência em Search B2B é a aposta certa."
+      },
+      {
+        "channel": "google_meu_negocio",
+        "client_score": 0,
+        "best_in_class_score": 65,
+        "gap": 65,
+        "best_practice_observed": "[E] Fábricas tradicionalistas grandes têm GMB completo com 20+ fotos, horário, 30-100 reviews ao longo de anos, e Google Posts ocasionais. Aparecem no painel local do Google quando alguém pesquisa 'fábrica de bombacha [cidade]'.",
+        "opportunity_for_client": "GMB do zero com 8-12 fotos de produto + 5 fotos de fábrica + 5-10 reviews de lojistas antigos em 30 dias coloca a Tapparo acima da maioria das fábricas regionais que não têm GMB sequer reivindicado."
+      },
+      {
+        "channel": "whatsapp",
+        "client_score": 25,
+        "best_in_class_score": 55,
+        "gap": 30,
+        "best_practice_observed": "[E] Concorrentes maduros usam WhatsApp Business com saudação, catálogo, mensagens rápidas, etiquetas, ausência configurada e tempo médio de resposta em horas (não dias). Alguns têm chatbot inicial para qualificação.",
+        "opportunity_for_client": "Quick win imediato: migrar para WA Business + saudação automatizada com filtro CNPJ + catálogo. Coloca a Tapparo acima dos concorrentes que continuam no WhatsApp pessoal sem estrutura."
+      }
+    ],
+    "strategic_read": "A Bombachas Farroupilha está muito atrás do grupo 'Pilcharias varejistas com Instagram forte' em produção de conteúdo orgânico (gap 45), mas o gap mais barato de fechar é GMB (gap 65, esforço low). A vantagem estratégica é que a competição entre fábricas grandes é fraca digitalmente — elas têm marca mas o digital é improvisado, sem GMB completo, sem WhatsApp Business estruturado, sem Reels de bastidores. A Tapparo pode pular degraus implementando rápido os fundamentos (GMB, WhatsApp Business, prova social na LP, Bombacha de Favo no centro da comunicação) e capturar buscas qualificadas antes que as fábricas grandes profissionalizem o digital — janela estimada de 12-18 meses."
+  },
+  "journey_friction_map": {
+    "description": "Mapa de fricção do funil real da persona Diego, do primeiro contato à recompra. Volumes mensais estimados a partir dos dados V4MOS (Google Ads) + estimativa qualitativa para etapas pós-clique. Os números absolutos são estimativas baseadas em 90 dias de dados; os percentuais de leakage são o foco analítico.",
+    "stages": [
+      {
+        "stage": "Exposição (Search)",
+        "current_volume": "~10.900 impressões/mês [E] (32.654 em 90d / 3)",
+        "leakage_pct": 97.8,
+        "root_cause": "Search só ranqueia keywords com lance ativo. Bombacha de Favo (carro-chefe) tem ~2 imp/mês — concorrência fora dos lances. Mas 97,8% das impressões não viram clique no setor (média de mercado).",
+        "fix_effort": "medium",
+        "fix_impact_estimate": "Apontamento #2 SWOT (Bombacha de Favo nos lances) pode adicionar 800-2.000 impressões/mês de keyword de alta intenção."
+      },
+      {
+        "stage": "Clique (Search → LP)",
+        "current_volume": "~240 cliques/mês [E] (725 em 90d / 3)",
+        "leakage_pct": 86.5,
+        "root_cause": "55,8% dos cliques são femininos (anti-persona Compradora de prenda). Dos 240 cliques/mês, apenas ~105 são B2B em potencial — o resto consome verba sem ICP-fit.",
+        "fix_effort": "medium",
+        "fix_impact_estimate": "Apontamento #1 SWOT (segmentar Search) pode subir a fração B2B de ~44% para 70-80% mantendo o mesmo budget."
+      },
+      {
+        "stage": "Clique WhatsApp (LP → WA)",
+        "current_volume": "~33 cliques no WA/mês [E] (98 em 90d / 3)",
+        "leakage_pct": 0,
+        "root_cause": "LP B2B com CRO 38 e CTAs WhatsApp claros — 13,5% dos cliques na LP viram clique no WA. Acima do esperado. Não há vazamento aqui.",
+        "fix_effort": "low",
+        "fix_impact_estimate": "Adicionar prova social na LP pode subir a taxa para 15-18%, +5-8 cliques/mês no WA."
+      },
+      {
+        "stage": "Resposta WhatsApp",
+        "current_volume": "~33 conversas/mês [E]",
+        "leakage_pct": 25,
+        "root_cause": "Sem saudação automatizada nem filtro, Loreni atende todos manualmente. Estimativa: 25% dos leads dão fade-out por tempo de resposta lento (Diego, cético, escolhe quem respondeu primeiro). Quem desiste raramente volta.",
+        "fix_effort": "low",
+        "fix_impact_estimate": "Saudação automatizada do WA Business reduz fade-out para 10-15% e libera Loreni para focar no ICP correto."
+      },
+      {
+        "stage": "Qualificação (B2B vs B2C)",
+        "current_volume": "~25 conversas qualificadas/mês [E]",
+        "leakage_pct": 60,
+        "root_cause": "Dos que respondem, ~60% são anti-persona (consumidora de prenda, caçador de preço, ou curioso). Apenas ~10 conversas/mês são Diego (ICP real). Hoje Loreni descobre isso conversando — desperdício de tempo significativo.",
+        "fix_effort": "low",
+        "fix_impact_estimate": "Pergunta-filtro na saudação automatizada (loja vs uso pessoal) elimina anti-persona antes de consumir tempo. Razão de qualificação sobe de 40% para 70-80%."
+      },
+      {
+        "stage": "Cotação enviada",
+        "current_volume": "~10 cotações enviadas/mês [E]",
+        "leakage_pct": 50,
+        "root_cause": "Diego (cético) compara 2-3 fornecedores. ~50% dos que receberam cotação não fecham (escolhem outro, adiam, somem). Sem follow-up estruturado, lead esfria.",
+        "fix_effort": "medium",
+        "fix_impact_estimate": "Régua de follow-up no D+3 e D+7 da cotação (mesmo manual) pode recuperar 20-30% dos leads adiados — +1-2 pedidos/mês."
+      },
+      {
+        "stage": "Pedido fechado",
+        "current_volume": "~5 pedidos novos/mês [E]",
+        "leakage_pct": 0,
+        "root_cause": "Pedidos fechados entram em produção (35 dias). Não há vazamento técnico aqui — fricção é a ansiedade do lojista durante os 35 dias sem comunicação proativa.",
+        "fix_effort": "low",
+        "fix_impact_estimate": "Comunicação proativa nos dias 7, 21 e 30 da produção reduz ansiedade e aumenta probabilidade de recompra de 50% para 70-80%."
+      },
+      {
+        "stage": "Recompra (próximo ciclo)",
+        "current_volume": "[E] não medido — sem CRM",
+        "leakage_pct": 50,
+        "root_cause": "Sem régua de reativação no pré-pico do ano seguinte, lojista pode escolher outro fornecedor para o próximo ciclo se o primeiro foi apenas 'satisfatório'. CRM 5/100 é o gargalo.",
+        "fix_effort": "medium",
+        "fix_impact_estimate": "Régua de reativação 90 dias antes do pico (apontamento CRM da SWOT) pode subir taxa de recompra de ~50% para 70%+ — base instalada vira ativo."
+      }
+    ],
+    "biggest_leakage_summary": "O maior vazamento absoluto está na Qualificação (B2B vs B2C): 60% das conversas iniciadas no WhatsApp são anti-persona, consumindo o tempo da Loreni e atrasando a resposta para Diego (ICP real). Combinado com o leakage da Resposta (25% fade-out por tempo lento) e da Cotação (50% não fecham sem follow-up), o funil hoje converte de ~240 cliques pagos/mês para ~5 pedidos novos/mês — taxa de 2,1%. Cada ponto percentual recuperado equivale a +1-2 pedidos/mês.",
+    "projected_funnel_90d_realistic": "Com os 5 quick wins implementados (GMB + WA Business com filtro + Bombacha de Favo nos lances + prova social na LP + GA4/UTM): exposição sobe 10-15% (Bombacha de Favo entra nos lances), fração ICP no clique sobe de 44% para 60-70%, fade-out no WA cai de 25% para 10-15%, qualificação correta sobe de 40% para 70-80%, follow-up estruturado recupera 20% das cotações adiadas. Projeção: de ~5 para ~10-12 pedidos novos/mês em 90 dias, com mesmo budget de mídia (R$ 335/mês). Recompra do ciclo seguinte sobe de 50% para ~70% se CRM mínimo entrar."
+  },
+  "tone_of_voice_analysis": {
+    "description": "Análise de coerência do tom de voz entre canais. Tom oficial não está declarado no briefing (brand.voice_tone = null) — pilares abaixo são inferidos do conteúdo da LP e devem ser validados com Loreni antes da S3 (brandbook). Drift mensurado canal a canal a partir do que foi observável.",
+    "brand_voice_target": {
+      "pillars": [
+        "Direto e objetivo — vai ao ponto sem rodeio (LP entrega proposta + diferenciais + FAQ sem floreio)",
+        "Técnico-comercial B2B — fala de prazo, pedido mínimo, processo, sem corporativês",
+        "Orgulho tradicionalista sem caricatura — respeita a cultura gaúcha sem virar estereótipo de 'tchê e bah'",
+        "Acolhedor para lojista — trata o cliente B2B como parceiro, não como pedido",
+        "Honesto sobre limitações — declara 35 dias real, mínimo de 15 peças, não promete impossível"
+      ],
+      "avoid": [
+        "Não é exageradamente regionalista (evitar 'tchê', 'tri legal', 'guri/guria' em comunicação institucional)",
+        "Não é vendedor agressivo ('compre já', 'última chance', 'desconto imperdível')",
+        "Não é corporativo distante ('prezado cliente', 'colocamo-nos à disposição')",
+        "Não é genericamente 'gaúcho de propaganda' (cavalo + churrasco + chimarrão como pano de fundo automático)"
+      ]
+    },
+    "channel_drift": [
+      {
+        "channel": "site",
+        "actual_tone": "Direto, B2B, objetivo. Exemplo: 'Aceitamos pedidos a partir de 15 peças'. Coerente com Diego B2B mas SEM bloco específico para Mariana B2C.",
+        "target_alignment": "bom",
+        "drift_notes": "LP cumpre o que prometeu fazer (segmentação B2B), mas a estratégia dupla aprovada exige bloco B2C adicional. Não é drift de tom — é gap de cobertura de persona.",
+        "fix": "Adicionar bloco 'Para você que quer sua própria pilcha' (Mariana) com tom emocional/funcional, sem mexer nos blocos B2B existentes (Diego).",
+        "example": "Mantém: 'Atendemos representantes comerciais, lojistas e CTGs/invernadas...' | Adicionar: 'E também atendemos você que quer sua própria pilcha, feita à mão, no caimento que respeita a tradição.'"
+      },
+      {
+        "channel": "instagram",
+        "actual_tone": "[E] Não observado diretamente — orgânico ativo mencionado na FPS. Necessário screenshots.",
+        "target_alignment": "parcial",
+        "drift_notes": "Sem Reels de processo, comunicação fica em 'feed de fotos do produto'. Mariana espera ver bastidores + narrativa cultural — sem isso, perde para Regalo Campeiro (26K seguidores com cadência consistente).",
+        "fix": "Cadência mínima 3 posts/semana + Reels semanal de trançado manual + Stories com bastidores de fábrica. Operador V4 + Loreni produzem juntos primeiras 4 semanas.",
+        "example": "[E] Sem citação observada."
+      },
+      {
+        "channel": "anuncios",
+        "actual_tone": "[E] Copy do Search da agência de Passo Fundo não inspecionado via Preview Tool. Inferência: copy provavelmente genérica que captura 55,8% femininos sem nomear Mariana específica.",
+        "target_alignment": "parcial",
+        "drift_notes": "Não é tom desalinhado — é tom genérico que pega Mariana 'por acidente'. Reorientação para Mariana específica (Bombacha de Favo + Semana Farroupilha + cidades top 3) refina o que já funciona.",
+        "fix": "Apontamento à agência: ad copy com mensagem-chave emocional aprovada para grupos B2C ('A bombacha que respeita a tradição: feita à mão, no caimento que você quer') + funcional para grupo B2B ('Bombacha de Favo direto da fábrica, em 35 dias, a partir de 15 peças').",
+        "example": "[E] Sem citação observada — solicitar à agência os anúncios atuais."
+      },
+      {
+        "channel": "google_meu_negocio",
+        "actual_tone": "[E] GMB ativo declarado, conteúdo não verificado. Provável descrição básica sem persona-alvo.",
+        "target_alignment": "parcial",
+        "drift_notes": "GMB existe mas provavelmente sem persona Mariana nomeada na descrição nem Bombacha de Favo destacada.",
+        "fix": "Atualizar descrição: 'Fábrica de Bombachas Tradicionais em Ciríaco/RS. Especializada na Bombacha de Favo artesanal, com prazo de 35 dias e pedido a partir de 15 peças. Atendemos consumidoras finais (Mariana) e lojistas/CTGs (Diego). Top 3 cidades: Caxias do Sul, Alegrete, Passo Fundo.'",
+        "example": "n/a — perfil a otimizar"
+      },
+      {
+        "channel": "whatsapp",
+        "actual_tone": "[E] Atendimento humano da Loreni — ponto forte. Sem WhatsApp Business, sem saudação automatizada nem filtro por persona.",
+        "target_alignment": "media",
+        "drift_notes": "Tom humano da Loreni é coerente, mas Mariana e Diego entram na mesma fila sem filtro. Sem mensagens rápidas padronizadas, cada resposta a uma objeção é improvisada — risco de tom variar conforme cansaço.",
+        "fix": "WA Business + saudação automatizada filtrando Mariana (uso próprio) vs Diego (loja) vs anti-persona + 5 mensagens rápidas para objeções principais.",
+        "example": "Pré-preenchida da LP: 'Olá, vim pelo site e gostaria de um orçamento.' Bom ponto de partida — falta saudação automática que pergunte uso próprio vs loja."
+      }
+    ],
+    "coherence_score": 55
+  },
+  "url_audit": {
+    "description": "Lista de URLs críticas do cliente para QA do operador antes da apresentação da auditoria à Loreni.",
+    "urls": [
+      {
+        "url": "https://bombachasfarroupilha.com.br/",
+        "purpose": "Landing page principal (única página do site)",
+        "status_expected": "LP B2B com proposta clara, segmentação por 3 públicos, FAQ com 5 objeções, CTAs WhatsApp em múltiplos pontos, footer institucional completo (após correção)",
+        "verify_checklist": [
+          "Hero entrega os 3 elementos da mensagem-chave (favo, 35 dias, 15 peças)?",
+          "FAQ está atualizado e cobre as 5 objeções principais?",
+          "Erro 'cole o link aqui' no preload mobile foi corrigido?",
+          "Footer tem endereço, CNPJ, telefone fixo e link Instagram?",
+          "CTAs WhatsApp usam UTM dinâmica após apontamento #3 SWOT?"
+        ]
+      },
+      {
+        "url": "https://www.instagram.com/farroupilha_bombachas/",
+        "purpose": "Instagram orgânico oficial — único canal de conteúdo recorrente da marca",
+        "status_expected": "Bio clara com proposta B2B + link da LP, destaques organizados por tema, cadência mínima de 3 posts/semana + Reels semanal",
+        "verify_checklist": [
+          "Bio menciona 'fábrica' e 'atacado/B2B'?",
+          "Link na bio aponta para a LP (não para outro site)?",
+          "Existem destaques (Stories destacados) organizados?",
+          "Últimos 9 posts têm padronização visual mínima?",
+          "Existe pelo menos 1 Reel mostrando bastidores da fábrica?"
+        ]
+      },
+      {
+        "url": "https://wa.me/555496150025?text=Olá%2C%20vim%20pelo%20site%20e%20gostaria%20de%20um%20orçamento",
+        "purpose": "Conversão final — link wa.me com mensagem pré-preenchida usado em todos os CTAs da LP",
+        "status_expected": "Após apontamentos: link deve carregar UTM dinâmica {keyword}{campaignid}{adgroupid} para atribuição. Conta-destino deve estar configurada como WhatsApp Business com saudação automatizada.",
+        "verify_checklist": [
+          "Número está correto (+55 54 9615-0025)?",
+          "Mensagem pré-preenchida ainda faz sentido?",
+          "UTM dinâmica foi adicionada (apontamento #3 SWOT)?",
+          "Conta-destino é WhatsApp Business?",
+          "Saudação automatizada com filtro de loja/CNPJ está configurada?"
+        ]
+      },
+      {
+        "url": "Google Meu Negócio — A CRIAR (Tapparo Bombachas / Bombachas Farroupilha, Ciríaco/RS)",
+        "purpose": "Presença local + SEO + reviews B2B + sinalização de empresa real",
+        "status_expected": "Perfil verificado com endereço, categoria 'Fábrica de roupas', 8-12 fotos de produto + 5 de fábrica, horário, descrição alinhada aos pilares de tom, 5-10 reviews iniciais de lojistas em 30 dias.",
+        "verify_checklist": [
+          "Verificar primeiro se não existe nome já reivindicado por terceiros no Google Maps",
+          "Endereço da fábrica correto e visível no Google Maps?",
+          "Categoria principal 'Fábrica de roupas' (não 'Loja de roupas')?",
+          "Descrição menciona Bombacha de Favo + 35 dias + 15 peças?",
+          "Mínimo 8 fotos de produto + 5 de fábrica antes de publicar"
+        ]
+      },
+      {
+        "url": "https://mktlab.app/crm/opportunities/79e9209e-bfc2-41b1-9cac-90197e922390",
+        "purpose": "Oportunidade no Mktlab — registro interno da V4 (não visível ao cliente)",
+        "status_expected": "Status atualizado com cliente fechado, escopo S1+S4, próximos passos S2-S4",
+        "verify_checklist": [
+          "Status reflete contrato pago (R$ 12.364 em 2026-05-11)",
+          "Escopo registrado é S1 completa + S4 (comercial + cliente oculto)",
+          "Comentários têm referência aos outputs da S1 já gerados"
+        ]
+      }
+    ]
+  },
+  "quick_wins": [
+    {
+      "action": "Criar Google Meu Negócio (GMB) da fábrica Tapparo Bombachas em Ciríaco/RS",
+      "channel": "google_meu_negocio",
+      "time_estimate": "2h (incluindo coleta de 8-12 fotos de produto + 5 de fábrica)",
+      "expected_impact": "Visibilidade local no Google + sinalização de empresa real (confiança B2B) + base para acumular reviews de lojistas. Em 30 dias, 5-10 reviews de lojistas antigos via representante (incentivo: brinde no próximo pedido).",
+      "who_does_it": "client",
+      "steps": [
+        "Verificar no Google Maps se 'Tapparo Bombachas' ou 'Bombachas Farroupilha' não está reivindicado por terceiros",
+        "Acessar business.google.com e criar perfil para a fábrica",
+        "Preencher: razão social Tapparo Bombachas, categoria principal 'Fábrica de roupas', endereço da fábrica em Ciríaco/RS, telefone, horário comercial",
+        "Adicionar descrição (até 750 caracteres) alinhada aos pilares de tom — mencionando Bombacha de Favo + 35 dias + 15 peças",
+        "Upload de 8-12 fotos do produto (Bombacha de Favo em destaque) + 5 fotos da fábrica/equipe",
+        "Verificar o perfil (cartão postal do Google leva 5-14 dias)",
+        "Após verificação: solicitar ao representante comercial 5 reviews dos lojistas mais antigos da carteira"
+      ]
+    },
+    {
+      "action": "Migrar para WhatsApp Business e configurar saudação automatizada com filtro de loja/CNPJ + mensagem de ausência fora do horário",
+      "channel": "whatsapp",
+      "time_estimate": "1h",
+      "expected_impact": "Filtra anti-personas (Compradora de prenda, Caçador de preço) já na entrada. Reduz fade-out de Diego (lead bom) por tempo lento de resposta. Libera ~30% do tempo de WhatsApp da Loreni que hoje é consumido por leads fora do ICP.",
+      "who_does_it": "client",
+      "steps": [
+        "Verificar se o número +55 54 9615-0025 já está em WA Business; se não, migrar (backup automático preserva conversas)",
+        "Configurar mensagem de saudação: 'Oi! Que bom ter você por aqui na Bombachas Farroupilha. Para te ajudar melhor: (1) Você está comprando para sua loja ou uso pessoal? (2) Se for para sua loja, me passa o nome e a cidade. Em breve a Loreni te responde.'",
+        "Configurar mensagem de ausência (8h-18h seg-sex): 'Olá! Estamos fora do horário comercial. Voltamos amanhã pela manhã. Deixa uma prévia do que você precisa que já adianto na volta.'",
+        "Criar 5 mensagens rápidas (atalhos /atalho) para as 5 objeções principais da Objection Library da persona-icp"
+      ]
+    },
+    {
+      "action": "Completar o footer da LP com endereço da fábrica, CNPJ, telefone fixo, e-mail e link do Instagram. No mesmo deploy, corrigir o erro de produção 'cole o link aqui' no preload do background mobile.",
+      "channel": "site",
+      "time_estimate": "1h (WordPress + Elementor + QA mobile)",
+      "expected_impact": "Reforço de confiança B2B (Diego confere endereço/CNPJ antes de fechar pedido grande) + correção do erro técnico que sinaliza falta de QA. Pequeno boost de SEO local.",
+      "who_does_it": "operator",
+      "steps": [
+        "Coletar com Loreni: endereço completo da fábrica em Ciríaco/RS, CNPJ da Tapparo Bombachas, telefone fixo (se houver), e-mail comercial",
+        "Editar footer no Elementor com os dados + link do Instagram @farroupilha_bombachas",
+        "Localizar e remover o literal 'cole o link aqui https://...' no preload do background mobile",
+        "QA: testar no Chrome mobile (DevTools) e em um celular real",
+        "Publicar"
+      ]
+    },
+    {
+      "action": "Adicionar bloco de prova social na LP com 3-5 depoimentos de lojistas (nome, cidade, foto da loja ou da bombacha, frase curta sobre prazo/qualidade)",
+      "channel": "site",
+      "time_estimate": "2h (incluindo coleta autorizada)",
+      "expected_impact": "Aumenta confiança de Diego (ICP cético) no estágio de Consideração. Taxa de conversão da LP pode subir de 13,5% para 15-18% (+5-8 cliques no WhatsApp/mês com mesmo tráfego).",
+      "who_does_it": "client_team",
+      "steps": [
+        "Loreni seleciona 5 lojistas da carteira atual com bom histórico (sem queixa de prazo)",
+        "Loreni pede autorização por WhatsApp para usar nome + cidade + 1 foto (loja, pilcha entregue, ou print de WhatsApp de confirmação de recebimento)",
+        "Coleta de 1 frase curta de cada (ex: 'Pedi 20 peças em maio e chegaram em junho como combinado.')",
+        "Operador (Gina) monta o bloco no Elementor com layout de cards e publica"
+      ]
+    },
+    {
+      "action": "Configurar catálogo do WhatsApp Business com 5-8 produtos principais (Bombacha de Favo, popular, Kit Invernada, Saia de prenda, linha infantil)",
+      "channel": "whatsapp",
+      "time_estimate": "1h",
+      "expected_impact": "Diego pode navegar pelas linhas dentro do próprio WhatsApp Business sem precisar voltar à LP. Diminui fricção da etapa de Cotação. Bombacha de Favo ganha destaque visual no canal de fechamento.",
+      "who_does_it": "client",
+      "steps": [
+        "Coletar 1 foto principal + 2 secundárias de cada produto + descrição curta + preço 'a partir de R$ X' (atacado)",
+        "WhatsApp Business → Configurações → Ferramentas comerciais → Catálogo → Adicionar item",
+        "Cadastrar 5-8 produtos seguindo a ordem: Bombacha de Favo (destaque), Bombacha popular, Kit Invernada, Saia de prenda, Linha infantil",
+        "Verificar que cada produto tem link de compartilhamento no chat"
+      ]
+    }
+  ],
+  "key_insight": {
+    "headline": "A entrada já mira a persona certa (Mariana = 55,8% cliques femininos) — falta a LP, o WA e os Reels honrarem a estratégia dupla declarada.",
+    "context": "Bombachas Farroupilha tem tráfego pago captando Mariana real desde o início, mas a comunicação subsequente não a recebe: LP é B2B segmentada, WA pessoal sem filtro, Instagram sem Reels de processo. Mariana clica → não se vê na LP → sai. Ou clica → cai no WA junto com Diego B2B → tempo de resposta lento → some. Não é problema de tráfego — é problema de funil mid-low.",
+    "numbered_reasons": [
+      "(1) Tráfego pago JÁ entrega Mariana real (55,8% cliques femininos no V4MOS). A pergunta 'tem público B2C?' está respondida — falta receber adequadamente.",
+      "(2) LP B2B segmentada é ATIVO mantido — mas precisa de bloco adicional 'Para você que quer sua própria pilcha' (Mariana) sem mexer nos blocos B2B existentes (Diego).",
+      "(3) Reels semanais de Bombacha de Favo + WA Business com filtro por persona + GMB otimizado completam o funil de Mariana sem custo recorrente."
+    ],
+    "discussion_anchor": "Loreni pode começar 5 quick wins INDEPENDENTES da agência IMEDIATAMENTE (bloco LP + Reels + WA Business + GMB otimização + footer). Esses 5 destravam Mariana em 1-2 semanas. Em paralelo, 5 apontamentos para a agência de Passo Fundo (Search por persona + Bombacha de Favo + GA4/UTM + PMax + Meta MT) viajam até final de junho. As duas frentes em paralelo cobrem a janela pré-pico farroupilha."
+  },
+  "honesty_alert": "Esta auditoria v2 reconhece o GMB ativo (declarado V4MOS, antes inferido como inexistente — erro corrigido). Screenshots do Instagram e copy exata dos anúncios ainda não foram inspecionados — scores de IG (30 [E]) e Anúncios (35 [E]) seguem com estimativa. Score consolidado 35 (v2) vs 29 (v1) reflete reconhecimento do GMB + recalibração da campanha Google Ads (não mais 'desalinhada' mas 'genericamente alinhada à persona Mariana, falta direcionamento'). Riscos remanescentes: (a) cadência de Reels semanais depende de tempo da Loreni — operador V4 ajuda nas primeiras 4 semanas mas inércia precisa virar hábito; (b) WA Business com filtro automático precisa de Loreni aceitar mudar o número/configuração — se ela resistir, anti-persona continua consumindo tempo; (c) 5 apontamentos para a agência podem ser implementados parcialmente — cadência V4MOS 30/60/90d pós-contrato mitiga. Recomendação operacional: na apresentação final (semana 5), entregar cronograma específico dos 5 quick wins independentes com prazo curto (1-2 semanas) e operador V4 acompanha implementação."
+}

@@ -1,0 +1,848 @@
+{
+  "client_name": "Bombachas Farroupilha",
+  "skill": "ee-s2-diagnostico-cro",
+  "version": 1,
+  "generated_at": "2026-05-26T15:18:48.350811+00:00",
+  "segment": "Indústria/varejo de bombachas tradicionais gaúchas. B2B (representantes, lojistas, CTGs/invernadas) + B2C iniciante (Mariana, mulher tradicionalista 32–55).",
+  "url": "https://bombachasfarroupilha.com.br/",
+  "summary": "Bombachas Farroupilha tem site TECNICAMENTE SÓLIDO (PSI Mobile 92/94/96/92, Core Web Vitals PASSED, LCP 1,2s real, CLS 0,01) e prova social orgânica rara (4 depoimentos reais de Instagram de lojistas: Texas Ranch, Brida Moda Equestre, Do Campo, Baia Moda). Os gargalos de conversão NÃO são performance — são: (1) tagueamento broken (Google Ads AW-17962419023 ativo sem GA4 nem Meta Pixel = mídia paga sem atribuição); (2) 0/6 sinais de trust no footer (sem CNPJ, endereço, telefone, email, privacy/terms) + LGPD non_compliant 3/10; (3) página 100% B2B enquanto Mariana (B2C principal pós-V4MOS) não tem caminho. 3 hipóteses P1 (GA4+Pixel+CMP) destravam em ~3h sem precisar mexer no design.",
+  "summary_headline": "Site é técnico-sólido (PSI Mobile 92/94/96/92, CWV PASSED) mas perde conversão por tagueamento broken + trust ausente + Mariana sem caminho — 3 fixes P1 destravam em 3h.",
+  "summary_highlights": [
+    {
+      "category": "vantagem",
+      "label": "PSI Mobile (Perf/A11y/BP/SEO)",
+      "value": "92/94/96/92",
+      "subtext": "Core Web Vitals PASSED em campo (usuários reais). LCP 1,2s, CLS 0,01, TBT 0ms. Performance NÃO é problema.",
+      "tone": "green"
+    },
+    {
+      "category": "ameaca",
+      "label": "Tagueamento",
+      "value": "GTM vazio",
+      "subtext": "GTM-M7WTSW9C + Google Ads AW-17962419023 ativo, mas 0 GA4, 0 Meta Pixel, 0 eventos — mídia sem atribuição",
+      "tone": "red"
+    },
+    {
+      "category": "risco",
+      "label": "Compliance LGPD",
+      "value": "3/10",
+      "subtext": "Sem CMP/banner de cookies. Risco multa ANPD até R$50M",
+      "tone": "red"
+    },
+    {
+      "category": "risco",
+      "label": "Sinais de trust no footer",
+      "value": "0/6",
+      "subtext": "Sem CNPJ, endereço, telefone, email, privacy link, terms link",
+      "tone": "red"
+    },
+    {
+      "category": "vantagem",
+      "label": "Prova social",
+      "value": "4 depoimentos IG reais",
+      "subtext": "Texas Ranch, Brida Moda Equestre, Do Campo Bombachas, Baia Moda Equestre — UGC autêntico raro no setor",
+      "tone": "green"
+    },
+    {
+      "category": "oportunidade",
+      "label": "Caminho para Mariana (B2C)",
+      "value": "0%",
+      "subtext": "Página é 100% B2B. Mariana não tem seção dedicada nem CTA específico — perde 100% do potencial B2C que chega ao site",
+      "tone": "yellow"
+    }
+  ],
+  "summary_key_findings": [
+    {
+      "category": "vantagem",
+      "text": "Site é tecnicamente sólido — PageSpeed Insights Mobile 92 Performance / 94 Accessibility / 96 Best Practices / 92 SEO. Core Web Vitals PASSED em dados de campo (CrUX): LCP 1,2s (excelente), CLS 0,01 (excelente), TBT 0ms. Stack WordPress + Elementor + LiteSpeed Cache está funcionando bem. NÃO é necessário refactor técnico — só ajustes pontuais (meta description, alt em imgs, font-display, render-blocking)."
+    },
+    {
+      "category": "vantagem",
+      "text": "Site tem prova social ORGÂNICA REAL de altíssimo valor — 4 prints de Instagram de lojistas-parceiros (Texas Ranch, Brida Moda Equestre, Do Campo Bombachas, Baia Moda Equestre) com depoimentos espontâneos. Isso é raro no setor de vestuário tradicionalista e deve ser preservado e ampliado, não descartado num refactor."
+    },
+    {
+      "category": "ameaca",
+      "text": "Cliente roda Google Ads (AW-17962419023) gastando dinheiro sem retorno mensurável: GTM-M7WTSW9C instalado mas SEM GA4 conectado, SEM Meta Pixel, 0 eventos disparados em ambos. Operação cega — não há jornada de funil, não há audiências para remarketing, não há atribuição. Combinado com LGPD non_compliant (3/10, sem CMP), risco duplo: ROI desconhecido + multa ANPD até R$50M."
+    },
+    {
+      "category": "ameaca",
+      "text": "Footer 0/6 sinais de trust (sem CNPJ, endereço, telefone, email, privacy/terms) + página 100% B2B = duas fricções graves. Diego (B2B, ticket R$4.600) hesita por falta de CNPJ visível. Mariana (B2C principal pós-V4MOS) não tem nem caminho — sai no hero. Perde-se conversão em ambas as personas."
+    },
+    {
+      "category": "acao",
+      "text": "P1 (3h totais, esforço baixo, ZERO mudança visual): (1) instalar GA4 via GTM, (2) instalar Meta Pixel via GTM, (3) instalar CMP (Cookiebot). Esses 3 fixes destravam atribuição + retargeting + compliance sem mexer no design. P2 (12h, médio): footer institucional + seção Mariana + SEO técnico (H1, meta desc, alts) — aí entra design."
+    }
+  ],
+  "technical_audit": {
+    "fetched_at": "2026-05-26T15:35:00Z",
+    "cache_file": "manual entry from PSI report 2026-05-26T12:35:47",
+    "pagespeed": {
+      "mobile_scores": {
+        "performance": 92,
+        "accessibility": 94,
+        "best_practices": 96,
+        "seo": 92
+      },
+      "desktop_scores": null,
+      "mobile_cwv_lab": {
+        "lcp_ms": 3200,
+        "fcp_ms": 1300,
+        "tbt_ms": 0,
+        "cls": 0.01,
+        "speed_index_ms": 3600,
+        "tti_ms": null,
+        "ttfb_ms": null
+      },
+      "desktop_cwv_lab": null,
+      "mobile_cwv_field": {
+        "lcp_ms": 1200,
+        "fcp_ms": 1200,
+        "cls": 0.01,
+        "inp_ms": null,
+        "ttfb_ms": 800,
+        "assessment": "passed"
+      },
+      "desktop_cwv_field": null,
+      "mobile_top_opportunities": [
+        {
+          "audit": "Font display",
+          "savings_ms": 190,
+          "severity": "high"
+        },
+        {
+          "audit": "Render-blocking requests",
+          "savings_ms": 180,
+          "severity": "high"
+        },
+        {
+          "audit": "LCP request discovery",
+          "savings_ms": null,
+          "severity": "high"
+        },
+        {
+          "audit": "Improve image delivery",
+          "savings_kb": 37,
+          "severity": "medium"
+        },
+        {
+          "audit": "Reduce unused CSS",
+          "savings_kb": 14,
+          "severity": "medium"
+        }
+      ],
+      "desktop_top_opportunities": []
+    },
+    "psi_source_note": "Mobile data from PageSpeed Insights report fetched manually by operator 2026-05-26 12:35:47. Desktop tab não capturado — dados desktop pendentes."
+  },
+  "onpage_seo": {
+    "mobile": {
+      "label": "mobile",
+      "status_code": 200,
+      "final_url": "https://bombachasfarroupilha.com.br/",
+      "response_time_ms": 572,
+      "html_size_kb": 97.9,
+      "title": "Bombachas Farroupilha",
+      "title_length": 21,
+      "meta_description_length": 0,
+      "robots": "max-image-preview:large",
+      "canonical": "https://bombachasfarroupilha.com.br/",
+      "lang": "pt-BR",
+      "viewport": "present",
+      "favicon": "present",
+      "h1": [],
+      "h1_count": 0,
+      "h2_count": 22,
+      "h3_count": 7,
+      "h4_count": 0,
+      "images_total": 17,
+      "images_without_alt": 12,
+      "links_total": 6,
+      "links_internal": 1,
+      "links_external": 5,
+      "links_nofollow": 0,
+      "schema_types": [],
+      "og": {},
+      "twitter_card": {}
+    },
+    "desktop": {
+      "label": "desktop",
+      "status_code": 200,
+      "final_url": "https://bombachasfarroupilha.com.br/",
+      "response_time_ms": 570,
+      "html_size_kb": 97.9,
+      "title": "Bombachas Farroupilha",
+      "title_length": 21,
+      "meta_description_length": 0,
+      "robots": "max-image-preview:large",
+      "canonical": "https://bombachasfarroupilha.com.br/",
+      "lang": "pt-BR",
+      "viewport": "present",
+      "favicon": "present",
+      "h1": [],
+      "h1_count": 0,
+      "h2_count": 22,
+      "h3_count": 7,
+      "h4_count": 0,
+      "images_total": 17,
+      "images_without_alt": 12,
+      "links_total": 6,
+      "links_internal": 1,
+      "links_external": 5,
+      "links_nofollow": 0,
+      "schema_types": [],
+      "og": {},
+      "twitter_card": {}
+    },
+    "divergences": []
+  },
+  "security_headers": {
+    "https": true,
+    "csp": "upgrade-insecure-requests",
+    "content_type": "text/html; charset=UTF-8",
+    "content_encoding": "gzip",
+    "server": "LiteSpeed",
+    "score": 5,
+    "issues": [
+      "HSTS ausente — recomendado adicionar Strict-Transport-Security max-age=31536000",
+      "X-Frame-Options ausente — risco de clickjacking",
+      "Permissions-Policy ausente — recomendado para limitar features sensíveis",
+      "Referrer-Policy fraca ou ausente"
+    ]
+  },
+  "technical_diagnosis": {
+    "pagespeed_mobile": 92,
+    "pagespeed_desktop": null,
+    "lcp_mobile_s": 1.2,
+    "cls_mobile": 0.01,
+    "inp_mobile_ms": null,
+    "critical_issues": [
+      "Meta description ausente — SEO score 92 reflete isso. Sem rich snippet, perde CTR em SERP do Google.",
+      "0 H1 + Document sem main landmark — penaliza estrutura semântica e leitores de tela. Accessibility 94 já bom, mas dá pra subir pra 98+.",
+      "Links sem nome discernível (audit Accessibility) — pelo menos 1 link com texto vazio ou apenas ícone sem aria-label.",
+      "12 de 17 imagens sem alt (do audit on-page) — confirmação visual cabe no audit, PSI Accessibility 94 sugere que não é catastrófico mas precisa ser corrigido pra subir pra 100.",
+      "Browser errors no console (audit Best Practices) — 1+ erro logado no console JS. Investigar.",
+      "Oportunidades de performance: font-display (190ms savings), render-blocking requests (180ms), LCP request discovery, unused CSS (14 KiB). Não são bloqueadores (Performance 92/100), mas dão pra subir pra 95+.",
+      "HSTS, X-Frame-Options e Permissions-Policy ausentes — Best Practices 96 não pegou totalmente; security score independente é 5/10."
+    ],
+    "estimated_conversion_loss": "Performance técnica NÃO é o gargalo de conversão — site tem Mobile Performance 92/100, CWV PASSED (LCP 1,2s field), CLS 0,01, Accessibility 94, SEO 92. Os gargalos REAIS de conversão são: (1) tagueamento broken (Google Ads cego sem GA4/Pixel) — perda de atribuição + retargeting, não diretamente conversão; (2) 0/6 sinais de trust no footer — fricção em B2B Diego com ticket R$4.600; (3) LGPD non_compliant (3/10) — risco regulatório, não conversão direta; (4) 0% de caminho para Mariana B2C — perde 100% do potencial B2C que ainda chega ao site organicamente. Estimativa de gain com fixes P1+P2: subir conversão de ~1,0-1,5% (baseline atual, sem track) para 2,0-2,8% em 30-60 dias.",
+    "estimated": false,
+    "tested": true,
+    "psi_score_summary": "Mobile: 92 (Perf) / 94 (A11y) / 96 (BP) / 92 (SEO). Site técnico é sólido."
+  },
+  "tracking_stack": {
+    "tools_detected": {
+      "gtm": {
+        "name": "Google Tag Manager",
+        "category": "tracking"
+      },
+      "google_ads_conversion": {
+        "name": "Google Ads Conversion",
+        "category": "ads"
+      },
+      "whatsapp_widget": {
+        "name": "WhatsApp Click-to-Chat",
+        "category": "chat"
+      },
+      "wordpress": {
+        "name": "WordPress",
+        "category": "cms"
+      },
+      "elementor": {
+        "name": "Elementor",
+        "category": "cms"
+      },
+      "litespeed": {
+        "name": "LiteSpeed",
+        "category": "hosting"
+      }
+    },
+    "ids_found": {
+      "gtm": [
+        "GTM-M7WTSW9C"
+      ],
+      "ga4": [],
+      "ua": [],
+      "google_ads": [
+        "AW-17962419023"
+      ],
+      "meta_pixel": [],
+      "tiktok_pixel": [],
+      "linkedin_partner": []
+    },
+    "categories_summary": {
+      "tracking": [
+        "Google Tag Manager"
+      ],
+      "ads": [
+        "Google Ads Conversion"
+      ],
+      "chat": [
+        "WhatsApp Click-to-Chat"
+      ],
+      "cms": [
+        "Elementor",
+        "WordPress"
+      ],
+      "hosting": [
+        "LiteSpeed"
+      ]
+    },
+    "total_tools": 6,
+    "setup_diagnosis": "Stack: WordPress + Elementor + LiteSpeed (estático, mudanças sem dev). Google Tag Manager presente (GTM-M7WTSW9C) mas sem GA4 conectado — opera GTM como container vazio. Google Ads Conversion ativo (AW-17962419023): cliente PAGA Google Ads mas não consegue atribuir conversão de funil completo, só conversões diretas do Ads. Meta Pixel AUSENTE — perde possibilidade de remarketing Instagram/Facebook (cuja audiência é exatamente a Mariana, B2C principal). WhatsApp widget detectado (canal de conversão principal do cliente — alinhado com nicho)."
+  },
+  "events_fired": {
+    "ga4_event_count": 0,
+    "meta_event_count": 0,
+    "ga4_event_names": [],
+    "meta_event_names": [],
+    "events_diagnosis": "0 eventos GA4 disparados e 0 eventos Meta Pixel — esperado, dado que ambas as ferramentas estão AUSENTES. Sem `page_view` (GA4) ou `PageView` (Pixel), não há jornada de funil. Cliente direciona via WhatsApp mas não rastreia clique no botão verde do CTA (deveria gerar `generate_lead`/`Lead`).",
+    "expected_events_missing": [
+      "page_view (GA4)",
+      "PageView (Meta Pixel)",
+      "generate_lead (GA4, no clique WhatsApp)",
+      "Lead (Meta Pixel, no clique WhatsApp)",
+      "scroll (GA4)",
+      "view_item_list (GA4, nas seções de produto)"
+    ]
+  },
+  "quality_flags": [
+    {
+      "severity": "critical",
+      "flag": "gtm_without_analytics",
+      "title": "GTM instalado sem GA4 nem Meta Pixel",
+      "detail": "Container GTM carrega mas nao dispara nenhuma tag de analytics ou ads conhecida. Investimento em midia opera cego — sem atribuicao de conversao."
+    }
+  ],
+  "cro_elements_deep": {
+    "desktop": {
+      "cta_count": 3,
+      "cta_above_fold": 1,
+      "cta_list": [
+        {
+          "text": "QUERO SOLICITAR ORÇAMENTO!",
+          "tag": "a",
+          "href": "https://wa.me/5554996150025?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento.",
+          "is_whatsapp": true,
+          "is_tel": false,
+          "is_mail": false,
+          "above_fold": true,
+          "width": 414,
+          "height": 76
+        },
+        {
+          "text": "QUERO SOLICITAR ORÇAMENTO!",
+          "tag": "a",
+          "href": "https://wa.me/5554996150025?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento.",
+          "is_whatsapp": true,
+          "is_tel": false,
+          "is_mail": false,
+          "above_fold": false,
+          "width": 414,
+          "height": 76
+        },
+        {
+          "text": "QUERO SOLICITAR ORÇAMENTO!",
+          "tag": "a",
+          "href": "https://wa.me/5554996150025?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento.",
+          "is_whatsapp": true,
+          "is_tel": false,
+          "is_mail": false,
+          "above_fold": false,
+          "width": 371,
+          "height": 70
+        }
+      ],
+      "whatsapp_links": [
+        {
+          "text": "QUERO SOLICITAR ORÇAMENTO!",
+          "href": "https://wa.me/5554996150025?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento.",
+          "visible": true,
+          "floating": false
+        },
+        {
+          "text": "QUERO SOLICITAR ORÇAMENTO!",
+          "href": "https://wa.me/5554996150025?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento.",
+          "visible": true,
+          "floating": false
+        },
+        {
+          "text": "QUERO SOLICITAR ORÇAMENTO!",
+          "href": "https://wa.me/5554996150025?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento.",
+          "visible": true,
+          "floating": false
+        },
+        {
+          "text": "",
+          "href": "https://wa.me/5554996150025?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento.",
+          "visible": true,
+          "floating": false
+        }
+      ],
+      "forms": [],
+      "form_count": 0,
+      "avg_fields_per_form": 0,
+      "social_proof": {
+        "has_testimonials": false,
+        "has_ratings": true,
+        "has_numbers": true,
+        "has_certifications": false,
+        "has_logos_clients": false
+      },
+      "urgency": {
+        "has_countdown": false,
+        "has_limited": false,
+        "has_discount": false
+      },
+      "trust": {
+        "has_address": false,
+        "has_cnpj": false,
+        "has_phone": false,
+        "has_email": false,
+        "has_privacy_link": false,
+        "has_terms_link": false
+      },
+      "videos": [],
+      "page_text_length": 2653
+    },
+    "mobile": {
+      "cta_count": 3,
+      "cta_above_fold": 1,
+      "cta_list": [
+        {
+          "text": "QUERO SOLICITAR ORÇAMENTO!",
+          "tag": "a",
+          "href": "https://wa.me/5554996150025?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento.",
+          "is_whatsapp": true,
+          "is_tel": false,
+          "is_mail": false,
+          "above_fold": true,
+          "width": 319,
+          "height": 65
+        },
+        {
+          "text": "QUERO SOLICITAR ORÇAMENTO!",
+          "tag": "a",
+          "href": "https://wa.me/5554996150025?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento.",
+          "is_whatsapp": true,
+          "is_tel": false,
+          "is_mail": false,
+          "above_fold": false,
+          "width": 319,
+          "height": 65
+        },
+        {
+          "text": "QUERO SOLICITAR ORÇAMENTO!",
+          "tag": "a",
+          "href": "https://wa.me/5554996150025?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento.",
+          "is_whatsapp": true,
+          "is_tel": false,
+          "is_mail": false,
+          "above_fold": false,
+          "width": 284,
+          "height": 65
+        }
+      ],
+      "whatsapp_links": [
+        {
+          "text": "QUERO SOLICITAR ORÇAMENTO!",
+          "href": "https://wa.me/5554996150025?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento.",
+          "visible": true,
+          "floating": false
+        },
+        {
+          "text": "QUERO SOLICITAR ORÇAMENTO!",
+          "href": "https://wa.me/5554996150025?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento.",
+          "visible": true,
+          "floating": false
+        },
+        {
+          "text": "QUERO SOLICITAR ORÇAMENTO!",
+          "href": "https://wa.me/5554996150025?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento.",
+          "visible": true,
+          "floating": false
+        },
+        {
+          "text": "",
+          "href": "https://wa.me/5554996150025?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento.",
+          "visible": true,
+          "floating": false
+        }
+      ],
+      "forms": [],
+      "form_count": 0,
+      "avg_fields_per_form": 0,
+      "social_proof": {
+        "has_testimonials": false,
+        "has_ratings": true,
+        "has_numbers": true,
+        "has_certifications": false,
+        "has_logos_clients": false
+      },
+      "urgency": {
+        "has_countdown": false,
+        "has_limited": false,
+        "has_discount": false
+      },
+      "trust": {
+        "has_address": false,
+        "has_cnpj": false,
+        "has_phone": false,
+        "has_email": false,
+        "has_privacy_link": false,
+        "has_terms_link": false
+      },
+      "videos": [],
+      "page_text_length": 2653
+    }
+  },
+  "compliance_lgpd": {
+    "status": "non_compliant",
+    "score": 3,
+    "has_cmp": false,
+    "cmps_detected": [],
+    "pre_consent_trackers": {
+      "googletagmanager.com/gtm.js": [
+        "https://www.googletagmanager.com/gtm.js?id=GTM-M7WTSW9C"
+      ],
+      "doubleclick.net": [
+        "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/17962419023/?random=1779807845965&cv=11&fst=1779807845965&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be65k1v9249248637z89248554765za20gzb9248554765zd9248554765xec&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115938465~115938468~116701382~118689382&u_w=1440&u_h=900&url=https%3A%2F%2Fbombachasfarroupilha.com.br%2F&ref=https%3A%2F%2Fbombachasfarroupilha.com.br%2F&rcb=7&frm=0&tiba=Bombachas%20Farroupilha&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=649056096.1779807846&uaa=x86&uab=64&uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15&uamb=0&uam=&uap=macOS&uapv=10.15.7&uaw=0&data=event%3Dgtag.config&rfmt=3&fmt=4"
+      ]
+    },
+    "pre_consent_tracker_count": 2,
+    "issues": [
+      "Sem CMP detectado — sem mecanismo de consentimento.",
+      "2 requests de tracking disparam ANTES de qualquer consentimento.",
+      "  • googletagmanager.com/gtm.js: 1 request(s)",
+      "  • doubleclick.net: 1 request(s)"
+    ],
+    "recommendation": "URGENTE: Instalar CMP (Cookiebot grátis até 500k pageviews/mês ou Termly grátis até 5k). Configurar gtag consent default 'denied' + Consent Mode v2. Bloquear todos os trackers até opt-in explícito. Risco de multa ANPD até R$50M. Adicionar links 'Política de Privacidade' e 'Termos de Uso' no footer (atualmente ausentes — confirmado em trust signals 0/6)."
+  },
+  "copy_audit": {
+    "above_fold": {
+      "value_prop_clear": true,
+      "value_prop_detail": "Headline atual 'Bombacha tradicional de favo, direto da fábrica!' comunica claramente o diferencial técnico (favo) + canal de distribuição (direto). Mas é 100% B2B na subheadline ('representantes comerciais, lojistas e CTGs/invernadas com pedido mínimo de 15 peças') — Mariana (B2C principal, decidida em 2026-05-25 pós-V4MOS) não tem caminho.",
+      "headline_complete": false,
+      "current_headline": "Bombacha tradicional de favo, direto da fábrica!",
+      "suggested_headline": "Bombacha de Favo trançada à mão. Direto da fábrica, em 35 dias.",
+      "cta_visible": true,
+      "current_cta": "QUERO SOLICITAR ORÇAMENTO! (botão verde, ícone WhatsApp)",
+      "suggested_cta": "Estrutura dual: 'Quero pra mim' (Mariana, leva ao WhatsApp B2C) + 'Sou lojista/representante' (Diego, leva ao formulário ou WhatsApp B2B com qualificação).",
+      "visitor_impression": "Mariana (B2C): chega no site, lê headline 'Bombacha tradicional de favo, direto da fábrica' e fica interessada — palavras-chave acertam o ICP dela. Mas a subheadline 'representantes comerciais, lojistas e CTGs/invernadas com pedido mínimo de 15 peças' bate como muro: 'não é pra mim'. Sai. Diego (B2B): chega, vê headline + subhead que falam diretamente com ele (representantes, lojistas, CTGs), prazo de 35 dias e pedido mínimo 15 peças — informação acionável. Clica no CTA WhatsApp e entra em conversão."
+    },
+    "sections": [
+      {
+        "name": "Hero com PUV",
+        "exists": true,
+        "evaluation": 4,
+        "main_problem": "Headline atende B2B mas exclui B2C. PUV aprovada cobre os dois ('mulheres tradicionalistas + lojistas regionais'); a página só executa metade."
+      },
+      {
+        "name": "Problema/dor",
+        "exists": false,
+        "evaluation": 1,
+        "main_problem": "Não há seção que articule a dor do ICP (Mariana: 'comprou bombacha que parece industrial' / Diego: 'concorrente atrasa entrega'). Diretamente vai do hero para benefícios — pula a etapa de identificação."
+      },
+      {
+        "name": "Solução / Quem somos",
+        "exists": true,
+        "evaluation": 2,
+        "main_problem": "Seção 'Produzimos peças cheias de tradição e qualidade!' existe mas com CONTRASTE BAIXÍSSIMO (texto cinza claro em fundo bege, quase ilegível). Texto fundacional ('Fundada em 2011 por Loreni e Everton') é exatamente o storytelling vencedor identificado no diagnóstico orgânico IG — mas usuário não consegue ler."
+      },
+      {
+        "name": "Como funciona / Linhas",
+        "exists": true,
+        "evaluation": 4,
+        "main_problem": "Cards 'A Bombacha de Favo', 'Pilchas para invernadas', 'Linha completa' segmentam bem o catálogo. Falta CTA dentro de cada card."
+      },
+      {
+        "name": "Públicos atendidos (B2B)",
+        "exists": true,
+        "evaluation": 4,
+        "main_problem": "Cards 'Para representantes e Lojistas' e 'Para CTGs e invernadas' são fortes — copy específico para cada perfil. Falta o terceiro: 'Para você (Mariana B2C)'."
+      },
+      {
+        "name": "Diferenciais",
+        "exists": true,
+        "evaluation": 2,
+        "main_problem": "Seção 'Nossos diferenciais' (Prazo, Pedidos Personalizados, Acabamento Premium) existe mas com mesmo problema de contraste — texto quase invisível. Conteúdo é forte, apresentação compromete."
+      },
+      {
+        "name": "Prova social",
+        "exists": true,
+        "evaluation": 5,
+        "main_problem": "EXCELENTE: 4 depoimentos REAIS via screenshots de Instagram (Texas Ranch, Brida Moda Equestre, Do Campo Bombachas, Baia Moda Equestre). É UGC autêntico raríssimo no setor. Manter intacto."
+      },
+      {
+        "name": "FAQ",
+        "exists": true,
+        "evaluation": 1,
+        "main_problem": "5 perguntas relevantes (pedido mínimo, prazo, cores, modelo de prenda, pagamento) mas com CONTRASTE TÃO BAIXO que parece quebrado/oculto. Resposta provavelmente está em accordion fechado. Usuário desiste antes de clicar."
+      },
+      {
+        "name": "Instagram embed/preview",
+        "exists": true,
+        "evaluation": 4,
+        "main_problem": "Mockup de celular mostrando o IG @farroupilha_bombachas é um touch elegante. CTA WhatsApp ao lado é claro."
+      },
+      {
+        "name": "CTA final / Footer institucional",
+        "exists": false,
+        "evaluation": 1,
+        "main_problem": "Footer atual é só copyright + 2 ícones sociais. Falta CNPJ, endereço, telefone, email, link política de privacidade, link termos de uso. 0/6 sinais de trust. Para B2B (compra de R$4.600/pedido) ausência de CNPJ no rodapé é red flag de credibilidade."
+      }
+    ],
+    "missing_sections": [
+      "Seção dedicada à Mariana (B2C principal): 'Para você que quer sua própria pilcha' — copy emocional baseado na PUV aprovada ('A bombacha que respeita a tradição: feita à mão, no caimento que você quer.'), fotos de Marianas reais (UGC) usando, CTA dedicado.",
+      "Barra de confiança no topo (acima do hero): 'Fabricação própria · Caxias do Sul-RS · 15 anos · Envio Brasil todo'",
+      "Footer institucional completo: CNPJ, endereço, telefone, email, link privacy, link terms, horário de atendimento",
+      "Banner de cookies (CMP) — bloqueador legal de LGPD",
+      "Schema markup Organization + Product (estrutura SEO invisível mas crítica para rich snippets)"
+    ],
+    "unnecessary_sections": []
+  },
+  "trust_analysis": {
+    "trust_signals": [
+      {
+        "signal": "CNPJ visível",
+        "present": false
+      },
+      {
+        "signal": "Endereço físico",
+        "present": false
+      },
+      {
+        "signal": "Telefone",
+        "present": false
+      },
+      {
+        "signal": "Email corporativo",
+        "present": false
+      },
+      {
+        "signal": "Fotos reais",
+        "present": true
+      },
+      {
+        "signal": "Depoimentos de clientes",
+        "present": true
+      },
+      {
+        "signal": "Certificações",
+        "present": false
+      },
+      {
+        "signal": "SSL ativo",
+        "present": true
+      },
+      {
+        "signal": "Link Política de Privacidade",
+        "present": false
+      },
+      {
+        "signal": "Link Termos de Uso",
+        "present": false
+      }
+    ],
+    "ssl_active": true,
+    "professional_appearance": true,
+    "professional_appearance_detail": "Design profissional, paleta consistente (bege/terra/verde), fotografia autêntica de campo (família gaúcha real), barra colorida verde-vermelha-amarela alusiva à bandeira do RS. Identidade visual coerente com posicionamento 'Artesanal. Autêntico. Direto.' aprovado no posicionamento estratégico.",
+    "trust_score": 4,
+    "biggest_trust_gap": "Footer institucional completamente vazio: sem CNPJ, sem endereço físico, sem telefone, sem email corporativo, sem link de política de privacidade, sem link de termos de uso. Para um B2B com ticket médio R$4.600/pedido (Diego), a ausência de CNPJ é red flag imediato de credibilidade. Compensado parcialmente pela prova social de Instagram (depoimentos reais de lojistas), mas insuficiente para conversão de lead frio."
+  },
+  "test_hypotheses": [
+    {
+      "hypothesis": "Instalar GA4 via GTM (criar property + configurar tag GA4 Configuration + tag GA4 Event para clique no botão WhatsApp + scroll 50/75/90)",
+      "element": "Tagueamento / Analytics",
+      "expected_impact": "high",
+      "difficulty": "easy",
+      "priority": "P1",
+      "current_version": "GTM-M7WTSW9C container vazio, sem GA4 nem eventos",
+      "proposed_version": "GTM com GA4 (G-XXXXX) Configuration + Events (page_view default, scroll, generate_lead no clique WhatsApp, view_item_list nas linhas de produto)",
+      "success_metric": "Eventos GA4 disparando (mínimo 6: page_view, scroll, generate_lead, view_item_list, click_whatsapp, view_section)",
+      "expected_impact_detail": "Atribuição de conversões do Google Ads (atualmente cego). Identificação de gargalo de funil (scroll, tempo, CTA click). Setup de audiências para retargeting."
+    },
+    {
+      "hypothesis": "Instalar Meta Pixel via GTM + eventos PageView + Lead + ViewContent",
+      "element": "Tagueamento / Retargeting",
+      "expected_impact": "high",
+      "difficulty": "easy",
+      "priority": "P1",
+      "current_version": "Sem Meta Pixel (0 eventos disparados)",
+      "proposed_version": "Pixel FB-XXXXXXXXXX no GTM disparando PageView (all pages), Lead (click WhatsApp), ViewContent (seções de produto)",
+      "success_metric": "Audiências populando no Meta Ads Manager dentro de 7 dias (mínimo 100 PageViews, 5 Leads)",
+      "expected_impact_detail": "Destrava retargeting Instagram/Facebook (onde está a Mariana). Possibilita lookalike audiences a partir de quem clicou no WhatsApp. Permite abrir campanhas Meta Ads quando esse canal for ativado na S3."
+    },
+    {
+      "hypothesis": "Instalar CMP (Cookiebot ou Termly) com Consent Mode v2 + bloqueio de tags pré-opt-in",
+      "element": "Compliance LGPD",
+      "expected_impact": "high",
+      "difficulty": "easy",
+      "priority": "P1",
+      "current_version": "Sem CMP, sem banner de cookies, sem opt-in",
+      "proposed_version": "Cookiebot grátis (até 500k pageviews/mês) com 4 categorias de cookies + banner inicial bloqueando trackers até consentimento explícito",
+      "success_metric": "Score compliance_lgpd ≥ 8/10 + status 'compliant' em re-audit page_audit_deep",
+      "expected_impact_detail": "Sai de compliance non_compliant (3/10) para compliant (8+/10). Elimina risco de multa ANPD até R$50M. Configura Consent Mode v2 (Google reconhece e ajusta atribuição)."
+    },
+    {
+      "hypothesis": "Adicionar footer institucional completo (CNPJ + endereço Caxias do Sul-RS + telefone + email + privacy link + terms link)",
+      "element": "Trust / Footer",
+      "expected_impact": "high",
+      "difficulty": "easy",
+      "priority": "P1",
+      "current_version": "Footer = só copyright + 2 ícones sociais. 0/6 trust signals.",
+      "proposed_version": "Footer com 4 colunas: (1) Logo + endereço + CNPJ + horário; (2) Contato (WhatsApp + telefone + email); (3) Institucional (Sobre, FAQ, Política de Privacidade, Termos de Uso); (4) Redes sociais",
+      "success_metric": "Trust signals 6/6, score 9/10",
+      "expected_impact_detail": "Sobe trust_score de 4/10 para 8/10. Reduz fricção em B2B (Diego confia em CNPJ visível) e B2C (Mariana confia em endereço físico real)."
+    },
+    {
+      "hypothesis": "Corrigir contraste de textos em 3 seções (Quem somos, Diferenciais, FAQ) — atualmente texto cinza claro em fundo bege quase ilegível",
+      "element": "Acessibilidade / Legibilidade",
+      "expected_impact": "high",
+      "difficulty": "easy",
+      "priority": "P1",
+      "current_version": "Textos descritivos em #B0A696 (cinza claro) sobre fundo #F0E6D6 (bege) — contraste ~2:1, abaixo do WCAG",
+      "proposed_version": "Texto em #4A3E2E (marrom escuro) sobre fundo #F0E6D6 — contraste 7:1, AAA",
+      "success_metric": "Lighthouse Accessibility score > 90 e WCAG AA conformance em todas as 3 seções",
+      "expected_impact_detail": "Recupera leitura das seções que carregam o storytelling vencedor identificado no diagnóstico orgânico ('Fundada em 2011 por Loreni e Everton', 'tradição artesanal'). Atende WCAG AA contraste mínimo 4.5:1."
+    },
+    {
+      "hypothesis": "Adicionar seção dedicada à Mariana (B2C principal) entre Hero e Linhas: 'Para você que quer sua própria pilcha' + 3 fotos de Marianas reais (UGC) + copy emocional baseado na PUV + CTA WhatsApp B2C separado do B2B",
+      "element": "Hero / Posicionamento",
+      "expected_impact": "medium",
+      "difficulty": "medium",
+      "priority": "P2",
+      "current_version": "0 menção a B2C. Headline e subhead 100% B2B. Mariana sai no hero.",
+      "proposed_version": "Nova seção logo após o hero: headline 'A pilcha que a gaúcha de verdade reconhece', 3-4 fotos de Marianas reais (UGC, recrutar via Loreni), copy curto ancorado na PUV aprovada (mensagem-chave Mariana), CTA WhatsApp 'Encomende sua bombacha'",
+      "success_metric": "% de cliques no CTA B2C / total de visitantes ≥ 1% em 30 dias",
+      "expected_impact_detail": "Abre canal B2C que atualmente é 0% da página. Mariana sai e a venda some — adicionar caminho dedicado captura demanda existente sem destruir o B2B vencedor. Pode dobrar volume de leads do site se houver tráfego orgânico de Mariana."
+    },
+    {
+      "hypothesis": "Adicionar H1 com PUV + meta description + alt em todas as 17 imagens",
+      "element": "SEO técnico",
+      "expected_impact": "medium",
+      "difficulty": "easy",
+      "priority": "P2",
+      "current_version": "0 H1, meta description ausente, 12/17 imagens sem alt, schema [] vazio",
+      "proposed_version": "1 H1 ('Bombacha de Favo trançada à mão — direto da fábrica em Caxias do Sul-RS'), meta description 155 char com PUV, alt descritivo em 17/17 imagens, schema Organization + Product nas 3 linhas",
+      "success_metric": "Lighthouse SEO score > 95 + re-audit page_audit confirmando",
+      "expected_impact_detail": "Sai de 0 H1 + meta desc vazia + 70% imgs sem alt. Habilita rich snippets, melhora CTR em SERP, atende acessibilidade WCAG."
+    },
+    {
+      "hypothesis": "Adicionar barra de confiança no topo (slim bar acima do hero): 'Fabricação própria · Caxias do Sul-RS · 15 anos · Envio Brasil todo'",
+      "element": "Trust / Above the fold",
+      "expected_impact": "medium",
+      "difficulty": "easy",
+      "priority": "P2",
+      "current_version": "Sem barra de confiança — vai direto pro hero",
+      "proposed_version": "Barra slim em fundo marrom escuro (mesma cor do footer), texto bege #F0E6D6, 4 itens separados por ponto, altura 32px, acima do menu",
+      "success_metric": "Time on page mobile +10s vs. baseline",
+      "expected_impact_detail": "Comunica 4 selos de confiança em < 1 segundo antes mesmo do hero. Reforça PUV ('direto da fábrica') e território ('Artesanal. Autêntico. Direto.')."
+    },
+    {
+      "hypothesis": "Reescrever FAQ com contraste OK + ampliar de 5 para 8-10 perguntas (cobrir Mariana + Diego separadamente)",
+      "element": "FAQ",
+      "expected_impact": "low",
+      "difficulty": "medium",
+      "priority": "P3",
+      "current_version": "5 perguntas ilegíveis (contraste ~2:1)",
+      "proposed_version": "10 perguntas em 2 grupos (B2C / B2B), accordion com chevron visível, contraste AA mínimo, respostas curtas (≤ 300 chars)",
+      "success_metric": "Tempo médio na seção FAQ > 30s + scroll-depth > 80% até o footer",
+      "expected_impact_detail": "FAQ atual é ilegível. Reescrever com contraste OK e segmentar por persona (Mariana: caimento, costura à mão, prazo individual; Diego: pedido mínimo, prazo lojista, condições atacado) reduz objeções pré-WhatsApp e qualifica lead."
+    },
+    {
+      "hypothesis": "Aplicar otimizações de performance do PSI: font-display swap (190ms savings), eliminar render-blocking requests (180ms), reduzir unused CSS (14 KiB), otimizar entrega de imagens (37 KiB). LiteSpeed Cache já está rodando, isso é fine-tuning.",
+      "element": "Performance técnica",
+      "expected_impact": "low",
+      "expected_impact_detail": "Performance score sobe de 92 para ~96-98. Pequeno ganho de UX (300-400ms a menos no LCP lab). Não é P1 porque CWV já está PASSED em campo (LCP 1,2s real), mas vale fazer quando o redesign rodar.",
+      "difficulty": "easy",
+      "priority": "P3",
+      "current_version": "Performance 92/100. LCP lab 3,2s (field 1,2s OK). Speed Index 3,6s. 5 oportunidades sinalizadas.",
+      "proposed_version": "Performance ≥96/100. LCP lab <2,5s. Speed Index <3,0s. Oportunidades resolvidas.",
+      "success_metric": "Re-audit PSI mobile com scores 96+ em Performance e LCP lab <2,5s"
+    },
+    {
+      "hypothesis": "Resolver achados de Accessibility do PSI: adicionar main landmark no HTML, dar nome discernível aos links (aria-label ou texto visível), adicionar alt em todas as 17 imagens.",
+      "element": "Acessibilidade",
+      "expected_impact": "medium",
+      "expected_impact_detail": "Accessibility sobe de 94 para 100. Beneficia leitores de tela (Mariana acima de 50 anos pode usar zoom/leitor) + SEO (Google valoriza acessibilidade).",
+      "difficulty": "easy",
+      "priority": "P2",
+      "current_version": "Accessibility 94/100. Document sem main landmark, links sem nome discernível, 12/17 imgs sem alt.",
+      "proposed_version": "Accessibility 100/100. <main> tag em todas as páginas, todos os links com nome, 17/17 imgs com alt descritivo.",
+      "success_metric": "Lighthouse Accessibility = 100"
+    }
+  ],
+  "wireframe_improvements": [
+    {
+      "section_number": 1,
+      "name": "Top trust bar (slim)",
+      "content_description": "Barra fina (32px) acima do menu, fundo marrom escuro (#4A3E2E), texto bege (#F0E6D6). 4 itens separados por ponto: 'Fabricação própria · Caxias do Sul-RS · 15 anos · Envio Brasil todo'. Comunica 4 selos antes do hero."
+    },
+    {
+      "section_number": 2,
+      "name": "Header / Menu",
+      "content_description": "Logo + menu (Sobre, Linhas, Para Lojistas, Para Você, FAQ, Contato) + CTA mini 'WhatsApp' no canto direito. Sticky no scroll."
+    },
+    {
+      "section_number": 3,
+      "name": "Hero (manter visual atual, atualizar copy)",
+      "content_description": "Imagem hero atual (pai + filho gaúchos no campo) — manter. Headline trocada para 'Bombacha de Favo trançada à mão' (alinhada com PUV). Subhead: 'Direto da fábrica em Caxias do Sul-RS, em 35 dias. Para você ou para sua loja.' 2 CTAs lado a lado: '🟢 Quero pra mim' (B2C, WhatsApp dedicado) + '🟤 Sou lojista/representante' (B2B, WhatsApp dedicado com qualificação)."
+    },
+    {
+      "section_number": 4,
+      "name": "Para você (Mariana B2C) — NOVA SEÇÃO",
+      "content_description": "Headline emocional: 'A pilcha que a gaúcha de verdade reconhece'. Copy: mensagem-chave Mariana ('A bombacha que respeita a tradição: feita à mão, no caimento que você quer.'). 3-4 fotos de Marianas reais (recrutar via Loreni — perfil tradicionalista 32-55, ativa em CTG). 1 quote curto de cliente real. CTA: '💚 Encomende sua bombacha pelo WhatsApp'."
+    },
+    {
+      "section_number": 5,
+      "name": "Para sua loja / CTG (Diego B2B) — manter + reforçar",
+      "content_description": "Manter os 2 cards atuais ('Para representantes e Lojistas' + 'Para CTGs e invernadas') que estão bons. Adicionar mensagem-chave Diego no topo da seção: 'Bombacha de Favo direto da fábrica, em 35 dias, a partir de 15 peças.' Manter copy específico em cada card. CTA por card."
+    },
+    {
+      "section_number": 6,
+      "name": "A fábrica / quem somos (corrigir contraste)",
+      "content_description": "Manter foto da Loreni + Everton (preta e branca). Reescrever com contraste OK (texto marrom escuro #4A3E2E em fundo bege). Conteúdo: 'Fundada em 2011 em Farroupilha-RS por Loreni e Everton, somos uma fábrica familiar especializada em Bombacha de Favo. Aqui cada peça passa pela mão da nossa costureira-chefe. Não vendemos cópia industrial — vendemos a pilcha que respeita a tradição.' Linka com o key insight do diagnóstico orgânico IG (storytelling histórico-familiar vencedor)."
+    },
+    {
+      "section_number": 7,
+      "name": "Linhas / Produtos (manter os 3 cards)",
+      "content_description": "Manter os 3 cards atuais ('A Bombacha de Favo', 'Pilchas para invernadas', 'Linha completa'). Adicionar CTA em cada card ('Ver detalhes' ou 'Encomendar via WhatsApp')."
+    },
+    {
+      "section_number": 8,
+      "name": "Diferenciais (corrigir contraste)",
+      "content_description": "Manter os 3 diferenciais ('Prazo que o mercado não entrega', 'Pedidos Personalizados', 'Acabamento Premium'). Trocar para contraste OK + ícone visual em cada item + subtexto curto (1 linha de prova). Adicionar quarto item: 'Sem mínimo para você (B2C) · 15 peças para lojistas'."
+    },
+    {
+      "section_number": 9,
+      "name": "Prova social — MANTER E AMPLIAR",
+      "content_description": "Manter os 4 depoimentos do Instagram (Texas Ranch, Brida Moda Equestre, Do Campo, Baia Moda) — são OURO. Adicionar 2-3 depoimentos de Marianas B2C (recrutar via Loreni). Adicionar selo 'CNPJ verificado' e '15 anos no mercado'."
+    },
+    {
+      "section_number": 10,
+      "name": "Instagram / Mockup IG (manter)",
+      "content_description": "Manter mockup celular mostrando o IG @farroupilha_bombachas + link 'Siga no Instagram'."
+    },
+    {
+      "section_number": 11,
+      "name": "FAQ (reescrever com contraste OK + ampliar)",
+      "content_description": "10 perguntas em 2 grupos: Grupo B2C ('Posso encomendar 1 peça só?', 'Quanto tempo demora?', 'Como medir caimento?', 'Vocês fazem modelo de prenda?', 'Como pagar?'); Grupo B2B ('Qual o pedido mínimo?', 'Prazo para lojista?', 'Vocês têm representante na minha região?', 'Trabalham com atacado?', 'Política de troca?'). Accordion com chevron visível, contraste AA."
+    },
+    {
+      "section_number": 12,
+      "name": "CTA final + Footer institucional",
+      "content_description": "CTA final repetido (verde WhatsApp). Footer com 4 colunas: (1) Logo + endereço Caxias do Sul-RS + CNPJ XX.XXX.XXX/0001-XX + horário; (2) Contato (WhatsApp 54-XXXX + telefone + email atendimento@bombachasfarroupilha.com.br); (3) Institucional (Sobre, Linhas, Para Lojistas, Para Você, FAQ, Política de Privacidade, Termos de Uso); (4) Redes (Instagram, WhatsApp). Copyright na parte inferior."
+    }
+  ],
+  "transversal_elements": {
+    "trust_bar": true,
+    "trust_bar_content": "Slim bar no topo: 'Fabricação própria · Caxias do Sul-RS · 15 anos · Envio Brasil todo'",
+    "whatsapp_floating": true,
+    "whatsapp_floating_detail": "Manter botão WhatsApp flutuante (já existe via widget detectado pelo audit). Configurar para abrir conversa pré-qualificada por persona (parâmetro UTM no link diferencia origem B2C vs B2B).",
+    "exit_intent_popup": true,
+    "exit_intent_offer": "Para B2C (Mariana): 'Vai sair? Te enviamos o catálogo completo das nossas Bombachas de Favo no WhatsApp + R$50 OFF na sua primeira encomenda (válido 7 dias).' Captura email + WhatsApp. Para B2B (Diego): popup diferente com 'Catálogo de atacado + tabela de preços para lojistas' — captura CNPJ + WhatsApp."
+  },
+  "target_conversion_rate": 2.5,
+  "completed_at": "2026-05-26T15:18:48.351217+00:00",
+  "target_conversion_rate_note": "2,0–3,0% (visitante → clique no WhatsApp). Atualmente estimado em 0,5–1,0% baseado em benchmarks do setor (sem tracking real instalado para confirmar). Com fixes P1 (GA4+Pixel+CMP+trust+contraste) em 3-4h + P2 (B2C section + SEO) em ~12h, meta realista de 30 dias."
+}

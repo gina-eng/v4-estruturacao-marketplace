@@ -19,14 +19,14 @@
       "contact_role": "Sócia (co-decisora com Everton)",
       "contact_financial": null,
       "segment": "Indústria Têxtil — Moda Tradicionalista Gaúcha (Pilchas/Bombachas)",
-      "annual_revenue": "~R$ 1.000.000,00",
-      "monthly_revenue_avg": "~R$ 90.000,00",
+      "annual_revenue": "R$ 1.270.000+ (declarado no formulário V4MOS, 2026-05-25)",
+      "monthly_revenue_avg": "~R$ 97.000 (último mês declarado no V4MOS)",
       "monthly_revenue_note": "Forte sazonalidade — pico julho a setembro (período farroupilha)",
       "monthly_revenue_goal": null,
       "annual_revenue_goal": null,
       "years_in_market": "~15 anos (fundada em 2011)",
       "location": "Ciríaco, RS",
-      "coverage_cities": null,
+      "coverage_cities": "Top 3 cidades atuais: Caxias do Sul, Alegrete, Passo Fundo (declarado no V4MOS 2026-05-25). Raio de atuação: Regional (algumas cidades/estado RS) com expansão declarada para MT.",
       "website": "https://bombachasfarroupilha.com.br/",
       "website_type": "Landing page (WordPress+Elementor, single-page com GTM-M7WTSW9C)",
       "instagram": "@farroupilha_bombachas",
@@ -51,10 +51,10 @@
     },
     "product": {
       "main_product": "Bombachas tradicionais gaúchas, com especialidade na Bombacha de Favo (carro-chefe — produção técnico-manual). Linha completa de pilchas masculinas e femininas do recém-nascido ao adulto. Pilchas completas para CTGs/invernadas (bombacha + colete + camisa). Também produz saia de prenda com regulagem.",
-      "ticket": null,
+      "ticket": "~R$ 100 por peça (declarado no V4MOS). Ticket médio por pedido B2B ~R$ 4.600 (21 pedidos/mês × R$ 97k = ~46 peças por pedido).",
       "billing_model": "por pedido (B2B)",
       "sales_cycle": "Produção: 35 dias. Ciclo comercial total: a confirmar.",
-      "active_customers": null,
+      "active_customers": "63 clientes ativos (declarado V4MOS)",
       "most_profitable": null,
       "growth_potential": "Expansão geográfica via digital — mercados onde há público gaúcho mas não há representante físico (Mato Grosso prioritário). Captação de lojistas/CTGs/representantes de gerações mais novas para suceder a base atual.",
       "mix_atual": null,
@@ -68,22 +68,22 @@
       "prazo_producao": "35 dias"
     },
     "icp": {
-      "best_customers": null,
+      "best_customers": "B2B atual: lojistas tradicionalistas + grupos de dança + CTGs (base atual, 99% receita via 1 representante).",
       "not_customers": null,
       "current_profile": "Lojistas com idade avançada atendidos por 1 único representante comercial terceirizado (concentração de risco extrema — 99% do faturamento).",
-      "desired_profile": "Lojistas/representantes mais jovens, CTGs e invernadas organizados, e mercado gaúcho fora do RS (MT prioritário).",
-      "persona": null,
+      "desired_profile": "Consumidor final ligado à cultura gaúcha/tradicionalista — persona 'Mariana Tradicionalista' declarada pela Loreni no V4MOS. Busca confiança, bom caimento, respeito ao estilo tradicional, prazo de entrega e preço competitivo. INICIAR estrutura B2C sem abandonar crescimento B2B.",
+      "persona": "DUPLA (decidida 2026-05-25): Principal Mariana Tradicionalista (B2C consumidor final — frente de crescimento NOVO, via digital). Secundária Diego (lojista B2B — base de manutenção+expansão via canal físico).",
       "problems_before": null,
       "results_after": null,
       "churn_reasons": null,
       "publicos_b2b_declarados": [
-        "Lojistas (revenda)",
-        "Representantes comerciais",
-        "CTGs / Invernadas (uso próprio do grupo)"
+        "Lojistas tradicionalistas (revenda)",
+        "Grupos de dança (CTGs/invernadas, uso próprio)",
+        "Representantes comerciais"
       ]
     },
     "competition": {
-      "competitors": null,
+      "competitors": "Declarados pela Loreni no V4MOS (2026-05-25): La Parceria (verificar grafia), La Fronteira (Boutique de Pilchas — Facebook ativo), Regalo Campeiro (@regalocampeiro Instagram 26K seguidores — distribuidor 'mais completo do RS').",
       "real_differential": "Prazo curto (35 dias vs meses do mercado), pedidos pequenos (a partir de 15 peças, sem exigir estoque grande do lojista), acabamento manual na Bombacha de Favo, parceria direta com fábrica.",
       "why_choose_us": null,
       "agencia_concorrente_no_processo_venda": "Cliente estava cotando em paralelo com agência de Passo Fundo — fechou com V4."
@@ -94,27 +94,41 @@
       "admired_brands": null,
       "current_colors": null,
       "has_logo": true,
-      "restrictions": null
+      "restrictions": null,
+      "main_pain_points": [
+        "Conversão",
+        "Preço/concorrência (clientes acham caro)",
+        "Falta de previsibilidade comercial",
+        "Falta de identificação dos canais de aquisição",
+        "Ausência de marketing estruturado",
+        "Cegueira de indicadores"
+      ],
+      "loss_reasons": "Motivos declarados V4MOS: (1) Preço — acharam caro; (2) Concorrência — foram para outro."
     },
     "digital_situation": {
-      "paid_traffic": false,
-      "platforms": [],
-      "monthly_investment": "R$ 0",
-      "current_results": null,
+      "paid_traffic": true,
+      "platforms": [
+        "Google Ads"
+      ],
+      "monthly_investment": "~R$ 335/mês (Google Ads — dados V4MOS, 2026-02-21→05-22)",
+      "current_results": "Google Ads (90d): R$ 1.011 gasto · 32.654 impressões · 725 cliques · 98 conversões (clique no wa.me) · CPA R$ 10,32 · CTR 2,22%. Estrutura: 1 campanha Search ativa (ALLURE - Bombachas) + 1 Performance Max pausada com R$ 5 gastos.",
       "crm": null,
-      "lead_sources": "1 representante comercial físico (~99%), Instagram orgânico, indicações",
-      "conversion_rate": null,
-      "biggest_pain": "Dependência absoluta de 1 único representante comercial cujos lojistas estão envelhecendo. Público atual deve sair do mercado em 5-6 anos. Sem captação digital. Marketing inexistente.",
+      "lead_sources": "1 representante comercial físico (~99% do faturamento), Google Ads (Search ativa), Instagram orgânico, indicações.",
+      "conversion_rate": "13,5% clique→conversão medida no Google Ads (conv = clique no wa.me, não pedido fechado).",
+      "biggest_pain": "Dependência absoluta do canal físico (representante envelhecendo, janela 5-6 anos). Cliente declarou no V4MOS desejo de INICIAR estrutura B2C sem perder B2B — mas hoje a operação digital captura B2C consumidor final sem direcionamento de persona específica, e o B2B é atendido sem CRM/atribuição. Estratégia precisa de hierarquia de canal por persona.",
       "canais_atuais": [
-        "Representante comercial físico",
-        "Instagram orgânico",
-        "LP recém-criada"
+        "Representante comercial físico (~99% receita atual)",
+        "Google Ads ATIVO (campanha ALLURE - Bombachas - Search, R$ 30/dia operado por agência de Passo Fundo)",
+        "Instagram orgânico (@farroupilha_bombachas)",
+        "Facebook",
+        "Google Meu Negócio (declarado ativo no V4MOS — não detectado anteriormente)",
+        "Landing page (bombachasfarroupilha.com.br)"
       ],
       "gtm_installed": "GTM-M7WTSW9C"
     },
     "accesses": {
       "meta_business": false,
-      "google_ads": false,
+      "google_ads": true,
       "google_analytics": false,
       "google_search_console": false,
       "instagram_admin": false,
@@ -128,13 +142,14 @@
         "diagnostico-comercial",
         "cliente-oculto"
       ],
-      "active_sellers": "1 representante comercial terceirizado",
+      "active_sellers": "1 pessoa dedicada às vendas (Loreni + 1 representante comercial terceirizado para B2B base)",
       "sales_process": null,
       "objections": null,
       "conversion_rate": null,
       "sales_cycle": "Produção 35 dias. Ciclo comercial total a mapear.",
       "has_scripts": false,
-      "contato_financeiro": null
+      "contato_financeiro": null,
+      "sales_volume_monthly": "21 pedidos fechados no último mês (declarado V4MOS, 2026-05-25). Ticket médio por pedido ~R$ 4.600."
     }
   },
   "research": {
@@ -147,88 +162,463 @@
     "note": "Pesquisa automática profunda não foi executada na criação do cliente. Será feita dentro das skills da semana 2 (pesquisa-mercado, posicionamento)."
   },
   "connectors": {
-    "fetched_at": "2026-05-12T17:39:36Z",
+    "fetched_at": "2026-05-22T19:51:28Z",
     "period": {
-      "start": "2026-02-11T00:00:00Z",
-      "end": "2026-05-12T23:59:59Z"
+      "start": "2026-02-21T00:00:00Z",
+      "end": "2026-05-22T23:59:59Z"
     },
     "google_ads": {
-      "total_campaigns": 0,
-      "total_cost": 0,
-      "total_clicks": 0,
-      "total_impressions": 0,
-      "total_conversions": 0,
-      "avg_cpa": null,
-      "avg_ctr": 0,
-      "campaigns": [],
-      "monthly_evolution": [],
+      "total_campaigns": 2,
+      "total_cost": 1011.11,
+      "total_clicks": 725,
+      "total_impressions": 32654,
+      "total_conversions": 98.0,
+      "avg_cpa": 10.32,
+      "avg_ctr": 2.22,
+      "campaigns": [
+        {
+          "name": "ALLURE - Bombachas - Search",
+          "type": "SEARCH",
+          "status": "ENABLED",
+          "budget_daily": 30.0,
+          "cost": 1005.81,
+          "clicks": 715,
+          "impressions": 32616,
+          "conversions": 98.0,
+          "ctr": 2.19,
+          "cpa": 10.26
+        },
+        {
+          "name": "Campaign #1",
+          "type": "PERFORMANCE_MAX",
+          "status": "PAUSED",
+          "budget_daily": 48.7,
+          "cost": 5.3,
+          "clicks": 10,
+          "impressions": 38,
+          "conversions": 0.0,
+          "ctr": 26.32,
+          "cpa": null
+        }
+      ],
+      "monthly_evolution": [
+        {
+          "month": "2026-04",
+          "cost": 501.08,
+          "clicks": 436,
+          "impressions": 19774,
+          "conversions": 59.0,
+          "ctr": 2.2,
+          "cpa": 8.49
+        },
+        {
+          "month": "2026-05",
+          "cost": 510.03,
+          "clicks": 289,
+          "impressions": 12880,
+          "conversions": 39.0,
+          "ctr": 2.24,
+          "cpa": 13.08
+        }
+      ],
       "day_of_week": [
         {
           "day": "Seg",
-          "clicks": 0,
-          "impressions": 0,
-          "cost": 0,
-          "conversions": 0,
-          "pct": 0.0,
-          "ctr": 0
+          "clicks": 93,
+          "impressions": 6730,
+          "cost": 137.16,
+          "conversions": 10.0,
+          "pct": 12.8,
+          "ctr": 1.38
         },
         {
           "day": "Ter",
-          "clicks": 0,
-          "impressions": 0,
-          "cost": 0,
-          "conversions": 0,
-          "pct": 0.0,
-          "ctr": 0
+          "clicks": 114,
+          "impressions": 4177,
+          "cost": 155.82,
+          "conversions": 12.0,
+          "pct": 15.7,
+          "ctr": 2.73
         },
         {
           "day": "Qua",
-          "clicks": 0,
-          "impressions": 0,
-          "cost": 0,
-          "conversions": 0,
-          "pct": 0.0,
-          "ctr": 0
+          "clicks": 118,
+          "impressions": 6192,
+          "cost": 169.24,
+          "conversions": 19.0,
+          "pct": 16.3,
+          "ctr": 1.91
         },
         {
           "day": "Qui",
-          "clicks": 0,
-          "impressions": 0,
-          "cost": 0,
-          "conversions": 0,
-          "pct": 0.0,
-          "ctr": 0
+          "clicks": 111,
+          "impressions": 5119,
+          "cost": 135.97,
+          "conversions": 16.0,
+          "pct": 15.3,
+          "ctr": 2.17
         },
         {
           "day": "Sex",
-          "clicks": 0,
-          "impressions": 0,
-          "cost": 0,
-          "conversions": 0,
-          "pct": 0.0,
-          "ctr": 0
+          "clicks": 84,
+          "impressions": 3361,
+          "cost": 148.63,
+          "conversions": 15.0,
+          "pct": 11.6,
+          "ctr": 2.5
         },
         {
           "day": "Sáb",
-          "clicks": 0,
-          "impressions": 0,
-          "cost": 0,
-          "conversions": 0,
-          "pct": 0.0,
-          "ctr": 0
+          "clicks": 111,
+          "impressions": 2396,
+          "cost": 136.84,
+          "conversions": 15.0,
+          "pct": 15.3,
+          "ctr": 4.63
         },
         {
           "day": "Dom",
-          "clicks": 0,
-          "impressions": 0,
-          "cost": 0,
-          "conversions": 0,
-          "pct": 0.0,
-          "ctr": 0
+          "clicks": 94,
+          "impressions": 4679,
+          "cost": 127.45,
+          "conversions": 11.0,
+          "pct": 13.0,
+          "ctr": 2.01
         }
       ],
-      "gender_breakdown": [],
-      "top_keywords": []
+      "gender_breakdown": [
+        {
+          "gender": "Feminino",
+          "clicks": 399,
+          "impressions": 24006,
+          "cost": 565.16,
+          "conversions": 56.0,
+          "pct_clicks": 55.8,
+          "ctr": 1.66,
+          "cpa": 10.09
+        },
+        {
+          "gender": "Masculino",
+          "clicks": 263,
+          "impressions": 7519,
+          "cost": 351.09,
+          "conversions": 36.0,
+          "pct_clicks": 36.8,
+          "ctr": 3.5,
+          "cpa": 9.75
+        },
+        {
+          "gender": "Indefinido",
+          "clicks": 53,
+          "impressions": 1091,
+          "cost": 89.4,
+          "conversions": 6.0,
+          "pct_clicks": 7.4,
+          "ctr": 4.86,
+          "cpa": 14.9
+        }
+      ],
+      "top_keywords": [
+        {
+          "keyword": "bombacha de gaúcho",
+          "match_type": "Ampla",
+          "ad_group": "Grupo de anúncios 1",
+          "campaign": "ALLURE - Bombachas - Search",
+          "clicks": 93,
+          "impressions": 910,
+          "cost": 177.27,
+          "conversions": 17.0,
+          "ctr": 10.22,
+          "cpc": 1.91,
+          "cpa": 10.43
+        },
+        {
+          "keyword": "bombacha feminino",
+          "match_type": "Ampla",
+          "ad_group": "Grupo de anúncios 1",
+          "campaign": "ALLURE - Bombachas - Search",
+          "clicks": 51,
+          "impressions": 533,
+          "cost": 109.61,
+          "conversions": 4.0,
+          "ctr": 9.57,
+          "cpc": 2.15,
+          "cpa": 27.4
+        },
+        {
+          "keyword": "bombacha gaúcho",
+          "match_type": "Ampla",
+          "ad_group": "Grupo de anúncios 1",
+          "campaign": "ALLURE - Bombachas - Search",
+          "clicks": 46,
+          "impressions": 534,
+          "cost": 91.36,
+          "conversions": 10.5,
+          "ctr": 8.61,
+          "cpc": 1.99,
+          "cpa": 8.7
+        },
+        {
+          "keyword": "bombacha a venda",
+          "match_type": "Ampla",
+          "ad_group": "Grupo de anúncios 1",
+          "campaign": "ALLURE - Bombachas - Search",
+          "clicks": 28,
+          "impressions": 127,
+          "cost": 72.14,
+          "conversions": 7.0,
+          "ctr": 22.05,
+          "cpc": 2.58,
+          "cpa": 10.31
+        },
+        {
+          "keyword": "roupa bombacha",
+          "match_type": "Ampla",
+          "ad_group": "Grupo de anúncios 1",
+          "campaign": "ALLURE - Bombachas - Search",
+          "clicks": 28,
+          "impressions": 450,
+          "cost": 54.24,
+          "conversions": 6.0,
+          "ctr": 6.22,
+          "cpc": 1.94,
+          "cpa": 9.04
+        },
+        {
+          "keyword": "bombachas masculina",
+          "match_type": "Ampla",
+          "ad_group": "Grupo de anúncios 1",
+          "campaign": "ALLURE - Bombachas - Search",
+          "clicks": 24,
+          "impressions": 295,
+          "cost": 47.62,
+          "conversions": 3.0,
+          "ctr": 8.14,
+          "cpc": 1.98,
+          "cpa": 15.87
+        },
+        {
+          "keyword": "bombachinha gaucha",
+          "match_type": "Ampla",
+          "ad_group": "Grupo de anúncios 1",
+          "campaign": "ALLURE - Bombachas - Search",
+          "clicks": 28,
+          "impressions": 446,
+          "cost": 46.27,
+          "conversions": 0.0,
+          "ctr": 6.28,
+          "cpc": 1.65,
+          "cpa": null
+        },
+        {
+          "keyword": "bombachas gaúchas",
+          "match_type": "Ampla",
+          "ad_group": "Grupo de anúncios 1",
+          "campaign": "ALLURE - Bombachas - Search",
+          "clicks": 13,
+          "impressions": 123,
+          "cost": 23.43,
+          "conversions": 3.5,
+          "ctr": 10.57,
+          "cpc": 1.8,
+          "cpa": 6.69
+        },
+        {
+          "keyword": "bombacha tradicional",
+          "match_type": "Ampla",
+          "ad_group": "Grupo de anúncios 1",
+          "campaign": "ALLURE - Bombachas - Search",
+          "clicks": 7,
+          "impressions": 88,
+          "cost": 9.66,
+          "conversions": 1.0,
+          "ctr": 7.95,
+          "cpc": 1.38,
+          "cpa": 9.66
+        },
+        {
+          "keyword": "bombachinha masculina",
+          "match_type": "Ampla",
+          "ad_group": "Grupo de anúncios 1",
+          "campaign": "ALLURE - Bombachas - Search",
+          "clicks": 3,
+          "impressions": 38,
+          "cost": 8.03,
+          "conversions": 0.0,
+          "ctr": 7.89,
+          "cpc": 2.68,
+          "cpa": null
+        },
+        {
+          "keyword": "bombacha favo",
+          "match_type": "Ampla",
+          "ad_group": "Grupo de anúncios 1",
+          "campaign": "ALLURE - Bombachas - Search",
+          "clicks": 1,
+          "impressions": 7,
+          "cost": 3.24,
+          "conversions": 0.0,
+          "ctr": 14.29,
+          "cpc": 3.24,
+          "cpa": null
+        },
+        {
+          "keyword": "gaucha de bombacha",
+          "match_type": "Ampla",
+          "ad_group": "Grupo de anúncios 1",
+          "campaign": "ALLURE - Bombachas - Search",
+          "clicks": 2,
+          "impressions": 8,
+          "cost": 3.18,
+          "conversions": 1.0,
+          "ctr": 25.0,
+          "cpc": 1.59,
+          "cpa": 3.18
+        },
+        {
+          "keyword": "gaucho bombacha",
+          "match_type": "Ampla",
+          "ad_group": "Grupo de anúncios 1",
+          "campaign": "ALLURE - Bombachas - Search",
+          "clicks": 2,
+          "impressions": 20,
+          "cost": 2.03,
+          "conversions": 0.0,
+          "ctr": 10.0,
+          "cpc": 1.01,
+          "cpa": null
+        },
+        {
+          "keyword": "prenda de bombacha",
+          "match_type": "Ampla",
+          "ad_group": "Grupo de anúncios 1",
+          "campaign": "ALLURE - Bombachas - Search",
+          "clicks": 0,
+          "impressions": 6,
+          "cost": 0.0,
+          "conversions": 0.0,
+          "ctr": 0.0,
+          "cpc": null,
+          "cpa": null
+        },
+        {
+          "keyword": "bombacha roupa",
+          "match_type": "Ampla",
+          "ad_group": "Grupo de anúncios 1",
+          "campaign": "ALLURE - Bombachas - Search",
+          "clicks": 0,
+          "impressions": 7,
+          "cost": 0.0,
+          "conversions": 0.0,
+          "ctr": 0.0,
+          "cpc": null,
+          "cpa": null
+        },
+        {
+          "keyword": "bombachinha prenda",
+          "match_type": "Ampla",
+          "ad_group": "Grupo de anúncios 1",
+          "campaign": "ALLURE - Bombachas - Search",
+          "clicks": 0,
+          "impressions": 18,
+          "cost": 0.0,
+          "conversions": 0.0,
+          "ctr": 0.0,
+          "cpc": null,
+          "cpa": null
+        },
+        {
+          "keyword": "favo de bombacha",
+          "match_type": "Ampla",
+          "ad_group": "Grupo de anúncios 1",
+          "campaign": "ALLURE - Bombachas - Search",
+          "clicks": 0,
+          "impressions": 9,
+          "cost": 0.0,
+          "conversions": 0.0,
+          "ctr": 0.0,
+          "cpc": null,
+          "cpa": null
+        },
+        {
+          "keyword": "bombacha com favo",
+          "match_type": "Ampla",
+          "ad_group": "Grupo de anúncios 1",
+          "campaign": "ALLURE - Bombachas - Search",
+          "clicks": 0,
+          "impressions": 4,
+          "cost": 0.0,
+          "conversions": 0.0,
+          "ctr": 0.0,
+          "cpc": null,
+          "cpa": null
+        },
+        {
+          "keyword": "bombacha fem",
+          "match_type": "Ampla",
+          "ad_group": "Grupo de anúncios 1",
+          "campaign": "ALLURE - Bombachas - Search",
+          "clicks": 0,
+          "impressions": 1,
+          "cost": 0.0,
+          "conversions": 0.0,
+          "ctr": 0.0,
+          "cpc": null,
+          "cpa": null
+        },
+        {
+          "keyword": "bombacha recem nascido",
+          "match_type": "Ampla",
+          "ad_group": "Grupo de anúncios 1",
+          "campaign": "ALLURE - Bombachas - Search",
+          "clicks": 0,
+          "impressions": 1,
+          "cost": 0.0,
+          "conversions": 0.0,
+          "ctr": 0.0,
+          "cpc": null,
+          "cpa": null
+        },
+        {
+          "keyword": "bombacha gaucha tradicional",
+          "match_type": "Ampla",
+          "ad_group": "Grupo de anúncios 1",
+          "campaign": "ALLURE - Bombachas - Search",
+          "clicks": 0,
+          "impressions": 3,
+          "cost": 0.0,
+          "conversions": 0.0,
+          "ctr": 0.0,
+          "cpc": null,
+          "cpa": null
+        },
+        {
+          "keyword": "bombacha de favo",
+          "match_type": "Ampla",
+          "ad_group": "Grupo de anúncios 1",
+          "campaign": "ALLURE - Bombachas - Search",
+          "clicks": 0,
+          "impressions": 5,
+          "cost": 0.0,
+          "conversions": 0.0,
+          "ctr": 0.0,
+          "cpc": null,
+          "cpa": null
+        },
+        {
+          "keyword": "favo bombacha",
+          "match_type": "Ampla",
+          "ad_group": "Grupo de anúncios 1",
+          "campaign": "ALLURE - Bombachas - Search",
+          "clicks": 0,
+          "impressions": 7,
+          "cost": 0.0,
+          "conversions": 0.0,
+          "ctr": 0.0,
+          "cpc": null,
+          "cpa": null
+        }
+      ]
     },
     "facebook_ads": {
       "total_campaigns": 0,
@@ -246,62 +636,62 @@
     }
   },
   "progress": {
-    "current_week": 1,
+    "current_week": 2,
     "skills": {
       "ee-s1-diagnostico-maturidade": {
         "status": "completed",
         "checkpoint": 1,
-        "version": 2,
+        "version": 6,
         "started_at": "2026-05-14T00:00:00Z",
-        "completed_at": "2026-05-14T00:00:00Z"
+        "completed_at": "2026-05-25T00:00:00Z"
       },
       "ee-s1-swot": {
-        "status": "pending",
-        "checkpoint": 0,
-        "started_at": null,
-        "completed_at": null
+        "status": "completed",
+        "checkpoint": 1,
+        "started_at": "2026-05-25T00:00:00Z",
+        "completed_at": "2026-05-25T00:00:00Z",
+        "version": 2
       },
       "ee-s1-persona-icp": {
-        "status": "pending",
-        "checkpoint": 0,
-        "started_at": null,
-        "completed_at": null
+        "status": "completed",
+        "checkpoint": 1,
+        "version": 2,
+        "started_at": "2026-05-25T00:00:00Z",
+        "completed_at": "2026-05-25T00:00:00Z"
       },
       "ee-s1-auditoria-comunicacao": {
-        "status": "pending",
-        "checkpoint": 0,
-        "started_at": null,
-        "completed_at": null
+        "status": "completed",
+        "checkpoint": 1,
+        "version": 2,
+        "started_at": "2026-05-25T00:00:00Z",
+        "completed_at": "2026-05-25T00:00:00Z"
       },
       "ee-s2-pesquisa-mercado": {
-        "status": "pending",
-        "checkpoint": 0,
-        "started_at": null,
-        "completed_at": null
+        "status": "completed",
+        "checkpoint": 1,
+        "version": 2,
+        "started_at": "2026-05-25T00:00:00Z",
+        "completed_at": "2026-05-25T00:00:00Z"
       },
       "ee-s2-posicionamento": {
-        "status": "pending",
-        "checkpoint": 0,
-        "started_at": null,
-        "completed_at": null
+        "status": "completed",
+        "checkpoint": 1,
+        "version": 1,
+        "started_at": "2026-05-25T00:00:00Z",
+        "completed_at": "2026-05-25T00:00:00Z"
       },
       "ee-s2-diagnostico-midia": {
-        "status": "pending",
-        "checkpoint": 0,
-        "started_at": null,
-        "completed_at": null
-      },
-      "ee-s2-diagnostico-criativos": {
-        "status": "pending",
-        "checkpoint": 0,
-        "started_at": null,
-        "completed_at": null
+        "status": "completed",
+        "checkpoint": 1,
+        "version": 1,
+        "started_at": "2026-05-25T00:00:00Z",
+        "completed_at": "2026-05-25T00:00:00Z"
       },
       "ee-s2-diagnostico-cro": {
-        "status": "pending",
-        "checkpoint": 0,
-        "started_at": null,
-        "completed_at": null
+        "status": "completed",
+        "version": 2,
+        "started_at": "2026-05-26T15:03:00Z",
+        "completed_at": "2026-05-26T15:22:29.085495+00:00"
       },
       "ee-s3-identidade-visual": {
         "status": "pending",
@@ -334,10 +724,10 @@
         "completed_at": null
       },
       "ee-s3-crm-setup": {
-        "status": "pending",
-        "checkpoint": 0,
-        "started_at": null,
-        "completed_at": null
+        "status": "skipped",
+        "version": 0,
+        "skipped_at": "2026-05-26T18:16:50.473530+00:00",
+        "skipped_reason": "Setup de CRM não está contratado no escopo da Estruturação. Confirmado em 2026-05-26."
       },
       "ee-s3-forecast-midia": {
         "status": "pending",
@@ -362,6 +752,24 @@
         "checkpoint": 0,
         "started_at": null,
         "completed_at": null
+      },
+      "ee-s2-diagnostico-organico-ig": {
+        "status": "completed",
+        "version": 1,
+        "started_at": "2026-05-26T11:30:00Z",
+        "completed_at": "2026-05-26T14:53:11.154517+00:00"
+      },
+      "ee-s2-diagnostico-criativos": {
+        "status": "skipped",
+        "version": 0,
+        "skipped_at": "2026-05-26T15:02:05.364893+00:00",
+        "skipped_reason": "Cliente sem Meta Ads próprios. Verificação manual confirmou que NENHUM dos 4 concorrentes (La Parceria, La Fronteira, Regalo Campeiro, Bombachas Gaúcho) tem ads ativos no BR. Sem material de criativos pagos para analisar — skill fora de escopo para este cliente."
+      },
+      "ee-revisao-semanal": {
+        "status": "skipped",
+        "version": 0,
+        "skipped_at": "2026-05-26T15:38:18.757072+00:00",
+        "skipped_reason": "Skill não necessária no escopo da Farroupilha. Output JSON foi gerado mas não vai pro portal."
       }
     }
   },
@@ -377,6 +785,511 @@
       "skill": "ee-s1-diagnostico-maturidade",
       "checkpoint": 1,
       "decision": "Diagnóstico aprovado em v2 após análise da LP real (https://bombachasfarroupilha.com.br/). Score 20/100 (Crítico, limite superior). 4 pilares em crítico (Mídia 8, Criativos 25, CRM 5, SEO 18); CRO 38 — marginalmente acima do benchmark setor graças à LP B2B segmentada com proposta clara, 5 objeções no FAQ e CTAs WhatsApp. Achados-chave: Google Ads tag (AW-17962419023) e GTM já instalados, mas Meta nunca rodou e acesso à conta Google ainda pendente do cliente. honesty_alert sobre execução pós-contrato mantido. 3 afirmações marcadas como suposições a confirmar quando o acesso Google chegar (Google nunca rodou, GA4 ausente, origem da AW tag)."
+    },
+    {
+      "ts": "2026-05-22T00:00:00Z",
+      "skill": "ee-s1-diagnostico-maturidade",
+      "checkpoint": 1,
+      "decision": "Diagnóstico re-rodado em v3 após conexão do workspace V4MOS (5b3a7a61). Achado crítico: existe campanha Google Ads ATIVA na conta (ALLURE - Bombachas - Search, R$30/dia, ENABLED) que o briefing nem o cliente conheciam — 90d: R$1.011 gastos, 725 cliques, 98 conversões medidas, CPA R$10,32, CTR 2,22%. Score subiu de 20→28. Mídia Paga subiu de 8→42 (passou a ser pilar mediano, não mais crítico); CRM (5) e SEO (18) seguem críticos. Origem da campanha ALLURE a confirmar com Loreni — provável agência de Passo Fundo que cotou em paralelo ou dev da LP. Briefing.digital_situation atualizado (paid_traffic=true, platforms=[Google Ads], monthly_investment=~R$335). honesty_alert reescrito: gargalo agora é alinhar quem opera o digital, não construir do zero."
+    },
+    {
+      "ts": "2026-05-22T00:10:00Z",
+      "skill": "ee-s1-diagnostico-maturidade",
+      "checkpoint": 1,
+      "decision": "Diagnóstico v4 reescrito após calibração de Gina: cliente sabe que tem campanhas rodando — falta clareza sobre o que está rodando e qual a estratégia. Reframe da v3: o foco agora é DECODIFICAR a operação atual, não dramatizar opacidade. Análise estratégica da campanha ALLURE - Search: estrutura B2C de varejo (1 grupo único, 23 keywords amplas, sem persona B2B), 55,8% dos cliques femininos, Bombacha de Favo (carro-chefe declarado) com só 7 impressões em 90d. Performance Max criada e pausada após R$5 — tentativa interrompida sem documentação. Scores mantidos (28 geral, mídia 42, CRM 5, SEO 18). Prioridade #1 reescrita: call de decodificação com Loreni e Everton para definir ICP, budget e operador antes de reestruturar conta. Briefing.digital_situation suavizado no biggest_pain. Memory feedback_diagnostico_postura criado para futuras skills."
+    },
+    {
+      "ts": "2026-05-22T00:30:00Z",
+      "skill": "ee-s1-diagnostico-maturidade",
+      "checkpoint": 1,
+      "decision": "v5 reescrita após calibração de Gina: V4 não vai assumir a conta Google Ads — a agência de Passo Fundo opera e continua operando. O papel da V4 é entregar à Loreni a lista de correções acionáveis que a agência precisa implementar com urgência. Priorities reescritas como 7 apontamentos (5 para a agência operadora, 2 para o cliente): segmentar Search por persona B2B + match Frase/Exata, colocar Bombacha de Favo nos lances, instalar GA4 + UTM dinâmica, decidir destino do PMax pausado, abrir Meta Business para MT, criar GMB, estruturar CRM mínimo. Removida a Priority #1 anterior (reunião para decidir operador) — não há decisão a tomar. honesty_alert, key_insight e summary_headline alinhados. Mem feedback/project_farroupilha_escopo atualizada explicitando que V4 = diagnóstico/apontamento, não execução."
+    },
+    {
+      "ts": "2026-05-25T00:00:00Z",
+      "skill": "ee-s1-swot",
+      "checkpoint": 1,
+      "decision": "SWOT v1 gerada usando maturidade v5 + dados V4MOS + briefing + LP. Quadro: 6 forças × 6 fraquezas, 6 oportunidades × 6 ameaças. Aposta SO principal: Bombacha de Favo (F1) + demanda Google validada (F2) + LP B2B segmentada (F3) + pré-pico farroupilha (O3) — janela maio-junho para reestruturar antes de jul-set. Proteção crítica: CRM 5 (W1) + concentração 99% (T1) = digitalizar carteira via CRM mínimo. 7 priority_actions ordenadas por risk_adjusted_score, formuladas como apontamentos para agência de Passo Fundo (5) + ações do cliente (2 — CRM e GMB). Top score: instalação GA4+UTM (9.3), reestruturação Search (8.7), Bombacha de Favo nos lances (8.7). Honesty_alert mantém atenção ao risco WT1 (apontamentos viram gaveta) — ação #7 (cadência V4MOS 30/60/90d) é stop-loss do ROI da Estruturação."
+    },
+    {
+      "ts": "2026-05-25T00:00:00Z",
+      "skill": "ee-s1-persona-icp",
+      "checkpoint": 1,
+      "decision": "Persona/ICP v1 gerada. ICP B2B singular: lojista de pilcharia regional (RS/SC/PR/MT, 30-50 anos, faturamento R$ 600k-3,5MM/ano). Persona Diego Tavares (38, herdeiro de pilcharia familiar em Tupanciretã/RS, queimado 3x por fornecedores). JTBD funcional dominante: previsibilidade de prazo + capital de giro preservado. Mensagem-chave funcional escolhida — ataca território vazio da concorrência (todos vendem tradição genérica). 3 anti-personas: Compradora de prenda (55,8% dos cliques pagos), Caçador de preço, Atacarejo. WTP marcadas como estimadas [E] — briefing não trouxe ticket. honesty_alert pede validação com Loreni de WTP + faixa etária + ciclo. Key insight: Diego compra previsibilidade de prazo, não Bombacha de Favo."
+    },
+    {
+      "ts": "2026-05-25T00:00:00Z",
+      "skill": "ee-s1-auditoria-comunicacao",
+      "checkpoint": 1,
+      "decision": "Auditoria de Comunicação v1. 5 canais auditados: LP 55, Anúncios 35, IG 30 [E], WA 25, GMB 0. Score médio 29/100. Coherence score de voz 42/100. Maior vazamento no funil: estágio de Qualificação B2B vs B2C (60% das conversas iniciadas no WA são anti-persona). 5 quick wins identificados (todos baixo esforço): criar GMB, WA Business com saudação+filtro CNPJ, Bombacha de Favo nos lances, footer LP completo + erro mobile, prova social na LP. Top 3 problemas: 55,8% cliques fora do ICP / GMB inexistente / Bombacha de Favo digitalmente abandonada. Auditoria de IG e copy de anúncios marcadas como [E] — sem screenshots/preview. honesty_alert pede iteração de revisão com Loreni antes da apresentação final. S1 completa: 4/4 skills concluídas."
+    },
+    {
+      "ts": "2026-05-25T00:00:00Z",
+      "skill": "ee-s2-pesquisa-mercado",
+      "checkpoint": 1,
+      "decision": "Pesquisa de mercado v1 gerada (após correção: escopo inclui S2 inteira). TAM R$ 1bi [E], SAM B2B R$ 300MM [E], Endereçável R$ 150MM [E], SOM R$ 4MM/ano (triangulação capacidade + market share + nicho premium). Share atual 0,33% — gap 4x até SOM. 5 concorrentes pesquisados via WebSearch: Bombachas Gaúcho (Uruguaiana, 30+ anos), Bombachas Pampa Sul, Gozzi, Atacado das Pilchas (PoA), Artega (varejo). Todos posicionados como Generalistas — território Especialista+Premium B2B está VAZIO. 4 tendências (urbanização tradicionalista, +25% Expointer 2025, MTG em 9 regiões, têxtil BR R$ 153bi). 3 ameaças (concorrentes profissionalizarem digital, sazonalidade, CPC pico). 7 diferenciais analisados (Bombacha de Favo + 35d + 15 peças confirmados). honesty_alert mantém sizing como [E] — sem fonte pública específica do nicho. Meta da cliente não declarada — campo flagged para validação."
+    },
+    {
+      "ts": "2026-05-25T00:30:00Z",
+      "skill": "regenerated-all-s1-and-pesquisa-mercado",
+      "checkpoint": 1,
+      "decision": "Regeneração completa S1 + Pesquisa S2 após Loreni colar arquivo do formulário V4MOS revelando: (1) ICP desejado declarado é Mariana Tradicionalista (B2C consumidor final), não Diego (lojista B2B); (2) 3 concorrentes nominais: La Parceria, La Fronteira, Regalo Campeiro (este último com 26K Instagram, dominante digital); (3) GMB ATIVO (não inexistente); (4) faturamento R$ 1,27M+/ano (não R$ 1MM); (5) 63 clientes ativos, 21 vendas/mês, ticket R$ 100/peça; (6) motivo de perda #1 = preço; (7) cidades top 3: Caxias do Sul, Alegrete, Passo Fundo. Estratégia dupla aprovada por Gina: Mariana B2C principal (digital, frente NOVA de crescimento) + Diego B2B secundário (físico, base de manutenção). Outputs regenerados: persona-icp v2 (persona dupla), pesquisa-mercado v2 (3 concorrentes declarados + SAM dividido B2C/B2B), SWOT v2 (aposta SO Bombacha de Favo narrada + janela 12-18 meses), maturidade v6 (score 30, SEO sobe 18→25 por GMB ativo), auditoria-comunicacao v2 (score 35 por GMB ativo + LP precisa bloco Mariana). Memória project_farroupilha_estrategia_dupla criada."
+    },
+    {
+      "ts": "2026-05-25T01:00:00Z",
+      "skill": "ee-s2-posicionamento",
+      "checkpoint": 1,
+      "decision": "Posicionamento v1 gerado. Território escolhido: 'Artesanal. Autêntico. Direto.' — quadrante VAZIO no mapa competitivo (Especialista + Fábrica Direta). PUV aprovada: 'Bombachas Farroupilha é a única fábrica especialista em Bombacha de Favo artesanal trançada à mão — entrega pilcha autêntica em 35 dias para mulheres tradicionalistas (você) e lojistas regionais (sua loja) que recusam cópia industrial'. Tagline recomendada: 'Feita à mão. Direto da fábrica.' (6 palavras). Canvas 4P com hierarquia DUPLA por persona (Mariana B2C principal, Diego B2B secundário). Avoid_channels: TikTok fashion, marketplaces, atacarejo grande, LinkedIn B2B. Honesty_alert: território só será defensável com cadência de 4 Reels semanais consecutivos nas primeiras 4 semanas — operador V4 ajuda na produção. Janela 12-18 meses antes que Regalo Campeiro narre processo de parceiro. Próxima skill recomendada: ee-s2-diagnostico-midia ou ee-s2-diagnostico-criativos."
+    },
+    {
+      "ts": "2026-05-25T02:00:00Z",
+      "skill": "ee-s2-diagnostico-midia",
+      "checkpoint": 1,
+      "decision": "Diagnóstico de mídia v1 gerado com dados V4MOS reais. Google Ads em subscale (R$ 335/mês real vs R$ 0 declarado) entrega CPA R$ 10,32 + CTR 2,22% acima da média setor. Meta Ads ZERO. Top 3 problemas: (1) estrutura monolítica Search sem segmentação por persona, (2) Bombacha de Favo com 7 imp/90d - carro-chefe fora dos lances, (3) Meta Ads inexistente num cliente com ICP Mariana B2C. 5 clusters de keywords mapeados (2 ativos manter, 1 carro-chefe sangrar, 1 B2B Diego inexistente, 1 long-tail eliminar/pausar). 3 cenários de realocação: A Conservador (R$ 900 mesmo budget), B RECOMENDADO (R$ 1.500 com Meta MT aberto), C Agressivo (R$ 3.000). 6 hipóteses de teste criativo. Daypart com 5 ajustes (Sáb-Dom +30%, noites +20%, madrugada -50%). Meta 90d: dobrar leads qualificados (33→65/mês) com CPL R$ 25 pós-WA Business filtro. Plano de ação com 6 apontamentos: 4 para agência + 2 para Loreni/operador V4. honesty_alert sobre implementação parcial + benchmarks setoriais como [E]."
+    },
+    {
+      "ts": "2026-05-25T03:00:00Z",
+      "skill": "diagnostico-midia-fix",
+      "checkpoint": 0,
+      "decision": "Diagnóstico de mídia paga v1 corrigido: budget_reallocation_scenarios convertido de array para objeto (keys scenario_a_conservative/b_realistic/c_aggressive). daypart_optimization convertido para {adjustments: [...]}. creative_testing_hypotheses convertido para {hypotheses: [...]}. action_plan ganhou campo rank. Removido ee-s2-diagnostico-criativos do progress.skills (não se aplica — cliente sem Meta Ads, sem criativos visuais pagos para auditar). Próxima skill: ee-s2-diagnostico-organico-ig (Instagram orgânico)."
+    },
+    {
+      "ts": "2026-05-26T14:47:31.028000+00:00",
+      "skill": "ee-s2-diagnostico-criativos",
+      "action": "removed_from_scope",
+      "note": "Removida do escopo da Farroupilha. Cliente nao tem Meta Ads proprios + verificacao manual na Meta Ads Library confirmou que NENHUM dos 4 concorrentes (La Parceria, La Fronteira, Regalo Campeiro, Bombachas Gaucho) tem ads ativos no BR. Sem material pago pra benchmark, a skill nao agrega valor. Substituida por foco no ee-s2-diagnostico-organico-ig (dados organicos via business_discovery)."
+    },
+    {
+      "ts": "2026-05-26T14:53:11.154720+00:00",
+      "skill": "ee-s2-diagnostico-organico-ig",
+      "action": "completed",
+      "note": "Auditoria via Instagram Graph API business_discovery. Cliente vs Regalo Campeiro + Bombachas Gaúcho (90 dias). Achado-chave: cliente lidera engajamento (0,92% vs 0,36% Regalo, 2,6x) mas posta 2,4x menos. Storytelling histórico-familiar é a fórmula vencedora (top post 5,35%). Briefing: 3x/sem + diversificar formato (Reels semanal + carrossel) + CTA padrão. 5 competitor_patterns_missing identificados. Honesty alert: 2 dos 5 concorrentes auditados, recomendado complementar."
+    },
+    {
+      "ts": "2026-05-26T15:22:29.085837+00:00",
+      "skill": "ee-s2-diagnostico-cro",
+      "action": "completed",
+      "note": "Auditoria CRO de bombachasfarroupilha.com.br via page_audit + page_audit_deep + análise visual (3 prints full-page). Achados críticos: tagueamento broken (GTM-M7WTSW9C vazio + Google Ads AW-17962419023 ativo SEM GA4 nem Pixel = mídia paga cega); LGPD non_compliant 3/10 (sem CMP); 0/6 sinais de trust no footer; página 100% B2B (Mariana B2C principal sem caminho); 3 seções com contraste ilegível (Quem somos, Diferenciais, FAQ); 0 H1, sem meta desc, 12/17 imgs sem alt. Vantagem rara: 4 depoimentos REAIS de Instagram (Texas Ranch, Brida, Do Campo, Baia). 9 hipóteses de teste (5 P1, 3 P2, 1 P3), wireframe de 12 seções, exit intent dual por persona."
+    },
+    {
+      "ts": "2026-05-26T15:38:18.757237+00:00",
+      "skill": "ee-revisao-semanal",
+      "action": "skipped",
+      "note": "Skill removida do escopo a pedido do operador. Output JSON em outputs/ee-revisao-semanal.json mantido para referência interna mas oculto do portal."
+    },
+    {
+      "ts": "2026-05-26T15:42:11.162296+00:00",
+      "skill": "ee-s2-diagnostico-cro",
+      "action": "updated_v2",
+      "note": "Output CRO atualizado v2 com dados REAIS do PageSpeed Insights (mobile only) capturado em 2026-05-26: Performance 92, Accessibility 94, Best Practices 96, SEO 92. Core Web Vitals PASSED em field data (LCP 1,2s, CLS 0,01, TBT 0ms). Recalibrei estimated_conversion_loss removendo a estimativa catastrofica de 30-50% (era assumption sem PSI). Site técnico é sólido — gargalos reais são tagueamento + trust + LGPD + Mariana ausente, não performance. 2 hipóteses novas: P3 fine-tuning performance (font-display, render-block, unused CSS) e P2 accessibility 94→100."
+    },
+    {
+      "ts": "2026-05-26T18:16:50.473832+00:00",
+      "skill": "ee-s3-crm-setup",
+      "action": "skipped",
+      "note": "Removido do escopo a pedido do operador. CRM segue como recomendação que o cliente pode implementar por conta — mas NÃO entra como entregável V4."
     }
-  ]
+  ],
+  "version": 7,
+  "page_audit": {
+    "fetched_at": "2026-05-26T15:03:44Z",
+    "url": "https://bombachasfarroupilha.com.br/",
+    "cache_file": "cache/page_audit-20260526-150344.json",
+    "pagespeed": {
+      "mobile_scores": null,
+      "desktop_scores": null,
+      "mobile_cwv_lab": null,
+      "desktop_cwv_lab": null,
+      "mobile_cwv_field": null,
+      "desktop_cwv_field": null,
+      "mobile_top_opportunities": [],
+      "desktop_top_opportunities": [],
+      "mobile_error": null,
+      "desktop_error": null,
+      "skipped": true
+    },
+    "screenshots": {
+      "mobile": null,
+      "desktop": null
+    },
+    "onpage": {
+      "mobile": {
+        "label": "mobile",
+        "status_code": 200,
+        "final_url": "https://bombachasfarroupilha.com.br/",
+        "response_time_ms": 572,
+        "html_size_kb": 97.9,
+        "title": "Bombachas Farroupilha",
+        "title_length": 21,
+        "meta_description": null,
+        "meta_description_length": 0,
+        "robots": "max-image-preview:large",
+        "canonical": "https://bombachasfarroupilha.com.br/",
+        "lang": "pt-BR",
+        "viewport": true,
+        "favicon": true,
+        "h1": [],
+        "h1_count": 0,
+        "h2_count": 22,
+        "h3_count": 7,
+        "h4_count": 0,
+        "images_total": 17,
+        "images_without_alt": 12,
+        "links_total": 6,
+        "links_internal": 1,
+        "links_external": 5,
+        "links_nofollow": 0,
+        "schema_types": [],
+        "og": {},
+        "twitter_card": {}
+      },
+      "desktop": {
+        "label": "desktop",
+        "status_code": 200,
+        "final_url": "https://bombachasfarroupilha.com.br/",
+        "response_time_ms": 570,
+        "html_size_kb": 97.9,
+        "title": "Bombachas Farroupilha",
+        "title_length": 21,
+        "meta_description": null,
+        "meta_description_length": 0,
+        "robots": "max-image-preview:large",
+        "canonical": "https://bombachasfarroupilha.com.br/",
+        "lang": "pt-BR",
+        "viewport": true,
+        "favicon": true,
+        "h1": [],
+        "h1_count": 0,
+        "h2_count": 22,
+        "h3_count": 7,
+        "h4_count": 0,
+        "images_total": 17,
+        "images_without_alt": 12,
+        "links_total": 6,
+        "links_internal": 1,
+        "links_external": 5,
+        "links_nofollow": 0,
+        "schema_types": [],
+        "og": {},
+        "twitter_card": {}
+      },
+      "divergences": []
+    },
+    "security": {
+      "https": true,
+      "hsts": null,
+      "csp": "upgrade-insecure-requests",
+      "x_frame_options": null,
+      "x_content_type_options": null,
+      "referrer_policy": null,
+      "content_type": "text/html; charset=UTF-8",
+      "content_encoding": "gzip",
+      "cache_control": null,
+      "server": "LiteSpeed"
+    }
+  },
+  "page_audit_deep": {
+    "fetched_at": "2026-05-26T15:03:53.207514+00:00",
+    "url": "https://bombachasfarroupilha.com.br/",
+    "cache_file": "cache/page_audit_deep-20260526-150352.json",
+    "engine": "playwright-chromium",
+    "tracking_stack": {
+      "tools_detected": {
+        "gtm": {
+          "name": "Google Tag Manager",
+          "category": "tracking"
+        },
+        "google_ads_conversion": {
+          "name": "Google Ads Conversion",
+          "category": "ads"
+        },
+        "whatsapp_widget": {
+          "name": "WhatsApp Click-to-Chat",
+          "category": "chat"
+        },
+        "wordpress": {
+          "name": "WordPress",
+          "category": "cms"
+        },
+        "elementor": {
+          "name": "Elementor",
+          "category": "cms"
+        },
+        "litespeed": {
+          "name": "LiteSpeed",
+          "category": "hosting"
+        }
+      },
+      "ids_found": {
+        "gtm": [
+          "GTM-M7WTSW9C"
+        ],
+        "ga4": [],
+        "ua": [],
+        "google_ads": [
+          "AW-17962419023"
+        ],
+        "meta_pixel": [],
+        "tiktok_pixel": [],
+        "linkedin_partner": []
+      },
+      "categories_summary": {
+        "tracking": [
+          "Google Tag Manager"
+        ],
+        "ads": [
+          "Google Ads Conversion"
+        ],
+        "chat": [
+          "WhatsApp Click-to-Chat"
+        ],
+        "cms": [
+          "Elementor",
+          "WordPress"
+        ],
+        "hosting": [
+          "LiteSpeed"
+        ]
+      },
+      "total_tools": 6
+    },
+    "events_fired": {
+      "ga4_event_count": 0,
+      "meta_event_count": 0,
+      "ga4_event_names": [],
+      "meta_event_names": []
+    },
+    "datalayer": {
+      "desktop_length": 3,
+      "mobile_length": 3
+    },
+    "cro_elements": {
+      "desktop": {
+        "cta_count": 3,
+        "cta_above_fold": 1,
+        "cta_list": [
+          {
+            "text": "QUERO SOLICITAR ORÇAMENTO!",
+            "tag": "a",
+            "href": "https://wa.me/5554996150025?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento.",
+            "is_whatsapp": true,
+            "is_tel": false,
+            "is_mail": false,
+            "above_fold": true,
+            "width": 414,
+            "height": 76
+          },
+          {
+            "text": "QUERO SOLICITAR ORÇAMENTO!",
+            "tag": "a",
+            "href": "https://wa.me/5554996150025?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento.",
+            "is_whatsapp": true,
+            "is_tel": false,
+            "is_mail": false,
+            "above_fold": false,
+            "width": 414,
+            "height": 76
+          },
+          {
+            "text": "QUERO SOLICITAR ORÇAMENTO!",
+            "tag": "a",
+            "href": "https://wa.me/5554996150025?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento.",
+            "is_whatsapp": true,
+            "is_tel": false,
+            "is_mail": false,
+            "above_fold": false,
+            "width": 371,
+            "height": 70
+          }
+        ],
+        "whatsapp_links": [
+          {
+            "text": "QUERO SOLICITAR ORÇAMENTO!",
+            "href": "https://wa.me/5554996150025?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento.",
+            "visible": true,
+            "floating": false
+          },
+          {
+            "text": "QUERO SOLICITAR ORÇAMENTO!",
+            "href": "https://wa.me/5554996150025?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento.",
+            "visible": true,
+            "floating": false
+          },
+          {
+            "text": "QUERO SOLICITAR ORÇAMENTO!",
+            "href": "https://wa.me/5554996150025?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento.",
+            "visible": true,
+            "floating": false
+          },
+          {
+            "text": "",
+            "href": "https://wa.me/5554996150025?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento.",
+            "visible": true,
+            "floating": false
+          }
+        ],
+        "forms": [],
+        "form_count": 0,
+        "avg_fields_per_form": 0,
+        "social_proof": {
+          "has_testimonials": false,
+          "has_ratings": true,
+          "has_numbers": true,
+          "has_certifications": false,
+          "has_logos_clients": false
+        },
+        "urgency": {
+          "has_countdown": false,
+          "has_limited": false,
+          "has_discount": false
+        },
+        "trust": {
+          "has_address": false,
+          "has_cnpj": false,
+          "has_phone": false,
+          "has_email": false,
+          "has_privacy_link": false,
+          "has_terms_link": false
+        },
+        "videos": [],
+        "h1_text": null,
+        "page_text_length": 2653
+      },
+      "mobile": {
+        "cta_count": 3,
+        "cta_above_fold": 1,
+        "cta_list": [
+          {
+            "text": "QUERO SOLICITAR ORÇAMENTO!",
+            "tag": "a",
+            "href": "https://wa.me/5554996150025?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento.",
+            "is_whatsapp": true,
+            "is_tel": false,
+            "is_mail": false,
+            "above_fold": true,
+            "width": 319,
+            "height": 65
+          },
+          {
+            "text": "QUERO SOLICITAR ORÇAMENTO!",
+            "tag": "a",
+            "href": "https://wa.me/5554996150025?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento.",
+            "is_whatsapp": true,
+            "is_tel": false,
+            "is_mail": false,
+            "above_fold": false,
+            "width": 319,
+            "height": 65
+          },
+          {
+            "text": "QUERO SOLICITAR ORÇAMENTO!",
+            "tag": "a",
+            "href": "https://wa.me/5554996150025?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento.",
+            "is_whatsapp": true,
+            "is_tel": false,
+            "is_mail": false,
+            "above_fold": false,
+            "width": 284,
+            "height": 65
+          }
+        ],
+        "whatsapp_links": [
+          {
+            "text": "QUERO SOLICITAR ORÇAMENTO!",
+            "href": "https://wa.me/5554996150025?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento.",
+            "visible": true,
+            "floating": false
+          },
+          {
+            "text": "QUERO SOLICITAR ORÇAMENTO!",
+            "href": "https://wa.me/5554996150025?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento.",
+            "visible": true,
+            "floating": false
+          },
+          {
+            "text": "QUERO SOLICITAR ORÇAMENTO!",
+            "href": "https://wa.me/5554996150025?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento.",
+            "visible": true,
+            "floating": false
+          },
+          {
+            "text": "",
+            "href": "https://wa.me/5554996150025?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento.",
+            "visible": true,
+            "floating": false
+          }
+        ],
+        "forms": [],
+        "form_count": 0,
+        "avg_fields_per_form": 0,
+        "social_proof": {
+          "has_testimonials": false,
+          "has_ratings": true,
+          "has_numbers": true,
+          "has_certifications": false,
+          "has_logos_clients": false
+        },
+        "urgency": {
+          "has_countdown": false,
+          "has_limited": false,
+          "has_discount": false
+        },
+        "trust": {
+          "has_address": false,
+          "has_cnpj": false,
+          "has_phone": false,
+          "has_email": false,
+          "has_privacy_link": false,
+          "has_terms_link": false
+        },
+        "videos": [],
+        "h1_text": null,
+        "page_text_length": 2653
+      }
+    },
+    "quality_flags": [
+      {
+        "severity": "critical",
+        "flag": "gtm_without_analytics",
+        "title": "GTM instalado sem GA4 nem Meta Pixel",
+        "detail": "Container GTM carrega mas nao dispara nenhuma tag de analytics ou ads conhecida. Investimento em midia opera cego — sem atribuicao de conversao."
+      }
+    ],
+    "compliance_lgpd": {
+      "status": "non_compliant",
+      "score": 3,
+      "has_cmp": false,
+      "cmps_detected": [],
+      "pre_consent_trackers": {
+        "googletagmanager.com/gtm.js": [
+          "https://www.googletagmanager.com/gtm.js?id=GTM-M7WTSW9C"
+        ],
+        "doubleclick.net": [
+          "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/17962419023/?random=1779807845965&cv=11&fst=1779807845965&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be65k1v9249248637z89248554765za20gzb9248554765zd9248554765xec&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115938465~115938468~116701382~118689382&u_w=1440&u_h=900&url=https%3A%2F%2Fbombachasfarroupilha.com.br%2F&ref=https%3A%2F%2Fbombachasfarroupilha.com.br%2F&rcb=7&frm=0&tiba=Bombachas%20Farroupilha&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=649056096.1779807846&uaa=x86&uab=64&uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15&uamb=0&uam=&uap=macOS&uapv=10.15.7&uaw=0&data=event%3Dgtag.config&rfmt=3&fmt=4"
+        ]
+      },
+      "pre_consent_tracker_count": 2,
+      "issues": [
+        "Sem CMP detectado — sem mecanismo de consentimento.",
+        "2 requests de tracking disparam ANTES de qualquer consentimento.",
+        "  • googletagmanager.com/gtm.js: 1 request(s)",
+        "  • doubleclick.net: 1 request(s)"
+      ]
+    },
+    "navigation": {
+      "desktop": {
+        "status": 200,
+        "nav_error": null,
+        "requests_count": 48,
+        "responses_count": 48,
+        "cookies_count": 3
+      },
+      "mobile": {
+        "status": 200,
+        "nav_error": null,
+        "requests_count": 46,
+        "responses_count": 45,
+        "cookies_count": 3
+      }
+    }
+  }
 }

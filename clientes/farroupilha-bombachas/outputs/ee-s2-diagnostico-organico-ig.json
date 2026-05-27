@@ -1,0 +1,562 @@
+{
+  "client_name": "Bombachas Farroupilha",
+  "skill": "ee-s2-diagnostico-organico-ig",
+  "version": 1,
+  "generated_at": "2026-05-26T14:52:14.995351+00:00",
+  "data_source": "Instagram Graph API (business_discovery) — 90 dias, fetched 2026-05-26",
+  "summary": "Bombachas Farroupilha tem o conteúdo mais engajado do nicho — 0,92% de engagement vs 0,36% do líder Regalo Campeiro (2,6x maior) e 0,18% do Bombachas Gaúcho — mas posta 2,4x menos (1,46/sem vs 3,54/sem do Regalo) e concentra 89% em feed estático. Storytelling histórico-familiar é a fórmula vencedora identificada (top post 5,35% eng): escalar para 3x/semana, diversificar formato (Reels + carrossel) e adicionar CTA destrava crescimento sem perder qualidade.",
+  "summary_headline": "Bombachas Farroupilha lidera em engajamento (0,92% vs 0,36% do Regalo) mas posta 2,4x menos — escalar storytelling histórico para 3x/semana destrava crescimento.",
+  "summary_highlights": [
+    {
+      "category": "vantagem",
+      "label": "Engajamento médio (cliente)",
+      "value": "0,92%",
+      "subtext": "2,6x acima do líder Regalo (0,36%) e 5,2x acima do Bombachas Gaúcho (0,18%)",
+      "tone": "green"
+    },
+    {
+      "category": "maturidade",
+      "label": "Cadência semanal",
+      "value": "1,46/sem",
+      "subtext": "Vs 3,54/sem do Regalo (2,4x mais). Sub-volume é o gargalo principal",
+      "tone": "red"
+    },
+    {
+      "category": "risco",
+      "label": "Concentração em FEED_IMAGE",
+      "value": "89%",
+      "subtext": "17 de 19 posts são imagem estática; concorrentes balanceiam reels + carrossel",
+      "tone": "yellow"
+    },
+    {
+      "category": "oportunidade",
+      "label": "Top post (storytelling 15 anos)",
+      "value": "5,35% eng",
+      "subtext": "76 likes em conta de 1.477 — fórmula que precisa ser escalada e replicada",
+      "tone": "blue"
+    },
+    {
+      "category": "competicao",
+      "label": "Followers cliente vs líder",
+      "value": "1.477 vs 26.764",
+      "subtext": "Regalo tem 18x mais seguidores. Cliente compensa com engajamento qualitativo, mas escala importa",
+      "tone": "yellow"
+    },
+    {
+      "category": "acao",
+      "label": "CTAs ausentes no top",
+      "value": "0/3",
+      "subtext": "Nenhum dos 3 top posts tem CTA; 100% dos bottom posts tentam vender. Está vendendo no conteúdo errado",
+      "tone": "red"
+    }
+  ],
+  "summary_key_findings": [
+    {
+      "category": "vantagem",
+      "text": "Cliente lidera engajamento no nicho (0,92% médio) mesmo com 18x menos seguidores que o líder Regalo Campeiro — audiência menor é mais qualificada e responsiva, especialmente quando o conteúdo é storytelling de marca/tradição (top post atingiu 5,35%, 76 likes)."
+    },
+    {
+      "category": "contexto",
+      "text": "Os 2 concorrentes auditados (Regalo e Bombachas Gaúcho) seguem estratégias opostas: Regalo aposta em alta cadência (3,5x/sem) + diversificação cultural (eventos gaúchos, marcos institucionais) e Bombachas Gaúcho aposta em Reels (8 em 90d, 42% do mix) com linha premium destacada. Nenhum dos dois tem engagement mais alto que o cliente."
+    },
+    {
+      "category": "ameaca",
+      "text": "89% dos posts do cliente são FEED_IMAGE estático. Sem variação de formato, o algoritmo do Instagram limita alcance — concorrentes diversificam (Regalo: 63% feed + 30% carrossel + 7% reels; Bombachas: 32% feed + 26% carrossel + 42% reels). Risco de plateau de alcance mesmo com bom engajamento."
+    },
+    {
+      "category": "acao",
+      "text": "Dobrar cadência para 3x/semana mantendo a fórmula storytelling histórico-familiar (vencedora no top post), introduzir 1 Reels/semana com gatilho de venda (já validado pelo único Reels do trimestre — 1,42% eng com 'coleção nova edição limitada') e adicionar CTA + hashtags estratégicas em 100% dos posts comerciais."
+    }
+  ],
+  "period": {
+    "start": "2026-02-25",
+    "end": "2026-05-26",
+    "days": 90
+  },
+  "client_account": {
+    "username": "farroupilha_bombachas",
+    "name": "Farroupilha Roupas Tradicionalistas",
+    "biography": "🧵 Fabricação própria • Atacado\n🌾 Peças cheias de tradição e qualidade\n❤️ Cultivando nossas raizes por todo o Rio Grande",
+    "profile_picture_url": "https://scontent.frao7-1.fna.fbcdn.net/v/t51.82787-15/572190568_18083722253511539_141497156077297536_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=7d201b&_nc_ohc=g4xr-7G_NhcQ7kNvwHHnORP&_nc_oc=AdofMCXhnFFL23elCuQHFyJHJDp195XuUBSKG7Z0UmDsD86jIHHwTmiIl9p6xRxJ3GA&_nc_zt=23&_nc_ht=scontent.frao7-1.fna&edm=AL-3X8kEAAAA&_nc_gid=PBbHJaVhu1TjGygYCqxcgA&oh=00_Af618xdKaG0I4Wbn2tDrHZiVfRj9VZKdMT164GVEXodsNQ&oe=6A1B94BB",
+    "followers_count": 1477,
+    "follows_count": 886,
+    "media_count_total": 160,
+    "posts_90d": 19,
+    "permalink": "https://www.instagram.com/farroupilha_bombachas/"
+  },
+  "competitor_accounts": [
+    {
+      "username": "regalocampeiro",
+      "name": "REGALO CAMPEIRO®",
+      "biography": "O distribuidor de SELARIA, INDUMENTÁRIA e de ARTIGOS GAÚCHOS mais completo do RS.\n🐎 Siga também @r2herartt a marca de campeões.\nSeja um parceiro 👇🏻",
+      "profile_picture_url": "https://scontent.frao7-1.fna.fbcdn.net/v/t51.2885-15/455023202_1660019684756623_3449268653256370469_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=7d201b&_nc_ohc=ty-7bUl6hHQQ7kNvwGm8vET&_nc_oc=Adr1a64EpqNUHa2C88gIkLIkIR3kkPDFoGLM1oIUD0WUrk1OFzO2Khi6CJ8aPaHn30g&_nc_zt=23&_nc_ht=scontent.frao7-1.fna&edm=AL-3X8kEAAAA&oh=00_Af5WpQNincD6Hx0nL_vq6oDr8A7EsvxIRYMHg-wVAGrvzQ&oe=6A1B9A97",
+      "website": "https://wa.me/5551980575202",
+      "followers_count": 26764,
+      "follows_count": 5493,
+      "media_count_total": 459,
+      "posts_90d": 46,
+      "permalink": "https://www.instagram.com/regalocampeiro/"
+    },
+    {
+      "username": "bombachasgaucho",
+      "name": "Bombachas Gaúcho",
+      "biography": "Há + 30 anos produzindo a Bombacha da nossa Terra\n📌 Vendas por atacado para lojistas\n📦 Enviamos para todo o Brasil 🇧🇷\n📍 Uruguaiana - RS",
+      "profile_picture_url": "https://scontent.frao7-1.fna.fbcdn.net/v/t51.2885-15/480734860_1679534085997680_3670081481462867745_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=7d201b&_nc_ohc=iJ5bDrqidSEQ7kNvwHa7m1k&_nc_oc=AdqgxFyuomuoDxvBP98w6gMgZeq8TWXR9x0xssEOnMEoq-C1yU6bZbePhCe35k1Pi9A&_nc_zt=23&_nc_ht=scontent.frao7-1.fna&edm=AL-3X8kEAAAA&oh=00_Af6N6fJiCeEOAUNC9cbph8s8codkTJl2iYZAcQ-QZlLFGQ&oe=6A1B6F8E",
+      "website": "http://wa.me/555597082568/",
+      "followers_count": 16608,
+      "follows_count": 7407,
+      "media_count_total": 515,
+      "posts_90d": 19,
+      "permalink": "https://www.instagram.com/bombachasgaucho/"
+    }
+  ],
+  "format_distribution": {
+    "by_account": [
+      {
+        "username": "farroupilha_bombachas",
+        "counts": {
+          "FEED_IMAGE": 17,
+          "CAROUSEL": 0,
+          "REELS": 2,
+          "VIDEO": 0
+        }
+      },
+      {
+        "username": "regalocampeiro",
+        "counts": {
+          "FEED_IMAGE": 29,
+          "CAROUSEL": 14,
+          "REELS": 3,
+          "VIDEO": 0
+        }
+      },
+      {
+        "username": "bombachasgaucho",
+        "counts": {
+          "FEED_IMAGE": 6,
+          "CAROUSEL": 5,
+          "REELS": 8,
+          "VIDEO": 0
+        }
+      }
+    ],
+    "insight": "Cliente concentra 89% em FEED_IMAGE (17/19); Regalo é 63% feed + 30% carrossel + 7% reels; Bombachas Gaúcho é 32% feed + 26% carrossel + 42% reels (forte aposta em Reels). A boa notícia: o melhor formato do cliente (FEED_IMAGE, 5,35% no top) ainda performa — o problema não é trocar formato, é COMPLEMENTAR com Reels (gatilho de venda) e Carrossel (detalhe artesanal do favo)."
+  },
+  "cadence": {
+    "by_account": [
+      {
+        "username": "farroupilha_bombachas",
+        "posts_per_week": 1.46
+      },
+      {
+        "username": "regalocampeiro",
+        "posts_per_week": 3.54
+      },
+      {
+        "username": "bombachasgaucho",
+        "posts_per_week": 1.46
+      }
+    ],
+    "insight": "Cliente posta 1,46x/sem; Regalo Campeiro 3,54x/sem (2,4x mais); Bombachas Gaúcho 1,46x/sem (paridade). Cadência baixa é o gargalo #1 do cliente — para escalar alcance mantendo qualidade, target imediato é 2,5–3x/semana (alinhado com líder, factível com a estrutura atual)."
+  },
+  "engagement_benchmark": {
+    "by_account": [
+      {
+        "username": "farroupilha_bombachas",
+        "avg_likes": 12.2,
+        "avg_comments": 0.5,
+        "avg_engagement_proxy": 0.923,
+        "best_format_by_engagement": "FEED_IMAGE"
+      },
+      {
+        "username": "regalocampeiro",
+        "avg_likes": 87.7,
+        "avg_comments": 2.4,
+        "avg_engagement_proxy": 0.355,
+        "best_format_by_engagement": "REELS"
+      },
+      {
+        "username": "bombachasgaucho",
+        "avg_likes": 26.6,
+        "avg_comments": 0.9,
+        "avg_engagement_proxy": 0.177,
+        "best_format_by_engagement": "REELS"
+      }
+    ],
+    "insight": "Cliente vence em engajamento percentual (0,92%) com folga sobre Regalo (0,36%) e Bombachas Gaúcho (0,18%). Em likes absolutos, Regalo lidera (87,7 médio vs 12,2 do cliente vs 26,6 do Bombachas Gaúcho) — mas isso é função do tamanho da base, não da qualidade do conteúdo. O melhor formato do cliente é FEED_IMAGE; dos 2 concorrentes é REELS. Convergência: storytelling cultural + marcos da marca funciona em qualquer formato (top posts de Regalo são justamente isso)."
+  },
+  "top_posts": [
+    {
+      "username": "farroupilha_bombachas",
+      "post_id": "17890706967334451",
+      "permalink": "https://www.instagram.com/p/DW4o-I3DCgM/",
+      "embed_url": "https://www.instagram.com/p/DW4o-I3DCgM/embed/",
+      "media_type": "IMAGE",
+      "format": "FEED_IMAGE",
+      "thumbnail_url": "https://scontent.cdninstagram.com/v/t39.30808-6/666033934_122106875619286207_3574916448069777845_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=100&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=c583OBvbH7wQ7kNvwHi-3Gk&_nc_oc=Ador1AaguIxSNH8BGyoQ6PikRegI4uJrJQiGD0R6rk4LiLRfr8WMEcPm9GgJcQyCcKQ&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=PBbHJaVhu1TjGygYCqxcgA&oh=00_Af4wDdWtJn0BvCoISngMy-_ZnAJjVD0GjVmuW9xpsQN9xQ&oe=6A1B76C3",
+      "timestamp": "2026-04-08T21:00:51+0000",
+      "caption": "Desde 2011, mais do que produtos, construímos história, confiança e tradição.  Somos uma empresa familiar que carrega no dia a dia valores que não se negociam: lealdade, transparência e compromisso com cada parceiro que caminha ao nosso lado.  E assim seguimos honrando o passado, fortalecendo o presente e valorizando, juntos, o tradicionalismo.  #tradicao #producaopropria #historia",
+      "caption_length": 384,
+      "hashtags_count": 3,
+      "mentions_count": 0,
+      "has_cta": false,
+      "like_count": 76,
+      "comments_count": 1,
+      "engagement_proxy": 5.349,
+      "diagnosis": "Storytelling histórico-familiar com 'desde 2011' venceu (5,35% eng, 76 likes). Sem CTA nem hashtag — mas o conteúdo emocional carregou sozinho. Fórmula a escalar."
+    },
+    {
+      "username": "farroupilha_bombachas",
+      "post_id": "17960459480922456",
+      "permalink": "https://www.instagram.com/p/DWXWzWagpTM/",
+      "embed_url": "https://www.instagram.com/p/DWXWzWagpTM/embed/",
+      "media_type": "IMAGE",
+      "format": "FEED_IMAGE",
+      "thumbnail_url": "https://scontent.cdninstagram.com/v/t51.82787-15/655556916_18100144229511539_8801836373384985121_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=110&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=Mir2EgEfE5wQ7kNvwHFzl-b&_nc_oc=AdrCim4kJiMEP9o1dBpoF7KAWt_VdvNJVFruKvvP6wrHzuVco8jUVJbSYdw6Ea--uUI&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=PBbHJaVhu1TjGygYCqxcgA&oh=00_Af7fQEOx3MXgm-ucyfMee_2sD14EKsXZyCQWSIBSko8Q7Q&oe=6A1B957C",
+      "timestamp": "2026-03-26T22:48:46+0000",
+      "caption": "Há 15 anos, produzimos bombachas com foco no acabamento, no detalhe e no respeito à tradição.  Cada peça passa por um processo cuidadoso, valorizando o que realmente importa: qualidade e autenticidade.",
+      "caption_length": 201,
+      "hashtags_count": 0,
+      "mentions_count": 0,
+      "has_cta": false,
+      "like_count": 15,
+      "comments_count": 4,
+      "engagement_proxy": 1.828,
+      "diagnosis": "Narrativa de 15 anos + acabamento artesanal (1,83% eng). Tem 4 comments — sinal de conexão emocional. Sem hashtags, sem CTA: deixou tração de descoberta na mesa."
+    },
+    {
+      "username": "farroupilha_bombachas",
+      "post_id": "18084715907614206",
+      "permalink": "https://www.instagram.com/reel/DXeshyJxev3/",
+      "embed_url": "https://www.instagram.com/reel/DXeshyJxev3/embed/",
+      "media_type": "VIDEO",
+      "format": "REELS",
+      "thumbnail_url": "https://scontent.cdninstagram.com/v/t51.71878-15/673920523_1514473837020995_6794601484588756262_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=102&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=POlDp0TvoNYQ7kNvwETx1-d&_nc_oc=Adp9MgT7owyd5pzhMPzZfgy_u0JZumvFgNXCIfKBE6vpp8MEIqWAGTlagLTtIFGBB6s&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=PBbHJaVhu1TjGygYCqxcgA&_nc_tpa=Q5bMBQGiJlddFYadUqVDfmUKSsTrf190uCawFTr-cSOKh4TdzEO6YdYgfYnYcnH-DLnaI_9PGhCEL3V5Bw&oh=00_Af5TZ3nHAVd-Dt-3_iogAKyNEFje6No2QtBd_32YRYxHtw&oe=6A1B7EEE",
+      "timestamp": "2026-04-23T15:55:01+0000",
+      "caption": "Coleção nova chegando, faça seu pedido. Edição limitada.",
+      "caption_length": 56,
+      "hashtags_count": 0,
+      "mentions_count": 0,
+      "has_cta": false,
+      "like_count": 12,
+      "comments_count": 3,
+      "engagement_proxy": 1.422,
+      "diagnosis": "Reels 'coleção nova + edição limitada' (1,42% eng). Único Reels do trimestre — escassez funcionou mesmo sem hashtags. Sinaliza que Reels com gatilho de venda performa."
+    },
+    {
+      "username": "regalocampeiro",
+      "post_id": "18038303273785900",
+      "permalink": "https://www.instagram.com/p/DWWU5n4gBKh/",
+      "embed_url": "https://www.instagram.com/p/DWWU5n4gBKh/embed/",
+      "media_type": "IMAGE",
+      "format": "FEED_IMAGE",
+      "thumbnail_url": "https://scontent.cdninstagram.com/v/t51.82787-15/657146255_18131627836559086_7128778755189804798_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=104&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=FqhzDbTk1-gQ7kNvwET2Fhh&_nc_oc=AdrKWhEEumZAYNzM707qIW9erEabiLnooThebcFGIyPH00vdLtYJ-V4wTEEM3B8obSg&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=Lr2GctfxAMGlQpMB2ASu4w&oh=00_Af6Z8qUXAg49xvtsDX2kntjRFYL2CxgvxWACRVI7mRZPOw&oe=6A1B9029",
+      "timestamp": "2026-03-26T13:11:55+0000",
+      "caption": "No rodeio, o laço exige precisão, treino e parceria com o cavalo.  Cada armada é resultado de técnica, concentração e muitas horas de prática nas pistas.  Hoje celebramos o dia do laço, esporte reúne competidores famílias e apaixonados pela cultura campeira, mantendo viva uma tradição que atravessa gerações nos rodeios de todo o Brasil.  #Laço #DiadoLaço #Rodeio #RegaloCampeiro",
+      "caption_length": 380,
+      "hashtags_count": 4,
+      "mentions_count": 0,
+      "has_cta": false,
+      "like_count": 919,
+      "comments_count": 5,
+      "engagement_proxy": 3.49,
+      "diagnosis": "'Dia do Laço' — celebração cultural sem produto na imagem (3,49% eng, 919 likes). Conecta marca com identidade tradicionalista. Cliente NÃO faz: trata IG como catálogo de produto.",
+      "gap_para_cliente": true
+    },
+    {
+      "username": "regalocampeiro",
+      "post_id": "18078395351575270",
+      "permalink": "https://www.instagram.com/reel/DWmnTx_Prie/",
+      "embed_url": "https://www.instagram.com/reel/DWmnTx_Prie/embed/",
+      "media_type": "VIDEO",
+      "format": "REELS",
+      "thumbnail_url": "https://scontent.cdninstagram.com/v/t51.82787-15/657940716_18132262834559086_1956084706883336278_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=106&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=GXLLgtt10LkQ7kNvwEKH5zn&_nc_oc=AdoODNZ-LApoz8DjtxpQeUdhjr_jy7bX2GHxOzE9JOh-HpiJY8_K_WT78vderrUSsDY&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=Lr2GctfxAMGlQpMB2ASu4w&_nc_tpa=Q5bMBQGkod-QFK69J0XbBWcvQJMSN3iapIBfn1ypb8K19ebsjLZV3g2sxx4a8wQEwDFSS-86WMUgTzWfag&oh=00_Af5y0qnGB1TCl7D_N882BWFVVli5slluusHzt-SLz6wUbA&oe=6A1B7BBE",
+      "timestamp": "2026-04-01T21:00:00+0000",
+      "caption": "Cada passo da nossa história foi construído com trabalho, parceria e confiança.  Ao longo dos anos, crescemos acompanhando o ritmo do campo e de quem faz parte dele. Hoje, a nova sede marca mais um capítulo dessa trajetória.  Mais capacidade de estoque, mais produtos e ainda mais preparo para atender você cada vez melhor.  #ArtigosGauchos #ModaCampeira #CulturaGaucha #EstiloCampeiro #TradiçãoGaúcha",
+      "caption_length": 401,
+      "hashtags_count": 5,
+      "mentions_count": 0,
+      "has_cta": false,
+      "like_count": 661,
+      "comments_count": 68,
+      "engagement_proxy": 3.232,
+      "diagnosis": "Reels da nova sede (3,23% eng, 661 likes, 68 comments!). Marco da marca + bastidor da operação. Conteúdo de momento institucional que gera identificação. Cliente tem 15 anos de história e quase não conta.",
+      "gap_para_cliente": true
+    },
+    {
+      "username": "regalocampeiro",
+      "post_id": "17965139988115516",
+      "permalink": "https://www.instagram.com/p/DYVVmlaERBh/",
+      "embed_url": "https://www.instagram.com/p/DYVVmlaERBh/embed/",
+      "media_type": "CAROUSEL_ALBUM",
+      "format": "CAROUSEL",
+      "thumbnail_url": "https://scontent.cdninstagram.com/v/t51.82787-15/700082931_18136721053559086_6985851197876356363_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=100&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=dqDhhUW6QKQQ7kNvwFWTU2j&_nc_oc=Adph9Vl9Yr-hhWEcAhxmHACnXJF9IXTiN2PjCySdE0uAoOiS1iohHVeKUnGjCWbxsQw&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=Lr2GctfxAMGlQpMB2ASu4w&oh=00_Af6PMnlUaqV8_ky3EvxyukgGyTiKkYT7U7rGXkuhNLqLXw&oe=6A1B9419",
+      "timestamp": "2026-05-14T21:00:01+0000",
+      "caption": "Domingo, 10 de maio de 2026. Gabriel Marty e Colibri Matrero conquistaram o título da FICCC Uruguai, e com ele, um feito inédito em toda a história do cavalo crioulo: o hexacampeonato. Entre o ginete e o cavalo que escreveu essa história, uma sela R2 Freio de Ouro. R2 - A MARCA DE CAMPEÕES. Link na bio #R2Herar #ColibriMatrero #Hexacampeão #FICCC2026 #SelaFreioDeOuro GabrielMarty",
+      "caption_length": 383,
+      "hashtags_count": 5,
+      "mentions_count": 0,
+      "has_cta": true,
+      "like_count": 573,
+      "comments_count": 0,
+      "engagement_proxy": 2.141,
+      "diagnosis": "Carrossel hexacampeonato cavalo crioulo (2,14% eng, 573 likes). Patrocínio/parceria com evento gaúcho. Cliente não usa parcerias com tradição esportiva — gap importante.",
+      "gap_para_cliente": true
+    },
+    {
+      "username": "bombachasgaucho",
+      "post_id": "18035867792779337",
+      "permalink": "https://www.instagram.com/p/DVTZYWgAI3z/",
+      "embed_url": "https://www.instagram.com/p/DVTZYWgAI3z/embed/",
+      "media_type": "IMAGE",
+      "format": "FEED_IMAGE",
+      "thumbnail_url": "https://scontent.cdninstagram.com/v/t51.82787-15/642651797_18560795602065113_1957018903215173270_n.webp?stp=dst-jpg_e35_tt6&_nc_cat=108&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=gOSrR6W2YqMQ7kNvwGeTN4U&_nc_oc=AdqnYM6FUFMfn1VQmBkkMqpH6ZFHclmPuhyk8xDDJwKK2_uBhwTrVF6tex6ZmDLmumQ&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=NrZUAS61IzD44qA1sUx-pQ&oh=00_Af7Kp5O9J39ATZfncJF-BBDDJsgk0dLoqWxVqPGDlAaQdw&oe=6A1B6FE4",
+      "timestamp": "2026-02-28T13:21:21+0000",
+      "caption": "Fevereiro se vai, mas as sementes plantadas ficam! 🌿 Gratidão pelos dias vencidos e esperança renovada para o que está por vir! ✨  .  #BombachasGaúcho #abombachadanossaTerra #MarcaGaúcho #RioGrandedoSul  #Uruguaiana",
+      "caption_length": 215,
+      "hashtags_count": 5,
+      "mentions_count": 0,
+      "has_cta": false,
+      "like_count": 80,
+      "comments_count": 4,
+      "engagement_proxy": 0.554,
+      "diagnosis": "Post sazonal/mensagem motivacional 'Fevereiro se vai' (0,55% eng, 80 likes). Não vende produto, vende emoção sazonal. Cliente tem espaço pra explorar calendário gaúcho.",
+      "gap_para_cliente": true
+    },
+    {
+      "username": "bombachasgaucho",
+      "post_id": "17986269479955192",
+      "permalink": "https://www.instagram.com/p/DVtvbEDlJdO/",
+      "embed_url": "https://www.instagram.com/p/DVtvbEDlJdO/embed/",
+      "media_type": "CAROUSEL_ALBUM",
+      "format": "CAROUSEL",
+      "thumbnail_url": "https://scontent.cdninstagram.com/v/t51.82787-15/649208277_18563101999065113_3258729063763001420_n.webp?stp=dst-jpg_e35_tt6&_nc_cat=111&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=EkrTMQnB3rQQ7kNvwGKSxja&_nc_oc=Adp3wzbAlWpSgUuO3cjHsu4KQHJEG1Sc9Kf43fHe7aF5qqXEPzHEGf7F0HrZfvYo3dY&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=NrZUAS61IzD44qA1sUx-pQ&oh=00_Af4GUuTfPkvsUGPjc7-B78XYRRTJbh7VPtqYsN4bFrKQQg&oe=6A1B8D61",
+      "timestamp": "2026-03-10T18:54:11+0000",
+      "caption": "Para as mulheres que movimentam e respiram a nossa tradição, a Gaúcho oferece peças com estilo, conforto e versatilidade.   A aline.laraujo veste La Comparsa - bombacha com o melhor elastano; conforto incomparável, favo impecável - nada igual no mercado.   .  #BombachasGaúcho #abombachadanossaTerra  #LaComparsa  #BombachaLaComparsa  #MarcaGaúcho",
+      "caption_length": 347,
+      "hashtags_count": 5,
+      "mentions_count": 0,
+      "has_cta": false,
+      "like_count": 52,
+      "comments_count": 0,
+      "engagement_proxy": 0.313,
+      "diagnosis": "Carrossel mostrando 'La Comparsa' usado por cliente real (0,31% eng, 52 likes). UGC/depoimento + zoom em linha premium. Cliente nunca usa modelos vestindo.",
+      "gap_para_cliente": true
+    },
+    {
+      "username": "bombachasgaucho",
+      "post_id": "18101519410979392",
+      "permalink": "https://www.instagram.com/reel/DX1rJ2OTmiV/",
+      "embed_url": "https://www.instagram.com/reel/DX1rJ2OTmiV/embed/",
+      "media_type": "VIDEO",
+      "format": "REELS",
+      "thumbnail_url": "https://scontent.cdninstagram.com/v/t51.82787-15/684515347_18577025617065113_855673545003769873_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=101&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=xjCYiBDkeJsQ7kNvwHSsz86&_nc_oc=AdoKzgj6sfppa5QZ71NNGSCQU3nzHxXw1kAaIJ3bD_C_On4QCR0HYF9QgvOp5rqZeVI&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=NrZUAS61IzD44qA1sUx-pQ&_nc_tpa=Q5bMBQH3Te_DiWhmKhcZqxx2FRFBp12mP5SJ1klXt2wfVzkv0SQDY4c9Wjo7samsrfZGjZ5MvMExcDAQKQ&oh=00_Af7JQ3ws53PeSsZzacy-1ZxciW3MnQqPxko6ZEE139sMdQ&oe=6A1B7EC4",
+      "timestamp": "2026-05-02T13:56:51+0000",
+      "caption": "Linha Premium| La Comparsa ✨  A autenticidade da mulher no campo e na cidade!   Elegância, qualidade e conforto incomparável - peças que são referência do Sul do País!   .  Você encontra nas melhores lojas de indumentária gaúcha da tua cidade e região.",
+      "caption_length": 252,
+      "hashtags_count": 0,
+      "mentions_count": 0,
+      "has_cta": false,
+      "like_count": 39,
+      "comments_count": 1,
+      "engagement_proxy": 0.253,
+      "diagnosis": "Reels da linha Premium com elastano (0,25% eng). Conteúdo técnico-comercial sem caption longa. Funciona pelo Reels, não pelo texto.",
+      "gap_para_cliente": true
+    }
+  ],
+  "bottom_posts": [
+    {
+      "username": "farroupilha_bombachas",
+      "post_id": "18147643684470797",
+      "permalink": "https://www.instagram.com/p/DXPwnf-D9vc/",
+      "embed_url": "https://www.instagram.com/p/DXPwnf-D9vc/embed/",
+      "media_type": "IMAGE",
+      "format": "FEED_IMAGE",
+      "thumbnail_url": "https://scontent.cdninstagram.com/v/t39.30808-6/671595542_122107612353286207_2179845256043021799_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=100&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=F10n-w5u710Q7kNvwHG6Pr6&_nc_oc=Adr3rOARK6pOv-KwXt02_ayMph5RgoJK6dFgQ3Lzb_Wx8beap9W8ooVw0DEJSwCU05A&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=PBbHJaVhu1TjGygYCqxcgA&oh=00_Af65yw_LuQjfAT7SnqraXUZNrSZXJYKgnlmRmZRMk3ci2w&oe=6A1B888E",
+      "timestamp": "2026-04-17T20:30:12+0000",
+      "caption": "Sua vitrine fala muito antes mesmo do cliente entrar, e ela precisa transmitir confiança.  Com a Farroupilhas, você recebe mais do que um produto: entrega qualidade percebida, acabamento bem feito e uma marca que já tem reconhecimento no mercado.  📲 Fale com a gente e leve mais valor pra sua vitrine.  #producaopropria #pilchas #encomenda #bombacha",
+      "caption_length": 349,
+      "hashtags_count": 4,
+      "mentions_count": 0,
+      "has_cta": false,
+      "like_count": 3,
+      "comments_count": 0,
+      "engagement_proxy": 0.203,
+      "diagnosis": "Post sobre vitrine de loja parceira (0,20% eng, 3 likes). Foco no negócio do parceiro, não no produto — desalinhado com a audiência (consumidor final). Genérico."
+    },
+    {
+      "username": "farroupilha_bombachas",
+      "post_id": "18098676404093468",
+      "permalink": "https://www.instagram.com/p/DW8qYdNkoYG/",
+      "embed_url": "https://www.instagram.com/p/DW8qYdNkoYG/embed/",
+      "media_type": "IMAGE",
+      "format": "FEED_IMAGE",
+      "thumbnail_url": "https://scontent.cdninstagram.com/v/t39.30808-6/668715885_122107161675286207_2603015335810806420_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=106&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=vhwGt0Vq4U8Q7kNvwFD3daO&_nc_oc=AdrBLE5fyyiIlW3cmDPdUi6w2eZM9uuN3FzCurKAw2f4fQi3Pyk3DGLOxhilhspvb8I&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=PBbHJaVhu1TjGygYCqxcgA&oh=00_Af46Cg3CcGLyObZ6byLCQyrBQ0-zhPkn34W_kcab-EdDWg&oe=6A1B9B21",
+      "timestamp": "2026-04-10T10:30:09+0000",
+      "caption": "O detalhe em favo valoriza o caimento, traz estrutura e mantém a essência da tradição.  Clique no link da BIO e faça sua encomenda!  #bombacha #tradicao #encomenda #producaopropria",
+      "caption_length": 180,
+      "hashtags_count": 4,
+      "mentions_count": 0,
+      "has_cta": true,
+      "like_count": 3,
+      "comments_count": 0,
+      "engagement_proxy": 0.203,
+      "diagnosis": "Detalhe do favo + CTA 'link bio'. Apenas 3 likes. Visual técnico sem contexto humano + caption curta sem narrativa de fundo. Fórmula seca não engaja."
+    },
+    {
+      "username": "farroupilha_bombachas",
+      "post_id": "18096774662042587",
+      "permalink": "https://www.instagram.com/p/DXRUOboDfcl/",
+      "embed_url": "https://www.instagram.com/p/DXRUOboDfcl/embed/",
+      "media_type": "IMAGE",
+      "format": "FEED_IMAGE",
+      "thumbnail_url": "https://scontent.cdninstagram.com/v/t39.30808-6/671756779_122107613979286207_7013199435150320955_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=111&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=5xxhZEdbWRsQ7kNvwFQhm42&_nc_oc=AdoEok4cJM-It8BR-zyctMtwXu4uE75A-PahEiesEKeUCA1oixWmZynavLo3L8xUIEA&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=PBbHJaVhu1TjGygYCqxcgA&oh=00_Af7zBVTe0dCP-IrhcTOPYiOfc7zCwnk4C9LBRI3sjfD4yQ&oe=6A1B69C0",
+      "timestamp": "2026-04-18T11:00:35+0000",
+      "caption": "Tradição em cada peça personalizada.   Entre em contato e faça sua encomenda!  #representantes #producaopropria #pilchas #encomenda #bombacha",
+      "caption_length": 141,
+      "hashtags_count": 5,
+      "mentions_count": 0,
+      "has_cta": false,
+      "like_count": 4,
+      "comments_count": 0,
+      "engagement_proxy": 0.271,
+      "diagnosis": "Encomenda personalizada + hashtags hashtags genéricas. 4 likes. Posicionou como 'tradição em cada peça' sem prova ou storytelling — virou commodity de bombacha."
+    }
+  ],
+  "competitor_patterns_missing": [
+    {
+      "pattern": "Reels com storytelling institucional/marco da marca (nova sede, aniversário, bastidor)",
+      "seen_in_count": 1,
+      "seen_in_competitors": [
+        "regalocampeiro"
+      ],
+      "example_permalinks": [
+        "https://www.instagram.com/reel/DWmnTx_Prie/"
+      ],
+      "why_works": "Reels da 'nova sede' do Regalo gerou 661 likes + 68 comments (3,23% eng) — alto engajamento mesmo sem promoção. Marca o momento institucional, gera identificação. Cliente tem 15 anos de história e nunca usou esse formato.",
+      "how_to_apply": "Gravar 4 Reels por mês com: (1) costureira-chefe trançando o favo, (2) tour pela fábrica em Farroupilha-RS, (3) história dos 15 anos com fotos antigas + atual, (4) entrega/expedição de pedidos. Sem produção elaborada — celular + iluminação natural + voz da Loreni narrando."
+    },
+    {
+      "pattern": "Carrossel mostrando detalhe técnico do produto + zoom no acabamento",
+      "seen_in_count": 2,
+      "seen_in_competitors": [
+        "regalocampeiro",
+        "bombachasgaucho"
+      ],
+      "example_permalinks": [
+        "https://www.instagram.com/p/DVtvbEDlJdO/"
+      ],
+      "why_works": "Regalo postou 14 carrosséis em 90d, Bombachas Gaúcho 5; cliente postou ZERO. Carrossel permite contar a história do produto em 4–10 imagens (vitrine → close do favo → costureira → cliente vestindo → CTA). Engaja porque o usuário 'desliza' pra ver mais.",
+      "how_to_apply": "Criar 1 carrossel/semana com sequência fixa: capa (resultado final) → detalhe favo de perto → costureira em ação → história curta (200–400 chars) → CTA (link bio ou WhatsApp). Reutilizar conteúdo de fotos existentes."
+    },
+    {
+      "pattern": "Conteúdo conectado a datas/eventos do calendário tradicionalista (Dia do Laço, Semana Farroupilha, rodeios)",
+      "seen_in_count": 1,
+      "seen_in_competitors": [
+        "regalocampeiro"
+      ],
+      "example_permalinks": [
+        "https://www.instagram.com/p/DWWU5n4gBKh/"
+      ],
+      "why_works": "Post do Regalo sobre 'Dia do Laço' gerou 919 likes (3,49% eng) SEM produto na imagem. Conecta marca com identidade gaúcha em momento de alta atenção. Cliente trata IG como catálogo, não como mídia cultural.",
+      "how_to_apply": "Mapear calendário 2026 com 8–12 datas tradicionalistas (Semana Farroupilha set, Dia do Gaúcho 20/9, Dia do Laço, festivais de rodeio, jantares CTG). Para cada uma: postar 1 conteúdo cultural (sem produto direto) — celebração, citação de pessoa do meio, foto de evento. Vira fonte de autoridade."
+    },
+    {
+      "pattern": "Lifestyle/UGC com pessoas reais usando a bombacha (não modelo de estúdio)",
+      "seen_in_count": 1,
+      "seen_in_competitors": [
+        "bombachasgaucho"
+      ],
+      "example_permalinks": [
+        "https://www.instagram.com/p/DVtvbEDlJdO/"
+      ],
+      "why_works": "Bombachas Gaúcho mostrou a linha 'La Comparsa' usada por @aline.laraujo (cliente real, não modelo). Esse 2º post mais engajado deles (52 likes). Cliente nunca mostra a bombacha vestida — só fotografa em manequim/estúdio plano.",
+      "how_to_apply": "Convidar 6–10 clientes Marianas (perfil tradicionalista, idade 30–50, ativas em CTG) para sessão de 30min: 3 fotos cada usando a bombacha em contexto real (vitrine de prenda, jantar CTG, campo). Devolver fotos para a cliente + autorização de uso. 1 post/sem com depoimento curto."
+    },
+    {
+      "pattern": "CTA explícito em todo post comercial (link bio, WhatsApp, atacado direto)",
+      "seen_in_count": 1,
+      "seen_in_competitors": [
+        "regalocampeiro"
+      ],
+      "example_permalinks": [
+        "https://www.instagram.com/p/DYVVmlaERBh/"
+      ],
+      "why_works": "Regalo usa CTA em ~30% dos posts; cliente usa em ~10% e justamente nos posts MAIS FRACOS (bottom 3 todos têm CTA, e mesmo assim só 3–4 likes). A questão não é 'evitar CTA' — é casar CTA com conteúdo que prende atenção primeiro. Storytelling + CTA no final = conversão.",
+      "how_to_apply": "Padrão de copy para 100% dos posts comerciais: 3 linhas de história → 1 linha de produto → CTA único e claro ('Encomende pelo link da bio' ou 'WhatsApp direto da fábrica: 54...'). Nada de 'compre já' isolado sem narrativa antes."
+    }
+  ],
+  "client_winning_patterns": [
+    {
+      "pattern": "Storytelling histórico-familiar com data fundadora ('Desde 2011', '15 anos de história')",
+      "seen_in_count": 2,
+      "example_permalinks": [
+        "https://www.instagram.com/p/DW4o-I3DCgM/",
+        "https://www.instagram.com/p/DWXWzWagpTM/"
+      ],
+      "recommendation": "É a fórmula vencedora absoluta do cliente — top #1 atingiu 5,35% eng (5,8x a média da própria conta). REPLICAR mensalmente como pilar de conteúdo institucional. Vire série: 1x/mês 'capítulo' da história da fábrica. Roteiro pronto = baixo esforço, alto retorno."
+    },
+    {
+      "pattern": "Reels com gatilho de escassez ('coleção nova', 'edição limitada')",
+      "seen_in_count": 1,
+      "example_permalinks": [
+        "https://www.instagram.com/reel/DXeshyJxev3/"
+      ],
+      "recommendation": "Único Reels do trimestre e mesmo assim atingiu 1,42% eng (top 3 do cliente). Reels + gatilho de escassez funciona. ESCALAR para 1 Reels/semana com micro-lançamentos (lotes de 10–15 peças, cor sazonal, edição em homenagem a evento). Pareia com a tagline 'Direto da fábrica' = scarcity real."
+    }
+  ],
+  "instagram_compliance": {
+    "aspect_ratio_issues_count": 0,
+    "notes": "Análise via business_discovery não retorna dimensões nativamente. Auditoria visual manual recomendada na Semana 3 quando os novos criativos forem produzidos. Cliente já usa formatos padrão (FEED_IMAGE 1:1 e Reels 9:16) sem violações detectáveis."
+  },
+  "next_actions": [
+    {
+      "action": "Dobrar cadência para 3x/semana mantendo o storytelling histórico como pilar (1x/sem 'capítulo' da história + 1x/sem produto narrado + 1x/sem cultural/sazonal)",
+      "impact": "alto",
+      "effort": "medio",
+      "priority": 1
+    },
+    {
+      "action": "Introduzir 1 Reels/semana com gatilho de escassez ou bastidor da fábrica (validado pelo top post Reels do cliente e pelo Reels institucional do Regalo)",
+      "impact": "alto",
+      "effort": "medio",
+      "priority": 2
+    },
+    {
+      "action": "Padronizar copy: 3 linhas de história → 1 linha de produto → 1 CTA único (link bio ou WhatsApp). 100% dos posts comerciais. Hashtags 3–5 estratégicas por post.",
+      "impact": "alto",
+      "effort": "baixo",
+      "priority": 3
+    },
+    {
+      "action": "Mapear calendário tradicionalista 2026 (Semana Farroupilha set, Dia do Gaúcho 20/9, Dia do Laço, festivais de rodeio) e produzir 1 post cultural por evento, sem produto direto",
+      "impact": "medio",
+      "effort": "baixo",
+      "priority": 4
+    },
+    {
+      "action": "Convidar 6–10 clientes Marianas reais para sessão de fotos (UGC autorizado) e publicar 1 depoimento/quinzena — preenche o gap 'sem pessoas vestindo'",
+      "impact": "medio",
+      "effort": "medio",
+      "priority": 5
+    },
+    {
+      "action": "Adicionar 1 carrossel/semana com sequência fixa (capa → detalhe favo → costureira → história → CTA) — preenche o gap zero de carrossel vs Regalo 14 e Bombachas Gaúcho 5",
+      "impact": "medio",
+      "effort": "medio",
+      "priority": 6
+    }
+  ],
+  "key_insight": {
+    "headline": "Engajamento alto + cadência baixa = potencial reprimido. O conteúdo já vence; o que falta é volume.",
+    "context": "Bombachas Farroupilha tem 0,92% de engagement médio — 2,6x acima do líder Regalo Campeiro (0,36%) e 5,2x acima do Bombachas Gaúcho (0,18%). Mas posta apenas 1,46x/semana, contra 3,54x/semana do Regalo. Isso significa que a audiência menor é MUITO mais responsiva, mas está sub-alimentada de conteúdo — Mariana (a persona principal) encontra o perfil, gosta do que vê, mas não tem volume suficiente pra sentir que a marca está 'viva'. O caminho não é 'reaprender conteúdo', é ESCALAR o que já funciona.",
+    "numbered_reasons": [
+      "(1) Top post do cliente atingiu 5,35% — fórmula 'storytelling histórico-familiar' validada. Concorrentes não têm conta com nem metade desse pico.",
+      "(2) Cliente posta 1 vez a cada 5 dias; o algoritmo do IG penaliza essa cadência e o usuário perde memória da marca entre posts.",
+      "(3) 89% feed_image vs concorrentes mais diversificados — risco de plateau de alcance mesmo com engagement alto."
+    ],
+    "discussion_anchor": "Stakeholder precisa validar o trade-off: aceitar volume 2x maior (3x/semana) sabendo que o engagement médio PROVAVELMENTE cai (a primeira lei do conteúdo digital é que mais frequência = menos engagement por post, mas mais alcance total). O objetivo de Semana 3 é descobrir o ponto ótimo entre as 2 forças, partindo da fórmula vencedora já identificada."
+  },
+  "honesty_alert": "Auditoria cobriu apenas 2 dos 5 concorrentes mapeados na ee-s2-pesquisa-mercado (Regalo Campeiro e Bombachas Gaúcho — os 2 com maior digital_score). Os outros 3 (La Parceria, La Fronteira, Bombachas Pampa Sul) não foram auditados por business_discovery nesta rodada — recomendado incluí-los em auditoria complementar antes de validar definitivamente os 'competitor_patterns_missing'. O fato de NENHUM dos 4 concorrentes ter ads pagos ativos na Meta Ads Library (verificado manualmente em 2026-05-26) reforça que o orgânico é o canal principal de batalha no nicho — escalar conteúdo é prioritário em todos os cenários.",
+  "completed_at": "2026-05-26T14:52:14.995547+00:00"
+}

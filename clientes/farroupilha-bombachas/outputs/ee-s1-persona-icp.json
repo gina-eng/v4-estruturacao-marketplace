@@ -1,0 +1,432 @@
+{
+  "client_name": "Bombachas Farroupilha",
+  "skill": "ee-s1-persona-icp",
+  "version": 2,
+  "generated_at": "2026-05-25T00:00:00Z",
+  "data_source": "briefing+formulario_v4mos+lp+maturidade+swot+v4mos_googleads",
+  "summary": "Persona dupla com hierarquia de canal — definida após formulário V4MOS revelar intenção declarada pela Loreni de iniciar B2C sem abandonar crescimento B2B. Principal: Mariana Tradicionalista (consumidora final, 32-55, ligada à cultura gaúcha urbanizada, ticket R$ 80-300/peça) — atendida pelo digital (Google Ads + Instagram + Meta Ads quando abrir). Secundária: Diego Tavares (lojista de pilcharia regional, 35-50, decisor B2B) — atendido pelo canal físico (representante + LP B2B). Mensagem-chave principal escolhida: emocional ('A bombacha que respeita a tradição — feita à mão, no caimento que você quer'). Anti-personas: Caçador de preço, Curioso fashion sem identidade tradicionalista, Atacarejo grande.",
+  "summary_headline": "Mariana (32-55, consumidora final tradicionalista urbanizada) é a aposta NOVA do digital — Diego (lojista B2B) segue como base de manutenção via canal físico.",
+  "summary_highlights": [
+    {
+      "category": "posicao",
+      "label": "ICP principal",
+      "value": "B2C Mariana",
+      "subtext": "32-55, RS interior + Caxias + tradicionalismo urbanizado",
+      "tone": "blue"
+    },
+    {
+      "category": "posicao",
+      "label": "ICP secundário",
+      "value": "B2B Diego",
+      "subtext": "Lojista regional — base atual, canal físico",
+      "tone": "gray"
+    },
+    {
+      "category": "oportunidade",
+      "label": "Ticket B2C declarado",
+      "value": "R$ 100",
+      "subtext": "Por peça — campo amplo para upsell na Bombacha de Favo (até R$ 300)",
+      "tone": "green"
+    },
+    {
+      "category": "janela",
+      "label": "Ciclo de decisão B2C",
+      "value": "1-7 dias",
+      "subtext": "Pré-evento (rodeio, semana farroupilha, festa CTG)",
+      "tone": "yellow"
+    },
+    {
+      "category": "risco",
+      "label": "Motivos de perda declarados",
+      "value": "Preço",
+      "subtext": "Cliente acha caro — posicionamento precisa justificar premium",
+      "tone": "red"
+    },
+    {
+      "category": "competicao",
+      "label": "Concorrente digital",
+      "value": "Regalo Campeiro",
+      "subtext": "26K seguidores Instagram — domina narrativa visual hoje",
+      "tone": "red"
+    }
+  ],
+  "summary_key_findings": [
+    {
+      "category": "vantagem",
+      "text": "A Bombacha de Favo artesanal é o ativo mais defensável para Mariana — ela paga premium por autenticidade declarada (busca 'respeito ao estilo tradicional' no formulário V4MOS). Hoje a campanha Google captura 55,8% mulheres (perfil Mariana) mas sem produto-âncora premium nos lances — a Bombacha de Favo tem 7 impressões em 90 dias. Reorientar a campanha para Mariana + carro-chefe destrava o casamento entre tráfego e oferta."
+    },
+    {
+      "category": "contexto",
+      "text": "A persona dupla resolve o conflito entre o que a Tapparo É hoje (99% receita B2B via 1 representante) e o que a Loreni quer ser (B2C escalável). Cada canal cuida de UMA persona: digital para Mariana (Google + Instagram + Meta), físico para Diego (representante + LP B2B já existente). Sem essa hierarquia, a campanha continua diluindo verba entre dois funis e o representante continua sendo gargalo do crescimento."
+    },
+    {
+      "category": "ameaca",
+      "text": "Regalo Campeiro (@regalocampeiro 26K seguidores, 449 posts) domina a narrativa digital do nicho consumidor final tradicionalista. Posiciona-se como 'distribuidor mais completo do RS'. Se a Tapparo demorar a entrar no jogo de conteúdo, perde a janela de captar Mariana para um player que já tem voz construída. Bombacha de Favo artesanal é o ativo que pode quebrar essa hegemonia — mas precisa de produção visual semanal."
+    },
+    {
+      "category": "acao",
+      "text": "Mensagem-chave principal recomendada (Mariana B2C): emocional — 'A bombacha que respeita a tradição: feita à mão, no caimento que você quer.' Foca no produto premium (favo artesanal) + autenticidade (job emocional/social da Mariana). Mensagem secundária (Diego B2B): manter funcional — 'Bombacha de Favo direto da fábrica, em 35 dias, a partir de 15 peças.' Cada canal usa sua mensagem."
+    },
+    {
+      "category": "acao",
+      "text": "CRM mínimo precisa de pipeline DUPLO: B2C (lead Instagram/Google → WhatsApp/LP/PDV → recompra anual em pico farroupilha) e B2B (lead representante/LP → cotação → produção 35d → recompra trimestral). Sem essa separação, a base de 63 clientes ativos (declarado V4MOS) continua misturada e a Loreni não consegue tratar Mariana e Diego de jeitos diferentes."
+    }
+  ],
+  "icp": {
+    "demographics": {
+      "type": "mixed",
+      "age_range": "Mariana (B2C principal): 32-55 anos (mulheres tradicionalistas, jovens-adultas a maduras). Diego (B2B secundário): 35-50 anos (proprietário/herdeiro de pilcharia regional).",
+      "income_or_revenue": "Mariana: renda mensal R$ 4-15k (classe B2/C+, com poder de compra para premium quando há vínculo cultural). Diego: faturamento da loja R$ 600k-3,5MM/ano.",
+      "location": "Mariana: RS interior (Caxias do Sul, Alegrete, Passo Fundo — top 3 cidades declaradas), capitais regionais (Porto Alegre, Florianópolis), e gaúchos migrados (MT, MS, SP). Diego: RS interior + SC oeste + PR + MT (expansão).",
+      "company_size": "n/a para Mariana (B2C). Diego: 2-10 funcionários (operação familiar).",
+      "decision_maker_role": "Mariana: própria consumidora final OU compra para presente (marido, filho, irmão). Decisão individual ou em dupla familiar. Diego: proprietário/herdeiro (decisão familiar B2B).",
+      "education": "Mariana: ensino médio completo a superior. Diego: ensino médio/técnico a superior em Administração.",
+      "other": {
+        "mariana_purchase_role": "Compra para si própria (38%), para marido/companheiro (32%), para filho/sobrinho (20%), para presente em data específica (10%) [E baseado em padrão de busca B2C tradicionalista]",
+        "mariana_cultural_profile": "Frequenta CTGs, baila, monta, ou participa de Semana Farroupilha. Para muitas, a pilcha é segunda identidade — não fantasia. Movimento Tradicionalista Gaúcho ativo em 9 estados (RS, MT, MS, PR, SC, RJ, SP, AM, NE).",
+        "diego_operational_profile": "Loja física principal + Instagram + WhatsApp Business + alguns com e-commerce regional. Pico jul-set + spike jan-fev concentra 65-75% do faturamento.",
+        "seasonality": "Mariana: pico jul-set (Semana Farroupilha) + dezembro (festas/presentes), entressafra 6 meses. Diego: mesma sazonalidade ampliada por antecipação de produção 35d."
+      }
+    },
+    "behavior": {
+      "decision_process": "Mariana: emocional dominante (orgulho cultural, identidade, autenticidade) com filtro racional de preço — quer pagar justo por produto que respeita a tradição. Decisão típica 1-7 dias antes de evento específico. Diego: racional dominante (capital de giro + prazo + margem) com âncora emocional (parceria). Decisão 1-2 semanas pré-pico.",
+      "research_channels": [
+        "Mariana: Instagram (perfis de pilcha + influenciadores tradicionalistas + amigas), Google Search ('bombacha feminina', 'bombacha de favo', 'pilcha para semana farroupilha'), Reels/TikTok, indicação boca a boca em CTG ou baila",
+        "Diego: Google Search B2B ('bombacha atacado', 'fábrica bombachas'), Instagram (@farroupilha_bombachas + perfis de fábricas regionais), grupos de WhatsApp de lojistas RS/SC/PR/MT, indicações em eventos (Acampamento Farroupilha, Expointer)"
+      ],
+      "main_objections": [
+        "Mariana: 'Está caro' (motivo de perda declarado #1 no V4MOS), 'Não conheço a marca', 'Vai servir bem?', 'Vai chegar a tempo do evento?', 'É favo de verdade ou cópia?'",
+        "Diego: prazo 35 dias é longo para quem está atrasado, pedido mínimo 15 mesmo sendo baixo exige capital, qualidade só validada com peça-mostra, comodismo com fornecedor atual"
+      ],
+      "switching_triggers": "Mariana: viu produto de Bombacha de Favo de alguém em evento e quer igual; concorrente entregou tarde ou com qualidade ruim; precisa de outro tamanho/cor que loja local não tem. Diego: atraso do fornecedor atual no pico, queda de qualidade do acabamento, perda do representante anterior, aumento de pedido mínimo do fornecedor incumbente.",
+      "purchase_frequency": "Mariana: 1-3 peças/ano (pré-pico farroupilha + ocasiões especiais + presente). Diego: 2-4 pedidos/ano de 15-80 peças cada (concentrados em maio-julho e dezembro)."
+    },
+    "jobs": {
+      "functional": "Mariana: 'Quando vou a um evento tradicionalista ou quero usar pilcha no dia a dia urbano sem perder identidade, eu quero uma bombacha de favo autêntica com caimento certo, para que eu seja reconhecida como gaúcha de verdade — não fantasiada.' Diego: 'Quando o pico farroupilha se aproxima e preciso garantir estoque sem amarrar capital, eu quero um fornecedor que entregue em 35 dias com pedido a partir de 15 peças, para que minha loja não fique sem produto na alta.'",
+      "emotional": "Mariana: orgulho cultural + segurança no caimento + alívio de comprar de fábrica que entende a tradição (não loja que vende fantasia genérica). Diego: tranquilidade de parceria sólida, sem refém de promessa furada.",
+      "social": "Mariana: ser vista como 'gaúcha de verdade' (não fantasiada), ter peça reconhecida como autêntica em foto de evento, ser referência discreta entre amigas tradicionalistas. Diego: ser reconhecido como o lojista que tem a Bombacha de Favo de verdade, referência da região."
+    },
+    "pains": [
+      {
+        "pain": "Mariana: comprou bombacha em loja de varejo grande, descobriu na hora do evento que o caimento e o favo eram cópia mal feita — passou vergonha na frente de quem entende",
+        "intensity": "critical",
+        "current_workaround": "Recorre a indicação boca a boca em CTG, paga preço alto em loja boutique pequena, ou herda peça da mãe/sogra que tem 'a verdadeira'."
+      },
+      {
+        "pain": "Mariana: 'Acharam caro' é o motivo de perda nº 1 declarado pela Loreni no V4MOS — Mariana precisa ENTENDER por que vale o premium para aceitar pagar",
+        "intensity": "critical",
+        "current_workaround": "Sem comunicação de processo artesanal, Mariana compara apenas preço com produto industrial e desiste — concorrente Regalo Campeiro com 26K seguidores no Instagram já narra a 'distribuição mais completa' e captura o ticket."
+      },
+      {
+        "pain": "Mariana: encomendou bombacha de fábrica 'A' há 6 semanas para a Semana Farroupilha e não chegou a tempo — perdeu o evento principal do ano",
+        "intensity": "high",
+        "current_workaround": "Compra com 2-3 meses de antecedência (limita decisão impulsiva), ou troca fábrica todo ano sem fidelizar."
+      },
+      {
+        "pain": "Diego: pedi pra fornecedor X em maio, bombacha chegou em agosto — perdi metade do pico farroupilha",
+        "intensity": "critical",
+        "current_workaround": "Compra com 4-5 meses de antecedência amarrando capital cedo, ou divide pedido entre 2-3 fornecedores como hedge."
+      },
+      {
+        "pain": "Diego: pedido mínimo de 50-100 peças nos concorrentes consome capital de giro que precisaria para outras linhas",
+        "intensity": "high",
+        "current_workaround": "Reduz mix de bombacha na loja ou compra parcelado em fornecedor menor com qualidade variável."
+      }
+    ],
+    "gains": [
+      {
+        "gain": "Mariana: peça autêntica que ela usa em evento e a sogra/tia/amiga reconhece como 'a favo de verdade' — orgulho relacional",
+        "type": "intangible"
+      },
+      {
+        "gain": "Mariana: caimento e modelagem que servem bem (tradicionalismo feminino tem corte específico) — autoestima",
+        "type": "intangible"
+      },
+      {
+        "gain": "Mariana: prazo garantido para chegar antes do evento (Semana Farroupilha, baila, casamento, rodeio) — segurança",
+        "type": "tangible"
+      },
+      {
+        "gain": "Diego: margem premium da Bombacha de Favo vs popular (ticket revenda 2-3x maior)",
+        "type": "tangible"
+      },
+      {
+        "gain": "Diego: capital de giro preservado com pedido a partir de 15 peças — flexibilidade",
+        "type": "tangible"
+      }
+    ]
+  },
+  "persona": {
+    "name": "Mariana Tradicionalista (principal) e Diego Tavares (secundária)",
+    "photo_description": "MARIANA: Mulher de 42 anos, RS interior (Caxias do Sul), cabelo castanho na altura do ombro, olhos atentos, expressão segura. Vestida discretamente em dia de evento tradicionalista: blusa branca + bombacha feminina marrom + lenço no pescoço. Fundo: galpão de CTG ou rua de cidade do interior com balcão de baila ao fundo. Não posa para foto — está conversando, com chimarrão na mão. | DIEGO: Homem 38 anos, pele clara, barba aparada, expressão concentrada e direta. Fundo: interior de pilcharia com bombachas penduradas em araras. Camisa social branca de manga longa, bombacha discreta. Pode segurar pedido em papel ou tablet.",
+    "story": "MARIANA (principal): cresceu em Caxias do Sul, mãe de duas, casada com homem que vai a baila desde criança. Há 5 anos voltou a fazer dança gaúcha — antes era 'só companheira de marido'. Em 2024 comprou bombacha de uma loja de shopping para a Semana Farroupilha; descobriu na primeira foto que a estampa era barata e o caimento ruim. Ouviu de uma amiga sobre Bombacha de Favo artesanal; pesquisou no Google e Instagram. Hoje compra 1-2 peças/ano, sempre de fábrica ou boutique especializada. Está pronta para pagar mais por autenticidade — mas precisa entender por que vale. Janela: jul-set (pico farroupilha) + dezembro (festas). | DIEGO (secundária): herdou pilcharia do pai em Tupanciretã/RS há 6 anos. 2 funcionárias, R$ 80k/mês com pico R$ 200k em setembro. Alternou 3 fornecedores B2B nos últimos 2 anos — todos com atrasos, pedido mínimo absurdo ou qualidade variável. Quer 1 fábrica parceira que entenda do ramo.",
+    "quote": "MARIANA: 'Eu quero a bombacha de favo de verdade. Não a do shopping que descostura na segunda vez que lavo. Posso pagar mais — só me explica o que faz a sua ser diferente.' | DIEGO: 'Eu não quero comprar 200 peças de uma vez, mano. Eu quero um cara que me atenda em 15, faça em 35 dias e me trate como gente.'"
+  },
+  "where_to_find": {
+    "digital_channels": [
+      "Mariana — Instagram: perfis @regalocampeiro (26K), @farroupilha_bombachas, boutiques regionais; hashtags #pilcha, #bombacha, #semanafarroupilha, #tradicionalismogaucho",
+      "Mariana — Google Search: 'bombacha feminina', 'bombacha de favo', 'bombacha para semana farroupilha', 'pilcha feminina'",
+      "Mariana — Reels/TikTok: conteúdo de looks tradicionalistas + bastidores de fábrica + 'antes e depois' de evento",
+      "Mariana — Grupos de Facebook de CTGs (femininos) e Movimento Tradicionalista Gaúcho",
+      "Diego — Instagram @farroupilha_bombachas + perfis de fábricas regionais (Bombachas Gaúcho, Pampa Sul, Gozzi)",
+      "Diego — Grupos de WhatsApp de lojistas tradicionalistas RS/SC/PR/MT",
+      "Diego — Google Search B2B ('bombacha atacado', 'fábrica bombachas')"
+    ],
+    "keywords": [
+      "MARIANA (B2C): bombacha feminina, bombacha de favo, bombacha para semana farroupilha, bombacha tradicional, pilcha feminina, vestuário gaúcho feminino, bombacha autêntica, bombacha artesanal, pilcha para baila",
+      "DIEGO (B2B): bombacha atacado, fábrica de bombachas, bombacha por atacado, fornecedor de bombacha, bombacha de favo atacado, comprar bombacha por atacado, fábrica de pilcha, pilcha para revenda"
+    ],
+    "influencers": [
+      "Mariana — Patroas e capatazes de CTG (femininos) regionais (MTG-RS, MTG-MT), grupos musicais tradicionalistas (Tchê Garotos, Os Serranos), Shana Müller, Marisa Werner, influenciadoras de moda tradicionalista no Instagram (10-50K seguidores)",
+      "Mariana — Páginas de Rodeios e Eventos Crioulos (Rodeio Internacional de Vaquejada, Acampamento Farroupilha, Festa do Cavalo Crioulo)",
+      "Diego — Outros lojistas mais experientes em grupos de WhatsApp, eventos B2B (feira têxtil regional Bagé/Caxias do Sul), representantes comerciais aposentados como referência"
+    ],
+    "communities": [
+      "Mariana — CTGs locais (especialmente departamentos femininos), invernadas artísticas, Concursos de Prendas regionais (MTG-RS, MTG-MT), Semana Farroupilha (set), Festa do Cavalo Crioulo (jan), grupos de baila",
+      "Diego — Associações regionais de comércio em cidades-polo tradicionalistas (CDL Tupanciretã, Bagé, Cuiabá-MT), feiras têxteis regionais, grupos de WhatsApp 'Lojistas de Pilcharia RS/SC/PR/MT'"
+    ]
+  },
+  "anti_persona": {
+    "description": "Perfis que NÃO são ICP da Tapparo — atendem operacional sem fechar venda, ou comprometem posicionamento premium. Anti-personas precisam de ROTA DE SAÍDA: redirecionar (Caçador de preço para tabela padrão) ou rejeitar com clareza (Atacarejo grande para janela fora do pico).",
+    "profiles": [
+      {
+        "profile_name": "Caçador de preço",
+        "description": "Consumidor B2C ou pequeno revendedor que pergunta por preço sem contexto de uso, compara com varejo industrial e pula para o concorrente no primeiro 'desconto'. Tipicamente entra pela campanha Google Ads em keyword genérica ('bombacha feminino' sem qualificador) e desiste quando ouve preço de Bombacha de Favo artesanal.",
+        "signals": [
+          "Pergunta 'qual o preço da bombacha?' sem dizer ocasião nem tamanho",
+          "Não responde quando explicação técnica do favo é dada",
+          "Compara com loja de shopping ou marketplace ('na Renner tem por R$ X')",
+          "Pede 'preço pra entrar em revenda' sem CNPJ",
+          "Quer entrega imediata, não aguenta prazo de 35 dias"
+        ],
+        "why_not": "Não vai pagar premium pela autenticidade e não vai ser embaixador. Comprou uma vez (se comprar), reclama do preço e some. Custo de atendimento da Loreni alto vs ticket comprometido.",
+        "operational_rule": "Resposta padrão automatizada: 'A nossa Bombacha de Favo é artesanal — preço a partir de R$ X (entender que isso reflete o trabalho manual). Se você procura uma opção popular, recomendamos olhar nossa linha tradicional ou um varejista parceiro perto de você.' Encaminhar para PDV físico que tem linha popular se a venda for de varejo final."
+      },
+      {
+        "profile_name": "Curioso fashion sem identidade tradicionalista",
+        "description": "Mulher 25-45 que viu bombacha como tendência urbana (Jornal do Comércio 2025: 'indumentária gaúcha virou tendência'), quer comprar 1 peça para post no Instagram ou look diferentão, mas não tem vínculo cultural. Pode virar Mariana se for educada, mas hoje é vetor de erosão de marca (compra, posta sem contexto, e o público tradicionalista a desidentifica).",
+        "signals": [
+          "Endereço de capital fora do RS, sem menção a CTG/evento",
+          "Pergunta 'fica legal com tênis branco?' ou 'serve para festa não-temática?'",
+          "Não conhece termos básicos (peão, prenda, baila, favo)",
+          "Engajamento alto com lifestyle fashion, baixo com tradicionalismo no perfil"
+        ],
+        "why_not": "Não é o público que a Loreni declarou ('Mariana Tradicionalista') — comprar para fashion sem vínculo cultural enfraquece a narrativa de autenticidade que sustenta o premium. Pior: posts de bombacha-fashion sem contexto podem afastar Mariana real ('isso virou trend? Não quero ser confundida').",
+        "operational_rule": "Não rejeitar diretamente — educar via conteúdo. Investir em Reels que mostram o contexto cultural (CTG, baila, Semana Farroupilha) antes da venda. Se a venda acontecer, mandar mensagem pós-compra com 'curiosidade sobre o uso' para entender se é tradicionalista ou fashion. Anti-persona para mídia paga ativa (NÃO investir em creative fashion-only)."
+      },
+      {
+        "profile_name": "Atacarejo grande / rede de lojas",
+        "description": "Rede de varejo com 3+ lojas ou atacadista regional que pede 150-500 peças no primeiro pedido, exige condição 60-90 dias para pagamento, e quer margem de revenda alta. Volume incompatível com capacidade artesanal da fábrica + margem comprimida mata o diferencial da Bombacha de Favo.",
+        "signals": [
+          "Apresenta-se como 'rede' ou 'cadeia'",
+          "Pede tabela completa antes de definir mix",
+          "Exige condição pagamento >30 dias",
+          "Pedido mínimo na conversa > 100 peças",
+          "Pede branding/etiqueta diferente",
+          "Quer exclusividade regional"
+        ],
+        "why_not": "Volume desproporcional trava a fábrica e atrasa pedidos pequenos do Diego (lojista parceiro). Margem espremida mata o Bombacha de Favo como produto-âncora. Risco financeiro alto: cancelamento ou inadimplência derruba capital.",
+        "operational_rule": "Aceitar conversa, mas com regra clara: janela de produção dedicada FORA do pico farroupilha (out-jun), 50% sinal + 50% pré-entrega, sem branding customizado no 1º pedido. Sem flexibilidade — proteger Diego (lojista parceiro) é prioridade. Se a rede recusar a condição, encaminhar para parceria de licenciamento de marca em vez de fornecimento direto."
+      }
+    ],
+    "operational_rule": "Filtro de triagem em 2 perguntas no WhatsApp Business inicial: (1) 'Você está comprando para uso próprio (Mariana), para sua loja (Diego), ou outra situação?'; (2) Se uso próprio: 'É para algum evento ou ocasião específica? Qual cidade?'. Se loja: 'Pode me passar CNPJ e nome da loja?'. Resposta define o caminho — Mariana vai para fluxo emocional + linha completa, Diego vai para fluxo funcional + condições B2B, anti-persona vai para tabela padrão ou rota de saída."
+  },
+  "buyer_journey": {
+    "description": "Jornada DUPLA: Mariana (B2C, ciclo curto 1-7 dias) e Diego (B2B, ciclo de 6-8 semanas com produção de 35d). Ambos com pontos de vazamento mapeados — alimentam apontamentos da auditoria de comunicação v2 (a regenerar).",
+    "stages": [
+      {
+        "stage": "MARIANA — Gatilho",
+        "trigger": "Convite para evento tradicionalista (Semana Farroupilha, baila, casamento na fronteira, rodeio), foto de bombacha de outra mulher em rede social, ou desejo cultural pessoal (filha entrando em CTG)",
+        "mental_state": "Empolgação com expectativa + ansiedade leve por 'fazer certo'",
+        "primary_channel": "Cabeça da própria Mariana + Instagram/TikTok ao rolar feed",
+        "dominant_question": "Onde acho a bombacha certa pra esse evento?",
+        "client_intervention": "Hoje a Tapparo não captura esse gatilho — sem cadência editorial no Instagram, fica invisível",
+        "friction_today": "Mariana segue para Google ou pergunta na CTG/baila. Tapparo só aparece se ela buscar especificamente — não há nutrição proativa em pré-pico",
+        "duration_estimate": "horas a 3 dias"
+      },
+      {
+        "stage": "MARIANA — Pesquisa",
+        "trigger": "Decisão consciente de comprar — abre Instagram, Google e pergunta para amiga",
+        "mental_state": "Cética por já ter comprado bombacha 'fashion' que decepcionou; quer evidência rápida de autenticidade",
+        "primary_channel": "Instagram (perfis + Reels) + Google Search + indicação boca a boca",
+        "dominant_question": "Essa marca é de verdade ou é fashion?",
+        "client_intervention": "Campanha Google ALLURE captura 399 cliques femininos/90d (55,8%) — bem-vinda Mariana. Mas LP é B2B segmentada — desencontra mensagem quando ela chega",
+        "friction_today": "Mariana clica na LP pensando 'bombacha tradicional', vê bloco 'Para Representantes e Lojistas' e 'Para CTGs e Invernadas' — não se vê. Pode sair antes de chegar no FAQ que poderia convencê-la.",
+        "duration_estimate": "1-3 dias"
+      },
+      {
+        "stage": "MARIANA — Decisão (WhatsApp)",
+        "trigger": "Mariana decide testar e clica no botão WhatsApp da LP",
+        "mental_state": "Tem urgência (evento marcado) mas cautela alta (já se queimou)",
+        "primary_channel": "WhatsApp da Loreni (+55 54 9615-0025) — pessoal, sem WA Business",
+        "dominant_question": "Vocês vendem para pessoa física? Tem o tamanho que preciso? Chega antes do evento?",
+        "client_intervention": "Loreni responde pessoalmente (ponto forte para Mariana — 'fala com a dona'). Mas sem catálogo no WA Business, ela manda foto solta ou pede pra Mariana voltar à LP.",
+        "friction_today": "Sem WA Business com catálogo, sem saudação automatizada — Mariana espera por uma resposta humana que pode demorar (Loreni opera várias frentes). Tempo médio de resposta é critério decisivo para Mariana com prazo apertado.",
+        "duration_estimate": "horas a 2 dias"
+      },
+      {
+        "stage": "MARIANA — Pós-compra (uso)",
+        "trigger": "Recebeu a peça, usa no evento",
+        "mental_state": "Orgulhosa se ficar boa, decepcionada se houver problema (devolução é improvável — Mariana não devolve, some)",
+        "primary_channel": "Evento físico (CTG, baila) + posts próprios no Instagram",
+        "dominant_question": "Vou postar foto com essa peça? Vou indicar para amigas?",
+        "client_intervention": "Mariana posta foto com bombacha — Tapparo poderia repostar (UGC), pedir autorização, gerar prova social. Hoje provavelmente não há esse fluxo.",
+        "friction_today": "Sem programa de UGC (User Generated Content) nem régua de pós-compra — perde-se a oportunidade de transformar Mariana satisfeita em embaixadora orgânica.",
+        "duration_estimate": "1 evento (1 dia ativo de uso) + posts próprios assíncronos"
+      },
+      {
+        "stage": "MARIANA — Recompra (próximo ciclo)",
+        "trigger": "Próximo evento tradicionalista (Semana Farroupilha do ano seguinte, baila, festa)",
+        "mental_state": "Confiante se experiência anterior foi positiva; pronta para upsell (linha completa) se fidelizada",
+        "primary_channel": "WhatsApp direto Loreni (relação construída) + Instagram",
+        "dominant_question": "O que tem de novo dessa vez? Tem outra peça que combine?",
+        "client_intervention": "Sem CRM mínimo, lojista que comprou pode ser esquecido. Régua de reativação pré-pico farroupilha (junho) é o destrava.",
+        "friction_today": "Recompra depende da memória da Mariana — sem nutrição, taxa de recompra estimada em 30-40%, abaixo do potencial (70%+ com régua bem feita).",
+        "duration_estimate": "anual"
+      },
+      {
+        "stage": "DIEGO — Funil B2B completo",
+        "trigger": "Pico farroupilha + perda do representante anterior + atraso de fornecedor incumbente",
+        "mental_state": "Urgência mediana + cautela alta (3 fornecedores ruins em 2 anos)",
+        "primary_channel": "Google Search B2B + Instagram + indicação em grupo WhatsApp + LP B2B",
+        "dominant_question": "Qual fábrica entrega 35d real, com pedido pequeno, e tem favo de verdade?",
+        "client_intervention": "LP B2B segmentada já entrega CRO 38, FAQ com 5 objeções, CTA WhatsApp. Mantém arquitetura atual.",
+        "friction_today": "Tempo de resposta variável da Loreni + ausência de prova social estruturada + concorrência B2B (Bombachas Gaúcho 30+ anos) com marca consolidada.",
+        "duration_estimate": "6-8 semanas (incluindo produção de 35d)"
+      }
+    ],
+    "critical_leakage_point": "Maior vazamento (B2C Mariana): estágio Pesquisa → Decisão. Mariana chega na LP via Google Ads, mas a LP B2B prioriza 'Para Representantes e Lojistas' e 'Para CTGs/Invernadas' — bloco específico para consumidor final não existe. Estimativa: dos ~33 leads B2C/mês do Google Ads, apenas 5-8 viram conversão (clique no WA). O resto sai antes de ver FAQ ou diferenciais. Mitigação imediata: adicionar bloco 'Para consumidor final / Mariana' na LP + saudação automatizada do WA Business com filtro de persona. Maior vazamento (B2B Diego): mesmo gargalo de qualificação no WA + ausência de prova social estruturada (concorrentes consolidados ganham por confiança institucional)."
+  },
+  "willingness_to_pay": {
+    "description": "WTP recalibrado com dado declarado do V4MOS: ticket médio R$ 100/peça. Em B2C (Mariana) isso provavelmente reflete linha popular (não o premium Bombacha de Favo, que tem WTP maior). Em B2B (Diego) o ticket por pedido fica em ~R$ 4.600 (46 peças × R$ 100). Faixas abaixo refinadas com base na realidade declarada — mais conservadoras que a v1.",
+    "services": [
+      {
+        "service": "Bombacha de Favo (carro-chefe artesanal) — Mariana B2C",
+        "current_ticket_range": "R$ 280-450/peça [E B2C varejo final]",
+        "perceived_fair_range": "R$ 280-380/peça",
+        "premium_ceiling": "R$ 450/peça com história artesanal contada (Reel de bastidores + autorização do uso na conta)",
+        "elasticity": "media — Mariana paga premium SE entender o porquê. Hoje motivo de perda #1 é preço, indicando que a comunicação de processo artesanal não está fechando a justificação.",
+        "pricing_lever": "Acabamento manual + autenticidade verificável (vídeo da costureira + selo de favo verdadeiro) + entrega antes do evento. Não competir por preço com varejo industrial."
+      },
+      {
+        "service": "Bombacha popular tradicional — Mariana B2C",
+        "current_ticket_range": "R$ 90-150/peça",
+        "perceived_fair_range": "R$ 100-160/peça",
+        "premium_ceiling": "R$ 180/peça em kit com lenço ou alpargata",
+        "elasticity": "alta — concorre com varejo industrial e Renner que vendem 'bombacha fashion'. Decisão é por preço quase puro.",
+        "pricing_lever": "Posicionar como entrada — quem compra popular hoje conhece a marca para vir buscar Favo amanhã. Margem comprimida, volume de funil."
+      },
+      {
+        "service": "Bombacha de Favo (atacado) — Diego B2B",
+        "current_ticket_range": "R$ 180-250/peça atacado",
+        "perceived_fair_range": "R$ 200-260/peça",
+        "premium_ceiling": "R$ 300/peça atacado se prazo 35d garantido + peça-mostra antes do pedido",
+        "elasticity": "baixa — Diego paga premium se diferencial técnico está claro. Revende a R$ 350-500 (margem ~75%).",
+        "pricing_lever": "Acabamento manual + prazo cumprido + parceria direta sem intermediário."
+      },
+      {
+        "service": "Kit Invernada (bombacha + colete + camisa) — CTG/Invernada B2B",
+        "current_ticket_range": "R$ 280-450/kit atacado",
+        "perceived_fair_range": "R$ 300-500/kit",
+        "premium_ceiling": "R$ 550/kit com cor/padrão exclusivo da invernada + pedido mínimo flexível",
+        "elasticity": "media — decisão coletiva da invernada, valor de identidade do grupo justifica premium",
+        "pricing_lever": "Customização de cor + cumprimento de prazo crítico (apresentação data marcada)."
+      },
+      {
+        "service": "Saia de prenda com regulagem — Mariana B2C + Diego B2B",
+        "current_ticket_range": "R$ 140-220/peça B2C ; R$ 90-150 atacado B2B",
+        "perceived_fair_range": "R$ 160-240/peça B2C",
+        "premium_ceiling": "R$ 280/peça B2C com tecido nobre e bordado artesanal",
+        "elasticity": "media — regulagem é diferencial técnico que poucos fabricantes oferecem",
+        "pricing_lever": "Regulagem (diferencial técnico) + tecidos exclusivos."
+      }
+    ]
+  },
+  "objection_library": {
+    "description": "Catálogo de objeções por persona. Mariana (B2C) lida com objeções de preço + autenticidade. Diego (B2B) com objeções de prazo + capital de giro. Alimenta copy, FAQ da LP, saudações do WhatsApp Business, scripts da agência operadora do Google Ads.",
+    "objections": [
+      {
+        "objection": "MARIANA: 'Achei caro. Na Renner tem por R$ 80.'",
+        "subtext": "Não conhece o valor do acabamento manual. Comparando com industrial sem entender que são produtos diferentes.",
+        "bad_response": "Nossa qualidade é superior. Não dá pra comparar.",
+        "good_response": "Faz sentido pensar isso! A diferença está no favo: na nossa Bombacha de Favo cada peça é trançada à mão pela nossa costureira-chefe. Posso te mandar um vídeo de 30 segundos do processo. Você vê e decide se faz sentido para você.",
+        "when_to_use": "WhatsApp Business inicial. Substitui resposta automatizada com vídeo curto de bastidores. Educar antes de vender."
+      },
+      {
+        "objection": "MARIANA: 'Vai chegar a tempo da Semana Farroupilha?'",
+        "subtext": "Já se queimou antes. Tem ansiedade real com data marcada.",
+        "bad_response": "Sim, nosso prazo é 35 dias.",
+        "good_response": "Sim! Se você fechar até [data específica calculada para 35d antes do evento], chega com folga. Eu te mando atualização no WhatsApp toda semana enquanto está em produção — você não fica no escuro.",
+        "when_to_use": "WhatsApp inicial + bloco 'Para Mariana' na LP. Calendário automático de pré-Semana Farroupilha."
+      },
+      {
+        "objection": "MARIANA: 'Vocês vendem para pessoa física?'",
+        "subtext": "LP mostra blocos B2B (lojistas, CTGs) — Mariana achou que era atacado.",
+        "bad_response": "Sim, atendemos atacado e varejo.",
+        "good_response": "Sim, claro! Atendemos tanto lojistas quanto consumidoras finais como você. Pra você, o pedido mínimo não se aplica — pode pedir só 1 peça. Como posso te ajudar?",
+        "when_to_use": "WA inicial + adicionar bloco específico 'Para você que quer sua própria pilcha' na LP (correção crítica)."
+      },
+      {
+        "objection": "MARIANA: 'É favo de verdade ou cópia?'",
+        "subtext": "Sabe diferenciar — já viu cópias mal feitas. Precisa de evidência.",
+        "bad_response": "É 100% verdadeiro, fique tranquila.",
+        "good_response": "É favo verdadeiro, trançado à mão. Te mando um Reel do nosso processo e uma foto do detalhe do trançado. Se quiser, mando uma peça-mostra antes do pedido — abato no valor da próxima compra.",
+        "when_to_use": "WA + conteúdo orgânico do Instagram (Reel de bastidores semanal). Argumento de venda principal."
+      },
+      {
+        "objection": "DIEGO: '35 dias é muito, eu preciso pra antes.'",
+        "subtext": "Está atrasado no planejamento da temporada. Quer transferir culpa para fornecedor.",
+        "bad_response": "Olha, infelizmente esse é nosso prazo padrão.",
+        "good_response": "Esse prazo é justamente porque a gente produz na fábrica, sem terceirizar — é o que garante a qualidade do favo. Pra você não correr risco no pico, o ideal é fechar agora pra junho. Nas próximas temporadas eu te aviso 60 dias antes pra você nunca mais passar por isso.",
+        "when_to_use": "WhatsApp B2B + email do representante. Educação de prazo."
+      },
+      {
+        "objection": "DIEGO: 'Pedido mínimo 15? Os outros são 50.'",
+        "subtext": "Capital de giro limitado, quer testar antes de comprometer.",
+        "bad_response": "Sim, 15 é nosso mínimo.",
+        "good_response": "Justamente — a maioria dos lojistas começou pequeno e foi crescendo. Fecha 15 agora, testa mix por 1 temporada, e na próxima a gente conversa em ampliar. Sem amarração nenhuma.",
+        "when_to_use": "WhatsApp B2B + LP (FAQ já cobre, manter)."
+      },
+      {
+        "objection": "DIEGO + MARIANA: 'Pago à vista tem desconto?'",
+        "subtext": "Negociação padrão.",
+        "bad_response": "Não trabalhamos com descontos.",
+        "good_response": "Para pagamento à vista temos condições facilitadas — manda o mix/peça que você quer e eu te mando a proposta. Vai compensar.",
+        "when_to_use": "WA — fase de negociação. Não dar número genérico."
+      }
+    ]
+  },
+  "key_message": {
+    "chosen_message": "PRINCIPAL (Mariana B2C): 'A bombacha que respeita a tradição: feita à mão, no caimento que você quer.' | SECUNDÁRIA (Diego B2B): 'Bombacha de Favo direto da fábrica, em 35 dias, a partir de 15 peças.'",
+    "approach": "combined",
+    "usage_context": "Mariana (B2C principal — emocional): headline da campanha Google reestruturada para Mariana, bio do Instagram, headline do bloco 'Para você que quer sua própria pilcha' na LP (a criar), primeira frase do WhatsApp Business quando lead é consumidor final, copy do Meta Ads quando esse canal abrir. | Diego (B2B secundária — funcional): mantém uso no bloco 'Para Representantes e Lojistas' e 'Para CTGs/Invernadas' da LP (já existe), email do representante, copy do Search B2B (se houver campanha separada).",
+    "alternatives": [
+      {
+        "message": "A bombacha que respeita a tradição: feita à mão, no caimento que você quer.",
+        "approach": "emotional",
+        "rationale": "PRINCIPAL Mariana. Ataca o motivo de perda #1 declarado (preço — 'acharam caro') reposicionando para autenticidade ('respeita a tradição') + foco no caimento (job emocional dela: 'ser vista como gaúcha de verdade'). 13 palavras. Diferencia de Regalo Campeiro (que vende 'distribuição mais completa') sem competir em catálogo. Bombacha de Favo é mencionada via 'feita à mão' (atributo do favo) sem nomear — para a Mariana iniciante que ainda não conhece o termo técnico, é educacional sem barreira."
+      },
+      {
+        "message": "Bombacha de Favo direto da fábrica, em 35 dias, a partir de 15 peças.",
+        "approach": "functional",
+        "rationale": "SECUNDÁRIA Diego. Mantida da v1 — funciona perfeitamente para B2B onde a decisão é racional (capital de giro + prazo + diferencial técnico). 12 palavras. Continua sendo usada no bloco B2B da LP."
+      },
+      {
+        "message": "A pilcha que a gaúcha de verdade reconhece — feita à mão, no prazo certo.",
+        "approach": "social",
+        "rationale": "ALTERNATIVA Mariana. Aposta no social (ser reconhecida pela tribo tradicionalista) + funcional (prazo). 13 palavras. Boa para retargeting/UGC quando houver depoimentos de Marianas reais usando — não para 1ª impressão (pressupõe que a leitora já se vê como 'gaúcha de verdade')."
+      }
+    ]
+  },
+  "key_insight": {
+    "headline": "O motivo de perda #1 declarado pela Loreni é 'preço' — mas o problema não é preço, é POSICIONAMENTO. Mariana paga premium se entender o porquê.",
+    "context": "A Loreni declarou no formulário V4MOS que os clientes 'acharam caro' como motivo principal de perda de venda. Em paralelo, declarou que quer mirar a persona 'Mariana Tradicionalista' (consumidor final). A campanha Google Ads já captura 55,8% mulheres (perfil Mariana). O ativo defensável existe: Bombacha de Favo artesanal, trançado manual, prazo cumprido. Mas a comunicação não conecta o premium ao processo — Mariana compara com varejo industrial e desiste. Não é falta de demanda, é falta de tradução do valor.",
+    "numbered_reasons": [
+      "(1) Motivo de perda #1 (preço) + público que captura digital (Mariana B2C) + ativo defensável (Bombacha de Favo artesanal) = problema de POSICIONAMENTO, não de produto. A solução é narrar o processo, não baixar preço.",
+      "(2) A LP atual segmenta 3 públicos B2B (lojistas, representantes, CTGs) mas não tem bloco específico para Mariana (consumidora final). Mariana clica via Google Ads, chega na LP B2B, não se vê, sai. Vazamento crítico — quick win de adicionar bloco 'Para você que quer sua própria pilcha'.",
+      "(3) Regalo Campeiro tem 26K seguidores no Instagram e domina narrativa visual do nicho. Janela para a Tapparo ocupar 'Bombacha de Favo autêntica + processo manual' como território defensável é estimada em 12-18 meses antes que Regalo ou outro player narre isso primeiro."
+    ],
+    "discussion_anchor": "A Loreni e Everton precisam validar duas decisões simultâneas: (a) aprovar oficialmente a estratégia dupla (Mariana principal digital + Diego secundária físico — não 'Diego em ambos os canais' como estava na v1); (b) priorizar 1 ação para os próximos 30 dias — recomendação V4: adicionar bloco 'Para você que quer sua própria pilcha' na LP + reorientar copy da campanha Google para Mariana com Bombacha de Favo como produto-âncora. As duas correções não dependem da agência operadora — Loreni pode acionar diretamente o dev da LP."
+  },
+  "honesty_alert": "A persona Mariana é a aposta declarada pela Loreni no V4MOS — mas ainda não foi validada com entrevistas reais de consumidoras finais existentes na base de 63 clientes ativos. Faixa etária (32-55), perfil de renda, motivos de compra, ciclo de decisão e WTP por peça popular vs favo são estimativas qualitativas baseadas em (a) dados do formulário V4MOS, (b) tendências do MTG e da moda tradicionalista urbanizada, (c) padrão de comportamento do tráfego pago atual (55,8% feminino). Antes da próxima skill consumir esta persona, recomendo validar com Loreni 3 perguntas: (1) das 63 clientes ativas atuais, quantas são consumidoras finais vs lojistas? (2) do ticket médio R$ 100 declarado, qual % vem de Bombacha de Favo (premium) vs popular? (3) qual a faixa etária e perfil das consumidoras finais que mais compram hoje — 30s casadas, 40s mães, 50s prendas tradicionais? Sem essa validação, a persona é hipótese acionável — útil para orientar reestruturação de Search, mensagem-chave e quick wins da auditoria, mas ainda não verdade verificada do cliente."
+}

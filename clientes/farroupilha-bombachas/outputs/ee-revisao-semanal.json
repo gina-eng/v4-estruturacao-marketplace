@@ -1,0 +1,299 @@
+{
+  "client_name": "Bombachas Farroupilha",
+  "skill": "ee-revisao-semanal",
+  "version": 1,
+  "generated_at": "2026-05-26T15:36:13.627456+00:00",
+  "semana_revisada": 2,
+  "data_revisao": "2026-05-26",
+  "skills_revisadas": [
+    "ee-s1-persona-icp",
+    "ee-s1-diagnostico-maturidade",
+    "ee-s1-swot",
+    "ee-s1-auditoria-comunicacao",
+    "ee-s2-pesquisa-mercado",
+    "ee-s2-posicionamento",
+    "ee-s2-diagnostico-midia",
+    "ee-s2-diagnostico-organico-ig",
+    "ee-s2-diagnostico-cro"
+  ],
+  "summary": "Revisão da Semana 2 da Bombachas Farroupilha. Mapeou 5 evoluções estratégicas (sendo a mais relevante: ICP de B2B-only para dupla Mariana B2C principal + Diego B2B secundário, pós-formulário V4MOS de 2026-05-25), 2 divergências factuais (cidade da fábrica inventada como 'Caxias do Sul' no CRO sem confirmação; status do escopo da skill diagnostico-criativos) e 3 gaps narrativos. Propõe 6 atualizações pontuais — 1 crítica (cidade da fábrica), 4 médias (alinhar narrativa Mariana em outputs S2), 1 baixa (honesty alert organic IG mais explícito).",
+  "summary_headline": "5 evoluções estratégicas mapeadas (com destaque para o pivot ICP B2B→dupla Mariana+Diego), 2 divergências e 3 gaps. 6 atualizações propostas — 1 crítica (cidade da fábrica).",
+  "summary_highlights": [
+    {
+      "category": "contexto",
+      "label": "Skills revisadas",
+      "value": "9",
+      "subtext": "4 da S1 + 5 da S2 (criativos foi skipped do escopo)",
+      "tone": "blue"
+    },
+    {
+      "category": "vantagem",
+      "label": "Evoluções estratégicas",
+      "value": "5",
+      "subtext": "ICP dupla, postura mídia, escopo criativos, mapeamento concorrentes, gaps CRO",
+      "tone": "green"
+    },
+    {
+      "category": "risco",
+      "label": "Divergências factuais",
+      "value": "2",
+      "subtext": "1 crítica (cidade da fábrica 'Caxias do Sul' não confirmada)",
+      "tone": "yellow"
+    },
+    {
+      "category": "acao",
+      "label": "Atualizações propostas",
+      "value": "6",
+      "subtext": "1 crítica + 4 médias + 1 baixa",
+      "tone": "yellow"
+    }
+  ],
+  "summary_key_findings": [
+    {
+      "category": "vantagem",
+      "text": "A história estratégica está coerente — o ICP dupla (Mariana B2C + Diego B2B) decidido em 2026-05-25 após o formulário V4MOS está propagado consistentemente em persona-icp, posicionamento, pesquisa-mercado, mídia, orgânico-ig e CRO. É a evolução central e está documentada."
+    },
+    {
+      "category": "contexto",
+      "text": "Semana 2 teve 2 mudanças de escopo importantes registradas no history: (1) skill ee-s2-diagnostico-criativos removida em 2026-05-26 após confirmação manual de que nenhum dos 4 concorrentes nominados tem ads ativos na Meta Ads Library; (2) diagnóstico de mídia paga reformatado de 'V4 assume Google Ads' para 'V4 aponta correções para agência atual'."
+    },
+    {
+      "category": "ameaca",
+      "text": "Divergência crítica detectada: eu inventei 'Caxias do Sul' como cidade da fábrica em 8 menções do diagnóstico CRO (wireframe da nova LP, footer institucional, headline sugerida). O briefing/V4MOS não confirma cidade explicitamente — o nome 'Bombachas Farroupilha' sugere Farroupilha-RS. PRECISA confirmar com Loreni antes de propagar para S3 (landing page)."
+    },
+    {
+      "category": "acao",
+      "text": "6 atualizações concretas listadas, ordenadas por severidade. Após aprovação item-a-item, aplicarei nos outputs, atualizo client.json e regenero portal + consolidated. A divergência da cidade (U1) deve ser confirmada por consulta direta à Loreni antes de aplicar."
+    }
+  ],
+  "evolucao_estrategica": [
+    {
+      "id": "E1",
+      "tema": "ICP / público-alvo — de B2B-only para dupla Mariana+Diego",
+      "hipotese_inicial": {
+        "conteudo": "Cliente declarou foco B2B exclusivo: 'lojistas tradicionalistas + grupos de dança + CTGs (base atual, 99% receita via 1 representante terceirizado)'. Briefing inicial não mencionava B2C.",
+        "origem": "client.json > briefing.icp.best_customers",
+        "camada": "briefing"
+      },
+      "evidencia_diagnostico": {
+        "conteudo": "Formulário V4MOS de 2026-05-25 (47 respostas) revelou que cliente quer crescer B2B + reduzir dependência do canal único + iniciar B2C. Pesquisa de mercado mostrou SAM B2C R$200MM > SAM B2B R$100MM. Diagnóstico orgânico mostrou que conta IG (B2C-friendly) tem engagement 2,6x superior ao líder Regalo (B2B-focado).",
+        "origem": "base-de-conhecimento/2026-05-25-formulario-v4mos.md + ee-s2-pesquisa-mercado.json > tam_sam_som + ee-s2-diagnostico-organico-ig.json",
+        "camada": "semana_2"
+      },
+      "decisao_atual": {
+        "conteudo": "Estratégia dupla aprovada: Mariana Tradicionalista (B2C, principal, 32-55, digital — Caxias/Alegrete/Passo Fundo, ticket R$100-450) + Diego Tavares (B2B, secundário, lojista pilcharia, ticket R$4.600/pedido). Mensagem-chave dual: Mariana 'A bombacha que respeita a tradição: feita à mão, no caimento que você quer' + Diego 'Bombacha de Favo direto da fábrica, em 35 dias, a partir de 15 peças'.",
+        "origem": "outputs/ee-s1-persona-icp.json (v2, regenerado) + ee-s2-posicionamento.json > chosen_statement + ee-s2-posicionamento.json > recommended_tagline 'Feita à mão. Direto da fábrica.'",
+        "camada": "decisao"
+      },
+      "impacto_estrategico": "Reorganiza todo o blueprint da S3: a landing page precisa de seção dedicada para Mariana (hoje 0% do site fala com ela), o copy de anúncios precisa ser dual, o forecast de mídia separa orçamento Mariana (Meta Ads) e Diego (Google Search). Diagnóstico CRO já reflete isso no wireframe.",
+      "narrativa_sugerida": "A Loreni declarou no briefing inicial que o cliente ideal era B2B (lojistas + CTGs via representante único). O formulário V4MOS aprofundou a conversa e revelou que ela quer DUPLO objetivo: crescer B2B reduzindo concentração de risco + iniciar B2C porque vê demanda. A pesquisa de mercado e o diagnóstico orgânico confirmaram que B2C é o canal de maior potencial não explorado — SAM B2C 2x maior que B2B, engagement IG já vencendo o líder. A decisão final é estratégia dupla com Mariana como persona principal."
+    },
+    {
+      "id": "E2",
+      "tema": "Postura sobre mídia paga existente — de 'V4 assume' para 'V4 aponta'",
+      "hipotese_inicial": {
+        "conteudo": "Primeira versão do diagnóstico de mídia tratava as campanhas Google Ads ativas como 'operação invisível' do cliente e recomendava V4 assumir a conta de anúncios para gestão integrada.",
+        "origem": "ee-s2-diagnostico-midia.json (v inicial, anterior aos ajustes de 2026-05-25)",
+        "camada": "briefing"
+      },
+      "evidencia_diagnostico": {
+        "conteudo": "Cliente esclareceu que sabe das campanhas (são operadas por agência terceirizada em Passo Fundo desde antes da V4 entrar) e NÃO tem interesse de transferir a conta para a V4. O que precisa é clareza estratégica + correções pontuais. Escopo contratado é estruturação + comercial, NÃO operação de mídia.",
+        "origem": "Feedback do operador em sessão 2026-05-25 (registrado em memory feedback_diagnostico_postura.md e project_farroupilha_escopo.md)",
+        "camada": "semana_2"
+      },
+      "decisao_atual": {
+        "conteudo": "Diagnóstico de mídia reformatado como 'apontamentos para a agência atual' (não 'plano de retomada'). 8 apontamentos categorizados (5 para agência + 3 quick wins independentes). V4 segue como camada de inteligência/decisão, não como executor da mídia.",
+        "origem": "ee-s2-diagnostico-midia.json (v1 atual) > summary + scope_note",
+        "camada": "decisao"
+      },
+      "impacto_estrategico": "S3 mantém forecast-midia como ferramenta estratégica (cenário ótimo), mas NÃO inclui takeover de conta. O escopo de S4 (comercial + cliente oculto) também precisa refletir que V4 atua como diagnóstico, não operação. Comunicação com cliente sobre próximos passos precisa ser cuidadosa nessa fronteira.",
+      "narrativa_sugerida": "A V4 começou enxergando as campanhas Google Ads como 'operação invisível' que precisava ser assumida. A conversa com a Loreni revelou que a agência de Passo Fundo opera há anos e o que falta é direção estratégica, não operação. O diagnóstico final aponta correções específicas que a agência pode aplicar — V4 atua como inteligência estratégica acima da camada de execução."
+    },
+    {
+      "id": "E3",
+      "tema": "Escopo S2 — skill diagnostico-criativos removida",
+      "hipotese_inicial": {
+        "conteudo": "Skill ee-s2-diagnostico-criativos estava no escopo padrão da S2 (vinda do dependency_graph), pressupondo que o cliente teria criativos pagos ativos para analisar e/ou concorrentes com ads na Meta Ads Library.",
+        "origem": "plugins/v4-estruturacao-ia/dependency_graph.json (default S2)",
+        "camada": "briefing"
+      },
+      "evidencia_diagnostico": {
+        "conteudo": "Cliente confirmou que não tem Meta Ads próprios. Verificação manual em 2026-05-26 na Meta Ads Library confirmou que nenhum dos 4 concorrentes nominados (La Parceria, La Fronteira, Regalo Campeiro, Bombachas Gaúcho) tem ads ativos no Brasil. Sem material para benchmark.",
+        "origem": "Verificação manual em 2026-05-26 (registrada em history client.json) + ee-s2-diagnostico-organico-ig.json > honesty_alert",
+        "camada": "semana_2"
+      },
+      "decisao_atual": {
+        "conteudo": "Skill marcada como 'skipped' no progress.skills do client.json (com skipped_at + skipped_reason). Card removido do portal via filtro do renderer. Análise de criativos foi substituída pelo benchmark de conteúdo orgânico (ee-s2-diagnostico-organico-ig), que entregou valor superior (top posts dos concorrentes + padrões missing) e alimenta diretamente o briefing de S3 (criativos-anuncios).",
+        "origem": "client.json > progress.skills.ee-s2-diagnostico-criativos.status = 'skipped' + history 2026-05-26",
+        "camada": "decisao"
+      },
+      "impacto_estrategico": "S3 (criativos-anuncios + copy-anuncios) deriva input de ee-s2-diagnostico-organico-ig (top posts cliente + concorrentes + padrões missing + briefing de produção). Quando Meta Ads for ativado pelo cliente, faremos audit dos próprios criativos numa skill complementar fora do ciclo padrão.",
+      "narrativa_sugerida": "A skill diagnostico-criativos foi cortada do escopo após validação de campo: cliente sem Meta Ads + 0 concorrentes com ads ativos = 0 material para analisar. O orgânico IG cobriu o que essa skill cobriria (padrões, fórmulas vencedoras, gaps competitivos) com a vantagem de ter dados quantitativos via Graph API. Skill skipped, não atrasada — operação enxuta."
+    },
+    {
+      "id": "E4",
+      "tema": "Mapeamento de concorrentes — de genérico para nominados pelo cliente",
+      "hipotese_inicial": {
+        "conteudo": "Versão inicial da pesquisa de mercado tinha concorrentes inferidos pela equipe V4 a partir de buscas Google genéricas — sem nomes específicos validados pela Loreni.",
+        "origem": "ee-s2-pesquisa-mercado.json (v1, anterior ao formulário V4MOS)",
+        "camada": "briefing"
+      },
+      "evidencia_diagnostico": {
+        "conteudo": "Formulário V4MOS de 2026-05-25 trouxe nomes específicos diretos da Loreni: La Parceria (verificar grafia), La Fronteira (Boutique de Pilchas), Regalo Campeiro (@regalocampeiro 26K seguidores). Pesquisa subsequente adicionou 2 concorrentes técnicos: Bombachas Pampa Sul e Bombachas Gaúcho.",
+        "origem": "base-de-conhecimento/2026-05-25-formulario-v4mos.md + ee-s2-pesquisa-mercado.json v2 > competitors[]",
+        "camada": "semana_2"
+      },
+      "decisao_atual": {
+        "conteudo": "5 concorrentes mapeados com digital_score (Regalo Campeiro 8 > Bombachas Pampa Sul 7 > Bombachas Gaúcho 6 > La Fronteira 5 > La Parceria 3). Os 2 com maior score (Regalo + Bombachas Gaúcho) foram auditados via business_discovery no orgânico IG. La Parceria precisa confirmar grafia com Loreni (sinalizado como honesty alert).",
+        "origem": "ee-s2-pesquisa-mercado.json v2 > competitors + ee-s2-diagnostico-organico-ig.json > competitor_accounts",
+        "camada": "decisao"
+      },
+      "impacto_estrategico": "Pesquisa de mercado mapeada com nomes reais permite posicionamento competitivo preciso. Auditoria orgânica dos 2 maiores informa briefing de S3 (copy, criativos). Sequencialmente, La Parceria precisa ser auditada quando grafia for confirmada.",
+      "narrativa_sugerida": "A pesquisa começou com concorrentes inferidos genericamente pela V4 e evoluiu para a lista validada da Loreni via V4MOS (3 nominados) + 2 técnicos adicionados pela pesquisa. Hoje o territory mapping está alinhado com a percepção real do cliente, com auditoria orgânica feita nos 2 maiores. La Parceria fica como pendência de confirmação de grafia."
+    },
+    {
+      "id": "E5",
+      "tema": "Diagnóstico CRO — site não suporta a estratégia dupla aprovada",
+      "hipotese_inicial": {
+        "conteudo": "Quando a estratégia dupla foi aprovada (E1), assumia-se implicitamente que o site bombachasfarroupilha.com.br já tinha alguma estrutura para receber tráfego B2C.",
+        "origem": "Pressuposto não documentado pós-decisão E1",
+        "camada": "briefing"
+      },
+      "evidencia_diagnostico": {
+        "conteudo": "Auditoria CRO em 2026-05-26 (page_audit + page_audit_deep + análise visual full-page mobile/desktop) revelou: página 100% B2B (Mariana 0% representada); 0/6 sinais de trust no footer; LGPD non_compliant 3/10; tagueamento broken (GTM-M7WTSW9C vazio + Google Ads AW-17962419023 ativo sem GA4 nem Pixel); 0 H1, sem meta description, 12/17 imagens sem alt; 3 seções com contraste ilegível.",
+        "origem": "ee-s2-diagnostico-cro.json > technical_audit + tracking_stack + cro_elements_deep + copy_audit",
+        "camada": "semana_2"
+      },
+      "decisao_atual": {
+        "conteudo": "Wireframe CRO de 12 seções aprovado, incluindo NOVA seção dedicada à Mariana entre Hero e Linhas. Footer institucional completo proposto. P1 (3h, esforço baixo): GA4 + Meta Pixel + CMP. P2 (12h, médio): SEO + B2C section + alts + schema. Briefing alimenta diretamente ee-s3-landing-page.",
+        "origem": "ee-s2-diagnostico-cro.json > wireframe_improvements + test_hypotheses + transversal_elements",
+        "camada": "decisao"
+      },
+      "impacto_estrategico": "S3-landing-page agora tem briefing técnico completo (não só posicional). O novo site não é tweaking — é reestruturação seguindo o wireframe de 12 seções. Tagueamento + LGPD são tarefas paralelas ao redesign (podem ir mais rápido).",
+      "narrativa_sugerida": "A decisão E1 (estratégia dupla) revelou um gap implícito que só apareceu na auditoria CRO: o site atual é 100% B2B. A Mariana não tem caminho no site. Além disso, o tagueamento broken e a falta de compliance LGPD são red flags graves. O wireframe da nova LP endereça tudo isso — não é redesign cosmético, é alinhamento do site com a estratégia aprovada."
+    }
+  ],
+  "divergencias_factuais": [
+    {
+      "id": "D1",
+      "categoria": "nome",
+      "campo": "Cidade da fábrica — 8 menções a 'Caxias do Sul' no ee-s2-diagnostico-cro.json",
+      "valor_atual": "Caxias do Sul-RS (em 8 lugares no CRO: copy_audit.above_fold.suggested_headline, wireframe_improvements seções 1, 3, 6, 12, footer institucional, etc.)",
+      "valor_recomendado": "VERIFICAR com Loreni: provável Farroupilha-RS (o nome da empresa sugere) OU outra cidade da Serra. O briefing/V4MOS não tem identification.city preenchido.",
+      "fonte_de_verdade": "Confirmação direta com Loreni — não há fonte definitiva nos outputs. Nome 'Bombachas Farroupilha' sugere Farroupilha-RS mas pode ser brand name + sede em outro lugar (caso de algumas marcas gaúchas).",
+      "arquivos_afetados": [
+        "outputs/ee-s2-diagnostico-cro.json"
+      ],
+      "severidade": "critica"
+    },
+    {
+      "id": "D2",
+      "categoria": "taxonomia",
+      "campo": "progress.skills.ee-s2-diagnostico-criativos.status — registrado em history como 'removed_from_scope' mas no client.json.progress.skills está como 'skipped'",
+      "valor_atual": "client.json: status='skipped', skipped_at + skipped_reason populados. History: action='removed_from_scope'.",
+      "valor_recomendado": "Manter status='skipped' (semântica suportada pelo renderer do portal). Atualizar nota do history para 'skipped' para alinhar terminologia.",
+      "fonte_de_verdade": "Renderer (portal.html) suporta filtro de status='skipped' — essa é a terminologia canônica. 'removed_from_scope' é descritivo mas não é um status válido do schema do progress.",
+      "arquivos_afetados": [
+        "clientes/farroupilha-bombachas/client.json"
+      ],
+      "severidade": "baixa"
+    }
+  ],
+  "gaps_narrativos": [
+    {
+      "id": "G1",
+      "tipo": "evolucao_ausente",
+      "localizacao": "ee-s2-diagnostico-midia.json > summary",
+      "descricao": "O summary do diagnóstico de mídia foca nos achados técnicos (CPA, realocação de budget) mas não explicita o arco da postura V4 (de 'assumir conta' para 'apontar à agência'). Stakeholder lendo o consolidated pode interpretar como recomendação para V4 operar.",
+      "ajuste_proposto": "Adicionar 1 frase no summary: 'A V4 entrega os apontamentos para a agência atual aplicar — não há proposta de takeover da conta de anúncios nesta entrega.'",
+      "arquivo_afetado": "outputs/ee-s2-diagnostico-midia.json"
+    },
+    {
+      "id": "G2",
+      "tipo": "honestidade",
+      "localizacao": "ee-s2-diagnostico-organico-ig.json > honesty_alert",
+      "descricao": "O honesty_alert já menciona que apenas 2 dos 5 concorrentes foram auditados. Mas a estratégia (5 'competitor_patterns_missing') é apresentada com confiança alta. Falta vinculação explícita entre os dois (a confiança nos padrões deveria ser proporcional ao número de concorrentes auditados).",
+      "ajuste_proposto": "Reforçar no honesty_alert: 'Os 5 padrões missing identificados foram observados em 1-2 concorrentes apenas — quando auditarmos La Parceria, La Fronteira e Bombachas Pampa Sul, podemos refinar a lista (alguns padrões podem ser específicos do Regalo/Bombachas Gaúcho e não generalizáveis).'",
+      "arquivo_afetado": "outputs/ee-s2-diagnostico-organico-ig.json"
+    },
+    {
+      "id": "G3",
+      "tipo": "lacuna",
+      "localizacao": "ee-s2-diagnostico-cro.json > wireframe_improvements seção 6",
+      "descricao": "A seção 'A fábrica / quem somos' do wireframe cita 'Farroupilha-RS' como sede, mas outras seções do mesmo output citam 'Caxias do Sul-RS' (8 menções — ver D1). Inconsistência interna que confunde quem for executar o redesign.",
+      "ajuste_proposto": "Após confirmação com Loreni (D1), normalizar todas as menções de cidade em todo o output CRO. Se for Farroupilha-RS, atualizar 8 strings. Se for Caxias do Sul-RS, atualizar 1 string e o copy de seções.",
+      "arquivo_afetado": "outputs/ee-s2-diagnostico-cro.json"
+    }
+  ],
+  "atualizacoes_propostas": [
+    {
+      "id": "U1",
+      "arquivo": "outputs/ee-s2-diagnostico-cro.json",
+      "caminho_json": "(múltiplos campos com menção a 'Caxias do Sul')",
+      "acao": "substituir",
+      "valor_antigo": "Caxias do Sul-RS / Caxias do Sul (8 ocorrências)",
+      "valor_novo": "Farroupilha-RS (a confirmar com Loreni — se for outra cidade, ajustar)",
+      "motivo": "Divergência D1 — eu inventei Caxias do Sul sem confirmação. Briefing não tem cidade explícita. Nome da empresa sugere Farroupilha-RS. PRECISA confirmar antes de aplicar (não aplicar cego).",
+      "severidade": "critica",
+      "origem_achado": "factual"
+    },
+    {
+      "id": "U2",
+      "arquivo": "outputs/ee-s2-diagnostico-midia.json",
+      "caminho_json": "summary",
+      "acao": "adicionar",
+      "valor_antigo": null,
+      "valor_novo": "A V4 entrega os apontamentos para a agência atual aplicar — não há proposta de takeover da conta de anúncios nesta entrega.",
+      "motivo": "Gap G1 — explicitar arco da postura V4 (E2). Apêndice ao final do summary atual.",
+      "severidade": "media",
+      "origem_achado": "narrativa",
+      "referencia_evolucao": "E2"
+    },
+    {
+      "id": "U3",
+      "arquivo": "outputs/ee-s2-diagnostico-organico-ig.json",
+      "caminho_json": "honesty_alert",
+      "acao": "substituir",
+      "valor_antigo": "Auditoria cobriu apenas 2 dos 5 concorrentes mapeados na ee-s2-pesquisa-mercado (Regalo Campeiro e Bombachas Gaúcho — os 2 com maior digital_score). Os outros 3 (La Parceria, La Fronteira, Bombachas Pampa Sul) não foram auditados por business_discovery nesta rodada — recomendado incluí-los em auditoria complementar antes de validar definitivamente os 'competitor_patterns_missing'. O fato de NENHUM dos 4 concorrentes ter ads pagos ativos na Meta Ads Library (verificado manualmente em 2026-05-26) reforça que o orgânico é o canal principal de batalha no nicho — escalar conteúdo é prioritário em todos os cenários.",
+      "valor_novo": "Auditoria cobriu apenas 2 dos 5 concorrentes mapeados (Regalo Campeiro e Bombachas Gaúcho — os 2 com maior digital_score). Os 5 'competitor_patterns_missing' identificados foram observados em 1–2 concorrentes apenas: quando La Parceria, La Fronteira e Bombachas Pampa Sul forem auditados, alguns padrões podem se confirmar como tendência do nicho e outros como específicos dos 2 já auditados. A direção do briefing de produção S3 é confiável, mas a hierarquia entre os 5 padrões pode mudar. Confirmação adicional: NENHUM dos 4 concorrentes nominados tem ads pagos ativos na Meta Ads Library (verificado manualmente em 2026-05-26) — orgânico é o canal principal de batalha no nicho.",
+      "motivo": "Gap G2 — vincular confiança dos padrões ao número de concorrentes auditados. Honesty mais explícita.",
+      "severidade": "media",
+      "origem_achado": "narrativa"
+    },
+    {
+      "id": "U4",
+      "arquivo": "outputs/ee-s1-persona-icp.json",
+      "caminho_json": "evolution_note",
+      "acao": "adicionar",
+      "valor_antigo": null,
+      "valor_novo": "Esta v2 do output reflete a estratégia dupla decidida em 2026-05-25 (Mariana B2C principal + Diego B2B secundário). A v1 anterior, baseada apenas no briefing inicial, descrevia apenas o ICP B2B (Diego). O pivot foi motivado pelo formulário V4MOS de 2026-05-25, que revelou a intenção da Loreni de reduzir dependência do canal B2B único + iniciar B2C — e foi validado pela pesquisa de mercado (SAM B2C 2x maior) e pelo diagnóstico orgânico IG (engagement 2,6x acima do líder B2B).",
+      "motivo": "Evolução E1 — registrar o arco narrativo no próprio output para que o leitor entenda que a v2 não é arbitrária, foi consequência de aprendizado de campo.",
+      "severidade": "media",
+      "origem_achado": "evolucao",
+      "referencia_evolucao": "E1"
+    },
+    {
+      "id": "U5",
+      "arquivo": "outputs/ee-s2-pesquisa-mercado.json",
+      "caminho_json": "evolution_note",
+      "acao": "adicionar",
+      "valor_antigo": null,
+      "valor_novo": "Esta v2 substituiu a v1 (baseada em concorrentes inferidos genericamente pela equipe V4) pela lista validada da Loreni via formulário V4MOS de 2026-05-25 — 3 concorrentes nominados (La Parceria, La Fronteira, Regalo Campeiro) + 2 técnicos adicionados pela pesquisa (Bombachas Pampa Sul, Bombachas Gaúcho). La Parceria está com grafia pendente de confirmação.",
+      "motivo": "Evolução E4 — registrar arco narrativo do mapeamento de concorrentes no próprio output.",
+      "severidade": "media",
+      "origem_achado": "evolucao",
+      "referencia_evolucao": "E4"
+    },
+    {
+      "id": "U6",
+      "arquivo": "clientes/farroupilha-bombachas/client.json",
+      "caminho_json": "history[ee-s2-diagnostico-criativos].action",
+      "acao": "substituir",
+      "valor_antigo": "removed_from_scope",
+      "valor_novo": "skipped",
+      "motivo": "Divergência D2 — alinhar terminologia (status canônico é 'skipped', usado pelo renderer).",
+      "severidade": "baixa",
+      "origem_achado": "factual"
+    }
+  ]
+}

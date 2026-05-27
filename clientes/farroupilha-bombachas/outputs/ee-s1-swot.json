@@ -1,0 +1,516 @@
+{
+  "client_name": "Bombachas Farroupilha",
+  "skill": "ee-s1-swot",
+  "version": 2,
+  "generated_at": "2026-05-25T00:00:00Z",
+  "data_source": "formulario_v4mos+briefing+lp+maturidade+persona_icp_v2+pesquisa_mercado_v2+v4mos_googleads",
+  "summary": "SWOT v2 recalibrada com persona dupla aprovada (Mariana B2C principal + Diego B2B secundária) e dados V4MOS (faturamento R$ 1,27M, 63 clientes, 21 vendas/mês, ticket R$ 100/peça, motivo de perda #1 = preço, GMB ativo). Aposta SO principal: ocupar narrativa de 'Bombacha de Favo artesanal com processo manual narrado' via digital (Mariana) antes que Regalo Campeiro (26K seguidores) ou outro player narre primeiro — janela 12-18 meses. Proteção crítica: motivo de perda 'preço' indica que comunicação não traduz premium — sem reposicionamento, 70% do SOM B2C (R$ 2,8MM) fica na mesa. Plano 90 dias: bloco LP B2C + Reels semanais de processo + reorientação Google Ads para Mariana + CRM mínimo com pipeline duplo.",
+  "summary_headline": "Aposta SO principal: ocupar 'Bombacha de Favo artesanal narrada' como Mariana B2C antes que Regalo Campeiro (26K Instagram) ocupe — janela 12-18 meses, motivo de perda #1 é preço (problema de tradução de valor, não de produto).",
+  "summary_highlights": [
+    {
+      "category": "posicao",
+      "label": "Balanço SWOT",
+      "value": "6F × 6W",
+      "subtext": "Forças concentradas em produto + LP; fraquezas em comunicação e CRM",
+      "tone": "yellow"
+    },
+    {
+      "category": "oportunidade",
+      "label": "Janela narrativa",
+      "value": "12-18 meses",
+      "subtext": "Para ocupar 'Bombacha de Favo artesanal narrada' antes da concorrência digital",
+      "tone": "green"
+    },
+    {
+      "category": "oportunidade",
+      "label": "Reels de processo",
+      "value": "Custo zero",
+      "subtext": "Trançado manual + bastidores — diferencia de Regalo Campeiro (catálogo)",
+      "tone": "green"
+    },
+    {
+      "category": "risco",
+      "label": "Motivo de perda #1",
+      "value": "Preço",
+      "subtext": "Sem narrativa de processo, Mariana compara com varejo industrial",
+      "tone": "red"
+    },
+    {
+      "category": "risco",
+      "label": "Concentração receita",
+      "value": "99% B2B",
+      "subtext": "1 representante físico + carteira envelhecendo (5-6 anos)",
+      "tone": "red"
+    },
+    {
+      "category": "janela",
+      "label": "Pré-pico farroupilha",
+      "value": "~45 dias",
+      "subtext": "Maio-junho para reestruturar antes do pico jul-set",
+      "tone": "yellow"
+    }
+  ],
+  "summary_key_findings": [
+    {
+      "category": "vantagem",
+      "text": "Tapparo é a ÚNICA fábrica do nicho que tem Bombacha de Favo artesanal verdadeira + capacidade de narrar processo manual + LP B2B já segmentada + Google Ads validado para Mariana (55,8% cliques femininos). Regalo Campeiro (26K Instagram) domina volume mas é distribuidor — não tem processo próprio. Esses 4 ativos juntos formam a aposta SO mais assimétrica do quadro: 'Bombacha de Favo artesanal narrada com prazo de 35 dias'."
+    },
+    {
+      "category": "ameaca",
+      "text": "Motivo de perda #1 declarado pela Loreni no V4MOS é 'preço — acharam caro'. Combinado com Regalo Campeiro dominando narrativa digital + ausência de Reels de bastidores na Tapparo, o problema NÃO é precificação — é tradução de valor. Mariana compara Bombacha de Favo com varejo industrial (Renner, marketplaces) sem entender a diferença técnica e desiste. Janela para corrigir antes que outro player ocupe: 12-18 meses."
+    },
+    {
+      "category": "contexto",
+      "text": "Estratégia dupla aprovada: Mariana (B2C principal, digital) e Diego (B2B secundário, físico). 70% do SOM consolidado (R$ 4MM) virá de Mariana — frente de crescimento NOVO. Os 30% restantes (R$ 1,2MM via Diego B2B) sustentam a operação atual enquanto Mariana é construída. Sem essa hierarquia de canal, a campanha Google continua diluindo verba e o representante físico continua sendo gargalo."
+    },
+    {
+      "category": "acao",
+      "text": "Plano 90 dias prioriza 3 movimentos: (1) Mês 1 (jun): bloco 'Para você que quer sua própria pilcha' na LP + correção do erro 'cole o link aqui' + GMB otimizado (já ativo) + WhatsApp Business com filtro por persona — Loreni e operador V4 executam, NÃO depende da agência; (2) Mês 2 (jul): apontamentos para agência de Passo Fundo reorientarem Search para Mariana + Bombacha de Favo em grupo dedicado + GA4/UTM; (3) Mês 3 (ago): Reels semanais de processo + Meta Ads para MT + CRM mínimo com pipeline duplo. Cadência V4MOS 30/60/90d pós-contrato V4 valida implementação."
+    }
+  ],
+  "strengths": [
+    {
+      "title": "Bombacha de Favo artesanal — único ativo verdadeiramente defensável do quadro",
+      "description": "Carro-chefe declarado pelo cliente: produção técnico-manual com favo trançado peça a peça pela costureira-chefe. Diferencial de acabamento que NÃO escala para fábricas grandes (Bombachas Gaúcho, Pampa Sul) e que distribuidores (Regalo Campeiro, La Fronteira, La Parceria) não controlam. Hoje a keyword 'bombacha de favo' tem 7 impressões em 90d no Google Ads e CPC R$ 3,24 — terreno livre.",
+      "implication": "Alavancar como narrativa central de Mariana B2C — Reels semanais de bastidores do trançado manual + grupo Search dedicado + bloco 'Por que vale o premium' na LP. É a aposta SO mais direta do quadro.",
+      "source": "briefing"
+    },
+    {
+      "title": "Demanda Google validada com perfil Mariana (55,8% femininos)",
+      "description": "Campanha Search da agência de Passo Fundo entregou em 90d: 725 cliques, 98 conversões, CPA R$ 10,32, CTR 2,22% (acima da média setor ~1,9%). 55,8% dos cliques são femininos = perfil Mariana já testado. Top 4 keywords ('bombacha de gaúcho', 'bombacha gaúcho', 'bombacha a venda', 'roupa bombacha') com CPA <R$ 11.",
+      "implication": "Não precisa construir tráfego B2C do zero — precisa direcionar o que já chega com mais intenção. A pergunta 'tem público no Google?' está respondida. Reorientar copy + grupos por persona destrava o casamento entre tráfego e oferta.",
+      "source": "v4mos"
+    },
+    {
+      "title": "LP B2B segmentada com CRO acima da média (38/100 vs benchmark 35)",
+      "description": "LP single-page entrega proposta clara, blocos por público B2B (lojistas/representantes vs CTGs/invernadas), 4 diferenciais com ícones, FAQ tratando 5 objeções, CTAs WhatsApp em múltiplos pontos. Ponto forte raro em PME do setor.",
+      "implication": "Não precisa refazer LP no curto prazo. Adicionar bloco 'Para você que quer sua própria pilcha' (Mariana) destrava o vazamento crítico identificado na persona-icp v2. Restante da arquitetura mantém — S3 (landing-page) foca em páginas internas (/bombacha-de-favo, /linha-infantil) para SEO orgânico.",
+      "source": "diagnostico"
+    },
+    {
+      "title": "Modelo B2B com barreira de entrada baixa + atendimento humano da Loreni",
+      "description": "Pedido mínimo de 15 peças + pagamento à vista facilitado + prazo de 35 dias + fábrica direta sem intermediário + atendimento pessoal da Loreni. Combinação rara no setor têxtil tradicionalista (concorrentes B2B padrão exigem 50-100 peças e prazo 2-4 meses).",
+      "implication": "Manter Diego B2B como persona secundária com mensagem funcional ('35d + 15 peças + fábrica direta'). Loreni mantém a relação 1:1; estrutura WhatsApp Business filtra anti-persona antes de chegar nela.",
+      "source": "briefing"
+    },
+    {
+      "title": "Pixel Google Ads + GTM-M7WTSW9C operando há 3 meses + GMB ativo",
+      "description": "Tag Google Ads (AW-17962419023) capturando visitantes há 3 meses — base mínima viável para lookalike no Meta. GTM-M7WTSW9C instalado permite plugar GA4 e UTM dinâmica em horas. GMB ativo (declarado no V4MOS) — base para SEO local e reviews de lojistas (precisa otimização).",
+      "implication": "Infraestrutura técnica de tracking acima do esperado para score 28/100 de maturidade. Plumbing gaps (GA4 + UTM dinâmica + Pixel Meta) são quick wins de horas, não dias.",
+      "source": "v4mos"
+    },
+    {
+      "title": "Diferenciação cultural genuína com 15 anos de mercado + identidade familiar",
+      "description": "Fundada em 2011 em Ciríaco/RS, especialista em pilchas tradicionalistas. Operada por Loreni + Everton (sócios casal) — perfil que ressoa com Mariana ('falar com a dona, não com SAC'). Cidades top 3 declaradas (Caxias do Sul, Alegrete, Passo Fundo) cobrem os 3 perfis culturais RS: gaúcho-italiano, fronteira, norte tradicionalista.",
+      "implication": "Identidade familiar é ativo emocional/social para Mariana — usar nos Reels de bastidores ('feito pela costureira-chefe + Loreni'). Não terceirizar a comunicação de identidade.",
+      "source": "briefing"
+    }
+  ],
+  "weaknesses": [
+    {
+      "title": "Motivo de perda #1 declarado é 'preço' — comunicação não traduz premium",
+      "description": "Loreni declarou no V4MOS que os clientes 'acharam caro' como motivo principal de perda. Combinado com 55,8% de cliques de Mariana na campanha Google + ausência de Reels de processo + LP sem bloco específico para consumidor final, o resultado é: Mariana compara Bombacha de Favo da Tapparo com varejo industrial e desiste.",
+      "implication": "Risco se não tratada: SOM B2C de R$ 2,8MM fica frustrado — Mariana migra para Regalo Campeiro (que tem volume + voz) ou para varejo industrial (que tem preço). Mitigação: Reels de processo + bloco LP B2C + reorientação Google Ads são quick wins de 30-45 dias.",
+      "severity": "critical",
+      "source": "v4mos"
+    },
+    {
+      "title": "CRM em 5/100 — 725 cliques/trimestre caem no WhatsApp pessoal sem pipeline",
+      "description": "Zero CRM, carteira não digitalizada, leads do WA sem etiqueta de origem por keyword/campanha, sem pipeline por persona, sem follow-up estruturado. Com persona dupla aprovada, o problema escala: Mariana B2C (ciclo curto) e Diego B2B (ciclo longo) caem na mesma fila pessoal da Loreni.",
+      "implication": "Risco amplificado: a melhor reestruturação possível da Search continuará entregando leads sem segmentação por persona. Mitigação obrigatória: CRM mínimo com pipeline DUPLO (B2C e B2B) — apontamento da SWOT v2.",
+      "severity": "critical",
+      "source": "diagnostico"
+    },
+    {
+      "title": "Concentração extrema: 99% da receita em 1 representante físico B2B",
+      "description": "1 único representante terceirizado atende lojistas envelhecendo (janela demográfica 5-6 anos declarada por Loreni). Faturamento R$ 1,27M/ano + 63 clientes ativos + 21 vendas/mês — todos concentrados no canal físico B2B.",
+      "implication": "Mitigação dupla: (a) digitalizar carteira atual via CRM antes do representante sair; (b) construir frente B2C (Mariana) que diversifique canais. A SWOT inteira gira em torno dessa transição — não é gap operacional, é transição de modelo.",
+      "severity": "critical",
+      "source": "briefing"
+    },
+    {
+      "title": "Estrutura Google Ads B2C generalista sem persona Mariana específica",
+      "description": "Campanha 'ALLURE - Bombachas - Search' tem 1 único grupo, 23 keywords todas em match Ampla, 0 keywords específicas de Mariana ('bombacha para semana farroupilha', 'bombacha autêntica', 'bombacha de favo feminina' fora dos lances). 55,8% dos cliques são femininos — captura Mariana por acaso, não por intenção.",
+      "implication": "Risco se não tratada: verba se dilui em keywords genéricas. Mitigação: apontamento para agência de Passo Fundo segmentar Search em 'B2C Mariana' (principal) + 'B2B Diego' (secundário) com match Frase/Exata e Bombacha de Favo em grupo dedicado.",
+      "severity": "high",
+      "source": "v4mos"
+    },
+    {
+      "title": "Sem produção de Reels de processo + sem identidade visual codificada + Meta zerado",
+      "description": "Não há Reels semanais de bastidores do trançado manual — o ativo visual mais defensável da marca está sub-utilizado. Sem manual de marca, paleta, tipografia. Meta Ads nunca foi usado (zero Business Manager, zero pixel, zero histórico). Concorrente digital direto (Regalo Campeiro) tem 26K seguidores e cadência editorial consistente (449 posts).",
+      "implication": "Risco se não tratada: Regalo Campeiro ou outro player ocupa a narrativa visual primeiro. Mitigação: começar Reels semanais AGORA (custo zero, basta câmera de celular + autorização da costureira-chefe). Identidade visual codificada vem na S3.",
+      "severity": "high",
+      "source": "diagnostico"
+    },
+    {
+      "title": "Sem time interno de marketing + contrato V4 pontual + agência terceira",
+      "description": "Contrato Estruturação V4 é pontual (R$ 12.364). Tapparo declarou no V4MOS 'não temos equipe de marketing'. Operação Google é da agência de Passo Fundo. Após semana 5 da V4, qualquer otimização contínua depende de terceiros sem alinhamento garantido.",
+      "implication": "Risco se não tratada: apontamentos viram gaveta. Mitigação: cadência V4MOS 30/60/90 dias pós-contrato (custo V4 baixo, valor de cobrança alto).",
+      "severity": "medium",
+      "source": "briefing"
+    }
+  ],
+  "opportunities": [
+    {
+      "title": "Ocupar narrativa de 'Bombacha de Favo artesanal narrada' antes que outro player faça",
+      "description": "Janela estimada de 12-18 meses. Regalo Campeiro (26K seguidores) tem alcance mas é distribuidor — sem processo próprio para narrar. La Fronteira/La Parceria são boutiques de revenda. Bombachas Gaúcho/Pampa Sul são fábricas B2B sem narrativa visual. Tapparo é a única que JÁ TEM o ativo e que pode narrar.",
+      "implication": "Como capturar: Reels semanais de bastidores (operador V4 + Loreni produzem em conjunto) + bloco 'Como nasce a Bombacha de Favo' na LP + grupo Search dedicado à keyword 'bombacha de favo' em Exata + autorização de UGC de Marianas reais usando.",
+      "time_sensitivity": "urgent",
+      "source": "market_trend"
+    },
+    {
+      "title": "Mato Grosso digital virgem para Mariana B2C migrada",
+      "description": "MT é prioridade declarada de expansão. Tem comunidade gaúcha migrada com CTGs/invernadas ativos (MTG-MT confirmado), sem representante físico da Tapparo. Mariana de Cuiabá/Sinop/Rondonópolis compra de fábricas distantes via internet — espaço aberto.",
+      "implication": "Como capturar: abrir Meta Business Manager + Pixel + campanha geo-localizada em MT (Cuiabá, Sinop, Rondonópolis) com Reels da Bombacha de Favo. Alimentar lookalike do pixel Google de 3 meses já formado. Lançamento até final de jul-2026.",
+      "time_sensitivity": "urgent",
+      "source": "briefing"
+    },
+    {
+      "title": "Janela demográfica de 5-6 anos para captar próxima geração tradicionalista",
+      "description": "Base atual de lojistas (Diego) tem janela demográfica 5-6 anos. A geração que vai sucedê-los é Mariana (consumidora final urbanizada) + Diego jovem (lojista 30-45 que herda pilcharia). Ambos compram digitalmente.",
+      "implication": "Como capturar: estratégia dupla com 2-3 anos de antecedência. Mariana via Google + Instagram + Meta. Diego jovem via Search B2B reestruturada + LP B2B + GMB otimizado para 'fábrica de bombacha [cidade]'.",
+      "time_sensitivity": "medium_term",
+      "source": "briefing"
+    },
+    {
+      "title": "Pré-pico farroupilha (jul-set) com CPC ainda baixo + dados V4MOS confirmando demanda",
+      "description": "Maio-junho tem CPC ~R$ 1,80-3,24 nas keywords principais. Quando o pico chega, CPM sobe e concorrência aumenta. Tapparo tem 30-60 dias para reestruturar Search + adicionar bloco Mariana na LP + começar Reels antes do pico.",
+      "implication": "Como capturar: agência implementa apontamentos da SWOT até final de junho. Operador V4 + Loreni executam quick wins (LP + WA Business + Reels) em paralelo. Em julho, entra no pico com estrutura calibrada + 30-45 dias de learning.",
+      "time_sensitivity": "urgent",
+      "source": "v4mos"
+    },
+    {
+      "title": "Indumentária gaúcha urbanizada como tendência (Jornal do Comércio 2025)",
+      "description": "Mercado tradicionalista cresceu 25% na Expointer 2025 + tendência urbana fora do contexto tradicionalista clássico. Cria pool ampliado de Marianas potenciais — desde que comunicação não vire 'fashion sem identidade' (anti-persona).",
+      "implication": "Como capturar: posicionar Bombacha de Favo como 'autenticidade que vira moda', não 'moda que vira tradição'. Mensagem-chave emocional aprovada na persona-icp v2 ('A bombacha que respeita a tradição: feita à mão, no caimento que você quer') captura essa nuance.",
+      "time_sensitivity": "medium_term",
+      "source": "market_trend"
+    },
+    {
+      "title": "V4MOS conectado libera observabilidade contínua pós-contrato + GMB já ativo permite otimização rápida",
+      "description": "Workspace V4MOS (5b3a7a61) conectado com credenciais ativas para Google Ads — permite à V4 fazer revisões pontuais 30/60/90d sem pedir acesso. GMB já ativo (declarado no V4MOS) precisa apenas de otimização (não criação do zero).",
+      "implication": "Como capturar: combinar cadência V4MOS 30/60/90d pós-contrato. Otimizar GMB existente em 1-2h (fotos, descrição alinhada à persona Mariana, posts semanais). Custo zero, ganho de SEO local + confiança.",
+      "time_sensitivity": "long_term",
+      "source": "diagnostico"
+    }
+  ],
+  "threats": [
+    {
+      "description": "Regalo Campeiro (@regalocampeiro 26K seguidores, 449 posts) tem alcance digital + cadência editorial consistente + posicionamento de 'distribuidor mais completo do RS'. Se começar a narrar processo artesanal (mesmo via parceiros), captura Mariana e fecha a janela.",
+      "implication": "Como mitigar: Tapparo precisa começar Reels de processo IMEDIATAMENTE (custo zero, semana 1) + ocupar keyword 'bombacha de favo' nos lances (apontamento agência) + bloco LP Mariana (operador V4). Velocidade > perfeição.",
+      "probability": "medium",
+      "impact": "high",
+      "source": "v4mos",
+      "title": "Regalo Campeiro ocupa narrativa de 'Bombacha de Favo autêntica' antes da Tapparo — janela 12-18 meses"
+    },
+    {
+      "description": "Representante terceirizado atende lojistas envelhecendo (janela 5-6 anos). Se ele sair (aposentadoria, saúde, mudança), a carteira sai com ele — não há CRM digitalizado para conter vazamento.",
+      "implication": "Como mitigar: digitalizar carteira via CRM (apontamento da SWOT v2). Construir Mariana B2C como diversificação de canal — não substituição, mas redução de dependência. Sem isso, cenário de saída do representante = perda da carteira inteira.",
+      "probability": "medium",
+      "impact": "high",
+      "source": "briefing",
+      "title": "Risco existencial de 1 representante físico B2B (99% receita atual)"
+    },
+    {
+      "description": "Pico farroupilha + Expointer puxam o faturamento. Fora desse pico, faturamento médio R$ 97k/mês (declarado V4MOS) exige caixa para entressafra. Mariana tem mesma sazonalidade ampliada por antecipação.",
+      "implication": "Como mitigar: Bombacha de Favo premium sustenta margem ano todo. Dezembro (festas/presentes) e linha infantil (não-sazonal) diluem dependência do pico.",
+      "probability": "high",
+      "impact": "medium",
+      "source": "briefing",
+      "title": "Sazonalidade severa concentra 65-75% do faturamento em jul-set"
+    },
+    {
+      "description": "Mariana compara Bombacha de Favo da Tapparo com varejo industrial (Renner, marketplaces) sem entender a diferença técnica. Concorrente Regalo Campeiro disputa preço por volume.",
+      "implication": "Como mitigar: Reels de processo + bloco LP Mariana + reorientação Search atacam essa ameaça simultaneamente. Sem isso, ticket médio R$ 100 declarado se torna teto em vez de média.",
+      "probability": "high",
+      "impact": "high",
+      "source": "v4mos",
+      "title": "Motivo de perda #1 declarado é 'preço' — sem reposicionamento, erosão contínua de margem"
+    },
+    {
+      "description": "Apontamentos da SWOT chegam à Loreni e são repassados à agência. Implementação parcial é cenário comum. Sem cadência de cobrança V4MOS pós-contrato, ROI da Estruturação fica frustrado.",
+      "implication": "Como mitigar: combinar cadência V4MOS 30/60/90d com Loreni na apresentação final. Entregar apontamentos com prazo sugerido E métrica observável (V4MOS).",
+      "probability": "medium",
+      "impact": "high",
+      "source": "v4mos",
+      "title": "Agência de Passo Fundo (operadora atual) fora do controle direto da V4 — risco de implementação parcial"
+    },
+    {
+      "description": "O argumento '15 peças mínimas' é o mais imitável da Tapparo no B2B. Fábricas grandes consolidadas podem reduzir mínimo se decidirem entrar nesse segmento.",
+      "implication": "Como mitigar: ocupar o argumento primeiro + construir prova social com Diego (lojistas parceiros) antes da janela fechar. Bombacha de Favo artesanal é o argumento defensável de longo prazo — '15 peças' é tático, 'favo' é estratégico.",
+      "probability": "medium",
+      "impact": "medium",
+      "source": "market_trend",
+      "title": "Concorrência B2B (Bombachas Gaúcho, Pampa Sul) pode reduzir pedido mínimo nos próximos 12-18 meses"
+    }
+  ],
+  "strategic_synthesis": {
+    "leverage": "A aposta principal Forças × Oportunidades agora tem peso B2C: usar a Bombacha de Favo artesanal (F1, ativo defensável) + LP B2B segmentada (F3) + Google Ads validado para Mariana (F2) + pixel formado (F5) para preparar a operação digital até o pré-pico farroupilha (O4, jul-set). Movimento concreto: bloco 'Para você que quer sua própria pilcha' na LP (Mariana) + Reels semanais de processo (operador V4 + Loreni) + reorientação Search para Mariana com Bombacha de Favo nos lances (apontamento à agência) + Meta Ads para MT com lookalike do pixel Google. Quem ocupar a narrativa de 'Bombacha de Favo artesanal narrada' nesta janela maio-julho ganha 12-18 meses de vantagem antes que Regalo Campeiro ou outro player narre primeiro.",
+    "protection": "A combinação Fraquezas × Ameaças mais perigosa muda na v2: motivo de perda #1 declarado é 'preço' (W1) + ausência de narrativa de processo (W5) + Regalo Campeiro dominando narrativa digital (T1) = Mariana migra para concorrente que sabe falar (mesmo sem ter o produto). Sem Reels + bloco LP + reorientação de comunicação, 70% do SOM B2C (R$ 2,8MM) fica frustrado. Mantém-se também risco existencial B2B: CRM 5/100 (W2) + 99% receita em 1 representante envelhecendo (T2) = continuidade do negócio em risco. Peça de proteção: CRM mínimo com pipeline DUPLO + cadência V4MOS 30/60/90d pós-contrato.",
+    "recommended_strategy": "Plano 90 dias com pré-pico farroupilha forçando ritmo. Mês 1 (jun): operador V4 + Loreni executam quick wins INDEPENDENTES da agência — adicionar bloco LP Mariana, corrigir erro 'cole o link aqui', otimizar GMB (já ativo), migrar para WhatsApp Business com filtro por persona, começar Reels semanais de processo. Mês 2 (jul): apontamentos para agência implementarem — segmentar Search por persona (Mariana principal + Diego secundário), Bombacha de Favo nos lances, GA4 + UTM dinâmica. CRM mínimo entra em paralelo (Kommo free + pipeline duplo). Mês 3 (ago): pico farroupilha em curso, Meta Ads para MT com lookalike do pixel Google, Reels acumulam audiência, revisão V4MOS para ajustar lances. Apresentação final V4 (semana 5) fecha com: (a) lista de 8 apontamentos priorizados com prazo + métrica V4MOS; (b) cadência 30/60/90d pós-contrato; (c) decisão sobre oferta de recorrência se Loreni quiser."
+  },
+  "priority_actions": [
+    {
+      "action": "Adicionar bloco 'Para você que quer sua própria pilcha' (Mariana B2C) na LP — corrige vazamento crítico identificado na persona-icp v2 (Mariana chega via Google Ads e não se vê na LP B2B segmentada). Bloco com mensagem-chave emocional aprovada + foto da Bombacha de Favo + CTA WhatsApp específico que joga em fluxo de saudação personalizado.",
+      "swot_basis": "Mitiga W1 (motivo de perda #1 'preço' — bloco explica o premium) + W4 (estrutura B2C genérica). Captura O1 (narrativa favo) + O4 (pré-pico). Executa SO1 (estratégia ofensiva principal).",
+      "impact": "high",
+      "suggested_timeline": "semana 1",
+      "dependencies": [
+        "Acesso operador V4 ao WordPress (Loreni libera)"
+      ],
+      "financial_impact": {
+        "investment": 0,
+        "monthly_return_brl": 3000,
+        "payback_days": 15,
+        "roi_multiple": null,
+        "note": "Investimento técnico zero (operador V4 monta em Elementor). Retorno via conversão de Mariana que hoje sai da LP sem ver oferta dela — estimativa de +5-10 conversões qualificadas/mês × ticket médio R$ 100-300 (mix de favo + popular)."
+      },
+      "risk_adjusted_score": {
+        "impact": 9,
+        "probability_of_success": 9,
+        "reversibility": 10,
+        "score": 9.3
+      }
+    },
+    {
+      "action": "Começar produção de Reels semanais de bastidores da Bombacha de Favo — trançado manual da costureira-chefe + Loreni narrando. Câmera de celular suficiente, 60-90 segundos por Reel, postar toda segunda-feira. Operador V4 (Gina) coordena com Loreni nos primeiros 4 Reels para padronizar estilo.",
+      "swot_basis": "Alavanca F1 (Bombacha de Favo artesanal) + F6 (identidade familiar). Captura O1 (ocupar narrativa antes da concorrência) + O5 (tendência urbana). Executa SO2.",
+      "impact": "high",
+      "suggested_timeline": "semana 1-2",
+      "dependencies": [
+        "Autorização da costureira-chefe para aparecer em vídeo",
+        "Operador V4 ajuda nos 4 primeiros Reels"
+      ],
+      "financial_impact": {
+        "investment": 0,
+        "monthly_return_brl": 2500,
+        "payback_days": 30,
+        "roi_multiple": null,
+        "note": "Custo zero (celular + autorização). Retorno via alcance orgânico + UGC + ataque ao motivo de perda 'preço' (vídeo de processo justifica premium). Estimativa conservadora: +500-2.000 alcance orgânico/Reel após 4-8 semanas de cadência."
+      },
+      "risk_adjusted_score": {
+        "impact": 9,
+        "probability_of_success": 7,
+        "reversibility": 10,
+        "score": 8.7
+      }
+    },
+    {
+      "action": "Apontar à agência de Passo Fundo: reestruturar Search em 'B2C Mariana' (principal — grupo Bombacha de Favo + grupo Linha completa) + 'B2B Diego' (secundário — keywords atacado). Match Frase/Exata. Pausar broad genérico problemático ('bombacha feminino' sozinho — CPA R$ 27,40). Renomear grupo default 'Grupo de anúncios 1'. Prazo: até 2026-06-30.",
+      "swot_basis": "Mitiga W4 (estrutura genérica). Alavanca F2 (demanda validada). Captura O1 (narrativa Mariana) + O4 (pré-pico). Executa SO1 + SO2.",
+      "impact": "high",
+      "suggested_timeline": "semana 2",
+      "dependencies": [
+        "Priority #4 (atribuição funcionando)"
+      ],
+      "financial_impact": {
+        "investment": 0,
+        "monthly_return_brl": 2500,
+        "payback_days": 15,
+        "roi_multiple": 7.5,
+        "note": "Mesmo orçamento ~R$ 335/mês. Retorno esperado: dobrar conversões qualificadas (Mariana B2C + Diego B2B) com segmentação correta."
+      },
+      "risk_adjusted_score": {
+        "impact": 9,
+        "probability_of_success": 7,
+        "reversibility": 9,
+        "score": 8.3
+      }
+    },
+    {
+      "action": "Apontamento agência + operador V4: instalar GA4 via GTM-M7WTSW9C + UTM dinâmica {keyword}{campaignid}{adgroupid} no link wa.me. Mesmo deploy: corrigir erro 'cole o link aqui' no preload mobile.",
+      "swot_basis": "Mitiga W4 + viabiliza medição de Priority #3. Executa apontamento de plumbing.",
+      "impact": "high",
+      "suggested_timeline": "semana 1",
+      "dependencies": [
+        "Acesso admin ao GTM-M7WTSW9C e WordPress"
+      ],
+      "financial_impact": {
+        "investment": 0,
+        "monthly_return_brl": 1500,
+        "payback_days": 30,
+        "roi_multiple": null,
+        "note": "Custo zero (GTM pronto). Retorno via decisão informada — agência opera com atribuição por keyword e justifica otimizações."
+      },
+      "risk_adjusted_score": {
+        "impact": 8,
+        "probability_of_success": 9,
+        "reversibility": 10,
+        "score": 9.0
+      }
+    },
+    {
+      "action": "Migrar para WhatsApp Business e configurar saudação automatizada que filtra Mariana (B2C) vs Diego (B2B) vs anti-persona. Mensagem rápida para cada uma das 7 objeções da Objection Library. Catálogo do WA Business com 5-8 produtos.",
+      "swot_basis": "Mitiga W2 (CRM zero). Captura O6 (V4MOS para validação). Executa ST1.",
+      "impact": "high",
+      "suggested_timeline": "semana 1",
+      "dependencies": [],
+      "financial_impact": {
+        "investment": 0,
+        "monthly_return_brl": 2000,
+        "payback_days": 15,
+        "roi_multiple": null,
+        "note": "Custo zero. Retorno via filtro de anti-persona (libera tempo da Loreni) + tempo de resposta menor para Mariana cética + estrutura para futuro CRM."
+      },
+      "risk_adjusted_score": {
+        "impact": 8,
+        "probability_of_success": 9,
+        "reversibility": 10,
+        "score": 8.7
+      }
+    },
+    {
+      "action": "Estruturar CRM mínimo (Kommo free ou planilha) com pipeline DUPLO: B2C (Mariana — lead Instagram/Google → WA → PDV → recompra anual) e B2B (Diego — representante/LP → cotação → produção 35d → recompra trimestral). Digitalizar carteira atual do representante.",
+      "swot_basis": "Mitiga W2 + W3 (concentração). Mitiga T2 (representante envelhecendo). Executa ST1 + WT1.",
+      "impact": "high",
+      "suggested_timeline": "semana 2-3",
+      "dependencies": [
+        "Persona-icp v2 (pronta) define critérios de qualificação por persona"
+      ],
+      "financial_impact": {
+        "investment": 100,
+        "monthly_return_brl": 4000,
+        "payback_days": 45,
+        "roi_multiple": null,
+        "note": "Investimento ~R$ 0-100/mês (Kommo free + tempo Loreni). Retorno: 1-2 pedidos adicionais/mês via follow-up estruturado + redução do risco existencial. Fora do escopo contratado V4."
+      },
+      "risk_adjusted_score": {
+        "impact": 9,
+        "probability_of_success": 6,
+        "reversibility": 9,
+        "score": 7.7
+      }
+    },
+    {
+      "action": "Apontamento agência: abrir Meta Business Manager + Pixel + plano inicial focado em MT (Mariana B2C migrada). Lookalike alimentado pelo pixel Google de 3 meses. Reels da Bombacha de Favo como criativo. Lançamento até 2026-07-15.",
+      "swot_basis": "Alavanca F5 (pixel formado). Captura O2 (MT virgem). Mitiga T2 (diversifica canal). Executa SO3.",
+      "impact": "medium",
+      "suggested_timeline": "semana 4",
+      "dependencies": [
+        "Reels acumulados (Priority #2)",
+        "Identidade visual mínima (S3)"
+      ],
+      "financial_impact": {
+        "investment": 700,
+        "monthly_return_brl": 1800,
+        "payback_days": 60,
+        "roi_multiple": 2.6,
+        "note": "Investimento R$ 600-900/mês para teste em MT. Retorno: 30-50 conversões B2C/mês adicionais em 90d com base em CPM Meta + lookalike Google."
+      },
+      "risk_adjusted_score": {
+        "impact": 7,
+        "probability_of_success": 6,
+        "reversibility": 8,
+        "score": 7.0
+      }
+    },
+    {
+      "action": "Otimizar Google Meu Negócio (já ativo declarado pelo V4MOS): atualizar fotos (8-12 produtos + 5 fábrica), descrição alinhada à persona Mariana ('Bombacha de Favo artesanal direto da fábrica em Ciríaco/RS'), Google Posts semanais, solicitar 5-10 reviews de lojistas antigos (Diego) via representante.",
+      "swot_basis": "Alavanca F5 (GMB ativo). Captura O3 (janela demográfica). Executa SO de baixo custo.",
+      "impact": "medium",
+      "suggested_timeline": "semana 1",
+      "dependencies": [],
+      "financial_impact": {
+        "investment": 0,
+        "monthly_return_brl": 500,
+        "payback_days": 30,
+        "roi_multiple": null,
+        "note": "Custo zero. Retorno via SEO local ('fábrica bombacha em Ciríaco') + confiança institucional para Mariana e Diego."
+      },
+      "risk_adjusted_score": {
+        "impact": 6,
+        "probability_of_success": 10,
+        "reversibility": 10,
+        "score": 7.3
+      }
+    }
+  ],
+  "tows_matrix": {
+    "description": "Cruzamento das 4 dimensões SWOT v2 (persona dupla). SO=ofensiva (B2C Mariana principal), WO=reforço, ST=defesa, WT=sobrevivência.",
+    "so_strategies": [
+      {
+        "id": "SO1",
+        "strategy": "Ocupar narrativa de 'Bombacha de Favo artesanal narrada' antes que Regalo Campeiro ou outro player ocupe — Reels semanais de processo + bloco LP Mariana + Bombacha de Favo no centro do Search.",
+        "rationale": "Usa F1 (Bombacha de Favo artesanal) + F2 (Google Ads validado para Mariana) + F3 (LP segmentada pronta para Mariana adicionar) para capturar O1 (janela 12-18 meses).",
+        "expected_outcome": "30-50 conversões qualificadas/mês adicionais de Mariana em 60-90 dias antes do pico farroupilha jul-set. Posicionamento de Bombacha de Favo como categoria defensável."
+      },
+      {
+        "id": "SO2",
+        "strategy": "Reorientar Search por persona (Mariana B2C principal + Diego B2B secundário) durante janela pré-pico para entrar no pico com learning acumulado.",
+        "rationale": "Usa F2 (demanda validada) + F3 (LP B2B segmentada já pronta para Diego) para capturar O4 (pré-pico CPC baixo). 55,8% cliques femininos já são Mariana — falta intenção.",
+        "expected_outcome": "Mesmo orçamento R$ 335/mês entrega ~2x conversões qualificadas em 90 dias."
+      },
+      {
+        "id": "SO3",
+        "strategy": "Abrir Meta Ads para MT com lookalike do pixel Google + Reels da Bombacha de Favo — capturar Mariana B2C migrada antes da concorrência regional digitalizar.",
+        "rationale": "Usa F5 (pixel formado) + F3 (LP) para capturar O2 (MT virgem) + O5 (tendência urbana).",
+        "expected_outcome": "30-50 conversões B2C/mês de MT em 90 dias com investimento R$ 600-900/mês — diversifica canal único atual."
+      }
+    ],
+    "wo_strategies": [
+      {
+        "id": "WO1",
+        "strategy": "Plumbing tracking (GA4 + UTM dinâmica) + WhatsApp Business com filtro por persona — instalar antes de qualquer reestruturação para que a agência opere com decisão informada.",
+        "rationale": "Elimina W4 (estrutura genérica) capturando O4 (pré-pico) + O6 (V4MOS validação). Sem atribuição + filtro, otimização vira opinião.",
+        "expected_outcome": "Agência consegue ler retorno por keyword e por persona. Loreni libera ~30% do tempo de WhatsApp consumido por anti-persona."
+      },
+      {
+        "id": "WO2",
+        "strategy": "Estruturar CRM mínimo com pipeline DUPLO antes ou em paralelo à abertura do Meta — para que aumento de volume Mariana não amplifique vazamento atual.",
+        "rationale": "Elimina W2 (CRM zero) antes de capturar O2 (MT via Meta). Sem CRM, mais leads = mais perda.",
+        "expected_outcome": "Atribuição mantida, follow-up estruturado por persona, redução do risco existencial T2 simultaneamente."
+      },
+      {
+        "id": "WO3",
+        "strategy": "Reels semanais de processo + bloco LP Mariana — atacar o motivo de perda #1 (preço) com narrativa de valor antes de gastar mais em mídia.",
+        "rationale": "Elimina W1 (preço como objeção) capturando O1 (janela narrativa) + O5 (tendência urbana). Foco em conversão antes de captação.",
+        "expected_outcome": "Taxa de conversão WA → pedido fechado sobe 30-50% em 60 dias com mesmo tráfego."
+      }
+    ],
+    "st_strategies": [
+      {
+        "id": "ST1",
+        "strategy": "Digitalizar carteira atual do representante via CRM mínimo antes da eventual saída dele — Diego B2B continua atendido pelo canal físico mas a relação fica registrada.",
+        "rationale": "Usa F4 (modelo B2B sólido com 15 anos de relação) para mitigar T2 (risco do representante) + T3 (sazonalidade — base digitalizada permite reativação na entressafra).",
+        "expected_outcome": "Carteira da Tapparo deixa de ser ativo intransferível do representante. Continuidade B2B garantida em cenário de transição."
+      },
+      {
+        "id": "ST2",
+        "strategy": "Entregar apontamentos da SWOT à agência via Loreni com prazo + critério V4MOS + combinar cadência de revisão pós-contrato.",
+        "rationale": "Usa F3 (LP B2B já segmentada como base) + F5 (V4MOS conectado) para mitigar T5 (operador terceiro fora do controle direto) + T6 (contrato V4 pontual).",
+        "expected_outcome": "Agência fica com prazo e métrica de cobrança. Loreni tem mecanismo de validação — reduz risco WT1."
+      },
+      {
+        "id": "ST3",
+        "strategy": "Usar margem da Bombacha de Favo artesanal para sustentar caixa na entressafra — produto premium ano todo, não só pico.",
+        "rationale": "Usa F1 (carro-chefe premium) para mitigar T3 (sazonalidade).",
+        "expected_outcome": "Faturamento médio sai da altíssima dependência do pico farroupilha. Bombacha de Favo vira motor de margem ano todo."
+      }
+    ],
+    "wt_strategies": [
+      {
+        "id": "WT1",
+        "strategy": "Pré-combinar cadência V4MOS 30/60/90d pós-contrato V4 — mecanismo de validação de implementação dos apontamentos pela agência operadora.",
+        "rationale": "Mitiga W6 (sem time interno) + T5 (operador terceiro) + T6 (contrato V4 pontual). Pior cenário evitado: apontamentos viram gaveta.",
+        "expected_outcome": "Implementação dos 8 apontamentos vira acompanhada e verificável. ROI da Estruturação V4 protegido."
+      },
+      {
+        "id": "WT2",
+        "strategy": "Documentar tudo no portal V4 + base de conhecimento para que Loreni cobre agência com base em material V4, não em opinião.",
+        "rationale": "Mitiga W6 (sem time interno) + T5 (operador terceiro). Loreni não tem repertório técnico para discutir leilão — precisa de material de apoio.",
+        "expected_outcome": "Loreni consegue cobrar implementação com base em documento técnico. Reduz dependência cognitiva."
+      }
+    ]
+  },
+  "key_insight": {
+    "headline": "O motivo de perda #1 declarado pela Loreni não é preço — é tradução de valor. Mariana paga premium se entender o porquê do favo manual.",
+    "context": "A Loreni declarou no V4MOS que 'preço' é o motivo principal de perda de venda. Em paralelo, declarou Mariana Tradicionalista como ICP desejado. A campanha Google captura 55,8% mulheres (Mariana real). A Bombacha de Favo artesanal existe e é defensável. Mas a comunicação não conecta o premium ao processo — Reels semanais de bastidores não existem, bloco LP para Mariana não existe, copy do Google Ads não narra favo. Mariana compara com Renner e desiste. Não é problema de produto, é problema de narrativa de valor — janela 12-18 meses antes que Regalo Campeiro (26K seguidores) ocupe.",
+    "numbered_reasons": [
+      "(1) Motivo de perda #1 declarado (preço) + persona-alvo declarada (Mariana B2C consumidor final) + ativo defensável real (Bombacha de Favo artesanal) = problema de POSICIONAMENTO. A solução é narrar processo, não baixar preço.",
+      "(2) Regalo Campeiro tem 26K seguidores no Instagram e domina visual do nicho — mas é distribuidor sem processo próprio. Tapparo tem o processo e a fábrica, falta narrar. Quem ocupar primeiro a narrativa de 'Bombacha de Favo manual' fica 12-18 meses na frente.",
+      "(3) LP atual segmenta 3 públicos B2B mas não tem bloco para Mariana B2C. Ela chega via Google Ads, não se vê, sai. Quick win operador V4 + Loreni de 1-2h: bloco 'Para você que quer sua própria pilcha' — destrava vazamento crítico antes da agência tocar em qualquer coisa."
+    ],
+    "discussion_anchor": "A Loreni e Everton precisam decidir 2 coisas na próxima call: (a) confirmar oficialmente a estratégia dupla (Mariana B2C digital principal + Diego B2B físico secundário); (b) aprovar produção dos primeiros 4 Reels de bastidores da Bombacha de Favo (operador V4 + Loreni coordenam em 2 semanas) — é o argumento de venda que ataca o motivo de perda #1 e diferencia de Regalo Campeiro. Os 2 movimentos não dependem da agência operadora — podem começar imediatamente."
+  },
+  "honesty_alert": "Esta SWOT v2 reflete a estratégia dupla aprovada após o formulário V4MOS — mas pivot só funciona se executado com velocidade. Janela de 12-18 meses para ocupar narrativa de 'Bombacha de Favo artesanal' antes que Regalo Campeiro (26K seguidores) ou outro player faça é tese baseada em pesquisa pública + intuição estratégica, não em dados empíricos. Cenário de risco: a Loreni recebe a SWOT, repassa apontamentos à agência, mas a produção de Reels semanais (custo zero, executor interno) atrasa por falta de tempo da Loreni — e em 6 meses Regalo Campeiro percebe a abertura e narra processo de algum parceiro. Resultado: SOM B2C de R$ 2,8MM fica frustrado e a Tapparo retorna ao patamar pré-Estruturação. Mitigação: na apresentação final, fechar com Loreni um cronograma de 4 Reels semanais nas primeiras 4 semanas — operador V4 ajuda na produção dos 4 primeiros, garantindo que a cadência comece e ganhe inércia. A diferença entre executar e não executar é literalmente toda a SWOT."
+}

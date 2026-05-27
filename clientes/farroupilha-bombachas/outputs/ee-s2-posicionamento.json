@@ -1,0 +1,245 @@
+{
+  "client_name": "Bombachas Farroupilha",
+  "skill": "ee-s2-posicionamento",
+  "version": 1,
+  "generated_at": "2026-05-25T00:00:00Z",
+  "data_source": "persona_icp_v2+pesquisa_mercado_v2+swot_v2+briefing+formulario_v4mos",
+  "summary": "Posicionamento aprovado: Bombachas Farroupilha ocupa o território 'Artesanal. Autêntico. Direto.' — vago no mapa competitivo. PUV: 'a única fábrica especialista em Bombacha de Favo artesanal trançada à mão, entrega pilcha autêntica em 35 dias para mulheres tradicionalistas (Mariana) e lojistas regionais (Diego) que recusam cópia industrial'. Tagline recomendada: 'Feita à mão. Direto da fábrica.' Janela estimada de 12-18 meses para ocupar antes que Regalo Campeiro (26K Instagram) narre processo de parceiro como diferencial.",
+  "summary_headline": "Território 'Artesanal. Autêntico. Direto.' vago no mapa — janela 12-18 meses para a Tapparo ocupar antes que Regalo Campeiro (26K) narre processo de parceiro.",
+  "summary_highlights": [
+    {
+      "category": "posicao",
+      "label": "Território",
+      "value": "Artesanal. Autêntico. Direto.",
+      "subtext": "3 palavras que sustentam comunicação por canal e persona",
+      "tone": "blue"
+    },
+    {
+      "category": "competicao",
+      "label": "Território Regalo Campeiro",
+      "value": "Variedade. Volume.",
+      "subtext": "Distribuidor multimarca — sem processo próprio para narrar",
+      "tone": "yellow"
+    },
+    {
+      "category": "janela",
+      "label": "Janela narrativa",
+      "value": "12-18 meses",
+      "subtext": "Antes que Regalo ou outro player ocupe processo artesanal",
+      "tone": "yellow"
+    },
+    {
+      "category": "oportunidade",
+      "label": "ICP duplo + SOM",
+      "value": "R$ 4MM",
+      "subtext": "70% via Mariana (B2C novo) + 30% via Diego (B2B base)",
+      "tone": "green"
+    },
+    {
+      "category": "oportunidade",
+      "label": "Tagline recomendada",
+      "value": "6 palavras",
+      "subtext": "'Feita à mão. Direto da fábrica.' — multicanal",
+      "tone": "green"
+    },
+    {
+      "category": "risco",
+      "label": "Posicionamento aspiracional",
+      "value": "Sem cadência",
+      "subtext": "Sem Reels semanais nas primeiras 4 semanas, território fica como promessa",
+      "tone": "red"
+    }
+  ],
+  "summary_key_findings": [
+    {
+      "category": "vantagem",
+      "text": "O território 'Artesanal. Autêntico. Direto.' combina os 3 ativos defensáveis e REAIS da Tapparo: (1) Bombacha de Favo trançada à mão pela costureira-chefe — não escala para fábricas grandes; (2) Fábrica direta sem intermediário — não pode ser oferecido por distribuidores (Regalo Campeiro, La Fronteira, La Parceria); (3) Prazo de 35 dias cumprido — operação ágil que fábricas grandes não conseguem prometer. A combinação dos 3 é única no mercado mapeado."
+    },
+    {
+      "category": "contexto",
+      "text": "PUV ataca diretamente o motivo de perda #1 declarado pela Loreni no V4MOS ('preço — acharam caro'). A narrativa não baixa preço — eleva valor percebido com narrativa de processo (Reels de bastidores + bloco 'Como nasce a Bombacha de Favo' na LP + grupo Search dedicado à keyword 'bombacha de favo'). Mariana paga premium quando entende; Diego paga premium quando vê prazo cumprido."
+    },
+    {
+      "category": "ameaca",
+      "text": "Regalo Campeiro tem 26K seguidores no Instagram e cadência editorial consistente (449 posts) — alcance digital que a Tapparo não tem. Se decidir narrar processo de algum parceiro fabricante nos próximos 12-18 meses, ocupa o território com alcance maior. Janela é curta e exige cadência de produção de Reels já nas primeiras 4 semanas."
+    },
+    {
+      "category": "acao",
+      "text": "Operador V4 + Loreni produzem os 4 primeiros Reels da costureira-chefe nas próximas 2-4 semanas — depois disso, Loreni precisa internalizar a cadência ou o território volta para aspiracional. Em paralelo: bloco 'Para você que quer sua própria pilcha' na LP (Mariana) + apontamento agência para grupo Search 'bombacha de favo' em Exata. Os 3 movimentos juntos constroem a ocupação do território."
+    },
+    {
+      "category": "contexto",
+      "text": "Mensagens por persona: Mariana (B2C principal) ouve a mensagem-chave emocional ('A bombacha que respeita a tradição: feita à mão, no caimento que você quer.') em Reels, anúncios e bloco LP B2C. Diego (B2B secundário) mantém a funcional ('Bombacha de Favo direto da fábrica, em 35 dias, a partir de 15 peças.') em LP B2B, e-mail do representante e Search B2B. Tagline única 'Feita à mão. Direto da fábrica.' funciona como assinatura para ambos."
+    }
+  ],
+  "positioning_map": {
+    "axis_x": "Generalista (catálogo amplo / sem produto-âncora) ↔ Especialista (Bombacha de Favo / processo artesanal narrado)",
+    "axis_y": "Distribuidor / Revenda (intermediário) ↔ Fábrica Direta (controla produção)",
+    "client_position": "Especialista + Fábrica Direta (quadrante VAZIO no mapa atual)",
+    "justification": "Nenhum dos 5 concorrentes mapeados (Regalo Campeiro, La Fronteira, La Parceria, Bombachas Gaúcho, Pampa Sul) ocupa o quadrante 'Especialista + Fábrica Direta'. Distribuidores não controlam produção; fábricas grandes não especializam em favo manual. A Tapparo é a única que combina os 2 ativos — é o quadrante natural e defensável.",
+    "competitor_positions": [
+      {
+        "name": "Regalo Campeiro",
+        "quadrant": "Generalista + Distribuidor (26K Instagram, 'distribuidor mais completo do RS')"
+      },
+      {
+        "name": "La Fronteira",
+        "quadrant": "Generalista + Distribuidor (boutique regional de revenda)"
+      },
+      {
+        "name": "La Parceria",
+        "quadrant": "Generalista + Distribuidor [a confirmar grafia]"
+      },
+      {
+        "name": "Bombachas Gaúcho",
+        "quadrant": "Generalista + Fábrica Direta (B2B nacional consolidada, sem narrativa de processo)"
+      },
+      {
+        "name": "Bombachas Pampa Sul",
+        "quadrant": "Generalista + Fábrica Híbrida (B2C+B2B no mesmo canal, sem ângulo de especialização)"
+      },
+      {
+        "name": "Bombachas Farroupilha",
+        "quadrant": "Especialista + Fábrica Direta (POSIÇÃO RECOMENDADA — quadrante VAZIO)"
+      }
+    ]
+  },
+  "positioning_statements": [
+    {
+      "label": "A Especialista em Favo (RECOMENDADA)",
+      "statement": "Para mulheres tradicionalistas (Mariana) e lojistas de pilcharia (Diego) que valorizam autenticidade e recusam cópia industrial, Bombachas Farroupilha é a fábrica especialista em Bombacha de Favo artesanal trançada à mão que entrega o caimento certo no prazo combinado, porque cada peça nasce do trabalho técnico-manual da nossa costureira-chefe — direto da fábrica, sem intermediário.",
+      "justification": "Combina os 3 ativos defensáveis (favo manual + fábrica direta + prazo cumprido) com os 2 ICPs (Mariana B2C principal + Diego B2B secundário). Ataca diretamente o motivo de perda #1 ('preço') com narrativa de processo, não com desconto. Ocupa o quadrante vazio do mapa competitivo. Funciona em todos os canais (Reels, LP, Search, GMB, WA Business).",
+      "bet": "Especialização técnica + autenticidade artesanal verificável (Reels + bloco LP + grupo Search dedicado). Construir narrativa de processo como argumento que justifica premium.",
+      "risk": "Comunicar 'só favo' pode limitar venda de linhas populares (que representam volume B2B Diego). Mitigação: Bombacha de Favo é produto-âncora (premium) e linha popular é entrada (mid-market) — coexistem no portfólio sem competir."
+    },
+    {
+      "label": "A Pilcha Direta da Fábrica",
+      "statement": "Para gaúchas tradicionalistas e lojistas regionais, Bombachas Farroupilha é a fábrica que entrega pilcha autêntica em 35 dias, com pedido a partir de 15 peças, porque produzimos com nossa equipe sem terceirizar e atendemos direto, sem amarrar capital nem prometer prazo que não cumprimos.",
+      "justification": "Mais funcional, menos emocional. Ataca preço com argumento operacional (35d + 15 peças). Funciona bem para Diego B2B mas é menos potente para Mariana B2C (que decide por aspiração + autenticidade, não por capital de giro).",
+      "bet": "Operação ágil + relação direta como argumentos centrais. Apela à racionalidade do comprador.",
+      "risk": "Argumento operacional (15 peças, 35 dias) é IMITÁVEL pela concorrência B2B — Bombachas Gaúcho ou Pampa Sul podem reduzir mínimo se decidirem. Sem o ângulo do favo artesanal, posicionamento fica vulnerável."
+    },
+    {
+      "label": "A Tradição que Cabe na Sua Vida",
+      "statement": "Para mulheres tradicionalistas urbanizadas que querem viver a cultura gaúcha no dia a dia, Bombachas Farroupilha é a marca que oferece pilchas autênticas que respeitam a tradição e se adaptam ao uso contemporâneo, porque combinamos acabamento artesanal de favo com modelagem que serve em evento ou no urbano.",
+      "justification": "Aposta na tendência declarada pelo Jornal do Comércio 2025 ('indumentária gaúcha virou tendência urbana'). Pode ampliar pool de Marianas para além das tradicionalistas de longa data.",
+      "bet": "Tendência urbana + adaptabilidade. Foca em ampliar audiência.",
+      "risk": "Convida a anti-persona 'Curioso fashion sem identidade tradicionalista' (definida na persona-icp v2). Risco de erosão de autenticidade da marca para Mariana real ('isso virou trend? Não quero ser confundida'). Não recomendada como direção principal."
+    }
+  ],
+  "chosen_statement": "Para mulheres tradicionalistas (Mariana) e lojistas de pilcharia (Diego) que valorizam autenticidade e recusam cópia industrial, Bombachas Farroupilha é a fábrica especialista em Bombacha de Favo artesanal trançada à mão que entrega o caimento certo no prazo combinado, porque cada peça nasce do trabalho técnico-manual da nossa costureira-chefe — direto da fábrica, sem intermediário.",
+  "puv": "Bombachas Farroupilha é a única fábrica especialista em Bombacha de Favo artesanal trançada à mão — entrega pilcha autêntica em 35 dias para mulheres tradicionalistas (você) e lojistas regionais (sua loja) que recusam cópia industrial.",
+  "canvas_4p": {
+    "product": {
+      "delivers": "Bombacha de Favo artesanal trançada à mão pela costureira-chefe (carro-chefe premium) + Bombacha tradicional popular (linha de entrada) + Kits Invernada B2B (CTGs/grupos) + Saia de prenda com regulagem (linha feminina complementar). Atendimento humano direto da Loreni com prazo de 35d cumprido. Linha completa do recém-nascido ao adulto. Origem: fábrica própria em Ciríaco/RS — sem intermediário.",
+      "transformation": "ANTES (Mariana): comprou pilcha em loja grande para a Semana Farroupilha, descobriu na primeira foto que era cópia mal feita — passou vergonha na frente de quem entende. ANTES (Diego): tem fornecedor B2B grande que atrasa, exige pedido de 50-100 peças e amarra capital de giro 4 meses antes do pico. DEPOIS (Mariana): usa peça reconhecida como autêntica pela tribo tradicionalista, posta foto com orgulho, vira referência discreta entre amigas, recompra no próximo pico. DEPOIS (Diego): fecha pedido de 15-25 peças, recebe em 35 dias garantidos, vende com margem premium da Bombacha de Favo, vira parceiro de longo prazo.",
+      "doesnt_deliver": "NÃO entrega expressa (35 dias é prazo mínimo de produção artesanal — não negociável). NÃO faz dropshipping para revendedor sem CNPJ comprovado (anti-persona 'Caçador de preço'). NÃO atende atacarejo grande com pedido superior a 150 peças (compromete capacidade artesanal e atrasa lojistas parceiros). NÃO produz para o público 'Curioso fashion' sem identidade tradicionalista (manter narrativa de autenticidade). NÃO atende pedido B2B inferior a 15 peças (mínimo é regra que sustenta a operação)."
+    },
+    "price": {
+      "positioning": "premium",
+      "justification": "Bombacha de Favo é precificada como premium artesanal (R$ 280-450/peça B2C, R$ 180-280 atacado B2B) — preço justificado pela narrativa de processo (Reels de bastidores + bloco LP). Linha popular fica em mid-market (R$ 90-150/peça B2C) e serve como entrada que abre relação para upsell no favo. NÃO competir por preço com varejo industrial (Renner, marketplaces) — competir por autenticidade verificável. Comunicação ataca motivo de perda 'preço' com tradução de valor, não com desconto.",
+      "anchoring": "Posicionar Bombacha de Favo como produto-âncora premium em toda comunicação (LP, Reels, anúncios). Linha popular aparece como secundária no portfólio, mas com qualidade que sustenta confiança. Estratégia de ancoragem: Reel de bastidores mostra trançado manual + 'cada Bombacha de Favo leva 4-6h só de acabamento' (ainda a confirmar com costureira-chefe). Premium não é arrogância — é trabalho mensurável."
+    },
+    "place": {
+      "main_channel": "DUPLO POR PERSONA — Mariana B2C: Google Ads (Search com grupo dedicado à Bombacha de Favo) + Instagram (Reels semanais + Stories + posts) + WhatsApp Business com saudação filtrada. Diego B2B: representante comercial físico + LP segmentada + WhatsApp + Google Ads B2B (grupo separado com keywords atacado).",
+      "main_channel_justification": "A hierarquia por persona já foi validada na persona-icp v2. Mariana decide por aspiração visual (Instagram) e intenção de busca (Google) — canais digitais. Diego decide por relação de longo prazo (representante físico) e LP B2B + Search B2B já existentes. Não diluir mensagem em canal único — cada persona tem ponto de entrada próprio.",
+      "support_channel": "GMB ativo otimizado (Mariana e Diego buscando 'fábrica de bombacha em Ciríaco') + Meta Ads em MT a abrir (Mariana B2C migrada) + e-mail para B2B (Diego). Facebook orgânico mantido mas sem investimento ativo. CRM mínimo Kommo com pipeline duplo.",
+      "avoid_channels": [
+        {
+          "channel": "TikTok orgânico/pago para audiência fashion sem identidade tradicionalista",
+          "reason": "Convida a anti-persona 'Curioso fashion' (definida na persona-icp v2). Posts virais de fashion sem contexto cultural diluem a narrativa de autenticidade e podem afastar Mariana real ('isso virou trend? Não quero ser confundida'). Considerar TikTok APENAS se for cluster específico de tradicionalismo, não fashion."
+        },
+        {
+          "channel": "Marketplaces (Mercado Livre, Shopee, Amazon)",
+          "reason": "Compromete posicionamento premium da Bombacha de Favo (concorre por preço com bombacha industrial) e comprime margem (taxa de marketplace + frete). Inadequado para fábrica direta como diferencial."
+        },
+        {
+          "channel": "Atacarejo grande / rede de lojas (>150 peças)",
+          "reason": "Volume incompatível com capacidade artesanal da fábrica. Margem comprimida mata o diferencial da Bombacha de Favo. Risco de cancelamento ou inadimplência derruba capital. Anti-persona definida na persona-icp v2 — não rejeitar diretamente, mas com regras rígidas (janela fora do pico + 50% sinal + sem branding customizado)."
+        },
+        {
+          "channel": "LinkedIn Ads para audiência B2B genérica",
+          "reason": "Audiência LinkedIn para o nicho tradicionalista é diluída. Diego decide por relação + reputação regional, não por outreach corporativo de LinkedIn. Investimento não tem retorno claro no contexto."
+        }
+      ]
+    },
+    "promotion": {
+      "tone": "Tradicional autêntico + direto + humano. Por persona — Mariana B2C: emocional acolhedor (orgulho cultural + segurança no caimento + autenticidade verificável). Diego B2B: funcional confiável (prazo + parceria + acabamento). Evitar: corporativês ('prezado cliente', 'colocamo-nos à disposição'), regionalismo caricato ('tchê tchê tri legal'), aspiracional vazio ('vista o orgulho de ser gaúcho'). Não terceirizar a comunicação para agência de copywriting genérica — Loreni mantém o tom da casa.",
+      "top_funnel_message": "Mariana (descoberta): 'Você sabe o que faz uma Bombacha de Favo ser de verdade?' (Reels de bastidores semanais — abertura). Alternativa: 'A bombacha que respeita a tradição: feita à mão, no caimento que você quer.' (anúncios + bio Instagram + bloco 'Para você que quer sua própria pilcha' na LP). Diego (descoberta): 'A fábrica que cumpre 35 dias real — sem atrasar seu pico farroupilha.' (Search B2B + e-mail representante).",
+      "bottom_funnel_message": "Mariana (conversão): 'Garanta sua Bombacha de Favo antes da Semana Farroupilha. Encomenda direto da fábrica, 35 dias, à vista R$ X.' (calendário + WA Business). Diego (conversão): 'Renove seu estoque com 15 peças e 35 dias garantidos — sem amarrar capital, sem atraso no pico.' (LP B2B + Search B2B + WA Business)."
+    }
+  },
+  "brand_territory": {
+    "three_words": ["Artesanal", "Autêntico", "Direto"],
+    "description": "A Bombachas Farroupilha ocupa o território da pilcha verdadeira feita à mão pela costureira-chefe + verificável por quem entende + entregue direto pela fábrica, sem intermediário, no prazo combinado. NÃO é fashion (não atende Curioso fashion). NÃO é boutique de revenda (La Fronteira, La Parceria). NÃO é distribuidor de catálogo (Regalo Campeiro). NÃO é fábrica B2B genérica (Bombachas Gaúcho). É a única que conjuga acabamento artesanal verificável + relação direta com a Loreni + prazo cumprido — território defensável porque os 3 ativos NÃO podem ser oferecidos juntos pela concorrência atual.",
+    "competitor_territories": [
+      {
+        "competitor": "Regalo Campeiro",
+        "territory": "Variedade. Volume. Catálogo. (distribuidor multimarca posicionado como 'mais completo do RS')"
+      },
+      {
+        "competitor": "La Fronteira (Boutique de Pilchas)",
+        "territory": "Boutique. Exclusivo. Diferenciado. (revenda regional premium, sem fabricação)"
+      },
+      {
+        "competitor": "La Parceria",
+        "territory": "Tradicional. Regional. [a confirmar identidade exata]"
+      },
+      {
+        "competitor": "Bombachas Gaúcho (Uruguaiana)",
+        "territory": "Tradição. Escala. Distribuição Nacional. (fábrica B2B consolidada 30+ anos, sem narrativa de processo)"
+      },
+      {
+        "competitor": "Bombachas Pampa Sul",
+        "territory": "Moda Gaúcha. Híbrido B2C+B2B. Catálogo. (fábrica híbrida sem ângulo de especialização)"
+      }
+    ],
+    "availability_justification": "O território 'Artesanal. Autêntico. Direto.' está vago porque (1) distribuidores (Regalo Campeiro, La Fronteira, La Parceria) NÃO controlam produção — não podem oferecer 'fábrica direta' nem narrar processo próprio com autenticidade; (2) fábricas grandes (Bombachas Gaúcho, Pampa Sul) operam com escala — favo manual não escala, então não viraria narrativa central da marca delas; (3) concorrentes consolidados têm marca de 'tradição genérica' já estabelecida — perderiam base se reposicionassem para 'um produto específico'. Só a Tapparo tem os 3 ativos REAIS (favo manual + fábrica direta + prazo de 35d cumprido) e identidade familiar da Loreni para ocupar com autenticidade. Janela de 12-18 meses antes que Regalo Campeiro (que tem alcance de 26K Instagram) ou outro player narre processo de algum parceiro fabricante."
+  },
+  "taglines": [
+    {
+      "tagline": "Feita à mão. Direto da fábrica.",
+      "tone": "Direto, funcional-emocional, compacto",
+      "justification": "6 palavras que sintetizam os 2 argumentos defensáveis: processo manual (favo) + canal direto (sem intermediário). Funciona como assinatura institucional em qualquer canal, bio do Instagram, headline do Search, descrição do GMB. Ataca implicitamente o motivo de perda 'preço' com narrativa de valor ('por isso vale o premium').",
+      "best_use": "RECOMENDADA. Assinatura institucional, bio do Instagram, headline do Search B2C, descrição do GMB, capa da LP, watermark de Reels."
+    },
+    {
+      "tagline": "A bombacha que respeita a tradição.",
+      "tone": "Emocional, reverente",
+      "justification": "Ataca o job social da Mariana ('ser vista como gaúcha de verdade') + ataca implicitamente 'cópia industrial não respeita a tradição'. 6 palavras. Tom mais aspiracional que a recomendada — funciona para campanha de marca, não para todas as comunicações.",
+      "best_use": "Campanha de marca + headline de Instagram Reels + capa de Story + comunicação institucional em datas comemorativas (Semana Farroupilha)."
+    },
+    {
+      "tagline": "Tradição que cabe no seu prazo.",
+      "tone": "Provocador, funcional+emocional",
+      "justification": "Junta argumento operacional (35d) com tradição. Faz mais sentido para Diego B2B (que decide por prazo) mas pode confundir Mariana B2C (que decide por aspiração, não por prazo). 6 palavras. Ambivalente.",
+      "best_use": "B2B: Search B2B atacado + e-mail do representante + comunicação interna de equipe comercial."
+    }
+  ],
+  "recommended_tagline": "Feita à mão. Direto da fábrica.",
+  "operator_direction": {
+    "strongest_differential": "Bombacha de Favo artesanal trançada à mão pela costureira-chefe — único ativo verdadeiramente defensável + verificável visualmente + impossível de copiar para fábrica grande (não escala). Confirmado pela Loreni no briefing e pela LP existente.",
+    "desired_position": "Especialista + Fábrica Direta — quadrante VAZIO no mapa competitivo. Defende-se porque conjuga 3 ativos REAIS (favo manual + fábrica direta + prazo cumprido) que NENHUM concorrente pode oferecer junto.",
+    "positioning_restrictions": [
+      "NÃO ser confundida com fashion sem identidade tradicionalista (anti-persona 'Curioso fashion')",
+      "NÃO competir por preço com varejo industrial (Renner, marketplaces) — competir por autenticidade",
+      "NÃO virar 'só boutique' nem 'só distribuidor de catálogo' — manter ângulo de fábrica especialista",
+      "NÃO usar regionalismo caricato ('tchê tchê tri legal') — Loreni mantém tom natural",
+      "NÃO terceirizar a comunicação visual para agência genérica — produção de Reels feita por Loreni + operador V4 com a costureira-chefe"
+    ],
+    "desired_tone": "Tradicional autêntico + direto + humano. Mariana ouve em tom emocional acolhedor; Diego ouve em tom funcional confiável. Loreni mantém o tom da casa em todas as comunicações — não delegar a copywriter externo nem permitir voz de SAC corporativo."
+  },
+  "key_insight": {
+    "headline": "O território 'Artesanal. Autêntico. Direto.' está vago no mapa — janela de 12-18 meses para a Tapparo ocupar antes que Regalo Campeiro (26K Instagram) ou outro player narre processo de parceiro como diferencial.",
+    "context": "Mapa de posicionamento revela que 5 concorrentes mapeados (Regalo Campeiro, La Fronteira, La Parceria, Bombachas Gaúcho, Pampa Sul) estão TODOS no eixo 'Generalista' — sem produto-âncora narrado. O quadrante 'Especialista + Fábrica Direta' está VAZIO. A Tapparo tem os 3 ativos REAIS para ocupá-lo (favo manual + fábrica direta + prazo cumprido), mas precisa construir a NARRATIVA visual (Reels semanais) nas primeiras 4 semanas. Sem cadência, o território fica como promessa.",
+    "numbered_reasons": [
+      "(1) Evidência de vago: pesquisa pública via WebSearch + formulário V4MOS preenchido pela Loreni não identificam nenhum concorrente comunicando 'Bombacha de Favo artesanal' como categoria. Keyword 'bombacha de favo' tem 7 impressões em 90d no Google Ads da Tapparo com CPC R$ 3,24 — terreno livre.",
+      "(2) O que fecha a janela: Regalo Campeiro tem cadência editorial consistente (449 posts no Instagram, 26K seguidores) — se decidir narrar processo de algum parceiro fabricante, ocupa o território com alcance MAIOR que a Tapparo. Estimativa: 12-18 meses até que isso aconteça naturalmente OU até que outro player B2B regional faça antes.",
+      "(3) O que a Tapparo ganha ao ocupar primeiro: SOM B2C de R$ 2,8MM (70% do SOM consolidado de R$ 4MM). Premium da Bombacha de Favo justificado por narrativa de processo (não por desconto). Diferenciação defensável a LONGO prazo porque processo manual NÃO escala para concorrentes grandes — a vantagem se mantém depois que outros tentarem copiar.",
+      "(4) Movimento concreto da semana: operador V4 (Gina) + Loreni produzem os 4 primeiros Reels da costureira-chefe trançando favo. Câmera de celular. 60-90 segundos cada. Postar segundas-feiras. Cadência de 4 semanas consecutivas estabelece o território como real — a partir daí, Loreni mantém ritmo."
+    ],
+    "discussion_anchor": "A Loreni precisa autorizar 3 movimentos esta semana: (a) produção dos 4 primeiros Reels com a costureira-chefe — operador V4 ajuda na primeira leva, depois Loreni internaliza; (b) adicionar bloco 'Para você que quer sua própria pilcha' na LP — operador V4 monta em 1-2h no Elementor; (c) repassar à agência de Passo Fundo o apontamento de criar grupo Search dedicado à keyword 'bombacha de favo' em Exata. Esperar validação dilui a janela — quem ocupa primeiro fica 12-18 meses na frente. Os outros movimentos (WA Business + GMB otimizado + reorientação Search por persona) viajam em paralelo.",
+    "feasibility": "alta — depende de cadência, não de orçamento. 3 movimentos da semana têm custo zero direto (Reels com celular, Elementor já existe, apontamento à agência é mensagem de WhatsApp). Risco está em executar, não em planejar."
+  },
+  "honesty_alert": "O território 'Artesanal. Autêntico. Direto.' está vago — mas só será defensável se a Tapparo construir cadência VISUAL de processo. Sem 4 Reels semanais consecutivos nas primeiras 4 semanas (mínimo para inércia), o território fica como aspiracional, não conquistado. O risco real é a Loreni receber o posicionamento, aprovar conceitualmente, e a produção de Reels atrasar por falta de tempo dela — em 6 meses Regalo Campeiro percebe o vazio e ocupa com sua audiência de 26K. A diferença entre 'posicionamento aprovado' e 'posicionamento ocupado' é literalmente a cadência de produção das primeiras 4 semanas. Recomendação operacional: operador V4 (Gina) ajuda na produção dos 4 primeiros Reels — coordena com Loreni + costureira-chefe + edita os vídeos curtos. Depois disso, Loreni precisa internalizar a cadência ou o território se perde. Na apresentação final (semana 5), fechar com Loreni um compromisso explícito de 4 Reels nas próximas 4 semanas e revisão V4MOS em 30 dias para validar implementação. Sem esse compromisso explícito, o posicionamento é exercício teórico — não estratégia executada."
+}

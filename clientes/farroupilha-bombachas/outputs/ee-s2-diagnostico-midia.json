@@ -1,0 +1,1097 @@
+{
+  "client_name": "Bombachas Farroupilha",
+  "skill": "ee-s2-diagnostico-midia",
+  "version": 1,
+  "generated_at": "2026-05-25T00:00:00Z",
+  "segment": "Indústria Têxtil — Moda Tradicionalista Gaúcha (Pilchas/Bombachas), B2C consumidor final (Mariana) + B2B atacado (Diego)",
+  "data_source": "V4MOS (Google Ads ativo) + briefing + formulário V4MOS + persona-icp v2 + posicionamento v1",
+  "data_period": "2026-02-21 a 2026-05-22 (90 dias)",
+  "summary": "Diagnóstico de mídia: Google Ads em operação (subscale — R$ 30/dia, R$ 335/mês reais vs R$ 0 declarado pela Loreni) entrega CPA R$ 10,32 e CTR 2,22% no clique do WhatsApp — mas é métrica de topo. Estrutura monolítica: 1 grupo, 23 keywords amplas, sem segmentação por persona. Bombacha de Favo (carro-chefe + território de marca) tem 7 impressões em 90d — fora dos lances. Meta Ads ZERO num cliente que declarou Mariana B2C como ICP desejado. 5 clusters de keywords mapeados (2 ativos performando bem, 1 sangrando, 1 marginalizado, 1 inexistente). 3 cenários de realocação: Conservador (mesmo R$ 900/mês), Realista RECOMENDADO (R$ 1.500/mês com Meta aberto para MT), Agressivo (R$ 3.000/mês). Meta 90d: dobrar leads qualificados pós-WA Business com filtro + Bombacha de Favo nos lances.",
+  "summary_headline": "Google Ads subscale (R$ 335/mês) entrega CPA R$ 10,32 mas mira persona errada e ignora carro-chefe (Bombacha de Favo com 7 impressões/90d). Realocação B (R$ 1.500/mês) dobra leads sem queimar verba — Meta para MT é destrava.",
+  "summary_highlights": [
+    {
+      "category": "posicao",
+      "label": "Status mídia",
+      "value": "Subscale",
+      "subtext": "1 canal Google subinvestido, Meta zerado, score 30/100",
+      "tone": "yellow"
+    },
+    {
+      "category": "oportunidade",
+      "label": "CPA Google Ads",
+      "value": "R$ 10,32",
+      "subtext": "Top WhatsApp — CTR 2,22% acima da média setor",
+      "tone": "green"
+    },
+    {
+      "category": "risco",
+      "label": "Bombacha de Favo",
+      "value": "7 imp/90d",
+      "subtext": "Carro-chefe + território de marca fora dos lances",
+      "tone": "red"
+    },
+    {
+      "category": "risco",
+      "label": "Meta Ads",
+      "value": "R$ 0",
+      "subtext": "Persona Mariana B2C ideal para Reels — canal não existe",
+      "tone": "red"
+    },
+    {
+      "category": "oportunidade",
+      "label": "Cenário B (Realista)",
+      "value": "R$ 1.500/mês",
+      "subtext": "Dobra leads para 65/mês com Meta aberto em MT",
+      "tone": "green"
+    },
+    {
+      "category": "janela",
+      "label": "Pré-pico farroupilha",
+      "value": "~45 dias",
+      "subtext": "Maio-junho para reestruturar + abrir Meta antes do pico jul-set",
+      "tone": "yellow"
+    }
+  ],
+  "summary_key_findings": [
+    {
+      "category": "vantagem",
+      "text": "Google Ads ativo já entrega performance acima da média setor (CTR 2,22% vs ~1,9% benchmark Search B2C moda) com CPA WhatsApp de R$ 10,32. Top 4 keywords ('bombacha de gaúcho', 'bombacha gaúcho', 'bombacha a venda', 'roupa bombacha') somam 195 cliques e 40,5 conversões com CPA <R$ 11. A pergunta 'tem público no Google?' está respondida — a estrutura precisa apenas refinar, não construir do zero."
+    },
+    {
+      "category": "ameaca",
+      "text": "Bombacha de Favo (carro-chefe declarado + território de marca aprovado no posicionamento v1) tem apenas 7 impressões em 90 dias — está marginalmente fora dos lances. Keywords como 'bombacha atacado', 'fábrica bombachas', 'pilcha por atacado' (Diego B2B) também estão fora. A persona Mariana atual cai em keywords genéricas femininas ('bombacha feminino' sozinho — CPA R$ 27,40, pior da conta). Reestruturação por persona é destrava #1."
+    },
+    {
+      "category": "contexto",
+      "text": "Cliente declarou no V4MOS R$ 0 de investimento em marketing — mas V4MOS detecta R$ 335/mês reais operados pela agência de Passo Fundo. Subinvestimento real: campanha gera dados mas budget é incompatível com o SOM declarado (R$ 4MM em 24-36m). Para chegar a R$ 2,8MM B2C via Mariana, budget mínimo realista é R$ 1.500-2.000/mês com Meta aberto."
+    },
+    {
+      "category": "acao",
+      "text": "Cenário B (RECOMENDADO) realoca para R$ 1.500/mês com 50% Google Search reestruturado por persona (Mariana + Diego), 40% Meta Ads para MT (lookalike + Reels da Bombacha de Favo), 10% Google PMax retomado. Projeta dobrar leads qualificados (33 → 65/mês) e abrir o canal Meta antes do pico farroupilha. Cadência V4MOS 30/60/90d valida implementação."
+    },
+    {
+      "category": "contexto",
+      "text": "Forecast realista 90d: Lead bruto WA (CPA R$ 10,32 atual) NÃO é métrica final — após WhatsApp Business com filtro por persona, lead qualificado pós-filtro deve sair em CPL R$ 25-35 e CAC R$ 30-40 (assumindo taxa de conversão WA→pedido de 30-40%). Sem filtro, vendas-por-clique permanece em ~10% (21 vendas/mês ÷ ~200 cliques no WA visíveis = ~10%)."
+    }
+  ],
+  "integrations_status": {
+    "v4mos_connected": true,
+    "google_ads_connected": true,
+    "facebook_ads_connected": false,
+    "ga4_configured": false,
+    "gtm_installed": true,
+    "fetched_at": "2026-05-22T19:51:28Z",
+    "notes": "GTM-M7WTSW9C operando há 3 meses + Pixel Google Ads (AW-17962419023) capturando visitantes. GA4 não detectado mesmo com GTM pronto — apontamento #4 do plano de ação cobre. Meta Business Manager nunca foi criado."
+  },
+  "monthly_budget": 335,
+  "platforms_active": [
+    "Google Ads (Search)"
+  ],
+  "current_metrics": {
+    "cpl": 10.32,
+    "ctr": 2.22,
+    "conversion_rate": 13.5,
+    "roas": null,
+    "cpc": 1.39,
+    "total_investment": 1011.11,
+    "total_leads": 98,
+    "total_clicks": 725,
+    "impressions": 32654,
+    "frequency": null,
+    "roas_reason": "ROAS não calculável diretamente: campanha mede clique no WhatsApp como conversão (não pedido fechado). Sem CRM mínimo nem GA4 com captura de receita por pedido, ROAS exato é estimativa. Estimado em 2,5-3,5x considerando 30% de conversão WA→pedido com ticket médio R$ 100 B2C + 21 pedidos/mês B2B com ticket R$ 4.600. Pré-requisito para ROAS preciso: GA4 + CRM mínimo + tagging de origem por campanha.",
+    "frequency_reason": "Frequência não disponível para Search no V4MOS (métrica específica de Display/Meta). Pode ser calculada quando Meta abrir."
+  },
+  "benchmarks": {
+    "cpl": 30.0,
+    "ctr": 1.9,
+    "conversion_rate": 4.0,
+    "roas": 3.5,
+    "cpc": 1.8,
+    "source": "[E] Estimativas baseadas em benchmarks setoriais Google Ads B2C moda BR (WordStream, Aragon Research 2025) + ajuste para nicho tradicionalista regional. CPL aqui é métrica de lead qualificado (não clique no WA bruto como o do cliente). Conversion_rate é da LP (visitante→ação) não do WA. Comparação direta com métricas atuais exige reconciliação após instalar GA4 + UTM dinâmica."
+  },
+  "diagnosis_by_dimension": {
+    "account_structure": {
+      "organization": "fragmented",
+      "segmentation": "Sem segmentação por persona. 1 único grupo de anúncios chamado 'Grupo de anúncios 1' (nome default da plataforma — nunca renomeado). 23 keywords todas em match Ampla. 55,8% dos cliques são femininos = perfil Mariana real, mas captura é genérica — sem direcionamento de persona específica nem grupo dedicado por linha de produto.",
+      "budget_allocation": "concentrated",
+      "observation": "100% do budget concentrado em 1 grupo único de Search. Performance Max ('Campaign #1') foi criada com budget R$ 48,70/dia, rodou R$ 5,30 e foi pausada sem decisão documentada. Score account_structure: 30/100. Apontamento principal: segmentar em 'B2C Mariana' (principal, grupo Bombacha de Favo + grupo Linha completa) + 'B2B Diego' (secundário, keywords atacado em Frase/Exata) + decisão sobre PMax (retomar com objetivo ou arquivar)."
+    },
+    "creatives": {
+      "active_count": 1,
+      "best_performer": "Texto Search (não inspecionado via Preview Tool). CTR 2,22% acima da média do setor sugere que copy funciona para quem busca — mas perfil de quem busca está mal calibrado (55,8% femininos genéricos, não Mariana específica).",
+      "worst_performer": "Performance Max abandonada após R$ 5,30 gastos — provavelmente criativos visuais não otimizados para o público B2C tradicionalista. Sem análise possível pelos dados disponíveis.",
+      "ab_testing_active": false,
+      "average_frequency": null,
+      "fatigue_detected": false,
+      "evaluation": "Search-only é texto — sem dimensão visual a auditar. Meta Ads ZERO (nunca criado). Zero criativos visuais em mídia paga. Cliente tem ativo defensável (trançado manual da Bombacha de Favo) que precisa virar Reels semanais antes que a concorrência (Regalo Campeiro 26K Instagram) ocupe a narrativa. Score creatives: 15/100 — limitado pela ausência de Meta + ausência de produção de Reels.",
+      "average_frequency_reason": "Frequência só faz sentido em Display/Meta — Search não tem métrica de frequência por usuário."
+    },
+    "landing_pages": {
+      "lp_count": 1,
+      "coherence_with_ads": "medium",
+      "estimated_bounce_rate": null,
+      "evaluation": "LP única (bombachasfarroupilha.com.br) com CRO 38/100 (acima da média setor 35). Proposta clara, segmentação B2B em 3 públicos, FAQ com 5 objeções, CTAs WhatsApp pré-preenchidos. PORÉM: a campanha Google captura 55,8% mulheres (Mariana B2C) e a LP só segmenta blocos B2B — vazamento crítico identificado na auditoria-comunicação v2. Sem bloco 'Para você que quer sua própria pilcha' para Mariana, ~60-70% dos cliques B2C qualificados são perdidos antes do FAQ. Sem GA4 + UTM dinâmica, sem leitura de bounce_rate por keyword.",
+      "estimated_bounce_rate_reason": "GA4 não configurado — sem dados de comportamento na LP (sessões, tempo médio, taxa de rejeição). Apontamento #3 do plano de ação cobre instalação."
+    },
+    "audiences": {
+      "types_used": [
+        "broad"
+      ],
+      "overlap_detected": false,
+      "retargeting_active": false,
+      "evaluation": "Único público é busca orgânica via match Ampla das keywords — sem público customizado, sem lookalike, sem retargeting (mesmo com Pixel formado há 3 meses). Score audiences: 20/100. Apontamento crítico para a agência: ativar audiência customizada de visitantes do site (pixel capturando há 3 meses) + lookalike quando Meta abrir + retargeting via Google Display (público formado por quem clicou em anúncio mas não no WA)."
+    }
+  },
+  "google_ads": {
+    "integration": "Conta Google Ads conectada via V4MOS workspace 5b3a7a61. Operada pela agência de Passo Fundo (campanha 'ALLURE - Bombachas - Search'). Cliente declarou R$ 0 de marketing — gasto detectado pelo V4MOS.",
+    "budget_monthly_declared": 0,
+    "budget_monthly_actual": 337,
+    "total_campaigns": 2,
+    "active_campaigns": 1,
+    "paused_campaigns": 1,
+    "status": "subscale",
+    "score": 50,
+    "score_classification": "medium",
+    "total_spend_90d": 1011.11,
+    "total_clicks_90d": 725,
+    "total_impressions_90d": 32654,
+    "total_conversions_90d": 98,
+    "avg_cpa": 10.32,
+    "avg_ctr": 2.22,
+    "strategic_diagnosis": "Google Ads opera em modo subscale: 1 campanha Search ativa com R$ 30/dia, 23 keywords todas em match Ampla num único grupo genérico (nome default 'Grupo de anúncios 1'), captura 55,8% cliques femininos (alinhado com persona Mariana DESEJADA mas sem direcionamento explícito), CTR 2,22% acima da média e CPA WhatsApp R$ 10,32. Performance acima do esperado para a estrutura — falta refinar, não reconstruir. Bombacha de Favo (carro-chefe + território de marca) tem 7 impressões em 90d, fora dos lances. Keywords B2B Diego (atacado, fábrica, fornecedor) também ausentes. PMax 'Campaign #1' pausada após R$ 5,30 sem decisão documentada. Destravamento: segmentar em B2C Mariana (principal) + B2B Diego (secundário) + grupo dedicado à Bombacha de Favo em Exata + decisão sobre PMax. Apontamentos para a agência cobrem.",
+    "active_campaign": {
+      "name": "ALLURE - Bombachas - Search",
+      "type": "SEARCH",
+      "status": "ENABLED",
+      "cost_90d": 1005.81,
+      "clicks": 715,
+      "impressions": 32616,
+      "conversions": 98.0,
+      "ctr": 2.19,
+      "cpa": 10.26,
+      "note": "Único grupo de anúncios = 'Grupo de anúncios 1' (nome default). 23 keywords em match Ampla. CTR 2,19% acima da média. Captura 55,8% cliques femininos = perfil Mariana real. Estrutura precisa de segmentação por persona + Bombacha de Favo nos lances + match mais restritivo."
+    },
+    "paused_campaigns_opportunity": [
+      {
+        "name": "Campaign #1",
+        "type": "PERFORMANCE_MAX",
+        "status": "PAUSED",
+        "cost_90d": 5.3,
+        "clicks": 10,
+        "impressions": 38,
+        "conversions": 0,
+        "ctr": 26.32,
+        "cpa": null,
+        "note": "Foi criada com budget R$ 48,70/dia, rodou R$ 5,30 e foi pausada sem decisão documentada. CTR 26% sugere que criativo/audiência inicial respondia, mas não há dados suficientes (sample size <50). Decisão pendente: retomar com objetivo claro (audiência semente do pixel Google + criativos Reels da Bombacha de Favo) OU arquivar com nota documentada."
+      }
+    ],
+    "monthly_evolution": [
+      {
+        "month": "2026-04",
+        "cost": 501.08,
+        "clicks": 436,
+        "impressions": 19774,
+        "conversions": 59,
+        "ctr": 2.2,
+        "cpa": 8.49
+      },
+      {
+        "month": "2026-05",
+        "cost": 510.03,
+        "clicks": 289,
+        "impressions": 12880,
+        "conversions": 39,
+        "ctr": 2.24,
+        "cpa": 13.08
+      }
+    ],
+    "day_of_week": [
+      {
+        "day": "Seg",
+        "clicks": 93,
+        "impressions": 6730,
+        "cost": 137.16,
+        "pct": 12.8,
+        "ctr": 1.38
+      },
+      {
+        "day": "Ter",
+        "clicks": 114,
+        "impressions": 4177,
+        "cost": 155.82,
+        "pct": 15.7,
+        "ctr": 2.73
+      },
+      {
+        "day": "Qua",
+        "clicks": 118,
+        "impressions": 6192,
+        "cost": 169.24,
+        "pct": 16.3,
+        "ctr": 1.91
+      },
+      {
+        "day": "Qui",
+        "clicks": 111,
+        "impressions": 5119,
+        "cost": 135.97,
+        "pct": 15.3,
+        "ctr": 2.17
+      },
+      {
+        "day": "Sex",
+        "clicks": 84,
+        "impressions": 3361,
+        "cost": 148.63,
+        "pct": 11.6,
+        "ctr": 2.5
+      },
+      {
+        "day": "Sáb",
+        "clicks": 111,
+        "impressions": 2396,
+        "cost": 136.84,
+        "pct": 15.3,
+        "ctr": 4.63
+      },
+      {
+        "day": "Dom",
+        "clicks": 94,
+        "impressions": 4679,
+        "cost": 127.45,
+        "pct": 13.0,
+        "ctr": 2.01
+      }
+    ],
+    "gender_breakdown": [
+      {
+        "gender": "Feminino",
+        "clicks": 399,
+        "cost": 565.16,
+        "pct_clicks": 55.8,
+        "ctr": 1.66,
+        "cpa": 10.09
+      },
+      {
+        "gender": "Masculino",
+        "clicks": 263,
+        "cost": 351.09,
+        "pct_clicks": 36.8,
+        "ctr": 3.5,
+        "cpa": 9.75
+      },
+      {
+        "gender": "Indefinido",
+        "clicks": 53,
+        "cost": 89.4,
+        "pct_clicks": 7.4,
+        "ctr": 4.86,
+        "cpa": 14.9
+      }
+    ],
+    "top_keywords": [
+      {
+        "keyword": "bombacha de gaúcho",
+        "match_type": "Ampla",
+        "clicks": 93,
+        "impressions": 910,
+        "ctr": 10.22,
+        "cost": 177.27,
+        "cpc": 1.91,
+        "cpa": 10.43,
+        "conversions": 17,
+        "insight": "Top performer absoluto. Manter em grupo dedicado de alta intenção comercial.",
+        "tag": "manter"
+      },
+      {
+        "keyword": "bombacha feminino",
+        "match_type": "Ampla",
+        "clicks": 51,
+        "impressions": 533,
+        "ctr": 9.57,
+        "cost": 109.61,
+        "cpc": 2.15,
+        "cpa": 27.4,
+        "conversions": 4,
+        "insight": "Pior CPA da conta (R$ 27,40 vs média R$ 10,32). Tráfego B2C genérico que não converte. Pausar match Ampla sozinho — usar em Frase como 'bombacha feminino tradicional' ou 'bombacha feminino atacado'.",
+        "tag": "otimizar"
+      },
+      {
+        "keyword": "bombacha gaúcho",
+        "match_type": "Ampla",
+        "clicks": 46,
+        "impressions": 534,
+        "ctr": 8.61,
+        "cost": 91.36,
+        "cpc": 1.99,
+        "cpa": 8.7,
+        "conversions": 10.5,
+        "insight": "Top 2 performer. Manter em grupo dedicado.",
+        "tag": "manter"
+      },
+      {
+        "keyword": "bombacha a venda",
+        "match_type": "Ampla",
+        "clicks": 28,
+        "impressions": 127,
+        "ctr": 22.05,
+        "cost": 72.14,
+        "cpc": 2.58,
+        "cpa": 10.31,
+        "conversions": 7,
+        "insight": "CTR 22% — intenção transacional altíssima. Mover para Exata + alocar budget dedicado.",
+        "tag": "manter"
+      },
+      {
+        "keyword": "roupa bombacha",
+        "match_type": "Ampla",
+        "clicks": 28,
+        "impressions": 450,
+        "ctr": 6.22,
+        "cost": 54.24,
+        "cpc": 1.94,
+        "cpa": 9.04,
+        "conversions": 6,
+        "insight": "Boa intenção B2C. Manter em grupo B2C Mariana.",
+        "tag": "manter"
+      },
+      {
+        "keyword": "bombachas masculina",
+        "match_type": "Ampla",
+        "clicks": 24,
+        "impressions": 295,
+        "ctr": 8.14,
+        "cost": 47.62,
+        "cpc": 1.98,
+        "cpa": 15.87,
+        "conversions": 3,
+        "insight": "CPA acima da média. Adicionar negative match para 'bombachinha masculina infantil' que canibalizou.",
+        "tag": "otimizar"
+      },
+      {
+        "keyword": "bombachinha gaucha",
+        "match_type": "Ampla",
+        "clicks": 28,
+        "impressions": 446,
+        "ctr": 6.28,
+        "cost": 46.27,
+        "cpc": 1.65,
+        "cpa": null,
+        "conversions": 0,
+        "insight": "28 cliques, 0 conversões = R$ 46 queimados. Pausar — provavelmente busca infantil ou de festa, não persona Mariana.",
+        "tag": "eliminar"
+      },
+      {
+        "keyword": "bombachas gaúchas",
+        "match_type": "Ampla",
+        "clicks": 13,
+        "impressions": 123,
+        "ctr": 10.57,
+        "cost": 23.43,
+        "cpc": 1.8,
+        "cpa": 6.69,
+        "conversions": 3.5,
+        "insight": "Melhor CPA da conta (R$ 6,69). Manter em grupo dedicado em Exata.",
+        "tag": "manter"
+      },
+      {
+        "keyword": "bombacha tradicional",
+        "match_type": "Ampla",
+        "clicks": 7,
+        "impressions": 88,
+        "ctr": 7.95,
+        "cost": 9.66,
+        "cpc": 1.38,
+        "cpa": 9.66,
+        "conversions": 1,
+        "insight": "Boa intenção, baixo volume. Manter como long-tail de apoio.",
+        "tag": "manter"
+      },
+      {
+        "keyword": "bombacha favo",
+        "match_type": "Ampla",
+        "clicks": 1,
+        "impressions": 7,
+        "ctr": 14.29,
+        "cost": 3.24,
+        "cpc": 3.24,
+        "cpa": null,
+        "conversions": 0,
+        "insight": "Carro-chefe declarado + território de marca aprovado tem 1 clique em 90d. Mover para Exata + Frase em grupo DEDICADO. Alocar 10-15% do budget aqui — destrava território defensável.",
+        "tag": "manter"
+      },
+      {
+        "keyword": "bombacha de favo",
+        "match_type": "Ampla",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0.0,
+        "cost": 0.0,
+        "cpc": null,
+        "cpa": null,
+        "conversions": 0,
+        "insight": "Variante exata do carro-chefe — 0 cliques. Mover para Exata em grupo dedicado.",
+        "tag": "manter"
+      }
+    ]
+  },
+  "meta_ads": {
+    "integration": "Não conectado — Meta Business Manager nunca foi criado pela Tapparo nem pela agência de Passo Fundo.",
+    "budget_monthly_declared": 0,
+    "budget_monthly_actual": 0,
+    "total_campaigns": 0,
+    "total_ads": 0,
+    "total_creatives": 0,
+    "status": "broken",
+    "score": 0,
+    "score_classification": "critical",
+    "total_spend_90d": 0,
+    "total_clicks_90d": 0,
+    "total_impressions_90d": 0,
+    "total_reach_90d": 0,
+    "avg_ctr": 0,
+    "avg_cpm": 0,
+    "strategic_diagnosis": "Meta Ads ZERO — canal inexistente num cliente que declarou Mariana B2C como ICP desejado (formato Reels/Stories dominante em moda tradicionalista). Bombacha de Favo (território de marca) precisa de produção visual semanal para narrar processo — Reels da costureira-chefe trançando favo é o ativo que ocupa o quadrante vazio do mapa competitivo (Especialista + Fábrica Direta) antes que Regalo Campeiro (26K Instagram) ou outro player narre processo de algum parceiro. Destravamento: criar Meta Business Manager + Pixel + plano inicial em MT (Mariana B2C migrada, mercado virgem) com lookalike alimentado pelo pixel Google de 3 meses. Apontamento para agência. Lançamento ideal: até 2026-07-15.",
+    "critical_issues": [
+      "Meta Business Manager nunca criado — zero histórico, zero pixel Meta, zero audiência",
+      "Sem produção de Reels (formato dominante no nicho moda tradicionalista) — perde alcance orgânico + ataque ao motivo de perda #1 ('preço') com narrativa de processo",
+      "Mariana B2C declarada como persona desejada — Meta é canal natural (Stories/Reels capturam aspiração visual) mas Tapparo está ausente",
+      "Concorrente direto Regalo Campeiro tem 26K seguidores Instagram com cadência editorial (449 posts) — vantagem narrativa que pode tornar-se vantagem de leilão se ele decidir investir Meta Ads"
+    ],
+    "top_5_ads_by_spend": [],
+    "monthly_evolution": [],
+    "creative_gallery": [],
+    "creative_gallery_summary": {
+      "total_displayed": 0,
+      "total_ads": 0,
+      "manter": 0,
+      "otimizar": 0,
+      "eliminar": 0,
+      "note": "Sem criativos para auditar — canal não foi aberto. Quando Meta abrir, criativos devem ser baseados nos Reels semanais da Bombacha de Favo (mesmas mídias servem orgânico + pago)."
+    }
+  },
+  "top_problems": [
+    {
+      "problem": "Estrutura monolítica de Search sem segmentação por persona — Mariana B2C (55,8% cliques) e Diego B2B caem no mesmo grupo genérico com 23 keywords amplas",
+      "data_evidence": "V4MOS 90d: 1 único grupo de anúncios ('Grupo de anúncios 1' — nome default), 23 keywords todas em match Ampla. Pior CPA da conta é 'bombacha feminino' sozinho (R$ 27,40 vs média R$ 10,32) — 51 cliques com apenas 4 conversões. 0 keywords B2B atacado ('bombacha atacado', 'fábrica bombachas') nos lances.",
+      "impact": "Verba se dilui entre dois funis diferentes. Mariana real precisa de copy emocional + Bombacha de Favo nos lances; Diego B2B precisa de copy funcional + 35d/15 peças. Hoje ambos recebem o mesmo ad copy genérico. Estimativa: realocação por persona libera 20-30% do CPA atual (CPA pode cair de R$ 10,32 para R$ 7-8 médio).",
+      "dimension": "account_structure"
+    },
+    {
+      "problem": "Bombacha de Favo (carro-chefe declarado + território de marca aprovado) está fora dos lances — apenas 7 impressões em 90 dias",
+      "data_evidence": "V4MOS top_keywords: 'bombacha favo' tem 1 clique, 7 impressões, R$ 3,24 gastos em 90d. 'bombacha de favo' tem 0 cliques, 5 impressões. Variantes (favo bombacha, bombacha com favo, favo de bombacha) somam 38 impressões e ZERO cliques. CPC histórico para a keyword: R$ 3,24 — terreno livre no leilão.",
+      "impact": "O ativo defensável mais forte da marca + território aprovado no posicionamento v1 está digitalmente abandonado. Janela de 12-18 meses antes que Regalo Campeiro (26K Instagram) ou outro player narre processo de algum parceiro fabricante. Sem grupo dedicado à Bombacha de Favo + match Exata + copy específico de processo artesanal, posicionamento aprovado fica como teoria. Estimativa de upside: 30-50 conversões/mês adicionais no carro-chefe com CPA <R$ 8 em 60 dias.",
+      "dimension": "account_structure"
+    },
+    {
+      "problem": "Meta Ads ZERO num cliente que declarou Mariana B2C como ICP desejado — formato Reels/Stories é dominante no nicho moda tradicionalista",
+      "data_evidence": "V4MOS facebook_ads: zero campanhas, zero ads, zero spend. Cliente declarou no formulário V4MOS 'investimento em tráfego pago R$ 0' — mas Google Ads detecta R$ 335/mês. Sobre Meta, nem o cliente nem a agência mencionam histórico. Concorrente direto Regalo Campeiro tem 26K seguidores Instagram com 449 posts (cadência consistente) — alcance digital que a Tapparo não tem.",
+      "impact": "Sem Meta, a estratégia de ocupar território 'Artesanal. Autêntico. Direto.' fica parcial. Reels semanais da Bombacha de Favo servem orgânico mas não escalam para Mariana sem investimento. MT (foco declarado de expansão) é mercado virgem digitalmente — abertura de Meta com lookalike do pixel Google formado nos últimos 3 meses tem upside estimado de 30-50 conversões B2C adicionais/mês. Lançamento ideal: até 2026-07-15 para captar pré-pico farroupilha.",
+      "dimension": "audiences"
+    }
+  ],
+  "action_plan": [
+    {
+      "action": "Solicitar à agência de Passo Fundo: segmentar Search em 'B2C Mariana' (principal — grupo Bombacha de Favo Exata + grupo Linha Completa Frase) + 'B2B Diego' (secundário — keywords atacado em Frase/Exata). Renomear grupo default. Pausar 'bombacha feminino' broad sozinho (sangra CPA R$ 27,40) — usar como Frase com qualificador ('bombacha feminino tradicional', 'bombacha feminino atacado').",
+      "priority": "high",
+      "expected_impact": "Realocação por persona: CPA médio cai de R$ 10,32 para R$ 7-8. Volume de conversões qualificadas dobra com mesmo budget (33 → 60-70/mês). Liberar tempo de atendimento da Loreni (anti-persona não compete pelo mesmo grupo).",
+      "responsible": "Agência de Passo Fundo (executar) + Loreni (aprovar mudanças) + Operador V4 Gina (validar via V4MOS em 14 dias)",
+      "deadline": "Semana 1 (até 2026-06-30)",
+      "rank": 1
+    },
+    {
+      "action": "Solicitar à agência: criar grupo de anúncios DEDICADO à Bombacha de Favo com keyword 'bombacha de favo' em match Exata + Frase + variantes (favo bombacha, bombacha com favo). Copy específico que mencione processo manual + costureira-chefe. Alocar 10-15% do budget atual (R$ 30-50/mês) para esse grupo.",
+      "priority": "high",
+      "expected_impact": "30-50 conversões/mês adicionais no carro-chefe com CPA <R$ 8. Território 'Artesanal. Autêntico. Direto.' começa a ser ocupado nos lances. Diferencial defensável (favo manual) entra em circulação digital antes que concorrência aproprie.",
+      "responsible": "Agência (executar) + Loreni (copy validado) + Operador V4 Gina (acompanhar via V4MOS)",
+      "deadline": "Semana 1-2 (até 2026-06-30)",
+      "rank": 2
+    },
+    {
+      "action": "Instalar GA4 via GTM-M7WTSW9C (já configurado) + UTM dinâmica {keyword}{campaignid}{adgroupid} no link wa.me da LP. Mesmo deploy: corrigir erro 'cole o link aqui' no preload mobile.",
+      "priority": "high",
+      "expected_impact": "Sem isso, R$ 1.011 já gastos em 90 dias geraram 725 cliques sem atribuição por keyword/persona. Após instalado, agência opera com decisão informada e pode justificar otimizações. Pré-requisito para todas as outras ações.",
+      "responsible": "Operador V4 Gina (executar GA4 + UTM) + Dev WordPress (corrigir LP)",
+      "deadline": "Semana 1 (até 2026-06-15)",
+      "rank": 3
+    },
+    {
+      "action": "Solicitar à agência: decidir destino da Performance Max 'Campaign #1' pausada com R$ 5,30 gastos. Opção recomendada: retomar com objetivo claro (audiência semente do pixel Google + criativos Reels da Bombacha de Favo a partir da Semana 2 — quando Reels começarem) com budget inicial R$ 15-30/dia.",
+      "priority": "medium",
+      "expected_impact": "PMax complementa Search bem em B2C tradicionalista quando há criativos visuais (Reels). Sem decisão documentada, conta polui — qualquer planejamento futuro fica refém de campanha em limbo.",
+      "responsible": "Agência (decisão + execução) + Loreni (aprovar)",
+      "deadline": "Semana 2 (até 2026-07-07)",
+      "rank": 4
+    },
+    {
+      "action": "Solicitar à agência: abrir Meta Business Manager + Pixel + plano inicial focado em MT (Mariana B2C migrada) com lookalike alimentado pelo pixel Google de 3 meses. Criativos iniciais: Reels da Bombacha de Favo (a partir da Semana 2). Budget inicial R$ 600/mês de teste — atinge ~30-50 conversões adicionais/mês esperadas em MT.",
+      "priority": "high",
+      "expected_impact": "Diversifica canal único atual + abre MT (foco declarado de expansão) + complementa Google com inventário Meta (Reels/Stories) que captura Mariana por aspiração. Lançamento ideal até 2026-07-15 para entrar no pré-pico farroupilha com learning de 30 dias.",
+      "responsible": "Agência (criar conta + Pixel + estrutura) + Loreni (autorizar acesso + budget) + Operador V4 Gina (validar criativos)",
+      "deadline": "Semana 3-4 (lançamento até 2026-07-15)",
+      "rank": 5
+    },
+    {
+      "action": "Combinar com Loreni cadência V4MOS 30/60/90 dias pós-contrato V4 — checkpoints de revisão (operador V4 Gina puxa dados via API V4MOS) para validar implementação dos apontamentos pela agência e ajustar lances/audiências com base em dados reais.",
+      "priority": "medium",
+      "expected_impact": "Mecanismo de cobrança da agência operadora pós-contrato. Sem isso, apontamentos podem ser implementados parcialmente. Custo V4 baixo, valor estratégico alto (stop-loss do ROI da Estruturação).",
+      "responsible": "Operador V4 Gina (executar revisões) + Loreni (aprovar cadência)",
+      "deadline": "Semana 5 (apresentação final + acompanhamento até 2026-08-25)",
+      "rank": 6
+    }
+  ],
+  "keyword_clusters": [
+    {
+      "cluster": "B2C Alta Intenção Comercial (Mariana)",
+      "keywords": [
+        "bombacha de gaúcho",
+        "bombacha gaúcho",
+        "bombacha a venda",
+        "roupa bombacha",
+        "bombachas gaúchas",
+        "bombacha tradicional"
+      ],
+      "intent": "comercial",
+      "budget_allocation_pct": 50,
+      "expected_cpc_range": "R$ 1,38-2,58",
+      "bid_strategy": "Máx. conversões com CPA alvo R$ 12",
+      "copy_angle": "Emocional/funcional para Mariana — 'A bombacha que respeita a tradição: feita à mão, no caimento que você quer.' Headline ataca autenticidade. Descrição menciona Bombacha de Favo + prazo cumprido.",
+      "risk": "Concorrência pode entrar em 'bombacha a venda' (CPC R$ 2,58 já é o mais alto) — manter Quality Score alto via copy específico e LP coerente.",
+      "opportunity_keywords": [
+        {
+          "keyword": "bombacha para semana farroupilha",
+          "intent": "comercial",
+          "volume_estimate": "200-500/mês [E]",
+          "expected_cpc": "R$ 1-2",
+          "rationale": "Sazonal Mariana — urgência pré-pico. ZERO impressões hoje. Adicionar como Frase em campanha sazonal jun-set."
+        },
+        {
+          "keyword": "bombacha autêntica",
+          "intent": "comercial",
+          "volume_estimate": "50-150/mês [E]",
+          "expected_cpc": "R$ 1,50-2",
+          "rationale": "Mariana cética/queimada com cópias — ataca diretamente o motivo de perda 'preço' com filtro de autenticidade."
+        },
+        {
+          "keyword": "bombacha artesanal",
+          "intent": "comercial",
+          "volume_estimate": "100-300/mês [E]",
+          "expected_cpc": "R$ 1,50-2,50",
+          "rationale": "Diferencial técnico da Tapparo. Diferencia Bombacha de Favo de varejo industrial."
+        }
+      ]
+    },
+    {
+      "cluster": "B2C Carro-Chefe (Bombacha de Favo)",
+      "keywords": [
+        "bombacha de favo",
+        "bombacha favo",
+        "favo bombacha",
+        "bombacha com favo",
+        "favo de bombacha"
+      ],
+      "intent": "comercial",
+      "budget_allocation_pct": 15,
+      "expected_cpc_range": "R$ 3,00-4,00",
+      "bid_strategy": "Máx. cliques com CPA alvo R$ 10 — fase de captura de demanda + branding",
+      "copy_angle": "Específico do processo: 'Bombacha de Favo trançada à mão pela nossa costureira-chefe — direto da fábrica em Ciríaco/RS, em 35 dias.' Headline com 'favo de verdade' + descrição com link para Reel de bastidores.",
+      "risk": "Volume de busca baixo (provavelmente <100 imp/mês mesmo em Exata) — não é cluster de volume, é cluster de TERRITÓRIO. Manter mesmo com poucas conversões diretas porque ocupa narrativa.",
+      "opportunity_keywords": [
+        {
+          "keyword": "bombacha de favo feminina",
+          "intent": "comercial",
+          "volume_estimate": "30-80/mês [E]",
+          "expected_cpc": "R$ 2-3",
+          "rationale": "Mariana específica + carro-chefe — combinação perfeita. ZERO impressões hoje."
+        },
+        {
+          "keyword": "bombacha de favo atacado",
+          "intent": "comercial",
+          "volume_estimate": "10-30/mês [E]",
+          "expected_cpc": "R$ 2-3",
+          "rationale": "Diego B2B + carro-chefe — captura lojista premium."
+        }
+      ]
+    },
+    {
+      "cluster": "B2C Gênero/Variante (Mariana popular)",
+      "keywords": [
+        "bombacha feminino",
+        "bombachas masculina"
+      ],
+      "intent": "comercial",
+      "budget_allocation_pct": 15,
+      "expected_cpc_range": "R$ 1,98-2,15",
+      "bid_strategy": "Máx. conversões com CPA alvo R$ 18 (mais alto que cluster #1 porque match Frase reduz volume)",
+      "copy_angle": "Específico por gênero. Para 'bombacha feminino' em Frase ('bombacha feminino tradicional', 'bombacha feminino artesanal'): copy emocional Mariana. Para 'bombachas masculina': copy funcional 'pilcha masculina autêntica + 35 dias'.",
+      "risk": "Match Ampla sozinho hoje sangra (CPA R$ 27,40 em 'bombacha feminino'). Forçar Frase + qualificadores. Sem isso, anti-persona 'Curioso fashion' continua capturando.",
+      "opportunity_keywords": [
+        {
+          "keyword": "bombacha feminino tradicional",
+          "intent": "comercial",
+          "volume_estimate": "100-300/mês [E]",
+          "expected_cpc": "R$ 1,80-2,20",
+          "rationale": "Qualificador 'tradicional' filtra Curioso fashion."
+        },
+        {
+          "keyword": "bombacha masculina pilcha",
+          "intent": "comercial",
+          "volume_estimate": "80-250/mês [E]",
+          "expected_cpc": "R$ 1,80-2,20",
+          "rationale": "Qualificador 'pilcha' filtra fashion sem identidade."
+        }
+      ]
+    },
+    {
+      "cluster": "B2B Atacado (Diego) — INEXISTENTE HOJE",
+      "keywords": [],
+      "intent": "comercial",
+      "budget_allocation_pct": 15,
+      "expected_cpc_range": "R$ 1,50-3,00 [E]",
+      "bid_strategy": "Máx. conversões com CPA alvo R$ 20 — Diego pesquisa menos mas decisão de pedido vale muito mais (ticket R$ 4.600/pedido vs R$ 100/peça B2C)",
+      "copy_angle": "Funcional/relacional para Diego — 'Bombacha de Favo direto da fábrica, em 35 dias, a partir de 15 peças.' Headline com pedido mínimo + prazo. Descrição menciona parceria direta + sem intermediário.",
+      "risk": "Volume B2B é baixo (mercado nicho) — CPL aceitável é mais alto. Manter o cluster mesmo com volume baixo porque ticket por pedido compensa.",
+      "opportunity_keywords": [
+        {
+          "keyword": "bombacha atacado",
+          "intent": "comercial",
+          "volume_estimate": "200-500/mês [E]",
+          "expected_cpc": "R$ 2-3",
+          "rationale": "Diego principal. ZERO impressões hoje. Criar grupo dedicado em Exata."
+        },
+        {
+          "keyword": "fábrica de bombachas",
+          "intent": "comercial",
+          "volume_estimate": "100-300/mês [E]",
+          "expected_cpc": "R$ 1,80-2,50",
+          "rationale": "Captura busca de lojista querendo fornecedor direto."
+        },
+        {
+          "keyword": "bombacha por atacado",
+          "intent": "comercial",
+          "volume_estimate": "100-300/mês [E]",
+          "expected_cpc": "R$ 2-3",
+          "rationale": "Variante do atacado — manter junto."
+        },
+        {
+          "keyword": "fornecedor de bombacha",
+          "intent": "comercial",
+          "volume_estimate": "50-150/mês [E]",
+          "expected_cpc": "R$ 1,80-2,50",
+          "rationale": "Diego pesquisando alternativa ao incumbente."
+        },
+        {
+          "keyword": "kit invernada atacado",
+          "intent": "comercial",
+          "volume_estimate": "30-80/mês [E]",
+          "expected_cpc": "R$ 2-3",
+          "rationale": "CTG/Invernada B2B institucional — nicho subatendido."
+        },
+        {
+          "keyword": "pilcha por atacado",
+          "intent": "comercial",
+          "volume_estimate": "50-150/mês [E]",
+          "expected_cpc": "R$ 1,80-2,50",
+          "rationale": "Variante mais ampla — captura lojista querendo mix completo."
+        }
+      ]
+    },
+    {
+      "cluster": "Long-tail apoio + Negativos",
+      "keywords": [
+        "bombachinha gaucha",
+        "bombachinha masculina",
+        "bombachinha prenda",
+        "prenda de bombacha",
+        "bombacha recem nascido"
+      ],
+      "intent": "informacional",
+      "budget_allocation_pct": 5,
+      "expected_cpc_range": "R$ 1,38-2,68",
+      "bid_strategy": "Manual baixo (CPC máximo R$ 1,50) ou pausar broad",
+      "copy_angle": "Long-tail descritivas — manter apenas as que convertem. 'bombachinha gaucha' (28 cliques, 0 conversões em 90d, R$ 46 gastos) é candidata a PAUSE imediato.",
+      "risk": "Cluster de desperdício se mantido em Ampla. PAUSAR ou converter em Frase muito específica.",
+      "opportunity_keywords": [
+        {
+          "keyword": "[NEGATIVO] gucci bombacha",
+          "intent": "comercial",
+          "rationale": "Negative match — evitar buscas fashion sem identidade."
+        },
+        {
+          "keyword": "[NEGATIVO] bombacha shopping",
+          "intent": "comercial",
+          "rationale": "Negative match — evita comparação com varejo industrial."
+        },
+        {
+          "keyword": "[NEGATIVO] bombacha barata",
+          "intent": "comercial",
+          "rationale": "Anti-persona Caçador de preço — não atender."
+        }
+      ]
+    }
+  ],
+  "budget_reallocation_scenarios": {
+    "description": "3 cenários de realocação de budget. Cenário B (Realista) é recomendado — abre Meta MT antes do pico farroupilha.",
+    "current_allocation": {
+      "total_brl": 335,
+      "google_brl": 335,
+      "meta_brl": 0,
+      "note": "Subscale (R$ 30/dia) operado pela agência de Passo Fundo. Meta Ads inexistente."
+    },
+    "scenario_a_conservative": {
+      "name": "A. Conservador — Mesmo budget, reorganização",
+      "total_budget_monthly": 900,
+      "google_split": 900,
+      "meta_split": 0,
+      "expected_leads_monthly": 45,
+      "expected_cpl": 20,
+      "expected_roas": 2.8,
+      "risk_assessment": "Risco baixo de execução (mesmo budget, sem novos canais). Risco estratégico ALTO: Meta continua zerado num cliente que declarou Mariana B2C como ICP — perde janela de 12-18 meses para Regalo Campeiro ocupar narrativa digital.",
+      "delta_leads": "+36%",
+      "effort_weeks": 2,
+      "confidence": "alta",
+      "campaigns_structure": [
+        {
+          "campaign": "B2C Mariana — Search (4 grupos: Alta Intenção + Carro-Chefe + Gênero Filtrado + Genéricas Filtradas)",
+          "platform": "Google Ads",
+          "budget_monthly": 540,
+          "objective": "Conversão WhatsApp Mariana"
+        },
+        {
+          "campaign": "B2B Diego — Search (grupo único Atacado/Fábrica)",
+          "platform": "Google Ads",
+          "budget_monthly": 270,
+          "objective": "Conversão WhatsApp Diego"
+        },
+        {
+          "campaign": "PMax retomado (audiência semente Pixel Google + criativos Reels)",
+          "platform": "Google Ads",
+          "budget_monthly": 90,
+          "objective": "Awareness + Conversão"
+        }
+      ]
+    },
+    "scenario_b_realistic": {
+      "name": "B. Realista — Realocação + abertura Meta MT (RECOMENDADO)",
+      "total_budget_monthly": 1500,
+      "google_split": 900,
+      "meta_split": 600,
+      "expected_leads_monthly": 65,
+      "expected_cpl": 23,
+      "expected_roas": 3.2,
+      "risk_assessment": "Risco moderado de execução: requer criar Meta Business Manager (zerou) + Pixel + criativos baseados em Reels (que ainda não existem — precisam ser produzidos nas Semanas 1-2). Risco estratégico BAIXO: ocupa janela de Mariana em MT + complementa Google sem queimar conta atual.",
+      "delta_leads": "+97%",
+      "effort_weeks": 4,
+      "confidence": "media",
+      "campaigns_structure": [
+        {
+          "campaign": "B2C Mariana — Search (4 grupos)",
+          "platform": "Google Ads",
+          "budget_monthly": 540,
+          "objective": "Conversão WhatsApp Mariana"
+        },
+        {
+          "campaign": "B2B Diego — Search (grupo único)",
+          "platform": "Google Ads",
+          "budget_monthly": 270,
+          "objective": "Conversão WhatsApp Diego"
+        },
+        {
+          "campaign": "PMax retomado com Reels",
+          "platform": "Google Ads",
+          "budget_monthly": 90,
+          "objective": "Awareness + Conversão"
+        },
+        {
+          "campaign": "Meta MT — Mariana B2C migrada (Reels Bombacha de Favo + lookalike Pixel Google)",
+          "platform": "Meta Ads",
+          "budget_monthly": 450,
+          "objective": "Conversão WhatsApp + Brand Awareness"
+        },
+        {
+          "campaign": "Meta retargeting LP (visitantes 30d)",
+          "platform": "Meta Ads",
+          "budget_monthly": 150,
+          "objective": "Conversão"
+        }
+      ]
+    },
+    "scenario_c_aggressive": {
+      "name": "C. Agressivo — Pico farroupilha + expansão MT acelerada",
+      "total_budget_monthly": 3000,
+      "google_split": 1500,
+      "meta_split": 1500,
+      "expected_leads_monthly": 120,
+      "expected_cpl": 25,
+      "expected_roas": 3.5,
+      "risk_assessment": "Risco ALTO de execução: triplica investimento em 30 dias sem histórico para sustentar CAC. Requer estrutura de atendimento (WA Business + CRM mínimo) ANTES de escalar — senão lead gerado se perde. Risco estratégico moderado: agressivo no pré-pico farroupilha pode capturar Mariana em volume maior, mas erro de calibragem queima budget.",
+      "delta_leads": "+264%",
+      "effort_weeks": 6,
+      "confidence": "baixa",
+      "campaigns_structure": [
+        {
+          "campaign": "B2C Mariana — Search Brasil completo (todos os 4 grupos + sazonal Semana Farroupilha)",
+          "platform": "Google Ads",
+          "budget_monthly": 900,
+          "objective": "Conversão WhatsApp"
+        },
+        {
+          "campaign": "B2B Diego — Search expandido (grupo Atacado + grupo CTG/Invernada)",
+          "platform": "Google Ads",
+          "budget_monthly": 300,
+          "objective": "Conversão WhatsApp"
+        },
+        {
+          "campaign": "PMax escalado",
+          "platform": "Google Ads",
+          "budget_monthly": 300,
+          "objective": "Awareness + Conversão"
+        },
+        {
+          "campaign": "Meta RS + MT — Mariana (Reels + Stories + Carrossel)",
+          "platform": "Meta Ads",
+          "budget_monthly": 900,
+          "objective": "Conversão + Reach"
+        },
+        {
+          "campaign": "Meta retargeting + lookalike",
+          "platform": "Meta Ads",
+          "budget_monthly": 450,
+          "objective": "Conversão"
+        },
+        {
+          "campaign": "Meta B2B (Diego — Instagram audience profissional comercial varejo)",
+          "platform": "Meta Ads",
+          "budget_monthly": 150,
+          "objective": "Lead Generation"
+        }
+      ]
+    },
+    "recommendation": "Cenário B (Realista) — R$ 1.500/mês. Realoca 50% Google Search por persona + 40% Meta MT (Mariana B2C migrada) + 10% PMax retomado. Dobra leads qualificados (33→65/mês) sem queimar verba. Janela pré-pico farroupilha exige decisão até 2026-06-15."
+  },
+  "creative_testing_hypotheses": {
+    "description": "6 hipóteses de teste A/B para Meta Ads quando o canal abrir (Cenário B) + Google Ads RSA. Cada hipótese é uma afirmação testável com critério de sucesso quantitativo.",
+    "hypotheses": [
+      {
+        "hypothesis": "H1: Se mostrarmos o trançado manual da Bombacha de Favo em Reel de 60s pela costureira-chefe, então CTR > 3% e CPL no WhatsApp < R$ 25, porque processo artesanal cria momento de 'pause-and-watch' e justifica premium contra o motivo de perda #1 ('preço').",
+        "angle": "Processo artesanal narrado por quem faz — autenticidade verificável",
+        "format": "Reels",
+        "hook": "Você sabe o que é Bombacha de Favo de verdade?",
+        "body": "Trançado manual da costureira-chefe + voz da Loreni explicando o que diferencia da bombacha industrial. 45-60 segundos.",
+        "cta": "Veja como nasce — direto da fábrica",
+        "target_audience": "Mariana lookalike Brasil + interesse 'tradicionalismo gaúcho/MTG' + geo RS/SC/PR/MT",
+        "success_criteria": "CTR > 3% E CPL WhatsApp < R$ 25 em 7 dias",
+        "testing_budget": 200,
+        "testing_duration_days": 7,
+        "id": "H1"
+      },
+      {
+        "hypothesis": "H2: Para Mariana B2C, copy emocional 'A bombacha que respeita a tradição' supera copy funcional '35 dias direto da fábrica' em CTR no anúncio Search/Meta, porque o job emocional (autenticidade + identidade tradicionalista) tem mais peso que o job funcional na decisão B2C.",
+        "angle": "Comparação direta de mensagem-chave principal vs alternativa funcional",
+        "format": "Single image (Meta) + Search RSA (Google) com 2 headlines distintas",
+        "hook": "A bombacha que respeita a tradição. (vs) Bombacha de favo direto da fábrica, em 35 dias.",
+        "body": "Copy alinhada à headline + imagem do produto + CTA.",
+        "cta": "Conheça nossas bombachas",
+        "target_audience": "Mariana lookalike + retargeting LP",
+        "success_criteria": "Delta CTR > 30% entre as variantes em 7 dias com sample >100 cliques",
+        "testing_budget": 150,
+        "testing_duration_days": 7,
+        "id": "H2"
+      },
+      {
+        "hypothesis": "H3: UGC de Mariana real usando Bombacha de Favo em CTG/baila supera foto profissional de catálogo em Saves + CTR no Instagram, porque consumidoras buscam validação de pares antes de comprar premium tradicionalista.",
+        "angle": "Prova social orgânica (cliente real) vs produção profissional",
+        "format": "Single image + carrossel",
+        "hook": "Foto de Mariana real (cliente autorizada) em evento + texto sobreposto 'Bombacha de Favo Farroupilha'",
+        "body": "Depoimento curto da cliente sobre prazo cumprido + caimento.",
+        "cta": "Garante a sua antes da próxima Semana Farroupilha",
+        "target_audience": "Mariana lookalike + interesse tradicionalismo",
+        "success_criteria": "Saves +50% E CTR +25% vs controle (foto profissional)",
+        "testing_budget": 150,
+        "testing_duration_days": 7,
+        "id": "H3"
+      },
+      {
+        "hypothesis": "H4: Anúncio focado em UM produto (Bombacha de Favo solo) supera anúncio de linha completa (3 produtos em carrossel) em conversão WhatsApp, porque decisão B2C de produto premium é facilitada por foco — múltiplas opções geram paralisia.",
+        "angle": "Single product (premium) vs Multi product (linha)",
+        "format": "Single image Bombacha de Favo (controle) vs Carrossel 3 peças (variante)",
+        "hook": "Bombacha de Favo. Feita à mão. (single) | Bombachas Farroupilha — linha completa (carrossel)",
+        "body": "Foco no diferencial técnico (single) vs variedade (carrossel)",
+        "cta": "Faça seu pedido direto da fábrica",
+        "target_audience": "Mariana lookalike + retargeting LP visitantes Bombacha de Favo",
+        "success_criteria": "Conversão WhatsApp / 1.000 impressões: variante single > +20% vs carrossel",
+        "testing_budget": 120,
+        "testing_duration_days": 7,
+        "id": "H4"
+      },
+      {
+        "hypothesis": "H5: CTA com urgência sazonal ('antes da Semana Farroupilha') bate CTA atemporal ('direto da fábrica') em conversão durante o pré-pico (jun-jul), porque Mariana tem evento marcado e prazo de 35 dias entra como variável crítica.",
+        "angle": "Urgência sazonal vs atemporal",
+        "format": "Single image + Reel 30s",
+        "hook": "Garanta sua Bombacha de Favo antes da Semana Farroupilha — encomendas até [data X] (variante A) | Bombacha de Favo direto da fábrica, em 35 dias (variante B)",
+        "body": "Calendário visual de produção (A) vs Foco no diferencial (B)",
+        "cta": "Encomende agora",
+        "target_audience": "Mariana RS + MT em junho-julho 2026",
+        "success_criteria": "Conversão +30% para variante A durante jun-jul 2026, custo similar",
+        "testing_budget": 100,
+        "testing_duration_days": 14,
+        "id": "H5"
+      },
+      {
+        "hypothesis": "H6: Para Diego B2B, anúncio de Search com headline funcional ('15 peças mínimas + 35 dias direto da fábrica') supera anúncio com headline genérica ('fábrica de bombacha em Ciríaco/RS') em CTR para keywords B2B atacado.",
+        "angle": "Específico operacional vs genérico institucional",
+        "format": "Search RSA com 2 headlines distintas",
+        "hook": "Bombacha 35 dias, 15 peças mínimas. (A) | Fábrica de bombachas em Ciríaco/RS. (B)",
+        "body": "Argumento funcional + parceria direta + sem intermediário",
+        "cta": "Faça seu pedido B2B",
+        "target_audience": "Keywords B2B atacado (cluster Diego)",
+        "success_criteria": "Variante A CTR > +40% vs variante B em keywords B2B",
+        "testing_budget": 80,
+        "testing_duration_days": 14,
+        "id": "H6"
+      }
+    ],
+    "testing_budget_total_week_1": 800
+  },
+  "daypart_optimization": {
+    "description": "Ajustes de lance por janela temporal baseados no comportamento da persona Mariana (noites e fins de semana) e na sazonalidade pré-pico farroupilha.",
+    "adjustments": [
+      {
+        "day_time": "Segunda-Sexta 18-23h",
+        "bid_adjustment_pct": 20,
+        "rationale": "Mariana após trabalho, em casa, com tempo de scroll. Comportamento clássico de decisão de compra B2C feminina pela noite. Aumentar +20% para capturar."
+      },
+      {
+        "day_time": "Sábado e Domingo 10-22h",
+        "bid_adjustment_pct": 30,
+        "rationale": "Lazer + planejamento de eventos (semana farroupilha, baila, casamento). V4MOS mostra Sábado com maior CTR da semana (4,63%) — confirma janela. Aumentar +30%."
+      },
+      {
+        "day_time": "Segunda-Sexta 7-9h e 12-14h",
+        "bid_adjustment_pct": -10,
+        "rationale": "Commute + almoço — atenção fragmentada, decisão de compra B2C reduzida. Reduzir -10% para evitar desperdício em scroll rápido."
+      },
+      {
+        "day_time": "Madrugada 0-6h",
+        "bid_adjustment_pct": -50,
+        "rationale": "Audiência maioritária fora do perfil Mariana/Diego. Cliques de madrugada têm CPA historicamente acima da média no nicho varejo regional. Reduzir -50%."
+      },
+      {
+        "day_time": "Pré-pico (jul-set) — janelas 18-23h e finais de semana",
+        "bid_adjustment_pct": 50,
+        "rationale": "Sazonalidade — Semana Farroupilha aproximando. Aumentar +50% nas janelas de decisão pré-evento para garantir share of voice contra Regalo Campeiro e outros."
+      }
+    ]
+  },
+  "forecast_sensitivity_analysis": {
+    "base_case": {
+      "leads_monthly": 65,
+      "cpl": 23,
+      "cac": 35,
+      "revenue_monthly": 9200,
+      "roas": 3.2
+    },
+    "variations": [
+      {
+        "scenario": "WhatsApp Business com filtro não implementado",
+        "variable_change": "Sem filtro de persona, anti-persona continua consumindo tempo da Loreni e atrasando resposta",
+        "impact_on_leads": "+0 (volume mantém)",
+        "impact_on_cpl": "+10% (lead bruto não diminui mas qualificado cai)",
+        "impact_on_revenue": "-20% (taxa de conversão WA→pedido cai de 30% para 22%)",
+        "delta_vs_base_pct": -20
+      },
+      {
+        "scenario": "Reels semanais começam tarde (>4 semanas)",
+        "variable_change": "Cadência de produção de Reels da Bombacha de Favo atrasa — janela de ocupação narrativa diminui",
+        "impact_on_leads": "-15% (sem ativo de retargeting orgânico)",
+        "impact_on_cpl": "+20% (mais dependência de Search puro)",
+        "impact_on_revenue": "-25%",
+        "delta_vs_base_pct": -25
+      },
+      {
+        "scenario": "Meta MT abre só em agosto (atrasa lançamento)",
+        "variable_change": "Lançamento Meta MT perdoado — janela pré-pico farroupilha não captura MT em jul-set",
+        "impact_on_leads": "-25% (perde frente B2C migrada)",
+        "impact_on_cpl": "+5% (volume Google fica como única alavanca)",
+        "impact_on_revenue": "-30%",
+        "delta_vs_base_pct": -30
+      },
+      {
+        "scenario": "Bombacha de Favo nos lances atrasa (apontamento não implementado)",
+        "variable_change": "Carro-chefe + território de marca seguem fora dos lances",
+        "impact_on_leads": "+0 a -10%",
+        "impact_on_cpl": "+15% (sem premium justificado, motivo de perda 'preço' continua matando conversão)",
+        "impact_on_revenue": "-30% (Mariana não migra para favo, ticket médio fica em R$ 100)",
+        "delta_vs_base_pct": -30
+      },
+      {
+        "scenario": "Pico farroupilha 2026 cresce mais que esperado (+30% Expointer-like)",
+        "variable_change": "Tendência urbana confirma expansão de Mariana fora do nicho tradicionalista clássico",
+        "impact_on_leads": "+40%",
+        "impact_on_cpl": "-10% (mais volume dilui custo médio)",
+        "impact_on_revenue": "+50%",
+        "delta_vs_base_pct": 50
+      },
+      {
+        "scenario": "Regalo Campeiro abre Meta Ads agressivamente em agosto",
+        "variable_change": "Concorrente direto com 26K Instagram entra no leilão com budget maior",
+        "impact_on_leads": "-15%",
+        "impact_on_cpl": "+20% (CPC sobe no leilão)",
+        "impact_on_revenue": "-20%",
+        "delta_vs_base_pct": -20
+      }
+    ]
+  },
+  "realistic_goal": {
+    "target_cpl": 25.0,
+    "target_roas": 3.2,
+    "justification": "CPL atual é R$ 10,32 (clique no WhatsApp bruto) — não é métrica final. Após WhatsApp Business com filtro por persona + GA4/UTM dinâmica, lead QUALIFICADO (B2C Mariana real ou B2B Diego real) sai em R$ 25-35 (target R$ 25). ROAS de 3,2x assume: (a) taxa de conversão WA→pedido de 30% pós-filtro (vs ~10% hoje sem filtro); (b) ticket médio R$ 100 B2C + ticket médio R$ 4.600 B2B com mix 70/30; (c) implementação dos 6 apontamentos do plano de ação em 4-6 semanas.",
+    "assumptions": [
+      "Cenário B (Realista R$ 1.500/mês) aprovado pela Loreni até 2026-06-30",
+      "Reorientação Search por persona implementada pela agência até 2026-06-30",
+      "Bombacha de Favo nos lances até 2026-06-30",
+      "GA4 + UTM dinâmica + correção LP até 2026-06-15",
+      "WhatsApp Business com filtro por persona até 2026-06-15",
+      "Meta MT aberto até 2026-07-15 com lookalike do pixel Google",
+      "Reels semanais da Bombacha de Favo a partir de Semana 1-2 (4 primeiros com apoio do operador V4 Gina)",
+      "Cadência V4MOS 30/60/90d pós-contrato V4 para validar implementação"
+    ],
+    "risk_factors": [
+      "Agência de Passo Fundo implementa parcialmente (motivo de perda histórico — apontamentos cobrem mas dependem da Loreni cobrar)",
+      "Loreni atrasa produção de Reels por falta de tempo — território Bombacha de Favo fica como aspiracional",
+      "Concorrente Regalo Campeiro (26K Instagram) entra no leilão Meta com budget maior",
+      "Pico farroupilha 2026 frustra expectativa (CPM sobe além do esperado, CPC dobra)",
+      "Limitação do briefing — meta de faturamento da Loreni não declarada no V4MOS (item 15); ROAS 3,2x pode estar abaixo ou acima do desejado por ela"
+    ]
+  },
+  "realistic_goal_90d": {
+    "current_cpl": 10.32,
+    "target_cpl": 25.0,
+    "current_cac": 48.15,
+    "target_cac": 35.0,
+    "current_leads_month": 33,
+    "target_leads_month": 65,
+    "current_agendamentos_month": null,
+    "target_agendamentos_month": null,
+    "premissas": [
+      "Cenário B (R$ 1.500/mês) aprovado pela Loreni",
+      "Reorientação Search por persona + Bombacha de Favo nos lances até 2026-06-30",
+      "Meta MT aberto até 2026-07-15 com lookalike do pixel Google + Reels da Bombacha de Favo",
+      "WhatsApp Business com filtro por persona até 2026-06-15 (filtro reduz anti-persona em 30-40%)",
+      "GA4 + UTM dinâmica para atribuição por keyword/campanha",
+      "4 Reels semanais consecutivos nas primeiras 4 semanas (operador V4 Gina apoia primeiros 4)"
+    ]
+  },
+  "key_insight": {
+    "headline": "Reorientar Search por persona + Bombacha de Favo nos lances + abrir Meta MT = dobrar leads qualificados com R$ 1.500/mês ao invés de R$ 335 — cenário B (Realista) é destrava da Estruturação inteira.",
+    "context": "Google Ads em modo subscale (R$ 335/mês real vs R$ 0 declarado) entrega performance acima da média setor (CTR 2,22% + CPA R$ 10,32) mas opera com estrutura monolítica que ignora a persona dupla declarada (Mariana B2C principal + Diego B2B secundário) e marginaliza o carro-chefe (Bombacha de Favo com 7 impressões/90d). Meta Ads ZERO num cliente onde Mariana é ICP e Reels da Bombacha de Favo são o ativo defensável do território de marca. Cenário B realoca R$ 1.500/mês com 50% Google Search por persona + 40% Meta MT + 10% PMax retomado — dobra leads qualificados (33 → 65/mês) e ocupa janela narrativa antes que Regalo Campeiro (26K Instagram) entre.",
+    "numbered_reasons": [
+      "(1) Evidência do gap: top 4 keywords B2C ('bombacha de gaúcho', 'bombacha gaúcho', 'bombacha a venda', 'roupa bombacha') somam 195 cliques e 40,5 conversões com CPA <R$ 11 — performance comprovada num único grupo genérico. Segmentação por persona destrava mais 30-50 conversões/mês ao reorganizar verba existente.",
+      "(2) Causa-raiz: 1 grupo único = 23 keywords competem pelo mesmo budget. 'bombacha feminino' broad sangra CPA R$ 27,40. Bombacha de Favo (território aprovado) tem 7 impressões. Diego B2B (atacado, fábrica) está fora dos lances. Estrutura imatura — agência herdou da implementação inicial e nunca refinou.",
+      "(3) Upside projetado: dobrar leads qualificados (33 → 65/mês) com aumento de budget de 4,5x (R$ 335 → R$ 1.500) mas mantendo CPA controlado (R$ 25 alvo). Meta MT abre frente NOVA (Mariana migrada) capturando mercado virgem digitalmente. Reels da Bombacha de Favo (custo zero, operador V4 apoia) ocupa território narrativa antes que Regalo Campeiro (26K Instagram) entre no leilão Meta."
+    ],
+    "discussion_anchor": "Loreni e Everton precisam decidir esta semana se aprovam o Cenário B (R$ 1.500/mês — aumento de R$ 1.165 sobre os R$ 335 atuais) ou ficam no Cenário A (mantém R$ 900 reorganizado). Cenário B abre Meta MT (foco declarado de expansão) e ocupa janela pré-pico farroupilha. Sem decisão até 2026-06-15, Meta MT não consegue lançar até 2026-07-15 e perde a janela de jul-set — adia o ROI da Estruturação para 2027.",
+    "feasibility": "alta — depende de aprovação de budget + execução dos 6 apontamentos em 4-6 semanas. Custos diretos: R$ 1.165 adicional/mês para Meta MT + criação de conta. Risco principal: implementação parcial pela agência (mitigado por cadência V4MOS)."
+  },
+  "honesty_alert": "Forecast assume implementação dos 6 apontamentos do plano de ação em 4-6 semanas — não é cenário 'otimista', é cenário 'tudo executado'. Risco crítico: dos 6 apontamentos, 4 dependem da agência de Passo Fundo (reorientar Search + Bombacha de Favo nos lances + PMax + Meta MT) e 2 dependem da Loreni (WA Business filtro + Reels semanais). Histórico mostra que implementação parcial é cenário comum em PME com agência terceira. Mitigação operacional: cadência V4MOS 30/60/90 dias pós-contrato V4 — operador V4 Gina valida implementação via dados sem custo recorrente para o cliente. Benchmarks setoriais marcados como [E] — não há fonte pública específica para Google Ads B2C moda tradicionalista regional. CPL alvo R$ 25 pós-WA Business é ESTIMATIVA — pode oscilar para R$ 20-35 dependendo de qualidade do filtro. ROAS 3,2x assume mix 70% Mariana B2C + 30% Diego B2B no funil — se Loreni priorizar B2B mais (volume de pedido maior), ROAS pode chegar a 4-5x mas volume de leads cai. Pedir à Loreni meta de faturamento explícita (campo nulo no V4MOS item 15) antes da apresentação final ancora o forecast num número real."
+}
