@@ -50,9 +50,42 @@ def fmt_brl(v, prefix="R$ "):
         return f"{prefix}{_br(v/1_000_000_000, 2)} bi"
     if v >= 1_000_000:
         return f"{prefix}{_br(v/1_000_000, 2)} MM"
-    if v >= 1_000:
+    if v >= 10_000:
         return f"{prefix}{_br(v/1_000, 0)} mil"
+    if v >= 1_000:
+        # 1.500 → R$ 1.500 (não "R$ 2 mil"). Mantém precisão para faixas até 10k.
+        return f"{prefix}{_br(v, 0)}"
     return f"{prefix}{_br(v, 2)}"
+
+
+def truncate(s, max_chars=180, suffix="…"):
+    """Trunca string em palavra-boundary."""
+    if not s:
+        return ""
+    s = str(s).strip()
+    if len(s) <= max_chars:
+        return s
+    cut = s[:max_chars].rsplit(" ", 1)[0]
+    return cut + suffix
+
+
+def parse_money_from_text(s):
+    """Extrai primeiro valor monetário de uma string ('R$ 1.270.000+ (...)' → 'R$ 1,27M').
+
+    Retorna valor formatado ou a string original truncada se não achar número.
+    """
+    if not s:
+        return ""
+    import re
+    m = re.search(r"R\$\s*([\d\.\,]+)", str(s))
+    if not m:
+        return truncate(s, 28)
+    num_str = m.group(1).replace(".", "").replace(",", ".")
+    try:
+        v = float(num_str)
+        return fmt_brl(v)
+    except Exception:
+        return m.group(0).strip()
 
 
 def load_client(client_dir):
@@ -234,18 +267,26 @@ def build_onde_estamos(client, outputs):
     research = client.get("research", {}) or {}
     ig = research.get("instagram", {}) or {}
 
+    def _first_number(s):
+        if not s:
+            return None
+        import re
+        m = re.search(r"[\d\.\,]+", str(s))
+        return m.group(0) if m else None
+
     kpis = []
     if ident.get("annual_revenue"):
         kpis.append({
-            "label": "Faturamento atual",
-            "value": esc(ident["annual_revenue"]),
-            "hint": ident.get("monthly_revenue_avg") and f"Médio: {esc(ident['monthly_revenue_avg'])}" or "—",
+            "label": "Faturamento anual",
+            "value": esc(parse_money_from_text(ident["annual_revenue"])),
+            "hint": esc(truncate(ident.get("monthly_revenue_avg"), 50, "")) if ident.get("monthly_revenue_avg") else "—",
         })
     if product.get("active_customers"):
+        num = _first_number(product["active_customers"])
         kpis.append({
             "label": "Clientes ativos",
-            "value": esc(product["active_customers"]),
-            "hint": product.get("ticket") and esc(product["ticket"]) or "—",
+            "value": esc(num or product["active_customers"]),
+            "hint": esc(truncate(product.get("ticket"), 50, "")) if product.get("ticket") else "—",
         })
     if ig.get("followers"):
         kpis.append({
@@ -254,9 +295,10 @@ def build_onde_estamos(client, outputs):
             "hint": ig.get("engagement_rate") and f"engagement {esc(ig['engagement_rate'])}" or "Orgânico",
         })
     if ident.get("years_in_market"):
+        years_num = _first_number(ident["years_in_market"])
         kpis.append({
             "label": "Tempo de mercado",
-            "value": esc(ident["years_in_market"]),
+            "value": f"{esc(years_num)} anos" if years_num else esc(ident["years_in_market"]),
             "hint": ident.get("location") and esc(ident["location"]) or "—",
         })
 
@@ -326,7 +368,6 @@ def build_maturidade(client, outputs):
 
     bench_block = ""
     if bench_avg is not None:
-        comparison = bench.get("comparison", "")
         delta_text = ""
         try:
             diff = float(overall) - float(bench_avg)
@@ -338,13 +379,13 @@ def build_maturidade(client, outputs):
                 delta_text = '<span class="accent">no patamar</span>'
         except Exception:
             pass
+        bench_insight = truncate(bench.get("key_insight", ""), 220)
         bench_block = f"""
           <p class="subtitle-text" style="flex:1;">
-            Comparado ao setor (média {esc(bench_avg)}), você está {delta_text}. {esc(bench.get('key_insight', ''))}
+            Comparado ao setor (média {esc(bench_avg)}), você está {delta_text}. {esc(bench_insight)}
           </p>"""
 
-    key_insight = d.get("key_insight") or {}
-    headline = key_insight.get("headline") or d.get("summary_headline", "")
+    headline = truncate(d.get("summary_headline", ""), 200)
 
     return f"""
     <section class="slide slide--alt">
@@ -373,7 +414,7 @@ def build_maturidade(client, outputs):
 
 
 def _swot_quad(label, items, modifier):
-    lis = "".join(f"<li>{esc(t)}</li>" for t in (items or [])[:6])
+    lis = "".join(f"<li>{esc(truncate(t, 160))}</li>" for t in (items or [])[:5])
     return f"""
           <div class="swot-quad swot-quad--{modifier}">
             <div class="swot-quad__label">{esc(label)}</div>
@@ -449,20 +490,34 @@ def build_persona(client, outputs):
     if not persona:
         return ""
 
-    name = persona.get("name") or "Persona principal"
-    story = persona.get("story") or ""
-    quote = persona.get("quote") or d.get("key_message", {}).get("primary") if isinstance(d.get("key_message"), dict) else d.get("key_message", "")
+    # Nome: pega só a primeira persona se houver " e " (dupla) — slide é da principal.
+    raw_name = persona.get("name") or "Persona principal"
+    name = raw_name.split(" e ")[0].split(" + ")[0].strip()
+
+    # Story: trunca duro pro slide e tenta pegar só o trecho até o '|' (separador de personas)
+    story = (persona.get("story") or "").split("|")[0].strip()
+    story = truncate(story, 480)
+
+    # Quote: persona.quote (campo direto) ou primeiro trecho até '|'
+    quote_raw = persona.get("quote") or ""
+    if isinstance(d.get("key_message"), dict):
+        quote_raw = quote_raw or d["key_message"].get("primary", "")
+    elif isinstance(d.get("key_message"), str):
+        quote_raw = quote_raw or d["key_message"]
+    quote = truncate((quote_raw or "").split("|")[0].strip(), 220)
+
+    # Onde encontrar
     where = d.get("where_to_find") or {}
     where_summary = ""
     if isinstance(where, dict):
         chunks = []
-        for k in ("online", "offline", "social", "physical"):
+        for k in ("digital", "online", "offline", "social", "physical", "channels"):
             v = where.get(k)
             if v:
-                chunks.append(f"<strong>{esc(k.title())}:</strong> {esc(v)}")
-        where_summary = "<br/>".join(chunks)
+                chunks.append(f"<strong>{esc(k.title())}:</strong> {esc(truncate(v, 140))}")
+        where_summary = "<br/>".join(chunks[:3])
     elif isinstance(where, str):
-        where_summary = esc(where)
+        where_summary = esc(truncate(where, 280))
 
     return f"""
     <section class="slide">
@@ -501,18 +556,21 @@ def build_auditoria_comm(client, outputs):
             qw_items.append(it.get("action") or it.get("title") or it.get("text") or "")
         else:
             qw_items.append(str(it))
-    qw_html = "".join(f"<li>{esc(t)}</li>" for t in qw_items if t)
+    qw_html = "".join(f"<li>{esc(truncate(t, 160))}</li>" for t in qw_items if t)
     find_html = "".join(
-        f"<li>{esc(f.get('text', ''))}</li>" for f in findings[:5] if isinstance(f, dict)
+        f"<li>{esc(truncate(f.get('text', ''), 200))}</li>" for f in findings[:5] if isinstance(f, dict)
     )
+
+    headline = truncate(d.get("summary_headline", ""), 180)
 
     return f"""
     <section class="slide slide--alt">
       {LOGO}
       <div class="slide__content">
         <span class="eyebrow">Auditoria de comunicação</span>
-        <h2 class="title-section">{esc(d.get('summary_headline', 'Gaps por canal'))}</h2>
-        <div class="row-2" style="margin-top:2.5vh; gap:18px;">
+        <h2 class="title-section">Gaps por canal</h2>
+        <p class="subtitle-text" style="margin-bottom:1.5vh;">{esc(headline)}</p>
+        <div class="row-2" style="margin-top:1.5vh; gap:18px;">
           <div class="glass">
             <h3 class="subtitle" style="color:#ffd0a8; margin-bottom:12px; font-size:1.1rem;">Achados principais</h3>
             <ul class="bullets">{find_html}</ul>
@@ -544,8 +602,15 @@ def build_pesquisa_mercado(client, outputs):
             return node.get("display") or "—"
         return fmt_brl(v)
 
-    insight = d.get("key_insight") or {}
-    headline = insight.get("headline") or d.get("summary_headline", "")
+    def _short_desc(node):
+        if not isinstance(node, dict):
+            return ""
+        s = node.get("description") or node.get("short_description") or ""
+        # Remove flag estimativa [E] do início para slide
+        s = s.replace("[E] ", "").replace("[E]", "").strip()
+        return truncate(s, 110)
+
+    headline = truncate(d.get("summary_headline", ""), 200)
 
     return f"""
     <section class="slide slide--diag">
@@ -557,17 +622,17 @@ def build_pesquisa_mercado(client, outputs):
           <div class="glass" style="text-align:center;">
             <div class="kpi__label" style="font-size:1rem; letter-spacing:0.12em;">TAM</div>
             <div class="kpi__value" style="font-size:clamp(2.4rem, 3.6vw, 3.4rem);">{esc(_money(tam))}</div>
-            <div class="kpi__hint" style="font-size:0.95rem;">{esc(tam.get('description', ''))}</div>
+            <div class="kpi__hint" style="font-size:0.95rem;">{esc(_short_desc(tam))}</div>
           </div>
           <div class="glass" style="text-align:center; border: 2px solid rgba(255,208,168,0.4);">
             <div class="kpi__label" style="font-size:1rem; letter-spacing:0.12em;">SAM</div>
             <div class="kpi__value" style="font-size:clamp(2.4rem, 3.6vw, 3.4rem);">{esc(_money(sam))}</div>
-            <div class="kpi__hint" style="font-size:0.95rem;">{esc(sam.get('description', ''))}</div>
+            <div class="kpi__hint" style="font-size:0.95rem;">{esc(_short_desc(sam))}</div>
           </div>
           <div class="glass" style="text-align:center;">
             <div class="kpi__label" style="font-size:1rem; letter-spacing:0.12em;">SOM</div>
             <div class="kpi__value" style="font-size:clamp(2.4rem, 3.6vw, 3.4rem);">{esc(_money(som))}</div>
-            <div class="kpi__hint" style="font-size:0.95rem;">{esc(som.get('description', ''))}</div>
+            <div class="kpi__hint" style="font-size:0.95rem;">{esc(_short_desc(som))}</div>
           </div>
         </div>
         <div class="highlight-box" style="margin-top:3vh;">
@@ -590,13 +655,13 @@ def build_concorrentes(client, outputs):
     for c in competitors[:6]:
         if not isinstance(c, dict):
             continue
+        score = c.get("digital_score")
+        score_html = f"{esc(score)}<span style=\"opacity:0.5; font-weight:400\">/10</span>" if score is not None else "—"
         rows.append(f"""
             <tr>
               <td class="strong">{esc(c.get('name', '—'))}</td>
-              <td>{esc(c.get('type', '—'))}</td>
-              <td>{esc(c.get('followers_ig', c.get('followers', '—')))}</td>
-              <td class="accent-cell">{esc(c.get('digital_score', '—'))}</td>
-              <td>{esc(c.get('positioning', '—'))}</td>
+              <td class="accent-cell" style="white-space:nowrap;">{score_html}</td>
+              <td>{esc(truncate(c.get('positioning', ''), 180))}</td>
             </tr>""")
     if not rows:
         return ""
@@ -609,7 +674,7 @@ def build_concorrentes(client, outputs):
         <table class="compare" style="margin-top:2.5vh;">
           <thead>
             <tr>
-              <th>Concorrente</th><th>Tipo</th><th>Followers IG</th><th>Score digital</th><th>Posicionamento</th>
+              <th>Concorrente</th><th style="width:120px;">Score digital</th><th>Posicionamento</th>
             </tr>
           </thead>
           <tbody>{''.join(rows)}</tbody>
@@ -631,29 +696,37 @@ def build_posicionamento(client, outputs):
         tagline = tagline.get("text") or tagline.get("tagline") or ""
     territory = d.get("brand_territory") or {}
     if isinstance(territory, dict):
-        adjectives = territory.get("adjectives") or territory.get("attributes") or []
+        adjectives = (
+            territory.get("three_words")
+            or territory.get("adjectives")
+            or territory.get("attributes")
+            or []
+        )
     else:
         adjectives = []
 
-    pills = "".join(
-        f'<span class="pill" style="font-size:clamp(1rem, 1.35vw, 1.35rem); padding:14px 32px; background:rgba(255,225,180,0.18); border-color:rgba(255,225,180,0.4);">{esc(a)}</span>'
-        for a in adjectives[:5]
-    )
+    pills_block = ""
+    if adjectives:
+        pills = "".join(
+            f'<span class="pill" style="font-size:clamp(1rem, 1.35vw, 1.35rem); padding:14px 32px; background:rgba(255,225,180,0.18); border-color:rgba(255,225,180,0.4);">{esc(a)}</span>'
+            for a in adjectives[:5]
+        )
+        pills_block = f"""
+        <div style="margin:3vh 0; text-align:center;">
+          <div style="display:inline-flex; gap:14px; flex-wrap:wrap; justify-content:center;">{pills}</div>
+        </div>"""
 
     return f"""
     <section class="slide slide--soft">
       {LOGO}
       <div class="slide__content">
         <span class="eyebrow">Posicionamento aprovado</span>
-        <h2 class="title-section">Como vamos ser percebidos</h2>
-        <div style="margin:3vh 0; text-align:center;">
-          <div style="display:inline-flex; gap:14px; flex-wrap:wrap; justify-content:center;">{pills}</div>
-        </div>
+        <h2 class="title-section">Como vamos ser percebidos</h2>{pills_block}
         <div class="row-2" style="gap:18px;">
           <div class="glass">
             <div class="highlight-box__label">PUV — Proposta Única de Valor</div>
             <p style="font-weight:600; font-size:clamp(1rem, 1.2vw, 1.25rem); line-height:1.5; color:#fff; margin-top:10px;">
-              {esc(puv or '—')}
+              {esc(truncate(puv or '', 320) or '—')}
             </p>
           </div>
           <div class="glass" style="display:flex; flex-direction:column; justify-content:center;">
@@ -673,27 +746,26 @@ def build_midia_atual(client, outputs):
     if not d:
         return ""
     cm = d.get("current_metrics") or {}
-    if isinstance(cm, dict):
-        # tenta extrair métricas comuns; suporta nesting google_ads/meta_ads
-        def _get(*keys):
-            for k in keys:
-                v = cm.get(k)
-                if v is not None:
-                    return v
+
+    def _get(*keys):
+        if not isinstance(cm, dict):
             return None
+        for k in keys:
+            v = cm.get(k)
+            if v is not None:
+                return v
+        return None
 
-        invest = _get("monthly_investment_brl", "monthly_budget_brl", "budget_monthly_brl", "investment_brl")
-        cpa = _get("cpa_brl", "avg_cpa_brl", "cpa")
-        ctr = _get("ctr_pct", "avg_ctr_pct", "ctr")
-        cpl = _get("cpl_brl", "avg_cpl_brl", "cpl")
-    else:
-        invest = cpa = ctr = cpl = None
+    cpl = _get("cpl", "cpl_brl", "avg_cpl_brl")
+    cpa = _get("cpa", "cpa_brl", "avg_cpa_brl")
+    ctr = _get("ctr", "ctr_pct", "avg_ctr_pct")
+    cpc = _get("cpc", "cpc_brl")
+    leads = _get("total_leads", "leads", "conversions")
+    invest = d.get("monthly_budget")
+    if invest is None:
+        invest = _get("monthly_investment_brl", "monthly_budget_brl", "investment_brl")
 
-    monthly_budget = d.get("monthly_budget")
-    if invest is None and isinstance(monthly_budget, (int, float, str)):
-        invest = monthly_budget
-
-    headline = (d.get("key_insight") or {}).get("headline") or d.get("summary_headline", "")
+    headline = truncate(d.get("summary_headline", ""), 220)
 
     kpis_html = []
     if invest is not None:
@@ -703,26 +775,36 @@ def build_midia_atual(client, outputs):
             <div class="kpi__value">{esc(fmt_brl(invest) if isinstance(invest, (int, float)) else invest)}<span style="font-size:1.1rem; opacity:0.6">/mês</span></div>
             <div class="kpi__hint">Volume atual de mídia paga</div>
           </div>""")
+    # CPA tem prioridade sobre CPL; se ambos faltam mas há CPC, usa CPC
+    cost_metric = None
     if cpa is not None:
+        cost_metric = ("CPA médio", fmt_brl(cpa) if isinstance(cpa, (int, float)) else cpa, "Custo por aquisição")
+    elif cpl is not None:
+        cost_metric = ("CPL médio", fmt_brl(cpl) if isinstance(cpl, (int, float)) else cpl, "Custo por lead")
+    if cost_metric:
         kpis_html.append(f"""
           <div class="glass">
-            <div class="kpi__label">CPA médio</div>
-            <div class="kpi__value">{esc(fmt_brl(cpa) if isinstance(cpa, (int, float)) else cpa)}</div>
-            <div class="kpi__hint">Custo por aquisição</div>
+            <div class="kpi__label">{esc(cost_metric[0])}</div>
+            <div class="kpi__value">{esc(cost_metric[1])}</div>
+            <div class="kpi__hint">{esc(cost_metric[2])}</div>
           </div>""")
     if ctr is not None:
+        try:
+            ctr_str = f"{float(ctr):.2f}".replace(".", ",")
+        except Exception:
+            ctr_str = str(ctr)
         kpis_html.append(f"""
           <div class="glass">
             <div class="kpi__label">CTR médio</div>
-            <div class="kpi__value">{esc(ctr)}%</div>
+            <div class="kpi__value">{esc(ctr_str)}%</div>
             <div class="kpi__hint">Taxa de cliques</div>
           </div>""")
-    if cpl is not None:
+    if leads is not None:
         kpis_html.append(f"""
           <div class="glass">
-            <div class="kpi__label">CPL médio</div>
-            <div class="kpi__value">{esc(fmt_brl(cpl) if isinstance(cpl, (int, float)) else cpl)}</div>
-            <div class="kpi__hint">Custo por lead</div>
+            <div class="kpi__label">Leads (período)</div>
+            <div class="kpi__value">{esc(leads)}</div>
+            <div class="kpi__hint">{esc('CPC ' + fmt_brl(cpc) if isinstance(cpc, (int, float)) else 'Conversões medidas')}</div>
           </div>""")
 
     if not kpis_html:
@@ -734,13 +816,10 @@ def build_midia_atual(client, outputs):
       {LOGO}
       <div class="slide__content">
         <span class="eyebrow">Mídia paga · números atuais</span>
-        <h2 class="title-section">{esc(d.get('summary_headline', 'Diagnóstico de mídia paga'))}</h2>
-        <div class="{row_cls}" style="margin-top:2.5vh;">
+        <h2 class="title-section">Diagnóstico de mídia paga</h2>
+        <p class="subtitle-text" style="margin-bottom:1.5vh;">{esc(headline)}</p>
+        <div class="{row_cls}" style="margin-top:1.5vh;">
           {''.join(kpis_html)}
-        </div>
-        <div class="highlight-box" style="margin-top:3vh;">
-          <div class="highlight-box__label">Leitura V4</div>
-          <div class="highlight-box__text">{esc(headline)}</div>
         </div>
       </div>
     </section>
@@ -767,18 +846,29 @@ def build_midia_cenarios(client, outputs):
         total = sc.get("total_budget_monthly")
         leads = sc.get("expected_leads_monthly")
         delta = sc.get("delta_leads") or ""
+        cpl = sc.get("expected_cpl")
         is_recommended = "realistic" in key
         border = "border: 2px solid rgba(255,208,168,0.4);" if is_recommended else ""
         color = "color:#ffd0a8;" if is_recommended else ""
-        hint = sc.get("risk_assessment") or ""
         if leads:
-            hint_short = f"Esperado: ~{esc(leads)} leads/mês {('· ' + esc(delta)) if delta else ''}"
+            extras = []
+            if delta:
+                extras.append(esc(delta))
+            if cpl is not None:
+                extras.append(f"CPL {esc(fmt_brl(cpl) if isinstance(cpl, (int, float)) else cpl)}")
+            extras_str = " · ".join(extras)
+            hint_short = f"~{esc(leads)} leads/mês" + (f" · {extras_str}" if extras_str else "")
         else:
-            hint_short = (hint[:140] + "…") if len(hint) > 140 else hint
+            hint_short = truncate(sc.get("risk_assessment", ""), 140)
+        # Formato custom para budget: força "R$ X.XXX" em vez de "R$ X mil"
+        if isinstance(total, (int, float)):
+            total_fmt = f"R$ {int(total):,}".replace(",", ".")
+        else:
+            total_fmt = str(total or "—")
         cards.append(f"""
           <div class="glass" style="{border}">
             <div class="kpi__label" style="{color}">Cenário {esc(label)}</div>
-            <div class="kpi__value" style="font-size:1.9rem; {color}">{esc(fmt_brl(total) if isinstance(total, (int, float)) else total)}/mês</div>
+            <div class="kpi__value" style="font-size:1.9rem; {color}">{esc(total_fmt)}<span style="font-size:1rem; opacity:0.6">/mês</span></div>
             <div class="kpi__hint" style="margin-top:8px;">{esc(hint_short)}</div>
           </div>""")
 
@@ -810,28 +900,71 @@ def build_organico_comparativo(client, outputs):
     if not me and not comps:
         return ""
 
-    rows = []
-    rows.append(f"""
-            <tr style="background:rgba(255,225,180,0.1);">
-              <td class="strong">@{esc(me.get('username', '—'))} (você)</td>
-              <td>{esc(me.get('followers_count', '—'))}</td>
-              <td>{esc(me.get('posts_per_week') or me.get('cadence_per_week') or '—')}</td>
-              <td class="accent-cell" style="font-size:1.15rem;">{esc(me.get('engagement_rate_pct') or me.get('engagement_rate') or '—')}</td>
-              <td>{esc(me.get('top_format') or '—')}</td>
-            </tr>""")
-    for c in comps[:3]:
-        if not isinstance(c, dict):
-            continue
-        rows.append(f"""
-            <tr>
-              <td>@{esc(c.get('username', '—'))}</td>
-              <td>{esc(c.get('followers_count', '—'))}</td>
-              <td>{esc(c.get('posts_per_week') or c.get('cadence_per_week') or '—')}</td>
-              <td>{esc(c.get('engagement_rate_pct') or c.get('engagement_rate') or '—')}</td>
-              <td>{esc(c.get('top_format') or '—')}</td>
-            </tr>""")
+    # Index by username
+    cadence_by_user = {}
+    for r in (d.get("cadence") or {}).get("by_account", []) or []:
+        if isinstance(r, dict) and r.get("username"):
+            cadence_by_user[r["username"]] = r
+    eng_by_user = {}
+    for r in (d.get("engagement_benchmark") or {}).get("by_account", []) or []:
+        if isinstance(r, dict) and r.get("username"):
+            eng_by_user[r["username"]] = r
 
-    headline = (d.get("key_insight") or {}).get("headline") or d.get("summary_headline", "")
+    def _row(acc, is_me=False):
+        u = acc.get("username", "")
+        cad = cadence_by_user.get(u, {})
+        eng = eng_by_user.get(u, {})
+        followers = acc.get("followers_count")
+        posts = cad.get("posts_per_week")
+        engagement = eng.get("avg_engagement_proxy")
+        fmt = eng.get("best_format_by_engagement") or "—"
+
+        # Format engagement as percentage
+        eng_str = "—"
+        if engagement is not None:
+            try:
+                eng_str = f"{float(engagement):.2f}%"
+            except Exception:
+                eng_str = str(engagement)
+        # Format posts/week
+        posts_str = "—"
+        if posts is not None:
+            try:
+                posts_str = f"{float(posts):.2f}".replace(".", ",")
+            except Exception:
+                posts_str = str(posts)
+        # Followers with thousands separator
+        fol_str = "—"
+        if followers is not None:
+            try:
+                fol_str = f"{int(followers):,}".replace(",", ".")
+            except Exception:
+                fol_str = str(followers)
+
+        if is_me:
+            return f"""
+            <tr style="background:rgba(255,225,180,0.1);">
+              <td class="strong">@{esc(u)} (você)</td>
+              <td>{esc(fol_str)}</td>
+              <td>{esc(posts_str)}</td>
+              <td class="accent-cell" style="font-size:1.15rem;">{esc(eng_str)}</td>
+              <td>{esc(fmt)}</td>
+            </tr>"""
+        return f"""
+            <tr>
+              <td>@{esc(u)}</td>
+              <td>{esc(fol_str)}</td>
+              <td>{esc(posts_str)}</td>
+              <td>{esc(eng_str)}</td>
+              <td>{esc(fmt)}</td>
+            </tr>"""
+
+    rows = [_row(me, is_me=True)]
+    for c in comps[:3]:
+        if isinstance(c, dict):
+            rows.append(_row(c))
+
+    headline = truncate((d.get("key_insight") or {}).get("headline") or d.get("summary_headline", ""), 220)
 
     return f"""
     <section class="slide slide--diag">
@@ -865,11 +998,13 @@ def build_organico_padroes(client, outputs):
     for i, p in enumerate(missing[:5]):
         if not isinstance(p, dict):
             continue
+        pattern_name = truncate(p.get("pattern", "—"), 60)
+        body = p.get("why_works") or p.get("how_to_apply") or "—"
         cards.append(f"""
           <div class="glass" style="padding:18px;">
-            <div class="kpi__label" style="font-size:0.85rem;">{i+1} · {esc(p.get('pattern', '—'))}</div>
+            <div class="kpi__label" style="font-size:0.85rem;">{i+1} · {esc(pattern_name)}</div>
             <p style="font-size:1rem; line-height:1.45; margin-top:10px; color:rgba(255,245,230,0.95);">
-              {esc(p.get('why_works') or p.get('how_to_apply') or '—')}
+              {esc(truncate(body, 180))}
             </p>
           </div>""")
     if not cards:
@@ -891,7 +1026,14 @@ def build_cro_tecnico(client, outputs):
     if not d:
         return ""
     tech = d.get("technical_audit") or {}
-    psi = tech.get("psi") or tech.get("pagespeed") or {}
+    psi = tech.get("pagespeed") or tech.get("psi") or {}
+    # Estrutura real: pagespeed.mobile_scores.{performance,accessibility,best_practices,seo}
+    scores = {}
+    if isinstance(psi, dict):
+        ms = psi.get("mobile_scores") or psi.get("mobile") or psi
+        if isinstance(ms, dict):
+            scores = ms
+
     kpis = []
     for key, label in [
         ("performance", "PageSpeed"),
@@ -899,9 +1041,7 @@ def build_cro_tecnico(client, outputs):
         ("best_practices", "Best Practices"),
         ("seo", "SEO"),
     ]:
-        v = psi.get(key) if isinstance(psi, dict) else None
-        if v is None and isinstance(psi.get("mobile"), dict):
-            v = psi["mobile"].get(key)
+        v = scores.get(key)
         if v is not None:
             kpis.append((label, v))
 
@@ -912,15 +1052,19 @@ def build_cro_tecnico(client, outputs):
           <div class="glass">
             <div class="kpi__label">{esc(label)}</div>
             <div class="kpi__value">{esc(score)}<span style="font-size:1.3rem; opacity:0.6">/100</span></div>
+            <div class="kpi__hint">Mobile</div>
           </div>""" for label, score in kpis)
+
+    headline = truncate(d.get("summary_headline", ""), 220)
 
     return f"""
     <section class="slide slide--diag">
       {LOGO}
       <div class="slide__content">
         <span class="eyebrow">Site e conversão · técnico</span>
-        <h2 class="title-section">{esc(d.get('summary_headline', 'Diagnóstico de CRO'))}</h2>
-        <div class="row-{min(4, len(kpis))}" style="margin-top:2.5vh;">{kpi_html}</div>
+        <h2 class="title-section">Diagnóstico técnico do site</h2>
+        <p class="subtitle-text" style="margin-bottom:1.5vh;">{esc(headline)}</p>
+        <div class="row-{min(4, len(kpis))}" style="margin-top:1.5vh;">{kpi_html}</div>
       </div>
     </section>
     """
@@ -930,21 +1074,48 @@ def build_cro_muros(client, outputs):
     d = outputs.get("ee-s2-diagnostico-cro")
     if not d:
         return ""
-    problems = d.get("top_problems") or d.get("technical_diagnosis") or []
     items = []
-    if isinstance(problems, list):
-        for p in problems[:3]:
+
+    # 1) Preferência: top_problems (se a skill os emitir explicitamente)
+    top_problems = d.get("top_problems")
+    if isinstance(top_problems, list):
+        for p in top_problems[:3]:
             if isinstance(p, dict):
                 items.append({
                     "title": p.get("title") or p.get("problem") or p.get("dimension") or "—",
                     "text": p.get("description") or p.get("text") or p.get("impact") or "",
                 })
+
+    # 2) Fallback: hipóteses P1 (high impact)
+    if not items:
+        hypotheses = d.get("test_hypotheses") or []
+        p1 = [h for h in hypotheses if isinstance(h, dict) and h.get("priority") == "P1"]
+        for h in p1[:3]:
+            items.append({
+                "title": h.get("element") or "—",
+                "text": h.get("hypothesis") or h.get("expected_impact_description") or "",
+            })
+
+    # 3) Último recurso: critical_issues como strings
+    if not items:
+        ci = (d.get("technical_diagnosis") or {}).get("critical_issues")
+        if isinstance(ci, list):
+            for s in ci[:3]:
+                if isinstance(s, str) and s.strip():
+                    # tenta separar título em "— "
+                    parts = s.split(" — ", 1)
+                    items.append({
+                        "title": truncate(parts[0], 60),
+                        "text": parts[1] if len(parts) > 1 else "",
+                    })
+
     if not items:
         return ""
+
     cards = "".join(f"""
           <div class="glass" style="border-left:3px solid #ff8080; padding:24px;">
-            <h3 class="subtitle" style="color:#ff9c9c; margin-bottom:12px; font-size:1.2rem;">{esc(it['title'])}</h3>
-            <p style="font-size:1.05rem; line-height:1.5; color:rgba(255,245,230,0.95);">{esc(it['text'])}</p>
+            <h3 class="subtitle" style="color:#ff9c9c; margin-bottom:12px; font-size:1.2rem;">{esc(truncate(it['title'], 60))}</h3>
+            <p style="font-size:1.05rem; line-height:1.5; color:rgba(255,245,230,0.95);">{esc(truncate(it['text'], 240))}</p>
           </div>""" for it in items)
     return f"""
     <section class="slide">
@@ -1030,9 +1201,42 @@ def build_proximos_passos(client, outputs):
     """
 
 
+SKILL_PRETTY_NAMES = {
+    "ee-s1-diagnostico-maturidade": "Diagnóstico de Maturidade",
+    "ee-s1-swot": "SWOT",
+    "ee-s1-persona-icp": "Persona / ICP",
+    "ee-s1-auditoria-comunicacao": "Auditoria de Comunicação",
+    "ee-s2-pesquisa-mercado": "Pesquisa de Mercado",
+    "ee-s2-posicionamento": "Posicionamento",
+    "ee-s2-diagnostico-midia": "Diagnóstico de Mídia Paga",
+    "ee-s2-diagnostico-organico-ig": "Diagnóstico Orgânico (IG)",
+    "ee-s2-diagnostico-cro": "Diagnóstico de CRO",
+    "ee-s2-diagnostico-criativos": "Diagnóstico de Criativos",
+    "ee-s3-brandbook": "Brandbook",
+    "ee-s3-copy-anuncios": "Copy de Anúncios",
+    "ee-s3-criativos-anuncios": "Criativos de Anúncios",
+    "ee-s3-crm-setup": "Setup de CRM",
+    "ee-s3-forecast-midia": "Forecast de Mídia",
+    "ee-s3-gmb-otimizacao": "GMB · Otimização",
+    "ee-s3-identidade-visual": "Identidade Visual",
+    "ee-s3-landing-page": "Landing Page",
+    "ee-s3-manual-marca": "Manual de Marca",
+    "ee-s4-cliente-oculto": "Cliente Oculto",
+    "ee-s4-diagnostico-comercial": "Diagnóstico Comercial",
+    "ee-s5-scripts-sdr": "Scripts SDR",
+    "ee-s5-sdr-ia-config": "SDR IA · Config",
+}
+
+
 def _pretty_skill_name(sid):
-    """ee-s3-landing-page → Landing Page."""
-    base = sid.replace("ee-s1-", "").replace("ee-s2-", "").replace("ee-s3-", "").replace("ee-s4-", "").replace("ee-s5-", "")
+    """ee-s3-landing-page → Landing Page (com acentos)."""
+    if sid in SKILL_PRETTY_NAMES:
+        return SKILL_PRETTY_NAMES[sid]
+    base = sid
+    for prefix in ("ee-s1-", "ee-s2-", "ee-s3-", "ee-s4-", "ee-s5-"):
+        if base.startswith(prefix):
+            base = base[len(prefix):]
+            break
     return base.replace("-", " ").title()
 
 
@@ -1368,7 +1572,7 @@ SHELL_HTML = """<!DOCTYPE html>
   <div class="controls">
     <button class="control-btn" id="prev" aria-label="Anterior">‹</button>
     <div class="progress-bar"><div class="progress-bar__fill" id="progress"></div></div>
-    <span class="counter" id="counter">1 / 1</span>
+    <span class="counter" id="counter">1 / {total_slides}</span>
     <button class="control-btn" id="next" aria-label="Próximo">›</button>
     <button class="control-btn" id="fullscreen" aria-label="Tela cheia">⛶</button>
   </div>
@@ -1447,7 +1651,8 @@ def render(client_dir):
     slides_html = compose_slides(client, outputs)
     name = client.get("meta", {}).get("name", "Cliente")
     title = f"{name} · Diagnóstico Estratégico"
-    html_out = SHELL_HTML.format(title=esc(title), slides=slides_html)
+    total_slides = slides_html.count('<section class="slide')
+    html_out = SHELL_HTML.format(title=esc(title), slides=slides_html, total_slides=total_slides)
 
     with open(out_path, "w", encoding="utf-8") as f:
         f.write(html_out)
