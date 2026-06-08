@@ -7,3 +7,4 @@ clientes/*/cache/
 clientes/*/assets/creatives/**/*.mp4
 clientes/*/assets/creatives/**/*.mov
 clientes/*/assets/creatives/**/*.webm
+.env*

@@ -206,7 +206,7 @@ def build_cover(client, outputs):
       </div>
       <div class="slide__footer">
         <span>{month_pt} · {now.year}</span>
-        <span>V4 Company · Estruturação Estratégica</span>
+        <span>V4 Company · Diagnóstico e Planejamento de Marketing e Vendas no Digital</span>
       </div>
       <div class="deco-square deco-s1"></div>
       <div class="deco-square deco-s2"></div>
@@ -274,6 +274,21 @@ def build_onde_estamos(client, outputs):
         m = re.search(r"[\d\.\,]+", str(s))
         return m.group(0) if m else None
 
+    def _parse_duration(s):
+        if not s:
+            return None
+        import re
+        m = re.search(r"(\d+)\+?\s*(mes(?:es)?|anos?)", str(s), re.IGNORECASE)
+        if not m:
+            return None
+        num = m.group(1)
+        unit = m.group(2).lower()
+        if unit.startswith("mes"):
+            unit_norm = "mês" if num == "1" else "meses"
+        else:
+            unit_norm = "ano" if num == "1" else "anos"
+        return f"{num} {unit_norm}"
+
     kpis = []
     if ident.get("annual_revenue"):
         kpis.append({
@@ -295,10 +310,10 @@ def build_onde_estamos(client, outputs):
             "hint": ig.get("engagement_rate") and f"engagement {esc(ig['engagement_rate'])}" or "Orgânico",
         })
     if ident.get("years_in_market"):
-        years_num = _first_number(ident["years_in_market"])
+        duration = _parse_duration(ident["years_in_market"])
         kpis.append({
             "label": "Tempo de mercado",
-            "value": f"{esc(years_num)} anos" if years_num else esc(ident["years_in_market"]),
+            "value": esc(duration) if duration else esc(truncate(ident["years_in_market"], 30, "")),
             "hint": ident.get("location") and esc(ident["location"]) or "—",
         })
 
@@ -1251,7 +1266,7 @@ def build_fechamento(client, outputs):
         </p>
       </div>
       <div class="slide__footer">
-        <span>V4 Company · Estruturação Estratégica</span>
+        <span>V4 Company · Diagnóstico e Planejamento de Marketing e Vendas no Digital</span>
         <span></span>
       </div>
     </section>

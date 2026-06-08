@@ -1,0 +1,358 @@
+{
+  "client_name": "Lucena Advisory",
+  "skill": "ee-s1-diagnostico-maturidade",
+  "version": 1,
+  "generated_at": "2026-05-28T00:00:00Z",
+  "data_source": "mixed",
+  "summary": "Score geral 8/100 (Crítico extremo). Lucena Advisory é Zero Digital absoluto — sem site, sem Instagram, sem GMB, sem GA4, sem mídia paga (confirmado V4MOS: 0 campanhas Google Ads, 0 Meta nos últimos 90 dias). CRM = planilhas. Operação 100% por indicação/passivo, 10 clientes ativos, 5 vendas/mês com ~50% conversão proposta→venda em ciclo de 15 dias. CNPJ aberto em janeiro/2026 — 4 meses de vida. Diferencial real é institucional (decisor com 10+ anos, time multidisciplinar, cliente-âncora Rei dos Bons Amigos com 26 CNPJs e R$ 300M+/ano), não digital. Motivo #1 de perda declarado: 'lead sumiu' — problema de follow-up, não de preço (cliente sem objeção a budget R$ 5k/mês na SDR). O pilar de alavancagem é CRM/processo comercial: sem fechar o vazamento de follow-up e sem qualificar comitê de compra B2B, qualquer aquisição estruturada via marketing digital aterrissaria em um funil que não tem onde aterrissar.",
+  "summary_headline": "Lucena Advisory entra com 8/100 — Zero Digital absoluto, mas com 50% conversão proposta→venda. O gargalo é comercial (CRM + follow-up), não aquisição.",
+  "summary_highlights": [
+    {
+      "category": "maturidade",
+      "label": "Score geral",
+      "value": "8/100",
+      "subtext": "Crítico extremo — Zero Digital absoluto declarado e confirmado",
+      "tone": "red"
+    },
+    {
+      "category": "competicao",
+      "label": "Benchmark setor",
+      "value": "~32",
+      "subtext": "B2B serviços / consultoria — gap de -24 pts",
+      "tone": "red"
+    },
+    {
+      "category": "oportunidade",
+      "label": "Conversão proposta→venda",
+      "value": "50%",
+      "subtext": "10 propostas → 5 vendas/mês — processo comercial existe",
+      "tone": "green"
+    },
+    {
+      "category": "risco",
+      "label": "Pilar mais fraco",
+      "value": "CRO 5/100",
+      "subtext": "Sem site, sem LP, sem GMB — nada onde tráfego aterrissa",
+      "tone": "red"
+    },
+    {
+      "category": "oportunidade",
+      "label": "Cliente-âncora",
+      "value": "R$ 300M+",
+      "subtext": "Rei dos Bons Amigos — 26 CNPJs já cliente. ABM aqui antes de novo topo",
+      "tone": "green"
+    },
+    {
+      "category": "janela",
+      "label": "Idade do CNPJ",
+      "value": "4 meses",
+      "subtext": "Estruturação do zero — janela rara sem vícios pré-existentes",
+      "tone": "blue"
+    }
+  ],
+  "summary_key_findings": [
+    {
+      "category": "vantagem",
+      "text": "O processo comercial básico existe e converte: 10 propostas → 5 vendas/mês em ciclo de 15 dias = ~50% de conversão proposta→venda. Ciclo curto para consultoria B2B (mercado costuma operar em 30-90 dias). O dono opera tudo (decisor + vendedor + executor) com 10+ anos de mercado, advogado + engenheiro ambiental + mestre em direito ambiental — capital de credibilidade institucional acima do score digital."
+    },
+    {
+      "category": "contexto",
+      "text": "Zero Digital confirmado em três frentes: (i) declarado pelo Aldo no V4MOS ('Em quais canais digitais sua empresa está presente ativamente? Nenhum'), (ii) ausência de site/IG/GMB/email institucional no briefing, (iii) connectors V4MOS retornam 0 campanhas Google Ads e 0 Meta Ads no período 2026-02-24 a 2026-05-25. Não há legado de mídia paga para diagnosticar — é literalmente estruturar do zero."
+    },
+    {
+      "category": "ameaca",
+      "text": "Motivo #1 de perda declarado é 'lead sumiu sem dar retorno' — diagnóstico claro de vazamento de follow-up, NÃO de objeção comercial (cliente reagiu sem objeção a budget R$ 5k/mês e projetos R$ 30k na call SDR). Combinado com CRM = planilhas + 'padrão de follow-up parcialmente seguido' + ausência de forecast/MoM/CAC/LTV, qualquer mídia paga que entre agora vai turbinar o vazamento, não a receita."
+    },
+    {
+      "category": "contexto",
+      "text": "Existe conflito de metas entre fontes: V4MOS declarou meta R$ 100k em 12 meses; call SDR declarou R$ 50k/mês em 6 meses (≈ R$ 600k/ano). Diferença de 6× muda completamente a calibragem de prioridade — meta de R$ 100k aceita crescimento orgânico via âncora; meta de R$ 600k exige máquina de aquisição B2B + ABM agressivo. Resolver no Kick-Off antes da Persona/ICP."
+    },
+    {
+      "category": "acao",
+      "text": "Sequência recomendada inverte a ordem 'aquisição primeiro' do playbook padrão V4: (1) CRM mínimo + qualificação de comitê + automação de follow-up — atacar o vazamento; (2) Identidade visual + LP institucional B2B + GMB — alicerce de credibilidade para ABM; (3) Mapeamento Comitê de Compra de Rei dos Bons Amigos para expansão dentro da âncora; (4) Mídia paga apenas após (1)+(2)+(3) — provavelmente substituída por LDR/prospector conforme já hipotetizado na FPS."
+    }
+  ],
+  "overall_score": 8,
+  "overall_classification": "critical",
+  "pillar_scores": [
+    {
+      "pillar": "midia_paga",
+      "score": 5,
+      "classification": "critical",
+      "highlight": "Zero absoluto. Sem Meta Business Manager, sem Google Ads, sem pixel, sem tag, sem investimento em qualquer plataforma. Connectors V4MOS confirmam: 0 campanhas em 90 dias.",
+      "estimated": false,
+      "details": {
+        "strengths": [
+          "Ausência de legado significa que cada decisão será nova — sem campanhas mal estruturadas para corrigir, sem pixel envenenado por audiência errada."
+        ],
+        "weaknesses": [
+          "Sem Meta Business Manager.",
+          "Sem conta Google Ads ativa nem pausada.",
+          "Sem pixel/CAPI instalado em lugar nenhum (não há site para instalar).",
+          "Sem investimento declarado em qualquer plataforma de mídia paga.",
+          "Sem histórico de audiência para alimentar lookalike no futuro.",
+          "Equipe interna não tem repertório de mídia paga (FPS declara 'sem equipe de marketing')."
+        ],
+        "metrics": {
+          "investimento_mensal_brl": 0,
+          "google_ads_campanhas_ativas": 0,
+          "google_ads_campanhas_pausadas": 0,
+          "google_ads_gasto_90d_brl": 0,
+          "meta_business_manager": false,
+          "meta_campanhas_ativas": 0,
+          "pixel_meta": false,
+          "tag_google_ads": false,
+          "ga4_detectado": false,
+          "gtm_instalado": false
+        }
+      }
+    },
+    {
+      "pillar": "criativos",
+      "score": 5,
+      "classification": "critical",
+      "highlight": "Zero produção de conteúdo. Cliente declarou no V4MOS: 'Não publico' e 'Não usamos redes sociais'. Sem identidade visual, sem logo, sem banco de fotos, sem repertório a recuperar.",
+      "estimated": true,
+      "details": {
+        "strengths": [
+          "Time multidisciplinar (direito administrativo, arquitetura/urbanismo, engenharia de segurança, administração) dá repertório técnico para criativos de autoridade (estudos de caso, pareceres, processos)."
+        ],
+        "weaknesses": [
+          "Sem identidade visual mínima (sem logo, sem paleta, sem tipografia — declarado has_logo=false).",
+          "Sem banco de imagens da empresa, da equipe ou do escritório.",
+          "Zero criativos prontos para anúncios — entrega de '3 criativos de exemplo' está prevista na Etapa 3 do FPS.",
+          "Sem framework de copy por persona (jornada Comitê de Compra B2B não foi formalizada).",
+          "Aldo opera sozinho a comunicação — sem capacidade interna de produzir conteúdo regular hoje."
+        ],
+        "metrics": {
+          "criativos_ativos_em_anuncios": 0,
+          "tem_logo": false,
+          "tem_manual_marca": false,
+          "publicacao_frequencia": "nunca",
+          "instagram_organico_ativo": false
+        }
+      }
+    },
+    {
+      "pillar": "cro",
+      "score": 5,
+      "classification": "critical",
+      "highlight": "Sem site, sem landing page, sem qualquer ponto de conversão digital. WhatsApp pessoal +55 92 8220-2492 é o único canal — sem qualificação, sem tracking, sem origem de lead.",
+      "estimated": false,
+      "details": {
+        "strengths": [
+          "Existe WhatsApp único declarado (+55 92 8220-2492) operado pelo decisor — canal funcional mesmo que sem instrumentação."
+        ],
+        "weaknesses": [
+          "Sem site (declarado V4MOS).",
+          "Sem landing page de captura.",
+          "Sem GA4, sem GTM, sem qualquer ferramenta de Analytics.",
+          "Sem GMB (Google Meu Negócio) reivindicado em Manaus.",
+          "Sem formulário de qualificação — leads chegam por indicação direta, sem filtro de comitê (engenheiro vs gestor vs diretor).",
+          "Sem proposta de valor publicada — PUV ainda será construída na Etapa 2.",
+          "Sem prova social estruturada (cases do Rei dos Bons Amigos, depoimentos, números de licenças aprovadas).",
+          "Sem CTAs digitais (sem botão WhatsApp, sem clique-para-ligar, sem formulário)."
+        ],
+        "metrics": {
+          "site_ativo": false,
+          "landing_page_ativa": false,
+          "https": null,
+          "gtm_instalado": false,
+          "ga4_configurado": false,
+          "gmb_ativo": false,
+          "formulario_proprio": false,
+          "prova_social_estruturada": false,
+          "taxa_conversao_site_pct": null,
+          "unavailable_reason": "Não há site ou landing page para medir taxa de conversão digital."
+        }
+      }
+    },
+    {
+      "pillar": "crm",
+      "score": 18,
+      "classification": "critical",
+      "highlight": "Planilhas declaradas como CRM. Processo comercial existe e converte 50% proposta→venda em 15 dias, mas sem pipeline formalizado, sem etiqueta de etapa, sem automação de follow-up — atacando exatamente o motivo #1 de perda declarado ('lead sumiu').",
+      "estimated": false,
+      "details": {
+        "strengths": [
+          "Conversão proposta→venda de ~50% (10 propostas → 5 vendas/mês declarado V4MOS) — taxa boa para consultoria B2B.",
+          "Ciclo médio curto (15 dias do primeiro contato ao fechamento) — indica decisão concentrada, não comitê fragmentado.",
+          "Aldo conhece intuitivamente o funil de cada lead (operação compacta de 10 clientes ativos).",
+          "Existe padrão parcial de follow-up declarado (V4MOS Q33) — base para formalização, não criação do zero."
+        ],
+        "weaknesses": [
+          "Ferramenta = planilhas (declarado V4MOS Q10) — sem pipeline visual, sem automação, sem regras de SLA.",
+          "Sem etiqueta de etapa (lead → qualificado → proposta enviada → negociação → fechado/perdido).",
+          "Sem automação de follow-up — motivo #1 de perda é 'lead sumiu sem dar retorno' (V4MOS Q27).",
+          "Sem CAC nem LTV calculados (V4MOS Q28: 'não conheço ou nunca calculei').",
+          "Sem forecast integrado de marketing + vendas (V4MOS Q36: 'não fazemos forecast').",
+          "Sem acompanhamento MoM de faturamento (V4MOS Q29: 'não acompanho').",
+          "Sem segmentação por persona/tipo de cliente — todos os leads tratados igual.",
+          "Sem rastreamento de origem do lead (indicação de quem? prospecção em qual canal? boca a boca em qual evento?).",
+          "Risco operacional: planilha + decisor único = se o Aldo sair de cena por 30 dias, o pipeline trava."
+        ],
+        "metrics": {
+          "crm_ferramenta": "planilhas",
+          "pipeline_etapas_formalizadas": 0,
+          "automacoes_ativas": 0,
+          "follow_up_pattern": "parcialmente_seguido",
+          "conversao_proposta_venda_pct": 50,
+          "ciclo_medio_dias": 15,
+          "propostas_ultimo_mes": 10,
+          "vendas_ultimo_mes": 5,
+          "clientes_ativos_total": 10,
+          "cac_calculado": false,
+          "ltv_calculado": false,
+          "forecast_integrado": false,
+          "acompanhamento_mom": false
+        }
+      }
+    },
+    {
+      "pillar": "seo",
+      "score": 5,
+      "classification": "critical",
+      "highlight": "Zero presença orgânica. Sem domínio próprio, sem site, sem blog, sem GMB, sem conteúdo, sem backlinks. Lucena Advisory não aparece no Google nem para o próprio nome da empresa.",
+      "estimated": true,
+      "details": {
+        "strengths": [
+          "Nicho técnico (licenciamento ambiental Norte) tem volume de busca menor mas alta intenção comercial — keywords como 'licenciamento ambiental Manaus', 'consultoria ambiental AM', 'IPAAM licenciamento' têm CPC controlado e disputa baixa.",
+          "Decisor tem capital de autoridade (advogado + engenheiro ambiental + mestre em direito ambiental) que pode virar conteúdo (artigos, pareceres comentados, posts LinkedIn)."
+        ],
+        "weaknesses": [
+          "Sem domínio próprio registrado declarado.",
+          "Sem site = sem páginas indexadas, sem schema markup, sem sitemap.",
+          "Sem blog ou produção de conteúdo (V4MOS Q43: 'Não publico').",
+          "Sem GMB (Google Meu Negócio) reivindicado para Manaus — perde 100% da busca local 'consultoria ambiental Manaus'.",
+          "Sem Search Console, sem rastreamento de keywords ranqueadas.",
+          "Sem perfil LinkedIn institucional da Lucena Advisory (apenas o pessoal do Aldo, a confirmar).",
+          "Concorrentes declarados (FRTB, Moura, Ocidental, Aurora) provavelmente já dominam queries locais — gap será maior quanto mais a Lucena demorar a entrar."
+        ],
+        "metrics": {
+          "dominio_proprio": false,
+          "site_indexado": false,
+          "gmb_ativo": false,
+          "blog_ativo": false,
+          "paginas_indexadas": 0,
+          "search_console_configurado": false,
+          "linkedin_institucional": null,
+          "linkedin_institucional_unavailable_reason": "Não confirmado no briefing — a validar no Kick-Off."
+        }
+      }
+    }
+  ],
+  "executive_summary": "Lucena Advisory entra na V4 com 8/100 de maturidade digital — score crítico extremo, possivelmente o mais baixo entre os clientes ativos atualmente na carteira. A leitura honesta: o cliente não tem um problema digital, ele tem uma ausência digital total. Sem site, sem Instagram, sem GMB, sem investimento em mídia paga (confirmado pelos connectors V4MOS: zero campanhas Google Ads e zero Meta Ads no período auditado), sem GA4, sem CRM além de planilhas. O CNPJ tem 4 meses de vida (aberto em janeiro/2026) e foi estruturado especificamente para atender um cliente-âncora (Rei dos Bons Amigos, 26 CNPJs, R$ 300M+/ano), o que explica a fragilidade — não é estagnação, é fase de fundação. O próprio Aldo declarou no FPS: 'eu abri a empresa e agora eu quero estruturá-la do zero para que ela rode lisa'. Isso é uma janela rara: nenhum vício pré-existente, nenhuma campanha mal montada para corrigir, nenhuma identidade visual ruim para repaginar.\n\nOs dois maiores gaps que estão custando resultado AGORA são (1) CRM/processo comercial — o motivo #1 de perda declarado é 'lead sumiu sem dar retorno' (V4MOS Q27), e isso acontece dentro de uma operação que já converte ~50% das propostas em venda em 15 dias (10 propostas → 5 vendas no último mês). Cada lead que evapora é receita perdida em uma máquina que comprovadamente fecha negócio quando consegue conversar. Planilhas + 'padrão de follow-up parcialmente seguido' + ausência de CAC/LTV/MoM/forecast = vazamento estrutural; (2) Ausência absoluta de alicerce de credibilidade institucional digital — sem site, sem GMB e sem LinkedIn institucional, qualquer comitê de compra B2B (engenheiro ambiental, gestor operacional, diretor executivo) que pesquise 'Lucena Advisory Manaus' encontra nada. Para um nicho B2B onde a venda média é R$ 10k+/mês de consultoria com 10+ anos de mercado do decisor, essa invisibilidade é um veto silencioso à expansão.\n\nOs dois pontos fortes que precisam ser aproveitados/acelerados são (1) o capital de autoridade do decisor: Aldo é advogado + engenheiro ambiental + mestre em direito ambiental com 10+ anos de mercado e acesso direto a uma conta âncora de R$ 300M+/ano (Rei dos Bons Amigos). Isso é matéria-prima para conteúdo de autoridade, cases e ABM — não para mídia paga de topo de funil; (2) a conversão proposta→venda de 50% em ciclo de 15 dias indica que o problema da Lucena NÃO é fechamento (a venda existe), é falta de qualificação e cadência. Sequência V4 deve inverter o playbook padrão: NÃO começar por mídia paga; começar por CRM + LP institucional + GMB + mapeamento de comitê de compra dentro da âncora, e só então decidir se mídia paga ou LDR/prospector é o canal certo (essa decisão já foi sinalizada como hipótese na FPS Pós-vendas).",
+  "priorities": [
+    {
+      "rank": 1,
+      "action": "Resolver no Kick-Off (semana 1) o conflito de meta declarada: V4MOS = R$ 100k em 12 meses; SDR = R$ 50k/mês em 6 meses (≈ R$ 600k/ano). Definir meta operacional única antes de iniciar Persona/ICP, porque a meta calibra todo o plano (R$ 100k/ano é crescimento orgânico via âncora; R$ 600k/ano exige máquina ABM + possível LDR).",
+      "rationale": "Sem meta única, Persona/ICP/Posicionamento/Forecast saem todos desalinhados. O conflito de 6× entre as fontes é grande demais para ignorar. Custo zero, 15 min de conversa com o Aldo.",
+      "effort": "low",
+      "pillar": "foundational",
+      "dependencies": []
+    },
+    {
+      "rank": 2,
+      "action": "Implementar CRM mínimo (Kommo, RD Station Free ou Pipefy) com pipeline B2B de 5 etapas (Lead → Qualificado → Proposta enviada → Negociação → Fechado/Perdido), automação básica de follow-up no WhatsApp (3 toques em 7 dias) e etiqueta de origem do lead. Migrar carteira de 10 clientes ativos + leads em aberto das planilhas.",
+      "rationale": "Ataca o motivo #1 de perda declarado ('lead sumiu') diretamente. Sem isso, qualquer aquisição estruturada (orgânica ou paga) vai jogar leads dentro de uma planilha que já está perdendo o que entra hoje. Em uma operação que converte 50% proposta→venda, recuperar 2-3 leads/mês do vazamento = +R$ 21k-30k MRR potencial.",
+      "effort": "medium",
+      "pillar": "crm",
+      "dependencies": [
+        "Definição da meta (Priority #1) para calibrar metas de pipeline"
+      ]
+    },
+    {
+      "rank": 3,
+      "action": "Construir alicerce institucional digital: identidade visual (logo + paleta + tipografia, S3), landing page institucional B2B 1-page com PUV + serviços + case Rei dos Bons Amigos + CTA WhatsApp + formulário de qualificação + GA4/GTM, e Google Meu Negócio reivindicado em Manaus com fotos de equipe/escritório, descrição alinhada ao nicho e 5-10 reviews iniciais (pedir para clientes atuais do grupo âncora).",
+      "rationale": "Sem site + GMB, o comitê de compra B2B que pesquisar 'Lucena Advisory' não encontra nada — veto silencioso. LP serve como destino único qualificado para qualquer ABM futuro. GMB destrava busca local 'consultoria ambiental Manaus' que concorrentes (FRTB/Moura/Ocidental/Aurora) provavelmente já dominam. Trabalho concentrado na S3 do escopo contratado — não exige escopo adicional.",
+      "effort": "medium",
+      "pillar": "cro",
+      "dependencies": [
+        "Definição de PUV na S2 (ee-s2-posicionamento)",
+        "Persona/Comitê de Compra na S1 (ee-s1-persona-icp)"
+      ]
+    },
+    {
+      "rank": 4,
+      "action": "Mapear formalmente o Comitê de Compra do Rei dos Bons Amigos (26 CNPJs): quem é a sementinha técnica (engenheiro ambiental do grupo), o multiplicador (gestor operacional) e o decisor final (diretor executivo). Documentar acessos atuais, qual CNPJ já é cliente, oportunidades não atendidas dentro do grupo, e desenhar plano ABM de expansão dentro da âncora.",
+      "rationale": "Cliente já tem porta aberta com 26 CNPJs do grupo — ABM dentro de cliente existente tem taxa de fechamento ordens de grandeza acima de prospecção fria. Trabalho cobre a Etapa 2 do FPS ('Comitê de Compra B2B') sem exigir mídia paga. Aldo declarou na FPS o desejo de apresentar V4 ao diretor executivo — usar essa reunião como pivô do plano.",
+      "effort": "medium",
+      "pillar": "comercial",
+      "dependencies": [
+        "Persona/Comitê de Compra (ee-s1-persona-icp) com cargo, dor e canal por papel"
+      ]
+    },
+    {
+      "rank": 5,
+      "action": "Adiar deliberadamente o início de mídia paga e considerar substituir a Etapa 3 (Análise de mídia + criativos) por um plano LDR/prospector + sequência de outbound LinkedIn/email para o ICP B2B industrial declarado (Honda, Yamaha, Bertolini, estaleiros, postos de combustíveis). Hipótese já levantada na FPS.",
+      "rationale": "Para um B2B de nicho industrial onde o ICP 'não está em redes sociais' (declarado V4MOS) e o decisor é diretor executivo, mídia paga tradicional tem ROI marginal vs LDR estruturado. R$ 5k/mês de investimento declarado como aceitável pelo cliente (sem objeção SDR) rende mais em 1 LDR júnior + ferramentas (Apollo + LinkedIn Sales Navigator) que em ads. A decisão final cabe à Etapa 3 do escopo contratado — diagnóstico vai apontar o caminho, não impor.",
+      "effort": "low",
+      "pillar": "midia_paga",
+      "dependencies": [
+        "Diagnóstico de mídia da S2 (ee-s2-diagnostico-midia) confirmar ausência de canais pagos com retorno"
+      ]
+    },
+    {
+      "rank": 6,
+      "action": "Iniciar produção quinzenal de conteúdo de autoridade no LinkedIn pessoal do Aldo: posts comentando casos públicos de licenciamento ambiental no Norte, exigências da IPAAM/Ibama, situações reais de regularização. Replicar no LinkedIn institucional da Lucena Advisory assim que criado. Custo zero, esforço de 1-2h/semana.",
+      "rationale": "Aldo tem 10+ anos de mercado + formação tripla (advogado + engenheiro ambiental + mestre) — repertório técnico de autoridade está pronto, falta apenas publicar. LinkedIn é o canal onde o comitê de compra B2B (engenheiros, gestores, diretores) realmente vive. Construir presença orgânica em paralelo ao alicerce (Priority #3) economiza 6-12 meses de tempo até o canal gerar leads inbound qualificados.",
+      "effort": "low",
+      "pillar": "seo",
+      "dependencies": []
+    }
+  ],
+  "sector_benchmark": {
+    "sector": "Consultoria/Assessoria Ambiental B2B (Serviços profissionais regulados)",
+    "sector_average": 32,
+    "comparison": "significantly_below",
+    "pillar_comparison": [
+      {
+        "pillar": "midia_paga",
+        "client_score": 5,
+        "sector_average": 38,
+        "gap": -33,
+        "position": "critical_gap"
+      },
+      {
+        "pillar": "criativos",
+        "client_score": 5,
+        "sector_average": 32,
+        "gap": -27,
+        "position": "critical_gap"
+      },
+      {
+        "pillar": "cro",
+        "client_score": 5,
+        "sector_average": 35,
+        "gap": -30,
+        "position": "critical_gap"
+      },
+      {
+        "pillar": "crm",
+        "client_score": 18,
+        "sector_average": 30,
+        "gap": -12,
+        "position": "below"
+      },
+      {
+        "pillar": "seo",
+        "client_score": 5,
+        "sector_average": 35,
+        "gap": -30,
+        "position": "critical_gap"
+      }
+    ],
+    "key_insight": "Lucena Advisory opera 24 pontos abaixo da média do setor (B2B serviços / consultoria ~32). Todos os pilares estão em gap crítico exceto CRM, que é o único 'menos pior' por já haver planilha + processo de 50% conversão. Isso inverte o playbook: o ataque NÃO começa pelo pilar mais fraco isolado (qualquer um dos quatro empatados em 5), começa pelo CRM (gap -12) porque ele tem fundação para construir e bloqueia o ROI de qualquer ação nos outros pilares. SEO (-30) é o segundo a atacar via LP institucional + GMB + LinkedIn — destrava credibilidade B2B. Mídia paga (-33) fica adiada deliberadamente para depois do diagnóstico da Etapa 3."
+  },
+  "key_insight": {
+    "headline": "Antes de marketing, comercial. A Lucena já fecha 50% das propostas em 15 dias — o que sangra não é demanda, é follow-up. CRM em planilha + 'lead sumiu' como motivo #1 de perda é o pilar a atacar primeiro.",
+    "context": "A leitura instintiva de um cliente Zero Digital seria 'precisa de tráfego' — abrir Google Ads, Meta, GMB, site, tudo de uma vez. Os números do próprio briefing dizem o contrário: a Lucena já tem demanda (100% por indicação/passivo, 10 propostas/mês), já tem produto (ticket B2B recorrente, ciclo de 15 dias) e já tem fechamento (50% de conversão proposta→venda). O que ela não tem é meio de funil — qualificação, cadência e pipeline. Encher o topo agora derrama no buraco do meio.",
+    "numbered_reasons": [
+      "(1) Motivo #1 de perda declarado pelo próprio Aldo no V4MOS é 'O lead sumiu sem dar retorno' (Q27) — diagnóstico explícito de vazamento de follow-up, NÃO de objeção de preço. Cliente reagiu sem objeção a budget R$ 5k/mês e projetos R$ 30k na call SDR.",
+      "(2) Uma operação que converte 50% proposta→venda em 15 dias é um motor que funciona — turbinar entrada sem fechar saída triplica o desperdício. Cada lead recuperado do vazamento vale receita marginal acima da média do setor.",
+      "(3) A estratégia declarada é ABM/Comitê de Compra B2B com possível LDR (FPS 2026-05-05) — todos esses dependem de CRM real para rastrear comitê, etapa por contato, jornada multi-toque. ABM em planilha não escala. Investir em CRM agora destrava a estratégia inteira."
+    ],
+    "discussion_anchor": "Decisão para conversar com Aldo: aceitar inverter o playbook V4 padrão e adiar mídia paga em 30-60 dias para construir CRM + LP institucional + GMB + mapeamento do Comitê do Rei dos Bons Amigos primeiro? Trade-off honesto: pode parecer 'lento' vs expectativa de ver anúncios rodando rápido, mas o ROI do funil completo é maior do que turbinar um topo que vaza. Esta é a conversa estratégica do Kick-Off."
+  },
+  "honesty_alert": "Três fragilidades reais precisam ser nomeadas antes de seguir: (1) Conflito de meta de 6× entre as fontes (R$ 100k/ano no V4MOS vs R$ 600k/ano no SDR) — não é detalhe, é divergência estratégica que muda o plano inteiro. Validar no Kick-Off ANTES da Persona/ICP. (2) Operação 100% dependente do dono (Aldo é decisor + vendedor + executor + comunicação) — qualquer crescimento real exige delegar pelo menos a operação comercial; o time multidisciplinar declarado (sócios) está focado em entrega técnica, não em vendas. Sem isso, mesmo o melhor plano emperra em 30 dias. (3) Cliente-âncora único (Rei dos Bons Amigos) representa concentração de risco — 2 contratos respondem por 100% da receita (R$ 16k + R$ 5k = R$ 21k/mês). A estratégia da V4 deve mitigar essa concentração (expansão dentro do grupo + novos clientes industriais) e não amplificá-la. A Etapa 4 (Diagnóstico Comercial) e a Etapa 5 (Forecast) precisam dimensionar explicitamente: 'se o Rei dos Bons Amigos sair, sobra o quê?' — pergunta que define o ritmo da diversificação."
+}

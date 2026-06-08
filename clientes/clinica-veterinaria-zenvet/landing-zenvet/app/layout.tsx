@@ -67,6 +67,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* End Google Tag Manager (noscript) */}
         {children}
       </body>
+      {/* Atribuição LP -> Kommo (UTM no wa.me + evento whatsapp_click) */}
+      <Script src="/wa-tracking.js" strategy="afterInteractive" />
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
         strategy="afterInteractive"

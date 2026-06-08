@@ -1,0 +1,124 @@
+{
+  "meta": {
+    "name": "Amazonas Planejados",
+    "razao_social": "Madeiras Amazonas",
+    "slug": "amazonas-planejados",
+    "workspace_id": null,
+    "created_at": "2026-06-03",
+    "modulo_vendas": true,
+    "modulo_vendas_escopo": ["ee-s4-diagnostico-comercial", "ee-s4-cliente-oculto"]
+  },
+  "briefing": {
+    "identification": {
+      "name": "Amazonas Planejados",
+      "razao_social": "Madeiras Amazonas",
+      "contact_name": "André Lana",
+      "contact_role": "Sócio-Proprietário / Comercial (CEO)",
+      "segment": "Marcenaria — móveis planejados sob medida (residencial e comercial)",
+      "annual_revenue": "~R$ 600k a R$ 720k/ano (R$ 50k–60k/mês · Tier Bronze)",
+      "net_margin": "15%–20% (estimativa)",
+      "years_in_market": null,
+      "location": "Conselheiro Lafaiete/MG",
+      "website": "https://madeirasamazonas.com.br/",
+      "instagram": null,
+      "whatsapp": "+55 31 9920-8242",
+      "gmb": true
+    },
+    "product": {
+      "main_product": "Móveis planejados sob medida — projetos de marcenaria personalizados para ambientes residenciais e comerciais. Venda direta presencial, alto ticket.",
+      "ticket": "Alto ticket (valor específico não informado)",
+      "billing_model": "projeto",
+      "sales_cycle": "Curto — visita de medição e tentativa de fechamento no mesmo dia",
+      "active_customers": null,
+      "most_profitable": "Projetos completos de marcenaria",
+      "growth_potential": null
+    },
+    "icp": {
+      "best_customers": "Proprietários de imóveis residenciais de médio/alto padrão buscando móveis planejados; leads de alto padrão, imediatistas, que valorizam atendimento humano e ágil no primeiro contato.",
+      "not_customers": "Leads frios / não qualificados (80–90% são filtrados hoje pela triagem de IA do cliente).",
+      "problems_before": null,
+      "results_after": null,
+      "churn_reasons": null
+    },
+    "competition": {
+      "competitors": [],
+      "real_differential": "Atendimento presencial consultivo — a medição e o projeto são feitos pelo próprio dono; agilidade no primeiro contato e fechamento rápido.",
+      "why_choose_us": null
+    },
+    "brand": {
+      "adjectives": null,
+      "voice_tone": null,
+      "admired_brands": null,
+      "current_colors": null,
+      "has_logo": true,
+      "restrictions": null
+    },
+    "digital_situation": {
+      "paid_traffic": true,
+      "platforms": ["google_ads", "meta_ads"],
+      "monthly_investment": null,
+      "current_results": "Campanha de 30% off para novos orçamentos (início 01/06) já gerou 1 lead. Faturamento estagnado em R$ 50k–60k/mês há bastante tempo.",
+      "crm": "Triagem própria de leads via IA no WhatsApp (desenvolvida pelo próprio cliente). CRM da V4: mktlab.",
+      "lead_sources": "Google Ads e Meta Ads (gerenciados por agência parceira recente) → triagem por IA no WhatsApp → agendamento de visita de medição.",
+      "conversion_rate": null,
+      "biggest_pain": "Atrito na qualificação: leads de alto padrão se irritam com a abordagem robótica da IA e abandonam antes de agendar a visita. Sobrecarga do dono, que acumula comercial, medição, projeto e produção.",
+      "sdr_interest": "André quer substituir/complementar a triagem por IA por um SDR humano (V4) para não perder leads de alto valor. Upsell em aberto, fora do escopo da Estruturação."
+    },
+    "accesses": {
+      "meta_business": false,
+      "google_ads": false,
+      "google_analytics": false,
+      "google_search_console": false,
+      "instagram_admin": false,
+      "website_admin": false,
+      "crm": false,
+      "gmb": false,
+      "whatsapp_business": false
+    },
+    "sales_module": {
+      "active_sellers": "1 — André faz todo o comercial; irmão e outro sócio cuidam de produção e financeiro.",
+      "sales_process": "Lead (Google/Meta Ads) → triagem por IA no WhatsApp (filtra 80–90%) → agendamento de visita → medição presencial pelo dono → projeto → orçamento → fechamento.",
+      "objections": [
+        "Preço/orçamento — extremamente sensível a valor; exige transparência rápida.",
+        "Custo-benefício do SDR humano V4 vs. custo quase zero da IA própria.",
+        "Desembolso maior pode exigir aval do sócio financeiro."
+      ],
+      "conversion_rate": null,
+      "sales_cycle": "Rápido — visita e tentativa de fechamento no mesmo dia.",
+      "has_scripts": false
+    }
+  },
+  "research": {"fetched_at": null},
+  "connectors": {"fetched_at": null, "integrations": null},
+  "progress": {
+    "current_week": 1,
+    "skills": {
+      "ee-s1-diagnostico-maturidade": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s1-swot": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s1-persona-icp": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s1-auditoria-comunicacao": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s2-pesquisa-mercado": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s2-posicionamento": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s2-diagnostico-midia": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s2-diagnostico-criativos": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s2-diagnostico-cro": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s3-identidade-visual": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s3-brandbook": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s3-landing-page": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s3-copy-anuncios": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s3-criativos-anuncios": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s3-crm-setup": {"status": "skipped", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s3-forecast-midia": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s3-gmb-otimizacao": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s4-diagnostico-comercial": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s4-cliente-oculto": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s5-scripts-sdr": {"status": "skipped", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s5-sdr-ia-config": {"status": "skipped", "version": 0, "started_at": null, "completed_at": null}
+    }
+  },
+  "history": [
+    {"ts": "2026-06-03T00:00:00Z", "skill": "ee-novo-cliente", "checkpoint": 0, "decision": "Cliente cadastrado a partir de 2 docs (Plano de Voo 01/06 + Passagem de Bastao 29/05). Briefing extraido dos docs. Produto: Estruturacao Estrategica (R$ 12.364, 5 semanas)."},
+    {"ts": "2026-06-03T00:00:00Z", "skill": "ee-novo-cliente", "checkpoint": 0, "decision": "Escopo: Estruturacao S1-S4 (diagnostico comercial). SDR IA (S5) e Cliente Oculto fora -> skipped. SDR humano e upsell em aberto. modulo_vendas_escopo = [ee-s4-diagnostico-comercial]. CRM/GMB mantidos pending a confirmar."},
+    {"ts": "2026-06-03T00:00:00Z", "skill": "ee-novo-cliente", "checkpoint": 0, "decision": "Escopo ajustado pelo operador: CRM Setup (ee-s3-crm-setup) fora -> skipped. Cliente Oculto (ee-s4-cliente-oculto) DENTRO -> pending + adicionado ao modulo_vendas_escopo. SDR IA segue fora."}
+  ]
+}

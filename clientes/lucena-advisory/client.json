@@ -281,10 +281,10 @@
     "current_week": 1,
     "skills": {
       "ee-s1-diagnostico-maturidade": {
-        "status": "pending",
-        "checkpoint": 0,
-        "started_at": null,
-        "completed_at": null
+        "status": "completed",
+        "checkpoint": 1,
+        "started_at": "2026-05-28T00:00:00Z",
+        "completed_at": "2026-05-28T00:00:00Z"
       },
       "ee-s1-swot": {
         "status": "pending",
@@ -390,6 +390,12 @@
       "skill": "ee-novo-cliente",
       "checkpoint": 0,
       "decision": "Cliente cadastrado a partir de 3 documentos entregues por Gina: (1) Briefing Pré-vendas SDR (call 2026-04-28, closer Caio Arendt), (2) FPS Pós-vendas (2026-05-05, pós-venda Herick Sacchi), (3) Formulário V4MOS DR preenchido por Aldo Lucena. Briefing pré-preenchido com forte cobertura em identification/product/digital_situation/sales_module e lacunas declaradas em brand/icp.desired_profile detalhado/competition.differentials (a coletar no Kick-Off). Credenciais V4MOS salvas em .credentials/clients.json (workspace d782cb07-f4c3-424a-8dfb-2d38890d41b3). Próximo passo: rodar v4mos_fetch.sh para confirmar Zero Digital nos conectores e iniciar ee-s1-diagnostico-maturidade."
+    },
+    {
+      "ts": "2026-05-28T00:00:00Z",
+      "skill": "ee-s1-diagnostico-maturidade",
+      "checkpoint": 1,
+      "decision": "Diagnóstico de Maturidade Digital aprovado pelo operador (Gina) em primeira passada — v1. Score geral 8/100 (Crítico extremo): Mídia Paga 5, Criativos 5, CRO 5, CRM 18, SEO 5. Setor benchmark 32 — gap -24. Sem ajustes solicitados. Decisões-chave consolidadas no output: (1) Inversão do playbook V4 padrão — CRM + LP institucional + GMB + ABM no Rei dos Bons Amigos ANTES de mídia paga. Motivo: 50% conversão proposta→venda em 15 dias já existe, motivo #1 de perda é 'lead sumiu' (vazamento de follow-up, não objeção de preço). (2) Honesty alerts mantidos: conflito de meta 6× (R$ 100k V4MOS vs R$ 600k SDR), operação 100% dependente do Aldo, concentração total no cliente-âncora. (3) Próxima skill da S1: ee-s1-swot, que vai consumir este diagnóstico como input. Resolver conflito de meta no Kick-Off antes da Persona/ICP é Priority #1 documentada."
     }
   ]
 }

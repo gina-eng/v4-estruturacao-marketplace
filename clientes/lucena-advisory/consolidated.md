@@ -1,6 +1,6 @@
 # Visão Consolidada — Lucena Advisory
 
-*Gerado em 2026-05-25 21:47 UTC · Ciclo atual: Semana 1 · Cliente: `lucena-advisory`*
+*Gerado em 2026-05-29 18:52 UTC · Ciclo atual: Semana 1 · Cliente: `lucena-advisory`*
 
 > Este documento consolida tudo que foi produzido para o cliente ao longo do projeto.
 > Cada seção referencia o output estruturado original em `outputs/` para auditabilidade.
@@ -86,6 +86,21 @@
 
 ## 5. Maturidade Digital & SWOT
 
+### Maturidade Digital
+- **Score geral:** 8/100 (critical)
+- **Benchmark setorial:** —/100 (Consultoria/Assessoria Ambiental B2B (Serviços profissionais regulados))
+
+**Scores por pilar:**
+- midia_paga: **5/100** (critical)
+- criativos: **5/100** (critical)
+- cro: **5/100** (critical)
+- crm: **18/100** (critical)
+- seo: **5/100** (critical)
+
+**Prioridades (top 3):**
+1. Resolver no Kick-Off (semana 1) o conflito de meta declarada: V4MOS = R$ 100k em 12 meses; SDR = R$ 50k/mês em 6 meses (≈ R$ 600k/ano). Definir meta operacional única antes de iniciar Persona/ICP, porque a meta calibra todo o plano (R$ 100k/ano é crescimento orgânico via âncora; R$ 600k/ano exige máquina ABM + possível LDR). — *Esforço: low / Pilar: foundational*
+2. Implementar CRM mínimo (Kommo, RD Station Free ou Pipefy) com pipeline B2B de 5 etapas (Lead → Qualificado → Proposta enviada → Negociação → Fechado/Perdido), automação básica de follow-up no WhatsApp (3 toques em 7 dias) e etiqueta de origem do lead. Migrar carteira de 10 clientes ativos + leads em aberto das planilhas. — *Esforço: medium / Pilar: crm*
+3. Construir alicerce institucional digital: identidade visual (logo + paleta + tipografia, S3), landing page institucional B2B 1-page com PUV + serviços + case Rei dos Bons Amigos + CTA WhatsApp + formulário de qualificação + GA4/GTM, e Google Meu Negócio reivindicado em Manaus com fotos de equipe/escritório, descrição alinhada ao nicho e 5-10 reviews iniciais (pedir para clientes atuais do grupo âncora). — *Esforço: medium / Pilar: cro*
 
 
 
@@ -137,11 +152,13 @@
 ## 14. Roadmap de Evolução
 
 ### Skills concluídas
+- ✅ **ee-s1-diagnostico-maturidade** — concluída em 2026-05-28T00:00:00Z
 
 **Semana atual:** 1
 
 ### Histórico de refinamentos
 - *2026-05-25T00:00:00Z* — **ee-novo-cliente** (—): 
+- *2026-05-28T00:00:00Z* — **ee-s1-diagnostico-maturidade** (—): 
 
 ---
 

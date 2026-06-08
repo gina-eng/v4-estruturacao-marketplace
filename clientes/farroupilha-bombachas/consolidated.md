@@ -1,6 +1,6 @@
 # Visão Consolidada — Bombachas Farroupilha
 
-*Gerado em 2026-05-26 18:17 UTC · Ciclo atual: Semana 2 · Cliente: `farroupilha-bombachas`*
+*Gerado em 2026-05-29 18:52 UTC · Ciclo atual: Semana 2 · Cliente: `farroupilha-bombachas`*
 
 > Este documento consolida tudo que foi produzido para o cliente ao longo do projeto.
 > Cada seção referencia o output estruturado original em `outputs/` para auditabilidade.

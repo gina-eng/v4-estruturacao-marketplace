@@ -2526,7 +2526,7 @@ def build_consolidated_html(client, outputs, ident, generated_at, current_week):
 </head>
 <body>
   <header class="cs-hero">
-    <div class="cs-hero__eyebrow">V4 Company · Estruturação Estratégica</div>
+    <div class="cs-hero__eyebrow">V4 Company · Diagnóstico e Planejamento de Marketing e Vendas no Digital</div>
     <h1 id="cs-client-name">{client_name_html}</h1>
     <div class="cs-hero__meta">Visão Consolidada · Gerado em {generated_at} · Semana atual: {current_week}</div>
     <div class="cs-hero__note">Este documento reúne tudo que foi produzido para o cliente — todas as entregas em uma só visualização, para entrega e auditabilidade.</div>

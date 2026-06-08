@@ -1,0 +1,43 @@
+{
+  "meta": {
+    "name": "Jioji Cavalera",
+    "slug": "jioji-cavalera",
+    "workspace_id": null,
+    "created_at": "2026-06-01",
+    "modulo_vendas": true,
+    "modulo_vendas_escopo": ["ee-s4-diagnostico-comercial", "ee-s4-cliente-oculto"]
+  },
+  "briefing": {},
+  "research": {"fetched_at": null},
+  "connectors": {"fetched_at": null, "integrations": null},
+  "progress": {
+    "current_week": 1,
+    "skills": {
+      "ee-s1-diagnostico-maturidade": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s1-swot": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s1-persona-icp": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s1-auditoria-comunicacao": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s2-pesquisa-mercado": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s2-posicionamento": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s2-diagnostico-midia": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s2-diagnostico-criativos": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s2-diagnostico-cro": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s3-identidade-visual": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s3-brandbook": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s3-landing-page": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s3-copy-anuncios": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s3-criativos-anuncios": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s3-crm-setup": {"status": "skipped", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s3-forecast-midia": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s3-gmb-otimizacao": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s4-diagnostico-comercial": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s4-cliente-oculto": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s5-scripts-sdr": {"status": "skipped", "checkpoint": 0, "started_at": null, "completed_at": null},
+      "ee-s5-sdr-ia-config": {"status": "skipped", "version": 0, "started_at": null, "completed_at": null}
+    }
+  },
+  "history": [
+    {"ts": "2026-06-01T00:00:00Z", "skill": "ee-novo-cliente", "checkpoint": 0, "decision": "Cliente cadastrado (portal vazio). Briefing pendente — escopo completo como placeholder, a confirmar."},
+    {"ts": "2026-06-01T00:00:00Z", "skill": "ee-novo-cliente", "checkpoint": 0, "decision": "Escopo ajustado: SDR IA (S5) NAO contratado e Setup de CRM (ee-s3-crm-setup) removido -> marcados skipped. modulo_vendas_escopo limitado a S4 (diagnostico-comercial + cliente-oculto)."}
+  ]
+}
