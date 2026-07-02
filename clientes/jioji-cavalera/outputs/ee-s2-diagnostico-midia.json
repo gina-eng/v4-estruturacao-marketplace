@@ -1,0 +1,212 @@
+{
+  "client_name": "Jioji Cavalera",
+  "skill": "ee-s2-diagnostico-midia",
+  "version": 2,
+  "generated_at": "2026-06-09T00:00:00Z",
+  "data_source": "Meta Ads MCP (acesso partner) — conta BM Jioji 249028451865014, 90 dias (11/03–08/06): account, evolução mensal, quebra por gênero, top ads, objetivo por campanha. + persona-icp v2 + posicionamento v1 + briefing + auditoria deep (Playwright). Tagueamento do site: tem GTM+GA4 (mede tráfego), mas o Meta Pixel está QUEBRADO e o GA4 não tem evento de compra → SEM dado de conversão/ROAS no Meta. Google: testado pelo cliente sem resultado (sem dados).",
+  "segment": "Varejo de moda multimarca de marca (Cavalera âncora masculino + feminino Melissa em saída + Lado Avesso/Yexx/Polay) — B2C, Porto Velho/RO, físico + e-commerce.",
+  "data_period": "2026-03-11 a 2026-06-08 (90 dias) — Meta Ads (conta BM Jioji)",
+  "current_metrics": {"cpl": null, "ctr": 1.91, "conversion_rate": null, "roas": null, "cpc": 0.32, "cpm": 6.07, "total_investment": 3784.88, "total_leads": null, "total_clicks": 11901, "impressions": 623350, "reach": 218648, "frequency": 2.85, "unavailable_reason": "Meta Pixel quebrado + GA4 sem evento de compra → conversão, CPL, CPA e ROAS NÃO medidos no Meta (o GA4 mede tráfego do site, mas não a compra). Métricas de topo (CTR/CPC/CPM/alcance) são reais do Meta; métricas de fundo (conversão/ROAS) ficam null até corrigir o Meta Pixel e ligar o evento purchase."},
+  "summary": "Diagnóstico de mídia da Jioji Cavalera com dados reais do Meta (90 dias). O topo de funil é eficiente e barato (CTR 1,91% acima do benchmark, CPC R$ 0,32, CPM R$ 6,07 — abaixo do mercado), mas a conta está estrategicamente quebrada: o objetivo dominante é ENGAJAMENTO (não venda), há 145 campanhas no histórico (30 ativas em 90d, dezenas com nome default) e o Meta Pixel está QUEBRADO (e o GA4 não tem evento de compra) — então compras/ROAS não são rastreados. Resultado: gasta-se ~R$ 1.260/mês movendo cliques baratos que não viram venda mensurável (e-commerce fatura ~zero). Dois sinais de ouro: (1) o anúncio de VENDAS-SITE foi o campeão de gasto entre os ads (R$ 257) com o melhor CTR (3,99%) e menor CPC (R$ 0,15) — venda performa quando é o objetivo; (2) a audiência paga é ~56% feminina e engaja mais, mas grande parte vem de promos de Melissa — marca que está SAINDO do shopping. O destravamento: corrigir o Meta Pixel + ligar eventos de compra no GA4 + migrar de engajamento para conversão + limpar a estrutura + recompor o feminino (Cavalera fem).",
+  "summary_headline": "Mídia eficiente no topo (CTR 1,91%, CPC R$ 0,32) mas QUEBRADA na base: objetivo = engajamento, 145 campanhas, Meta Pixel quebrado → e-commerce fatura ~0. Migrar para conversão + corrigir o Pixel pode transformar a verba que já existe.",
+  "summary_highlights": [
+    {"category": "posicao", "label": "Investido 90d", "value": "R$ 3.784,88", "subtext": "~R$ 1.260/mês no Meta · CTR 1,91% · CPC R$ 0,32 (eficiente)", "tone": "yellow"},
+    {"category": "risco", "label": "Objetivo dominante", "value": "Engajamento", "subtext": "Maioria das campanhas é OUTCOME_ENGAGEMENT — não venda", "tone": "red"},
+    {"category": "risco", "label": "Estrutura", "value": "145 campanhas", "subtext": "30 ativas em 90d, dezenas 'Nova campanha de Engajamento' + ads '— Cópia'", "tone": "red"},
+    {"category": "risco", "label": "Medição", "value": "Pixel quebrado", "subtext": "Meta Pixel não dispara + GA4 sem evento de compra → compras/ROAS não rastreados no Meta", "tone": "red"},
+    {"category": "oportunidade", "label": "Sinal de venda", "value": "CTR 3,99%", "subtext": "Anúncio vendas-site: melhor CTR/CPC (R$ 0,15) — venda performa", "tone": "green"},
+    {"category": "janela", "label": "Audiência feminina", "value": "~56%", "subtext": "Engaja mais, mas puxada por Melissa (que está saindo) — recompor", "tone": "yellow"}
+  ],
+  "summary_key_findings": [
+    {"category": "vantagem", "text": "O topo de funil é barato e eficiente: CTR 1,91% (acima do benchmark de moda ~1-1,3%), CPC R$ 0,32 e CPM R$ 6,07 (bem abaixo do mercado, ~R$ 10-18). A demanda existe e o clique custa pouco — a matéria-prima é boa. O problema não é eficiência de mídia, é direção e medição."},
+    {"category": "ameaca", "text": "A conta está estrategicamente quebrada: objetivo dominante OUTCOME_ENGAGEMENT (confirmado via API), 145 campanhas no histórico com dezenas de nome default e anúncios duplicados ('— Cópia — Cópia'), e com o Meta Pixel QUEBRADO (e o GA4 sem evento de compra) — compras/ROAS não são rastreados. Gasta-se ~R$ 1.260/mês gerando engajamento que não vira venda mensurável. Por isso o e-commerce fatura ~zero apesar do investimento."},
+    {"category": "vantagem", "text": "Há prova de que VENDA performa: o anúncio 'Novo anúncio de Vendas-site' foi o campeão de gasto entre os ads (R$ 257) com o MELHOR CTR (3,99%) e menor CPC (R$ 0,15) de toda a conta, e a campanha vendas-site é OUTCOME_SALES. Quando o objetivo é venda e aponta pro site, o desempenho é excelente — falta priorizar isso na verba e medir."},
+    {"category": "ameaca", "text": "A audiência paga é ~56% feminina (gasto R$ 2.132 vs R$ 1.616 masculino) e o feminino engaja mais (CTR 2,18% vs 1,81%). MAS grande parte vem de promos de MELISSA (Dias das Mães Melissa, Promoção Melissas, Melissas Free Cut entre os top ads) — e a Melissa está SAINDO do shopping. Risco: parte da audiência construída evapora com a marca. Precisa recompor o feminino (Cavalera fem/curadoria)."},
+    {"category": "acao", "text": "Destravamento (independe de Google/V4MOS): (1) corrigir o Meta Pixel/CAPI no site (instalado mas sem disparar) + ligar evento de compra no GA4; (2) migrar a verba de ENGAJAMENTO para CONVERSÃO/SALES (escalar o que já funciona: vendas-site); (3) limpar a estrutura (de 30 campanhas para ~3-4: conversão-site + tráfego qualificado + remarketing); (4) recompor o feminino pós-Melissa; (5) mirar o raio de frete viável. Mesma verba, resultado mensurável."}
+  ],
+  "google_ads": {
+    "integration": null,
+    "status": "not_used",
+    "score": null,
+    "budget_monthly_actual": null,
+    "total_campaigns": 0,
+    "total_spend_90d": null,
+    "avg_ctr": null,
+    "avg_cpa": null,
+    "total_conversions_90d": null,
+    "strategic_diagnosis": "Google Ads NÃO está em uso (a tag AW-10869626227 está no site, mas não há campanhas ativas). O cliente declarou no kickoff que já testou Google sem resultados expressivos — provavelmente por falta de estrutura/medição de conversão (Meta Pixel quebrado + GA4 sem evento de compra), não por falta de demanda. Não há conta conectada nem dados a diagnosticar. Recomendação: só considerar Google (Search de marca 'Cavalera Porto Velho' + Performance Max com catálogo) DEPOIS de fechar a medição e estabilizar o Meta para conversão — não agora.",
+    "unavailable_reason": "Sem conta/dados de Google Ads. Google testado pelo cliente sem resultado; foco atual é Meta."
+  },
+  "meta_ads": {
+    "integration": "BM Jioji (249028451865014) — via Meta Ads MCP, acesso partner",
+    "budget_monthly_declared": 1250,
+    "budget_monthly_actual": 1261.63,
+    "total_campaigns": 30,
+    "total_campaigns_lifetime": 145,
+    "active_campaigns": 30,
+    "total_ads": null,
+    "status": "subscale",
+    "score": 30,
+    "score_classification": "low",
+    "total_spend_90d": 3784.88,
+    "total_clicks_90d": 11901,
+    "total_impressions_90d": 623350,
+    "total_reach_90d": 218648,
+    "avg_ctr": 1.91,
+    "avg_cpc": 0.32,
+    "avg_cpm": 6.07,
+    "frequency": 2.85,
+    "conversions_tracked": false,
+    "strategic_diagnosis": "O Meta da Jioji é um caso de 'motor bom, direção errada'. O topo de funil é eficiente e barato (CTR 1,91% acima do benchmark, CPC R$ 0,32, CPM R$ 6,07), provando que há demanda e que o clique custa pouco. Mas a conta está estrategicamente quebrada em três frentes: objetivo dominante de ENGAJAMENTO (não venda), estrutura caótica (145 campanhas no histórico, 30 ativas, dezenas com nome default e anúncios duplicados '— Cópia') e Meta Pixel quebrado (compras/ROAS não rastreados; GA4 sem evento de compra). O dinheiro compra engajamento e cliques que não viram venda mensurável — por isso o e-commerce fatura ~zero. A boa notícia: a campanha/anúncio de VENDAS-SITE teve o melhor CTR (3,99%) e menor CPC (R$ 0,15), provando que conversão performa quando é o objetivo. O destravamento é redirecionar para conversão + corrigir o Meta Pixel + limpar a estrutura.",
+    "critical_issues": [
+      "Objetivo dominante = OUTCOME_ENGAGEMENT (vaidade), não venda — confirmado via API",
+      "145 campanhas no histórico / 30 ativas em 90d, dezenas com nome default 'Nova campanha de Engajamento' e ads '— Cópia — Cópia' — zero estrutura/nomenclatura",
+      "Meta Pixel/CAPI quebrado → compras e ROAS não rastreados no Meta; impossível otimizar por conversão",
+      "Verba pulverizada: a campanha de vendas-site (melhor eficiência) ficou com fração do budget; o grosso foi para engajamento",
+      "Parte relevante da audiência feminina vem de promos de MELISSA — marca que está saindo do shopping (audiência em risco)"
+    ],
+    "monthly_evolution": [
+      {"month": "2026-03 (11-31)", "spend": 867.22, "impressions": 183626, "clicks": 3370, "reach": 89672, "ctr": 1.84, "cpm": 4.72},
+      {"month": "2026-04", "spend": 1378.12, "impressions": 205886, "clicks": 3440, "reach": 82023, "ctr": 1.67, "cpm": 6.69},
+      {"month": "2026-05", "spend": 970.37, "impressions": 141339, "clicks": 2650, "reach": 46393, "ctr": 1.87, "cpm": 6.87},
+      {"month": "2026-06 (1-8, parcial)", "spend": 569.17, "impressions": 92499, "clicks": 2441, "reach": 49969, "ctr": 2.64, "cpm": 6.15}
+    ],
+    "gender_breakdown": [
+      {"gender": "female", "spend": 2131.87, "clicks": 6682, "pct_clicks": 56.1, "ctr": 2.18, "cpm": 6.97, "note": "Maioria do gasto e melhor CTR — mas puxada por promos de Melissa (que está saindo)."},
+      {"gender": "male", "spend": 1615.99, "clicks": 4780, "pct_clicks": 40.2, "ctr": 1.81, "cpm": 6.11, "note": "Público da Cavalera (âncora, forte no masculino)."},
+      {"gender": "unknown", "spend": 37.02, "clicks": 439, "pct_clicks": 3.7, "ctr": 0.83, "cpm": 0.70}
+    ],
+    "top_5_ads_by_spend": [
+      {"ad_name": "Novo anúncio de Vendas-site — Cópia", "campaign_context": "OUTCOME_SALES — site", "spend": 256.99, "impressions": 43879, "clicks": 1752, "ctr": 3.99, "cpc": 0.15, "cpm": 5.86, "reach": 22655, "note": "MELHOR da conta: maior CTR e menor CPC. Prova que venda-site performa — escalar."},
+      {"ad_name": "CAMISETAS CAVALERA — Cópia", "campaign_context": "engajamento", "spend": 223.31, "impressions": 27912, "clicks": 257, "ctr": 0.92, "cpc": 0.87, "cpm": 8.00, "reach": 8574, "note": "Pior CTR e CPC caro entre os top — candidato a pausar/refazer."},
+      {"ad_name": "DIAS DAS MÃES - MELISSA — Cópia — Cópia", "campaign_context": "datas/Melissa", "spend": 190.63, "impressions": 26246, "clicks": 525, "ctr": 2.00, "cpc": 0.36, "cpm": 7.26, "reach": 12963, "note": "Melissa (marca saindo) — audiência em risco."},
+      {"ad_name": "CAMISETA E KIT DO BRASIL — Cópia", "campaign_context": "datas/Cavalera", "spend": 160.31, "impressions": 34722, "clicks": 631, "ctr": 1.82, "cpc": 0.25, "cpm": 4.62, "reach": 16895},
+      {"ad_name": "PROMOÇÃO DE MELISSAS- CG — Cópia", "campaign_context": "Melissa", "spend": 137.09, "impressions": 21043, "clicks": 633, "ctr": 3.01, "cpc": 0.22, "cpm": 6.51, "reach": 15776, "note": "Bom CTR, mas Melissa (saindo)."}
+    ],
+    "creative_gallery_summary": {"total_ads_reviewed": 10, "manter": "Vendas-site, KIT do Brasil, Promoção Melissas (enquanto houver estoque)", "otimizar": "Camisetas Cavalera (CTR 0,92% — refazer hook)", "eliminar": "Duplicatas '— Cópia — Cópia' e campanhas de engajamento puro sem objetivo de venda", "note": "Galeria detalhada por anúncio (com thumbnails) depende de pull adicional do Meta — disponível se quiser aprofundar."}
+  },
+  "benchmarks": [
+    {"metric": "CTR (Meta)", "atual": "1,91%", "benchmark": "~1,0-1,3% (moda/varejo)", "status": "🟢 acima", "gap": "+47%"},
+    {"metric": "CPC (Meta)", "atual": "R$ 0,32", "benchmark": "~R$ 0,80-1,50", "status": "🟢 abaixo (bom)", "gap": "-60%"},
+    {"metric": "CPM (Meta)", "atual": "R$ 6,07", "benchmark": "~R$ 10-18", "status": "🟢 abaixo (bom)", "gap": "-50%"},
+    {"metric": "Taxa de conversão e-commerce", "atual": "desconhecida (GA4 sem evento de compra)", "benchmark": "~1,0-1,8% (moda)", "status": "🔴 não medida", "gap": "n/d"},
+    {"metric": "ROAS", "atual": "desconhecido (Meta Pixel quebrado)", "benchmark": "~3-6x (e-commerce moda)", "status": "🔴 não medido", "gap": "n/d"}
+  ],
+  "diagnosis_by_dimension": {
+    "account_structure": "CRÍTICO. 145 campanhas no histórico, 30 ativas em 90d, dezenas com nome default 'Nova campanha de Engajamento' + anúncios duplicados em série ('— Cópia — Cópia'). Sem nomenclatura, sem agrupamento por objetivo/público. Verba pulverizada em microcampanhas. Objetivo dominante: OUTCOME_ENGAGEMENT.",
+    "creatives": "MÉDIO. Há criativos que performam muito bem (vendas-site CTR 3,99%, Promoção Melissas 3,01%) e outros fracos (Camisetas Cavalera 0,92%). Produto fotogênico. Problema: duplicação descontrolada e ausência de teste estruturado (A/B). Muitos criativos de Melissa (marca saindo).",
+    "landing_pages": "CRÍTICO para conversão. O site (Nuvemshop) recebe o tráfego e tem GTM+GA4 (mede page_view/view_item_list), mas o Meta Pixel está quebrado e o GA4 não tem evento de compra — não dá para medir add to cart/compra pós-clique nem atribuir ao Meta. A campanha vendas-site aponta pro site e tem ótimo CTR, mas a conversão de venda é invisível.",
+    "audiences": "MÉDIO/RISCO. Com o Meta Pixel quebrado, não há públicos de remarketing nem lookalike de compradores no Meta. A audiência paga é ~56% feminina (puxada por Melissa, que sai) + masculino Cavalera. Oportunidade: assim que o Pixel for corrigido, formar remarketing dos ~219k alcançados + base."
+  },
+  "top_problems": [
+    {"problem": "Objetivo errado: a verba compra ENGAJAMENTO, não venda", "data_evidence": "Objetivo dominante OUTCOME_ENGAGEMENT (confirmado via API); só ~3-4 campanhas OUTCOME_SALES, e a de vendas-site (melhor eficiência) ficou com fração do budget.", "impact": "Alto — o e-commerce fatura ~zero apesar de ~R$ 1.260/mês. A verba gera curtidas/alcance que não convertem.", "dimension": "estrutura/objetivo"},
+    {"problem": "Meta Pixel quebrado: a conversão de venda é invisível e não otimizável", "data_evidence": "Auditoria deep: o site tem GTM+GA4, mas o Meta Pixel/CAPI não dispara e o GA4 não tem evento purchase. Compras e ROAS não rastreados; o Meta não consegue otimizar para compra nem formar remarketing.", "impact": "Alto — sem medição de compra, a otimização para venda é cega e o investimento não tem ROI comprovável.", "dimension": "medição"},
+    {"problem": "Estrutura caótica dilui verba e aprendizado", "data_evidence": "145 campanhas no histórico, 30 ativas, dezenas com nome default + ads duplicados '— Cópia'. Microcampanhas impedem o algoritmo de sair do aprendizado.", "impact": "Médio/Alto — verba pulverizada, sem consolidação de sinal; CPMs e resultados instáveis.", "dimension": "estrutura"}
+  ],
+  "action_plan": [
+    {"action": "Instalar Pixel Meta + CAPI no site Nuvemshop (eventos ViewContent, AddToCart, InitiateCheckout, Purchase)", "priority": "P0", "expected_impact": "Habilita medir conversão, otimizar por compra e formar remarketing", "responsible": "Operador V4 + Gabriel (e-commerce)", "deadline": "Semana 1"},
+    {"action": "Reestruturar a conta: pausar microcampanhas de engajamento; consolidar em ~3-4 campanhas (Conversão-site / Tráfego qualificado / Remarketing) com nomenclatura clara", "priority": "P0", "expected_impact": "Sai do caos, consolida sinal, foca verba em venda", "responsible": "Operador V4 / gestor de tráfego", "deadline": "Semana 1-2"},
+    {"action": "Migrar verba de ENGAJAMENTO para CONVERSÃO/SALES e escalar o anúncio vendas-site (melhor CTR/CPC)", "priority": "P0", "expected_impact": "Direciona o que já funciona para venda; CPL/CPA mensurável", "responsible": "Operador V4 / gestor de tráfego", "deadline": "Semana 2 (após pixel)"},
+    {"action": "Geo-segmentar para o raio de frete viável (Porto Velho + entorno) + comunicar 'retira na loja'", "priority": "P1", "expected_impact": "Reduz desperdício com público que o frete inviabiliza; melhora conversão", "responsible": "Operador V4", "deadline": "Semana 2"},
+    {"action": "Recompor o feminino pós-Melissa: criativos de Cavalera fem/curadoria para a audiência feminina (que engaja mais)", "priority": "P1", "expected_impact": "Mantém a audiência feminina valiosa quando a Melissa sair", "responsible": "Operador V4 + cliente", "deadline": "Semana 3-4"},
+    {"action": "Ativar remarketing (após pixel maduro) dos visitantes + ~219k alcançados + base", "priority": "P1", "expected_impact": "Campanha de melhor ROAS típico em moda", "responsible": "Operador V4", "deadline": "Semana 4+"}
+  ],
+  "keyword_clusters": [],
+  "keyword_clusters_note": "Não aplicável nesta rodada — Google Ads não está em uso (cliente testou sem resultado; sem conta/dados). Clusters de keywords entram se/quando o Google for ativado (sugestão: Search de marca 'Cavalera Porto Velho' + PMax com catálogo, só após pixel).",
+  "budget_reallocation_scenarios": [
+    {
+      "name": "A. Conservador — mesma verba, foco em venda",
+      "total_budget_monthly": 1260,
+      "google_split": 0,
+      "meta_split": 1260,
+      "expected_leads_monthly": "[E] medível só após pixel",
+      "expected_cpl": "[E] a estabelecer",
+      "expected_roas": "[E] meta inicial 2-3x",
+      "risk_assessment": "Baixo. Mantém o gasto atual (~R$ 1.260/mês), mas realoca de engajamento para conversão e limpa a estrutura. Risco mínimo; ganho vem de direção, não de verba.",
+      "confidence": "alta",
+      "campaigns_structure": [
+        {"campaign": "Conversão — Site (escalar vendas-site)", "platform": "Meta", "budget_monthly": 700, "objective": "OUTCOME_SALES"},
+        {"campaign": "Tráfego qualificado / catálogo", "platform": "Meta", "budget_monthly": 360, "objective": "OUTCOME_SALES/TRAFFIC"},
+        {"campaign": "Remarketing (após corrigir o Pixel)", "platform": "Meta", "budget_monthly": 200, "objective": "OUTCOME_SALES"}
+      ]
+    },
+    {
+      "name": "B. Realista — reorganiza + leve aumento (RECOMENDADO)",
+      "total_budget_monthly": 1800,
+      "google_split": 0,
+      "meta_split": 1800,
+      "expected_leads_monthly": "[E] medível após pixel",
+      "expected_cpl": "[E] a estabelecer",
+      "expected_roas": "[E] meta 3-4x em 90d",
+      "risk_assessment": "Médio-baixo. Estrutura limpa + Pixel corrigido + foco em conversão e remarketing, com leve aumento para acelerar aprendizado de compra. Recomendado: o motor (CTR/CPC) já é bom; falta direção e medição.",
+      "confidence": "média",
+      "campaigns_structure": [
+        {"campaign": "Conversão — Site (Advantage+ Shopping quando possível)", "platform": "Meta", "budget_monthly": 900, "objective": "OUTCOME_SALES"},
+        {"campaign": "Aquisição fria geo (PV + raio viável)", "platform": "Meta", "budget_monthly": 450, "objective": "OUTCOME_SALES"},
+        {"campaign": "Remarketing (visitantes + base)", "platform": "Meta", "budget_monthly": 300, "objective": "OUTCOME_SALES"},
+        {"campaign": "Feminino Cavalera (recompor pós-Melissa)", "platform": "Meta", "budget_monthly": 150, "objective": "OUTCOME_SALES"}
+      ]
+    },
+    {
+      "name": "C. Agressivo — escalar após Pixel corrigido e maduro",
+      "total_budget_monthly": 3000,
+      "google_split": 600,
+      "meta_split": 2400,
+      "expected_leads_monthly": "[E] após dados de conversão",
+      "expected_cpl": "[E]",
+      "expected_roas": "[E] 4x+ se remarketing maduro",
+      "risk_assessment": "Médio-alto. Só faz sentido DEPOIS de 30-60 dias com o Pixel corrigido + conversão estável. Inclui teste de Google (Search marca + PMax catálogo). Não fazer agora — sem medição de compra, escalar amplifica o desperdício.",
+      "confidence": "baixa",
+      "campaigns_structure": [
+        {"campaign": "Meta Conversão + Remarketing escalado", "platform": "Meta", "budget_monthly": 2400, "objective": "OUTCOME_SALES"},
+        {"campaign": "Google Search marca + PMax catálogo", "platform": "Google", "budget_monthly": 600, "objective": "SALES"}
+      ]
+    }
+  ],
+  "creative_testing_hypotheses": [
+    {"hypothesis": "Se escalarmos o anúncio de vendas-site (objetivo SALES) com pixel medindo compra, então o CPA será viável, porque ele já tem o melhor CTR (3,99%) e CPC (R$ 0,15) da conta.", "angle": "Conversão direta pro site", "format": "single image/carousel de produto", "hook": "A Cavalera original em Porto Velho — compre online", "body": "Original, 6x sem juros, retire na loja ou receba na região.", "cta": "Comprar agora", "target_audience": "Aquisição fria geo (PV + raio) + interesses moda/Cavalera", "success_criteria": "CTR > 2% E (após pixel) ROAS > 2x", "testing_budget": 300, "testing_duration_days": 14},
+    {"hypothesis": "Se comunicarmos 'compre online e retire na loja', então a conversão sobe, porque resolve a dor nº1 (frete) do público local.", "angle": "Conveniência omnichannel", "format": "reels/story", "hook": "Comprou online, retira na loja. Sem frete.", "body": "Pediu no site, busca na Jioji. Original e na hora.", "cta": "Compre e retire", "target_audience": "Geo Porto Velho", "success_criteria": "CTR > 2% E taxa de add-to-cart medível", "testing_budget": 200, "testing_duration_days": 14},
+    {"hypothesis": "Se atacarmos a objeção de originalidade ('a Cavalera de verdade'), então o CTR/recall melhora vs criativo genérico de produto, porque diferencia de réplica de marketplace.", "angle": "Originalidade + local", "format": "single image", "hook": "Cavalera original. Aqui em Porto Velho.", "body": "Nada de réplica. Loja oficial, com nota e troca na loja.", "cta": "Ver coleção", "target_audience": "Fria + remarketing", "success_criteria": "CTR > 1,8%", "testing_budget": 150, "testing_duration_days": 10},
+    {"hypothesis": "Se criarmos criativos de Cavalera FEMININA, então retemos a audiência feminina (~56%, que engaja mais) quando a Melissa sair, porque ela responde a moda feminina de marca.", "angle": "Recompor feminino pós-Melissa", "format": "carousel/reels", "hook": "Moda feminina de marca continua aqui", "body": "Cavalera fem e curadoria — mesmo com a saída da Melissa.", "cta": "Ver feminino", "target_audience": "Audiência feminina (lookalike das que engajaram com Melissa)", "success_criteria": "CTR > 2% no público feminino", "testing_budget": 200, "testing_duration_days": 14},
+    {"hypothesis": "Se usarmos remarketing para quem visitou o site (após pixel), então o ROAS será o mais alto da conta, porque é público quente — padrão de moda.", "angle": "Remarketing de visitantes", "format": "carousel dinâmico de produtos vistos", "hook": "Você viu, e ainda dá tempo", "body": "Aquele item que você curtiu — em 6x, retire na loja.", "cta": "Finalizar compra", "target_audience": "Visitantes 7-30d + add-to-cart", "success_criteria": "ROAS > 4x (após pixel maduro)", "testing_budget": 200, "testing_duration_days": 21}
+  ],
+  "testing_budget_total_week_1": 1050,
+  "daypart_optimization": [
+    {"day_time": "Sexta a Domingo (todo o dia)", "bid_adjustment_pct": "+15%", "rationale": "Varejo de moda converte mais no fim de semana; lazer/compra. Validar com dados de conversão após pixel."},
+    {"day_time": "Seg-Sex 12-14h e 19-22h", "bid_adjustment_pct": "+10%", "rationale": "Picos de uso mobile (almoço e noite) — janelas de navegação/compra."},
+    {"day_time": "Madrugada (0-7h)", "bid_adjustment_pct": "-30%", "rationale": "Baixa intenção de compra; reduzir desperdício."}
+  ],
+  "realistic_goal_90d": {
+    "current_cpl": null,
+    "target_cpl": "[E] estabelecer baseline no mês 1 (após pixel)",
+    "current_cac": null,
+    "target_cac": "[E] a definir com ticket real",
+    "current_leads_month": null,
+    "target_leads_month": "[E] medível após pixel",
+    "premissas": [
+      "Pixel/CAPI instalado no site na Semana 1 (depende de acesso Nuvemshop + Gabriel)",
+      "Conta reestruturada para ~3-4 campanhas com objetivo de CONVERSÃO/SALES",
+      "Política de frete + retira na loja em destaque no site (do diagnóstico de CRO/posicionamento)",
+      "Audiência feminina recomposta com Cavalera fem antes da saída da Melissa",
+      "Mesma verba (~R$ 1.260/mês) no cenário conservador; R$ 1.800 no recomendado"
+    ]
+  },
+  "realistic_goal": {
+    "target_cpl": "[E] baseline a medir no mês 1 — hoje o Meta Pixel está quebrado, sem CPL/CPA",
+    "target_roas": "[E] meta inicial 2-3x no mês 1-2, 3-4x no mês 3 com remarketing",
+    "justification": "O topo de funil já é eficiente (CTR/CPC/CPM melhores que o benchmark) — o ganho de 90 dias vem de COMEÇAR A MEDIR e redirecionar para conversão, não de espremer mídia. A meta honesta do trimestre é: instalar medição, estabelecer baseline de CPA/ROAS, e mover o e-commerce de ~zero para vendas consistentes (rumo à meta declarada de R$ 30k/mês).",
+    "assumptions": ["Pixel instalado", "Estrutura limpa", "Frete/retira resolvidos", "Verba mantida ou +"],
+    "risk_factors": ["Com o Meta Pixel quebrado, nenhuma meta de CPA/ROAS é confiável", "Saída da Melissa pode derrubar parte da audiência feminina", "Execução depende de equipe enxuta (capacidade declarada como limitada)"]
+  },
+  "key_insight": {
+    "headline": "A Jioji tem o motor certo (clique barato, CTR alto) na direção errada: gasta ~R$ 1.260/mês em ENGAJAMENTO com o Meta Pixel quebrado. Trocar para CONVERSÃO + corrigir o Pixel transforma a verba que já existe — sem gastar mais.",
+    "context": "Os dados do Meta provam que a matéria-prima é boa: CTR 1,91% (acima do benchmark), CPC R$ 0,32 e CPM R$ 6,07 (bem abaixo do mercado), 219k de alcance. O problema não é eficiência de mídia — é direção e medição de conversão. A conta otimiza para engajamento (objetivo OUTCOME_ENGAGEMENT dominante), está caótica (145 campanhas) e o Meta Pixel está quebrado (GA4 sem evento de compra), então a compra não é medida nem otimizada. A prova do caminho está nos próprios dados: o anúncio de vendas-site teve o melhor CTR (3,99%) e CPC (R$ 0,15) — quando o objetivo é venda, performa. Redirecionar a verba (sem aumentá-la, no cenário conservador) + corrigir o Pixel é o destravamento de maior alavancagem.",
+    "numbered_reasons": [
+      "(1) Evidência do gap: ~R$ 1.260/mês geram CTR/CPC ótimos mas e-commerce fatura ~zero — porque o objetivo é engajamento e o Meta Pixel está quebrado, sem medir compra.",
+      "(2) Causa-raiz: objetivo OUTCOME_ENGAGEMENT + 145 campanhas sem estrutura + Meta Pixel quebrado (GA4 sem evento de compra). É estrutura/medição/direção, não falta de demanda.",
+      "(3) Upside: o anúncio de vendas-site (CTR 3,99%, CPC R$ 0,15) mostra que conversão funciona. Cenário recomendado (B): ~R$ 1.800/mês com o Pixel corrigido + 3-4 campanhas de conversão + remarketing — caminho realista para a meta de R$ 30k/mês no e-commerce."
+    ],
+    "discussion_anchor": "Com a Sandra: aprovar os 3 movimentos P0 antes do próximo ciclo de verba — (1) corrigir o Meta Pixel/CAPI + ligar evento de compra no GA4, (2) reestruturar para ~3-4 campanhas de CONVERSÃO, (3) migrar a verba de engajamento para venda (escalando o vendas-site). Mesma verba (cenário conservador) já muda o jogo; o recomendado (B, R$ 1.800) acelera. Não aumentar verba antes de medir — com o Pixel quebrado, escalar amplifica o desperdício."
+  },
+  "honesty_alert": "Diagnóstico baseado em dados REAIS do Meta (90 dias, via acesso partner) — sólido no topo de funil. DUAS limitações importantes: (1) com o Meta Pixel QUEBRADO (e o GA4 sem evento de compra) não há dado de conversão/ROAS — então CPL, CPA, ROAS e taxa de conversão do e-commerce são DESCONHECIDOS; todas as metas numéricas (cenários, realistic_goal) são [E] e só ganham baseline real após o Pixel corrigido rodar ~30 dias. Não prometo CPA/ROAS específico sem medir. (2) A análise de criativos é por desempenho de mídia (CTR/CPC/gasto), não por conversão — 'o que vende' só será confirmado com o Pixel corrigido. Risco estratégico adicional: parte da audiência feminina (~56%, a que mais engaja) foi construída com promos de MELISSA, que está saindo do shopping — recompor o feminino com Cavalera fem é urgente para não perder essa audiência. Recomendação: corrigir o Meta Pixel + ligar o evento de compra no GA4 é o pré-requisito de tudo; sem isso, o diagnóstico de mídia fica no topo de funil e o e-commerce continua faturando ~zero por mais barato que seja o clique."
+}

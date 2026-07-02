@@ -1,0 +1,596 @@
+{
+  "client_name": "Jioji Cavalera",
+  "skill": "ee-s2-diagnostico-organico-ig",
+  "version": 2,
+  "generated_at": "2026-06-14T00:00:00Z",
+  "data_source": "Instagram Graph API (business_discovery) — 6 contas, janela 90d (16/03–14/06/2026), todas puxadas no mesmo snapshot: @jiojicavalera (cliente) + 5 concorrentes reais — 2 referências nacionais (@cavalera marca-mãe, @approve streetwear) e 3 lojas LOCAIS de Porto Velho (@lojamixpvh, @tudo_baratinho1, @jlstorero). @anasumoda (PVH) ficou de fora por estar parada (0 posts em 90d); @youcom retornou handle inválido na API. + persona-icp v2 + posicionamento v1 + pesquisa-mercado v1.",
+  "summary": "O Instagram da Jioji (@jiojicavalera) tem 7.062 seguidores e a MAIOR taxa de engajamento de todo o set competitivo (1,11% — ~12x a média dos concorrentes), mas está praticamente PARADO: 7 posts em 90 dias (0,54/semana). Para comparar: as lojas LOCAIS de Porto Velho postam de 4,85 (@lojamixpvh, 60k) a 11,31/semana (@tudo_baratinho1, 16k); @jlstorero (3k, porte parecido) posta 5,46; e até a marca nacional @cavalera posta 2,46. Ou seja: todos os rivais alimentam o canal muito mais — e nenhum engaja tanto por seguidor. O formato vencedor é claro: os melhores posts da Jioji são REELS locais e autênticos (tour de loja, emocional de Dia das Mães, feminino elegante; eng 1,5–2,5%). Gaps: cadência baixíssima, 0 hashtags e 0 CTA nos posts, e bio que leva a um linktree (não ao e-commerce). Ação nº1: subir a cadência de Reels (tour de loja, emocional, feminino) com CTA + hashtags — e reaproveitá-los no paid.",
+  "summary_headline": "@jiojicavalera: 7k seguidores com o MAIOR engajamento do set (1,11%, ~12x a média dos rivais) — mas só 0,54 post/semana, enquanto lojas locais de PVH postam 5–11/semana. Reels locais funcionam; falta CADÊNCIA, CTA e hashtags.",
+  "summary_highlights": [
+    {
+      "category": "maturidade",
+      "label": "Cadência",
+      "value": "0,54/sem",
+      "subtext": "7 posts/90d — rivais locais postam 4,85–11,3/sem. Audiência de 7k subutilizada",
+      "tone": "red"
+    },
+    {
+      "category": "vantagem",
+      "label": "Engajamento",
+      "value": "1,11%",
+      "subtext": "O MAIOR do set: ~12x a média dos concorrentes (0,094%) e 5x o melhor rival local",
+      "tone": "green"
+    },
+    {
+      "category": "oportunidade",
+      "label": "Formato vencedor",
+      "value": "REELS",
+      "subtext": "Top posts são Reels (1,5–2,5%): tour de loja, emocional, feminino",
+      "tone": "green"
+    },
+    {
+      "category": "competicao",
+      "label": "Rivais locais (PVH)",
+      "value": "60k · 16k · 3k",
+      "subtext": "Loja Mix, Tudo Baratinho e JL Store postam 5–11x/sem — disputam a atenção local",
+      "tone": "blue"
+    },
+    {
+      "category": "risco",
+      "label": "CTA + hashtags",
+      "value": "0 / 0",
+      "subtext": "Posts sem CTA (comprar/retirar) e sem hashtags (zero descoberta)",
+      "tone": "red"
+    },
+    {
+      "category": "risco",
+      "label": "Bio / link",
+      "value": "Linktree",
+      "subtext": "Bio leva a instabio.cc, não ao e-commerce; não comunica posicionamento",
+      "tone": "yellow"
+    }
+  ],
+  "summary_key_findings": [
+    {
+      "category": "ameaca",
+      "text": "A cadência é o gargalo nº1: só 7 posts em 90 dias (0,54/semana) numa conta de 7.062 seguidores. As lojas LOCAIS de Porto Velho postam muito mais — @tudo_baratinho1 (16k) faz 11,31/semana, @jlstorero (3k, porte parecido) 5,46, @lojamixpvh (60k) 4,85 — e até a marca nacional @cavalera posta 2,46. A Jioji tem audiência e ela engaja, mas quase não alimenta o canal: deixa alcance orgânico (grátis) na mesa todo mês."
+    },
+    {
+      "category": "vantagem",
+      "text": "A audiência da Jioji é pequena mas a MAIS engajada de todo o set: 1,11% de engajamento por seguidor — contra 0,21% do melhor rival local (@jlstorero), 0,085% da marca @cavalera (352k) e 0,026% da @lojamixpvh (60k). Média dos 5 concorrentes: 0,094%, ou seja a Jioji engaja ~12x mais. E o formato vencedor é inequívoco: os 3 melhores posts são REELS (1,5–2,5%) — emocional de Dia das Mães, feminino elegante e TOUR DA LOJA ('vem conhecer a Jioji'). Conteúdo local + autêntico + vídeo é o que funciona."
+    },
+    {
+      "category": "acao",
+      "text": "Os posts vencedores NÃO têm CTA nem hashtags (0 e 0). Adicionar CTA ('compre no site / retire na loja') e hashtags (#cavalera #portovelho #moda) nos Reels que já engajam é ganho imediato de descoberta + conversão, sem produzir nada novo. E conectar ao paid: os Reels que engajam no orgânico viram criativos de conversão (ver diagnóstico de criativos)."
+    },
+    {
+      "category": "contexto",
+      "text": "O campo de concorrência é largo e digital: lojas LOCAIS multimarca (Loja Mix, Tudo Baratinho, JL Store) disputam a atenção de Porto Velho com volume alto de posts, e marcas nacionais que a audiência também segue (Cavalera 352k, Approve 1M) ditam o bar de conteúdo (colabs, lançamentos, carrossel de catálogo). A Jioji NÃO compete em escala — mas tem o ativo que nenhum deles tem: o maior engajamento por seguidor e o ângulo LOCAL ('a Cavalera original, aqui em PV, retire na loja')."
+    },
+    {
+      "category": "acao",
+      "text": "A bio ('Seja aquilo que você veste, seja Cavalera!' + telefones) leva a um linktree (instabio.cc/cavaleraportovelho) — não ao e-commerce e reforçando a fragmentação de perfis. Ajustar a bio para comunicar o posicionamento (original + Porto Velho + retira na loja) e linkar direto pro site/WhatsApp oficial."
+    }
+  ],
+  "period": {
+    "start": "2026-03-16",
+    "end": "2026-06-14",
+    "days": 90
+  },
+  "client_account": {
+    "username": "jiojicavalera",
+    "name": "Jioji Cavalera",
+    "biography": "Seja aquilo que você veste, seja Cavalera! 📞(69) 32210706 📲(69)993313494 Conheça nossos canais oficiais 👇",
+    "profile_picture_url": "https://scontent.frao7-1.fna.fbcdn.net/v/t51.2885-15/435078673_630182242618362_1257933834523596077_n.jpg",
+    "website": "https://instabio.cc/cavaleraportovelho (linktree — não leva direto ao e-commerce)",
+    "followers_count": 7062,
+    "follows_count": 145,
+    "media_count_total": 62,
+    "posts_90d": 7,
+    "permalink": "https://www.instagram.com/jiojicavalera/"
+  },
+  "competitor_accounts": [
+    {
+      "username": "cavalera",
+      "name": "Cavalera (marca nacional)",
+      "followers_count": 352441,
+      "posts_90d": 32,
+      "posts_per_week": 2.46,
+      "avg_engagement_proxy": 0.085,
+      "best_format": "CAROUSEL",
+      "note": "Marca-mãe nacional (referência de conteúdo/cadência, não rival local direto)."
+    },
+    {
+      "username": "approve",
+      "name": "Approve (streetwear nacional)",
+      "followers_count": 1017694,
+      "posts_90d": 64,
+      "posts_per_week": 4.92,
+      "avg_engagement_proxy": 0.068,
+      "best_format": "CAROUSEL",
+      "note": "Streetwear nacional de referência (1M seg) — bar de conteúdo do segmento; escala não comparável."
+    },
+    {
+      "username": "lojamixpvh",
+      "name": "Loja Mix (Porto Velho)",
+      "followers_count": 60046,
+      "posts_90d": 63,
+      "posts_per_week": 4.85,
+      "avg_engagement_proxy": 0.026,
+      "best_format": "REELS",
+      "note": "Loja multimarca LOCAL de Porto Velho (Av. Calama) — rival direto de atenção. Posta ~5x/semana."
+    },
+    {
+      "username": "tudo_baratinho1",
+      "name": "Tudo Baratinho (Porto Velho)",
+      "followers_count": 16317,
+      "posts_90d": 147,
+      "posts_per_week": 11.31,
+      "avg_engagement_proxy": 0.086,
+      "best_format": "REELS",
+      "note": "Varejo de moda LOCAL de Porto Velho — alto volume (11/semana), engajamento baixo por seguidor."
+    },
+    {
+      "username": "jlstorero",
+      "name": "JL Store RO (Porto Velho)",
+      "followers_count": 2972,
+      "posts_90d": 71,
+      "posts_per_week": 5.46,
+      "avg_engagement_proxy": 0.206,
+      "best_format": "REELS",
+      "note": "Loja de roupa LOCAL de Porto Velho, porte parecido com a Jioji (~3k) — posta 5,5x/semana."
+    }
+  ],
+  "competitor_note": "5 concorrentes reais comparados no mesmo snapshot: 2 referências nacionais (@cavalera marca-mãe, @approve streetwear) e 3 lojas LOCAIS de Porto Velho (@lojamixpvh 60k, @tudo_baratinho1 16k, @jlstorero 3k). @anasumoda (PVH) está parada (0 posts/90d) e ficou de fora; @youcom deu handle inválido na API. O retrato é claro: TODOS os rivais postam muito mais que a Jioji (2,5–11,3/semana vs 0,54), mas NENHUM engaja tanto por seguidor.",
+  "format_distribution": {
+    "by_account": [
+      {
+        "username": "jiojicavalera",
+        "counts": {
+          "FEED_IMAGE": 0,
+          "CAROUSEL": 3,
+          "REELS": 4,
+          "VIDEO": 0
+        }
+      },
+      {
+        "username": "cavalera",
+        "counts": {
+          "FEED_IMAGE": 11,
+          "CAROUSEL": 20,
+          "REELS": 1,
+          "VIDEO": 0
+        }
+      },
+      {
+        "username": "approve",
+        "counts": {
+          "FEED_IMAGE": 3,
+          "CAROUSEL": 32,
+          "REELS": 29,
+          "VIDEO": 0
+        }
+      },
+      {
+        "username": "lojamixpvh",
+        "counts": {
+          "FEED_IMAGE": 11,
+          "CAROUSEL": 51,
+          "REELS": 1,
+          "VIDEO": 0
+        }
+      },
+      {
+        "username": "tudo_baratinho1",
+        "counts": {
+          "FEED_IMAGE": 50,
+          "CAROUSEL": 28,
+          "REELS": 69,
+          "VIDEO": 0
+        }
+      },
+      {
+        "username": "jlstorero",
+        "counts": {
+          "FEED_IMAGE": 37,
+          "CAROUSEL": 14,
+          "REELS": 20,
+          "VIDEO": 0
+        }
+      }
+    ],
+    "insight": "A Jioji é Reels-heavy (4 de 7), e Reels é o formato que MAIS engaja na conta dela — e também nas locais que melhor performam (@jlstorero, @tudo_baratinho1). As referências nacionais (@cavalera, @approve) e a @lojamixpvh apostam em carrossel/feed (catálogo). O problema da Jioji NÃO é formato — é VOLUME: 7 posts vs 32–147 dos rivais."
+  },
+  "cadence": {
+    "by_account": [
+      {
+        "username": "jiojicavalera",
+        "posts_90d": 7,
+        "posts_per_week": 0.54
+      },
+      {
+        "username": "cavalera",
+        "posts_90d": 32,
+        "posts_per_week": 2.46
+      },
+      {
+        "username": "approve",
+        "posts_90d": 64,
+        "posts_per_week": 4.92
+      },
+      {
+        "username": "lojamixpvh",
+        "posts_90d": 63,
+        "posts_per_week": 4.85
+      },
+      {
+        "username": "tudo_baratinho1",
+        "posts_90d": 147,
+        "posts_per_week": 11.31
+      },
+      {
+        "username": "jlstorero",
+        "posts_90d": 71,
+        "posts_per_week": 5.46
+      }
+    ],
+    "insight": "Cadência é o gargalo nº1: a Jioji posta 0,54/semana (~2/mês). Os rivais LOCAIS postam de 4,85 (@lojamixpvh) a 11,31 (@tudo_baratinho1) por semana — 9x a 21x mais; até a marca nacional posta 2,46. Para uma conta de 7k seguidores ENGAJADOS, o piso saudável é 2-3 posts/semana. Subir a cadência é a alavanca de maior retorno: alcance orgânico é grátis e a audiência já responde.",
+    "by_account_note": "Dia/horário preferido não retornados pela Graph API neste pull (business_discovery não expõe granularidade por timestamp de forma confiável para contas de terceiros)."
+  },
+  "engagement_benchmark": {
+    "by_account": [
+      {
+        "username": "jiojicavalera",
+        "avg_likes": 46.9,
+        "avg_comments": 10.6,
+        "avg_engagement_proxy": 1.113,
+        "best_format_by_engagement": "REELS"
+      },
+      {
+        "username": "cavalera",
+        "avg_likes": 236.2,
+        "avg_comments": 21.3,
+        "avg_engagement_proxy": 0.085,
+        "best_format_by_engagement": "CAROUSEL"
+      },
+      {
+        "username": "approve",
+        "avg_likes": 584.1,
+        "avg_comments": 37.0,
+        "avg_engagement_proxy": 0.068,
+        "best_format_by_engagement": "CAROUSEL"
+      },
+      {
+        "username": "lojamixpvh",
+        "avg_likes": 14.3,
+        "avg_comments": 0.5,
+        "avg_engagement_proxy": 0.026,
+        "best_format_by_engagement": "REELS"
+      },
+      {
+        "username": "tudo_baratinho1",
+        "avg_likes": 12.8,
+        "avg_comments": 0.4,
+        "avg_engagement_proxy": 0.086,
+        "best_format_by_engagement": "REELS"
+      },
+      {
+        "username": "jlstorero",
+        "avg_likes": 4.4,
+        "avg_comments": 0.6,
+        "avg_engagement_proxy": 0.206,
+        "best_format_by_engagement": "REELS"
+      }
+    ],
+    "client_engagement_proxy": 1.113,
+    "competitor_avg_engagement_proxy": 0.094,
+    "insight": "A Jioji tem o MAIOR engajamento por seguidor de todo o set: 1,11% — contra 0,21% do melhor rival local (@jlstorero), 0,085% da marca @cavalera e só 0,026% da @lojamixpvh. Média dos concorrentes: 0,094% → a Jioji engaja ~12x a média. Audiência pequena, local e fiel é o ativo a explorar. O que limita o alcance é o VOLUME de posts, não a qualidade do engajamento."
+  },
+  "top_posts": [
+    {
+      "username": "jiojicavalera",
+      "post_id": "18069941318415059",
+      "permalink": "https://www.instagram.com/reel/DXu5PSMCDMV/",
+      "embed_url": "https://www.instagram.com/reel/DXu5PSMCDMV/embed/",
+      "media_type": "VIDEO",
+      "format": "REELS",
+      "thumbnail_url": "https://scontent.cdninstagram.com/v/t51.71878-15/684593002_1006684142029497_2488028028238893244_n.jpg",
+      "timestamp": "2026-04-29T22:43:42+0000",
+      "caption": "Você não lembra, mas ela lembra de tudo. Do primeiro choro. Das noites sem dormir. Dos primeiros passos às graduações... (Dia das Mães)",
+      "caption_length": 180,
+      "hashtags_count": 0,
+      "mentions_count": 0,
+      "has_cta": false,
+      "like_count": 91,
+      "comments_count": 28,
+      "engagement_proxy": 2.487,
+      "diagnosis": "Melhor post do período. REEL emocional de Dia das Mães — storytelling que conecta. Falta CTA e hashtags: o post engaja mas não converte nem é descoberto. Padrão a replicar (emocional + datas + Reels)."
+    },
+    {
+      "username": "jiojicavalera",
+      "post_id": "feminino",
+      "permalink": "https://www.instagram.com/reel/DX9bJRFA5IB/",
+      "embed_url": "https://www.instagram.com/reel/DX9bJRFA5IB/embed/",
+      "media_type": "VIDEO",
+      "format": "REELS",
+      "thumbnail_url": "https://scontent.cdninstagram.com/v/t51.82787-15/682192348_1.jpg",
+      "timestamp": "2026-05",
+      "caption": "Ela pode ser clássica e elegante… como um vestido que transmite presença em cada detalhe. Pode amar praticidade...",
+      "caption_length": 150,
+      "hashtags_count": 0,
+      "mentions_count": 0,
+      "has_cta": false,
+      "like_count": 84,
+      "comments_count": 26,
+      "engagement_proxy": 2.302,
+      "diagnosis": "REEL de moda FEMININA elegante — 2º melhor. Importante: o feminino engaja, e a Jioji precisa recompor esse público com a saída da Melissa. Conteúdo feminino de Cavalera fem deve ser ampliado. Falta CTA/hashtags."
+    },
+    {
+      "username": "jiojicavalera",
+      "post_id": "tour",
+      "permalink": "https://www.instagram.com/reel/DWEnibxANdN/",
+      "embed_url": "https://www.instagram.com/reel/DWEnibxANdN/embed/",
+      "media_type": "VIDEO",
+      "format": "REELS",
+      "thumbnail_url": "https://scontent.cdninstagram.com/v/t51.71878-15/654659248_1.jpg",
+      "timestamp": "2026-04",
+      "caption": "🎥 Vem comigo conhecer a loja Jioji! O destaque de hoje? Marcas masculinas que esbanjam estilo: Cavalera, Lado Avesso...",
+      "caption_length": 130,
+      "hashtags_count": 0,
+      "mentions_count": 0,
+      "has_cta": false,
+      "like_count": 82,
+      "comments_count": 8,
+      "engagement_proxy": 1.506,
+      "diagnosis": "TOUR DA LOJA ('vem conhecer a Jioji') mostrando a curadoria multimarca. É exatamente o posicionamento 'original + local' em vídeo — autêntico e replicável toda semana. Falta CTA ('compre no site/retire na loja') e hashtags."
+    },
+    {
+      "username": "cavalera",
+      "post_id": "cbjr_feed",
+      "permalink": "https://www.instagram.com/p/DVzDP_mCY9t/",
+      "embed_url": "https://www.instagram.com/p/DVzDP_mCY9t/embed/",
+      "media_type": "IMAGE",
+      "format": "FEED_IMAGE",
+      "thumbnail_url": "https://scontent.cdninstagram.com/v/t51.82787-15/650729461_1.jpg",
+      "timestamp": "2026-05",
+      "caption": "Só os Loucos Sabem — Cavalera x Charlie Brown Jr. peças limitadas, disponível em nosso site. #cavalera #cbjr ...",
+      "caption_length": 110,
+      "hashtags_count": 4,
+      "mentions_count": 0,
+      "has_cta": false,
+      "like_count": 13956,
+      "comments_count": 71,
+      "engagement_proxy": 4.024,
+      "diagnosis": "Colab/lançamento ('CBJr, peças limitadas, no site') com hashtags — gera 14k likes na marca. GAP para a Jioji: surfar essas colabs LOCALMENTE ('a colab chegou na Jioji, em Porto Velho — retire na loja')."
+    },
+    {
+      "username": "cavalera",
+      "post_id": "cbjr_carousel",
+      "permalink": "https://www.instagram.com/p/DWCkOnVgsOd/",
+      "embed_url": "https://www.instagram.com/p/DWCkOnVgsOd/embed/",
+      "media_type": "CAROUSEL_ALBUM",
+      "format": "CAROUSEL",
+      "thumbnail_url": "https://scontent.cdninstagram.com/v/t39.30808-6/653666424_93.jpg",
+      "timestamp": "2026-05",
+      "caption": "Só os Loucos Sabem — Cavalera x Charlie Brown Jr. peças limitadas, disponível em nosso site. #cavalera #cbjr ...",
+      "caption_length": 110,
+      "hashtags_count": 4,
+      "mentions_count": 0,
+      "has_cta": false,
+      "like_count": 1182,
+      "comments_count": 17,
+      "engagement_proxy": 0.35,
+      "diagnosis": "Mesma colab em carrossel. Escassez ('peças limitadas') + 'disponível no site' (CTA implícito) + hashtags. Padrão de lançamento que a Jioji pode adaptar localmente."
+    }
+  ],
+  "bottom_posts": [
+    {
+      "username": "jiojicavalera",
+      "post_id": "bottom1",
+      "permalink": "https://www.instagram.com/reel/DXdMscbABAs/",
+      "embed_url": "https://www.instagram.com/reel/DXdMscbABAs/embed/",
+      "media_type": "VIDEO",
+      "format": "REELS",
+      "thumbnail_url": null,
+      "timestamp": "2026-04",
+      "caption": "Nova vibe, mesma atitude. 🔥 A nova coleção da Cavalera chegou pra elevar o street...",
+      "caption_length": 80,
+      "hashtags_count": 0,
+      "mentions_count": 0,
+      "has_cta": false,
+      "like_count": 11,
+      "comments_count": 1,
+      "engagement_proxy": 0.199,
+      "diagnosis": "PIOR post — e é um REEL. Prova que não é 'Reel por Reel': é um anúncio de coleção genérico ('nova coleção chegou'), sem hook emocional/local nem CTA. O que engaja são os Reels com ângulo (emocional, tour de loja, feminino), não o anúncio de produto seco."
+    },
+    {
+      "username": "jiojicavalera",
+      "post_id": "bottom2",
+      "permalink": "https://www.instagram.com/p/DW7JqIyFHML/",
+      "embed_url": "https://www.instagram.com/p/DW7JqIyFHML/embed/",
+      "media_type": "CAROUSEL_ALBUM",
+      "format": "CAROUSEL",
+      "thumbnail_url": null,
+      "timestamp": "2026-04",
+      "caption": "Você sabia que a Melissa Vixen já é um verdadeiro ícone há décadas? 😍 Com desig...",
+      "caption_length": 80,
+      "hashtags_count": 0,
+      "mentions_count": 0,
+      "has_cta": false,
+      "like_count": 6,
+      "comments_count": 5,
+      "engagement_proxy": 0.298,
+      "diagnosis": "Carrossel sobre MELISSA (marca em saída) — baixo engajamento + formato carrossel (rende menos que Reel na conta). Reforça: não investir mais conteúdo orgânico em Melissa."
+    },
+    {
+      "username": "jiojicavalera",
+      "post_id": "bottom3",
+      "permalink": "https://www.instagram.com/p/DWW4elqFKO-/",
+      "embed_url": "https://www.instagram.com/p/DWW4elqFKO-/embed/",
+      "media_type": "CAROUSEL_ALBUM",
+      "format": "CAROUSEL",
+      "thumbnail_url": null,
+      "timestamp": "2026-04",
+      "caption": "✨ Cavalera! ✨ Cropped com frase inspiradora 'Keep The Fire Burning' 🔥 Estilo...",
+      "caption_length": 80,
+      "hashtags_count": 0,
+      "mentions_count": 0,
+      "has_cta": false,
+      "like_count": 32,
+      "comments_count": 3,
+      "engagement_proxy": 0.583,
+      "diagnosis": "Carrossel de produto (cropped Cavalera) — melhor dos bottom, mas carrossel rende menos que Reel aqui. Migrar conteúdo de produto para Reel + adicionar CTA/hashtags."
+    }
+  ],
+  "bottom_posts_note": "Padrão claro: os piores são anúncio de coleção genérico (mesmo em Reel), Melissa (saindo) e carrosséis de produto. Os melhores são Reels com ângulo (emocional, tour de loja, feminino). Lição: o ângulo importa mais que o formato — e Reel > carrossel nesta conta.",
+  "competitor_patterns_missing": [
+    {
+      "pattern": "Surfar colabs/lançamentos da marca Cavalera localmente",
+      "seen_in_count": 2,
+      "seen_in_competitors": [
+        "cavalera"
+      ],
+      "example_permalinks": [
+        "https://www.instagram.com/p/DVzDP_mCY9t/"
+      ],
+      "why_works": "As colabs ('Cavalera x Charlie Brown Jr., peças limitadas') geram hype e escassez (14k likes na marca). A Jioji pode capturar esse hype com ângulo LOCAL que a marca nacional não tem: 'a colab chegou em Porto Velho, retire na loja'.",
+      "how_to_apply": "Sempre que a Cavalera lançar colab/coleção, postar um Reel local: 'chegou na Jioji, em PV — original, retire na loja ou receba na região'."
+    },
+    {
+      "pattern": "Hashtags para descoberta",
+      "seen_in_count": 3,
+      "seen_in_competitors": [
+        "cavalera"
+      ],
+      "example_permalinks": [
+        "https://www.instagram.com/p/DVzDP_mCY9t/"
+      ],
+      "why_works": "A marca usa 4 hashtags (#cavalera #cbjr...) por post; a Jioji usa ZERO. Hashtags ampliam descoberta para quem busca a marca/categoria — alcance grátis.",
+      "how_to_apply": "Adicionar 5-10 hashtags por post: marca (#cavalera #ladoavesso), local (#portovelho #rondonia) e categoria (#moda #streetwear #lookdodia)."
+    },
+    {
+      "pattern": "Escassez/urgência ('peças limitadas')",
+      "seen_in_count": 2,
+      "seen_in_competitors": [
+        "cavalera"
+      ],
+      "example_permalinks": [
+        "https://www.instagram.com/p/DWCkOnVgsOd/"
+      ],
+      "why_works": "Framing de escassez acelera decisão. A marca usa 'peças limitadas'; a Jioji não usa urgência.",
+      "how_to_apply": "Usar 'últimas peças', 'só na loja de PV', 'enquanto durar o estoque' (inclusive para a saída da Melissa: 'últimas Melissas')."
+    },
+    {
+      "pattern": "CTA claro de compra/destino",
+      "seen_in_count": 2,
+      "seen_in_competitors": [
+        "cavalera"
+      ],
+      "example_permalinks": [
+        "https://www.instagram.com/p/DVzDP_mCY9t/"
+      ],
+      "why_works": "A marca diz 'disponível em nosso site'. Os Reels da Jioji (que engajam) não têm NENHUM CTA — engajam mas não direcionam à compra.",
+      "how_to_apply": "Fechar todo Reel com CTA: 'Compre no site (link na bio) ou retire na loja' / 'Chama no WhatsApp'."
+    }
+  ],
+  "client_winning_patterns": [
+    {
+      "pattern": "Reels (formato campeão)",
+      "seen_in_count": 4,
+      "example_permalinks": [
+        "https://www.instagram.com/reel/DXu5PSMCDMV/",
+        "https://www.instagram.com/reel/DX9bJRFA5IB/"
+      ],
+      "recommendation": "Manter Reels como formato principal e multiplicar a frequência (de ~2/mês para 2-3/semana). É o que a audiência da Jioji premia (1,5–2,5% eng)."
+    },
+    {
+      "pattern": "Tour de loja / 'vem conhecer a Jioji' (local + autêntico)",
+      "seen_in_count": 1,
+      "example_permalinks": [
+        "https://www.instagram.com/reel/DWEnibxANdN/"
+      ],
+      "recommendation": "Transformar em série semanal ('novidades da semana na Jioji', 'look do dia', 'chegou Cavalera'). É o posicionamento 'original + local' em vídeo — e ninguém nacional faz isso por Porto Velho."
+    },
+    {
+      "pattern": "Storytelling emocional + datas (Dia das Mães)",
+      "seen_in_count": 1,
+      "example_permalinks": [
+        "https://www.instagram.com/reel/DXu5PSMCDMV/"
+      ],
+      "recommendation": "Repetir em datas (Dia dos Namorados, Pais, Black Friday) — o emocional foi o post de maior engajamento. Combinar com produto/oferta."
+    },
+    {
+      "pattern": "Conteúdo feminino (elegante) engaja",
+      "seen_in_count": 1,
+      "example_permalinks": [
+        "https://www.instagram.com/reel/DX9bJRFA5IB/"
+      ],
+      "recommendation": "Ampliar conteúdo feminino (Cavalera fem) — crítico para recompor o público feminino que a Melissa atendia (marca em saída)."
+    }
+  ],
+  "instagram_compliance": {
+    "aspect_ratio_issues_count": 0,
+    "notes": "Reels em formato vertical (padrão correto). Análise visual frame-a-frame e safe zones limitada nesta rodada (sem extração de frames). Sem problemas evidentes de aspect ratio nos dados públicos. A confirmar em revisão visual."
+  },
+  "next_actions": [
+    {
+      "action": "Subir a cadência para 2-3 Reels/semana (de ~2/mês)",
+      "impact": "alto",
+      "effort": "medio",
+      "priority": "P1"
+    },
+    {
+      "action": "Adicionar CTA + hashtags em todo post (hoje 0 e 0): 'compre no site/retire na loja' + #cavalera #portovelho #moda",
+      "impact": "alto",
+      "effort": "baixo",
+      "priority": "P1"
+    },
+    {
+      "action": "Transformar o 'tour de loja' em série semanal (novidades/look do dia/chegou Cavalera)",
+      "impact": "alto",
+      "effort": "medio",
+      "priority": "P1"
+    },
+    {
+      "action": "Ajustar a bio: comunicar posicionamento (original + Porto Velho + retira na loja) e linkar direto ao e-commerce/WhatsApp oficial (não ao linktree)",
+      "impact": "medio",
+      "effort": "baixo",
+      "priority": "P1"
+    },
+    {
+      "action": "Surfar colabs/lançamentos da Cavalera com ângulo local ('chegou na Jioji em PV, retire na loja')",
+      "impact": "medio",
+      "effort": "baixo",
+      "priority": "P2"
+    },
+    {
+      "action": "Ampliar conteúdo feminino (Cavalera fem) para recompor o público da Melissa",
+      "impact": "medio",
+      "effort": "medio",
+      "priority": "P2"
+    },
+    {
+      "action": "Reaproveitar os Reels que engajam no orgânico como criativos de CONVERSÃO no paid (com CTA pro site) — conectar orgânico↔paid",
+      "impact": "alto",
+      "effort": "baixo",
+      "priority": "P1"
+    },
+    {
+      "action": "Consolidar a presença em @jiojicavalera (vs @cavaleraportovelho/FB/TikTok) — concentrar o esforço orgânico",
+      "impact": "medio",
+      "effort": "medio",
+      "priority": "P2"
+    }
+  ],
+  "key_insight": {
+    "headline": "A Jioji tem o MAIOR engajamento por seguidor de todo o set competitivo (1,11%, ~12x a média dos rivais) — e desperdiça isso postando 0,54x/semana, enquanto lojas locais de Porto Velho postam de 5 a 11x. Os Reels que ela JÁ faz (tour de loja, emocional, feminino) funcionam; o gargalo é cadência, CTA e hashtags.",
+    "context": "O orgânico da Jioji é um ativo subaproveitado, não um problema de qualidade. A audiência é pequena (7.062) mas é a mais fiel do set: eng 1,11% vs 0,094% de média dos 5 concorrentes (incluindo lojas locais de PVH que postam 5–11x/semana e marcas nacionais de 352k–1M seguidores). E o conteúdo que ela já produz é o certo: os 3 melhores posts são Reels — tour de loja ('vem conhecer a Jioji'), emocional (Dia das Mães) e feminino elegante — exatamente o posicionamento 'original + local' em vídeo. O que falta é VOLUME (7 posts/90d), CTA (0) e hashtags (0). Multiplicar a cadência desses Reels, com CTA e hashtags, e reaproveitá-los no paid, é a alavanca orgânica de maior retorno — custo de produção baixo (celular na loja) e audiência já comprovadamente responsiva.",
+    "numbered_reasons": [
+      "(1) Audiência engajada e subutilizada: 7.062 seguidores, eng 1,11% (o MAIOR do set, ~12x a média dos rivais), mas só 7 posts em 90 dias — alcance orgânico grátis deixado na mesa.",
+      "(2) Está perdendo no único jogo que dá pra ganhar de graça — frequência: rivais locais de PVH postam 5–11x/semana; a Jioji, 0,54. Não é orçamento, é constância.",
+      "(3) O formato e o conteúdo vencedores já existem: Reels de tour de loja, emocional e feminino (1,5–2,5% eng). Não precisa descobrir o que funciona — precisa fazer mais, com CTA + hashtags, e levar pro paid."
+    ],
+    "discussion_anchor": "Com a Sandra: assumir um compromisso de cadência (ex.: 2-3 Reels/semana — tour de loja + novidade + feminino), com CTA e hashtags padronizados, e definir quem grava (equipe da loja). As lojas locais já postam 5–11x/semana; a Jioji não precisa ganhar em volume, só sair do zero — porque cada post dela rende ~12x mais engajamento. É o ganho orgânico mais barato e o que alimenta o paid de conversão."
+  },
+  "honesty_alert": "Diagnóstico com dados REAIS da Instagram Graph API (business_discovery), todas as 6 contas puxadas no MESMO snapshot (14/06/2026, janela 90d) — métricas de seguidores, cadência, formato e engajamento são fatos comparáveis. Limitações: (1) o engagement proxy = (likes + 3×comentários)/seguidores × 100; é uma aproximação pública (não temos alcance/salvamentos reais das contas dos concorrentes); (2) @anasumoda (PVH) ficou de fora por estar parada na janela (0 posts/90d) e @youcom retornou handle inválido na API — o set local pode ser ampliado se o operador confirmar mais 1-2 @; (3) a análise visual frame-a-frame dos Reels não foi feita (temos thumbnail + caption + métricas, não a revisão estética). O achado central — a Jioji tem o maior engajamento do set mas a menor cadência, com Reels locais que funcionam e sem CTA/hashtags — é sólido porque vem dos números reais de todas as contas."
+}

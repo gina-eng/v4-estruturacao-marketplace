@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manual de Marca · Bombachas Farroupilha</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --couro:#6B3A1F;
+  --couro-dark:#3D1F0A;
+  --verde:#2D4A35;
+  --verde-light:#4a7a5a;
+  --areia:#F5EDD8;
+  --areia-mid:#D4B896;
+  --carvao:#1C1C1C;
+  --white:#FFFFFF;
+  --pd:"Playfair Display",Georgia,serif;
+  --inter:"Inter",-apple-system,sans-serif;
+}
+html,body{width:100%;height:100%;overflow:hidden;background:#0a0603}
+#deck{position:fixed;inset:0;background:#0a0603}
+.slide{
+  position:absolute;inset:0;
+  display:none;overflow:hidden;
+  animation:fadeIn 220ms ease-out;
+}
+.slide.active{display:flex;flex-direction:column}
+@keyframes fadeIn{from{opacity:0;transform:scale(1.008)}to{opacity:1;transform:scale(1)}}
+
+/* Progress bar */
+#prog-bar{position:fixed;top:0;left:0;right:0;height:3px;z-index:100;background:rgba(0,0,0,.15)}
+#prog-fill{height:100%;background:var(--areia-mid);transition:width .3s ease}
+
+/* Nav */
+#nav{
+  position:fixed;bottom:20px;right:20px;z-index:100;
+  display:flex;align-items:center;gap:8px;
+}
+#slide-label{
+  font-family:var(--inter);font-size:11px;letter-spacing:.18em;
+  text-transform:uppercase;color:rgba(255,255,255,.75);
+  background:rgba(0,0,0,.35);backdrop-filter:blur(12px);
+  padding:7px 14px;border-radius:99px;margin-right:4px;
+}
+.nav-btn{
+  width:40px;height:40px;border-radius:50%;border:none;cursor:pointer;
+  background:rgba(255,255,255,.12);backdrop-filter:blur(12px);
+  color:#fff;display:flex;align-items:center;justify-content:center;
+  transition:.15s;font-size:14px;
+}
+.nav-btn:hover{background:rgba(255,255,255,.22)}
+.nav-btn:disabled{opacity:.25;cursor:default}
+
+/* Eyebrow label */
+.eyebrow{
+  font-family:var(--inter);font-size:11px;letter-spacing:.25em;
+  text-transform:uppercase;
+}
+
+/* ─── SLIDE HELPERS ─── */
+.dark-bg{background:var(--couro)}
+.darker-bg{background:var(--couro-dark)}
+.verde-bg{background:var(--verde)}
+.areia-bg{background:var(--areia)}
+.white-bg{background:#fff}
+
+/* Grid quadrantes */
+.quad-grid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;width:100%;height:100%}
+
+/* Cards */
+.card-white{background:#fff;border-radius:16px;padding:28px;display:flex;flex-direction:column}
+.card-areia{background:var(--areia);border-radius:16px;padding:28px;display:flex;flex-direction:column}
+.card-couro{background:var(--couro);border-radius:16px;padding:28px;display:flex;flex-direction:column}
+
+/* Serif headings */
+h1,h2,h3,blockquote{font-family:"Playfair Display",Georgia,serif}
+p,span,li,div{font-family:"Inter",-apple-system,sans-serif}
+
+/* ─── PRINT ─── */
+@media print{
+  html,body{overflow:visible;height:auto}
+  #deck{position:static;height:auto}
+  .slide{position:relative;display:flex!important;page-break-after:always;
+    width:100vw;height:100vh;min-height:100vh}
+  #prog-bar,#nav{display:none}
+}
+</style>
+</head>
+<body>
+<div id="prog-bar"><div id="prog-fill"></div></div>
+<div id="deck">
+
+<!-- ═══════════════════ SLIDE 01 · CAPA ═══════════════════ -->
+<div class="slide" id="s01" data-topic="Capa">
+  <div style="flex:1;position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px;background:var(--couro)">
+    <!-- Aurora decorativa -->
+    <div style="position:absolute;bottom:0;right:0;width:600px;height:600px;border-radius:50%;background:rgba(45,74,53,.25);filter:blur(110px);transform:translate(25%,25%);pointer-events:none"></div>
+    <div style="position:absolute;top:0;left:0;width:500px;height:500px;border-radius:50%;background:rgba(212,184,150,.12);filter:blur(110px);transform:translate(-25%,-25%);pointer-events:none"></div>
+    <!-- Content -->
+    <p class="eyebrow" style="color:rgba(245,237,216,.65);margin-bottom:40px;position:relative;z-index:1">Manual de Identidade Visual</p>
+    <!-- Logo placeholder -->
+    <div style="position:relative;z-index:1;text-align:center">
+      <div style="font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(40px,6vw,90px);color:var(--areia);letter-spacing:-.01em;line-height:.95;text-transform:uppercase">Bombachas</div>
+      <div style="font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(20px,3vw,44px);color:rgba(245,237,216,.70);letter-spacing:.12em;text-transform:uppercase;margin-top:8px">Farroupilha</div>
+      <div style="width:100%;height:1px;background:rgba(245,237,216,.25);margin:24px 0"></div>
+      <div style="font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(14px,1.8vw,22px);color:rgba(245,237,216,.60)">Feita à mão. Direto da fábrica.</div>
+    </div>
+    <!-- Footer -->
+    <div style="position:absolute;bottom:28px;left:48px;right:48px;display:flex;justify-content:space-between;font-family:var(--inter);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:rgba(245,237,216,.35)">
+      <span>v1.0 · 2026</span>
+      <span>Bombachas Farroupilha · Ciríaco / RS</span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════ SLIDE 02 · SUMÁRIO ═══════════════════ -->
+<div class="slide" id="s02" data-topic="Sumário">
+  <div style="flex:1;overflow:hidden;display:flex;background:var(--couro-dark)">
+    <!-- Left - giant text -->
+    <div style="width:45%;display:flex;align-items:center;justify-content:center;padding:48px">
+      <h1 style="font-size:clamp(100px,16vw,240px);font-weight:700;color:var(--areia);line-height:.88;letter-spacing:-.02em">su<br>má<br>rio</h1>
+    </div>
+    <!-- Right - nav -->
+    <div style="width:55%;display:flex;align-items:center;padding:48px 64px 48px 32px">
+      <div style="width:100%;display:flex;flex-direction:column;gap:28px">
+        <div>
+          <div style="display:flex;align-items:baseline;gap:16px;padding-bottom:8px;border-bottom:1px solid rgba(245,237,216,.2)">
+            <span style="font-family:var(--inter);font-size:13px;color:rgba(245,237,216,.45);min-width:28px">01</span>
+            <h3 style="font-size:26px;font-weight:500;color:var(--areia)">Sobre a marca</h3>
+          </div>
+          <ul style="margin-top:6px;margin-left:44px;color:rgba(245,237,216,.55);font-size:13px;display:flex;flex-wrap:wrap;gap:4px 20px;list-style:none">
+            <li>Manifesto</li><li>Pilares</li><li>Posicionamento</li><li>PUV</li><li>Essência</li>
+          </ul>
+        </div>
+        <div>
+          <div style="display:flex;align-items:baseline;gap:16px;padding-bottom:8px;border-bottom:1px solid rgba(245,237,216,.2)">
+            <span style="font-family:var(--inter);font-size:13px;color:rgba(245,237,216,.45);min-width:28px">02</span>
+            <h3 style="font-size:26px;font-weight:500;color:var(--areia)">Identidade verbal</h3>
+          </div>
+          <ul style="margin-top:6px;margin-left:44px;color:rgba(245,237,216,.55);font-size:13px;display:flex;flex-wrap:wrap;gap:4px 20px;list-style:none">
+            <li>Tom de voz</li><li>Escalas</li><li>Vocabulário</li><li>Diga · Não diga</li>
+          </ul>
+        </div>
+        <div>
+          <div style="display:flex;align-items:baseline;gap:16px;padding-bottom:8px;border-bottom:1px solid rgba(245,237,216,.2)">
+            <span style="font-family:var(--inter);font-size:13px;color:rgba(245,237,216,.45);min-width:28px">03</span>
+            <h3 style="font-size:26px;font-weight:500;color:var(--areia)">Identidade visual</h3>
+          </div>
+          <ul style="margin-top:6px;margin-left:44px;color:rgba(245,237,216,.55);font-size:13px;display:flex;flex-wrap:wrap;gap:4px 20px;list-style:none">
+            <li>Cores</li><li>Tipografia</li><li>Logotipo</li><li>Usos proibidos</li>
+          </ul>
+        </div>
+        <div>
+          <div style="display:flex;align-items:baseline;gap:16px;padding-bottom:8px;border-bottom:1px solid rgba(245,237,216,.2)">
+            <span style="font-family:var(--inter);font-size:13px;color:rgba(245,237,216,.45);min-width:28px">04</span>
+            <h3 style="font-size:26px;font-weight:500;color:var(--areia)">Personas</h3>
+          </div>
+          <ul style="margin-top:6px;margin-left:44px;color:rgba(245,237,216,.55);font-size:13px;display:flex;flex-wrap:wrap;gap:4px 20px;list-style:none">
+            <li>Mariana Tradicionalista</li><li>Diego Tavares</li>
+          </ul>
+        </div>
+        <div>
+          <div style="display:flex;align-items:baseline;gap:16px;padding-bottom:8px;border-bottom:1px solid rgba(245,237,216,.2)">
+            <span style="font-family:var(--inter);font-size:13px;color:rgba(245,237,216,.45);min-width:28px">05</span>
+            <h3 style="font-size:26px;font-weight:500;color:var(--areia)">Aplicações</h3>
+          </div>
+          <ul style="margin-top:6px;margin-left:44px;color:rgba(245,237,216,.55);font-size:13px;display:flex;flex-wrap:wrap;gap:4px 20px;list-style:none">
+            <li>Papelaria</li><li>Instagram</li><li>Criativos</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════ SLIDE 03 · MANIFESTO ═══════════════════ -->
+<div class="slide" id="s03" data-topic="Manifesto">
+  <div style="flex:1;overflow:hidden;background:var(--areia);display:flex">
+    <div class="eyebrow" style="position:absolute;top:44px;left:48px;color:var(--verde)">Sobre a marca · Manifesto</div>
+    <div style="width:100%;display:flex;align-items:center;padding:80px 112px">
+      <div style="max-width:960px">
+        <p style="font-family:'Playfair Display',serif;font-style:italic;font-size:64px;color:rgba(107,58,31,.35);line-height:1;margin-bottom:4px">"</p>
+        <p style="font-family:'Playfair Display',serif;font-weight:500;font-style:italic;font-size:clamp(32px,4.5vw,64px);color:var(--couro);line-height:1.15;letter-spacing:-.01em">
+          Há 15 anos fazemos pilcha artesanal em Ciríaco convictos de uma coisa: <span style="color:var(--verde)">a Bombacha de Favo de verdade</span> não nasce de máquina — nasce <span style="background:linear-gradient(transparent 65%,rgba(107,58,31,.15) 65%);padding:0 4px">das mãos da costureira-chefe.</span>
+        </p>
+        <div style="margin-top:40px;display:flex;align-items:center;gap:12px;font-family:var(--inter);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:rgba(28,28,28,.45)">
+          <span style="width:48px;height:1px;background:rgba(107,58,31,.35);display:block"></span>
+          <span>Manifesto Bombachas Farroupilha</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════ SLIDE 04 · POSICIONAMENTO ═══════════════════ -->
+<div class="slide" id="s04" data-topic="Posicionamento">
+  <div style="flex:1;overflow:hidden;display:flex;background:var(--couro-dark)">
+    <div class="eyebrow" style="position:absolute;top:44px;left:48px;color:rgba(212,184,150,.7)">Posicionamento</div>
+    <div style="width:50%;display:flex;align-items:center;padding:64px;padding-top:96px">
+      <div>
+        <h2 style="font-size:clamp(40px,5.5vw,80px);font-weight:500;font-style:italic;color:var(--areia);line-height:.95;letter-spacing:-.01em">
+          Artesanal.<br>Autêntico.<br><span style="color:var(--areia-mid)">Direto.</span>
+        </h2>
+      </div>
+    </div>
+    <div style="width:50%;display:flex;align-items:center;padding:64px;padding-top:96px">
+      <div style="max-width:520px">
+        <p style="font-family:var(--inter);color:rgba(245,237,216,.85);font-size:17px;line-height:1.65;margin-bottom:36px">
+          Para mulheres tradicionalistas e lojistas de pilcharia que valorizam autenticidade e recusam cópia industrial, Bombachas Farroupilha é a fábrica especialista em Bombacha de Favo artesanal trançada à mão que entrega o caimento certo no prazo combinado.
+        </p>
+        <div style="display:flex;flex-direction:column;gap:14px;font-size:14px;font-family:var(--inter)">
+          <div style="display:flex;gap:20px;align-items:baseline">
+            <span style="color:rgba(212,184,150,.7);letter-spacing:.15em;text-transform:uppercase;font-size:10px;min-width:100px">Território</span>
+            <span style="color:rgba(245,237,216,.9)">Artesanal · Autêntico · Direto</span>
+          </div>
+          <div style="display:flex;gap:20px;align-items:baseline">
+            <span style="color:rgba(212,184,150,.7);letter-spacing:.15em;text-transform:uppercase;font-size:10px;min-width:100px">Arquétipos</span>
+            <span style="color:rgba(245,237,216,.9)">O Artesão (dominante) + O Fora-da-lei (secundário)</span>
+          </div>
+          <div style="display:flex;gap:20px;align-items:baseline">
+            <span style="color:rgba(212,184,150,.7);letter-spacing:.15em;text-transform:uppercase;font-size:10px;min-width:100px">Big Idea</span>
+            <span style="font-family:'Playfair Display',serif;font-style:italic;color:rgba(245,237,216,.9);font-size:16px">A Bombacha de Favo que a tribo reconhece só nasce à mão.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════ SLIDE 05 · PILARES DE MARCA ═══════════════════ -->
+<div class="slide" id="s05" data-topic="Pilares de marca">
+  <div style="flex:1;overflow:hidden;background:var(--areia);display:flex;flex-direction:column;padding:48px 80px">
+    <div class="eyebrow" style="color:var(--verde);margin-bottom:28px">Pilares de marca</div>
+    <h2 style="font-size:clamp(30px,4vw,52px);font-weight:500;color:var(--couro);max-width:640px;line-height:1.05;margin-bottom:36px">
+      Cinco pilares que <em style="font-weight:400">sustentam a combinação proprietária.</em>
+    </h2>
+    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:16px;flex:1">
+      <div class="card-white" style="border-left:3px solid var(--couro)">
+        <span style="font-family:'Playfair Display',serif;font-size:28px;font-weight:600;font-style:italic;color:var(--couro);margin-bottom:12px">01</span>
+        <h3 style="font-size:17px;font-weight:600;color:var(--couro);margin-bottom:8px;line-height:1.2">Processo Manual</h3>
+        <p style="font-size:13px;line-height:1.6;color:rgba(28,28,28,.7)">O trançado do favo é feito à mão pela costureira-chefe. Não é etiqueta — é o diferencial que define o produto e o preço.</p>
+      </div>
+      <div class="card-white" style="border-left:3px solid var(--verde)">
+        <span style="font-family:'Playfair Display',serif;font-size:28px;font-weight:600;font-style:italic;color:var(--verde);margin-bottom:12px">02</span>
+        <h3 style="font-size:17px;font-weight:600;color:var(--couro);margin-bottom:8px;line-height:1.2">Fábrica Direta</h3>
+        <p style="font-size:13px;line-height:1.6;color:rgba(28,28,28,.7)">Sem intermediário. A Loreni atende o lojista e a Mariana com a mesma autoridade de quem controla a produção.</p>
+      </div>
+      <div class="card-couro">
+        <span style="font-family:'Playfair Display',serif;font-size:28px;font-weight:600;font-style:italic;color:var(--areia-mid);margin-bottom:12px">03</span>
+        <h3 style="font-size:17px;font-weight:600;color:var(--areia);margin-bottom:8px;line-height:1.2">Prazo Real</h3>
+        <p style="font-size:13px;line-height:1.6;color:rgba(245,237,216,.75)">35 dias é o prazo mínimo honesto de produção artesanal. Cumprimos. Comunicamos. Não negociamos para baixo.</p>
+      </div>
+      <div class="card-white" style="border-left:3px solid var(--couro)">
+        <span style="font-family:'Playfair Display',serif;font-size:28px;font-weight:600;font-style:italic;color:var(--couro);margin-bottom:12px">04</span>
+        <h3 style="font-size:17px;font-weight:600;color:var(--couro);margin-bottom:8px;line-height:1.2">Autenticidade da Tribo</h3>
+        <p style="font-size:13px;line-height:1.6;color:rgba(28,28,28,.7)">A pilcha da Tapparo é reconhecida por quem entende de tradição gaúcha — não é moda, é identidade cultural.</p>
+      </div>
+      <div class="card-white" style="border-left:3px solid var(--verde)">
+        <span style="font-family:'Playfair Display',serif;font-size:28px;font-weight:600;font-style:italic;color:var(--verde);margin-bottom:12px">05</span>
+        <h3 style="font-size:17px;font-weight:600;color:var(--couro);margin-bottom:8px;line-height:1.2">Relação Humana</h3>
+        <p style="font-size:13px;line-height:1.6;color:rgba(28,28,28,.7)">A Loreni atende. Não é bot, não é agência. O contato humano direto é parte do produto.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════ SLIDE 06 · PUV ═══════════════════ -->
+<div class="slide" id="s06" data-topic="PUV">
+  <div style="flex:1;overflow:hidden;display:flex;background:#fff">
+    <div class="eyebrow" style="position:absolute;top:44px;left:48px;color:var(--verde)">Proposta Única de Valor</div>
+    <!-- Left half dark -->
+    <div style="width:50%;display:flex;align-items:center;justify-content:center;background:var(--couro)">
+      <div style="padding:48px">
+        <span style="font-family:var(--inter);font-weight:700;letter-spacing:-.04em;font-size:clamp(80px,10vw,160px);color:var(--areia-mid);line-height:1">P.U.V</span>
+        <p style="color:rgba(245,237,216,.65);font-size:12px;letter-spacing:.15em;text-transform:uppercase;margin-top:12px;font-family:var(--inter)">Proposta<br>Única de Valor</p>
+      </div>
+    </div>
+    <!-- Right half -->
+    <div style="width:50%;display:flex;align-items:center;padding:64px">
+      <div style="max-width:480px">
+        <p style="font-family:'Playfair Display',serif;font-size:18px;line-height:1.6;color:var(--couro);margin-bottom:28px;font-weight:500">
+          A <em>Bombachas Farroupilha</em> é a <strong>única fábrica especialista em Bombacha de Favo artesanal trançada à mão</strong> que entrega pilcha autêntica em 35 dias para mulheres tradicionalistas e lojistas regionais que recusam cópia industrial — <em>direto da fábrica, sem intermediário.</em>
+        </p>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding-top:24px;border-top:1px solid rgba(107,58,31,.15)">
+          <div>
+            <div style="font-family:'Playfair Display',serif;font-size:22px;font-weight:600;color:var(--couro)">35 dias</div>
+            <div style="font-family:var(--inter);font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:rgba(28,28,28,.5);margin-top:4px">Prazo artesanal</div>
+          </div>
+          <div>
+            <div style="font-family:'Playfair Display',serif;font-size:22px;font-weight:600;color:var(--couro)">Direto</div>
+            <div style="font-family:var(--inter);font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:rgba(28,28,28,.5);margin-top:4px">Da fábrica p/ você</div>
+          </div>
+          <div>
+            <div style="font-family:'Playfair Display',serif;font-size:22px;font-weight:600;color:var(--couro)">4-6h</div>
+            <div style="font-family:var(--inter);font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:rgba(28,28,28,.5);margin-top:4px">Acabamento manual</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════ SLIDE 07 · ESSÊNCIA ═══════════════════ -->
+<div class="slide" id="s07" data-topic="Essência">
+  <div style="flex:1;overflow:hidden;display:flex;background:var(--verde)">
+    <div class="eyebrow" style="position:absolute;top:44px;left:48px;color:rgba(212,184,150,.7)">Essência da marca</div>
+    <div style="width:45%;display:flex;align-items:center;justify-content:center;padding:48px;opacity:.15">
+      <!-- Decorative textile pattern -->
+      <div style="font-family:'Playfair Display',serif;font-size:clamp(120px,18vw,240px);font-weight:700;color:var(--areia);line-height:.85;user-select:none">BF</div>
+    </div>
+    <div style="width:55%;display:flex;align-items:center;padding:80px 64px 48px 32px">
+      <div style="display:flex;flex-direction:column;gap:28px;max-width:480px">
+        <div>
+          <div class="eyebrow" style="color:var(--areia-mid);margin-bottom:8px">Propósito</div>
+          <p style="font-family:var(--inter);font-size:15px;line-height:1.6;color:rgba(245,237,216,.9)">Fazer a pilcha gaúcha de favo artesanal que a Mariana usa com orgulho e o lojista revende sem medo de atrasar.</p>
+        </div>
+        <div>
+          <div class="eyebrow" style="color:var(--areia-mid);margin-bottom:8px">Visão</div>
+          <p style="font-family:var(--inter);font-size:15px;line-height:1.6;color:rgba(245,237,216,.9)">Ser reconhecida como a fábrica de referência em Bombacha de Favo artesanal no RS e nos estados de expansão da cultura gaúcha até 2028.</p>
+        </div>
+        <div>
+          <div class="eyebrow" style="color:var(--areia-mid);margin-bottom:8px">Missão</div>
+          <p style="font-family:var(--inter);font-size:15px;line-height:1.6;color:rgba(245,237,216,.9)">Produzir bombachas de alta autenticidade artesanal, entregá-las no prazo de 35 dias e narrar o processo de maneira que o consumidor final entenda por que vale o preço.</p>
+        </div>
+        <div>
+          <div class="eyebrow" style="color:var(--areia-mid);margin-bottom:8px">Valores</div>
+          <p style="font-family:var(--inter);font-size:15px;line-height:1.6;color:rgba(245,237,216,.9)">Artesanato Honesto · Prazo Cumprido · Diretidade · Autenticidade Verificável · Respeito à Tradição</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════ SLIDE 08 · TOM DE VOZ ═══════════════════ -->
+<div class="slide" id="s08" data-topic="Tom de voz">
+  <div style="flex:1;overflow:hidden;background:var(--areia);display:flex;flex-direction:column;padding:44px 80px">
+    <div class="eyebrow" style="color:var(--verde);margin-bottom:24px">Identidade verbal · Tom de voz</div>
+    <h2 style="font-size:clamp(28px,3.5vw,48px);font-weight:500;color:var(--couro);max-width:640px;line-height:1.1;margin-bottom:32px">
+      Quatro pilares que <em style="font-weight:400">soam Bombachas Farroupilha</em> em qualquer canal.
+    </h2>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;flex:1">
+      <div style="background:var(--couro);border-radius:16px;padding:28px;display:flex;flex-direction:column">
+        <span style="font-family:'Playfair Display',serif;font-size:32px;font-weight:600;color:var(--areia-mid);margin-bottom:8px">01</span>
+        <h3 style="font-size:22px;font-weight:500;color:var(--areia);margin-bottom:6px">Concreto</h3>
+        <span style="font-size:13px;font-style:italic;color:rgba(245,237,216,.55);margin-bottom:16px">não vago nem genérico</span>
+        <p style="font-size:13.5px;line-height:1.65;color:rgba(245,237,216,.82)">Toda afirmação tem evidência. Não diz "qualidade superior" — diz "trançado à mão, 4-6h de acabamento por peça".</p>
+      </div>
+      <div style="background:#fff;border-radius:16px;padding:28px;display:flex;flex-direction:column">
+        <span style="font-family:'Playfair Display',serif;font-size:32px;font-weight:600;color:var(--verde);margin-bottom:8px">02</span>
+        <h3 style="font-size:22px;font-weight:500;color:var(--couro);margin-bottom:6px">Direto</h3>
+        <span style="font-size:13px;font-style:italic;color:rgba(28,28,28,.5);margin-bottom:16px">não enrolado nem corporativo</span>
+        <p style="font-size:13.5px;line-height:1.65;color:rgba(28,28,28,.75)">Sem rodeio. Fala o que pode e o que não pode. Responde sem delegar para "nossa equipe". WhatsApp em até 4h.</p>
+      </div>
+      <div style="background:var(--couro);border-radius:16px;padding:28px;display:flex;flex-direction:column">
+        <span style="font-family:'Playfair Display',serif;font-size:32px;font-weight:600;color:var(--areia-mid);margin-bottom:8px">03</span>
+        <h3 style="font-size:22px;font-weight:500;color:var(--areia);margin-bottom:6px">Acolhedor</h3>
+        <span style="font-size:13px;font-style:italic;color:rgba(245,237,216,.55);margin-bottom:16px">não distante nem formal</span>
+        <p style="font-size:13.5px;line-height:1.65;color:rgba(245,237,216,.82)">Trata Mariana como quem entende de tradição. Fala em "baila", "caimento", "favo". Não diz "cliente" — diz "você".</p>
+      </div>
+      <div style="background:#fff;border-radius:16px;padding:28px;display:flex;flex-direction:column">
+        <span style="font-family:'Playfair Display',serif;font-size:32px;font-weight:600;color:var(--verde);margin-bottom:8px">04</span>
+        <h3 style="font-size:22px;font-weight:500;color:var(--couro);margin-bottom:6px">Orgulhoso</h3>
+        <span style="font-size:13px;font-style:italic;color:rgba(28,28,28,.5);margin-bottom:16px">sem arrogância</span>
+        <p style="font-size:13.5px;line-height:1.65;color:rgba(28,28,28,.75)">Explica a diferença entre favo trançado e favo estampado sem dizer que o concorrente é ruim. Tom educativo, não superior.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════ SLIDE 09 · ESCALAS DE PERSONALIDADE ═══════════════════ -->
+<div class="slide" id="s09" data-topic="Escalas">
+  <div style="flex:1;overflow:hidden;background:#fff;display:flex;flex-direction:column;padding:44px 80px">
+    <div class="eyebrow" style="color:var(--verde);margin-bottom:24px">Identidade verbal · Escalas de personalidade</div>
+    <h2 style="font-size:clamp(28px,3.5vw,44px);font-weight:500;color:var(--couro);max-width:640px;line-height:1.1;margin-bottom:8px">
+      Onde a marca se posiciona <em style="font-weight:400">em cada eixo de tom.</em>
+    </h2>
+    <p style="font-size:14px;color:rgba(28,28,28,.55);margin-bottom:28px">Seis eixos que orientam toda decisão verbal — de legenda de Reel a resposta no WhatsApp.</p>
+    <div style="background:var(--areia);border-radius:20px;padding:36px;flex:1;display:flex;flex-direction:column;justify-content:center">
+      <div style="display:flex;flex-direction:column;gap:22px">
+        
+        <div style="display:grid;grid-template-columns:200px 1fr 200px;align-items:center;gap:20px;font-family:var(--inter)">
+          <span style="font-size:14px;color:var(--carvao);text-align:right">Formal / Corporativo</span>
+          <div style="position:relative;height:6px;background:rgba(107,58,31,.15);border-radius:99px">
+            <div style="position:absolute;top:50%;transform:translateY(-50%);left:calc(80% - 10px);width:20px;height:20px;border-radius:50%;background:var(--couro);box-shadow:0 2px 8px rgba(107,58,31,.35),0 0 0 4px rgba(107,58,31,.1)"></div>
+          </div>
+          <span style="font-size:14px;color:rgba(28,28,28,.6)">Humano / Direto</span>
+        </div>
+        <div style="display:grid;grid-template-columns:200px 1fr 200px;align-items:center;gap:20px;font-family:var(--inter)">
+          <span style="font-size:14px;color:var(--carvao);text-align:right">Frio / Distante</span>
+          <div style="position:relative;height:6px;background:rgba(107,58,31,.15);border-radius:99px">
+            <div style="position:absolute;top:50%;transform:translateY(-50%);left:calc(70% - 10px);width:20px;height:20px;border-radius:50%;background:var(--couro);box-shadow:0 2px 8px rgba(107,58,31,.35),0 0 0 4px rgba(107,58,31,.1)"></div>
+          </div>
+          <span style="font-size:14px;color:rgba(28,28,28,.6)">Acolhedor / Próximo</span>
+        </div>
+        <div style="display:grid;grid-template-columns:200px 1fr 200px;align-items:center;gap:20px;font-family:var(--inter)">
+          <span style="font-size:14px;color:var(--carvao);text-align:right">Moderno / Urbano</span>
+          <div style="position:relative;height:6px;background:rgba(107,58,31,.15);border-radius:99px">
+            <div style="position:absolute;top:50%;transform:translateY(-50%);left:calc(80% - 10px);width:20px;height:20px;border-radius:50%;background:var(--couro);box-shadow:0 2px 8px rgba(107,58,31,.35),0 0 0 4px rgba(107,58,31,.1)"></div>
+          </div>
+          <span style="font-size:14px;color:rgba(28,28,28,.6)">Tradicional / Enraizado</span>
+        </div>
+        <div style="display:grid;grid-template-columns:200px 1fr 200px;align-items:center;gap:20px;font-family:var(--inter)">
+          <span style="font-size:14px;color:var(--carvao);text-align:right">Genérico / Amplo</span>
+          <div style="position:relative;height:6px;background:rgba(107,58,31,.15);border-radius:99px">
+            <div style="position:absolute;top:50%;transform:translateY(-50%);left:calc(90% - 10px);width:20px;height:20px;border-radius:50%;background:var(--couro);box-shadow:0 2px 8px rgba(107,58,31,.35),0 0 0 4px rgba(107,58,31,.1)"></div>
+          </div>
+          <span style="font-size:14px;color:rgba(28,28,28,.6)">Especialista / Focado</span>
+        </div>
+        <div style="display:grid;grid-template-columns:200px 1fr 200px;align-items:center;gap:20px;font-family:var(--inter)">
+          <span style="font-size:14px;color:var(--carvao);text-align:right">Aspiracional vago</span>
+          <div style="position:relative;height:6px;background:rgba(107,58,31,.15);border-radius:99px">
+            <div style="position:absolute;top:50%;transform:translateY(-50%);left:calc(90% - 10px);width:20px;height:20px;border-radius:50%;background:var(--couro);box-shadow:0 2px 8px rgba(107,58,31,.35),0 0 0 4px rgba(107,58,31,.1)"></div>
+          </div>
+          <span style="font-size:14px;color:rgba(28,28,28,.6)">Concreto / Verificável</span>
+        </div>
+        <div style="display:grid;grid-template-columns:200px 1fr 200px;align-items:center;gap:20px;font-family:var(--inter)">
+          <span style="font-size:14px;color:var(--carvao);text-align:right">Impessoal / Bot</span>
+          <div style="position:relative;height:6px;background:rgba(107,58,31,.15);border-radius:99px">
+            <div style="position:absolute;top:50%;transform:translateY(-50%);left:calc(85% - 10px);width:20px;height:20px;border-radius:50%;background:var(--couro);box-shadow:0 2px 8px rgba(107,58,31,.35),0 0 0 4px rgba(107,58,31,.1)"></div>
+          </div>
+          <span style="font-size:14px;color:rgba(28,28,28,.6)">Pessoal / Loreni</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════ SLIDE 10 · VOCABULÁRIO ═══════════════════ -->
+<div class="slide" id="s10" data-topic="Vocabulário">
+  <div style="flex:1;overflow:hidden;background:#fff;display:flex;flex-direction:column;padding:44px 80px">
+    <div class="eyebrow" style="color:var(--verde);margin-bottom:24px">Identidade verbal · Vocabulário-chave</div>
+    <h2 style="font-size:clamp(28px,3.5vw,46px);font-weight:500;color:var(--couro);max-width:640px;line-height:1.1;margin-bottom:28px">
+      Palavras que constroem <em style="font-weight:400">o jeito Farroupilha de falar.</em>
+    </h2>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:48px;flex:1">
+      <div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:26px;font-weight:600;color:var(--couro);margin-bottom:6px">Essência</h3>
+        <p style="font-size:13px;color:rgba(28,28,28,.5);margin-bottom:24px">Transmitem quem somos</p>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:14px">
+          <li style="font-size:17px;color:var(--carvao);font-family:var(--inter)"><span style="color:var(--couro);margin-right:8px">·</span>Artesanal</li><li style="font-size:17px;color:var(--carvao);font-family:var(--inter)"><span style="color:var(--couro);margin-right:8px">·</span>Favo</li><li style="font-size:17px;color:var(--carvao);font-family:var(--inter)"><span style="color:var(--couro);margin-right:8px">·</span>Trançado à mão</li><li style="font-size:17px;color:var(--carvao);font-family:var(--inter)"><span style="color:var(--couro);margin-right:8px">·</span>Costureira-chefe</li><li style="font-size:17px;color:var(--carvao);font-family:var(--inter)"><span style="color:var(--couro);margin-right:8px">·</span>Processo</li><li style="font-size:17px;color:var(--carvao);font-family:var(--inter)"><span style="color:var(--couro);margin-right:8px">·</span>Fábrica</li><li style="font-size:17px;color:var(--carvao);font-family:var(--inter)"><span style="color:var(--couro);margin-right:8px">·</span>Ciríaco</li>
+        </ul>
+      </div>
+      <div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:26px;font-weight:600;color:var(--couro);margin-bottom:6px">Valorizadas</h3>
+        <p style="font-size:13px;color:rgba(28,28,28,.5);margin-bottom:24px">Memória de marca</p>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:14px">
+          <li style="font-size:17px;color:var(--carvao);font-family:var(--inter)"><span style="color:var(--couro);margin-right:8px">·</span>Autêntico</li><li style="font-size:17px;color:var(--carvao);font-family:var(--inter)"><span style="color:var(--couro);margin-right:8px">·</span>Pilcha</li><li style="font-size:17px;color:var(--carvao);font-family:var(--inter)"><span style="color:var(--couro);margin-right:8px">·</span>Caimento</li><li style="font-size:17px;color:var(--carvao);font-family:var(--inter)"><span style="color:var(--couro);margin-right:8px">·</span>35 dias</li><li style="font-size:17px;color:var(--carvao);font-family:var(--inter)"><span style="color:var(--couro);margin-right:8px">·</span>Direto da fábrica</li><li style="font-size:17px;color:var(--carvao);font-family:var(--inter)"><span style="color:var(--couro);margin-right:8px">·</span>Prazo cumprido</li><li style="font-size:17px;color:var(--carvao);font-family:var(--inter)"><span style="color:var(--couro);margin-right:8px">·</span>Bombacha de Favo</li>
+        </ul>
+      </div>
+      <div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:26px;font-weight:600;color:var(--couro);margin-bottom:6px">Conexão</h3>
+        <p style="font-size:13px;color:rgba(28,28,28,.5);margin-bottom:24px">Linguagem do cliente</p>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:14px">
+          <li style="font-size:17px;color:var(--carvao);font-family:var(--inter)"><span style="color:var(--couro);margin-right:8px">·</span>Semana Farroupilha</li><li style="font-size:17px;color:var(--carvao);font-family:var(--inter)"><span style="color:var(--couro);margin-right:8px">·</span>CTG</li><li style="font-size:17px;color:var(--carvao);font-family:var(--inter)"><span style="color:var(--couro);margin-right:8px">·</span>Baila</li><li style="font-size:17px;color:var(--carvao);font-family:var(--inter)"><span style="color:var(--couro);margin-right:8px">·</span>Invernada</li><li style="font-size:17px;color:var(--carvao);font-family:var(--inter)"><span style="color:var(--couro);margin-right:8px">·</span>Prenda</li><li style="font-size:17px;color:var(--carvao);font-family:var(--inter)"><span style="color:var(--couro);margin-right:8px">·</span>Pilcheira</li><li style="font-size:17px;color:var(--carvao);font-family:var(--inter)"><span style="color:var(--couro);margin-right:8px">·</span>Tradição gaúcha</li>
+        </ul>
+      </div>
+    </div>
+    <div style="margin-top:20px;padding-top:16px;border-top:1px solid rgba(107,58,31,.12);display:flex;gap:16px;font-size:13px;color:rgba(28,28,28,.55)">
+      <span style="font-weight:600;color:#DC2626">Evite:</span>
+      <span>qualidade superior · exclusivo · prezado cliente · nossa equipe · fantasia gaúcha · em breve</span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════ SLIDE 11 · DIGA / NÃO DIGA ═══════════════════ -->
+<div class="slide" id="s11" data-topic="Diga · Não diga">
+  <div style="flex:1;overflow:hidden;background:var(--areia);display:flex;flex-direction:column;padding:40px 80px">
+    <div class="eyebrow" style="color:var(--verde);margin-bottom:20px">Identidade verbal · Diga · Não diga</div>
+    <h2 style="font-size:clamp(24px,3vw,40px);font-weight:500;color:var(--couro);line-height:1.1;margin-bottom:20px">O que dizer (e <em style="font-weight:400">o que nunca dizer</em>) na voz da Farroupilha.</h2>
+    <div style="display:flex;flex-direction:column;gap:0;flex:1">
+      
+        <div style="display:grid;grid-template-columns:210px 1fr 1fr;gap:16px;padding:10px 0;border-bottom:1px solid rgba(107,58,31,.12);align-items:start">
+          <div style="font-family:var(--inter);font-size:12px;text-transform:uppercase;letter-spacing:.08em;font-weight:600;color:var(--carvao);padding-top:4px">Resposta sobre preço da Bombacha de Favo</div>
+          <div style="background:rgba(16,185,129,.1);border-left:2px solid #10B981;padding:10px 14px;border-radius:0 8px 8px 0">
+            <span style="font-family:var(--inter);font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#10B981;font-weight:700;display:block;margin-bottom:6px">✓ Diga</span>
+            <p style="font-family:var(--inter);font-size:13px;color:var(--carvao);line-height:1.55">A Bombacha de Favo artesanal começa em R$ 280. O preço reflete o trançado à mão — cada peça leva 4-6h. Posso te mandar um vídeo de 30s do processo?</p>
+          </div>
+          <div style="background:rgba(220,38,38,.08);border-left:2px solid #DC2626;padding:10px 14px;border-radius:0 8px 8px 0">
+            <span style="font-family:var(--inter);font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#DC2626;font-weight:700;display:block;margin-bottom:6px">✗ Não diga</span>
+            <p style="font-family:var(--inter);font-size:13px;color:rgba(28,28,28,.6);line-height:1.55;text-decoration:line-through;text-decoration-color:rgba(220,38,38,.4)">Nossa qualidade é superior. Não dá pra comparar com bombacha de loja.</p>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:210px 1fr 1fr;gap:16px;padding:10px 0;border-bottom:1px solid rgba(107,58,31,.12);align-items:start">
+          <div style="font-family:var(--inter);font-size:12px;text-transform:uppercase;letter-spacing:.08em;font-weight:600;color:var(--carvao);padding-top:4px">Pergunta sobre prazo de entrega</div>
+          <div style="background:rgba(16,185,129,.1);border-left:2px solid #10B981;padding:10px 14px;border-radius:0 8px 8px 0">
+            <span style="font-family:var(--inter);font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#10B981;font-weight:700;display:block;margin-bottom:6px">✓ Diga</span>
+            <p style="font-family:var(--inter);font-size:13px;color:var(--carvao);line-height:1.55">Se você fechar até [data], chega com folga para o evento. Te mando atualização semanal de produção pelo WhatsApp.</p>
+          </div>
+          <div style="background:rgba(220,38,38,.08);border-left:2px solid #DC2626;padding:10px 14px;border-radius:0 8px 8px 0">
+            <span style="font-family:var(--inter);font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#DC2626;font-weight:700;display:block;margin-bottom:6px">✗ Não diga</span>
+            <p style="font-family:var(--inter);font-size:13px;color:rgba(28,28,28,.6);line-height:1.55;text-decoration:line-through;text-decoration-color:rgba(220,38,38,.4)">Nosso prazo é de 30-40 dias, a depender do volume.</p>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:210px 1fr 1fr;gap:16px;padding:10px 0;border-bottom:1px solid rgba(107,58,31,.12);align-items:start">
+          <div style="font-family:var(--inter);font-size:12px;text-transform:uppercase;letter-spacing:.08em;font-weight:600;color:var(--carvao);padding-top:4px">Post de Instagram sobre o processo</div>
+          <div style="background:rgba(16,185,129,.1);border-left:2px solid #10B981;padding:10px 14px;border-radius:0 8px 8px 0">
+            <span style="font-family:var(--inter);font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#10B981;font-weight:700;display:block;margin-bottom:6px">✓ Diga</span>
+            <p style="font-family:var(--inter);font-size:13px;color:var(--carvao);line-height:1.55">Aqui na fábrica, cada Bombacha de Favo começa pelo trançado manual da costureira-chefe. [vídeo 15s do processo]</p>
+          </div>
+          <div style="background:rgba(220,38,38,.08);border-left:2px solid #DC2626;padding:10px 14px;border-radius:0 8px 8px 0">
+            <span style="font-family:var(--inter);font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#DC2626;font-weight:700;display:block;margin-bottom:6px">✗ Não diga</span>
+            <p style="font-family:var(--inter);font-size:13px;color:rgba(28,28,28,.6);line-height:1.55;text-decoration:line-through;text-decoration-color:rgba(220,38,38,.4)">Qualidade e tradição em cada ponto da nossa exclusiva Bombacha de Favo Premium!</p>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:210px 1fr 1fr;gap:16px;padding:10px 0;border-bottom:1px solid rgba(107,58,31,.12);align-items:start">
+          <div style="font-family:var(--inter);font-size:12px;text-transform:uppercase;letter-spacing:.08em;font-weight:600;color:var(--carvao);padding-top:4px">Bio do Instagram</div>
+          <div style="background:rgba(16,185,129,.1);border-left:2px solid #10B981;padding:10px 14px;border-radius:0 8px 8px 0">
+            <span style="font-family:var(--inter);font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#10B981;font-weight:700;display:block;margin-bottom:6px">✓ Diga</span>
+            <p style="font-family:var(--inter);font-size:13px;color:var(--carvao);line-height:1.55">Fábrica de pilchas em Ciríaco/RS · Bombacha de Favo artesanal · Feita à mão. Direto da fábrica. · WA: [link]</p>
+          </div>
+          <div style="background:rgba(220,38,38,.08);border-left:2px solid #DC2626;padding:10px 14px;border-radius:0 8px 8px 0">
+            <span style="font-family:var(--inter);font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#DC2626;font-weight:700;display:block;margin-bottom:6px">✗ Não diga</span>
+            <p style="font-family:var(--inter);font-size:13px;color:rgba(28,28,28,.6);line-height:1.55;text-decoration:line-through;text-decoration-color:rgba(220,38,38,.4)">Tradição e qualidade em bombachas gaúchas para toda a família! 🤠</p>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:210px 1fr 1fr;gap:16px;padding:10px 0;;align-items:start">
+          <div style="font-family:var(--inter);font-size:12px;text-transform:uppercase;letter-spacing:.08em;font-weight:600;color:var(--carvao);padding-top:4px">Pedido mínimo para lojista</div>
+          <div style="background:rgba(16,185,129,.1);border-left:2px solid #10B981;padding:10px 14px;border-radius:0 8px 8px 0">
+            <span style="font-family:var(--inter);font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#10B981;font-weight:700;display:block;margin-bottom:6px">✓ Diga</span>
+            <p style="font-family:var(--inter);font-size:13px;color:var(--carvao);line-height:1.55">B2B: pedido mínimo 15 peças. Prazo 35 dias por escrito. Primeiro pedido: posso enviar peça-mostra.</p>
+          </div>
+          <div style="background:rgba(220,38,38,.08);border-left:2px solid #DC2626;padding:10px 14px;border-radius:0 8px 8px 0">
+            <span style="font-family:var(--inter);font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#DC2626;font-weight:700;display:block;margin-bottom:6px">✗ Não diga</span>
+            <p style="font-family:var(--inter);font-size:13px;color:rgba(28,28,28,.6);line-height:1.55;text-decoration:line-through;text-decoration-color:rgba(220,38,38,.4)">Atendemos todos os tamanhos de pedido! Entre em contato para mais informações.</p>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════ SLIDE 12 · CORES ═══════════════════ -->
+<div class="slide" id="s12" data-topic="Cores">
+  <div class="quad-grid" style="position:relative">
+    <div class="eyebrow" style="position:absolute;top:28px;left:28px;color:rgba(245,237,216,.75);z-index:10">Identidade visual · Cores</div>
+    <!-- Marrom Couro -->
+    <div style="background:var(--couro);display:flex;align-items:flex-end;padding:36px">
+      <div>
+        <div class="eyebrow" style="color:var(--areia-mid);margin-bottom:8px">Primary</div>
+        <div style="font-family:'Playfair Display',serif;font-size:28px;font-weight:600;color:var(--areia);margin-bottom:8px">Marrom Couro</div>
+        <div style="font-family:var(--inter);font-size:13px;color:rgba(245,237,216,.75)">#6B3A1F · RGB 107 58 31<br>CMYK 0 46 71 58</div>
+      </div>
+    </div>
+    <!-- Verde Pampa -->
+    <div style="background:var(--verde);display:flex;align-items:flex-end;padding:36px">
+      <div>
+        <div class="eyebrow" style="color:rgba(245,237,216,.65);margin-bottom:8px">Secondary</div>
+        <div style="font-family:'Playfair Display',serif;font-size:28px;font-weight:600;color:var(--areia);margin-bottom:8px">Verde Pampa</div>
+        <div style="font-family:var(--inter);font-size:13px;color:rgba(245,237,216,.75)">#2D4A35 · RGB 45 74 53<br>CMYK 39 0 28 71</div>
+      </div>
+    </div>
+    <!-- Areia Pampa -->
+    <div style="background:var(--areia);display:flex;align-items:flex-end;padding:36px">
+      <div>
+        <div class="eyebrow" style="color:var(--verde);margin-bottom:8px">Background</div>
+        <div style="font-family:'Playfair Display',serif;font-size:28px;font-weight:600;color:var(--couro);margin-bottom:8px">Areia Pampa</div>
+        <div style="font-family:var(--inter);font-size:13px;color:rgba(28,28,28,.6)">#F5EDD8 · RGB 245 237 216<br>CMYK 0 3 12 4</div>
+      </div>
+    </div>
+    <!-- Carvão -->
+    <div style="background:var(--carvao);display:flex;align-items:flex-end;padding:36px">
+      <div>
+        <div class="eyebrow" style="color:rgba(212,184,150,.6);margin-bottom:8px">Neutral</div>
+        <div style="font-family:'Playfair Display',serif;font-size:28px;font-weight:600;color:var(--areia);margin-bottom:8px">Carvão</div>
+        <div style="font-family:var(--inter);font-size:13px;color:rgba(245,237,216,.65)">#1C1C1C · RGB 28 28 28<br>CMYK 0 0 0 89</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════ SLIDE 13 · PALETA COMPLETA ═══════════════════ -->
+<div class="slide" id="s13" data-topic="Paleta completa">
+  <div style="flex:1;overflow:hidden;background:#fff;display:flex;flex-direction:column;padding:44px 80px">
+    <div class="eyebrow" style="color:var(--verde);margin-bottom:20px">Identidade visual · Sistema cromático completo</div>
+    <h2 style="font-size:clamp(26px,3vw,40px);font-weight:500;color:var(--couro);line-height:1.1;margin-bottom:28px">
+      Paleta completa — <em style="font-weight:400">proporção 60 · 30 · 10.</em>
+    </h2>
+    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:12px;flex:1">
+      
+        <div style="border-radius:14px;padding:20px;display:flex;flex-direction:column;justify-content:space-between;background:#6B3A1F;color:#FFFFFF;">
+          <div style="font-family:var(--inter);font-size:10px;letter-spacing:.2em;text-transform:uppercase;opacity:.65;font-weight:600">PRIMARY</div>
+          <div>
+            <div style="font-family:'Playfair Display',serif;font-size:18px;font-weight:600;margin-bottom:6px;line-height:1.2">Marrom Couro</div>
+            <div style="font-family:var(--inter);font-size:11px;opacity:.75;line-height:1.7">#6B3A1F<br>RGB 107 58 31<br>CMYK 0 46 71 58</div>
+          </div>
+        </div>
+        <div style="border-radius:14px;padding:20px;display:flex;flex-direction:column;justify-content:space-between;background:#1C1C1C;color:#FFFFFF;">
+          <div style="font-family:var(--inter);font-size:10px;letter-spacing:.2em;text-transform:uppercase;opacity:.65;font-weight:600">NEUTRAL</div>
+          <div>
+            <div style="font-family:'Playfair Display',serif;font-size:18px;font-weight:600;margin-bottom:6px;line-height:1.2">Carvão</div>
+            <div style="font-family:var(--inter);font-size:11px;opacity:.75;line-height:1.7">#1C1C1C<br>RGB 28 28 28<br>CMYK 0 0 0 89</div>
+          </div>
+        </div>
+        <div style="border-radius:14px;padding:20px;display:flex;flex-direction:column;justify-content:space-between;background:#F5EDD8;color:#1C1C1C;border:1px solid rgba(107,58,31,.12)">
+          <div style="font-family:var(--inter);font-size:10px;letter-spacing:.2em;text-transform:uppercase;opacity:.65;font-weight:600">BACKGROUND</div>
+          <div>
+            <div style="font-family:'Playfair Display',serif;font-size:18px;font-weight:600;margin-bottom:6px;line-height:1.2">Areia Pampa</div>
+            <div style="font-family:var(--inter);font-size:11px;opacity:.75;line-height:1.7">#F5EDD8<br>RGB 245 237 216<br>CMYK 0 3 12 4</div>
+          </div>
+        </div>
+        <div style="border-radius:14px;padding:20px;display:flex;flex-direction:column;justify-content:space-between;background:#2D4A35;color:#FFFFFF;">
+          <div style="font-family:var(--inter);font-size:10px;letter-spacing:.2em;text-transform:uppercase;opacity:.65;font-weight:600">SECONDARY</div>
+          <div>
+            <div style="font-family:'Playfair Display',serif;font-size:18px;font-weight:600;margin-bottom:6px;line-height:1.2">Verde Pampa</div>
+            <div style="font-family:var(--inter);font-size:11px;opacity:.75;line-height:1.7">#2D4A35<br>RGB 45 74 53<br>CMYK 39 0 28 71</div>
+          </div>
+        </div>
+        <div style="border-radius:14px;padding:20px;display:flex;flex-direction:column;justify-content:space-between;background:#D4B896;color:#1C1C1C;border:1px solid rgba(107,58,31,.12)">
+          <div style="font-family:var(--inter);font-size:10px;letter-spacing:.2em;text-transform:uppercase;opacity:.65;font-weight:600">ACCENT</div>
+          <div>
+            <div style="font-family:'Playfair Display',serif;font-size:18px;font-weight:600;margin-bottom:6px;line-height:1.2">Areia Média</div>
+            <div style="font-family:var(--inter);font-size:11px;opacity:.75;line-height:1.7">#D4B896<br>RGB 212 184 150<br>CMYK 0 13 29 17</div>
+          </div>
+        </div>
+    </div>
+    <div style="margin-top:20px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding:16px 0;border-top:1px solid rgba(107,58,31,.12)">
+      <div style="display:flex;align-items:center;gap:10px">
+        <div style="width:40px;height:40px;border-radius:8px;background:var(--areia);border:1px solid rgba(107,58,31,.15)"></div>
+        <div>
+          <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:rgba(28,28,28,.5)">60% Dominante</div>
+          <div style="font-size:13px;color:var(--carvao)">Areia Pampa · fundo</div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px">
+        <div style="width:40px;height:40px;border-radius:8px;background:var(--couro)"></div>
+        <div>
+          <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:rgba(28,28,28,.5)">30% Suporte</div>
+          <div style="font-size:13px;color:var(--carvao)">Marrom Couro · texto e logo</div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px">
+        <div style="width:40px;height:40px;border-radius:8px;background:var(--verde)"></div>
+        <div>
+          <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:rgba(28,28,28,.5)">10% Acento</div>
+          <div style="font-size:13px;color:var(--carvao)">Verde Pampa · CTAs</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════ SLIDE 14 · TIPOGRAFIA ═══════════════════ -->
+<div class="slide" id="s14" data-topic="Tipografia">
+  <div style="flex:1;overflow:hidden;display:flex;background:var(--couro-dark)">
+    <div class="eyebrow" style="position:absolute;top:44px;left:48px;color:rgba(212,184,150,.7)">Identidade visual · Tipografia</div>
+    <!-- Left: Playfair Display -->
+    <div style="width:50%;display:flex;align-items:center;padding:64px 48px 48px">
+      <div>
+        <p style="font-family:var(--inter);font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:rgba(245,237,216,.45);margin-bottom:8px">Fonte principal · títulos</p>
+        <div style="font-family:'Playfair Display',serif;font-weight:600;font-style:italic;font-size:clamp(100px,14vw,200px);color:var(--areia);line-height:.88">Aa</div>
+        <p style="font-family:'Playfair Display',serif;font-size:28px;font-weight:600;color:var(--areia);margin-top:12px">Playfair Display</p>
+        <p style="font-family:var(--inter);font-size:13px;color:rgba(245,237,216,.55);margin-top:8px">
+          Google Fonts · 400 · 600 · 700 com itálico<br>
+          Serif humanista com caráter editorial e artesanal.
+        </p>
+      </div>
+    </div>
+    <div style="width:1px;background:rgba(245,237,216,.12);margin:64px 0"></div>
+    <!-- Right: Inter -->
+    <div style="width:50%;display:flex;align-items:center;padding:64px 48px 48px">
+      <div>
+        <p style="font-family:var(--inter);font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:rgba(245,237,216,.45);margin-bottom:8px">Fonte secundária · texto</p>
+        <div style="font-family:'Inter',sans-serif;font-weight:700;font-size:clamp(100px,14vw,200px);color:var(--areia);line-height:.88">Aa</div>
+        <p style="font-family:var(--inter);font-size:28px;font-weight:600;color:var(--areia);margin-top:12px">Inter</p>
+        <p style="font-family:var(--inter);font-size:13px;color:rgba(245,237,216,.55);margin-top:8px">
+          Google Fonts · 400 · 500 · 600 · 700<br>
+          Sans-serif neutro, otimizado para tela e microcopy.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════ SLIDE 15 · HIERARQUIA TIPOGRÁFICA ═══════════════════ -->
+<div class="slide" id="s15" data-topic="Hierarquia">
+  <div style="flex:1;overflow:hidden;background:#fff;display:flex;flex-direction:column;padding:44px 80px">
+    <div class="eyebrow" style="color:var(--verde);margin-bottom:20px">Identidade visual · Hierarquia tipográfica</div>
+    <h2 style="font-size:clamp(26px,3vw,40px);font-weight:500;color:var(--couro);line-height:1.1;margin-bottom:24px">
+      Escala real <em style="font-weight:400">— do display ao microcopy.</em>
+    </h2>
+    <div style="background:var(--areia);border-radius:20px;padding:28px 36px;flex:1">
+      
+        <div style="display:grid;grid-template-columns:100px 1fr 220px;align-items:center;gap:20px;padding:12px 0;border-bottom:1px solid rgba(107,58,31,.1)">
+          <span style="font-family:var(--inter);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:rgba(28,28,28,.45);font-weight:600">H1 DISPLAY</span>
+          <span style="font-family:'Playfair Display',serif;font-weight:700;font-size:46px;color:var(--couro)">Favo artesanal</span>
+          <div style="text-align:right;font-family:var(--inter);font-size:12px;color:rgba(28,28,28,.55)">
+            <div style="font-weight:600;color:var(--carvao);margin-bottom:2px">Playfair Display Bold 700</div>
+            <div>56px / lh 1.1</div>
+            <div style="font-style:italic;margin-top:2px;font-size:11px;color:rgba(28,28,28,.4)">Hero de LP, capa de deck</div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:100px 1fr 220px;align-items:center;gap:20px;padding:12px 0;border-bottom:1px solid rgba(107,58,31,.1)">
+          <span style="font-family:var(--inter);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:rgba(28,28,28,.45);font-weight:600">H2</span>
+          <span style="font-family:'Playfair Display',serif;font-weight:700;font-size:30px;color:var(--couro)">Favo artesanal</span>
+          <div style="text-align:right;font-family:var(--inter);font-size:12px;color:rgba(28,28,28,.55)">
+            <div style="font-weight:600;color:var(--carvao);margin-bottom:2px">Playfair Display Bold 700</div>
+            <div>36px / lh 1.2</div>
+            <div style="font-style:italic;margin-top:2px;font-size:11px;color:rgba(28,28,28,.4)">Títulos de seção em LP</div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:100px 1fr 220px;align-items:center;gap:20px;padding:12px 0;border-bottom:1px solid rgba(107,58,31,.1)">
+          <span style="font-family:var(--inter);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:rgba(28,28,28,.45);font-weight:600">H3</span>
+          <span style="font-family:'Playfair Display',serif;font-weight:600;font-size:22px;color:var(--couro)">Favo artesanal</span>
+          <div style="text-align:right;font-family:var(--inter);font-size:12px;color:rgba(28,28,28,.55)">
+            <div style="font-weight:600;color:var(--carvao);margin-bottom:2px">Playfair Display SemiBold 600</div>
+            <div>24px / lh 1.3</div>
+            <div style="font-style:italic;margin-top:2px;font-size:11px;color:rgba(28,28,28,.4)">Subtítulos e cards</div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:100px 1fr 220px;align-items:center;gap:20px;padding:12px 0;border-bottom:1px solid rgba(107,58,31,.1)">
+          <span style="font-family:var(--inter);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:rgba(28,28,28,.45);font-weight:600">BODY</span>
+          <span style="font-family:var(--inter);font-weight:400;font-size:17px;color:var(--couro)">Favo artesanal</span>
+          <div style="text-align:right;font-family:var(--inter);font-size:12px;color:rgba(28,28,28,.55)">
+            <div style="font-weight:600;color:var(--carvao);margin-bottom:2px">Inter Regular 400</div>
+            <div>17px / lh 1.6</div>
+            <div style="font-style:italic;margin-top:2px;font-size:11px;color:rgba(28,28,28,.4)">Corpo de texto e e-mail</div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:100px 1fr 220px;align-items:center;gap:20px;padding:12px 0;border-bottom:1px solid rgba(107,58,31,.1)">
+          <span style="font-family:var(--inter);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:rgba(28,28,28,.45);font-weight:600">CAPTION</span>
+          <span style="font-family:var(--inter);font-weight:500;font-size:13px;color:var(--couro)">Favo artesanal</span>
+          <div style="text-align:right;font-family:var(--inter);font-size:12px;color:rgba(28,28,28,.55)">
+            <div style="font-weight:600;color:var(--carvao);margin-bottom:2px">Inter Medium 500</div>
+            <div>13px / lh 1.4</div>
+            <div style="font-style:italic;margin-top:2px;font-size:11px;color:rgba(28,28,28,.4)">Legendas e microcopy</div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:100px 1fr 220px;align-items:center;gap:20px;padding:12px 0;">
+          <span style="font-family:var(--inter);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:rgba(28,28,28,.45);font-weight:600">CTA</span>
+          <span style="font-family:var(--inter);font-weight:600;font-size:16px;color:var(--couro)">Favo artesanal</span>
+          <div style="text-align:right;font-family:var(--inter);font-size:12px;color:rgba(28,28,28,.55)">
+            <div style="font-weight:600;color:var(--carvao);margin-bottom:2px">Inter SemiBold 600</div>
+            <div>16px / lh 1.0</div>
+            <div style="font-style:italic;margin-top:2px;font-size:11px;color:rgba(28,28,28,.4)">Texto de botões</div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════ SLIDE 16 · LOGO CONCEITO ═══════════════════ -->
+<div class="slide" id="s16" data-topic="Logotipo · conceito">
+  <div style="flex:1;overflow:hidden;background:#fff;display:flex;flex-direction:column;padding:44px 80px">
+    <div class="eyebrow" style="color:var(--verde);margin-bottom:16px">Identidade visual · Logotipo · conceito</div>
+    <h2 style="font-size:clamp(26px,3vw,38px);font-weight:500;color:var(--couro);line-height:1.1;margin-bottom:12px;max-width:860px">
+      Wordmark serifado com possível símbolo de <em style="font-weight:400">favo hexagonal — artesanato sem folclore.</em>
+    </h2>
+    <!-- Style description block -->
+    <div style="background:rgba(107,58,31,.07);border-left:3px solid var(--couro);border-radius:0 8px 8px 0;padding:16px 20px;margin-bottom:20px">
+      <div class="eyebrow" style="color:var(--couro);font-weight:700;margin-bottom:6px">Descrição de estilo para o designer</div>
+      <p style="font-size:13px;line-height:1.6;color:rgba(28,28,28,.8)">"Bombachas" em Bold, "Farroupilha" em Regular (hierarquia interna). Serifa humanista — Playfair Display ou similar. Sem flourishes ornamentais, sem efeito envelhecido. Funciona em monocromático antes de receber cor. Escala de 16px (favicon) a outdoor sem ajuste manual.</p>
+    </div>
+    <!-- 3 Directions -->
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;flex:1">
+      <div style="background:var(--areia);border-radius:16px;padding:24px;display:flex;flex-direction:column">
+        <div class="eyebrow" style="color:var(--verde);margin-bottom:12px">Direção A</div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:18px;color:var(--couro);margin-bottom:12px">Wordmark Serifado</h3>
+        <!-- Logo mock -->
+        <div style="flex:1;background:#fff;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:12px;padding:24px">
+          <div style="text-align:center">
+            <div style="font-family:'Playfair Display',serif;font-weight:700;font-size:22px;color:var(--couro);letter-spacing:.02em;text-transform:uppercase">Bombachas</div>
+            <div style="font-family:'Playfair Display',serif;font-weight:400;font-size:13px;color:var(--couro);letter-spacing:.18em;text-transform:uppercase;margin-top:2px">Farroupilha</div>
+          </div>
+        </div>
+        <p style="font-size:12px;line-height:1.55;color:rgba(28,28,28,.65)">Apenas o nome. Força máxima no wordmark — para quem já conhece. Elegante, atemporal, direto.</p>
+      </div>
+      <div style="background:var(--areia);border-radius:16px;padding:24px;display:flex;flex-direction:column">
+        <div class="eyebrow" style="color:var(--verde);margin-bottom:12px">Direção B</div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:18px;color:var(--couro);margin-bottom:12px">Wordmark + Símbolo Favo</h3>
+        <div style="flex:1;background:var(--couro);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:12px;padding:24px">
+          <div style="display:flex;align-items:center;gap:14px">
+            <!-- Hexagon SVG -->
+            <svg width="36" height="40" viewBox="0 0 36 40" fill="none">
+              <polygon points="18,2 34,11 34,29 18,38 2,29 2,11" stroke="#F5EDD8" stroke-width="1.5" fill="none"/>
+              <line x1="18" y1="2" x2="18" y2="38" stroke="#F5EDD8" stroke-width=".8" opacity=".4"/>
+              <line x1="2" y1="11" x2="34" y2="29" stroke="#F5EDD8" stroke-width=".8" opacity=".4"/>
+              <line x1="34" y1="11" x2="2" y2="29" stroke="#F5EDD8" stroke-width=".8" opacity=".4"/>
+            </svg>
+            <div>
+              <div style="font-family:'Playfair Display',serif;font-weight:700;font-size:18px;color:var(--areia);text-transform:uppercase">Bombachas</div>
+              <div style="font-family:'Playfair Display',serif;font-weight:400;font-size:10px;color:rgba(245,237,216,.65);letter-spacing:.18em;text-transform:uppercase">Farroupilha</div>
+            </div>
+          </div>
+        </div>
+        <p style="font-size:12px;line-height:1.55;color:rgba(28,28,28,.65)">Símbolo hexagonal abstrato (favo/trançado) + wordmark. O símbolo pode viver solo como avatar/favicon.</p>
+      </div>
+      <div style="background:var(--areia);border-radius:16px;padding:24px;display:flex;flex-direction:column">
+        <div class="eyebrow" style="color:var(--verde);margin-bottom:12px">Direção C</div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:18px;color:var(--couro);margin-bottom:12px">Wordmark + Brasão</h3>
+        <div style="flex:1;background:var(--areia);border-radius:12px;border:1px solid rgba(107,58,31,.2);display:flex;align-items:center;justify-content:center;margin-bottom:12px;padding:24px">
+          <div style="text-align:center">
+            <!-- Simple shield outline -->
+            <svg width="28" height="32" viewBox="0 0 28 32" fill="none" style="display:block;margin:0 auto 8px">
+              <path d="M14 2 L26 7 L26 18 C26 24 14 30 14 30 C14 30 2 24 2 18 L2 7 Z" stroke="var(--couro)" stroke-width="1.5" fill="none"/>
+            </svg>
+            <div style="font-family:'Playfair Display',serif;font-weight:700;font-size:16px;color:var(--couro);text-transform:uppercase;letter-spacing:.04em">Bombachas</div>
+            <div style="font-family:'Playfair Display',serif;font-weight:400;font-size:9px;color:var(--couro);letter-spacing:.2em;text-transform:uppercase;margin-top:2px">Farroupilha</div>
+          </div>
+        </div>
+        <p style="font-size:12px;line-height:1.55;color:rgba(28,28,28,.65)">Brasão heráldico minimalista — arco ou escudo simples. Tom mais institucional para B2B e papelaria.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════ SLIDE 17 · LOGO APLICAÇÕES ═══════════════════ -->
+<div class="slide" id="s17" data-topic="Logo · Aplicações">
+  <div style="position:relative;flex:1;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;background:#fff">
+    <div class="eyebrow" style="position:absolute;top:24px;left:24px;color:var(--verde);z-index:10">Identidade visual · Logo · Aplicações</div>
+    <!-- White bg -->
+    <div style="display:flex;align-items:center;justify-content:center;border-right:1px solid rgba(107,58,31,.1);border-bottom:1px solid rgba(107,58,31,.1)">
+      <div style="text-align:center">
+        <div style="font-family:'Playfair Display',serif;font-weight:700;font-size:26px;color:var(--couro);text-transform:uppercase;letter-spacing:.02em">Bombachas</div>
+        <div style="font-family:'Playfair Display',serif;font-weight:400;font-size:13px;color:var(--couro);letter-spacing:.18em;text-transform:uppercase;margin-top:3px">Farroupilha</div>
+        <div style="font-size:10px;font-family:var(--inter);color:rgba(28,28,28,.35);margin-top:12px;letter-spacing:.12em;text-transform:uppercase">Versão principal · fundo branco</div>
+      </div>
+    </div>
+    <!-- Couro bg -->
+    <div style="background:var(--couro);display:flex;align-items:center;justify-content:center;border-bottom:1px solid rgba(245,237,216,.1)">
+      <div style="text-align:center">
+        <div style="font-family:'Playfair Display',serif;font-weight:700;font-size:26px;color:var(--areia);text-transform:uppercase;letter-spacing:.02em">Bombachas</div>
+        <div style="font-family:'Playfair Display',serif;font-weight:400;font-size:13px;color:rgba(245,237,216,.65);letter-spacing:.18em;text-transform:uppercase;margin-top:3px">Farroupilha</div>
+        <div style="font-size:10px;font-family:var(--inter);color:rgba(245,237,216,.35);margin-top:12px;letter-spacing:.12em;text-transform:uppercase">Versão clara · fundo escuro</div>
+      </div>
+    </div>
+    <!-- Areia bg -->
+    <div style="background:var(--areia);display:flex;align-items:center;justify-content:center;border-right:1px solid rgba(107,58,31,.1)">
+      <div style="text-align:center">
+        <div style="font-family:'Playfair Display',serif;font-weight:700;font-size:26px;color:var(--couro);text-transform:uppercase;letter-spacing:.02em">Bombachas</div>
+        <div style="font-family:'Playfair Display',serif;font-weight:400;font-size:13px;color:var(--couro);letter-spacing:.18em;text-transform:uppercase;opacity:.65;margin-top:3px">Farroupilha</div>
+        <div style="font-size:10px;font-family:var(--inter);color:rgba(107,58,31,.4);margin-top:12px;letter-spacing:.12em;text-transform:uppercase">Versão em Areia Pampa · papelaria</div>
+      </div>
+    </div>
+    <!-- Verde bg -->
+    <div style="background:var(--verde);display:flex;align-items:center;justify-content:center">
+      <div style="text-align:center">
+        <div style="font-family:'Playfair Display',serif;font-weight:700;font-size:26px;color:var(--areia);text-transform:uppercase;letter-spacing:.02em">Bombachas</div>
+        <div style="font-family:'Playfair Display',serif;font-weight:400;font-size:13px;color:rgba(245,237,216,.65);letter-spacing:.18em;text-transform:uppercase;margin-top:3px">Farroupilha</div>
+        <div style="font-size:10px;font-family:var(--inter);color:rgba(245,237,216,.35);margin-top:12px;letter-spacing:.12em;text-transform:uppercase">Versão sobre Verde Pampa · CTAs</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════ SLIDE 18 · USOS PROIBIDOS ═══════════════════ -->
+<div class="slide" id="s18" data-topic="Usos proibidos">
+  <div style="flex:1;overflow:hidden;background:#fff;display:flex;flex-direction:column;padding:44px 80px">
+    <div class="eyebrow" style="color:#DC2626;margin-bottom:24px">Identidade visual · Usos proibidos</div>
+    <h2 style="font-size:clamp(28px,3.5vw,48px);font-weight:500;color:var(--couro);max-width:640px;line-height:1.1;margin-bottom:36px">
+      O que <em style="font-weight:400;color:#DC2626">nunca fazer</em> com a marca.
+    </h2>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;flex:1">
+      
+        <div style="display:flex;flex-direction:column;align-items:center;text-align:center">
+          <div style="flex:1;display:flex;align-items:center;justify-content:center;width:100%;margin-bottom:12px;position:relative;min-height:100px;background:var(--areia);border-radius:12px;padding:24px">
+            <div style="background:#22c55e;font-family:'Playfair Display',serif;font-weight:700;font-size:14px;color:var(--couro);text-transform:uppercase;letter-spacing:.04em">Bombachas<br><span style="font-weight:400;font-size:9px;letter-spacing:.18em">Farroupilha</span></div>
+            <div style="position:absolute;inset:0;border:2px solid #DC2626;border-radius:12px;pointer-events:none"></div>
+            <div style="position:absolute;top:-8px;right:-8px;width:24px;height:24px;background:#DC2626;border-radius:50%;color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:bold">✗</div>
+          </div>
+          <p style="font-family:var(--inter);font-size:13px;color:var(--carvao);line-height:1.45;font-weight:500">Não recolorir fora da paleta</p>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;text-align:center">
+          <div style="flex:1;display:flex;align-items:center;justify-content:center;width:100%;margin-bottom:12px;position:relative;min-height:100px;background:var(--areia);border-radius:12px;padding:24px">
+            <div style="transform:rotate(-12deg);font-family:'Playfair Display',serif;font-weight:700;font-size:14px;color:var(--couro);text-transform:uppercase;letter-spacing:.04em">Bombachas<br><span style="font-weight:400;font-size:9px;letter-spacing:.18em">Farroupilha</span></div>
+            <div style="position:absolute;inset:0;border:2px solid #DC2626;border-radius:12px;pointer-events:none"></div>
+            <div style="position:absolute;top:-8px;right:-8px;width:24px;height:24px;background:#DC2626;border-radius:50%;color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:bold">✗</div>
+          </div>
+          <p style="font-family:var(--inter);font-size:13px;color:var(--carvao);line-height:1.45;font-weight:500">Não rotacionar ou inclinar</p>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;text-align:center">
+          <div style="flex:1;display:flex;align-items:center;justify-content:center;width:100%;margin-bottom:12px;position:relative;min-height:100px;background:var(--areia);border-radius:12px;padding:24px">
+            <div style="transform:scaleY(0.5);font-family:'Playfair Display',serif;font-weight:700;font-size:14px;color:var(--couro);text-transform:uppercase;letter-spacing:.04em">Bombachas<br><span style="font-weight:400;font-size:9px;letter-spacing:.18em">Farroupilha</span></div>
+            <div style="position:absolute;inset:0;border:2px solid #DC2626;border-radius:12px;pointer-events:none"></div>
+            <div style="position:absolute;top:-8px;right:-8px;width:24px;height:24px;background:#DC2626;border-radius:50%;color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:bold">✗</div>
+          </div>
+          <p style="font-family:var(--inter);font-size:13px;color:var(--carvao);line-height:1.45;font-weight:500">Não esticar ou achatar</p>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;text-align:center">
+          <div style="flex:1;display:flex;align-items:center;justify-content:center;width:100%;margin-bottom:12px;position:relative;min-height:100px;background:var(--areia);border-radius:12px;padding:24px">
+            <div style="filter:drop-shadow(6px 6px 0 rgba(0,0,0,0.35));font-family:'Playfair Display',serif;font-weight:700;font-size:14px;color:var(--couro);text-transform:uppercase;letter-spacing:.04em">Bombachas<br><span style="font-weight:400;font-size:9px;letter-spacing:.18em">Farroupilha</span></div>
+            <div style="position:absolute;inset:0;border:2px solid #DC2626;border-radius:12px;pointer-events:none"></div>
+            <div style="position:absolute;top:-8px;right:-8px;width:24px;height:24px;background:#DC2626;border-radius:50%;color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:bold">✗</div>
+          </div>
+          <p style="font-family:var(--inter);font-size:13px;color:var(--carvao);line-height:1.45;font-weight:500">Não adicionar sombra ou efeito 3D</p>
+        </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════ SLIDE 19 · PERSONA MARIANA ═══════════════════ -->
+<div class="slide" id="s19" data-topic="Persona Mariana">
+  <div style="flex:1;overflow:hidden;display:flex;background:var(--couro-dark)">
+    <div class="eyebrow" style="position:absolute;top:44px;left:48px;color:rgba(212,184,150,.7);z-index:20">Persona principal</div>
+    <!-- Left content -->
+    <div style="width:60%;display:flex;flex-direction:column;justify-content:center;padding:64px;padding-top:96px;position:relative;z-index:10;background:linear-gradient(120deg,var(--couro-dark) 0%,var(--couro) 100%)">
+      <h2 style="font-family:'Playfair Display',serif;font-weight:500;color:var(--areia);line-height:.95;margin-bottom:28px;font-size:clamp(60px,9vw,130px)">Mariana</h2>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:24px;font-size:13px;font-family:var(--inter)">
+        <div style="display:flex;gap:16px;align-items:baseline">
+          <span style="color:rgba(212,184,150,.65);letter-spacing:.15em;text-transform:uppercase;font-size:10px;min-width:88px">Idade</span>
+          <span style="color:rgba(245,237,216,.9)">32–55 anos · RS interior + Caxias do Sul</span>
+        </div>
+        <div style="display:flex;gap:16px;align-items:baseline">
+          <span style="color:rgba(212,184,150,.65);letter-spacing:.15em;text-transform:uppercase;font-size:10px;min-width:88px">Renda</span>
+          <span style="color:rgba(245,237,216,.9)">R$ 4.000–15.000/mês (classe B2/C+)</span>
+        </div>
+        <div style="display:flex;gap:16px;align-items:baseline">
+          <span style="color:rgba(212,184,150,.65);letter-spacing:.15em;text-transform:uppercase;font-size:10px;min-width:88px">Ocupação</span>
+          <span style="color:rgba(245,237,216,.9)">Professora, funcionária pública, liberal, empreendedora</span>
+        </div>
+        <div style="display:flex;gap:16px;align-items:baseline">
+          <span style="color:rgba(212,184,150,.65);letter-spacing:.15em;text-transform:uppercase;font-size:10px;min-width:88px">Contexto</span>
+          <span style="color:rgba(245,237,216,.9)">Frequenta CTG, baila, monta ou participa da Semana Farroupilha</span>
+        </div>
+      </div>
+      <div style="background:var(--verde);display:inline-block;padding:4px 12px;border-radius:4px;margin-bottom:8px;width:fit-content">
+        <span style="font-family:var(--inter);font-size:10px;letter-spacing:.15em;text-transform:uppercase;font-weight:600;color:var(--areia)">Principal dor</span>
+      </div>
+      <p style="font-family:var(--inter);font-size:13px;line-height:1.65;color:rgba(245,237,216,.85);max-width:440px;margin-bottom:20px">
+        Comprou bombacha em loja grande, o caimento ficou errado, passou vergonha no evento. Quer a peça que a tribo reconhece como autêntica — mas precisa de evidência antes de pagar R$ 280.
+      </p>
+      <p style="font-family:'Playfair Display',serif;font-style:italic;font-size:15px;line-height:1.5;color:rgba(212,184,150,.9);max-width:440px;border-left:2px solid rgba(212,184,150,.5);padding-left:16px">
+        "Não compro mais bombacha de loja. Quero a que a tribo reconhece — mas primeiro me mostra o processo."
+      </p>
+    </div>
+    <!-- Right: decorative gradient panel -->
+    <div style="width:40%;position:relative;background:linear-gradient(160deg,var(--couro) 0%,var(--couro-dark) 100%);display:flex;align-items:center;justify-content:center">
+      <div style="font-family:'Playfair Display',serif;font-size:clamp(120px,18vw,240px);font-weight:700;color:rgba(245,237,216,.06);line-height:1;user-select:none;text-align:center">B<br>F</div>
+      <!-- WTP Card -->
+      <div style="position:absolute;bottom:48px;left:24px;right:24px;background:rgba(245,237,216,.08);backdrop-filter:blur(8px);border-radius:12px;padding:16px;border:1px solid rgba(245,237,216,.12)">
+        <div class="eyebrow" style="color:rgba(212,184,150,.6);margin-bottom:10px">Willingness to Pay</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+          <div>
+            <div style="font-family:'Playfair Display',serif;font-size:18px;color:var(--areia)">R$ 280–450</div>
+            <div style="font-size:10px;font-family:var(--inter);color:rgba(245,237,216,.45);margin-top:2px">Bombacha de Favo B2C</div>
+          </div>
+          <div>
+            <div style="font-family:'Playfair Display',serif;font-size:18px;color:var(--areia)">R$ 90–150</div>
+            <div style="font-size:10px;font-family:var(--inter);color:rgba(245,237,216,.45);margin-top:2px">Popular B2C</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════ SLIDE 20 · PERSONA DIEGO ═══════════════════ -->
+<div class="slide" id="s20" data-topic="Persona Diego">
+  <div style="flex:1;overflow:hidden;display:flex;background:var(--areia)">
+    <div class="eyebrow" style="position:absolute;top:44px;left:48px;color:var(--verde);z-index:20">Persona secundária</div>
+    <!-- Left content -->
+    <div style="width:60%;display:flex;flex-direction:column;justify-content:center;padding:64px;padding-top:96px;background:linear-gradient(120deg,var(--areia) 0%,#e8d4b4 100%)">
+      <h2 style="font-family:'Playfair Display',serif;font-weight:500;color:var(--couro);line-height:.95;margin-bottom:28px;font-size:clamp(60px,9vw,130px)">Diego</h2>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:24px;font-size:13px;font-family:var(--inter)">
+        <div style="display:flex;gap:16px;align-items:baseline">
+          <span style="color:var(--verde);letter-spacing:.15em;text-transform:uppercase;font-size:10px;min-width:88px">Idade</span>
+          <span style="color:var(--carvao)">35–50 anos · interior do RS</span>
+        </div>
+        <div style="display:flex;gap:16px;align-items:baseline">
+          <span style="color:var(--verde);letter-spacing:.15em;text-transform:uppercase;font-size:10px;min-width:88px">Faturamento</span>
+          <span style="color:var(--carvao)">R$ 600k–3,5MM/ano (pilcharia regional)</span>
+        </div>
+        <div style="display:flex;gap:16px;align-items:baseline">
+          <span style="color:var(--verde);letter-spacing:.15em;text-transform:uppercase;font-size:10px;min-width:88px">Ocupação</span>
+          <span style="color:var(--carvao)">Proprietário ou herdeiro de pilcharia regional (2-10 func.)</span>
+        </div>
+        <div style="display:flex;gap:16px;align-items:baseline">
+          <span style="color:var(--verde);letter-spacing:.15em;text-transform:uppercase;font-size:10px;min-width:88px">Operação</span>
+          <span style="color:var(--carvao)">Empresa familiar · 65-75% da receita Jul-Set</span>
+        </div>
+      </div>
+      <div style="background:var(--couro);display:inline-block;padding:4px 12px;border-radius:4px;margin-bottom:8px;width:fit-content">
+        <span style="font-family:var(--inter);font-size:10px;letter-spacing:.15em;text-transform:uppercase;font-weight:600;color:var(--areia)">Principal dor</span>
+      </div>
+      <p style="font-family:var(--inter);font-size:13px;line-height:1.65;color:rgba(28,28,28,.8);max-width:440px;margin-bottom:20px">
+        Fornecedor anterior atrasou pedido no pico farroupilha, exigiu pedido mínimo de 100 peças e amarrou capital de giro 4 meses antes. Quer parceiro que cumpra prazo e aceite 15 peças.
+      </p>
+      <p style="font-family:'Playfair Display',serif;font-style:italic;font-size:15px;line-height:1.5;color:var(--couro);max-width:440px;border-left:2px solid var(--verde);padding-left:16px">
+        "Me dá a data de entrega por escrito, pedido mínimo viável e atende direto com decisor — sem preposto."
+      </p>
+    </div>
+    <!-- Right decorative -->
+    <div style="width:40%;position:relative;background:linear-gradient(160deg,#e8d4b4 0%,var(--areia) 100%);display:flex;align-items:center;justify-content:center">
+      <div style="font-family:'Playfair Display',serif;font-size:clamp(120px,18vw,240px);font-weight:700;color:rgba(107,58,31,.06);line-height:1;user-select:none;text-align:center">B<br>F</div>
+      <!-- B2B specs card -->
+      <div style="position:absolute;bottom:48px;left:24px;right:24px;background:rgba(107,58,31,.07);border-radius:12px;padding:16px;border:1px solid rgba(107,58,31,.15)">
+        <div class="eyebrow" style="color:var(--verde);margin-bottom:10px">Condições B2B</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+          <div>
+            <div style="font-family:'Playfair Display',serif;font-size:20px;color:var(--couro);font-weight:600">15 peças</div>
+            <div style="font-size:10px;font-family:var(--inter);color:rgba(28,28,28,.5);margin-top:2px">Pedido mínimo</div>
+          </div>
+          <div>
+            <div style="font-family:'Playfair Display',serif;font-size:20px;color:var(--couro);font-weight:600">35 dias</div>
+            <div style="font-size:10px;font-family:var(--inter);color:rgba(28,28,28,.5);margin-top:2px">Prazo por escrito</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════ SLIDE 21 · APLICAÇÕES ═══════════════════ -->
+<div class="slide" id="s21" data-topic="Aplicações">
+  <div style="flex:1;overflow:hidden;background:var(--areia);display:flex;flex-direction:column;padding:44px 80px">
+    <div class="eyebrow" style="color:var(--verde);margin-bottom:20px">Aplicações · Papelaria essencial</div>
+    <h2 style="font-size:clamp(26px,3vw,40px);font-weight:500;color:var(--couro);line-height:1.1;margin-bottom:28px">
+      A marca <em style="font-weight:400">no mundo real.</em>
+    </h2>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;flex:1">
+      <!-- Cartão de Visita -->
+      <div style="display:flex;flex-direction:column">
+        <div style="flex:1;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 8px 32px rgba(107,58,31,.18);margin-bottom:12px">
+          <!-- Frente -->
+          <div style="flex:1;background:var(--areia);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px;border:1px solid rgba(107,58,31,.1);border-bottom:none;border-radius:16px 16px 0 0">
+            <div style="font-family:'Playfair Display',serif;font-weight:700;font-size:18px;color:var(--couro);text-align:center;text-transform:uppercase;letter-spacing:.03em">Bombachas</div>
+            <div style="font-family:'Playfair Display',serif;font-weight:400;font-size:9px;color:var(--couro);text-align:center;text-transform:uppercase;letter-spacing:.2em;margin-top:2px;opacity:.65">Farroupilha</div>
+            <div style="margin:12px 0;width:40px;height:1px;background:rgba(107,58,31,.3)"></div>
+            <div style="font-family:var(--inter);font-size:9px;color:rgba(28,28,28,.55);text-align:center;line-height:1.8">Loreni Tapparo<br>Sócia · bombachasfarroupilha.com.br<br>+55 54 9615-0025</div>
+          </div>
+          <!-- Verso -->
+          <div style="background:var(--couro);padding:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:64px;border-radius:0 0 16px 16px">
+            <div style="font-family:'Playfair Display',serif;font-style:italic;font-size:13px;color:var(--areia);text-align:center">Feita à mão. Direto da fábrica.</div>
+          </div>
+        </div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:18px;color:var(--couro);margin-bottom:4px">Cartão de Visita</h3>
+        <p style="font-size:12px;color:rgba(28,28,28,.6);line-height:1.55">9×5,5cm · couchê fosco 300g · verniz localizado no logo. Frente Areia Pampa, verso Marrom Couro.</p>
+      </div>
+      <!-- Bio Instagram -->
+      <div style="display:flex;flex-direction:column">
+        <div style="flex:1;border-radius:16px;overflow:hidden;box-shadow:0 8px 32px rgba(107,58,31,.15);margin-bottom:12px;background:#fff;padding:20px">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px">
+            <div style="width:52px;height:52px;border-radius:50%;background:var(--couro);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+              <div style="font-family:'Playfair Display',serif;font-weight:700;font-size:18px;color:var(--areia)">BF</div>
+            </div>
+            <div>
+              <div style="font-family:var(--inter);font-weight:600;font-size:13px;color:#0f0f0f">farroupilha_bombachas</div>
+              <div style="font-family:var(--inter);font-size:11px;color:rgba(28,28,28,.5)">farroupilha_bombachas</div>
+            </div>
+          </div>
+          <div style="font-family:var(--inter);font-size:12px;color:#0f0f0f;line-height:1.7">
+            <strong>Bombachas Farroupilha</strong><br>
+            Fábrica de pilchas em Ciríaco/RS 📍<br>
+            Bombacha de Favo artesanal<br>
+            Feita à mão. Direto da fábrica. 🧵<br>
+            <span style="color:#0095f6">WA: [link]</span>
+          </div>
+        </div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:18px;color:var(--couro);margin-bottom:4px">Bio Instagram</h3>
+        <p style="font-size:12px;color:rgba(28,28,28,.6);line-height:1.55">Máx 2 emojis · Avatar: símbolo do logo em fundo Marrom Couro. Username: @farroupilha_bombachas.</p>
+      </div>
+      <!-- WhatsApp Business -->
+      <div style="display:flex;flex-direction:column">
+        <div style="flex:1;border-radius:16px;overflow:hidden;box-shadow:0 8px 32px rgba(107,58,31,.15);margin-bottom:12px;background:#e5ddd5;padding:0">
+          <div style="background:#075e54;padding:12px 16px;display:flex;align-items:center;gap:10px">
+            <div style="width:36px;height:36px;border-radius:50%;background:var(--couro);display:flex;align-items:center;justify-content:center">
+              <div style="font-family:'Playfair Display',serif;font-weight:700;font-size:13px;color:var(--areia)">BF</div>
+            </div>
+            <div>
+              <div style="font-family:var(--inter);font-weight:600;font-size:13px;color:#fff">Bombachas Farroupilha</div>
+              <div style="font-family:var(--inter);font-size:10px;color:rgba(255,255,255,.65)">online</div>
+            </div>
+          </div>
+          <div style="padding:16px;display:flex;flex-direction:column;gap:8px">
+            <div style="background:#fff;border-radius:8px 8px 8px 0;padding:10px 12px;max-width:85%;font-size:12px;font-family:var(--inter);color:#0f0f0f;line-height:1.55">
+              Olá! Sou a Loreni. Fábrica de pilchas em Ciríaco/RS 📍 Bombacha de Favo artesanal. Feita à mão. Direto da fábrica. Como posso te ajudar?
+            </div>
+          </div>
+        </div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:18px;color:var(--couro);margin-bottom:4px">WhatsApp Business</h3>
+        <p style="font-size:12px;color:rgba(28,28,28,.6);line-height:1.55">Foto de perfil: símbolo do logo em fundo Marrom Couro. Descrição com vocabulário oficial do manual.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════ SLIDE 22 · CRIATIVOS IG ═══════════════════ -->
+<div class="slide" id="s22" data-topic="Criativos · Feed">
+  <div style="flex:1;overflow:hidden;background:var(--areia);display:flex;flex-direction:column;padding:40px 60px">
+    <div class="eyebrow" style="color:var(--verde);margin-bottom:12px">Aplicações · Criativos para tráfego pago · Feed Instagram</div>
+    <h2 style="font-size:clamp(22px,2.8vw,36px);font-weight:500;color:var(--couro);line-height:1.1;margin-bottom:20px">
+      Cinco hooks <em style="font-weight:400">para @farroupilha_bombachas</em>
+    </h2>
+    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:12px;flex:1;align-items:start">
+      
+        <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 4px 16px rgba(107,58,31,.15)">
+          <!-- Header mock -->
+          <div style="display:flex;align-items:center;gap:6px;padding:8px 10px;border-bottom:1px solid rgba(0,0,0,.06)">
+            <div style="width:24px;height:24px;border-radius:50%;background:var(--couro);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+              <span style="font-family:'Playfair Display',serif;font-weight:700;font-size:9px;color:var(--areia)">BF</span>
+            </div>
+            <div style="flex:1">
+              <div style="font-family:var(--inter);font-weight:600;font-size:9px;color:#0f0f0f">farroupilha_bombachas</div>
+            </div>
+          </div>
+          <!-- Image area -->
+          <div style="background:#1C1C1C;aspect-ratio:4/5;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:16px;position:relative">
+            <div style="font-family:var(--inter);font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:#F5EDD8;opacity:.55;margin-bottom:8px">Hook · dor</div>
+            <p style="font-family:'Playfair Display',serif;font-style:italic;font-size:14px;font-weight:600;color:#F5EDD8;text-align:center;line-height:1.3">Você já ficou sem jeito usando bombacha que não caiu bem?</p>
+            <!-- Logo watermark -->
+            <div style="position:absolute;bottom:10px;right:10px;font-family:var(--inter);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:#F5EDD8;opacity:.35">BF</div>
+          </div>
+          <!-- Action bar -->
+          <div style="padding:8px 10px">
+            <div style="font-family:var(--inter);font-size:9px;line-height:1.55;color:#0f0f0f;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical">
+              <span style="font-weight:600">farroupilha_bombachas</span> Favo estampado vs artesanal — você já passou vergonha?
+            </div>
+          </div>
+        </div>
+        <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 4px 16px rgba(107,58,31,.15)">
+          <!-- Header mock -->
+          <div style="display:flex;align-items:center;gap:6px;padding:8px 10px;border-bottom:1px solid rgba(0,0,0,.06)">
+            <div style="width:24px;height:24px;border-radius:50%;background:var(--couro);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+              <span style="font-family:'Playfair Display',serif;font-weight:700;font-size:9px;color:var(--areia)">BF</span>
+            </div>
+            <div style="flex:1">
+              <div style="font-family:var(--inter);font-weight:600;font-size:9px;color:#0f0f0f">farroupilha_bombachas</div>
+            </div>
+          </div>
+          <!-- Image area -->
+          <div style="background:#6B3A1F;aspect-ratio:4/5;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:16px;position:relative">
+            <div style="font-family:var(--inter);font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:#F5EDD8;opacity:.55;margin-bottom:8px">Hook · resultado</div>
+            <p style="font-family:'Playfair Display',serif;font-style:italic;font-size:14px;font-weight:600;color:#F5EDD8;text-align:center;line-height:1.3">A bombacha que a tribo reconhece.</p>
+            <!-- Logo watermark -->
+            <div style="position:absolute;bottom:10px;right:10px;font-family:var(--inter);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:#F5EDD8;opacity:.35">BF</div>
+          </div>
+          <!-- Action bar -->
+          <div style="padding:8px 10px">
+            <div style="font-family:var(--inter);font-size:9px;line-height:1.55;color:#0f0f0f;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical">
+              <span style="font-weight:600">farroupilha_bombachas</span> A pilcha que a tribo reconhece
+            </div>
+          </div>
+        </div>
+        <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 4px 16px rgba(107,58,31,.15)">
+          <!-- Header mock -->
+          <div style="display:flex;align-items:center;gap:6px;padding:8px 10px;border-bottom:1px solid rgba(0,0,0,.06)">
+            <div style="width:24px;height:24px;border-radius:50%;background:var(--couro);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+              <span style="font-family:'Playfair Display',serif;font-weight:700;font-size:9px;color:var(--areia)">BF</span>
+            </div>
+            <div style="flex:1">
+              <div style="font-family:var(--inter);font-weight:600;font-size:9px;color:#0f0f0f">farroupilha_bombachas</div>
+            </div>
+          </div>
+          <!-- Image area -->
+          <div style="background:#2D4A35;aspect-ratio:4/5;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:16px;position:relative">
+            <div style="font-family:var(--inter);font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:#F5EDD8;opacity:.55;margin-bottom:8px">Hook · curiosidade</div>
+            <p style="font-family:'Playfair Display',serif;font-style:italic;font-size:14px;font-weight:600;color:#F5EDD8;text-align:center;line-height:1.3">Você já viu um favo ser trançado à mão?</p>
+            <!-- Logo watermark -->
+            <div style="position:absolute;bottom:10px;right:10px;font-family:var(--inter);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:#F5EDD8;opacity:.35">BF</div>
+          </div>
+          <!-- Action bar -->
+          <div style="padding:8px 10px">
+            <div style="font-family:var(--inter);font-size:9px;line-height:1.55;color:#0f0f0f;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical">
+              <span style="font-weight:600">farroupilha_bombachas</span> Bastidores: o trançado do favo
+            </div>
+          </div>
+        </div>
+        <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 4px 16px rgba(107,58,31,.15)">
+          <!-- Header mock -->
+          <div style="display:flex;align-items:center;gap:6px;padding:8px 10px;border-bottom:1px solid rgba(0,0,0,.06)">
+            <div style="width:24px;height:24px;border-radius:50%;background:var(--couro);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+              <span style="font-family:'Playfair Display',serif;font-weight:700;font-size:9px;color:var(--areia)">BF</span>
+            </div>
+            <div style="flex:1">
+              <div style="font-family:var(--inter);font-weight:600;font-size:9px;color:#0f0f0f">farroupilha_bombachas</div>
+            </div>
+          </div>
+          <!-- Image area -->
+          <div style="background:#3D1F0A;aspect-ratio:4/5;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:16px;position:relative">
+            <div style="font-family:var(--inter);font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:#D4B896;opacity:.55;margin-bottom:8px">Hook · prova social</div>
+            <p style="font-family:'Playfair Display',serif;font-style:italic;font-size:14px;font-weight:600;color:#D4B896;text-align:center;line-height:1.3">O que dizem quem usa há anos.</p>
+            <!-- Logo watermark -->
+            <div style="position:absolute;bottom:10px;right:10px;font-family:var(--inter);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:#D4B896;opacity:.35">BF</div>
+          </div>
+          <!-- Action bar -->
+          <div style="padding:8px 10px">
+            <div style="font-family:var(--inter);font-size:9px;line-height:1.55;color:#0f0f0f;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical">
+              <span style="font-weight:600">farroupilha_bombachas</span> Clientes fiéis há anos
+            </div>
+          </div>
+        </div>
+        <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 4px 16px rgba(107,58,31,.15)">
+          <!-- Header mock -->
+          <div style="display:flex;align-items:center;gap:6px;padding:8px 10px;border-bottom:1px solid rgba(0,0,0,.06)">
+            <div style="width:24px;height:24px;border-radius:50%;background:var(--couro);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+              <span style="font-family:'Playfair Display',serif;font-weight:700;font-size:9px;color:var(--areia)">BF</span>
+            </div>
+            <div style="flex:1">
+              <div style="font-family:var(--inter);font-weight:600;font-size:9px;color:#0f0f0f">farroupilha_bombachas</div>
+            </div>
+          </div>
+          <!-- Image area -->
+          <div style="background:#6B3A1F;aspect-ratio:4/5;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:16px;position:relative">
+            <div style="font-family:var(--inter);font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:#FFFFFF;opacity:.55;margin-bottom:8px">Hook · urgência</div>
+            <p style="font-family:'Playfair Display',serif;font-style:italic;font-size:14px;font-weight:600;color:#FFFFFF;text-align:center;line-height:1.3">35 dias de produção. Encomende até 15/ago.</p>
+            <!-- Logo watermark -->
+            <div style="position:absolute;bottom:10px;right:10px;font-family:var(--inter);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:#FFFFFF;opacity:.35">BF</div>
+          </div>
+          <!-- Action bar -->
+          <div style="padding:8px 10px">
+            <div style="font-family:var(--inter);font-size:9px;line-height:1.55;color:#0f0f0f;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical">
+              <span style="font-weight:600">farroupilha_bombachas</span> Prazo limite: Semana Farroupilha
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════ SLIDE 23 · ENCERRAMENTO ═══════════════════ -->
+<div class="slide" id="s23" data-topic="Encerramento">
+  <div style="flex:1;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;background:var(--couro)">
+    <!-- Aurora -->
+    <div style="position:absolute;bottom:0;right:0;width:700px;height:700px;border-radius:50%;background:rgba(45,74,53,.2);filter:blur(120px);transform:translate(30%,30%);pointer-events:none"></div>
+    <div style="position:absolute;top:0;left:0;width:500px;height:500px;border-radius:50%;background:rgba(212,184,150,.1);filter:blur(100px);transform:translate(-30%,-30%);pointer-events:none"></div>
+    <div style="position:relative;z-index:1;text-align:center;padding:48px;max-width:800px">
+      <p class="eyebrow" style="color:rgba(245,237,216,.5);margin-bottom:32px">Manual de Identidade Visual · v1.0 · 2026</p>
+      <h2 style="font-family:'Playfair Display',serif;font-weight:500;font-style:italic;font-size:clamp(32px,5vw,72px);color:var(--areia);line-height:1.1;margin-bottom:32px">
+        Feita à mão.<br>Direto da fábrica.
+      </h2>
+      <div style="width:80px;height:1px;background:rgba(245,237,216,.3);margin:0 auto 32px"></div>
+      <p style="font-family:var(--inter);font-size:15px;color:rgba(245,237,216,.6);line-height:1.7;margin-bottom:40px">
+        Este manual é o árbitro de cada decisão visual e verbal da Bombachas Farroupilha.<br>Quando houver dúvida, ele decide — não o gosto pessoal.
+      </p>
+      <div style="display:flex;gap:32px;justify-content:center;font-family:var(--inter);font-size:13px;color:rgba(245,237,216,.45)">
+        <span>Bombachas Farroupilha</span>
+        <span>·</span>
+        <span>Ciríaco / RS</span>
+        <span>·</span>
+        <span>bombachasfarroupilha.com.br</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div><!-- /deck -->
+
+<!-- Navigation -->
+<div id="nav">
+  <span id="slide-label"></span>
+  <button class="nav-btn" id="prev" aria-label="Anterior">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+  </button>
+  <button class="nav-btn" id="next" aria-label="Próximo">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+  </button>
+</div>
+
+<script>
+const slides = Array.from(document.querySelectorAll(".slide"));
+let cur = 0;
+const total = slides.length;
+const fill = document.getElementById("prog-fill");
+const label = document.getElementById("slide-label");
+const prev = document.getElementById("prev");
+const next = document.getElementById("next");
+
+function go(n) {
+  slides[cur].classList.remove("active");
+  cur = Math.max(0, Math.min(total - 1, n));
+  slides[cur].classList.add("active");
+  fill.style.width = ((cur + 1) / total * 100) + "%";
+  const topic = slides[cur].dataset.topic || "";
+  label.textContent = String(cur + 1).padStart(2,"0") + " / " + String(total).padStart(2,"0") + (topic ? " · " + topic : "");
+  prev.disabled = cur === 0;
+  next.disabled = cur === total - 1;
+}
+
+prev.addEventListener("click", () => go(cur - 1));
+next.addEventListener("click", () => go(cur + 1));
+document.addEventListener("keydown", e => {
+  if (e.key === "ArrowRight" || e.key === " " || e.key === "PageDown") { e.preventDefault(); go(cur + 1); }
+  if (e.key === "ArrowLeft" || e.key === "PageUp") { e.preventDefault(); go(cur - 1); }
+});
+
+go(0);
+</script>
+</body>
+</html>

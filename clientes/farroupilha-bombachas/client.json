@@ -636,7 +636,7 @@
     }
   },
   "progress": {
-    "current_week": 2,
+    "current_week": 3,
     "skills": {
       "ee-s1-diagnostico-maturidade": {
         "status": "completed",
@@ -694,34 +694,38 @@
         "completed_at": "2026-05-26T15:22:29.085495+00:00"
       },
       "ee-s3-identidade-visual": {
-        "status": "pending",
-        "checkpoint": 0,
-        "started_at": null,
-        "completed_at": null
+        "status": "superseded",
+        "superseded_by": "ee-s3-manual-marca",
+        "version": 0
       },
       "ee-s3-brandbook": {
-        "status": "pending",
-        "checkpoint": 0,
-        "started_at": null,
-        "completed_at": null
+        "status": "superseded",
+        "superseded_by": "ee-s3-manual-marca",
+        "version": 0
+      },
+      "ee-s3-manual-marca": {
+        "status": "completed",
+        "version": 1,
+        "started_at": "2026-06-22T00:00:00Z",
+        "completed_at": "2026-06-22T00:00:00Z"
       },
       "ee-s3-landing-page": {
-        "status": "pending",
-        "checkpoint": 0,
-        "started_at": null,
-        "completed_at": null
+        "status": "completed",
+        "version": 1,
+        "started_at": "2026-06-22T00:00:00Z",
+        "completed_at": "2026-06-22T00:00:00Z"
       },
       "ee-s3-copy-anuncios": {
-        "status": "pending",
-        "checkpoint": 0,
-        "started_at": null,
-        "completed_at": null
+        "status": "completed",
+        "version": 1,
+        "started_at": "2026-06-22T00:00:00Z",
+        "completed_at": "2026-06-22T00:00:00Z"
       },
       "ee-s3-criativos-anuncios": {
-        "status": "pending",
-        "checkpoint": 0,
-        "started_at": null,
-        "completed_at": null
+        "status": "completed",
+        "version": 1,
+        "started_at": "2026-06-22T00:00:00Z",
+        "completed_at": "2026-06-22T00:00:00Z"
       },
       "ee-s3-crm-setup": {
         "status": "skipped",
@@ -730,16 +734,16 @@
         "skipped_reason": "Setup de CRM não está contratado no escopo da Estruturação. Confirmado em 2026-05-26."
       },
       "ee-s3-forecast-midia": {
-        "status": "pending",
-        "checkpoint": 0,
-        "started_at": null,
-        "completed_at": null
+        "status": "completed",
+        "version": 1,
+        "started_at": "2026-06-22T00:00:00Z",
+        "completed_at": "2026-06-22T00:00:00Z"
       },
       "ee-s3-gmb-otimizacao": {
-        "status": "pending",
-        "checkpoint": 0,
-        "started_at": null,
-        "completed_at": null
+        "status": "completed",
+        "version": 1,
+        "started_at": "2026-06-22T00:00:00Z",
+        "completed_at": "2026-06-22T00:00:00Z"
       },
       "ee-s4-diagnostico-comercial": {
         "status": "pending",
@@ -887,6 +891,12 @@
       "skill": "ee-s3-crm-setup",
       "action": "skipped",
       "note": "Removido do escopo a pedido do operador. CRM segue como recomendação que o cliente pode implementar por conta — mas NÃO entra como entregável V4."
+    },
+    {
+      "ts": "2026-06-22T00:00:00Z",
+      "skill": "ee-s3-completo",
+      "action": "completed",
+      "note": "Semana 3 concluída: ee-s3-manual-marca (supersede brandbook+identidade-visual), ee-s3-forecast-midia, ee-s3-gmb-otimizacao, ee-s3-landing-page, ee-s3-copy-anuncios, ee-s3-criativos-anuncios. Decisões reunião 2026-05-26: persona Diego 50+, novo Instagram B2C, reestruturar Google Ads por persona, Meta Ads aberto para Mariana, budget recomendado R$900/mês."
     }
   ],
   "version": 7,

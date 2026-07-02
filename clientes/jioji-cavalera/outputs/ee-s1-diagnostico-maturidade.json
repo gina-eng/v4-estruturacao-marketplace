@@ -1,0 +1,216 @@
+{
+  "client_name": "Jioji Cavalera",
+  "skill": "ee-s1-diagnostico-maturidade",
+  "version": 3,
+  "generated_at": "2026-06-09T00:00:00Z",
+  "data_source": "base-de-conhecimento (call vendas 26/05, briefing SPICED, kickoff 01/06) + research.md. Dados de negócio CONFIRMADOS pelo cliente. Mídia Paga sem score ('?') — falta performance (V4MOS pendente). Demais pilares estimados.",
+  "summary": "Score geral 31/100 (baixo) — média dos 5 pilares. Mídia Paga AGORA MEDIDA (Meta Ads, 90 dias via acesso partner): R$ ~1.260/mês, CTR 1,91%, CPC R$ 0,32 — clique barato e alcance ok, MAS o grosso da verba vai para ENGAJAMENTO (não venda), em 30 campanhas soltas, e o Meta Pixel está QUEBRADO (sem rastreio de compra no Meta). Por isso o e-commerce fatura ~zero apesar do investimento. (Google já tentado sem resultado.) A Jioji são 2 lojas em Porto Velho (rua na Av. Carlos Gomes desde 1995/Sandra desde 1999; shopping desde 2008), multimarca com Cavalera (forte no masculino) como âncora, além de Melissa, IX/Yexx, Lado Avesso e Polay. O faturamento se concentra na loja do shopping (~R$ 100k/mês, margem ~25%). O e-commerce (jioji.com.br, Nuvemshop, ~2 anos, estruturado com o Gabriel) está bem montado, mas hoje fatura ~zero — a prioridade declarada é tracioná-lo (meta R$ 30k/mês). Pano de fundo crítico: a franquia Melissa sai do shopping no 2º semestre/2026 (30–40% do faturamento daquela loja), e o objetivo é compensar via loja de rua + e-commerce. Os pilares mais frágeis são CRM (15/100 — sem base de recompra, apesar do cashback) e a medição INCOMPLETA (o site tem GA4/GTM, mas o Meta Pixel está quebrado e faltam eventos de compra — a venda não é medida nem otimizada).",
+  "summary_headline": "Maturidade Jioji 31/100 (baixo). Mídia agora medida (Meta, ~R$1,26k/mês): clique barato, mas verba em ENGAJAMENTO (não venda) e sem pixel → e-commerce fatura ~zero. CRM e medição são os gargalos — sob a pressão da saída da Melissa.",
+  "summary_highlights": [
+    {"category": "maturidade", "label": "Score geral", "value": "31/100", "subtext": "Baixo — média dos 5 pilares (mídia agora medida via Meta)", "tone": "yellow"},
+    {"category": "maturidade", "label": "Mídia Paga", "value": "30/100", "subtext": "R$1,26k/mês no Meta · CTR 1,91% · verba em engajamento (não venda) · sem pixel", "tone": "red"},
+    {"category": "risco", "label": "Saída da Melissa", "value": "-30 a 40%", "subtext": "Franquia sai do shopping no 2º sem/2026 — gap a compensar", "tone": "red"},
+    {"category": "oportunidade", "label": "E-commerce", "value": "Pronto, fatura ~0", "subtext": "Nuvemshop bem montado; meta R$30k/mês — tracionar é a prioridade", "tone": "yellow"},
+    {"category": "risco", "label": "CRM", "value": "15/100", "subtext": "Sem base de recompra estruturada (cashback existe, subaproveitado)", "tone": "red"},
+    {"category": "risco", "label": "Meta Pixel", "value": "Quebrado", "subtext": "Tem GTM+GA4+tag Google Ads; o Meta Pixel não dispara — a verba do Meta roda cega", "tone": "red"}
+  ],
+  "summary_key_findings": [
+    {"category": "ameaca", "text": "Evento crítico declarado no kickoff: a franquia Melissa SAI do shopping no 2º semestre/2026 — representava 30–40% do faturamento daquela loja (40% em maio). O objetivo do projeto é compensar essa perda crescendo na loja de rua e no e-commerce. Isso reordena a prioridade: não é 'crescer por crescer', é tapar um buraco de receita conhecido e com data."},
+    {"category": "vantagem", "text": "A base instalada é boa: 2 lojas físicas (rua desde 1995, shopping desde 2008), marca Cavalera como âncora (forte no masculino), faturamento de ~R$ 100k/mês na loja maior com margem ~25%, programa de cashback ativo e um e-commerce próprio bem estruturado na Nuvemshop (feito com o Gabriel). O e-commerce já existe e funciona tecnicamente — falta tracioná-lo."},
+    {"category": "ameaca", "text": "Mídia Paga agora MEDIDA (Meta, 90d via acesso partner): R$ ~1.260/mês, CTR 1,91%, CPC R$ 0,32 — clique barato e 219k de alcance. Mas o grosso da verba vai para ENGAJAMENTO (não venda), em 30 campanhas soltas (~16 'Nova campanha de Engajamento'), e sem pixel não há rastreio de compra/ROAS. A campanha de vendas pro site (melhor CTR 4,69%/CPC R$ 0,08) recebeu R$ 15,91. Demanda barata desperdiçada por objetivo errado + zero medição — é por isso que o e-commerce fica zerado apesar do gasto."},
+    {"category": "ameaca", "text": "O e-commerce fatura ~zero apesar de pronto. As dores declaradas pela Sandra: o site 'funciona mas não sai venda', o WhatsApp está sobrecarregado e o frete alto para longas distâncias mata vendas (querem reduzir o raio de frete). Some-se a ausência de medição (pixel/analytics) — não dá para saber onde o funil do site quebra."},
+    {"category": "acao", "text": "Sequência recomendada (independe do V4MOS): (1) consertar o Meta Pixel (via GTM-WBLVTS8N já instalado) + completar eventos de compra no GA4 — o GA4/GTM já existem; falta o Pixel funcional para remarketing/atribuição no Meta; (2) estruturar recompra (usar o cashback + base de clientes) — o pilar mais frágil; (3) atacar o gargalo de frete (política de raio/frete) que trava o e-commerce; (4) consolidar a identidade digital (hoje em 4 perfis). Em paralelo: liberar o V4MOS para avaliar a mídia paga com dado real."}
+  ],
+  "overall_score": 31,
+  "overall_classification": "low",
+  "overall_score_basis": "Média dos 5 pilares (Mídia Paga 30, Criativos 35, CRO 40, CRM 15, SEO 35 = 155/5 = 31). Mídia Paga agora MEDIDA via Meta Ads (acesso partner do operador, 90 dias) — saiu do '?'.",
+  "estimated": true,
+  "pillar_scores": [
+    {
+      "pillar": "midia_paga",
+      "score": 30,
+      "classification": "low",
+      "highlight": "Agora MEDIDO (Meta Ads, 90 dias via acesso partner): R$ 3.784,88 gastos (~R$ 1.260/mês), 219k de alcance, CTR 1,91% e CPC R$ 0,32 — eficiência de topo de funil decente e clique barato. MAS três problemas pesam: (1) objetivo desalinhado — o grosso da verba vai para ENGAJAMENTO, não venda; (2) estrutura caótica — 30 campanhas em 90 dias, ~16 com nome default 'Nova campanha de Engajamento'; (3) sem pixel → compras/ROAS NÃO rastreados. A campanha que aponta pro site com intenção de venda teve o MELHOR CTR (4,69%) e menor CPC (R$ 0,08), mas recebeu só R$ 15,91. Demanda existe e é barata; falta estratégia, estrutura e medição.",
+      "estimated": false,
+      "details": {
+        "strengths": [
+          "Investimento contínuo e operação ativa: R$ ~1.260/mês no Meta, 219k de alcance em 90 dias.",
+          "Eficiência de topo decente: CTR 1,91% (conta), CPC R$ 0,32 e CPM R$ 6,07 — clique barato.",
+          "Sinal de demanda real: campanhas de VENDAS têm CTR 3,5–4,7% e CPC R$ 0,08–0,16. Quando aponta pro site com intenção certa, a resposta é ótima.",
+          "Verba e audiência (~6,2k + alcance) prontas para virar remarketing assim que houver pixel."
+        ],
+        "weaknesses": [
+          "Objetivo desalinhado: maioria da verba em ENGAJAMENTO (vaidade), não em venda/conversão — errado para uma loja que precisa tracionar o e-commerce.",
+          "Estrutura caótica: 30 campanhas em 90 dias, ~16 com nome default 'Nova campanha de Engajamento' — sem organização nem nomenclatura.",
+          "Sem pixel → compras e ROAS NÃO rastreados; impossível otimizar por conversão. Por isso o e-commerce fatura ~zero apesar do investimento.",
+          "Melhor campanha (vendas-site, CTR 4,69%/CPC R$ 0,08) recebeu só R$ 15,91 — a intenção certa está subfinanciada.",
+          "Dependência do Meta (Google testado sem resultado); pausar derruba o movimento; incidente de cobrança indevida ~R$ 4k (out/2025)."
+        ],
+        "metrics": {
+          "fonte": "Meta Ads MCP (acesso partner) — conta BM Jioji",
+          "periodo": "2026-03-11 a 2026-06-08 (90d)",
+          "gasto_total_brl": 3784.88,
+          "gasto_mensal_brl": 1261.63,
+          "alcance": 218648,
+          "impressoes": 623350,
+          "cliques": 11901,
+          "ctr_pct": 1.91,
+          "cpc_brl": 0.32,
+          "cpm_brl": 6.07,
+          "total_campanhas": 30,
+          "pct_verba_em_vendas": "~13%",
+          "conversoes_rastreadas": false,
+          "unavailable_reason": "Compras/ROAS não rastreados — sem pixel no site + objetivo dominante de engajamento. CPA/conversão a medir após instalar pixel."
+        }
+      }
+    },
+    {
+      "pillar": "criativos",
+      "score": 35,
+      "classification": "low",
+      "highlight": "Instagram ativo com produto e reels de loja; acesso a criativos de campanha da Cavalera; fotos do e-commerce sendo atualizadas. Repertório existe, mas distribuído em 4 perfis e sem linha editorial própria da loja Jioji.",
+      "estimated": true,
+      "details": {
+        "strengths": [
+          "Conteúdo orgânico ativo no @jiojicavalera; e-commerce sendo reabastecido com fotos novas.",
+          "Acesso a criativos da marca Cavalera (identidade visual nacional forte).",
+          "Produto fotogênico (moda masculina/feminina de marca) — bom para vídeo curto/reels."
+        ],
+        "weaknesses": [
+          "Produção distribuída entre @jiojicavalera, @cavaleraportovelho, Facebook e TikTok @forlifecavalera — nenhum canal acumula consistência.",
+          "Ainda sem identidade/linha editorial PRÓPRIA da loja (parte do objetivo declarado: fortalecer o nome Jioji).",
+          "Sem criativos pensados para conversão/mídia (oferta, prova social) nem programa de UGC."
+        ],
+        "metrics": {
+          "instagram_principal_seguidores": 6200,
+          "perfis_ativos": 4,
+          "ecommerce_fotos_atualizando": true,
+          "identidade_propria_codificada": false
+        }
+      }
+    },
+    {
+      "pillar": "cro",
+      "score": 40,
+      "classification": "medium",
+      "highlight": "O e-commerce na Nuvemshop é bem estruturado (checkout, frete grátis, 6x, schema.org) — base de conversão sólida, feita com o Gabriel. O problema hoje não é a estrutura: é tração (fatura ~zero), o frete alto para longa distância e a falta de medição para enxergar onde o funil quebra.",
+      "estimated": true,
+      "details": {
+        "strengths": [
+          "Loja Nuvemshop bem montada: checkout, carrinho, contas de cliente, dados estruturados.",
+          "Gatilhos de conversão presentes: frete grátis, parcelamento 6x sem juros, promoções.",
+          "HTTPS + responsivo (mobile-first). Omnichannel real (comprar online e retirar na loja já acontece).",
+          "Programa de cashback ativo — alavanca de recompra disponível."
+        ],
+        "weaknesses": [
+          "E-commerce fatura ~zero ('funciona mas não sai venda') — falta tração, não estrutura.",
+          "Frete alto para longa distância mata vendas (gargalo logístico declarado; plano de reduzir o raio de frete).",
+          "GA4/GTM já conectados (disparam page_view e view_item_list — confirmado no deep audit Playwright), mas o Meta Pixel está QUEBRADO (0 PageView) e faltam eventos de fundo de funil no GA4 (add_to_cart, purchase) — o funil de COMPRA não é medido.",
+          "Seção de depoimentos a preencher + FAQ a criar (originalidade, frete, troca) + CNPJ no rodapé — complementos de conteúdo/confiança.",
+          "WhatsApp como gargalo de atendimento (sobrecarregado)."
+        ],
+        "metrics": {
+          "plataforma_ecommerce": "Nuvemshop",
+          "https": true,
+          "frete_gratis": true,
+          "parcelamento_6x": true,
+          "ecommerce_faturamento": "~zero (meta R$ 30k/mês)",
+          "frete_longa_distancia": "barreira declarada",
+          "ga4_configurado": true,
+          "ga4_eventos": "page_view, view_item_list (faltam add_to_cart, purchase)",
+          "meta_pixel": "quebrado (0 PageView)",
+          "cashback_ativo": true,
+          "unavailable_reason": "Sem analytics — taxa de conversão/abandono do e-commerce não disponíveis."
+        }
+      }
+    },
+    {
+      "pillar": "crm",
+      "score": 15,
+      "classification": "critical",
+      "highlight": "Pilar mais frágil. Existe programa de cashback (bom ponto de partida), mas não há CRM nem base de recompra estruturada, e o WhatsApp está sobrecarregado. Em moda, recompra é o motor — sem estrutura, o cashback fica subaproveitado.",
+      "estimated": true,
+      "details": {
+        "strengths": [
+          "Programa de cashback já existe — alavanca de retenção disponível.",
+          "PDV fornece ticket médio, quantidade de peças e transações (base de dados a explorar).",
+          "Relação direta nas 2 lojas físicas + WhatsApp ativo."
+        ],
+        "weaknesses": [
+          "Sem CRM e sem régua de recompra estruturada — cashback subaproveitado.",
+          "Taxa de recompra não medida (Sandra vai verificar se o PDV gera o relatório).",
+          "Base de clientes (físico + e-commerce) não segmentada para campanhas (recorrente vs novo, masc vs fem).",
+          "WhatsApp sobrecarregado, sem WhatsApp Business estruturado (catálogo/etiquetas/respostas rápidas)."
+        ],
+        "metrics": {
+          "crm_ferramenta": null,
+          "cashback_ativo": true,
+          "taxa_recompra_medida": false,
+          "whatsapp_business": null,
+          "base_segmentada": false
+        }
+      }
+    },
+    {
+      "pillar": "seo",
+      "score": 35,
+      "classification": "low",
+      "highlight": "GMB ativo nas 2 lojas + Nuvemshop entrega SEO de base (schema.org, sitemap, domínio próprio). Otimização local e de conteúdo desconhecida; a marca disputa busca com a própria cavalera.com.br nacional.",
+      "estimated": true,
+      "details": {
+        "strengths": [
+          "Domínio próprio (jioji.com.br) com HTTPS; Nuvemshop entrega sitemap e schema.org.",
+          "GMB ativo nas lojas físicas — base para SEO local ('Cavalera Porto Velho').",
+          "Termo de marca local com demanda capturável."
+        ],
+        "weaknesses": [
+          "Otimização do GMB desconhecida (fotos, posts, avaliações não recuperados).",
+          "Sem blog/conteúdo para termos de descoberta.",
+          "Disputa de busca por marca com cavalera.com.br nacional e marketplaces.",
+          "Search Console provavelmente não configurado (depende da camada de medição)."
+        ],
+        "metrics": {
+          "dominio_proprio": true,
+          "gmb_ativo": true,
+          "gmb_otimizado": null,
+          "blog_ativo": false,
+          "search_console_configurado": null,
+          "unavailable_reason": "Avaliações do GMB e Search Console não recuperados — a confirmar com acesso."
+        }
+      }
+    }
+  ],
+  "executive_summary": "A Jioji Cavalera tem maturidade digital de 31/100 (baixa) — score que agora considera os 5 pilares. A Mídia Paga foi MEDIDA com dados reais do Meta (90 dias, via acesso partner do operador): R$ ~1.260/mês, 219k de alcance, CTR 1,91% e CPC R$ 0,32 — clique barato e topo de funil ok, MAS o grosso da verba vai para ENGAJAMENTO (não venda), em 30 campanhas soltas (~16 com nome default), e o Meta Pixel está QUEBRADO (não dispara) — então as compras/ROAS do Meta não são rastreados (score 30). O Google já foi testado sem resultado.\n\nO contexto de negócio, agora confirmado pela Sandra (sócia-proprietária) na call de vendas e no kickoff: são 2 lojas em Porto Velho — a de rua na Av. Carlos Gomes (desde 1995, Sandra desde 1999) e a do Porto Velho Shopping (desde 2008) — operando como multimarca com a Cavalera (forte no masculino) como âncora, além de Melissa, IX/Yexx, Lado Avesso e Polay. O faturamento se concentra na loja do shopping (~R$ 100k/mês, margem ~25%), e há um e-commerce próprio (jioji.com.br, Nuvemshop, ~2 anos, estruturado com o Gabriel) que está tecnicamente pronto, mas fatura ~zero. O evento crítico que dá urgência ao projeto: a franquia Melissa sai do shopping no 2º semestre/2026 e representa 30–40% do faturamento daquela loja — o objetivo é compensar essa perda crescendo na loja de rua e, principalmente, tracionando o e-commerce (meta de R$ 30k/mês).\n\nOnde estão os gargalos: (1) Medição — o site TEM GA4/GTM/tag Google Ads (mede tráfego e visualização de produto), mas o Meta Pixel está QUEBRADO e faltam eventos de compra no GA4. Como a verba está no META, a VENDA/ROAS não é medida nem otimizada e a verba mira engajamento; (2) CRM — pilar mais frágil (15/100): há cashback, mas sem base de recompra estruturada, e em moda a recompra é o motor; (3) E-commerce — bem construído, mas sem tração, travado por frete alto para longas distâncias e pela falta de medição/confiança (depoimentos, FAQ). Importante: o e-commerce foi bem estruturado pelo Gabriel — os pontos do pilar de CRO são camadas de marketing/conteúdo e a tração (medição, frete, prova social, remarketing), não falhas da construção. A sequência de maior alavancagem, que independe do V4MOS: consertar a medição (Meta Pixel + eventos de compra no GA4), estruturar a recompra (aproveitando o cashback), resolver o frete e consolidar a identidade digital. Em paralelo, liberar o V4MOS permite finalmente avaliar a mídia com dado real.",
+  "priorities": [
+    {"rank": 1, "action": "[Quick win — independe do V4MOS] Consertar o Meta Pixel (via GTM-WBLVTS8N já instalado): fbq init + PageView + eventos de e-commerce; e completar o funil no GA4 (add_to_cart, purchase). O site JÁ tem GTM+GA4+tag Google Ads — falta o Pixel funcional para remarketing/atribuição no Meta (onde está a verba).", "rationale": "Conserta a medição da verba que já roda (~R$ 1,26k/mês no Meta, hoje sem remarketing). Configuração no GTM existente — não é dev. Pré-requisito para migrar a mídia de engajamento para conversão.", "effort": "low", "pillar": "cro", "dependencies": ["Acesso ao GTM/Nuvemshop"]},
+    {"rank": 2, "action": "[Quick win] Atacar o gargalo de frete do e-commerce: definir política de raio/frete (frete grátis regional, tabela clara para longa distância, retirada na loja em destaque) que destrave a conversão sem inviabilizar a margem.", "rationale": "Frete alto é a barreira nº1 declarada pela Sandra ('o frete acaba com a venda'). É o que trava o e-commerce que está pronto mas fatura zero.", "effort": "medium", "pillar": "cro", "dependencies": ["Definição de regiões/custos com a operação"]},
+    {"rank": 3, "action": "[Quick win] Estruturar recompra aproveitando o cashback já existente + base do PDV: régua simples por coleção/data e WhatsApp Business com catálogo e respostas rápidas (desafogar o atendimento).", "rationale": "CRM é o pilar mais frágil (15) e a recompra é o motor do varejo de moda — especialmente para compensar a saída da Melissa retendo a base atual. Cashback existe mas é subaproveitado.", "effort": "medium", "pillar": "crm", "dependencies": ["Sandra confirmar relatório de recompra no PDV"]},
+    {"rank": 4, "action": "[Quick win] Consolidar a identidade digital em @jiojicavalera (perfil-mãe), reforçando o nome próprio 'Jioji' — objetivo declarado de fortalecer a marca além de nomes antigos.", "rationale": "4 perfis diluem audiência e o nome. Consolidar acumula autoridade e facilita mídia. Custo zero.", "effort": "low", "pillar": "criativos", "dependencies": ["Acesso aos perfis"]},
+    {"rank": 5, "action": "[Cliente / V4] Liberar/regularizar o V4MOS para puxar o histórico do Meta. Só então a Mídia Paga sai do '?' e é avaliada com dado real (CPA, conversão).", "rationale": "Há R$ 1-1,5k/mês investidos sem leitura de retorno. Com V4MOS, avaliamos e otimizamos com dado.", "effort": "low", "pillar": "midia_paga", "dependencies": ["Resolver pendência V4MOS"]}
+  ],
+  "sector_benchmark": {
+    "sector": "Varejo de moda multimarca regional (B2C, físico + e-commerce)",
+    "sector_average": 38,
+    "comparison": "below",
+    "estimated": true,
+    "pillar_comparison": [
+      {"pillar": "midia_paga", "client_score": 30, "sector_average": 40, "gap": -10, "position": "below"},
+      {"pillar": "criativos", "client_score": 35, "sector_average": 42, "gap": -7, "position": "below"},
+      {"pillar": "cro", "client_score": 40, "sector_average": 38, "gap": 2, "position": "above"},
+      {"pillar": "crm", "client_score": 15, "sector_average": 30, "gap": -15, "position": "critical_gap"},
+      {"pillar": "seo", "client_score": 35, "sector_average": 38, "gap": -3, "position": "below"}
+    ],
+    "key_insight": "A Jioji opera ~7 pontos abaixo da média estimada do varejo de moda regional (~38). CRO é o único acima (+2) — o e-commerce é bem feito. Mídia Paga (-10): ativa e com clique barato, mas mal direcionada (engajamento em vez de venda) e sem medição. Gap crítico é CRM (-15), agravado pela necessidade de reter base diante da saída da Melissa. Benchmark do setor estimado."
+  },
+  "key_insight": {
+    "headline": "A Jioji tem um e-commerce pronto que fatura zero e uma franquia (Melissa, 30-40% do shopping) saindo. O salto está em tracionar o digital — medição + frete + recompra — para tapar o buraco de receita que tem data marcada.",
+    "context": "O kickoff deixou claro o que dá urgência ao projeto: a Melissa sai do shopping no 2º semestre e leva 30–40% do faturamento daquela loja. A resposta natural é o e-commerce — que já está construído (bem feito, pelo Gabriel) mas fatura ~zero. O que o trava não é a loja em si: é a medição incompleta (tem GA4/GTM, mas o Meta Pixel está quebrado e faltam eventos de compra — a venda do Meta não é medida nem otimizada), o frete alto para longa distância (mata a venda) e a ausência de recompra estruturada (cashback existe, mas sem régua). Atacar esses três, mais consolidar a marca, é o caminho de maior alavancagem — e quase tudo independe do V4MOS.",
+    "numbered_reasons": [
+      "(1) Há um buraco de receita conhecido e com data: 30-40% do shopping sai com a Melissa no 2º semestre. O e-commerce é o canal natural para compensar — e está pronto, só não traciona.",
+      "(2) O e-commerce fatura zero por: Meta Pixel quebrado (verba do Meta sem remarketing/atribuição), funil de compra não medido no GA4, frete e confiança/recompra — não por falta de loja. Camadas de marketing sobre o que o Gabriel já construiu.",
+      "(3) O Meta já recebe ~R$ 1.260/mês, mas a verba vai para ENGAJAMENTO (não venda), em 30 campanhas soltas, e sem pixel não mede compra. Redirecionar para venda + instalar pixel transforma gasto em investimento — a campanha de vendas pro site teve o melhor CTR (4,69%) com só R$ 15,91."
+    ],
+    "discussion_anchor": "A decisão a alinhar com a Sandra: tratar a saída da Melissa como o relógio do projeto e priorizar os quick wins que tracionam o e-commerce (medição, frete, recompra/cashback, consolidação de marca) — todos de baixo custo e independentes do V4MOS. E liberar o V4MOS para avaliar a mídia paga, que já consome verba sem leitura."
+  },
+  "honesty_alert": "Diagnóstico ancorado em dados reais: briefing do cliente (call + kickoff) + dados de Meta Ads (90 dias, via acesso partner do operador). A Mídia Paga saiu do '?' — mas com uma ressalva: os dados de TOPO de funil são reais (gasto, alcance, CTR, CPC, estrutura), porém COMPRAS/ROAS não são rastreados (sem pixel + objetivo de engajamento), então o score (30) reflete eficiência de topo + desalinhamento estratégico, não retorno de venda. Limitações remanescentes: a demografia detalhada do ICP (faixa etária, % masculino vs feminino, renda) e a taxa de recompra ainda não foram levantadas — a Sandra vai verificar no PDV. Os scores dos demais pilares são estimativas direcionais. Os quick wins (medição/pixel, frete, recompra/cashback, redirecionar mídia para venda) são seguros e foram pensados como camadas de marketing que somam ao e-commerce já construído pelo Gabriel — não como correções dele."
+}

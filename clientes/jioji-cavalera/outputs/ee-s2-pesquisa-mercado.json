@@ -1,0 +1,179 @@
+{
+  "client_name": "Jioji Cavalera",
+  "skill": "ee-s2-pesquisa-mercado",
+  "version": 1,
+  "generated_at": "2026-06-09T00:00:00Z",
+  "data_source": "WebSearch (IEMI/FashionNetwork, NuvemCommerce/E-commerce Brasil, ABComm, IBGE, Wikipédia Cavalera) + base-de-conhecimento (kickoff, call, briefing SPICED) + persona-icp v2 + maturidade v3 (dados Meta). Valores de sizing são estimativas [E] ordem-de-grandeza.",
+  "summary": "Pesquisa de mercado da Jioji Cavalera. O mercado de vestuário+calçados no Brasil é gigante (R$ 396bi em 2025, IEMI) e o e-commerce de moda cresce forte (R$ 2,9bi, +35% em 2025, NuvemCommerce — a mesma plataforma da Jioji). Mas a Jioji compete num recorte LOCAL: moda de marca em Porto Velho/RO (~515k hab) + e-commerce endereçável no raio de frete viável. SAM estimado ~R$ 180M [E]; SOM ~R$ 3,3M/ano [E] (a loja maior já fatura ~R$ 100k/mês). O território vazio: ninguém ocupa 'Cavalera original em Porto Velho com e-commerce que funciona + conveniência local (compre online, retire na loja)'. O e-commerce nacional (cavalera.com.br) não tem vínculo local; os marketplaces vendem preço/réplica; o varejo local (Lojas Avenida, etc.) não tem marca-âncora nem e-commerce com tração. Com a saída da Melissa (30-40% do shopping) como relógio, a aposta é ocupar esse espaço — apoiada na marca Cavalera, nas 2 lojas e no cashback.",
+  "summary_headline": "Território vazio: 'Cavalera original em Porto Velho com e-commerce que funciona + retira na loja'. Nacional não tem local, marketplace é preço, varejo local não tem marca nem e-commerce. SOM ~R$ 3,3M/ano.",
+  "summary_highlights": [
+    {"category": "oportunidade", "label": "E-commerce moda BR", "value": "+35% (R$ 2,9bi)", "subtext": "NuvemCommerce 2025 — mesma plataforma da Jioji; canal em alta", "tone": "green"},
+    {"category": "posicao", "label": "SAM (local) [E]", "value": "~R$ 180M", "subtext": "Moda de marca em Porto Velho/RO + e-commerce regional endereçável", "tone": "blue"},
+    {"category": "oportunidade", "label": "SOM [E]", "value": "~R$ 3,3M/ano", "subtext": "Teto realista 24-36m; loja maior já faz ~R$ 100k/mês", "tone": "green"},
+    {"category": "competicao", "label": "Concorrente online", "value": "cavalera.com.br", "subtext": "E-commerce nacional da marca — sem vínculo/atendimento local", "tone": "red"},
+    {"category": "risco", "label": "Saída da Melissa", "value": "-30 a 40%", "subtext": "Do faturamento do shopping no 2º sem/2026 — relógio do projeto", "tone": "red"},
+    {"category": "janela", "label": "Frete", "value": "Limita o online", "subtext": "Raio viável define o SOM e-commerce — vencer com retira na loja", "tone": "yellow"}
+  ],
+  "summary_key_findings": [
+    {"category": "vantagem", "text": "Mapa competitivo revela território vazio defensável: 'Cavalera original em Porto Velho com e-commerce que realmente funciona + conveniência local (compre online, retire na loja)'. A cavalera.com.br nacional vence em catálogo mas não tem presença/atendimento local; marketplaces vencem preço (com réplica); o varejo local (Lojas Avenida, Loja Divas, Moda Ativa) não tem marca-âncora nem e-commerce com tração. A Jioji é a única que junta marca Cavalera + 2 lojas físicas + e-commerce próprio + 25 anos de cidade."},
+    {"category": "contexto", "text": "O canal de crescimento joga a favor: o e-commerce de moda no Brasil cresceu 35% em 2025 (R$ 2,9bi, NuvemCommerce — a mesma plataforma da Jioji), e roupas/acessórios lideram o e-commerce nacional. A demanda online existe e cresce; o gargalo da Jioji é local (frete + medição + tração), não de mercado."},
+    {"category": "ameaca", "text": "A saída da franquia Melissa do shopping (30-40% do faturamento daquela loja, 2º sem/2026) é o relógio do projeto. O público feminino que ela atendia precisa ser recomposto, e o e-commerce + loja de rua precisam crescer para cobrir o buraco — tudo isso enquanto cavalera.com.br e marketplaces disputam o cliente online por catálogo e preço."},
+    {"category": "acao", "text": "Oportunidade não explorada acionável: posicionar a Jioji como 'a Cavalera oficial de Porto Velho que entrega' — e-commerce com FRETE REGIONAL claro + RETIRA NA LOJA em destaque (conveniência que o nacional não tem) + prova de originalidade. Isso ataca a dor de frete (nº1), diferencia dos concorrentes online e aproveita a onda de e-commerce de moda."}
+  ],
+  "segment": "Varejo de moda multimarca de marca — Cavalera (âncora, forte no masculino) + feminino (Melissa em saída, a recompor) + IX/Yexx, Lado Avesso, Polay. Operação omnichannel: 2 lojas físicas (Porto Velho) + e-commerce (Nuvemshop).",
+  "region": "Porto Velho/RO (~515 mil hab; RO ~1,75M hab) como praça física principal. E-commerce com alcance potencialmente nacional, mas hoje LIMITADO pelo frete para longa distância — endereçável realista é Porto Velho + entorno + região Norte onde o frete é viável.",
+  "tam_sam_som": {
+    "tam": {
+      "value_brl": 396000000000,
+      "description": "Mercado brasileiro de varejo de vestuário + calçados em 2025: R$ 396 bilhões (vestuário ~R$ 314,9bi + calçados ~R$ 81,5bi), crescimento ~6% vs 2024 (IEMI/FashionNetwork). É o teto total do setor onde a Jioji atua — referência de ordem de grandeza, não mercado capturável."
+    },
+    "sam": {
+      "value_brl": 180000000,
+      "description": "[E] Mercado endereçável da Jioji: varejo de moda DE MARCA em Porto Velho/RO + e-commerce de moda endereçável no raio de frete viável (região Norte). Derivação: ~515k hab em Porto Velho × gasto per capita de vestuário+calçados (~R$ 1.860/ano, R$ 396bi / ~213M hab) ≈ R$ 958M de gasto total com moda na cidade; recorte de moda de MARCA/mid-market (mix da Jioji) ≈ 15-20% disso ≈ R$ 150-190M. Adota-se ~R$ 180M.",
+      "filters": [
+        "Consumidores de moda de marca em Porto Velho/RO (masculino Cavalera + feminino) com poder de compra para mid-market",
+        "E-commerce: apenas o slice endereçável pelo frete viável (PV + entorno + Norte) — não o e-commerce de moda nacional inteiro (R$ 2,9bi)",
+        "Exclui: moda formal/social (fora do mix), commodity de marketplace por preço puro, e destinos onde o frete inviabiliza a venda"
+      ]
+    },
+    "som": {
+      "value_brl": 3300000,
+      "description": "[E] Teto realista de captura da Jioji em 24-36 meses. Triangulação por 3 métodos: (1) Receita atual + crescimento realista — loja maior ~R$ 1,2M/ano + segunda loja + e-commerce; total estimado ~R$ 2,2M hoje [E], crescendo para ~R$ 3,3M com compensação da Melissa + tração de e-commerce; (2) Market share — uma loja de marca local forte sustenta ~1,5-2% do SAM (~R$ 2,7-3,6M); (3) Capacidade — 2 lojas + e-commerce comportam esse patamar. Os três convergem em ~R$ 3,3M/ano.",
+      "assumptions": [
+        "E-commerce tracionado (medição + frete regional + recompra) rumo à meta de R$ 30k/mês",
+        "Público feminino recomposto após a saída da Melissa (Cavalera fem + multimarca)",
+        "Marca própria 'Jioji' fortalecida + cashback ativando recompra",
+        "Frete resolvido para o raio viável (retira na loja como alavanca)"
+      ],
+      "operational_ceiling_note": "Capacidade de pessoas/tempo é restrição declarada pela Sandra. O SOM é teto de MERCADO; a execução enxuta pode ser o gargalo antes do mercado saturar — priorizar poucas alavancas de alto impacto.",
+      "related_but_separate": {
+        "client_goal_ecommerce_brl_ano": 360000,
+        "client_goal_ecommerce_source": "Briefing SPICED + kickoff — meta de R$ 30.000/mês no e-commerce (hoje ~zero)",
+        "client_goal_fisico": "+30% no físico (briefing SPICED)",
+        "note": "As metas do cliente (e-commerce R$ 30k/mês = R$ 360k/ano + 30% no físico) são ASPIRAÇÃO operacional, não o SOM. O SOM (~R$ 3,3M) é o teto de mercado capturável. A meta de e-commerce de R$ 360k/ano é uma fração do SOM — factível e prioritária dado o canal em alta."
+      }
+    },
+    "methodology": "mixed",
+    "sources": [
+      {"name": "IEMI / FashionNetwork — Vestuário e calçados movimentam R$ 396 bi em 2025", "url": "https://br.fashionnetwork.com/news/Vestuario-e-calcados-movimentam-r-396-bilhoes-ao-longo-de-2025,1797355.html", "year": 2025},
+      {"name": "NuvemCommerce / E-commerce Brasil — Moda cresce 35% no e-commerce em 2025 (R$ 2,9bi)", "url": "https://www.ecommercebrasil.com.br/noticias/setor-de-moda-cresce-35-no-e-commerce-brasileiro-em-2025", "year": 2025},
+      {"name": "ABComm — Faturamento do e-commerce brasileiro (R$ 234bi, ticket R$ 539)", "url": "https://dados.abcomm.org/", "year": 2025},
+      {"name": "IBGE Cidades — Porto Velho/RO (514.873 hab; PIB per capita R$ 55.170)", "url": "https://cidades.ibge.gov.br/brasil/ro/porto-velho/panorama", "year": 2024},
+      {"name": "Wikipédia — Cavalera (marca; ~20 lojas próprias, 9 franquias, ~800 multimarcas)", "url": "https://pt.wikipedia.org/wiki/Cavalera", "year": 2025}
+    ]
+  },
+  "competitors": [
+    {
+      "name": "cavalera.com.br (e-commerce nacional da marca Cavalera)",
+      "positioning": "Loja online oficial nacional da Cavalera — catálogo completo da marca, lançamentos primeiro, alcance nacional. Disputa diretamente o cliente online da Jioji (que vende a mesma marca).",
+      "channels": ["E-commerce nacional próprio", "Instagram @cavalera (marca, grande base)", "Lojas próprias/franquias em capitais"],
+      "strengths": ["Catálogo completo + lançamentos antes de todos", "Marca-mãe com autoridade nacional", "Logística e estrutura de e-commerce maduras", "Provável full tracking/remarketing"],
+      "weaknesses": ["Sem vínculo nem atendimento local em Porto Velho", "Sem opção de retirar na loja na cidade", "Não cura multimarca (só Cavalera)", "Frete nacional para o Norte também é caro/lento"],
+      "estimated_pricing": "Preço de tabela Cavalera (nacional) [E]",
+      "digital_score": 8,
+      "digital_details": {"website": "cavalera.com.br — e-commerce nacional", "instagram": "@cavalera (marca)", "google": "Domina busca pela marca", "active_ads": "Provável mídia nacional [E]"}
+    },
+    {
+      "name": "Marketplaces (Shopee, Mercado Livre)",
+      "positioning": "Plataformas de preço e variedade, incluindo itens 'Cavalera' (oficiais e réplicas). Dominam a busca por preço.",
+      "channels": ["Apps/marketplaces", "Mídia massiva", "Busca por preço"],
+      "strengths": ["Preço baixo + frete subsidiado", "Variedade enorme", "Confiança de plataforma + recompra fácil"],
+      "weaknesses": ["Réplicas minam a confiança em 'Cavalera barata'", "Sem curadoria, marca ou experiência", "Sem atendimento/relacionamento local"],
+      "estimated_pricing": "Abaixo do varejo de marca; réplicas bem abaixo [E]",
+      "digital_score": 9,
+      "digital_details": {"website": "shopee.com.br / mercadolivre.com.br", "instagram": "n/a (plataforma)", "google": "Dominam shopping/PLA", "active_ads": "Mídia massiva"}
+    },
+    {
+      "name": "Aramis (Porto Velho Shopping)",
+      "positioning": "Marca masculina premium/clássica nacional, com loja no shopping. Brand + local, mas marca única e segmento mais formal/clássico.",
+      "channels": ["Loja no Porto Velho Shopping", "E-commerce nacional Aramis", "Instagram da marca"],
+      "strengths": ["Marca premium consolidada", "Presença local no shopping", "E-commerce nacional próprio"],
+      "weaknesses": ["Marca única (não multimarca)", "Posicionamento mais formal/clássico — não é o streetwear/atitude da Cavalera", "Ticket mais alto"],
+      "estimated_pricing": "Premium masculino [E]",
+      "digital_score": 7,
+      "digital_details": {"website": "aramis.com.br", "instagram": "@aramismenswear", "google": "Marca", "active_ads": "Provável [E]"}
+    },
+    {
+      "name": "Varejo local multimarca (Lojas Avenida, Loja Divas, Moda Ativa, Polo Wear)",
+      "positioning": "Lojas de moda locais/regionais de Porto Velho, multimarca ou marca casual acessível. Presença física, mas digital geralmente improvisado (sem e-commerce próprio robusto, mídia pouco estruturada).",
+      "channels": ["Lojas físicas locais", "Instagram (orgânico)", "WhatsApp"],
+      "strengths": ["Presença física e clientela local", "Preço acessível", "Conhecimento do consumidor de PV"],
+      "weaknesses": ["Sem marca-âncora forte como a Cavalera", "Sem e-commerce com tração", "Mídia/medição pouco estruturadas"],
+      "estimated_pricing": "Casual acessível a mid-market [E]",
+      "digital_score": 4,
+      "digital_details": {"website": "Maioria sem e-commerce próprio robusto", "instagram": "Orgânico", "google": "GMB local", "active_ads": "Pontual/inexistente [E]"}
+    },
+    {
+      "name": "Outras lojas Cavalera multimarca / franquias na região",
+      "positioning": "Outros pontos que vendem Cavalera (entre os ~800 multimarcas no Brasil) ou franquias — concorrência indireta pela mesma marca em outras praças/online.",
+      "channels": ["Lojas multimarca", "E-commerces regionais"],
+      "strengths": ["Mesma marca Cavalera"],
+      "weaknesses": ["Não estão em Porto Velho (vantagem local da Jioji)", "Sem a base de 25 anos da Jioji na cidade"],
+      "estimated_pricing": "Similar [E]",
+      "digital_score": 4,
+      "digital_details": {"website": "Variável", "instagram": "Variável", "google": "Variável", "active_ads": "Variável [E]"}
+    }
+  ],
+  "competitive_map": {
+    "axis_x": "Nacional/online sem vínculo local ↔ Local com presença física + atendimento + retira na loja",
+    "axis_y": "Preço/commodity (variedade) ↔ Marca original + experiência/curadoria",
+    "positions": [
+      {"name": "cavalera.com.br", "quadrant": "Nacional + Marca original — catálogo completo, mas zero vínculo local"},
+      {"name": "Marketplaces (Shopee/ML)", "quadrant": "Nacional + Preço/commodity — réplicas e variedade, sem marca/experiência"},
+      {"name": "Aramis (shopping)", "quadrant": "Local + Marca original (premium masculino) — mas marca única e mais formal"},
+      {"name": "Varejo local multimarca (Lojas Avenida, Divas, Moda Ativa)", "quadrant": "Local + Preço/casual — presença local, sem marca-âncora nem e-commerce"},
+      {"name": "Jioji Cavalera (POSIÇÃO RECOMENDADA)", "quadrant": "Local + Marca original com e-commerce que FUNCIONA: 'Cavalera oficial de Porto Velho, compre online e retire na loja'. O cruzamento 'marca original + conveniência local omnichannel' está vazio."}
+    ],
+    "empty_spaces": "O quadrante 'Local + Marca original com e-commerce/omnichannel funcionando' está vazio. Os players de marca (cavalera.com.br) são nacionais e sem vínculo local; o varejo local não tem marca-âncora nem e-commerce com tração; Aramis é local+marca mas única e premium/formal. A Jioji pode ocupar 'a Cavalera oficial de Porto Velho que entrega — online com retira na loja' — território defensável que combina marca + presença local + conveniência.",
+    "crowded_spaces": "O quadrante 'Nacional + Preço' é lotado e brutal (marketplaces, com réplicas). Disputar preço/variedade online contra Shopee/ML/cavalera.com.br é jogo perdido para a Jioji — ela deve sair desse eixo e ocupar 'marca original + local + conveniência'."
+  },
+  "trends": [
+    {"trend": "E-commerce de moda em forte alta no Brasil", "evidence": "Moda cresceu 35% no e-commerce em 2025, faturando R$ 2,9bi (NuvemCommerce — a MESMA plataforma da Jioji), com 10M+ produtos vendidos (+28%). Roupas/acessórios lideram o e-commerce nacional. O canal que a Jioji precisa tracionar está em expansão — a janela é favorável."},
+    {"trend": "Omnichannel / 'compre online, retire na loja' como diferencial de conveniência", "evidence": "A própria Jioji já registra esse comportamento (clientes compram online e retiram na loja — kickoff). Para varejo com loja física, a retirada na loja é alavanca contra o frete e contra players só-online."},
+    {"trend": "Recuperação do consumo de moda + crescimento populacional de RO", "evidence": "Varejo de vestuário+calçados projetado a crescer ~6% em 2025 (R$ 396bi, IEMI). Rondônia teve crescimento populacional expressivo (IBGE 2024). Mercado local em expansão."}
+  ],
+  "threats": [
+    {"threat": "Saída da franquia Melissa do shopping (30-40% do faturamento da loja) no 2º sem/2026", "potential_impact": "Buraco de receita conhecido e datado. Se a loja de rua + e-commerce não crescerem a tempo, a perda fica aberta. É o relógio do projeto."},
+    {"threat": "cavalera.com.br (nacional) + marketplaces capturam o cliente online", "potential_impact": "O cliente online da Jioji pode comprar a mesma marca direto da fonte nacional (mais catálogo) ou no marketplace (mais barato, com réplica). Sem diferenciação local + originalidade, o e-commerce da Jioji não decola."},
+    {"threat": "Frete alto para longa distância limita o e-commerce", "potential_impact": "Justo quando o e-commerce precisa escalar para compensar a Melissa, o frete inviabiliza vendas distantes. Limita o SOM online ao raio regional."},
+    {"threat": "Dependência do Meta sem medição de venda + capacidade de execução enxuta", "potential_impact": "R$ ~1,26k/mês no Meta mirando engajamento, sem pixel; e equipe limitada (declarado). Risco de continuar gastando sem converter e de não executar as mudanças a tempo."}
+  ],
+  "unexploited_opportunity": {
+    "description": "Ocupar o território 'A Cavalera oficial de Porto Velho que entrega — compre online e retire na loja, ou receba com frete pra região'. Combina o que NENHUM concorrente junta: marca original (Cavalera) + presença e atendimento local (2 lojas, 25 anos) + e-commerce com conveniência (retira na loja + frete regional claro). O nacional não tem o local; o local não tem a marca nem o e-commerce; o marketplace não tem confiança/experiência.",
+    "why_nobody_does_it": "(1) A cavalera.com.br e os marketplaces são operações nacionais — não montam presença/atendimento local em Porto Velho nem oferecem retirada na loja na cidade. (2) O varejo local (Lojas Avenida, Divas, Moda Ativa) não tem marca-âncora forte como a Cavalera nem e-commerce próprio com tração — operam no improviso digital. (3) A Jioji tem os dois lados (marca + local + e-commerce), mas até agora não conectou: o e-commerce não traciona por falta de medição, frete e recompra — exatamente o que o projeto vai destravar.",
+    "feasibility": "alta"
+  },
+  "market_jtbd": {
+    "current_solutions": "O consumidor de moda de marca em Porto Velho hoje resolve assim: (1) vai à loja física (Jioji, Aramis, lojas locais) — garante ver/provar, mas limitado ao horário/deslocamento; (2) compra online na cavalera.com.br ou marketplace — mais catálogo/preço, mas frete caro para o Norte, risco de réplica e sem vínculo local; (3) compra no Instagram/WhatsApp de lojas locais — informal, sem checkout estruturado. A Jioji pode unir o melhor: marca original + comprar online + retirar na loja.",
+    "alternatives": [
+      {"type": "direct", "description": "Comprar Cavalera na cavalera.com.br (nacional) — catálogo completo, mas frete caro pro Norte e sem retira local."},
+      {"type": "direct", "description": "Comprar em marketplace (Shopee/ML) — preço baixo, mas risco de réplica e sem experiência de marca."},
+      {"type": "direct", "description": "Comprar na loja física (Jioji ou concorrentes locais) — vê o produto, mas limitado ao deslocamento."},
+      {"type": "indirect", "description": "Comprar outra marca de moda casual em loja local multimarca."},
+      {"type": "inaction", "description": "Adiar a compra / usar peça antiga — perde a venda."}
+    ],
+    "cost_of_inaction": "Para a Jioji, não tracionar o e-commerce e não recompor o feminino significa deixar o buraco da Melissa (30-40% do shopping) aberto e ceder o cliente online à cavalera.com.br e marketplaces. Para o consumidor, comprar online da fonte errada significa frete caro, espera longa ou réplica — uma dor que a Jioji resolve com marca original + retira na loja."
+  },
+  "real_differentials": [
+    {"differential": "Cavalera oficial em Porto Velho (originalidade garantida + presença local)", "status": "confirmed", "icp_relevance": "Resolve a objeção 'é original?' (vs marketplace) e o vínculo local (vs e-commerce nacional). Marca-âncora com reconhecimento.", "action_needed": "Comunicar 'oficial/original' no site, GMB e anúncios; prova social local."},
+    {"differential": "Omnichannel real: comprar online e retirar na loja (já acontece) + 2 lojas físicas", "status": "confirmed", "icp_relevance": "Conveniência que nenhum player só-online oferece; alavanca direta contra a dor de frete.", "action_needed": "Destacar 'retira na loja' no checkout/site + política de frete regional clara."},
+    {"differential": "25+ anos de mercado local + base de clientes + cashback", "status": "confirmed", "icp_relevance": "Confiança e relacionamento; cashback é alavanca de recompra (importante para compensar a Melissa).", "action_needed": "Estruturar régua de recompra com o cashback + base do PDV."},
+    {"differential": "Curadoria multimarca (Cavalera + Lado Avesso + IX/Yexx + Polay)", "status": "confirmed", "icp_relevance": "Mais opções que a marca única (Aramis) e mais curadoria/experiência que marketplace.", "action_needed": "Comunicar a curadoria; recompor o feminino pós-Melissa."},
+    {"differential": "E-commerce próprio com tração e medição", "status": "potential", "icp_relevance": "Hoje o e-commerce fatura ~zero; tracioná-lo (medição + frete + recompra) é o que transforma os diferenciais acima em venda online.", "action_needed": "Instalar pixel/GA4, política de frete, redirecionar mídia para conversão (S2 diagnóstico de mídia + S3)."}
+  ],
+  "market_share": {
+    "current_revenue_brl": 2200000,
+    "current_share_of_sam_pct": 1.22,
+    "target_share_of_sam_pct": 1.83,
+    "gap_to_som_brl": 1100000,
+    "gap_to_som_pct": 50,
+    "commentary": "[E] Estimativa: a Jioji fatura hoje ~R$ 2,2M/ano (CONFIRMADO apenas ~R$ 100k/mês = R$ 1,2M/ano na loja maior; total das 2 lojas + e-commerce estimado). Isso é ~1,22% do SAM (~R$ 180M). O SOM de ~R$ 3,3M representa ~1,83% do SAM. Fechar o gap (~R$ 1,1M, +50%) depende de 3 alavancas: (a) tracionar o e-commerce (meta R$ 30k/mês) com medição + frete; (b) recompor o feminino e ativar recompra (cashback) para cobrir a saída da Melissa; (c) redirecionar a mídia do Meta de engajamento para venda. Sem elas, o cenário é estagnação/queda com a perda da Melissa.",
+    "client_annual_revenue_goal_brl": 360000,
+    "client_annual_revenue_goal_source": "Briefing SPICED + kickoff — meta de R$ 30.000/mês no e-commerce (R$ 360k/ano), hoje ~zero; + meta de +30% no físico.",
+    "client_goal_vs_som_note": "As metas declaradas (e-commerce R$ 360k/ano + 30% no físico) são aspiração operacional, NÃO o SOM. O SOM (~R$ 3,3M) é o teto de mercado capturável. A meta de e-commerce é uma fração do SOM e é o foco prioritário — mas o faturamento TOTAL atual não foi consolidado (só a loja maior, ~R$ 1,2M/ano, é confirmada). Pedir à Sandra o faturamento total (2 lojas) para calibrar com precisão.",
+    "enderecavel_value_brl": 90000000,
+    "enderecavel_composition": "[E] Subset do SAM (~R$ 180M) onde a Jioji é genuinamente competitiva: consumidores de moda de marca em Porto Velho/entorno (masculino Cavalera + feminino a recompor) com poder de compra mid-market e dentro do raio de frete viável ≈ ~50% do SAM = ~R$ 90M. Exclui quem compra só por preço (marketplace) e destinos onde o frete inviabiliza.",
+    "enderecavel_note": "O SAM (~R$ 180M) inclui todo o consumo de moda de marca da praça; mas a Jioji escolhe NÃO competir por preço puro (marketplace) nem em destinos de frete inviável. O Mercado Endereçável (~R$ 90M) é a base real onde o SOM (~R$ 3,3M) será capturado — separando a decisão estratégica de perfil (SAM→Endereçável) da disputa competitiva (Endereçável→SOM)."
+  },
+  "honesty_alert": "Os valores de sizing (SAM ~R$ 180M, Endereçável ~R$ 90M, SOM ~R$ 3,3M) são ESTIMATIVAS ordem-de-grandeza derivadas de dados públicos macro (IEMI, IBGE) aplicados ao recorte local — não há fonte específica para 'moda de marca em Porto Velho'. O TAM (R$ 396bi) e o e-commerce de moda (R$ 2,9bi, +35%) têm fonte pública. Limitações a resolver com a Sandra: (1) o faturamento TOTAL da Jioji não foi consolidado — só a loja maior (~R$ 1,2M/ano) é confirmada; o ~R$ 2,2M total é estimativa; (2) a demografia fina do consumidor segue pendente (PDV); (3) a presença digital dos concorrentes locais não foi auditada a fundo. A tese central (território 'Cavalera original + local + e-commerce que funciona') é sólida e apoiada nos dados, mas a calibragem fina do SOM depende do faturamento real total."
+}

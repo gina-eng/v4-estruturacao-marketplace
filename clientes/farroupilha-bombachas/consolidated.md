@@ -1,6 +1,6 @@
 # Visão Consolidada — Bombachas Farroupilha
 
-*Gerado em 2026-05-29 18:52 UTC · Ciclo atual: Semana 2 · Cliente: `farroupilha-bombachas`*
+*Gerado em 2026-06-23 12:24 UTC · Ciclo atual: Semana 3 · Cliente: `farroupilha-bombachas`*
 
 > Este documento consolida tudo que foi produzido para o cliente ao longo do projeto.
 > Cada seção referencia o output estruturado original em `outputs/` para auditabilidade.
@@ -498,12 +498,17 @@ Mapa de posicionamento revela que 5 concorrentes mapeados (Regalo Campeiro, La F
 - ✅ **ee-s2-posicionamento** — concluída em 2026-05-25T00:00:00Z
 - ✅ **ee-s2-diagnostico-midia** — concluída em 2026-05-25T00:00:00Z
 - ✅ **ee-s2-diagnostico-cro** — concluída em 2026-05-26T15:22:29.085495+00:00
+- ✅ **ee-s3-manual-marca** — concluída em 2026-06-22T00:00:00Z
+- ✅ **ee-s3-landing-page** — concluída em 2026-06-22T00:00:00Z
+- ✅ **ee-s3-copy-anuncios** — concluída em 2026-06-22T00:00:00Z
+- ✅ **ee-s3-criativos-anuncios** — concluída em 2026-06-22T00:00:00Z
+- ✅ **ee-s3-forecast-midia** — concluída em 2026-06-22T00:00:00Z
+- ✅ **ee-s3-gmb-otimizacao** — concluída em 2026-06-22T00:00:00Z
 - ✅ **ee-s2-diagnostico-organico-ig** — concluída em 2026-05-26T14:53:11.154517+00:00
 
-**Semana atual:** 2
+**Semana atual:** 3
 
 ### Histórico de refinamentos
-- *2026-05-25T02:00:00Z* — **ee-s2-diagnostico-midia** (—): 
 - *2026-05-25T03:00:00Z* — **diagnostico-midia-fix** (—): 
 - *2026-05-26T14:47:31.028000+00:00* — **ee-s2-diagnostico-criativos** (removed_from_scope): Removida do escopo da Farroupilha. Cliente nao tem Meta Ads proprios + verificacao manual na Meta Ads Library confirmou que NENHUM dos 4 concorrentes (La Parceria, La Fronteira, Regalo Campeiro, Bombachas Gaucho) tem ads ativos no BR. Sem material pago pra benchmark, a skill nao agrega valor. Substituida por foco no ee-s2-diagnostico-organico-ig (dados organicos via business_discovery).
 - *2026-05-26T14:53:11.154720+00:00* — **ee-s2-diagnostico-organico-ig** (completed): Auditoria via Instagram Graph API business_discovery. Cliente vs Regalo Campeiro + Bombachas Gaúcho (90 dias). Achado-chave: cliente lidera engajamento (0,92% vs 0,36% Regalo, 2,6x) mas posta 2,4x menos. Storytelling histórico-familiar é a fórmula vencedora (top post 5,35%). Briefing: 3x/sem + diversificar formato (Reels semanal + carrossel) + CTA padrão. 5 competitor_patterns_missing identificados. Honesty alert: 2 dos 5 concorrentes auditados, recomendado complementar.
@@ -511,6 +516,7 @@ Mapa de posicionamento revela que 5 concorrentes mapeados (Regalo Campeiro, La F
 - *2026-05-26T15:38:18.757237+00:00* — **ee-revisao-semanal** (skipped): Skill removida do escopo a pedido do operador. Output JSON em outputs/ee-revisao-semanal.json mantido para referência interna mas oculto do portal.
 - *2026-05-26T15:42:11.162296+00:00* — **ee-s2-diagnostico-cro** (updated_v2): Output CRO atualizado v2 com dados REAIS do PageSpeed Insights (mobile only) capturado em 2026-05-26: Performance 92, Accessibility 94, Best Practices 96, SEO 92. Core Web Vitals PASSED em field data (LCP 1,2s, CLS 0,01, TBT 0ms). Recalibrei estimated_conversion_loss removendo a estimativa catastrofica de 30-50% (era assumption sem PSI). Site técnico é sólido — gargalos reais são tagueamento + trust + LGPD + Mariana ausente, não performance. 2 hipóteses novas: P3 fine-tuning performance (font-display, render-block, unused CSS) e P2 accessibility 94→100.
 - *2026-05-26T18:16:50.473832+00:00* — **ee-s3-crm-setup** (skipped): Removido do escopo a pedido do operador. CRM segue como recomendação que o cliente pode implementar por conta — mas NÃO entra como entregável V4.
+- *2026-06-22T00:00:00Z* — **ee-s3-completo** (completed): Semana 3 concluída: ee-s3-manual-marca (supersede brandbook+identidade-visual), ee-s3-forecast-midia, ee-s3-gmb-otimizacao, ee-s3-landing-page, ee-s3-copy-anuncios, ee-s3-criativos-anuncios. Decisões reunião 2026-05-26: persona Diego 50+, novo Instagram B2C, reestruturar Google Ads por persona, Meta Ads aberto para Mariana, budget recomendado R$900/mês.
 
 ---
 

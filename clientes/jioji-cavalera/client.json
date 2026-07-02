@@ -5,39 +5,4431 @@
     "workspace_id": null,
     "created_at": "2026-06-01",
     "modulo_vendas": true,
-    "modulo_vendas_escopo": ["ee-s4-diagnostico-comercial", "ee-s4-cliente-oculto"]
+    "modulo_vendas_escopo": [
+      "ee-s4-diagnostico-comercial",
+      "ee-s4-cliente-oculto"
+    ]
   },
-  "briefing": {},
-  "research": {"fetched_at": null},
-  "connectors": {"fetched_at": null, "integrations": null},
+  "briefing": {
+    "_data_sources": "base-de-conhecimento/ (call de vendas 2026-05-26, briefing SPICED do SDR, kickoff 2026-06-01) + research.md. Dados de negócio agora CONFIRMADOS pelo cliente. V4MOS ainda pendente — falta dado de performance de mídia (CPA/conversão).",
+    "_hipoteses_pendentes": [
+      "icp: demografia detalhada de quem compra (faixa etária, % masculino vs feminino, renda) — não detalhada nas calls",
+      "icp.churn_reasons e taxa de recompra — Sandra vai verificar relatório no PDV",
+      "product.ticket: PDV tem ticket médio, mas o valor não foi informado",
+      "mídia: investimento conhecido (R$1-1.5k Meta), mas CPA/conversão/ROAS dependem do V4MOS"
+    ],
+    "identification": {
+      "name": "Jioji Cavalera (e-commerce: Jioji/Jod)",
+      "contact_name": "Sandra Hikague Ribeiro",
+      "contact_role": "Sócia-proprietária (decisora)",
+      "segment": "Varejo de moda multimarca — Cavalera (forte no masculino) + feminino (Melissa, saindo) + IX/Yexx, Lado Avesso, Polay",
+      "monthly_revenue_avg": "R$ 100.000/mês na loja maior (shopping); margem líquida ~25%",
+      "annual_revenue": null,
+      "revenue_note": "Loja maior (shopping) · margem ~25% · total não consolidado",
+      "years_in_market": "Loja de rua desde 1995 (Sandra assumiu em jan/1999); unidade do shopping desde 2008",
+      "location": "Porto Velho/RO (fuso -1h vs Brasília/Campinas)",
+      "website": "https://www.jioji.com.br (Nuvemshop, ~2 anos, estruturado com Gabriel Almeida)",
+      "instagram": "@jiojicavalera",
+      "whatsapp": "+55 69 98452-3558",
+      "gmb": true,
+      "other_channels": "IG @cavaleraportovelho, Facebook /cavalerapvelho, TikTok @forlifecavalera",
+      "stores": "Loja de rua: Av. Carlos Gomes, 2350 — São Cristóvão, Porto Velho/RO (Cavalera principal + Melissa residual + IX/Yexx + Lado Avesso + Polay). Loja shopping: Porto Velho Shopping (Cavalera + Melissa até saída) — MAIOR faturamento.",
+      "email": "jiojiecommerce@gmail.com",
+      "hours": "Seg–Sex 9h–18h · Sáb 9h–15h",
+      "brand_history": "Já venderam Triton e Guess; loja já operou como 'For You' (dona anterior). E-commerce registrado como 'Jod/Jioji' (nome do filho da Sandra) após conflito de registro de marca."
+    },
+    "team": {
+      "Sandra Hikague Ribeiro": "Sócia-proprietária (decisora)",
+      "Vanessa": "Gerente da loja de rua (Carlos Gomes); operacionaliza/subiu campanha no Meta",
+      "Jó": "Gerente da loja do shopping",
+      "Mari/Maria": "Marketing e abastecimento do e-commerce (ex-financeiro)",
+      "Gabriel Almeida": "Estruturou o e-commerce (Nuvemshop) — ATENÇÃO: está no projeto, cuidar a linguagem ao apontar gaps do site",
+      "Representante (SP)": "Apoia o marketing",
+      "_v4": "Closer: Getulio Calixto · Consultor/executor: Leonardo Rosa (Léo)"
+    },
+    "product": {
+      "main_product": "Moda masculina e feminina multimarca. Cavalera é a marca principal (forte no masculino). Melissa traz o feminino MAS está SAINDO do shopping no 2º semestre/2026 (franquia Melissa chegando — só vão finalizar estoque). Também IX/Yexx, Lado Avesso, Polay.",
+      "ticket": "PDV fornece ticket médio (valor não informado na call)",
+      "billing_model": "unico",
+      "sales_cycle": "Curto — varejo de moda (físico predominante; e-commerce em tração)",
+      "active_customers": null,
+      "most_profitable": "Loja do shopping é o maior volume. Cavalera masculino é o forte da marca.",
+      "growth_potential": "Compensar a saída da Melissa (30-40% do shopping) via loja de rua + e-commerce. Meta: +30% no físico e R$ 30.000/mês no e-commerce (hoje ~zero)."
+    },
+    "icp": {
+      "best_customers": "Consumidor de moda de marca em Porto Velho — masculino (forte, via Cavalera) e feminino (que era atendido pela Melissa, agora a recompor). Há comportamento de comprar online e retirar na loja física. [Demografia detalhada a aprofundar.]",
+      "not_customers": "[A validar] Comprador puramente preço que compara com marketplace e não valoriza marca; moda formal/social (fora do mix).",
+      "problems_before": [
+        "Acesso a marcas (Cavalera/Melissa) originais em Porto Velho",
+        "[a validar] Receio de réplica em marketplace",
+        "[a validar] Conveniência de comprar online com entrega viável (frete é barreira)"
+      ],
+      "results_after": [
+        "Marca original com atendimento local (2 lojas + e-commerce)",
+        "Programa de cashback (já existe)",
+        "Comprar online e retirar na loja (já acontece)"
+      ],
+      "churn_reasons": "[A confirmar] Sandra vai verificar relatório de taxa de recompra no PDV.",
+      "voz_do_cliente": [
+        "No e-commerce a gente não está tendo venda por enquanto. Ele só está funcionando, mas não está saindo vendas.",
+        "Às vezes a gente acaba não dando conta de atender no WhatsApp… o site facilitaria bastante.",
+        "Às vezes o frete acaba com a venda."
+      ]
+    },
+    "competition": {
+      "competitors": [
+        {
+          "name": "Aramis (Porto Velho Shopping)",
+          "perceived_differential": "Marca masculina premium/clássica nacional"
+        },
+        {
+          "name": "Polo Wear",
+          "perceived_differential": "Casual masculino acessível, marca nacional"
+        },
+        {
+          "name": "Lojas Avenida / Loja Divas / Moda Ativa",
+          "perceived_differential": "Varejo multimarca local de moda"
+        },
+        {
+          "name": "cavalera.com.br + marketplaces (Shopee/Mercado Livre)",
+          "perceived_differential": "E-commerce nacional da própria marca + preço/variedade online"
+        }
+      ],
+      "real_differential": "Ponto autorizado Cavalera em Porto Velho, multimarca, 2 lojas físicas + e-commerce próprio, 25+ anos de mercado local (rua desde 1995), atendimento local e programa de cashback. [Diferencial declarado a aprofundar.]",
+      "why_choose_us": "[A validar/aprofundar] Marca original com atendimento e presença local; conveniência omnichannel (comprar online, retirar na loja)."
+    },
+    "brand": {
+      "adjectives": [
+        "atitude",
+        "irreverência",
+        "estilo"
+      ],
+      "voice_tone": "descontraido",
+      "admired_brands": null,
+      "current_colors": null,
+      "has_logo": true,
+      "restrictions": null,
+      "tagline": "Atitude, irreverência e estilo. Tudo em um só lugar!",
+      "objetivo_de_marca": "Fortalecer o nome próprio (Jioji/Jod) — clientes antigos ainda se referem por nomes de gestões/marcas anteriores ('For You', 'Triton', 'Guess')."
+    },
+    "digital_situation": {
+      "paid_traffic": true,
+      "platforms": [
+        "meta_ads"
+      ],
+      "monthly_investment": "R$ 1.000–1.500/mês no Meta (até ~R$ 2.000 em meses com datas comemorativas). Google: tentaram, sem resultados expressivos.",
+      "current_results": "E-commerce fatura ~zero ('funcionando mas não sai venda'). Movimento físico cai quando pausam o Meta (dependência de tráfego confirmada). Sem pixel/analytics no site, sem remarketing.",
+      "crm": "Programa de CASHBACK ativo. Sem ferramenta de CRM. Atendimento via WhatsApp (sobrecarregado).",
+      "lead_sources": "Loja física (maior parte), Instagram, WhatsApp, site (Nuvemshop), Meta Ads",
+      "conversion_rate": null,
+      "biggest_pain": "E-commerce não converte (meta R$ 30k/mês, hoje ~zero); sobrecarga de atendimento no WhatsApp; frete alto para longa distância (gargalo logístico — querem reduzir o raio de frete).",
+      "incidente_meta": "Out/2025: Meta cobrou ~R$ 4.000 a mais (erro de billing não resolvido). Tiraram o cartão, reduziram em novembro.",
+      "ecommerce_historico": "Teve fraudes em mentoria anterior → pausou → retomou (atualizando fotos; Vanessa subiu campanha nova ~maio/2026).",
+      "unavailable_reason": "V4MOS pendente: faltam dados de performance (CPA, conversão, ROAS). Nenhum pixel de rastreamento (Meta/GA/GTM) detectado no site."
+    },
+    "accesses": {
+      "meta_business": false,
+      "google_ads": false,
+      "google_analytics": false,
+      "google_search_console": false,
+      "instagram_admin": false,
+      "website_admin": false,
+      "crm": false,
+      "gmb": false,
+      "whatsapp_business": false,
+      "_note": "Cliente POSSUI: conta Meta Ads, admin Nuvemshop, PDV, Instagram, GMB. V4 ainda sem acesso concedido + V4MOS pendente. Questionário de diagnóstico V4MOS pendente (Léo vai enviar)."
+    },
+    "sales_module": {
+      "_note": "Módulo vendas contratado limitado a S4 (diagnóstico comercial + cliente oculto — e-commerce e físico). Processo comercial a mapear na 4ª semana técnica.",
+      "active_sellers": "Equipe de loja (Vanessa/rua, Jó/shopping) + atendimento WhatsApp",
+      "sales_process": "Metas baseadas no ano anterior (mínima/meta/desafio), acompanhadas por dezena, com premiação por dezena. Léo sugeriu migrar para forecast proativo.",
+      "objections": null,
+      "conversion_rate": null,
+      "sales_cycle": null,
+      "has_scripts": false
+    },
+    "contexto_projeto": {
+      "evento_critico": "Saída da franquia Melissa do shopping no 2º semestre/2026 = 30-40% do faturamento daquela loja. Precisa compensar via rua + e-commerce.",
+      "metas": "+30% no físico · R$ 30.000/mês no e-commerce (hoje ~zero)",
+      "escopo": "Projeto 4 semanas (S1-S4). Reuniões semanais segundas 16h (Brasília). Contrato pago R$ 12.364 + bonificação (mentoria Flávio Augusto).",
+      "logistica": "Frete alto para longa distância é barreira de conversão; plano de reduzir o raio de atuação do frete."
+    }
+  },
+  "research": {
+    "fetched_at": "2026-06-09",
+    "file": "research.md",
+    "v4mos_status": "pendente"
+  },
+  "connectors": {
+    "fetched_at": "2026-06-09",
+    "source": "Meta Ads MCP (acesso partner do operador) — conta 'BM Jioji' 249028451865014. V4MOS segue pendente.",
+    "period": {
+      "start": "2026-03-11",
+      "end": "2026-06-08",
+      "days": 90
+    },
+    "facebook_ads": {
+      "ad_account": "249028451865014 (BM Jioji)",
+      "currency": "BRL",
+      "total_spend": 3784.88,
+      "monthly_avg_spend": 1261.63,
+      "impressions": 623350,
+      "reach": 218648,
+      "clicks": 11901,
+      "ctr_pct": 1.91,
+      "cpm": 6.07,
+      "cpc": 0.32,
+      "frequency": 2.85,
+      "total_campaigns": 30,
+      "objective_mix": {
+        "engajamento": "Maioria das campanhas e do gasto — ~16 campanhas, várias com nome default 'Nova campanha de Engajamento'. Objetivo de vaidade, não de venda.",
+        "vendas": "~R$ 505 (~13% do gasto): 'Nova campanha de Vendas' (R$313, CTR 3,54%, CPC R$0,16) + R$122 + R$54 + 'Nova campanha de Vendas- site' (R$15,91, CTR 4,69%, CPC R$0,08 — melhor de todas, subfinanciada).",
+        "datas_promo": "KIT BRASIL CAVALERA R$302, DIA DAS MÃES R$228, PROMOÇÃO SAPATÊNIS R$194, MELISSA FREE PINT R$127, DESCONTO PÁSCOA R$70, DIA DOS NAMORADOS R$48+R$48, DIA DO CONSUMIDOR R$41, etc."
+      },
+      "conversions_tracked": false,
+      "conversions_note": "Sem pixel no site + objetivo dominante = Engajamento → compras/ROAS NÃO rastreados. Drive tráfego/alcance, mas não mede nem otimiza venda — por isso o e-commerce fatura ~zero apesar do investimento.",
+      "top_campaigns": [
+        {
+          "name": "Nova campanha de Engajamento",
+          "spend": 338.08,
+          "impressions": 44869,
+          "ctr_pct": 0.92,
+          "cpc": 0.82,
+          "objective_inferred": "engajamento"
+        },
+        {
+          "name": "Nova campanha de Vendas",
+          "spend": 313.22,
+          "impressions": 54051,
+          "ctr_pct": 3.54,
+          "cpc": 0.16,
+          "objective_inferred": "vendas"
+        },
+        {
+          "name": "KIT BRASIL CAVALERA",
+          "spend": 302.87,
+          "impressions": 64019,
+          "ctr_pct": 1.63,
+          "cpc": 0.29,
+          "objective_inferred": "datas_promo"
+        },
+        {
+          "name": "DIA DAS MÃES - JIOJI",
+          "spend": 228.71,
+          "impressions": 32746,
+          "ctr_pct": 1.94,
+          "cpc": 0.36,
+          "objective_inferred": "datas_promo"
+        },
+        {
+          "name": "PROMOÇÃO SAPATÊNIS",
+          "spend": 194.23,
+          "impressions": 25608,
+          "ctr_pct": 1.43,
+          "cpc": 0.53,
+          "objective_inferred": "datas_promo"
+        },
+        {
+          "name": "Nova campanha de Vendas- site",
+          "spend": 15.91,
+          "impressions": 4071,
+          "ctr_pct": 4.69,
+          "cpc": 0.08,
+          "objective_inferred": "vendas_site",
+          "nota": "Melhor CTR/CPC de todas — subfinanciada."
+        }
+      ]
+    },
+    "google_ads": {
+      "note": "Google já testado pelo cliente sem resultados expressivos (declarado). Sem dados conectados."
+    }
+  },
   "progress": {
-    "current_week": 1,
+    "current_week": 3,
     "skills": {
-      "ee-s1-diagnostico-maturidade": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
-      "ee-s1-swot": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
-      "ee-s1-persona-icp": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
-      "ee-s1-auditoria-comunicacao": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
-      "ee-s2-pesquisa-mercado": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
-      "ee-s2-posicionamento": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
-      "ee-s2-diagnostico-midia": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
-      "ee-s2-diagnostico-criativos": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
-      "ee-s2-diagnostico-cro": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
-      "ee-s3-identidade-visual": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
-      "ee-s3-brandbook": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
-      "ee-s3-landing-page": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
-      "ee-s3-copy-anuncios": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
-      "ee-s3-criativos-anuncios": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
-      "ee-s3-crm-setup": {"status": "skipped", "checkpoint": 0, "started_at": null, "completed_at": null},
-      "ee-s3-forecast-midia": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
-      "ee-s3-gmb-otimizacao": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
-      "ee-s4-diagnostico-comercial": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
-      "ee-s4-cliente-oculto": {"status": "pending", "checkpoint": 0, "started_at": null, "completed_at": null},
-      "ee-s5-scripts-sdr": {"status": "skipped", "checkpoint": 0, "started_at": null, "completed_at": null},
-      "ee-s5-sdr-ia-config": {"status": "skipped", "version": 0, "started_at": null, "completed_at": null}
+      "ee-s1-diagnostico-maturidade": {
+        "status": "completed",
+        "checkpoint": 0,
+        "started_at": "2026-06-09T00:00:00Z",
+        "completed_at": "2026-06-09T00:00:00Z"
+      },
+      "ee-s1-swot": {
+        "status": "completed",
+        "checkpoint": 0,
+        "started_at": "2026-06-09T00:00:00Z",
+        "completed_at": "2026-06-09T00:00:00Z"
+      },
+      "ee-s1-persona-icp": {
+        "status": "completed",
+        "checkpoint": 0,
+        "started_at": "2026-06-09T00:00:00Z",
+        "completed_at": "2026-06-09T00:00:00Z"
+      },
+      "ee-s1-auditoria-comunicacao": {
+        "status": "completed",
+        "checkpoint": 0,
+        "started_at": "2026-06-09T00:00:00Z",
+        "completed_at": "2026-06-09T00:00:00Z"
+      },
+      "ee-s2-pesquisa-mercado": {
+        "status": "completed",
+        "checkpoint": 0,
+        "started_at": "2026-06-09T00:00:00Z",
+        "completed_at": "2026-06-09T00:00:00Z"
+      },
+      "ee-s2-posicionamento": {
+        "status": "completed",
+        "checkpoint": 0,
+        "started_at": "2026-06-09T00:00:00Z",
+        "completed_at": "2026-06-09T00:00:00Z"
+      },
+      "ee-s2-diagnostico-midia": {
+        "status": "completed",
+        "checkpoint": 0,
+        "started_at": "2026-06-09T00:00:00Z",
+        "completed_at": "2026-06-09T00:00:00Z"
+      },
+      "ee-s2-diagnostico-criativos": {
+        "status": "completed",
+        "checkpoint": 0,
+        "started_at": "2026-06-09T00:00:00Z",
+        "completed_at": "2026-06-09T00:00:00Z"
+      },
+      "ee-s2-diagnostico-organico-ig": {
+        "status": "completed",
+        "checkpoint": 0,
+        "started_at": "2026-06-09T00:00:00Z",
+        "completed_at": "2026-06-09T00:00:00Z"
+      },
+      "ee-s2-diagnostico-cro": {
+        "status": "completed",
+        "checkpoint": 0,
+        "started_at": "2026-06-09T00:00:00Z",
+        "completed_at": "2026-06-09T00:00:00Z"
+      },
+      "ee-s3-identidade-visual": {
+        "status": "pending",
+        "checkpoint": 0,
+        "started_at": null,
+        "completed_at": null
+      },
+      "ee-s3-brandbook": {
+        "status": "pending",
+        "checkpoint": 0,
+        "started_at": null,
+        "completed_at": null
+      },
+      "ee-s3-landing-page": {
+        "status": "pending",
+        "checkpoint": 0,
+        "started_at": null,
+        "completed_at": null
+      },
+      "ee-s3-copy-anuncios": {
+        "status": "pending",
+        "checkpoint": 0,
+        "started_at": null,
+        "completed_at": null
+      },
+      "ee-s3-criativos-anuncios": {
+        "status": "pending",
+        "checkpoint": 0,
+        "started_at": null,
+        "completed_at": null
+      },
+      "ee-s3-crm-setup": {
+        "status": "skipped",
+        "checkpoint": 0,
+        "started_at": null,
+        "completed_at": null
+      },
+      "ee-s3-forecast-midia": {
+        "status": "pending",
+        "checkpoint": 0,
+        "started_at": null,
+        "completed_at": null
+      },
+      "ee-s3-gmb-otimizacao": {
+        "status": "pending",
+        "checkpoint": 0,
+        "started_at": null,
+        "completed_at": null
+      },
+      "ee-s4-diagnostico-comercial": {
+        "status": "pending",
+        "checkpoint": 0,
+        "started_at": null,
+        "completed_at": null
+      },
+      "ee-s4-cliente-oculto": {
+        "status": "pending",
+        "checkpoint": 0,
+        "started_at": null,
+        "completed_at": null
+      },
+      "ee-s5-scripts-sdr": {
+        "status": "skipped",
+        "checkpoint": 0,
+        "started_at": null,
+        "completed_at": null
+      },
+      "ee-s5-sdr-ia-config": {
+        "status": "skipped",
+        "version": 0,
+        "started_at": null,
+        "completed_at": null
+      }
     }
   },
   "history": [
-    {"ts": "2026-06-01T00:00:00Z", "skill": "ee-novo-cliente", "checkpoint": 0, "decision": "Cliente cadastrado (portal vazio). Briefing pendente — escopo completo como placeholder, a confirmar."},
-    {"ts": "2026-06-01T00:00:00Z", "skill": "ee-novo-cliente", "checkpoint": 0, "decision": "Escopo ajustado: SDR IA (S5) NAO contratado e Setup de CRM (ee-s3-crm-setup) removido -> marcados skipped. modulo_vendas_escopo limitado a S4 (diagnostico-comercial + cliente-oculto)."}
-  ]
+    {
+      "ts": "2026-06-01T00:00:00Z",
+      "skill": "ee-novo-cliente",
+      "checkpoint": 0,
+      "decision": "Cliente cadastrado (portal vazio). Briefing pendente — escopo completo como placeholder, a confirmar."
+    },
+    {
+      "ts": "2026-06-01T00:00:00Z",
+      "skill": "ee-novo-cliente",
+      "checkpoint": 0,
+      "decision": "Escopo ajustado: SDR IA (S5) NAO contratado e Setup de CRM (ee-s3-crm-setup) removido -> marcados skipped. modulo_vendas_escopo limitado a S4 (diagnostico-comercial + cliente-oculto)."
+    },
+    {
+      "ts": "2026-06-09T00:00:00Z",
+      "skill": "ee-novo-cliente",
+      "checkpoint": 6,
+      "decision": "Deep research automático executado (site Nuvemshop, IG, Google, marca Cavalera). research.md salvo. Briefing preenchido com dados reais + hipóteses marcadas para campos subjetivos. V4MOS segue pendente (sem conectores de mídia)."
+    },
+    {
+      "ts": "2026-06-09T00:00:00Z",
+      "skill": "ee-s1-diagnostico-maturidade",
+      "checkpoint": 0,
+      "decision": "Maturidade estimada 30/100 (DIRECIONAL — sem V4MOS). Ativos acima da média (e-commerce Nuvemshop, ~6,2k IG, GMB, marca Cavalera), mas gap nº1 = medição (0 pixel no site) e nº2 = identidade fragmentada em 4 perfis. honesty_alert: scores estimados, validar com V4MOS + briefing."
+    },
+    {
+      "ts": "2026-06-09T00:00:00Z",
+      "skill": "ee-s1-swot",
+      "checkpoint": 0,
+      "decision": "Aposta SO: e-commerce + ~6,2k + marca Cavalera viram venda online medível para a região Norte antes que cavalera.com.br/marketplaces capturem o cliente. Proteção: operação cega (0 pixel/CRM) + dependência da Cavalera (fornecedor que já teve crise + concorre online). Projeções financeiras estimadas."
+    },
+    {
+      "ts": "2026-06-09T00:00:00Z",
+      "skill": "ee-s1-persona-icp",
+      "checkpoint": 0,
+      "decision": "Persona HIPÓTESE: Lucas Streetwear (18-30, atitude Cavalera) principal + Bianca (Melissa/Cavalera fem) secundária. Streetwear vende identidade, não preço; território defensável = original + local + atitude. honesty_alert forte: NÃO validada com cliente — pendente call de validação (quem compra, % online vs físico, ticket, gênero/idade)."
+    },
+    {
+      "ts": "2026-06-09T00:00:00Z",
+      "skill": "ee-s1-auditoria-comunicacao",
+      "checkpoint": 0,
+      "decision": "5 canais, score médio ~35/100. Site (50) maduro mas cego (0 pixel) e sem prova social/FAQ/CNPJ; identidade em 4 perfis; maior vazamento na Pesquisa/Comparação (objeção 'é original?' sem resposta). 5 quick wins independentes do V4MOS: pixel + consolidar perfil + prova social/FAQ + GMB + WhatsApp Business."
+    },
+    {
+      "ts": "2026-06-09T00:00:00Z",
+      "skill": "render+deploy",
+      "checkpoint": 0,
+      "decision": "S1 completa (4/4). Portal, consolidated e apresentação renderizados. Deploy na Vercel (time v4-company): https://portal-jioji-cavalera.vercel.app. vercel-project.json salvo (projectId prj_owNbxuCb5xf8VfixgBUDpOMUtdN1)."
+    },
+    {
+      "ts": "2026-06-09T00:00:00Z",
+      "skill": "ee-s1-diagnostico-maturidade",
+      "checkpoint": 0,
+      "decision": "Revisão v2 (pedido do operador): Mídia Paga NÃO estimada -> fica como '?' (V4MOS pendente, sem adivinhação). Score geral recalculado só com os 4 pilares medidos = 31/100 (baixo). Linguagem sobre o site suavizada: gaps de CRO enquadrados como camadas de marketing/medição posteriores ao site no ar (não falhas da construção do e-commerce) — há um responsável pelo site no projeto. Renderers (deck + portal) ajustados para suportar pilar não-medido ('?': barra vazia, tag 'Não medido', fora do radar)."
+    },
+    {
+      "ts": "2026-06-09T00:00:00Z",
+      "skill": "base-de-conhecimento+revisao",
+      "checkpoint": 0,
+      "decision": "Operador subiu 3 docs (call de vendas 26/05, briefing SPICED SDR, kickoff 01/06). Salvos na base-de-conhecimento. Briefing reescrito com dados REAIS (Sandra proprietária; time Vanessa/Jó/Mari/Gabriel; ~R$100k/mês loja maior, margem 25%; Meta R$1-1,5k/mês; e-commerce ~zero, meta R$30k; frete = dor nº1). CORREÇÃO ESTRATÉGICA: saída da franquia Melissa do shopping (30-40% do faturamento, 2º sem/2026) — era tratada como oportunidade, virou a AMEAÇA nº1 e o relógio do projeto. Gabriel Almeida estruturou o e-commerce (está no projeto — linguagem cuidada). 4 outputs S1 corrigidos (maturidade v3, swot v2, persona v2, auditoria v2). Pendências: demografia do ICP + recompra (Sandra puxa do PDV) + performance de mídia (V4MOS)."
+    },
+    {
+      "ts": "2026-06-09T00:00:00Z",
+      "skill": "connectors-meta",
+      "checkpoint": 0,
+      "decision": "Operador conectou Meta Ads (MCP, acesso partner) — conta BM Jioji 249028451865014. Puxados 90 dias (11/03-08/06): R$ 3.784,88 (~R$1.260/mês), 219k alcance, CTR 1,91%, CPC R$0,32, 30 campanhas. ACHADO: verba dominante em ENGAJAMENTO (não venda), ~16 campanhas com nome default, sem pixel (compras/ROAS não rastreados); campanha de vendas-site teve melhor CTR (4,69%) com só R$15,91. Mídia Paga SAIU do '?' → score 30 (eficiência de topo ok, mas desalinhada e sem medição). Conectores salvos no client.json; maturidade (overall 31, agora 5 pilares) e auditoria atualizadas. V4MOS segue pendente (Google sem dados)."
+    },
+    {
+      "ts": "2026-06-09T00:00:00Z",
+      "skill": "ee-s2-pesquisa-mercado",
+      "checkpoint": 0,
+      "decision": "Semana 2 iniciada. Pesquisa de mercado: TAM vestuário+calçados BR R$396bi (IEMI); e-commerce de moda R$2,9bi +35% (NuvemCommerce — mesma plataforma da Jioji); SAM local ~R$180M [E]; SOM ~R$3,3M/ano [E]. Território vazio: 'Cavalera oficial de Porto Velho com e-commerce que funciona + retira na loja' (nacional não tem local; local não tem marca/e-commerce; marketplace é preço/réplica). 5 concorrentes mapeados. Faturamento TOTAL a consolidar (só loja maior ~R$1,2M/ano confirmada). Próximo: ee-s2-posicionamento."
+    },
+    {
+      "ts": "2026-06-09T00:00:00Z",
+      "skill": "ee-s2-posicionamento",
+      "checkpoint": 0,
+      "decision": "Posicionamento: território 'Original. Daqui. Fácil.' (loja oficial Cavalera de PV com e-commerce que funciona + retira na loja). PUV ancorada em originalidade + local + conveniência. Tagline recomendada: 'A Cavalera de verdade, aqui em Porto Velho.' Canvas 4P + mapa 2x2 (quadrante Local+Marca+e-commerce vazio). honesty_alert: território parcialmente ASPIRACIONAL no eixo 'Fácil' — só vira real com tração do e-commerce (pixel/frete/recompra). Próximo: ee-s2-diagnostico-midia (rico com dados Meta) ou diagnostico-criativos."
+    },
+    {
+      "ts": "2026-06-09T00:00:00Z",
+      "skill": "ee-s2-diagnostico-midia",
+      "checkpoint": 0,
+      "decision": "Diagnóstico de mídia com dados reais do Meta (90d, +quebras: gênero, evolução mensal, top ads, objetivo por campanha). Veredito: motor bom (CTR 1,91%, CPC R$0,32, CPM R$6,07 — melhores que benchmark), direção errada — objetivo OUTCOME_ENGAGEMENT dominante, 145 campanhas no histórico, SEM pixel (conversão/ROAS não medidos) → e-commerce ~zero. Pistas: anúncio vendas-site campeão (CTR 3,99%/CPC R$0,15); audiência ~56% feminina mas puxada por Melissa (saindo). Plano: pixel/CAPI + migrar engajamento→conversão + limpar estrutura (30→3-4 campanhas) + recompor feminino. 3 cenários de budget (B recomendado ~R$1,8k). Google não usado. honesty_alert: sem pixel, metas de CPA/ROAS são [E]. Próximo: ee-s2-diagnostico-criativos."
+    },
+    {
+      "ts": "2026-06-09T00:00:00Z",
+      "skill": "ee-s2-diagnostico-criativos",
+      "checkpoint": 0,
+      "decision": "Diagnóstico de criativos LED POR PERFORMANCE (top 10 ads do Meta + perf por anúncio; sem screenshots → visual pendente). Vencedor: anúncio vendas-site (CTR 3,99%/CPC R$0,15); pior: foto de produto 'Camisetas Cavalera' (0,92%). Padrões tóxicos: duplicação '— Cópia', objetivo engajamento, peso de Melissa (marca saindo). Briefing S3: vídeo/UGC + venda direta + 'original/retira na loja'; aposentar Melissa+duplicatas. Concorrentes via Ad Library (busca instável → [E]+links). honesty_alert: visual pendente de prints. Próximo: ee-s2-diagnostico-cro."
+    },
+    {
+      "ts": "2026-06-09T00:00:00Z",
+      "skill": "ee-s2-diagnostico-cro",
+      "checkpoint": 0,
+      "decision": "CRO via deep audit Playwright (real). CORREÇÃO IMPORTANTE: o site TEM GTM (GTM-WBLVTS8N) + GA4 (G-65GDQ7D436, page_view/view_item_list) + tag Google Ads (AW-10869626227) — NÃO está 'sem rastreamento'. O Meta Pixel é que está QUEBRADO (fbevents.js carrega, 0 PageView) → verba do Meta roda sem remarketing/atribuição. LGPD non_compliant 0/10. Footer sem CNPJ; tem ratings+logos mas 0 depoimento. 4 fixes P1: consertar Pixel (via GTM) + CMP + CNPJ/políticas + depoimentos. PSI não rodou (sem API key). S2 COMPLETA. PENDENTE: corrigir o '0 pixel/sem GA4' nos outputs anteriores."
+    },
+    {
+      "ts": "2026-06-09T00:00:00Z",
+      "skill": "ee-s2-diagnostico-organico-ig",
+      "checkpoint": 0,
+      "decision": "Etapa estava FALTANDO no progress do Jioji (cadastro inicial omitiu organico-ig) — adicionada e rodada com dado REAL da Instagram Graph API (ig_organic_audit.sh). @jiojicavalera: 7.037 seguidores, só 6 posts/90d (0,46/sem — cadência crítica), eng 1,23% (6x a marca @cavalera 0,21%), melhor formato REELS. Top posts: Dia das Mães emocional, feminino elegante, TOUR DE LOJA — todos Reels, mas 0 CTA e 0 hashtags. Bio leva a linktree, não ao e-commerce. @aramismenswear handle inválido → comparou com a marca @cavalera (escala incomparável). Ação nº1: cadência 2-3 Reels/sem + CTA/hashtags + reaproveitar no paid. Galeria de criativos reais também adicionada ao diagnóstico de criativos (CTA=WhatsApp → raiz do e-commerce zerado)."
+    }
+  ],
+  "page_audit_deep": {
+    "fetched_at": "2026-06-09T19:07:20.648443+00:00",
+    "url": "https://www.jioji.com.br",
+    "cache_file": "cache/page_audit_deep-20260609-190719.json",
+    "engine": "playwright-chromium",
+    "tracking_stack": {
+      "tools_detected": {
+        "gtm": {
+          "name": "Google Tag Manager",
+          "category": "tracking"
+        },
+        "ga4": {
+          "name": "Google Analytics 4",
+          "category": "analytics"
+        },
+        "meta_pixel": {
+          "name": "Meta Pixel",
+          "category": "ads"
+        },
+        "google_ads_conversion": {
+          "name": "Google Ads Conversion",
+          "category": "ads"
+        },
+        "whatsapp_widget": {
+          "name": "WhatsApp Click-to-Chat",
+          "category": "chat"
+        },
+        "nuvemshop": {
+          "name": "Nuvemshop",
+          "category": "ecommerce"
+        },
+        "cloudflare": {
+          "name": "Cloudflare",
+          "category": "hosting"
+        }
+      },
+      "ids_found": {
+        "gtm": [
+          "GTM-WBLVTS8N"
+        ],
+        "ga4": [
+          "G-65GDQ7D436"
+        ],
+        "ua": [],
+        "google_ads": [
+          "AW-10869626227"
+        ],
+        "meta_pixel": [],
+        "tiktok_pixel": [],
+        "linkedin_partner": []
+      },
+      "categories_summary": {
+        "tracking": [
+          "Google Tag Manager"
+        ],
+        "analytics": [
+          "Google Analytics 4"
+        ],
+        "ads": [
+          "Google Ads Conversion",
+          "Meta Pixel"
+        ],
+        "chat": [
+          "WhatsApp Click-to-Chat"
+        ],
+        "ecommerce": [
+          "Nuvemshop"
+        ],
+        "hosting": [
+          "Cloudflare"
+        ]
+      },
+      "total_tools": 7
+    },
+    "events_fired": {
+      "ga4_event_count": 4,
+      "meta_event_count": 0,
+      "ga4_event_names": [
+        "page_view",
+        "view_item_list"
+      ],
+      "meta_event_names": []
+    },
+    "datalayer": {
+      "desktop_length": 5,
+      "mobile_length": 5
+    },
+    "cro_elements": {
+      "desktop": {
+        "cta_count": 17,
+        "cta_above_fold": 8,
+        "cta_list": [
+          {
+            "text": "0",
+            "tag": "a",
+            "href": "#",
+            "is_whatsapp": false,
+            "is_tel": false,
+            "is_mail": false,
+            "above_fold": true,
+            "width": 38,
+            "height": 39
+          },
+          {
+            "text": "Início",
+            "tag": "a",
+            "href": "https://jioji.com.br/produtos/",
+            "is_whatsapp": false,
+            "is_tel": false,
+            "is_mail": false,
+            "above_fold": true,
+            "width": 34,
+            "height": 19
+          },
+          {
+            "text": "Masculino",
+            "tag": "a",
+            "href": "https://jioji.com.br/vestuario1/",
+            "is_whatsapp": false,
+            "is_tel": false,
+            "is_mail": false,
+            "above_fold": true,
+            "width": 66,
+            "height": 19
+          },
+          {
+            "text": "Chinelos Cavalera",
+            "tag": "a",
+            "href": "https://www.jioji.com.br/calcados/chinelos/",
+            "is_whatsapp": false,
+            "is_tel": false,
+            "is_mail": false,
+            "above_fold": true,
+            "width": 116,
+            "height": 19
+          },
+          {
+            "text": "Acessorios",
+            "tag": "a",
+            "href": "https://jioji.com.br/acessorios/",
+            "is_whatsapp": false,
+            "is_tel": false,
+            "is_mail": false,
+            "above_fold": true,
+            "width": 71,
+            "height": 19
+          },
+          {
+            "text": "Todos os Produtos",
+            "tag": "a",
+            "href": "https://jioji.com.br/produtos/",
+            "is_whatsapp": false,
+            "is_tel": false,
+            "is_mail": false,
+            "above_fold": true,
+            "width": 120,
+            "height": 19
+          },
+          {
+            "text": "Ofertas",
+            "tag": "a",
+            "href": "https://www.jioji.com.br/ofertas/",
+            "is_whatsapp": false,
+            "is_tel": false,
+            "is_mail": false,
+            "above_fold": true,
+            "width": 49,
+            "height": 19
+          },
+          {
+            "text": "Entendi",
+            "tag": "a",
+            "href": "#",
+            "is_whatsapp": false,
+            "is_tel": false,
+            "is_mail": false,
+            "above_fold": true,
+            "width": 46,
+            "height": 19
+          },
+          {
+            "text": "Início",
+            "tag": "a",
+            "href": "https://jioji.com.br/produtos/",
+            "is_whatsapp": false,
+            "is_tel": false,
+            "is_mail": false,
+            "above_fold": false,
+            "width": 403,
+            "height": 17
+          },
+          {
+            "text": "Masculino",
+            "tag": "a",
+            "href": "https://jioji.com.br/vestuario1/",
+            "is_whatsapp": false,
+            "is_tel": false,
+            "is_mail": false,
+            "above_fold": false,
+            "width": 403,
+            "height": 17
+          },
+          {
+            "text": "Chinelos Cavalera",
+            "tag": "a",
+            "href": "https://jioji.com.br/calcados/chinelos/",
+            "is_whatsapp": false,
+            "is_tel": false,
+            "is_mail": false,
+            "above_fold": false,
+            "width": 403,
+            "height": 17
+          },
+          {
+            "text": "Acessorios",
+            "tag": "a",
+            "href": "https://jioji.com.br/acessorios/",
+            "is_whatsapp": false,
+            "is_tel": false,
+            "is_mail": false,
+            "above_fold": false,
+            "width": 403,
+            "height": 17
+          },
+          {
+            "text": "Todos os Produtos",
+            "tag": "a",
+            "href": "https://jioji.com.br/produtos/",
+            "is_whatsapp": false,
+            "is_tel": false,
+            "is_mail": false,
+            "above_fold": false,
+            "width": 403,
+            "height": 17
+          },
+          {
+            "text": "Ofertas",
+            "tag": "a",
+            "href": "https://jioji.com.br/ofertas/",
+            "is_whatsapp": false,
+            "is_tel": false,
+            "is_mail": false,
+            "above_fold": false,
+            "width": 403,
+            "height": 17
+          },
+          {
+            "text": "5569984523558",
+            "tag": "a",
+            "href": "https://wa.me/5569984523558",
+            "is_whatsapp": true,
+            "is_tel": false,
+            "is_mail": false,
+            "above_fold": false,
+            "width": 91,
+            "height": 17
+          },
+          {
+            "text": "Seg a sext 09 ás 18h, Sáb 09 ás 15h",
+            "tag": "a",
+            "href": "tel:Seg a sext 09 ás 18h,  Sáb 09 ás 15h",
+            "is_whatsapp": false,
+            "is_tel": true,
+            "is_mail": false,
+            "above_fold": false,
+            "width": 191,
+            "height": 17
+          },
+          {
+            "text": "jiojiecommerce@gmail.com",
+            "tag": "a",
+            "href": "mailto:jiojiecommerce@gmail.com",
+            "is_whatsapp": false,
+            "is_tel": false,
+            "is_mail": true,
+            "above_fold": false,
+            "width": 151,
+            "height": 17
+          }
+        ],
+        "whatsapp_links": [
+          {
+            "text": "",
+            "href": "https://wa.me/5569984523558",
+            "visible": true,
+            "floating": true
+          },
+          {
+            "text": "5569984523558",
+            "href": "https://wa.me/5569984523558",
+            "visible": true,
+            "floating": false
+          }
+        ],
+        "forms": [
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/search/",
+            "method": "get",
+            "field_count": 1,
+            "fields": [
+              {
+                "name": "q",
+                "type": "search",
+                "required": false,
+                "placeholder": "Buscar"
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 1,
+            "fields": [
+              {
+                "name": "zipcode",
+                "type": "tel",
+                "required": false,
+                "placeholder": "Seu CEP"
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/winnie-pooh",
+            "method": "post",
+            "field_count": 2,
+            "fields": [
+              {
+                "name": "email",
+                "type": "email",
+                "required": false,
+                "placeholder": "Cadastre seu e-mail..."
+              },
+              {
+                "name": "winnie-pooh",
+                "type": "text",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          }
+        ],
+        "form_count": 67,
+        "avg_fields_per_form": 3,
+        "social_proof": {
+          "has_testimonials": false,
+          "has_ratings": true,
+          "has_numbers": false,
+          "has_certifications": false,
+          "has_logos_clients": true
+        },
+        "urgency": {
+          "has_countdown": false,
+          "has_limited": false,
+          "has_discount": true
+        },
+        "trust": {
+          "has_address": true,
+          "has_cnpj": false,
+          "has_phone": true,
+          "has_email": true,
+          "has_privacy_link": false,
+          "has_terms_link": false
+        },
+        "videos": [],
+        "h1_text": "Jioji eShop l Atitude, irreverência e estilo. Tudo em um só lugar!",
+        "page_text_length": 6620
+      },
+      "mobile": {
+        "cta_count": 11,
+        "cta_above_fold": 2,
+        "cta_list": [
+          {
+            "text": "0",
+            "tag": "a",
+            "href": "#",
+            "is_whatsapp": false,
+            "is_tel": false,
+            "is_mail": false,
+            "above_fold": true,
+            "width": 31,
+            "height": 39
+          },
+          {
+            "text": "Entendi",
+            "tag": "a",
+            "href": "#",
+            "is_whatsapp": false,
+            "is_tel": false,
+            "is_mail": false,
+            "above_fold": true,
+            "width": 46,
+            "height": 19
+          },
+          {
+            "text": "Início",
+            "tag": "a",
+            "href": "https://jioji.com.br/produtos/",
+            "is_whatsapp": false,
+            "is_tel": false,
+            "is_mail": false,
+            "above_fold": false,
+            "width": 360,
+            "height": 17
+          },
+          {
+            "text": "Masculino",
+            "tag": "a",
+            "href": "https://jioji.com.br/vestuario1/",
+            "is_whatsapp": false,
+            "is_tel": false,
+            "is_mail": false,
+            "above_fold": false,
+            "width": 360,
+            "height": 17
+          },
+          {
+            "text": "Chinelos Cavalera",
+            "tag": "a",
+            "href": "https://jioji.com.br/calcados/chinelos/",
+            "is_whatsapp": false,
+            "is_tel": false,
+            "is_mail": false,
+            "above_fold": false,
+            "width": 360,
+            "height": 17
+          },
+          {
+            "text": "Acessorios",
+            "tag": "a",
+            "href": "https://jioji.com.br/acessorios/",
+            "is_whatsapp": false,
+            "is_tel": false,
+            "is_mail": false,
+            "above_fold": false,
+            "width": 360,
+            "height": 17
+          },
+          {
+            "text": "Todos os Produtos",
+            "tag": "a",
+            "href": "https://jioji.com.br/produtos/",
+            "is_whatsapp": false,
+            "is_tel": false,
+            "is_mail": false,
+            "above_fold": false,
+            "width": 360,
+            "height": 17
+          },
+          {
+            "text": "Ofertas",
+            "tag": "a",
+            "href": "https://jioji.com.br/ofertas/",
+            "is_whatsapp": false,
+            "is_tel": false,
+            "is_mail": false,
+            "above_fold": false,
+            "width": 360,
+            "height": 17
+          },
+          {
+            "text": "5569984523558",
+            "tag": "a",
+            "href": "https://wa.me/5569984523558",
+            "is_whatsapp": true,
+            "is_tel": false,
+            "is_mail": false,
+            "above_fold": false,
+            "width": 91,
+            "height": 17
+          },
+          {
+            "text": "Seg a sext 09 ás 18h, Sáb 09 ás 15h",
+            "tag": "a",
+            "href": "tel:Seg a sext 09 ás 18h,  Sáb 09 ás 15h",
+            "is_whatsapp": false,
+            "is_tel": true,
+            "is_mail": false,
+            "above_fold": false,
+            "width": 191,
+            "height": 17
+          },
+          {
+            "text": "jiojiecommerce@gmail.com",
+            "tag": "a",
+            "href": "mailto:jiojiecommerce@gmail.com",
+            "is_whatsapp": false,
+            "is_tel": false,
+            "is_mail": true,
+            "above_fold": false,
+            "width": 151,
+            "height": 17
+          }
+        ],
+        "whatsapp_links": [
+          {
+            "text": "",
+            "href": "https://wa.me/5569984523558",
+            "visible": true,
+            "floating": true
+          },
+          {
+            "text": "5569984523558",
+            "href": "https://wa.me/5569984523558",
+            "visible": true,
+            "floating": false
+          }
+        ],
+        "forms": [
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/search/",
+            "method": "get",
+            "field_count": 1,
+            "fields": [
+              {
+                "name": "q",
+                "type": "search",
+                "required": false,
+                "placeholder": "Buscar"
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 1,
+            "fields": [
+              {
+                "name": "zipcode",
+                "type": "tel",
+                "required": false,
+                "placeholder": "Seu CEP"
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/comprar/",
+            "method": "post",
+            "field_count": 3,
+            "fields": [
+              {
+                "name": "variation[0]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "variation[1]",
+                "type": "select-one",
+                "required": false,
+                "placeholder": ""
+              },
+              {
+                "name": "quantity",
+                "type": "number",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          },
+          {
+            "id": "",
+            "action": "https://www.jioji.com.br/winnie-pooh",
+            "method": "post",
+            "field_count": 2,
+            "fields": [
+              {
+                "name": "email",
+                "type": "email",
+                "required": false,
+                "placeholder": "Cadastre seu e-mail..."
+              },
+              {
+                "name": "winnie-pooh",
+                "type": "text",
+                "required": false,
+                "placeholder": ""
+              }
+            ],
+            "has_consent_checkbox": false
+          }
+        ],
+        "form_count": 61,
+        "avg_fields_per_form": 3,
+        "social_proof": {
+          "has_testimonials": false,
+          "has_ratings": true,
+          "has_numbers": false,
+          "has_certifications": false,
+          "has_logos_clients": true
+        },
+        "urgency": {
+          "has_countdown": false,
+          "has_limited": false,
+          "has_discount": true
+        },
+        "trust": {
+          "has_address": true,
+          "has_cnpj": false,
+          "has_phone": true,
+          "has_email": true,
+          "has_privacy_link": false,
+          "has_terms_link": false
+        },
+        "videos": [],
+        "h1_text": "Jioji eShop l Atitude, irreverência e estilo. Tudo em um só lugar!",
+        "page_text_length": 5992
+      }
+    },
+    "quality_flags": [
+      {
+        "severity": "high",
+        "flag": "pixel_no_pageview",
+        "title": "Meta Pixel instalado mas nao dispara PageView",
+        "detail": "Eventos de remarketing nao vao contar. Checar fbq('init') + fbq('track','PageView') no codigo ou GTM."
+      }
+    ],
+    "compliance_lgpd": {
+      "status": "non_compliant",
+      "score": 0,
+      "has_cmp": false,
+      "cmps_detected": [],
+      "pre_consent_trackers": {
+        "facebook.net/en_US/fbevents.js": [
+          "https://connect.facebook.net/en_US/fbevents.js"
+        ],
+        "googletagmanager.com/gtm.js": [
+          "https://www.googletagmanager.com/gtm.js?id=GTM-WBLVTS8N"
+        ],
+        "google-analytics.com": [
+          "https://www.google-analytics.com/g/collect?v=2&tid=G-65GDQ7D436&gtm=45je6640v9175563900za200zd9175563900&_p=1781032057599&gcs=G111&gcd=13t3t3t3t5l1&npa=0&dma=0&are=1&cid=1843986194.1781032058&frm=0&pscdl=noapi&rcb=12&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15&uam=&uamb=0&uap=macOS&uapv=10.15.7&uaw=0&ul=pt-br&_s=1&tag_exp=0~115616986~115938466~115938468&sid=1781032057&sct=1&seg=0&dl=https%3A%2F%2Fwww.jioji.com.br%2F&dt=Jioji%20eShop%20l%20Atitude%2C%20irrever%C3%AAncia%20e%20estilo.%20Tudo%20em%20um%20s%C3%B3%20lugar!&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=821",
+          "https://www.google-analytics.com/g/collect?v=2&tid=G-65GDQ7D436&gtm=45je6640v9175563900za200zd9175563900&_p=1781032057599&gcs=G111&gcd=13t3t3t3t5l1&npa=0&dma=0&_eu=AAAAAAQ&are=1&cid=1843986194.1781032058&frm=0&pscdl=noapi&rcb=12&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15&uam=&uamb=0&uap=macOS&uapv=10.15.7&uaw=0&ul=pt-br&_s=2&tag_exp=0~115616986~115938466~115938468&sid=1781032057&sct=1&seg=0&dl=https%3A%2F%2Fwww.jioji.com.br%2F&dt=Jioji%20eShop%20l%20Atitude%2C%20irrever%C3%AAncia%20e%20estilo.%20Tudo%20em%20um%20s%C3%B3%20lugar!&tfd=5830"
+        ],
+        "facebook.com/tr": [
+          "https://www.facebook.com/tr/"
+        ],
+        "doubleclick.net": [
+          "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/10869626227/?random=1781032058233&cv=11&fst=1781032058233&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6640v879575061za200zb9175563900zd9175563900xec&gcd=13t3t3t3t5l1&dma=0&tag_exp=0~115616985~115938466~115938469&u_w=1440&u_h=900&url=https%3A%2F%2Fwww.jioji.com.br%2F&rcb=18&frm=0&tiba=Jioji%20eShop%20l%20Atitude%2C%20irrever%C3%AAncia%20e%20estilo.%20Tudo%20em%20um%20s%C3%B3%20lugar!&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=485321783.1781032058&uaa=x86&uab=64&uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15&uamb=0&uam=&uap=macOS&uapv=10.15.7&uaw=0&data=event%3Dgtag.config&ept=9&rfmt=3&fmt=4",
+          "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/10869626227/?random=1781032058246&cv=11&fst=1781032058246&bg=ffffff&guid=ON&async=1&en=view_item_list&gtm=45be6640v879575061za200zb9175563900zd9175563900xec&gcd=13t3t3t3t5l1&dma=0&tag_exp=0~115616985~115938466~115938469&u_w=1440&u_h=900&url=https%3A%2F%2Fwww.jioji.com.br%2F&rcb=18&frm=0&tiba=Jioji%20eShop%20l%20Atitude%2C%20irrever%C3%AAncia%20e%20estilo.%20Tudo%20em%20um%20s%C3%B3%20lugar!&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=485321783.1781032058&uaa=x86&uab=64&uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15&uamb=0&uam=&uap=macOS&uapv=10.15.7&uaw=0&data=event%3Dview_item_list%3Bgoogle_business_vertical%3Dretail%3Bid%3D1174631517%2C1278623846%2C1263913768%2C1261927878%2C1270630015%2C1278673473%2C1512784107%2C1513672789%2C1513743335%2C1514507289%2C1528313756%2C1529004245%2C1529032194%2C1534583530%2C1534593771%2C1535404955%2C1535474608&ept=9&rfmt=3&fmt=4"
+        ]
+      },
+      "pre_consent_tracker_count": 7,
+      "issues": [
+        "Sem CMP detectado — sem mecanismo de consentimento.",
+        "7 requests de tracking disparam ANTES de qualquer consentimento.",
+        "  • facebook.net/en_US/fbevents.js: 1 request(s)",
+        "  • googletagmanager.com/gtm.js: 1 request(s)",
+        "  • google-analytics.com: 2 request(s)",
+        "  • facebook.com/tr: 1 request(s)",
+        "  • doubleclick.net: 2 request(s)"
+      ]
+    },
+    "navigation": {
+      "desktop": {
+        "status": 200,
+        "nav_error": null,
+        "requests_count": 78,
+        "responses_count": 77,
+        "cookies_count": 17
+      },
+      "mobile": {
+        "status": 200,
+        "nav_error": null,
+        "requests_count": 72,
+        "responses_count": 72,
+        "cookies_count": 21
+      }
+    }
+  }
 }

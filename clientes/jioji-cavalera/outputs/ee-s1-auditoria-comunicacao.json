@@ -1,0 +1,322 @@
+{
+  "client_name": "Jioji Cavalera",
+  "skill": "ee-s1-auditoria-comunicacao",
+  "version": 3,
+  "generated_at": "2026-06-09T00:00:00Z",
+  "data_source": "base-de-conhecimento (call vendas 26/05, briefing SPICED, kickoff 01/06) + persona-icp v2 + auditoria técnica deep (Playwright/Chromium). Dados de negócio CONFIRMADOS. Tagueamento do site CONFIRMADO na auditoria deep: GTM (GTM-WBLVTS8N) + GA4 (G-65GDQ7D436, dispara page_view/view_item_list) + tag Google Ads (AW-10869626227) presentes; Meta Pixel QUEBRADO (carrega fbevents.js mas não dispara PageView); GA4 sem eventos de compra (purchase) configurados. Sem screenshots dos perfis e sem performance de mídia (V4MOS pendente) — scores de IG/GMB/WhatsApp estimados [E].",
+  "summary": "5 canais auditados, score médio estimado 35/100. O e-commerce (Nuvemshop, ~50) é bem estruturado (feito com o Gabriel) e JÁ tem GTM+GA4+tag Google Ads — o gargalo não é a loja: é a medição incompleta (Meta Pixel quebrado + sem eventos de compra no GA4), o FRETE alto para longa distância ('o frete acaba com a venda', dor nº1 declarada pela Sandra) e a confiança (depoimentos a preencher, FAQ a criar, CNPJ no rodapé). A identidade está FRAGMENTADA em 4 perfis (@jiojicavalera ~6,2k, @cavaleraportovelho, FB /cavalerapvelho, TikTok @forlifecavalera). Anúncios MEDIDOS (Meta, 90d): R$ ~1.260/mês, CTR 1,91%, CPC R$ 0,32 — clique barato, mas verba em ENGAJAMENTO (não venda), 30 campanhas soltas e com o Meta Pixel quebrado (compras não atribuídas, sem remarketing no Meta); Google testado sem resultado. GMB existe nas 2 lojas (otimização a verificar). WhatsApp é canal forte de venda, porém SOBRECARREGADO e sem WhatsApp Business estruturado. Maior vazamento (e-commerce): Consideração → Decisão, travado por frete + confiança + ausência de remarketing. Pano de fundo: a Melissa sai do shopping no 2º sem/2026 — o e-commerce precisa tracionar para compensar. Quick wins (independem do V4MOS): corrigir Meta Pixel + eventos de compra no GA4, política de frete + retirada na loja, prova social/FAQ/CNPJ, consolidar @jiojicavalera, WhatsApp Business.",
+  "summary_headline": "Jioji: 5 canais, ~35/100. E-commerce bem feito (já tem GTM+GA4) mas fatura ~0 — travado por frete + Meta Pixel quebrado + confiança. Meta roda R$1-1,5k/mês sem remarketing. Identidade em 4 perfis. Tudo sob a pressão da saída da Melissa.",
+  "summary_highlights": [
+    {"category": "maturidade", "label": "Score médio canais [E]", "value": "35/100", "subtext": "Site 50 · GMB 35 · IG 35 · Anúncios 30 · WhatsApp 25", "tone": "yellow"},
+    {"category": "risco", "label": "Frete (e-commerce)", "value": "Dor nº1", "subtext": "'O frete acaba com a venda' — trava o e-commerce que fatura ~0", "tone": "red"},
+    {"category": "risco", "label": "Meta Pixel quebrado", "value": "GA4 ok · Pixel não", "subtext": "Tem GTM+GA4+tag Google Ads; o Meta Pixel não dispara → verba do Meta sem remarketing/atribuição", "tone": "red"},
+    {"category": "maturidade", "label": "Anúncios (Meta)", "value": "30/100", "subtext": "R$1,26k/mês · CTR 1,91% · mas verba em engajamento (não venda); Meta Pixel quebrado", "tone": "red"},
+    {"category": "risco", "label": "WhatsApp", "value": "Sobrecarregado", "subtext": "Canal forte de venda, mas sem WhatsApp Business estruturado", "tone": "red"},
+    {"category": "risco", "label": "Identidade", "value": "4 perfis", "subtext": "Audiência e marca própria ('Jioji') diluídas", "tone": "red"}
+  ],
+  "summary_key_findings": [
+    {"category": "vantagem", "text": "O e-commerce (Nuvemshop, feito com o Gabriel) é bem estruturado — proposta clara, frete grátis no site, 6x, checkout e dados de produto organizados. A loja online já existe e funciona tecnicamente; o trabalho é tracioná-la, não reconstruí-la."},
+    {"category": "ameaca", "text": "O e-commerce fatura ~zero. Maior vazamento entre Consideração e Decisão, por três travas reais e resolvíveis: (1) FRETE alto para longa distância (dor nº1 declarada — 'o frete acaba com a venda'); (2) confiança incompleta (depoimentos a preencher, FAQ a criar, CNPJ a incluir); (3) o Meta Pixel está quebrado (não dispara), então a verba do Meta não reimpacta quem pesquisa e sai. A opção de comprar online e retirar na loja (que já acontece) é a alavanca contra o frete."},
+    {"category": "ameaca", "text": "Anúncios MEDIDOS (Meta, 90d via acesso partner): R$ ~1.260/mês, CTR 1,91%, CPC R$ 0,32 — clique barato. Mas a verba vai para ENGAJAMENTO (não venda), em 30 campanhas soltas (~16 'Nova campanha de Engajamento'), e com o Meta Pixel quebrado não há rastreio de compra nem remarketing no Meta. A campanha de vendas pro site (CTR 4,69%/CPC R$ 0,08) recebeu R$ 15,91. Pausar o Meta derruba o movimento (dependência); cobrança indevida ~R$ 4k (out/2025)."},
+    {"category": "ameaca", "text": "A identidade está espalhada em 4 perfis (@jiojicavalera ~6,2k, @cavaleraportovelho, FB, TikTok) e a marca própria 'Jioji' ainda é fraca (clientes citam nomes antigos). Coerência de voz estimada em 50/100. O WhatsApp, canal forte de venda, está sobrecarregado e sem estrutura (Business/catálogo/respostas rápidas)."},
+    {"category": "acao", "text": "Quick wins (independem do V4MOS): (1) corrigir o Meta Pixel (quebrado) e configurar eventos de compra no GA4 (GTM+GA4 já instalados na Nuvemshop); (2) política de frete (raio regional + retirada na loja em destaque) — ataca a dor nº1; (3) prova social + FAQ (originalidade/frete/troca) + CNPJ; (4) consolidar @jiojicavalera e reforçar o nome 'Jioji'; (5) WhatsApp Business com catálogo e respostas rápidas. Tudo cronometrado pela saída da Melissa."}
+  ],
+  "icp_reference": "Persona-icp v2 (aterrada no cliente): dois públicos de marca em Porto Velho — MASCULINO ancorado na Cavalera + FEMININO que a Melissa servia (a recompor, pois a Melissa sai do shopping no 2º sem/2026). Físico predominante, mas online+retira já acontece. Dor digital nº1 = FRETE. Mensagem-chave: 'Cavalera original em Porto Velho — compre online e retire na loja, ou receba com frete pra região.' (Demografia fina a validar no PDV.)",
+  "channels_audited": [
+    {
+      "name": "site",
+      "url_or_handle": "https://www.jioji.com.br/ (Nuvemshop)",
+      "score": 50,
+      "classification": "medium",
+      "screenshots_analyzed": false,
+      "audit_details": {
+        "value_proposition": {"present": true, "clear": true, "aligned_with_icp": true, "notes": "Tagline forte e alinhada ao público streetwear: 'Atitude, irreverência e estilo. Tudo em um só lugar!'. Comunica curadoria multimarca (Cavalera, Lado Avesso, Yexx, Melissa). Boa primeira impressão de marca."},
+        "social_proof": {"present": false, "type": "ausente", "quality": "none", "notes": "A seção de depoimentos existe no template mas está SEM conteúdo. Sem avaliações de produto exibidas. Para vender Cavalera original online (objeção 'é original?'), a ausência de prova social é o maior gap qualitativo do site."},
+        "cta": {"present": true, "visible": true, "action_oriented": true, "notes": "CTAs de compra/carrinho padrão Nuvemshop + WhatsApp. Funcionais, mas sem rastreamento de origem (UTM) entre Instagram/WhatsApp e a loja."},
+        "visual_consistency": {"present": true, "consistent": true, "professional": true, "notes": "Layout Nuvemshop com fotos de produto, banners de promoção (-40%, -27%) e categorias organizadas. Identidade visual puxa a da Cavalera — falta um traço próprio que diferencie a LOJA Jioji do e-commerce nacional da marca."},
+        "mobile_experience": {"responsive": true, "speed": "boa (padrão Nuvemshop, CDN)", "notes": "Responsivo e mobile-first por padrão da plataforma. HTTPS ativo."},
+        "content_quality": {"speaks_to_icp": true, "frequency": "catálogo (sem blog)", "engagement_level": "n/a (e-commerce)", "notes": "Categorias claras (masculino, feminino, calçados, Melissa, acessórios, ofertas). Sem FAQ que resolva originalidade, frete para a região Norte, troca/devolução — dúvidas decisivas antes do checkout."},
+        "additional_notes": "GAP REAL (auditoria deep/Playwright): o site TEM GTM (GTM-WBLVTS8N) + GA4 (G-65GDQ7D436, dispara page_view/view_item_list) + tag Google Ads (AW-10869626227). PORÉM o Meta Pixel está QUEBRADO (carrega o fbevents.js mas não dispara PageView) → a verba do Meta roda sem remarketing/atribuição. E não há eventos de compra (purchase) configurados no GA4 → o funil de venda não é medido até o fim. Rodapé sem CNPJ/razão social. Sem schema de Organization/LocalBusiness (tem de produto). Plataforma Nuvemshop facilita corrigir o pixel e editar conteúdo — gaps de baixo esforço."
+      },
+      "gaps": [
+        {"gap": "Meta Pixel quebrado + GA4 sem eventos de compra", "evidence": "Auditoria deep (Playwright): GTM+GA4+tag Google Ads presentes, mas o Meta Pixel carrega o fbevents.js sem disparar PageView e o GA4 não tem evento purchase. Sem remarketing no Meta e sem medição de conversão de venda.", "impact": "high"},
+        {"gap": "Prova social vazia", "evidence": "Seção de depoimentos sem conteúdo; sem avaliações de produto. Objeção 'é original?' fica sem resposta.", "impact": "high"},
+        {"gap": "Sem FAQ", "evidence": "Não há FAQ de originalidade, frete para o Norte, prazo, troca/devolução — dúvidas que travam o checkout online.", "impact": "medium"},
+        {"gap": "Rodapé sem CNPJ/razão social", "evidence": "Footer não exibe dados legais — fragiliza confiança de quem compra de fora de Porto Velho.", "impact": "medium"},
+        {"gap": "Sem rastreamento de origem (UTM)", "evidence": "Links de Instagram/WhatsApp para a loja sem UTM — impossível saber o que converte.", "impact": "medium"}
+      ],
+      "recommendations": [
+        {"action": "Corrigir o Meta Pixel (instalado mas sem disparar PageView) e configurar eventos de compra no GA4/GTM já presentes (view_item, add_to_cart, purchase) via integração nativa da Nuvemshop.", "priority": "immediate", "effort": "low"},
+        {"action": "Preencher a seção de depoimentos com 4-6 prints/avaliações reais de clientes (autorizar nome/foto). Ativar avaliações de produto.", "priority": "immediate", "effort": "low"},
+        {"action": "Criar FAQ: originalidade ('somos loja oficial Cavalera em Porto Velho'), frete para a região Norte, prazos, troca/devolução (incluindo troca na loja física).", "priority": "immediate", "effort": "low"},
+        {"action": "Completar rodapé com CNPJ/razão social, endereço das lojas e contatos.", "priority": "immediate", "effort": "low"},
+        {"action": "Padronizar UTM nos links de bio/WhatsApp para a loja.", "priority": "short_term", "effort": "low"}
+      ]
+    },
+    {
+      "name": "instagram",
+      "url_or_handle": "@jiojicavalera (~6,2k) + @cavaleraportovelho",
+      "score": 35,
+      "classification": "low",
+      "screenshots_analyzed": false,
+      "audit_details": {
+        "value_proposition": {"present": true, "clear": false, "aligned_with_icp": true, "notes": "[E] Bio do @jiojicavalera leva ao site; conteúdo de produto + reels de loja. Sem screenshots, avaliação a partir do research. A existência de @cavaleraportovelho em paralelo confunde qual é o canal oficial."},
+        "social_proof": {"present": false, "type": "incerto", "quality": "weak", "notes": "[E] Sem registro de UGC (clientes usando as peças) nem reposts estruturados — streetwear vive de prova social visual. A confirmar com screenshots."},
+        "cta": {"present": true, "visible": false, "action_oriented": false, "notes": "[E] Provável link na bio para a loja, mas sem UTM e sem CTA forte por post."},
+        "visual_consistency": {"present": true, "consistent": false, "professional": true, "notes": "[E] Produto fotogênico e criativos da marca Cavalera disponíveis, mas conteúdo dividido entre 4 perfis (IG x2, FB, TikTok) impede consistência e acúmulo de audiência."},
+        "mobile_experience": {"responsive": true, "speed": "n/a — plataforma nativa", "notes": "Nativo mobile."},
+        "content_quality": {"speaks_to_icp": true, "frequency": "[E] irregular — sem cadência declarada", "engagement_level": "[E] a verificar (~6,2k seguidores)", "notes": "[E] Produto e estética combinam com Lucas/Bianca, mas falta cadência de Reels (formato dominante do streetwear), UGC e um perfil-mãe que concentre o crescimento. TikTok @forlifecavalera é oportunidade subaproveitada para o público jovem."},
+        "additional_notes": "[E] Score 35 estimado. Solicitar screenshots da bio + grade de posts + destaques + Reels recentes dos perfis para auditoria visual e decisão de consolidação."
+      },
+      "gaps": [
+        {"gap": "Identidade fragmentada em 4 perfis", "evidence": "@jiojicavalera, @cavaleraportovelho, FB /cavalerapvelho, TikTok @forlifecavalera — audiência e mensagem diluídas.", "impact": "high"},
+        {"gap": "Auditoria sem screenshots — score estimado", "evidence": "Sem material visual; score 35 [E] a revisar.", "impact": "medium"},
+        {"gap": "Sem cadência de Reels / UGC", "evidence": "Streetwear depende de vídeo curto e prova social de cliente; sem cadência declarada nem UGC estruturado.", "impact": "high"}
+      ],
+      "recommendations": [
+        {"action": "Solicitar ao cliente screenshots de bio + posts + destaques + Reels dos perfis para auditoria visual completa.", "priority": "immediate", "effort": "low"},
+        {"action": "Eleger @jiojicavalera como perfil-mãe; redirecionar/especializar @cavaleraportovelho, FB e TikTok. Padronizar bio + link com UTM + destaques (Novidades, Cavalera, Melissa, Como comprar, É original).", "priority": "immediate", "effort": "medium"},
+        {"action": "Cadência mínima de Reels semanais (looks/coleção/UGC) concentrada no perfil-mãe; incentivar e repostar clientes usando as peças.", "priority": "short_term", "effort": "medium"}
+      ]
+    },
+    {
+      "name": "anuncios",
+      "url_or_handle": "Meta Ads — conta BM Jioji (90 dias): R$ 3.784,88 (~R$ 1.260/mês) · 219k alcance · CTR 1,91% · CPC R$ 0,32 · 30 campanhas. Google testado sem resultado.",
+      "score": 30,
+      "classification": "low",
+      "screenshots_analyzed": false,
+      "audit_details": {
+        "value_proposition": {"present": true, "clear": false, "aligned_with_icp": false, "notes": "[E] Há campanha ativa no Meta (R$ 1-1,5k/mês, até ~R$ 2k em datas), mas o conteúdo dos anúncios não foi inspecionado e não há dado de performance. Não dá para afirmar alinhamento ao ICP."},
+        "social_proof": {"present": false, "type": "incerto", "quality": "weak", "notes": "[E] Anúncios não inspecionados — a verificar."},
+        "cta": {"present": true, "visible": false, "action_oriented": false, "notes": "[E] Provável CTA de tráfego/mensagem; não verificado."},
+        "visual_consistency": {"present": false, "consistent": false, "professional": false, "notes": "[E] Criativos não inspecionados."},
+        "mobile_experience": {"responsive": true, "speed": "n/a", "notes": "Meta é responsivo nativo."},
+        "content_quality": {"speaks_to_icp": false, "frequency": "campanha ativa contínua (30 campanhas em 90d)", "engagement_level": "CTR 1,91% · CPC R$ 0,32 (clique barato)", "notes": "MEDIDO (Meta, 90d): eficiência de topo decente, mas 3 problemas — (1) objetivo dominante = ENGAJAMENTO, não venda; (2) ~16 campanhas com nome default 'Nova campanha de Engajamento' (zero estrutura); (3) Meta Pixel quebrado → compras/ROAS não atribuídos no Meta. A campanha de vendas pro site teve o melhor CTR (4,69%)/CPC (R$ 0,08) e recebeu só R$ 15,91."},
+        "additional_notes": "Canal sai do '?': dados de topo reais e razoáveis (clique barato, alcance ok), mas verba mal direcionada (engajamento, não venda) e sem medição de compra no Meta (Pixel quebrado). Redirecionar para conversão + corrigir o Meta Pixel é o destrava. Google já tentado sem resultado.",
+        "unavailable_reason": "Meta Pixel quebrado (sem atribuição de venda no Meta) + V4MOS pendente — performance de conversão de anúncios não coletável. Score não atribuído ('?')."
+      },
+      "gaps": [
+        {"gap": "Mídia ativa, mas sem medição de conversão no Meta", "evidence": "R$ 1-1,5k/mês no Meta com o Meta Pixel quebrado e sem V4MOS — roda sem otimização por conversão nem remarketing no Meta.", "impact": "high"},
+        {"gap": "Dependência de canal único (Meta)", "evidence": "Pausar o Meta derruba o movimento; Google testado sem resultado.", "impact": "high"},
+        {"gap": "Incidente de billing não resolvido", "evidence": "Cobrança indevida de ~R$ 4.000 do Meta em out/2025.", "impact": "medium"}
+      ],
+      "recommendations": [
+        {"action": "Corrigir o Meta Pixel (pré-requisito) e ligar eventos de compra no GA4 para medir e otimizar a campanha que JÁ roda.", "priority": "immediate", "effort": "low"},
+        {"action": "Liberar/regularizar o V4MOS para avaliar o Meta com dado real (CPA, conversão).", "priority": "immediate", "effort": "low"},
+        {"action": "Com medição: remarketing (audiência do pixel + base) + foco geográfico onde o frete é viável (em vez de aquisição ampla).", "priority": "short_term", "effort": "medium"}
+      ]
+    },
+    {
+      "name": "google_meu_negocio",
+      "url_or_handle": "2 lojas (Av. Carlos Gomes, 2350 + Porto Velho Shopping)",
+      "score": 35,
+      "classification": "low",
+      "screenshots_analyzed": false,
+      "audit_details": {
+        "value_proposition": {"present": true, "clear": false, "aligned_with_icp": false, "notes": "[E] GMB existe (lojas aparecem em busca/diretórios). Descrição provavelmente não posiciona 'loja oficial Cavalera em Porto Velho' nem destaca a curadoria multimarca."},
+        "social_proof": {"present": false, "type": "incerto", "quality": "weak", "notes": "[E] Nota e volume de avaliações não recuperados na pesquisa — provável subaproveitamento (padrão varejo PME)."},
+        "cta": {"present": false, "visible": false, "action_oriented": false, "notes": "[E] CTA (site/ligar/rota) a verificar no painel."},
+        "visual_consistency": {"present": false, "consistent": false, "professional": false, "notes": "[E] Quantidade/qualidade de fotos não verificadas."},
+        "mobile_experience": {"responsive": true, "speed": "n/a — plataforma Google", "notes": "Nativo."},
+        "content_quality": {"speaks_to_icp": false, "frequency": "[E] sem Google Posts provavelmente", "engagement_level": "[E] baixo", "notes": "[E] Busca local 'Cavalera Porto Velho' tem alta intenção e a Jioji pode dominá-la — algo que a cavalera.com.br nacional não atende."},
+        "additional_notes": "[E] Score 35. Solicitar acesso/print dos painéis GMB das 2 unidades para auditoria completa."
+      },
+      "gaps": [
+        {"gap": "GMB provavelmente não otimizado", "evidence": "Descrição/fotos/posts/reviews não verificados — padrão PME indica subaproveitamento.", "impact": "medium"},
+        {"gap": "Não posiciona 'Cavalera oficial em Porto Velho'", "evidence": "Captura de busca local de marca subaproveitada.", "impact": "medium"}
+      ],
+      "recommendations": [
+        {"action": "Solicitar acesso aos 2 GMBs (ou prints) para auditoria visual.", "priority": "immediate", "effort": "low"},
+        {"action": "Otimizar descrição ('Loja oficial Cavalera em Porto Velho — também Lado Avesso, Yexx e Melissa'), fotos atualizadas, Google Posts de coleção.", "priority": "immediate", "effort": "low"},
+        {"action": "Solicitar avaliações a clientes recentes (incentivo). Responder todas as avaliações.", "priority": "short_term", "effort": "low"}
+      ]
+    },
+    {
+      "name": "whatsapp",
+      "url_or_handle": "+55 69 98452-3558 (site) · alt (69) 99331-3494 / (69) 3221-0706",
+      "score": 25,
+      "classification": "low",
+      "screenshots_analyzed": false,
+      "audit_details": {
+        "value_proposition": {"present": false, "clear": false, "aligned_with_icp": false, "notes": "[E] WhatsApp é canal de contato/venda, mas há múltiplos números divulgados (site + buscas) — confunde o cliente. Sem confirmação de WhatsApp Business."},
+        "social_proof": {"present": false, "type": "n/a", "quality": "none", "notes": "n/a — canal de conversação."},
+        "cta": {"present": true, "visible": true, "action_oriented": true, "notes": "[E] Link wa.me presente no site. Falta padronizar um número único oficial."},
+        "visual_consistency": {"present": false, "consistent": false, "professional": false, "notes": "[E] Sem confirmação de perfil WhatsApp Business com catálogo."},
+        "mobile_experience": {"responsive": true, "speed": "[E] tempo de resposta desconhecido", "notes": "Nativo mobile."},
+        "content_quality": {"speaks_to_icp": false, "frequency": "responsivo", "engagement_level": "1:1", "notes": "[E] Sem evidência de WhatsApp Business com saudação, catálogo, etiquetas ou respostas rápidas para as objeções ('é original?', 'parcela?', 'chega aqui?')."},
+        "additional_notes": "[E] Score 25. Padronizar 1 número oficial + migrar para WhatsApp Business com catálogo é quick win de alto impacto no fechamento."
+      },
+      "gaps": [
+        {"gap": "Múltiplos números divulgados", "evidence": "+55 69 98452-3558 (site), (69) 99331-3494 e (69) 3221-0706 (buscas) — sem número oficial único.", "impact": "medium"},
+        {"gap": "Sem evidência de WhatsApp Business estruturado", "evidence": "Sem saudação, catálogo, etiquetas ou respostas rápidas confirmados.", "impact": "high"},
+        {"gap": "Sem respostas rápidas para objeções da persona", "evidence": "Objeções 'é original?', 'parcela?', 'chega no Norte?' não padronizadas.", "impact": "medium"}
+      ],
+      "recommendations": [
+        {"action": "Definir 1 número oficial e padronizá-lo em site, bio e GMB.", "priority": "immediate", "effort": "low"},
+        {"action": "Migrar para WhatsApp Business: saudação, mensagem de ausência (horário Seg-Sex 9-18h / Sáb 9-15h), catálogo com 8-10 produtos, etiquetas.", "priority": "immediate", "effort": "low"},
+        {"action": "Criar 5-7 respostas rápidas para as objeções da Objection Library (originalidade, preço vs Shopee, parcelamento, frete Norte, troca).", "priority": "short_term", "effort": "low"}
+      ]
+    }
+  ],
+  "gap_matrix": [
+    {"rank": 1, "channel": "site", "gap": "Meta Pixel quebrado + GA4 sem eventos de compra", "impact": "high", "effort": "low", "recommended_action": "Corrigir o Meta Pixel (não dispara) e configurar eventos de compra no GA4/GTM já instalados via integração nativa Nuvemshop.", "quadrant": "quick_win"},
+    {"rank": 2, "channel": "site", "gap": "Prova social vazia + sem FAQ (objeção 'é original?' sem resposta)", "impact": "high", "effort": "low", "recommended_action": "Preencher depoimentos/avaliações + criar FAQ de originalidade/frete/troca.", "quadrant": "quick_win"},
+    {"rank": 3, "channel": "instagram", "gap": "Identidade fragmentada em 4 perfis", "impact": "high", "effort": "low", "recommended_action": "Eleger @jiojicavalera como perfil-mãe; especializar/redirecionar os demais; padronizar bio e destaques.", "quadrant": "quick_win"},
+    {"rank": 4, "channel": "whatsapp", "gap": "Sem WhatsApp Business + múltiplos números", "impact": "high", "effort": "low", "recommended_action": "1 número oficial + WhatsApp Business com catálogo, saudação e respostas rápidas para objeções.", "quadrant": "quick_win"},
+    {"rank": 5, "channel": "google_meu_negocio", "gap": "GMB das 2 lojas provavelmente não otimizado", "impact": "medium", "effort": "low", "recommended_action": "Otimizar descrição ('Cavalera oficial em Porto Velho'), fotos, Google Posts, solicitar avaliações.", "quadrant": "quick_win"},
+    {"rank": 6, "channel": "site", "gap": "Rodapé sem CNPJ/razão social", "impact": "medium", "effort": "low", "recommended_action": "Completar rodapé com dados legais + endereço das lojas.", "quadrant": "quick_win"},
+    {"rank": 7, "channel": "instagram", "gap": "Sem cadência de Reels / UGC", "impact": "high", "effort": "medium", "recommended_action": "Cadência semanal de Reels (looks/coleção) + programa de UGC concentrado no perfil-mãe.", "quadrant": "strategic_project"},
+    {"rank": 8, "channel": "anuncios", "gap": "Sem mídia mensurável (V4MOS pendente + Meta Pixel quebrado)", "impact": "high", "effort": "medium", "recommended_action": "Corrigir o Meta Pixel + liberar V4MOS, depois remarketing + aquisição geo para o Norte.", "quadrant": "strategic_project"},
+    {"rank": 9, "channel": "site", "gap": "Sem UTM nos links de origem", "impact": "medium", "effort": "low", "recommended_action": "Padronizar UTM em bio/WhatsApp para a loja.", "quadrant": "quick_win"}
+  ],
+  "executive_summary": {
+    "overall_assessment": "A Jioji Cavalera tem uma base de comunicação mais sólida do que o score médio (35/100) sugere — o problema não é falta de canais, é INSTRUMENTAÇÃO INCOMPLETA e FOCO. O site Nuvemshop converte razoavelmente (proposta clara, frete grátis, 6x) e já tem GTM+GA4+tag Google Ads, mas mede o funil pela metade (Meta Pixel quebrado, sem eventos de compra no GA4) e tem confiança incompleta (sem prova social, FAQ ou CNPJ). A audiência existe (~6,2k no IG), mas está espalhada em 4 perfis que não acumulam autoridade. O funil real do cliente de Cavalera passa por uma objeção decisiva — 'é original? não acho mais barato na Shopee?' — que hoje fica sem resposta no site e sem captura para o Meta (Pixel quebrado → sem remarketing). Os 5 quick wins (fechar a medição, consolidar identidade, prova social/FAQ/CNPJ, otimizar GMB, WhatsApp Business) independem do V4MOS e podem começar em 1-2 semanas, transformando a operação de meio-cega e dispersa em mensurável e focada.",
+    "top_problems": [
+      {"problem": "Meta Pixel quebrado + GA4 sem eventos de compra (medição do funil incompleta)", "evidence": "Auditoria deep (Playwright): GTM (GTM-WBLVTS8N) + GA4 (G-65GDQ7D436) + tag Google Ads presentes, mas o Meta Pixel não dispara PageView e o GA4 não tem evento purchase. Os ~6,2k seguidores + visitantes não viram público de remarketing no Meta e a venda não é medida até o fim.", "impact": "A verba do Meta roda sem ROI comprovável nem remarketing; a conversão de compra não é medida. Limita diagnóstico de mídia, CRO e forecast.", "action": "Corrigir o Meta Pixel e configurar eventos de compra no GA4/GTM já instalados (horas). Pré-requisito de tudo."},
+      {"problem": "Objeção 'é original?' sem resposta + identidade fragmentada", "evidence": "Depoimentos vazios, sem FAQ, sem CNPJ; 4 perfis sociais paralelos. O cliente compara com marketplace/cavalera.com.br e não encontra a prova de que a Jioji é a oficial/original.", "impact": "Cliente decide por preço (onde a Jioji não vence) e a marca não acumula autoridade em nenhum canal. Vazamento na Pesquisa/Comparação.", "action": "Preencher prova social + FAQ de originalidade + CNPJ no site; consolidar @jiojicavalera como perfil-mãe com destaque 'É original / Loja oficial Cavalera PVH'."},
+      {"problem": "Canais de fechamento e local subaproveitados (WhatsApp sem Business, GMB sem otimização)", "evidence": "Múltiplos números de WhatsApp sem perfil Business confirmado; 2 GMBs existentes sem otimização verificada para 'Cavalera Porto Velho'.", "impact": "Fricção no fechamento e perda de busca local de alta intenção que o e-commerce nacional não atende.", "action": "1 número oficial + WhatsApp Business com catálogo e respostas rápidas; otimizar os 2 GMBs como 'loja oficial Cavalera em Porto Velho'."}
+    ],
+    "communication_score": 35
+  },
+  "competitor_benchmark": {
+    "description": "Benchmark canal-a-canal contra 2 grupos referenciais. Scores estimados [E] a partir de padrão de mercado — validar com o cliente.",
+    "groups": [
+      {"name": "Canal nacional da marca + marketplaces", "members": ["cavalera.com.br (e-commerce nacional da própria Cavalera)", "Shopee / Mercado Livre (oficiais e réplicas)"], "positioning": "Variedade total + preço + logística forte. Disputam o cliente online por catálogo e conveniência, mas sem vínculo local nem garantia de atendimento presencial."},
+      {"name": "Varejo de moda local de Porto Velho", "members": ["Aramis (Porto Velho Shopping)", "Polo Wear", "Lojas Avenida / Loja Divas / Moda Ativa"], "positioning": "Presença física local. Digital geralmente improvisado (Instagram sem e-commerce próprio robusto, sem mídia estruturada)."}
+    ],
+    "benchmark_by_channel": [
+      {"channel": "site", "client_score": 50, "best_in_class_score": 80, "gap": 30, "best_practice_observed": "[E] cavalera.com.br tem e-commerce nacional maduro com avaliações, FAQ, política de troca clara e provavelmente full tracking/remarketing.", "opportunity_for_client": "A Jioji não vence o nacional em catálogo, mas pode vencer em CONFIANÇA LOCAL: prova social de clientes de PVH, FAQ de originalidade, retirada/troca na loja física — algo que o e-commerce nacional não oferece."},
+      {"channel": "instagram", "client_score": 35, "best_in_class_score": 75, "gap": 40, "best_practice_observed": "[E] Marcas e lojas de streetwear fortes produzem Reels semanais de looks/UGC com um perfil único e cadência consistente.", "opportunity_for_client": "Consolidar em @jiojicavalera + Reels semanais de looks com clientes reais de Porto Velho (UGC) é diferenciação imediata vs o varejo local e cria vínculo que o nacional não tem."},
+      {"channel": "anuncios", "client_score": 20, "best_in_class_score": 70, "gap": 50, "best_practice_observed": "[E] Players nacionais e marketplaces operam mídia full-funnel medida (catálogo/Advantage+, remarketing).", "opportunity_for_client": "Sem competir em escala: começar com remarketing barato dos ~6,2k + visitantes (após pixel) e aquisição geo para a região Norte, onde o nacional não foca geograficamente."},
+      {"channel": "google_meu_negocio", "client_score": 35, "best_in_class_score": 65, "gap": 30, "best_practice_observed": "[E] Lojas físicas maduras têm GMB completo com fotos, posts e dezenas de reviews, dominando a busca local.", "opportunity_for_client": "Dominar 'Cavalera Porto Velho' e 'loja Cavalera RO' com 2 GMBs otimizados — território que cavalera.com.br e marketplace não atendem localmente."},
+      {"channel": "whatsapp", "client_score": 25, "best_in_class_score": 55, "gap": 30, "best_practice_observed": "[E] Varejo maduro usa WhatsApp Business com catálogo, respostas rápidas e tempo de resposta em minutos.", "opportunity_for_client": "WhatsApp Business com catálogo + respostas para 'é original?/parcela?/chega no Norte?' coloca a Jioji acima do varejo local que ainda usa WhatsApp pessoal."}
+    ],
+    "strategic_read": "A Jioji está em uma posição de pinça: perde para o canal nacional/marketplaces em catálogo, escala e preço; e está à frente (ou pode estar com pouco esforço) do varejo local em maturidade digital (e-commerce próprio, base orgânica). A jogada NÃO é competir com o nacional no terreno dele (preço/variedade) — é ocupar o território que ele não cobre: ORIGINALIDADE COMPROVADA + ATENDIMENTO E PRESENÇA LOCAL EM PORTO VELHO + curadoria multimarca. Os gaps mais baratos de fechar (pixel, prova social/FAQ, GMB, WhatsApp Business) são exatamente os que constroem esse território. Janela: o varejo local ainda é digitalmente fraco — a Jioji pode pular degraus e virar a referência online de streetwear de marca da região Norte antes que alguém estruture."
+  },
+  "journey_friction_map": {
+    "description": "Funil B2C de varejo de moda (ciclo curto). Volumes do fim do funil não medidos (sem eventos de compra no GA4 + Meta Pixel quebrado + V4MOS) — os percentuais de leakage são hipóteses qualitativas baseadas em padrão da categoria, a confirmar com instrumentação completa.",
+    "stages": [
+      {"stage": "Gatilho / Descoberta", "current_volume": "[E] não medido", "leakage_pct": 70, "root_cause": "Conteúdo disperso em 4 perfis sem cadência forte — a Jioji aparece pouco no momento do desejo. Quem aparece primeiro (marketplace, cavalera.com.br, influenciador) captura a atenção.", "fix_effort": "medium", "fix_impact_estimate": "Perfil-mãe + cadência de Reels aumenta presença orgânica no gatilho."},
+      {"stage": "Pesquisa / Comparação", "current_volume": "[E] não medido", "leakage_pct": 60, "root_cause": "Cliente confere 'é original?' e compara preço (Shopee/cavalera.com.br). O site não responde a objeção (prova social vazia, sem FAQ, sem CNPJ) e — com o Meta Pixel quebrado — quem sai não é reimpactado pela verba do Meta.", "fix_effort": "low", "fix_impact_estimate": "Prova social + FAQ de originalidade + Meta Pixel corrigido (remarketing) reduzem fuga e recuperam quem pesquisou."},
+      {"stage": "Decisão (online ou loja)", "current_volume": "[E] não medido", "leakage_pct": 40, "root_cause": "No checkout, dúvidas de frete para o Norte, prazo e troca sem FAQ travam. WhatsApp sem Business e sem número único gera fricção/atraso.", "fix_effort": "low", "fix_impact_estimate": "FAQ + WhatsApp Business com respostas rápidas e catálogo reduzem abandono."},
+      {"stage": "Pós-compra / Uso", "current_volume": "[E] não medido", "leakage_pct": 50, "root_cause": "Sem programa de UGC nem régua de pós-compra — o cliente posta o look mas a loja não capta a prova social nem ativa recompra.", "fix_effort": "medium", "fix_impact_estimate": "Repost de UGC + régua simples geram prova social e recompra."},
+      {"stage": "Recompra", "current_volume": "[E] não medido", "leakage_pct": 60, "root_cause": "Sem CRM/base segmentada (e-mail Gmail genérico), a recompra por coleção/data depende da memória do cliente.", "fix_effort": "medium", "fix_impact_estimate": "Base segmentada + régua por coleção destrava recompra (apontamento — CRM completo fora do escopo)."}
+    ],
+    "biggest_leakage_summary": "O maior vazamento (hipótese) está na Pesquisa/Comparação: o cliente de Cavalera confere originalidade e preço, e o funil da Jioji falha duas vezes — (1) o site não prova que é original (depoimentos vazios, sem FAQ, sem CNPJ), empurrando a decisão para o preço, onde marketplace/cavalera.com.br vencem; e (2) com o Meta Pixel quebrado, quem pesquisou e saiu não é reimpactado por remarketing no Meta. Esses dois consertos (prova social/FAQ + corrigir o Meta Pixel) são de baixo esforço e atacam exatamente o estágio onde mais se perde.",
+    "projected_funnel_90d_realistic": "[E] Com os 5 quick wins (corrigir Pixel + eventos de compra + prova social/FAQ + consolidação de identidade + GMB + WhatsApp Business): a Pesquisa/Comparação passa a converter mais (a objeção 'é original?' é respondida) e quem sai é recuperado por remarketing; a Decisão melhora com FAQ + WhatsApp Business; e o Pixel corrigido + eventos de compra viabilizam campanhas medíveis. Projeção qualitativa: melhora consistente de conversão e formação de audiência de remarketing em 60-90 dias. Números absolutos só após fechar a medição e liberar V4MOS."
+  },
+  "tone_of_voice_analysis": {
+    "description": "Tom oficial não declarado pelo cliente (brand.voice_tone inferido). Pilares abaixo derivados da tagline e da marca Cavalera — validar antes da S3 (brandbook).",
+    "brand_voice_target": {
+      "pillars": [
+        "Atitude — confiante, sem pedir licença (a própria tagline: 'atitude, irreverência e estilo')",
+        "Jovem e urbano — linguagem de quem vive a cultura streetwear, sem forçar gíria",
+        "Original e local — orgulho de ser a Cavalera de verdade, em Porto Velho",
+        "Direto e prático — frete grátis, 6x, 'tudo em um só lugar' sem rodeio"
+      ],
+      "avoid": [
+        "Não é corporativo/formal ('prezado cliente')",
+        "Não é genérico de varejo ('as melhores ofertas')",
+        "Não é apelão de preço que vira marketplace ('o mais barato!') — isso entrega o território de originalidade",
+        "Não é gíria forçada que soa falsa"
+      ]
+    },
+    "channel_drift": [
+      {"channel": "site", "actual_tone": "Tagline com atitude na home ('Atitude, irreverência e estilo. Tudo em um só lugar!') — boa. Resto do site é catálogo padrão Nuvemshop, neutro.", "target_alignment": "bom", "drift_notes": "A home tem o tom, mas falta voz nas descrições, FAQ e prova social — onde a confiança e a identidade se constroem.", "fix": "Levar o tom de 'atitude + original + local' para FAQ, descrições e bloco de prova social.", "example": "Manter a tagline; adicionar FAQ com voz: 'É original sim — somos a Cavalera oficial de Porto Velho. Pode conferir na loja.'"},
+      {"channel": "instagram", "actual_tone": "[E] Produto + reels de loja, alinhado à estética, mas disperso em 2 perfis (@jiojicavalera + @cavaleraportovelho).", "target_alignment": "parcial", "drift_notes": "Sem perfil-mãe e sem cadência, o tom não acumula personalidade — vira feed de catálogo.", "fix": "Concentrar em @jiojicavalera, dar voz de 'atitude/local' nas legendas e Reels, usar UGC de clientes de PVH.", "example": "[E] Sem citação observada — solicitar screenshots."},
+      {"channel": "anuncios", "actual_tone": "[E] Sem dados (V4MOS pendente).", "target_alignment": "nenhum", "drift_notes": "Sem campanhas observáveis para auditar tom.", "fix": "Quando houver mídia: usar a mensagem-chave social ('Vista a atitude: a Cavalera original que a galera de Porto Velho reconhece').", "example": "n/a"},
+      {"channel": "google_meu_negocio", "actual_tone": "[E] Descrição provavelmente genérica.", "target_alignment": "parcial", "drift_notes": "GMB não comunica 'loja oficial Cavalera em Porto Velho' nem a curadoria multimarca.", "fix": "Reescrever descrição com o posicionamento local + originalidade.", "example": "'Loja oficial Cavalera em Porto Velho — também Lado Avesso, Yexx e Melissa. Atitude, irreverência e estilo, com 6x e frete grátis.'"},
+      {"channel": "whatsapp", "actual_tone": "[E] Não verificado; sem WhatsApp Business confirmado.", "target_alignment": "media", "drift_notes": "Sem saudação/respostas padronizadas, o tom varia e perde a oportunidade de reforçar 'original/atitude' no fechamento.", "fix": "Saudação e respostas rápidas com voz da marca + foco em originalidade e conveniência.", "example": "Saudação: 'Salve! Bem-vindo à Jioji Cavalera, a oficial de Porto Velho. Tô aqui pra te ajudar — o que você procura?'"}
+    ],
+    "coherence_score": 50
+  },
+  "url_audit": {
+    "description": "URLs e perfis críticos para QA do operador antes da apresentação ao cliente.",
+    "urls": [
+      {"url": "https://www.jioji.com.br/", "purpose": "E-commerce principal (Nuvemshop)", "status_expected": "GA4/GTM já ok (G-65GDQ7D436 / GTM-WBLVTS8N) + Meta Pixel corrigido e disparando + eventos de compra no GA4, prova social preenchida, FAQ de originalidade/frete/troca, rodapé com CNPJ", "verify_checklist": ["Meta Pixel disparando PageView/Purchase? (GTM/GA4 já confirmados na auditoria deep)", "Evento purchase configurado no GA4?", "Seção de depoimentos preenchida e avaliações de produto ativas?", "FAQ cobre originalidade, frete Norte, prazo e troca?", "Rodapé tem CNPJ/razão social e endereço das lojas?", "Links de origem usam UTM?"]},
+      {"url": "https://www.instagram.com/jiojicavalera/", "purpose": "Perfil-mãe (a consolidar) — ~6,2k", "status_expected": "Bio clara, link com UTM, destaques organizados (Novidades, Cavalera, Melissa, Como comprar, É original), cadência de Reels", "verify_checklist": ["Bio diz 'loja oficial Cavalera Porto Velho'?", "Link na bio com UTM para a loja?", "Destaques organizados por tema?", "Há Reels recentes de looks/UGC?", "Papel definido vs @cavaleraportovelho?"]},
+      {"url": "https://www.instagram.com/cavaleraportovelho/", "purpose": "Perfil paralelo — decidir consolidar/especializar", "status_expected": "Definição clara: redirecionar para o perfil-mãe ou especializar (ex: loja do shopping)", "verify_checklist": ["Confirmar quem administra", "Há audiência relevante a preservar?", "Decisão: consolidar ou especializar?"]},
+      {"url": "https://wa.me/5569984523558", "purpose": "Conversão/atendimento — WhatsApp do site", "status_expected": "Número oficial único, conta WhatsApp Business com saudação, catálogo e respostas rápidas", "verify_checklist": ["É o número oficial único? (eliminar 99331-3494 / 3221-0706 da divulgação ou unificar)", "É WhatsApp Business?", "Tem catálogo configurado?", "Respostas rápidas para objeções?", "Saudação com a voz da marca?"]},
+      {"url": "Google Meu Negócio — Av. Carlos Gomes, 2350 + Porto Velho Shopping", "purpose": "Presença local + busca 'Cavalera Porto Velho'", "status_expected": "2 perfis verificados, descrição 'loja oficial Cavalera PVH', fotos atualizadas, Google Posts, avaliações respondidas", "verify_checklist": ["Os 2 endereços têm GMB verificado?", "Descrição posiciona oficial + multimarca?", "Fotos recentes de produto/loja?", "Quantas avaliações e qual a nota?", "Posts recentes?"]}
+    ]
+  },
+  "quick_wins": [
+    {
+      "action": "Corrigir o Meta Pixel e configurar eventos de compra no GA4/GTM (já instalados) no site Nuvemshop",
+      "channel": "site",
+      "time_estimate": "2-3h",
+      "expected_impact": "Fecha a medição do funil: o GA4/GTM já rodam; passa a medir compra (evento purchase) e a formar audiência de remarketing no Meta (Pixel corrigido) dos visitantes e dos ~6,2k seguidores. Pré-requisito de toda mídia paga e CRO.",
+      "who_does_it": "operator",
+      "steps": [
+        "Acessar o admin da Nuvemshop → Canais de venda / Apps de marketing",
+        "Diagnosticar e corrigir o disparo do Meta Pixel (instalado mas sem PageView); confirmar GA4 (G-65GDQ7D436) e GTM (GTM-WBLVTS8N) já ativos",
+        "Verificar disparo dos eventos padrão (PageView, ViewContent, AddToCart, Purchase) com a extensão Meta Pixel Helper / GA DebugView e ligar o evento purchase no GA4",
+        "Criar públicos de remarketing no Gerenciador de Anúncios (visitantes 30/60/90d, add to cart)",
+        "Documentar IDs e acessos para a V4"
+      ]
+    },
+    {
+      "action": "Preencher prova social + criar FAQ de originalidade/frete/troca + CNPJ no rodapé",
+      "channel": "site",
+      "time_estimate": "2-3h",
+      "expected_impact": "Responde a objeção nº 1 do streetwear ('é original?') e aumenta confiança de quem compra de fora de Porto Velho — reduz abandono no checkout sem gastar mídia.",
+      "who_does_it": "client_team",
+      "steps": [
+        "Coletar 4-6 prints/avaliações reais de clientes (autorizar nome/foto) e ativar avaliações de produto na Nuvemshop",
+        "Escrever FAQ: 'Os produtos são originais?' (loja oficial Cavalera PVH), 'Vocês entregam na minha cidade?' (frete Norte), 'Qual o prazo?', 'Como faço troca/devolução?' (incluindo troca na loja física)",
+        "Adicionar CNPJ/razão social + endereço das 2 lojas no rodapé",
+        "Publicar e revisar no mobile"
+      ]
+    },
+    {
+      "action": "Consolidar a identidade digital em @jiojicavalera como perfil-mãe",
+      "channel": "instagram",
+      "time_estimate": "2h + decisão",
+      "expected_impact": "Concentra audiência, prova social e mensagem em um canal que acumula autoridade; facilita um Business Manager único para mídia.",
+      "who_does_it": "operator",
+      "steps": [
+        "Mapear audiência e papel de @jiojicavalera, @cavaleraportovelho, FB /cavalerapvelho e TikTok @forlifecavalera",
+        "Decidir com o cliente: @jiojicavalera é o oficial; @cavaleraportovelho redireciona (bio aponta para o oficial) ou especializa (loja do shopping)",
+        "Padronizar bio ('Loja oficial Cavalera em Porto Velho'), link com UTM, e criar destaques: Novidades, Cavalera, Melissa, Como comprar, É original",
+        "Cruzar divulgação (FB/TikTok apontam para o perfil-mãe)"
+      ]
+    },
+    {
+      "action": "Otimizar os 2 GMBs como 'loja oficial Cavalera em Porto Velho'",
+      "channel": "google_meu_negocio",
+      "time_estimate": "2h",
+      "expected_impact": "Captura a busca local de alta intenção ('Cavalera Porto Velho') que o e-commerce nacional não atende, e reforça originalidade/confiança.",
+      "who_does_it": "client",
+      "steps": [
+        "Confirmar verificação dos 2 endereços (Av. Carlos Gomes, 2350 + Porto Velho Shopping)",
+        "Reescrever descrição: 'Loja oficial Cavalera em Porto Velho — também Lado Avesso, Yexx e Melissa. Frete grátis e 6x. Atitude, irreverência e estilo.'",
+        "Upload de fotos atualizadas (vitrine, produtos, fachada), definir categoria correta",
+        "Publicar Google Posts de coleção/promoção semanais e solicitar avaliações a clientes recentes (responder todas)"
+      ]
+    },
+    {
+      "action": "Estruturar WhatsApp Business (1 número oficial) com catálogo, saudação e respostas rápidas",
+      "channel": "whatsapp",
+      "time_estimate": "1-2h",
+      "expected_impact": "Reduz fricção no fechamento, padroniza a marca e responde rápido às objeções ('é original?', 'parcela?', 'chega no Norte?').",
+      "who_does_it": "client",
+      "steps": [
+        "Definir 1 número oficial e padronizá-lo no site, bio e GMB (descontinuar a divulgação dos demais)",
+        "Migrar para WhatsApp Business; configurar saudação com a voz da marca e mensagem de ausência (Seg-Sex 9-18h / Sáb 9-15h)",
+        "Montar catálogo com 8-10 produtos (Cavalera + Melissa) com foto, preço e link",
+        "Criar 5-7 respostas rápidas para as objeções da Objection Library (originalidade, preço vs Shopee, parcelamento 6x, frete Norte, troca)"
+      ]
+    }
+  ],
+  "key_insight": {
+    "headline": "A Jioji perde o cliente exatamente onde ele decide: na hora de checar 'é original?' e comparar preço. O site não prova que é original e — com o Meta Pixel quebrado — a verba do Meta não recupera quem saiu. Dois consertos baratos atacam o estágio que mais vaza.",
+    "context": "O funil do cliente de Cavalera tem um gargalo claro: na Pesquisa/Comparação ele confere originalidade e preço. A Jioji tem a resposta definitiva (loja oficial + 2 lojas físicas + 17 anos), mas não a comunica — depoimentos vazios, sem FAQ, sem CNPJ. Então o cliente decide por preço, onde marketplace e cavalera.com.br vencem. Pior: com o Meta Pixel quebrado, quem pesquisou e saiu não é recuperado pela verba do Meta. Os dois consertos (prova social/FAQ de originalidade + corrigir o Meta Pixel para remarketing) são de baixo esforço e miram precisamente o ponto de maior perda — e independem do V4MOS.",
+    "numbered_reasons": [
+      "(1) A objeção nº 1 do streetwear ('é original?') hoje fica sem resposta no site. A Jioji tem o argumento mais forte (oficial + física) e não usa — é o destravamento mais barato de todos.",
+      "(2) Com o Meta Pixel quebrado, a verba do Meta não recupera quem visita e não compra na hora — e o cliente de moda raramente compra na primeira visita. Corrigir o Pixel recupera essa audiência via remarketing no Meta.",
+      "(3) A identidade fragmentada em 4 perfis dilui justamente a prova social e a autoridade que venceriam a comparação. Consolidar concentra a força da marca onde a decisão acontece."
+    ],
+    "discussion_anchor": "Decisão a alinhar com a Jioji: aprovar os 5 quick wins de custo zero das próximas 1-2 semanas (corrigir o Pixel + eventos de compra + prova social/FAQ + consolidar identidade + GMB + WhatsApp Business). Eles independem do V4MOS, atacam o maior vazamento do funil (originalidade/comparação) e transformam a comunicação de meio-cega e dispersa em mensurável e focada — base para tudo que vem na S2/S3."
+  },
+  "honesty_alert": "Auditoria DIRECIONAL com 3 limitações: (1) V4MOS pendente — sem dados de conversão de anúncios; o canal de mídia (score 30 [E]) ainda é parcial. (2) Sem screenshots de Instagram, GMB e WhatsApp — os scores desses canais (35/35/25) são estimados a partir do research e devem ser revistos com material visual e acessos. (3) O ICP que orienta a leitura é hipótese (persona-icp v2, a validar no PDV), assim como o funil e os percentuais de leakage. O que é FATO observável (auditoria deep/Playwright): o site tem GTM (GTM-WBLVTS8N) + GA4 (G-65GDQ7D436) + tag Google Ads, mas o Meta Pixel está quebrado (não dispara PageView) e o GA4 não tem evento de compra; a prova social está vazia, não há FAQ nem CNPJ, e a identidade está em 4 perfis. Os 5 quick wins atacam fatos observáveis e independem das validações — começam já. Os scores e o mapa de funil devem ser recalibrados após: liberar V4MOS, obter screenshots/acessos (IG, GMB, WhatsApp) e validar a persona com o responsável da Jioji."
+}

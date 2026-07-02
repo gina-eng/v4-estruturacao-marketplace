@@ -1,0 +1,228 @@
+{
+  "client_name": "Bombachas Farroupilha",
+  "skill": "ee-s3-gmb-otimizacao",
+  "version": 2,
+  "generated_at": "2026-06-22T09:30:00Z",
+  "summary": "Perfil GMB otimizado para Bombachas Farroupilha em Ciríaco/RS. Categoria principal 'Loja de Roupas' com 6 categorias secundárias cobrindo fabricante, atacado e moda gaúcha. 4 posts temáticos para os primeiros 30 dias, 5 Q&As baseadas nas objeções reais do ICP (Mariana B2C e Diego B2B). Checklist com 15 itens priorizados por impacto SEO local.",
+  "summary_headline": "GMB otimizado para capturar 'bombacha artesanal [cidade]' — perfil completo com posts de bastidores e Q&As que eliminam objeção de preço antes do clique.",
+  "summary_highlights": [
+    {
+      "category": "posicao",
+      "label": "Categoria principal",
+      "value": "Loja de Roupas / Fabricante Têxtil",
+      "subtext": "Dupla categoria aumenta cobertura de busca B2C e B2B",
+      "tone": "blue"
+    },
+    {
+      "category": "oportunidade",
+      "label": "Keywords-alvo GMB",
+      "value": "bombacha de favo artesanal + bombacha gaúcha Ciríaco",
+      "subtext": "Termos específicos com menor concorrência local que 'bombacha gaúcha'",
+      "tone": "green"
+    },
+    {
+      "category": "janela",
+      "label": "Posts iniciais",
+      "value": "4 posts / 30 dias",
+      "subtext": "Frequência semanal mínima para sinal de atividade ao algoritmo GMB",
+      "tone": "blue"
+    },
+    {
+      "category": "oportunidade",
+      "label": "Q&As pré-populadas",
+      "value": "5 perguntas + respostas",
+      "subtext": "Baseadas nas objeções reais: preço, prazo, pedido mínimo, envio",
+      "tone": "green"
+    },
+    {
+      "category": "maturidade",
+      "label": "Checklist de implementação",
+      "value": "15 itens",
+      "subtext": "Ordenados por impacto SEO — descrição e fotos primeiro",
+      "tone": "gray"
+    }
+  ],
+  "summary_key_findings": [
+    {
+      "category": "vantagem",
+      "text": "O nome 'Bombacha de Favo artesanal' é um long tail com baixíssima concorrência no Google Maps. Qualquer negócio em Ciríaco/RS que otimize para esse termo fica sozinho por, pelo menos, 12-18 meses — nenhum concorrente mapeado usa esse posicionamento no GMB."
+    },
+    {
+      "category": "acao",
+      "text": "A descrição do perfil GMB deve obrigatoriamente incluir 'Bombacha de Favo artesanal trançada à mão' nas primeiras 100 palavras — é o diferencial que os algoritmos do Google Maps indexam para buscas relacionadas a produtos e não apenas a razão social."
+    },
+    {
+      "category": "contexto",
+      "text": "O GMB de Ciríaco/RS está praticamente não disputado na categoria moda gaúcha. Qualquer perfil completo (100% de informações, fotos atualizadas, posts regulares) vai aparecer no top 3 do Maps local para buscas de pilcha na região."
+    },
+    {
+      "category": "ameaca",
+      "text": "Posts regulares no GMB (mínimo 1/semana) são sinal de atividade para o algoritmo — perfis que ficam 30+ dias sem post perdem posição no pack local. Recomendação: integrar post GMB na agenda semanal de conteúdo junto com Instagram."
+    }
+  ],
+  "profile_description": "Fábrica de pilchas gaúchas em Ciríaco, RS — especialista em Bombacha de Favo artesanal trançada à mão. A Bombachas Farroupilha produz diretamente: sem intermediário, prazo de 35 dias e pedido mínimo de 15 peças para lojistas. Atendemos mulheres pilcheiras (B2C) e pilcharias regionais (B2B) que recusam cópia industrial. Bombacha de Favo, bombacha feminina, colete gaúcho, saia de prenda. Direto da fábrica. Envio para todo o Brasil. Fale com a Loreni pelo WhatsApp.",
+  "categories": {
+    "primary": "Loja de roupas",
+    "secondary": [
+      "Fabricante de roupas",
+      "Loja de roupas folclóricas",
+      "Atacadista de roupas",
+      "Loja de moda feminina",
+      "Artesanato",
+      "Confecção de roupas"
+    ]
+  },
+  "attributes": [
+    "Atendimento pelo WhatsApp",
+    "Venda online",
+    "Entrega em todo o Brasil",
+    "Produtos artesanais",
+    "Atendimento personalizado",
+    "Encomenda sob medida"
+  ],
+  "services": [
+    {
+      "name": "Bombacha de Favo Artesanal",
+      "description": "Bombacha feminina com acabamento de favo trançado à mão pela costureira-chefe. Caimento exclusivo, prazo 35 dias. Principal produto da fábrica — diferencial artesanal não reproduzível industrialmente.",
+      "price": "A partir de R$ 280"
+    },
+    {
+      "name": "Bombacha Tradicional Gaúcha",
+      "description": "Bombacha feminina tradicional em tecido de qualidade. Ideal para CTG, Semana Farroupilha e eventos gaúchos. Produção própria em Ciríaco/RS.",
+      "price": "A partir de R$ 90"
+    },
+    {
+      "name": "Kit Invernada",
+      "description": "Conjunto completo para grupos de dança gaúcha (invernada): bombacha + colete + camisa. Pedido mínimo por conjunto, prazo 35 dias, entrega confirmada por escrito.",
+      "price": "Sob consulta"
+    },
+    {
+      "name": "Bombacha Atacado (B2B — Pilcharias)",
+      "description": "Fornecimento para lojistas e pilcharias: pedido mínimo 15 peças, prazo 35 dias garantido, atendimento direto com a Loreni. Linha Bombacha de Favo e linha Popular disponíveis.",
+      "price": "Bombacha de Favo: a partir de R$ 180/peça (atacado)"
+    },
+    {
+      "name": "Saia de Prenda",
+      "description": "Saia de prenda gaúcha em tecido tradicional, produção própria. Peça complementar para compor pilcha feminina completa.",
+      "price": "Sob consulta"
+    }
+  ],
+  "posts": [
+    {
+      "title": "Por dentro do processo: como nasce uma Bombacha de Favo",
+      "text": "Você sabia que cada Bombacha de Favo da Farroupilha leva 4 a 6 horas de acabamento manual?\n\nA nossa costureira-chefe faz o trançado ponto por ponto — não é estampado, não é industrial. É artesanato de verdade.\n\nPor isso o caimento é diferente. Por isso a pilcha da tribo reconhece.\n\nSe você quer uma Bombacha de Favo autêntica para a Semana Farroupilha, o prazo é 35 dias. Comece a encomendar agora para garantir a data.\n\nFale com a Loreni pelo WhatsApp 👇",
+      "cta": "Saiba mais",
+      "type": "novidade"
+    },
+    {
+      "title": "Fábrica em Ciríaco — sem intermediário, direto para você",
+      "text": "A Bombachas Farroupilha não é loja de revenda. Somos a fábrica.\n\nIsso significa:\n✅ Você fala direto com quem produz\n✅ Prazo de 35 dias — por escrito\n✅ Preço sem margem de revenda\n✅ Atendimento da Loreni no WhatsApp\n\nAtendemos mulheres pilcheiras (peça individual) e lojistas de pilcharia (mínimo 15 peças, B2B).\n\nDe Ciríaco, RS, para qualquer lugar do Brasil.",
+      "cta": "Ligar",
+      "type": "novidade"
+    },
+    {
+      "title": "Semana Farroupilha — quando é o prazo máximo para encomendar?",
+      "text": "Para garantir a pilcha pronta antes da Semana Farroupilha (20 de setembro), o prazo limite de encomenda é o dia 15 de agosto.\n\nNosso processo artesanal leva 35 dias — não tem atalho, e é exatamente isso que garante o acabamento que você quer.\n\nSe você já sabe que quer uma Bombacha de Favo para o evento, não deixe para a última hora.\n\nChame a Loreni no WhatsApp hoje e confirme a sua data. 📅",
+      "cta": "Reservar",
+      "type": "evento"
+    },
+    {
+      "title": "Bombacha de Favo: o que é e por que o caimento é diferente",
+      "text": "Muita gente chega aqui sem saber a diferença entre Bombacha de Favo artesanal e bombacha popular.\n\n🔸 Bombacha popular: tecido padrão, acabamento simples, produção industrial. Funciona para o dia a dia.\n\n🔸 Bombacha de Favo artesanal: cada favo é trançado à mão pela nossa costureira-chefe. O miolo de favo real cria um caimento que o industrial não consegue reproduzir — reconhecível por quem entende de pilcha.\n\nO preço reflete o processo. A diferença é visível na foto. Ainda mais visível na hora de usar.\n\nQuer ver o processo? Acessa nosso Instagram @farroupilha_bombachas ou fala com a Loreni no WhatsApp.",
+      "cta": "Saiba mais",
+      "type": "novidade"
+    }
+  ],
+  "qas": [
+    {
+      "question": "Qual o prazo de entrega das bombachas?",
+      "answer": "O prazo padrão de produção é de 35 dias corridos após a confirmação do pedido e pagamento. Para eventos como a Semana Farroupilha (20 de setembro), o prazo máximo de encomenda é dia 15 de agosto. Confirmamos a data de entrega por escrito no WhatsApp. Atendimento direto com a Loreni: (54) 9615-0025."
+    },
+    {
+      "question": "Vocês vendem para loja (atacado)?",
+      "answer": "Sim! Atendemos pilcharias e lojistas regionais. Pedido mínimo: 15 peças. Prazo: 35 dias garantido por escrito. Temos a linha Bombacha de Favo artesanal (a partir de R$ 180/peça atacado) e a linha Popular Tradicional. Atendimento direto com a Loreni para condições e tabela de preços. WhatsApp: (54) 9615-0025."
+    },
+    {
+      "question": "Fazem envio para fora do RS?",
+      "answer": "Sim, enviamos para todo o Brasil pelos Correios (PAC e SEDEX). O prazo de envio é calculado após a produção de 35 dias. Informamos o código de rastreamento no WhatsApp assim que o pedido for postado. Para calcular frete e confirmar prazo total, entre em contato com a Loreni: (54) 9615-0025."
+    },
+    {
+      "question": "Qual a diferença entre a Bombacha de Favo e a bombacha normal?",
+      "answer": "A Bombacha de Favo Artesanal tem o miolo de favo trançado à mão pela nossa costureira-chefe — processo que leva 4 a 6 horas por peça. O resultado é um caimento diferenciado, reconhecível por quem conhece pilcha. A bombacha popular tem acabamento simples, sem o trançado manual. O preço da Bombacha de Favo começa em R$ 280 (B2C) — o custo reflete o processo artesanal real."
+    },
+    {
+      "question": "Como faço um pedido?",
+      "answer": "O pedido é feito direto pelo WhatsApp com a Loreni: (54) 9615-0025. Informamos modelo, tamanho, quantidade e confirmamos prazo e forma de pagamento. Para B2C (peça individual), trabalhamos com encomenda. Para B2B (lojistas), pedido mínimo de 15 peças. Não temos loja física aberta ao público — somos fábrica direta em Ciríaco/RS."
+    }
+  ],
+  "implementation_checklist": [
+    {
+      "item": "Atualizar descrição do perfil GMB com texto otimizado deste documento (max 750 chars)",
+      "status": "pending",
+      "notes": "Copiar o campo profile_description deste JSON diretamente no painel GMB"
+    },
+    {
+      "item": "Selecionar categoria principal: 'Loja de roupas'",
+      "status": "pending"
+    },
+    {
+      "item": "Adicionar 6 categorias secundárias conforme lista deste documento",
+      "status": "pending"
+    },
+    {
+      "item": "Adicionar 5 serviços com nome, descrição e preço",
+      "status": "pending"
+    },
+    {
+      "item": "Publicar post #1 (Processo: como nasce a Bombacha de Favo)",
+      "status": "pending",
+      "notes": "Incluir foto real do processo — mãos da costureira-chefe trançando o favo"
+    },
+    {
+      "item": "Adicionar 5 Q&As pré-populadas no painel GMB",
+      "status": "pending",
+      "notes": "Ir em 'Perguntas e respostas' no GMB e inserir manualmente as 5 perguntas + respostas deste documento"
+    },
+    {
+      "item": "Upload de ao menos 10 fotos de alta qualidade (interior da fábrica + produtos)",
+      "status": "pending",
+      "notes": "Foto de perfil: logo em fundo Areia Pampa. Foto de capa: interior da fábrica com luz natural quente"
+    },
+    {
+      "item": "Adicionar atributos: WhatsApp, Venda online, Entrega nacional, Artesanal, Encomenda sob medida",
+      "status": "pending"
+    },
+    {
+      "item": "Verificar se endereço de Ciríaco/RS está correto com CEP e número",
+      "status": "pending"
+    },
+    {
+      "item": "Ativar função de mensagens do GMB e vincular com WhatsApp Business",
+      "status": "pending"
+    },
+    {
+      "item": "Publicar post #2 (Fábrica direta — sem intermediário)",
+      "status": "pending",
+      "notes": "Semana 2 do cronograma"
+    },
+    {
+      "item": "Publicar post #3 (Prazo limite Semana Farroupilha)",
+      "status": "pending",
+      "notes": "Semana 3 — publicar obrigatoriamente antes de agosto/2026"
+    },
+    {
+      "item": "Publicar post #4 (Diferença Bombacha de Favo vs popular)",
+      "status": "pending",
+      "notes": "Semana 4"
+    },
+    {
+      "item": "Configurar horário de funcionamento (incluindo sábado se aplicável)",
+      "status": "pending"
+    },
+    {
+      "item": "Solicitar 5 primeiras avaliações de clientes B2B ativos (Diego) via WhatsApp — com instrução de como avaliar",
+      "status": "pending",
+      "notes": "Avaliações com menção a 'bombacha de favo', 'prazo cumprido' e 'Loreni' têm peso maior no SEO local"
+    }
+  ]
+}

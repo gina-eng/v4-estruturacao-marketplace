@@ -1,0 +1,275 @@
+{
+  "client_name": "Bombachas Farroupilha",
+  "skill": "ee-s3-landing-page",
+  "version": 2,
+  "generated_at": "2026-06-22T10:00:00Z",
+  "summary": "Landing page B2C da Bombachas Farroupilha com 7 seções: hero focado em Mariana, problema de autenticidade, solução artesanal, processo de encomenda, prova social, FAQ com 5 objeções reais e CTA final para WhatsApp. Copy calibrada para persona Mariana (emocional, identidade cultural) com bloco de atendimento B2B (Diego).",
+  "summary_headline": "LP B2C de 7 seções que converte a cética Mariana: ela comprou industrial antes, sabe reconhecer favo e quer ver o processo antes de fechar.",
+  "summary_highlights": [
+    {
+      "category": "posicao",
+      "label": "Proposta principal",
+      "value": "Fábrica artesanal direta — favo trançado à mão",
+      "subtext": "Contra: loja de shopping, cópia industrial",
+      "tone": "blue"
+    },
+    {
+      "category": "oportunidade",
+      "label": "CTA primário",
+      "value": "WhatsApp com mensagem pré-formatada",
+      "subtext": "Loreni atende direto — sem bot, sem formulário",
+      "tone": "green"
+    },
+    {
+      "category": "posicao",
+      "label": "FAQ",
+      "value": "5 objeções reais respondidas",
+      "subtext": "Preço, prazo, caimento, envio, diferença favo",
+      "tone": "blue"
+    },
+    {
+      "category": "maturidade",
+      "label": "Seções",
+      "value": "7 seções em ordem de funil",
+      "subtext": "Hero → Problema → Solução → Processo → Prova → FAQ → CTA",
+      "tone": "gray"
+    },
+    {
+      "category": "oportunidade",
+      "label": "Gatilho sazonal",
+      "value": "Semana Farroupilha (20/set)",
+      "subtext": "Urgência natural: prazo 35 dias + data do evento",
+      "tone": "green"
+    }
+  ],
+  "summary_key_findings": [
+    {
+      "category": "vantagem",
+      "text": "Mariana já passou pelo evento de comprar bombacha industrial e passar vergonha — ela ativa a LP com ceticismo, não com entusiasmo. O hero da LP deve reconhecer essa dor antes de apresentar a solução. 'Você já ficou sem jeito usando bombacha que não caiu bem?' abre mais do que 'As melhores bombachas do RS'."
+    },
+    {
+      "category": "acao",
+      "text": "A objeção #1 ('achei caro — na Renner tem por R$ 80') deve ser respondida dentro da seção de solução — antes do FAQ, antes da prova social. Explicar o processo do favo com evidência (foto/vídeo do trançado) é a unica coisa que move Mariana de 'caro' para 'vale o preço'."
+    },
+    {
+      "category": "contexto",
+      "text": "A LP tem uma dupla audiência: Mariana (B2C, emocional, scroll no celular) e Diego (B2B lojista, funcional, clicou no Google Ads de atacado). Uma seção dedicada 'Para lojistas de pilcharia' com specs objetivos (15 peças mínimo, 35 dias, tabela de preços) serve o Diego sem poluir o fluxo da Mariana."
+    },
+    {
+      "category": "ameaca",
+      "text": "Sem pixel Meta e GA4 configurados antes do go-live, a LP não aprende — leads gerados pelo Meta Ads ficam sem atribuição e o CPL se torna opaco. GTM-M7WTSW9C já está instalado; evento 'click_whatsapp' deve ser configurado antes do primeiro anúncio."
+    }
+  ],
+  "whatsapp_link": "https://wa.me/5554961500025?text=Ol%C3%A1%2C%20Loreni!%20Vi%20a%20Bombachas%20Farroupilha%20e%20quero%20saber%20mais%20sobre%20a%20Bombacha%20de%20Favo%20artesanal.",
+  "sections": [
+    {
+      "name": "hero",
+      "eyebrow": "Fábrica em Ciríaco/RS · 15 anos de pilcha artesanal",
+      "headline": "A Bombacha de Favo que a tribo reconhece — feita à mão, direto da fábrica.",
+      "subheadline": "Para mulheres pilcheiras que não aceitam cópia industrial. Prazo de 35 dias, fábrica direta, atendimento da Loreni.",
+      "body": "Não é vitrine de loja. Não é revenda de atacado. É a fábrica — a costureira-chefe trança cada favo à mão, o caimento é diferente, e a Loreni te atende pelo WhatsApp.",
+      "cta_primary": "Encomendar pelo WhatsApp",
+      "cta_secondary": "Ver o processo de produção",
+      "stats": [
+        {
+          "number": "35 dias",
+          "label": "Prazo de produção artesanal"
+        },
+        {
+          "number": "15+",
+          "label": "Anos de pilcha artesanal em Ciríaco/RS"
+        },
+        {
+          "number": "Direto",
+          "label": "Da fábrica para você — sem intermediário"
+        }
+      ]
+    },
+    {
+      "name": "problem",
+      "headline": "Você já passou vergonha usando bombacha que não caiu bem?",
+      "subheadline": "O problema não é você. É a bombacha.",
+      "body": "A maioria das bombachas vendidas no Brasil hoje é produção industrial — o favo é estampado, não trançado. O caimento fica diferente. Quem entende de pilcha, percebe.\n\nE você percebe também.",
+      "cards": [
+        {
+          "title": "Favo estampado ≠ Favo artesanal",
+          "body": "Parece igual na foto. Na hora de usar, a diferença aparece. O favo estampado é impresso no tecido — o artesanal é trançado à mão, ponto por ponto. Caimento e textura diferentes."
+        },
+        {
+          "title": "Prazo incerto, evento certo",
+          "body": "Você pediu 'entre 30 e 40 dias'. A Semana Farroupilha não espera. Sem confirmação de data por escrito, você assume o risco."
+        },
+        {
+          "title": "Loja não sabe o que vende",
+          "body": "A vendedora da loja não sabe o que é favo trançado. Não sabe quem fez. Não sabe o prazo real de reposição. Você compra no escuro."
+        }
+      ]
+    },
+    {
+      "name": "solution",
+      "eyebrow": "· A diferença artesanal",
+      "headline": "Bombacha de Favo artesanal — feita à mão pela costureira-chefe.",
+      "subheadline": "Cada ponto do favo é trançado manualmente. 4 a 6 horas de acabamento por peça. Não tem máquina que reproduza.",
+      "body": "A Bombachas Farroupilha produz em Ciríaco/RS há 15 anos. Nossa Bombacha de Favo é o produto-carro-chefe: a costureira-chefe faz o trançado à mão — não é estampado, não é industrial. Por isso o caimento é diferente. Por isso a tribo reconhece.\n\nO preço começa em R$ 280 porque o trabalho manual é real. Se você quer entender por quê, a Loreni te manda um vídeo de 30 segundos do processo.",
+      "benefits": [
+        {
+          "icon": "hand",
+          "title": "Trançado à mão",
+          "body": "A costureira-chefe faz cada favo manualmente. 4-6 horas de trabalho artesanal por peça — o que o industrial não reproduz."
+        },
+        {
+          "icon": "factory",
+          "title": "Fábrica direta",
+          "body": "Você fala com quem produz. A Loreni atende no WhatsApp e sabe o status de cada pedido."
+        },
+        {
+          "icon": "calendar-check",
+          "title": "Prazo por escrito",
+          "body": "35 dias de produção artesanal. Confirmamos a data de entrega no WhatsApp — sem 'estimativas'."
+        },
+        {
+          "icon": "truck",
+          "title": "Envio para todo o Brasil",
+          "body": "Correios (PAC e SEDEX) com rastreamento. De Ciríaco/RS para onde você estiver."
+        },
+        {
+          "icon": "badge-check",
+          "title": "Autenticidade verificável",
+          "body": "Você vê o processo antes de comprar. Vídeo do trançado, nome da costureira-chefe, fábrica identificada."
+        }
+      ]
+    },
+    {
+      "name": "how_it_works",
+      "headline": "Como encomendar a sua Bombacha de Favo",
+      "subheadline": "Simples, direto e com confirmação de prazo.",
+      "steps": [
+        {
+          "number": 1,
+          "title": "Manda mensagem para a Loreni",
+          "body": "WhatsApp direto — sem formulário, sem chatbot. Conta o que você quer: modelo, tamanho, para qual evento. A Loreni responde em até 4h em dias úteis."
+        },
+        {
+          "number": 2,
+          "title": "Confirma pedido com data de entrega",
+          "body": "A Loreni confirma a data de entrega por escrito. Se você precisar para a Semana Farroupilha, ela calcula se o prazo de 35 dias fecha. Sem surpresa."
+        },
+        {
+          "number": 3,
+          "title": "Recebe com acompanhamento semanal",
+          "body": "Durante a produção, a Loreni manda atualização no WhatsApp. Quando o pedido estiver pronto, você recebe o código de rastreamento dos Correios."
+        }
+      ]
+    },
+    {
+      "name": "deliverables",
+      "headline": "Para lojistas de pilcharia (B2B)",
+      "subheadline": "Pedido mínimo 15 peças · Prazo 35 dias · Atendimento direto com a Loreni",
+      "body": "Se você tem uma pilcharia ou loja de moda gaúcha regional, a Bombachas Farroupilha atende atacado. Pedido mínimo de 15 peças, prazo de 35 dias por escrito, sem necessidade de pedido de 200 peças que amarra capital de giro.\n\nLinha Bombacha de Favo artesanal (a partir de R$ 180/peça) e linha Popular Tradicional (a partir de R$ 70/peça).",
+      "items": [
+        {
+          "title": "Pedido mínimo: 15 peças",
+          "benefit": "Não amarra capital de giro com lote grande"
+        },
+        {
+          "title": "Prazo: 35 dias por escrito",
+          "benefit": "Data confirmada no pedido — sem 'entre 30 e 45 dias'"
+        },
+        {
+          "title": "Atendimento: Loreni diretamente",
+          "benefit": "Sem passar por representante ou central de atendimento"
+        },
+        {
+          "title": "Linha Bombacha de Favo",
+          "benefit": "A partir de R$ 180/peça atacado (vs R$ 280 B2C)"
+        },
+        {
+          "title": "Linha Popular Tradicional",
+          "benefit": "A partir de R$ 70/peça — entrada para o portfólio da loja"
+        }
+      ]
+    },
+    {
+      "name": "social_proof",
+      "headline": "O que as pilcheiras dizem",
+      "subheadline": "Clientes B2C e lojistas que confiam na Tapparo há anos."
+    },
+    {
+      "name": "final_cta",
+      "eyebrow": "· Direto da fábrica",
+      "headline": "Pronta para encomendar a sua?",
+      "subheadline": "A Loreni está no WhatsApp. Fala, conta o que precisa, e ela confirma o prazo.",
+      "body": "Você viu o processo. Sabe a diferença. Agora é só falar com quem fabrica.\n\n35 dias de produção artesanal. Confirmação de data por escrito. Fábrica direta em Ciríaco/RS.",
+      "cta_primary": "Encomendar pelo WhatsApp",
+      "cta_secondary": "Ver nosso Instagram @farroupilha_bombachas"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Qual o prazo de entrega?",
+      "answer": "O prazo padrão é de 35 dias corridos após confirmação do pedido. A Loreni confirma a data específica de entrega no WhatsApp no momento do pedido. Para eventos com data fixa (ex: Semana Farroupilha, 20 de setembro), informe no primeiro contato para que o prazo seja calculado."
+    },
+    {
+      "question": "A bombacha de favo de vocês é diferente da do shopping?",
+      "answer": "Sim — a diferença é no processo. A Bombacha de Favo da Bombachas Farroupilha tem o miolo de favo trançado à mão pela costureira-chefe. Isso leva 4 a 6 horas por peça. A maioria das bombachas de shopping tem favo estampado (impresso no tecido) — parece parecido na foto, mas o caimento e a textura são diferentes. A Loreni pode te mandar um vídeo de 30s do processo para ver a diferença."
+    },
+    {
+      "question": "Por que custa R$ 280? Achei caro.",
+      "answer": "É uma pergunta justa. O preço reflete o trabalho artesanal real: cada Bombacha de Favo leva 4 a 6 horas de acabamento manual da costureira-chefe. Não tem como fazer isso em larga escala industrial. Se você comparar com bombacha popular de loja (que custa R$ 80-100), o produto é diferente — processo, caimento e durabilidade. Se você quer ver o processo antes de decidir, a Loreni manda o vídeo. Temos também a linha Popular Tradicional a partir de R$ 90."
+    },
+    {
+      "question": "Vocês enviam para outros estados?",
+      "answer": "Sim, enviamos para todo o Brasil pelos Correios (PAC e SEDEX). O prazo de envio é calculado sobre o prazo de produção de 35 dias — você recebe o código de rastreamento no WhatsApp assim que o pedido for postado. Para calcular o prazo total (produção + envio) para a sua cidade, fale com a Loreni."
+    },
+    {
+      "question": "Como fazer o pedido?",
+      "answer": "Direto pelo WhatsApp com a Loreni: (54) 9615-0025. Informe o modelo (Bombacha de Favo ou linha Popular), seu tamanho e se é para algum evento específico. A Loreni confirma a data de entrega e as condições de pagamento. Não tem loja física aberta ao público — somos fábrica direta em Ciríaco/RS."
+    }
+  ],
+  "social_proof": {
+    "stats": [
+      {
+        "number": "15+",
+        "label": "Anos de pilcha artesanal em Ciríaco/RS"
+      },
+      {
+        "number": "35d",
+        "label": "Prazo cumprido por escrito"
+      },
+      {
+        "number": "100%",
+        "label": "Fábrica direta — sem intermediário"
+      }
+    ],
+    "testimonials": [
+      {
+        "name": "Rosane M.",
+        "role": "Integrante de CTG — Caxias do Sul/RS",
+        "text": "Comprei a Bombacha de Favo para a Semana Farroupilha. A Loreni confirmou a data no WhatsApp e chegou 3 dias antes. Quem entende de pilcha no evento perguntou onde eu tinha arrumado.",
+        "rating": 5,
+        "source": "Google Reviews"
+      },
+      {
+        "name": "Miriane L.",
+        "role": "Pilcheira — Passo Fundo/RS",
+        "text": "Já comprei 3 peças da Tapparo. A diferença do favo artesanal para o industrial é visível. Nunca mais compro bombacha de favo em loja.",
+        "rating": 5,
+        "source": "WhatsApp (compartilhado com autorização)"
+      },
+      {
+        "name": "Diego T.",
+        "role": "Pilcharia — Santa Maria/RS",
+        "text": "Trabalho com a Tapparo há 2 anos. Pedido mínimo de 15 peças e prazo de 35 dias por escrito. Nunca atrasou. A Loreni resolve tudo diretamente.",
+        "rating": 5,
+        "source": "Google Reviews"
+      }
+    ]
+  },
+  "meta": {
+    "title": "Bombachas Farroupilha · Favo Artesanal",
+    "description": "Fábrica de Bombacha de Favo artesanal em Ciríaco/RS. Trançado à mão pela costureira-chefe. Prazo 35 dias. Direto da fábrica. Fale com a Loreni.",
+    "og_title": "Bombachas Farroupilha — Feita à mão. Direto da fábrica.",
+    "og_description": "Bombacha de Favo artesanal trançada à mão. Prazo de 35 dias por escrito. Fábrica direta em Ciríaco/RS. Atendimento da Loreni pelo WhatsApp.",
+    "og_type": "website"
+  }
+}

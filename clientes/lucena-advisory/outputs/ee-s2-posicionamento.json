@@ -1,0 +1,188 @@
+{
+  "client_name": "Lucena Advisory",
+  "skill": "ee-s2-posicionamento",
+  "version": 1,
+  "generated_at": "2026-06-19T00:00:00Z",
+  "completed_at": "2026-06-19T00:00:00Z",
+  "data_source": "mixed",
+  "summary": "A Lucena Advisory ocupa o território 'Blindagem · Autoridade · Advisory': a única assessoria ambiental do Amazonas onde o advogado e o engenheiro são a mesma autoridade (Aldo — advogado + engenheiro ambiental + mestre em direito ambiental). A PUV ataca o flanco do líder digital FRTB, que promete 'segurança jurídica' sendo uma casa de engenharia, sem lastro jurídico. PUV: 'A única assessoria ambiental do AM onde o advogado e o engenheiro são a mesma pessoa — para blindar sua operação, não só tirar a licença.' Tagline recomendada: 'Licenciamento ambiental com a lei do seu lado.'",
+  "summary_headline": "Lucena Advisory ocupa o território 'Blindagem · Autoridade · Advisory': a única assessoria do AM onde advogado e engenheiro são a mesma pessoa — ataca o flanco do FRTB, que promete jurídico mas é casa de engenharia.",
+  "summary_highlights": [
+    {
+      "category": "posicao",
+      "label": "Território de marca",
+      "value": "Blindagem · Autoridade · Advisory",
+      "subtext": "Jurídico real + engenharia + parceria estratégica",
+      "tone": "blue"
+    },
+    {
+      "category": "competicao",
+      "label": "Flanco do líder digital",
+      "value": "FRTB sem lastro",
+      "subtext": "Promete 'segurança jurídica' sendo casa de engenharia",
+      "tone": "yellow"
+    },
+    {
+      "category": "oportunidade",
+      "label": "PUV / diferencial",
+      "value": "Advogado = engenheiro",
+      "subtext": "A mesma autoridade nos dois lados — ninguém mais tem",
+      "tone": "green"
+    },
+    {
+      "category": "janela",
+      "label": "Gancho de entrada",
+      "value": "Lei 15.190/2025",
+      "subtext": "Reenquadramento aquece a demanda agora",
+      "tone": "green"
+    },
+    {
+      "category": "risco",
+      "label": "Dependência",
+      "value": "Autoridade do Aldo",
+      "subtext": "Posicionamento ancorado numa pessoa — precisa virar marca",
+      "tone": "red"
+    }
+  ],
+  "summary_key_findings": [
+    {
+      "category": "vantagem",
+      "text": "O território 'advisory jurídico-técnico + autoridade' está vazio e a Lucena tem o único ativo que o preenche de verdade: o Aldo é, numa só pessoa, advogado, engenheiro ambiental e mestre em direito ambiental. Isso ataca diretamente o flanco do FRTB (líder digital), que reivindica 'segurança jurídica' na tagline mas é uma casa de engenheiras — promessa sem lastro que a Lucena pode cumprir."
+    },
+    {
+      "category": "contexto",
+      "text": "O setor inteiro é 'casa de engenharia' competindo em execução técnica. Por isso o preço da Lucena é posicionado como premium e ancorado no custo do risco evitado (embargo, multa, operação parada), não no custo do serviço. O tom é de autoridade que descomplica — técnico mas acessível ao gestor leigo."
+    },
+    {
+      "category": "acao",
+      "text": "TODA a produção da S3 (identidade visual, landing page, copy, criativos, manual de marca) deve nascer deste território. O canal é ABM B2B + busca local (GMB/SEO) + LinkedIn de autoridade — nunca Instagram como canal principal. O gancho de aquisição imediato é o conteúdo sobre a Lei 15.190/2025 e o 'diagnóstico de enquadramento'."
+    },
+    {
+      "category": "ameaca",
+      "text": "O posicionamento depende da autoridade PESSOAL do Aldo (bus factor) e parte do território ('segurança/blindagem') já é alegado pelo FRTB, que tem vantagem de audiência digital. A janela é de pioneirismo: a Lucena precisa transferir essa autoridade pessoal para a marca e ocupar o discurso jurídico rápido, antes que o concorrente o plante primeiro."
+    }
+  ],
+  "positioning_map": {
+    "axis_x": "Casa de engenharia (execução técnica) ←→ Advisory jurídico-técnico (estratégia + direito)",
+    "axis_y": "Commodity / preço ←→ Premium / autoridade",
+    "client_position": "Advisory jurídico-técnico + Premium/autoridade (quadrante superior direito — vazio)",
+    "justification": "O quadrante 'advisory jurídico-técnico premium' está vazio porque exige uma credencial que nenhum concorrente do AM tem: autoridade jurídica forte (advogado + mestre em direito ambiental) somada à engenharia, numa marca de autoridade. A Lucena é a única que pode ocupá-lo com lastro real — o FRTB chega perto pela autoridade digital, mas pelo eixo X continua sendo casa de engenharia.",
+    "competitor_positions": [
+      {"name": "FRTB Consultoria Ambiental", "quadrant": "Casa de engenharia + Premium/autoridade (alta autoridade digital, mas sem perna jurídica real)"},
+      {"name": "Norte Ambiental", "quadrant": "Casa de engenharia + Premium operacional (autoridade em resíduos)"},
+      {"name": "Protege Engenharia", "quadrant": "Casa de engenharia + Premium por tradição (25+ anos)"},
+      {"name": "Moura Ambiental", "quadrant": "Casa de engenharia + Commodity/preço (mineração/cursos)"},
+      {"name": "Aurora Ambiental", "quadrant": "Casa de engenharia + Commodity/preço"},
+      {"name": "Ocidental Consultoria", "quadrant": "Casa de engenharia + Commodity/preço"},
+      {"name": "Lucena Advisory (alvo)", "quadrant": "Advisory jurídico-técnico + Premium/autoridade (vazio)"}
+    ]
+  },
+  "positioning_statements": [
+    {
+      "label": "A Advisory Jurídico-Técnica (RECOMENDADA)",
+      "statement": "Para empresas industriais e comerciais do Amazonas que não podem parar, a Lucena Advisory é a assessoria de licenciamento que blinda juridicamente a sua operação, porque une, numa só autoridade, o advogado, o engenheiro ambiental e o mestre em direito ambiental que decifram a lei e destravam o processo.",
+      "justification": "Ancora no diferencial real e não-copiável (fusão direito + engenharia numa pessoa) e ataca o flanco do líder digital (FRTB), que promete jurídico sendo casa de engenharia. É o posicionamento permanente, sustentável e diferenciado.",
+      "bet": "Prioriza o diferencial não-copiável e o ângulo advisory (estratégia, não despacho). Aposta que 'blindagem jurídica real' é mais forte e defensável que 'mais uma consultoria técnica'.",
+      "risk": "Depende da autoridade pessoal do Aldo (bus factor) e exige bancar a promessa jurídica com consistência e prova. Se o Aldo não estiver presente, a promessa fragiliza."
+    },
+    {
+      "label": "O Especialista em Blindagem de Risco",
+      "statement": "Para o gestor que teme embargo e multa, a Lucena Advisory é a consultoria que transforma a burocracia ambiental em tranquilidade operacional, porque assume o risco regulatório de ponta a ponta com segurança jurídica real.",
+      "justification": "Vai direto na dor emocional da persona (medo de embargo) e no resultado (tranquilidade). Forte para conversão.",
+      "bet": "Prioriza a dor e o resultado emocional. Aposta no apelo direto ao gestor pragmático.",
+      "risk": "O território 'segurança/continuidade operacional' é parcialmente reivindicado pelo FRTB na tagline — entrar por aqui é competir num discurso que o líder digital já plantou, com menos diferenciação."
+    },
+    {
+      "label": "O Decodificador da Nova Lei",
+      "statement": "Para empresas que precisam se reenquadrar na nova Lei 15.190/2025, a Lucena Advisory é a autoridade que traduz o marco legal em ação, porque domina jurídica e tecnicamente as novas modalidades de licenciamento (LAC, LO, LAU).",
+      "justification": "Aproveita a janela quente e atual da nova lei como gancho de aquisição de alta intenção; muito específico e oportuno.",
+      "bet": "Prioriza o timing regulatório como ímã de inbound. Aposta na urgência e na escassez de quem domina a lei nova.",
+      "risk": "É um gancho temporal — a novidade da lei passa. Estreito demais como posicionamento permanente; melhor como campanha de ENTRADA dentro do posicionamento A, não como identidade da marca."
+    }
+  ],
+  "chosen_statement": "Para empresas industriais e comerciais do Amazonas que não podem parar, a Lucena Advisory é a assessoria de licenciamento que blinda juridicamente a sua operação, porque une, numa só autoridade, o advogado, o engenheiro ambiental e o mestre em direito ambiental que decifram a lei e destravam o processo.",
+  "puv": "A única assessoria ambiental do Amazonas onde o advogado e o engenheiro são a mesma pessoa — para blindar sua operação, não só tirar a licença.",
+  "canvas_4p": {
+    "product": {
+      "delivers": "Blindagem jurídico-técnica da operação: diagnóstico de risco regulatório, licenciamento (LP/LI/LO/LAU/LAC), elaboração de estudos e pareceres, resposta a exigências e gestão contínua de conformidade — tudo conduzido por quem domina o direito E a engenharia ambiental, com a entrada de compliance e SST.",
+      "transformation": "Antes: gestor reativo, com medo de fiscalização, dependente de 'contatos' e coordenando engenheiro e advogado separados, sem saber em que pé está cada processo. Depois: operação regularizada e previsível, com um único responsável que decifra a lei, responde pelo resultado e o mantém informado — o gestor volta a focar na operação, em paz.",
+      "doesnt_deliver": "Não é despachante de protocolo barato, não 'agiliza por fora' nem ajuda a burlar o órgão, e não tem como foco a microdemanda pontual de mínimo impacto (cada vez mais resolvível por autosserviço via LAC). Não executa obras de engenharia ambiental (ex: construção de ETE) — projeta, assessora e responde tecnicamente, mas a execução física é de terceiros."
+    },
+    "price": {
+      "positioning": "premium",
+      "justification": "Posicionar acima da média dos generalistas (MEs) porque entrega segurança jurídica real (não só técnica) e assume o risco do enquadramento. A comunicação nunca discute o preço do serviço isolado — ancora sempre no custo de NÃO fazer: embargo, multa e operação parada.",
+      "anchoring": "Ancoragem pelo custo do risco evitado: 'quanto custa um dia da sua operação embargada?'. Diante da exposição (faturamento parado + multa), o ticket de consultoria torna-se pequeno. Para projetos, ancorar no valor do empreendimento viabilizado."
+    },
+    "place": {
+      "main_channel": "ABM / relacionamento B2B direto — expansão dentro da âncora Rei dos Bons Amigos (26 CNPJs) + prospecção dirigida a indústria do PIM, postos e estaleiros — somado à busca local de alta intenção (Google Meu Negócio + SEO 'licenciamento ambiental Manaus').",
+      "main_channel_justification": "O ICP decide em comitê, por risco, e 'não está nas redes sociais' (declarado pelo Aldo). ABM bate direto no comitê de compra com relacionamento; a busca local captura quem pesquisa no momento da exigência. Mídia de interrupção social não atinge esse decisor.",
+      "support_channel": "LinkedIn de autoridade do Aldo (conteúdo técnico-jurídico) + conteúdo sobre a Lei 15.190/2025 e a modalidade LAC como ímã de inbound qualificado.",
+      "avoid_channels": [
+        {"channel": "Instagram orgânico/Ads como canal principal", "reason": "O ICP B2B industrial não compra licenciamento por Instagram. Serve, no máximo, como vitrine institucional secundária — nunca como canal de aquisição central."},
+        {"channel": "TikTok", "reason": "Público e formato incompatíveis com uma decisão B2B de alto risco e ciclo consultivo."},
+        {"channel": "Mídia paga ampla de topo de funil", "reason": "Desperdício enquanto não existe alicerce de conversão (LP, CRM). A decisão entre Google Ads de nicho (leilão vazio) vs LDR/prospector deve sair do diagnóstico de mídia, não da inércia de playbook."}
+      ]
+    },
+    "promotion": {
+      "tone": "Autoridade que descomplica: técnico e preciso, mas acessível ao gestor leigo; pragmático, direto e tranquilizador. Nunca jocoso, sensacionalista, genérico ('mais uma consultoria') nem cheio de jargão jurídico que afaste.",
+      "top_funnel_message": "O que muda para a sua empresa com a nova Lei do Licenciamento (15.190/2025)? Descubra em qual modalidade a sua operação se enquadra agora — e o que isso significa de risco e de economia.",
+      "bottom_funnel_message": "Faça um diagnóstico de risco da sua operação com quem é advogado E engenheiro ambiental. Se estiver tudo certo, você fica tranquilo. Se não, a gente age antes de virar multa ou embargo."
+    }
+  },
+  "brand_territory": {
+    "three_words": ["Blindagem", "Autoridade", "Advisory"],
+    "description": "A Lucena protege a operação do cliente — blindagem jurídico-técnica contra o risco regulatório — sustentada na autoridade rara do Aldo (advogado + engenheiro ambiental + mestre em direito ambiental) e entregue como advisory: parceria estratégica que pensa o negócio do cliente, não despachante que apenas protocola. As três palavras traduzem o que a marca faz (blinda), por que pode prometer (autoridade) e como se relaciona (advisory — o próprio nome).",
+    "competitor_territories": [
+      {"competitor": "FRTB Consultoria Ambiental", "territory": "'Segurança jurídica e continuidade operacional' — mas via engenharia, sem lastro jurídico real"},
+      {"competitor": "Norte Ambiental", "territory": "'Sua jornada sustentável' / especialista em resíduos perigosos no Norte"},
+      {"competitor": "Moura Ambiental", "territory": "Pioneirismo e licenciamento mineral / treinamentos"},
+      {"competitor": "Aurora Ambiental", "territory": "'Viva Melhor' — institucional genérico, sem diferencial articulado"},
+      {"competitor": "GMAIA Licenciamentos", "territory": "'Deixe a burocracia com a gente' — nicho de licenciamento sanitário/saúde"},
+      {"competitor": "Protege Engenharia", "territory": "Tradição e longevidade em engenharia (desde 1998)"}
+    ],
+    "availability_justification": "O território 'blindagem jurídica REAL + advisory estratégico' está livre porque os concorrentes são casas de engenharia. O FRTB chega a reivindicar 'segurança jurídica e continuidade operacional' na tagline, mas é fundado e operado por engenheiras ambientais — não tem advogado/mestre em direito ambiental para sustentar a promessa. A Lucena pode OCUPAR de verdade o que o líder digital apenas alega, transformando a credencial do Aldo em prova. É um território defensável justamente porque exige uma combinação rara de formação."
+  },
+  "taglines": [
+    {
+      "tagline": "Licenciamento ambiental com a lei do seu lado.",
+      "tone": "Autoridade e segurança, com duplo sentido",
+      "justification": "Captura o diferencial jurídico em 6 palavras — 'a lei do seu lado' significa ao mesmo tempo estar em conformidade E ter um advogado defendendo a operação. Diferencia do discurso de engenharia dos concorrentes e é memorável e repetível.",
+      "best_use": "Site/LP (headline secundária), assinatura de e-mail, cartão e propostas."
+    },
+    {
+      "tagline": "Sua operação blindada. Sua cabeça tranquila.",
+      "tone": "Emocional e orientado a resultado",
+      "justification": "Vai direto no job emocional da persona (parar de perder o sono com fiscalização). Forte para conversão e para criativos de fundo de funil.",
+      "best_use": "Anúncios, landing page (bloco de conversão), criativos."
+    },
+    {
+      "tagline": "O direito e a engenharia que destravam o seu negócio.",
+      "tone": "Racional e diferenciador",
+      "justification": "Explicita o diferencial não-copiável (as duas competências juntas) e o benefício (destravar). Educa o mercado sobre por que a Lucena é diferente.",
+      "best_use": "LinkedIn, apresentação institucional, primeira reunião / propostas."
+    }
+  ],
+  "recommended_tagline": "Licenciamento ambiental com a lei do seu lado.",
+  "operator_direction": {
+    "strongest_differential": "Formação tripla do Aldo numa só pessoa (advogado + engenheiro ambiental + mestre em direito ambiental) — derivado do briefing e da pesquisa; a confirmar com o operador qual diferencial o cliente mais elogia no dia a dia.",
+    "desired_position": "Advisory jurídico-técnico premium (quadrante vazio) — ocupar o discurso de blindagem jurídica REAL que o FRTB apenas alega.",
+    "positioning_restrictions": [
+      "Não ser associada a despachante de protocolo barato",
+      "Não ser associada a 'jeitinho' / atalho fora da lei",
+      "Não se posicionar como B2C de redes sociais"
+    ],
+    "desired_tone": "Técnico mas acessível ao gestor leigo — autoridade que descomplica, pragmática e que transmite segurança. (Premissa derivada do perfil do Aldo na SDR/FPS; confirmar no Kick-Off.)"
+  },
+  "key_insight": {
+    "headline": "O território 'blindagem jurídica de verdade' está vago porque o líder digital o promete sem ter lastro — a Lucena pode tomá-lo, mas a janela depende de o FRTB não contratar um advogado primeiro.",
+    "context": "O FRTB já rankeia no Google e já usa 'segurança jurídica' na tagline, mas é uma casa de engenheiras ambientais. A Lucena tem exatamente o que o FRTB alega — advogado + mestre em direito ambiental — e pode provar. Ocupar primeiro o discurso jurídico (conteúdo, LP, GMB, LinkedIn) cria uma associação de marca difícil de reverter depois.",
+    "numbered_reasons": [
+      "(1) Está vago de verdade: nenhum concorrente do AM tem advogado/mestre em direito ambiental como rosto da marca; o FRTB promete jurídico mas entrega engenharia.",
+      "(2) O que fecha a janela: o FRTB (ou a Norte Ambiental) contratar um jurídico e/ou ocupar o SEO da nova Lei 15.190/2025 antes — eles já têm a máquina de conteúdo rodando e audiência acumulada.",
+      "(3) O que a Lucena ganha ocupando primeiro: vira a referência consultada sobre a nova lei e o destino natural de quem busca 'segurança jurídica real', capturando o lead que hoje vai para o FRTB por falta de alternativa visível."
+    ],
+    "discussion_anchor": "O stakeholder precisa decidir AGORA bancar o posicionamento jurídico-técnico e a produção (conteúdo + LP + GMB) que o sustenta, porque a vantagem é de pioneirismo: contra um concorrente que já tem audiência digital, cada mês de atraso aumenta o custo de tomar o território.",
+    "feasibility": "alta"
+  },
+  "honesty_alert": "Dois riscos a nomear sem suavizar. (1) O posicionamento ancora-se na autoridade PESSOAL do Aldo — se ele não estiver disponível, a promessa de 'advogado E engenheiro na mesma pessoa' não se sustenta. A S3 precisa começar a transferir essa autoridade para a marca (conteúdo assinado pela Lucena, processo documentado, cases, e protagonismo gradual dos sócios) para que a empresa não seja 'só o Aldo'. (2) Parte do território ('segurança/blindagem') tem o FRTB como ocupante parcial e com vantagem de audiência digital — a Lucena entra como desafiante. A diferenciação tem que ser martelada no LASTRO jurídico real (que o FRTB não tem) e executada rápido; entrar tarde num discurso que o concorrente já plantou enfraquece a vantagem."
+}

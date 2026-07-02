@@ -1,0 +1,165 @@
+{
+  "client_name": "Lucena Advisory",
+  "skill": "ee-s2-diagnostico-cro",
+  "version": 1,
+  "generated_at": "2026-06-19T00:00:00Z",
+  "completed_at": "2026-06-19T00:00:00Z",
+  "summary": "A Lucena Advisory não tem site nem landing page para auditar — então este diagnóstico de CRO é, na prática, o BLUEPRINT da LP a ser construída na S3 (ee-s3-landing-page), ancorado no posicionamento aprovado. Os blocos técnicos (PageSpeed, tracking, LGPD) ficam zerados porque não há página, mas viram especificação: a LP precisa nascer com GA4 + GTM + Consent Mode v2 desde o primeiro dia. A maior alavanca de conversão é a prova social que hoje não existe em lugar nenhum — o case do grupo Rei dos Bons Amigos (R$ 300M+) e as credenciais do Aldo (advogado + engenheiro + mestre).",
+  "summary_headline": "Lucena não tem site para auditar — o CRO entrega o blueprint da LP da S3: hero com a PUV 'advogado E engenheiro', CTA de diagnóstico de risco no WhatsApp, e a prova social do case R$ 300M+ que hoje não existe.",
+  "summary_highlights": [
+    {"category": "maturidade", "label": "Site / Landing page", "value": "Não existe", "subtext": "Nada a auditar; o CRO entrega o blueprint da LP", "tone": "red"},
+    {"category": "oportunidade", "label": "Maior alavanca de conversão", "value": "Prova social", "subtext": "Case R$ 300M+ e credenciais do Aldo fora de qualquer página", "tone": "green"},
+    {"category": "posicao", "label": "Entregável principal", "value": "Wireframe 6 seções", "subtext": "Alimenta diretamente a ee-s3-landing-page", "tone": "blue"},
+    {"category": "risco", "label": "Tracking + LGPD", "value": "Do zero", "subtext": "LP deve nascer com GA4 + GTM + CMP + Consent Mode v2", "tone": "yellow"}
+  ],
+  "summary_key_findings": [
+    {"category": "contexto", "text": "Não há site, LP, GA4, GTM, pixel nem CMP. Este diagnóstico não mede uma página existente — especifica a página que precisa existir. É um blueprint greenfield, derivado do posicionamento (PUV 'advogado E engenheiro', tagline 'a lei do seu lado') e da persona Ricardo."},
+    {"category": "acao", "text": "Construir uma LP 1-page B2B com hero na PUV, formulário de qualificação de ≤5 campos com consentimento LGPD, WhatsApp flutuante e a prova social do case da âncora. É a dependência nº 1 da mídia paga e o destino qualificado do ABM."},
+    {"category": "vantagem", "text": "Nascer certo é uma vantagem rara: sem dívida técnica, a LP pode já vir mobile-first, rápida, com tracking completo (GA4+GTM+eventos de conversão) e 100% conforme à LGPD — algo que concorrentes com sites datados (Moura, Aurora) teriam que refazer."},
+    {"category": "ameaca", "text": "Sem prova social estruturada, uma LP nova de um CNPJ novo converte pouco — o comitê de compra B2B desconfia. Documentar o case do Rei dos Bons Amigos (com autorização), coletar reviews e exibir as credenciais do Aldo é pré-requisito para a LP performar."}
+  ],
+  "segment": "Consultoria/Assessoria Ambiental B2B (serviços profissionais regulados)",
+  "url": "— (não há site; este diagnóstico é o blueprint da LP a ser construída na ee-s3-landing-page)",
+  "current_conversion_rate": null,
+  "current_bounce_rate": null,
+  "avg_time_on_page": null,
+  "technical_audit": {
+    "fetched_at": "2026-06-19T00:00:00Z",
+    "cache_file": null,
+    "pagespeed": {
+      "mobile_scores": null,
+      "desktop_scores": null,
+      "mobile_cwv_lab": null,
+      "desktop_cwv_lab": null,
+      "mobile_cwv_field": null,
+      "desktop_cwv_field": null,
+      "mobile_top_opportunities": [],
+      "desktop_top_opportunities": []
+    }
+  },
+  "onpage_seo": {
+    "mobile": null,
+    "desktop": null,
+    "divergences": ["N/A — não há site para auditar. Os scripts page_audit.sh e page_audit_deep.sh não foram rodados por ausência de URL."]
+  },
+  "security_headers": {
+    "https": false,
+    "hsts": null,
+    "csp": null,
+    "x_frame_options": null,
+    "x_content_type_options": null,
+    "referrer_policy": null,
+    "permissions_policy": null,
+    "score": null,
+    "issues": ["Sem site — nenhum header a avaliar. A LP da S3, hospedada na Vercel, deve nascer com HTTPS, HSTS e CSP configurados."]
+  },
+  "technical_diagnosis": {
+    "pagespeed_mobile": null,
+    "pagespeed_desktop": null,
+    "lcp": null,
+    "cls": null,
+    "inp": null,
+    "critical_issues": ["Não há página para auditar — métricas técnicas indisponíveis.", "Recomendação para a LP da S3: meta de PageSpeed mobile ≥ 85, LCP < 2,5s, mobile-first, hospedagem estática (Vercel) para velocidade."],
+    "estimated_conversion_loss": "N/A — não há página. A 'perda' atual é de 100% do tráfego de busca, que não tem onde aterrissar.",
+    "tested": false
+  },
+  "tracking_stack": {
+    "tools_detected": {},
+    "ids_found": {"gtm": [], "ga4": [], "ua": [], "google_ads": [], "meta_pixel": [], "tiktok_pixel": [], "linkedin_partner": []},
+    "categories_summary": {},
+    "total_tools": 0,
+    "setup_diagnosis": "Nenhuma ferramenta de tracking porque não há site. A LP da S3 deve nascer com a stack mínima: GTM como container, GA4 com eventos de conversão (page_view, scroll, clique no WhatsApp, envio de formulário = generate_lead), tag do Google Ads (AW-) preparada para a campanha de Search, e Consent Mode v2 acoplado a um CMP. Sem Meta Pixel inicialmente (não vamos rodar Meta), mas deixar o container pronto para adicionar."
+  },
+  "events_fired": {
+    "ga4_event_count": 0,
+    "meta_event_count": 0,
+    "ga4_event_names": [],
+    "meta_event_names": [],
+    "events_diagnosis": "Nenhum evento disparado — sem site. O plano de tagueamento da LP deve garantir os eventos obrigatórios na entrega.",
+    "expected_events_missing": ["page_view (GA4)", "scroll (GA4)", "generate_lead (GA4) no envio do formulário", "clique no WhatsApp (evento custom)", "Lead (Meta Pixel) — quando/se Meta for ativado"]
+  },
+  "quality_flags": [
+    {"severity": "high", "flag": "no_measurement_foundation", "title": "Sem base de mensuração", "detail": "Não há GA4, GTM, pixel ou CMP. Qualquer mídia paga lançada antes de a LP existir com tracking seria gasto sem atribuição. Resolver na construção da LP (S3)."},
+    {"severity": "medium", "flag": "no_landing_destination", "title": "Sem destino de conversão", "detail": "Todo lead de busca/indicação que não fecha por WhatsApp na hora não tem uma página para considerar a oferta — perde-se a chance de qualificar e nutrir."}
+  ],
+  "cro_elements_deep": {
+    "desktop": null,
+    "mobile": null,
+    "cta_diagnosis": "Especificação para a LP: um único CTA primário consistente repetido na página — 'Solicitar diagnóstico de risco' apontando para o WhatsApp Business. CTA above the fold obrigatório. Evitar múltiplos CTAs concorrentes que confundem o comitê.",
+    "form_diagnosis": "Especificação: formulário de qualificação curto (≤ 5 campos: nome, empresa, setor, telefone/WhatsApp, qual a necessidade). Mais de 5 campos derruba conversão >50% (baseline Hubspot). Checkbox de consentimento LGPD obrigatório. O formulário também serve para triar o comitê de compra (capturar cargo/setor).",
+    "social_proof_diagnosis": "Hoje inexistente. A LP precisa de: o case do grupo Rei dos Bons Amigos (R$ 300M+, com autorização), números de autoridade (anos de mercado do Aldo, nº de processos/licenças conduzidos), e 3-5 depoimentos da carteira atual. É a maior alavanca de conversão disponível.",
+    "trust_diagnosis": "Especificação: exibir CNPJ, endereço em Manaus, telefone/WhatsApp, e-mail institucional, link de política de privacidade e termos. Para um CNPJ novo, os sinais de confiança e a credencial tripla do Aldo são o que neutraliza a objeção 'vocês são novos'."
+  },
+  "compliance_lgpd": {
+    "status": "non_compliant",
+    "score": 0,
+    "has_cmp": false,
+    "cmps_detected": [],
+    "pre_consent_trackers": {},
+    "pre_consent_tracker_count": 0,
+    "issues": ["Não há site nem CMP — por padrão, fora de conformidade (nada construído ainda)."],
+    "recommendation": "Construir a LP já conforme: instalar um CMP (Cookiebot, gratuito até 500k pageviews) com gtag consent default 'denied' + Consent Mode v2, de modo que GA4/GTM só disparem após opt-in. Nascer compliant é trivial; corrigir depois é retrabalho. Evita risco de multa da ANPD."
+  },
+  "copy_audit": {
+    "above_fold": {
+      "value_prop_clear": false,
+      "value_prop_detail": "Não há página — a proposta de valor não está publicada em lugar nenhum. A LP deve comunicar a PUV em < 5 segundos: a única assessoria do AM onde advogado e engenheiro são a mesma autoridade.",
+      "headline_complete": false,
+      "current_headline": "— (não existe)",
+      "suggested_headline": "Licenciamento ambiental com a lei do seu lado — advogado e engenheiro ambiental na mesma assessoria.",
+      "cta_visible": false,
+      "current_cta": "— (não existe)",
+      "suggested_cta": "Solicitar diagnóstico de risco gratuito",
+      "visitor_impression": "Hoje o visitante do ICP (Ricardo) que pesquisa a Lucena não encontra nada. Na LP proposta, em 5 segundos ele deve entender: 'aqui tem alguém que domina o direito E a engenharia e resolve minha pendência sem minha operação parar'."
+    },
+    "sections": [
+      {"name": "Hero com PUV", "exists": false, "evaluation": 1, "main_problem": "Não existe. Deve liderar com a PUV + CTA de diagnóstico + selo de credibilidade (case da âncora)."},
+      {"name": "Problema / Dor", "exists": false, "evaluation": 1, "main_problem": "Não existe. Deve nomear o medo do embargo/multa e a insegurança com a nova Lei 15.190/2025."},
+      {"name": "Solução / Como funciona", "exists": false, "evaluation": 1, "main_problem": "Não existe. Deve explicar o processo (diagnóstico → enquadramento → tramitação → gestão) e o diferencial jurídico+técnico."},
+      {"name": "Prova social", "exists": false, "evaluation": 1, "main_problem": "Não existe — e é a maior alavanca. Case Rei dos Bons Amigos, credenciais do Aldo, depoimentos."},
+      {"name": "FAQ", "exists": false, "evaluation": 1, "main_problem": "Não existe. Deve responder as objeções da objection library (preço, 'sou novo', 'tenho engenheiro')."},
+      {"name": "CTA final", "exists": false, "evaluation": 1, "main_problem": "Não existe. Deve reforçar o diagnóstico de risco gratuito com ancoragem no custo de não fazer."}
+    ],
+    "missing_sections": ["Hero com PUV", "Problema/Dor", "Solução/Como funciona", "Prova social", "FAQ", "CTA final", "Barra de confiança (CNPJ, credenciais, contato)"],
+    "unnecessary_sections": []
+  },
+  "trust_analysis": {
+    "trust_signals": [
+      {"signal": "HTTPS/SSL", "present": false},
+      {"signal": "CNPJ visível", "present": false},
+      {"signal": "Endereço físico (Manaus)", "present": false},
+      {"signal": "Telefone/WhatsApp", "present": false},
+      {"signal": "Credenciais do profissional (OAB, CREA, título de mestre)", "present": false},
+      {"signal": "Depoimentos de clientes", "present": false},
+      {"signal": "Case / logos de clientes", "present": false},
+      {"signal": "Política de privacidade / termos", "present": false}
+    ],
+    "ssl_active": false,
+    "professional_appearance": false,
+    "professional_appearance_detail": "Não há página. Para um CNPJ de 4 meses no B2B de alto risco, a aparência profissional da LP e a densidade de sinais de confiança serão decisivas para neutralizar a objeção 'vocês são novos'.",
+    "trust_score": 1,
+    "biggest_trust_gap": "Ausência total de prova social e de presença digital: o case do Rei dos Bons Amigos (R$ 300M+) e as credenciais do Aldo — os maiores ativos de confiança da Lucena — não estão visíveis em lugar nenhum. Transformá-los em prova na LP é a prioridade de conversão."
+  },
+  "test_hypotheses": [
+    {"hypothesis": "Hero ancorado na PUV jurídico-técnica ('advogado E engenheiro') converte mais que um hero genérico de 'consultoria ambiental', porque diferencia da concorrência só-engenharia e responde à dor central do ICP.", "element": "Hero / Headline", "current_version": "— (não existe)", "proposed_version": "Headline: 'Licenciamento ambiental com a lei do seu lado'. Subheadline: 'A única assessoria do AM onde o advogado e o engenheiro são a mesma pessoa'.", "expected_impact": "high", "difficulty": "easy", "priority": "P1", "success_metric": "Taxa de conversão da LP (clique CTA + formulário) > 5%", "estimated_improvement": "Base de partida (não há comparativo) — meta inicial 4-6% de conversão B2B"},
+    {"hypothesis": "Exibir o case do Rei dos Bons Amigos (R$ 300M+) como prova social acima da dobra de prova aumenta a conversão, porque reduz o risco percebido de contratar um CNPJ novo.", "element": "Prova social", "current_version": "— (não existe)", "proposed_version": "Bloco: 'Cuidamos da regularização de um grupo com 26 CNPJs e R$ 300M+ em operação' + depoimento.", "expected_impact": "high", "difficulty": "medium", "priority": "P1", "success_metric": "Conversão da LP e tempo na seção de prova social", "estimated_improvement": "Prova social forte costuma elevar conversão B2B em 10-30% [E]"},
+    {"hypothesis": "CTA 'diagnóstico de risco gratuito' converte mais que 'fale conosco', porque oferece valor concreto de baixo compromisso, adequado a um comitê cauteloso.", "element": "CTA primário", "current_version": "— (não existe)", "proposed_version": "'Solicitar diagnóstico de risco gratuito' (WhatsApp).", "expected_impact": "high", "difficulty": "easy", "priority": "P1", "success_metric": "Taxa de clique no CTA + leads gerados", "estimated_improvement": "CTAs com oferta de valor superam genéricos em 20-40% [E]"},
+    {"hypothesis": "Um formulário curto (≤5 campos) com checkbox de consentimento gera mais leads que um formulário longo, sem perder qualificação, porque reduz o atrito do gestor ocupado.", "element": "Formulário de qualificação", "current_version": "— (não existe)", "proposed_version": "5 campos: nome, empresa, setor, WhatsApp, necessidade + consentimento LGPD.", "expected_impact": "medium", "difficulty": "easy", "priority": "P2", "success_metric": "Taxa de preenchimento do formulário", "estimated_improvement": "Formulário ≤5 campos vs longo: +50% de conversão (baseline Hubspot)"},
+    {"hypothesis": "Uma seção de FAQ respondendo as objeções reais (preço, 'sou novo', 'já tenho engenheiro') reduz o abandono, porque antecipa as dúvidas do comitê antes do contato.", "element": "FAQ", "current_version": "— (não existe)", "proposed_version": "FAQ com as 5-7 objeções da objection library da persona.", "expected_impact": "medium", "difficulty": "easy", "priority": "P2", "success_metric": "Scroll depth + conversão de quem chega ao FAQ", "estimated_improvement": "Tratamento de objeção na LP reduz fricção e aumenta leads qualificados [E]"}
+  ],
+  "wireframe_improvements": [
+    {"section_number": 1, "name": "Hero com PUV", "content_description": "Headline com a PUV, subheadline com a credencial tripla, CTA primário de diagnóstico e um selo de credibilidade (case da âncora). Foto do Aldo ou imagem de operação industrial do AM.", "suggested_copy": "Licenciamento ambiental com a lei do seu lado.\nA única assessoria do Amazonas onde o advogado e o engenheiro ambiental são a mesma pessoa — para blindar sua operação, não só tirar a licença.\n[Solicitar diagnóstico de risco gratuito]", "format": "Hero com CTA + imagem", "visual_element": "Foto profissional do Aldo em contexto técnico/operacional + selo 'Grupo R$ 300M+ atendido'"},
+    {"section_number": 2, "name": "Problema / Dor", "content_description": "Nomear o medo do embargo/multa e a insegurança com a nova Lei 15.190/2025. Falar a língua do gestor (Ricardo).", "suggested_copy": "Uma exigência mal respondida pode parar a sua operação. E com a nova Lei 15.190/2025, mudou o enquadramento de todas as atividades — você sabe em qual modalidade sua empresa está agora?", "format": "Bloco de texto + 3 ícones de dor (embargo, multa, incerteza legal)", "visual_element": "Ícones de risco + destaque da nova lei"},
+    {"section_number": 3, "name": "Solução / Como funciona", "content_description": "Explicar o processo em 4 passos e o diferencial jurídico+técnico integrado.", "suggested_copy": "Como funciona: 1) Diagnóstico de risco da sua operação. 2) Enquadramento jurídico e técnico na legislação atual. 3) Condução da tramitação junto aos órgãos (IPAAM, SEMMAS, IBAMA). 4) Gestão contínua das exigências. Tudo com advogado, engenheiro ambiental e mestre em direito ambiental — na mesma assessoria.", "format": "Timeline / 4 passos numerados", "visual_element": "Diagrama de fluxo dos 4 passos"},
+    {"section_number": 4, "name": "Prova social", "content_description": "Case da âncora, credenciais do Aldo, depoimentos e números de autoridade. A seção de maior impacto.", "suggested_copy": "Confiança de quem não pode errar: cuidamos da regularização de um grupo com 26 CNPJs e mais de R$ 300 milhões em operação (postos, estaleiros, embarcações). 10+ anos de experiência. Advogado + Engenheiro Ambiental + Mestre em Direito Ambiental.", "format": "Cards de depoimento + faixa de números + logos (com autorização)", "visual_element": "Fotos reais, números em destaque, selos de credencial (OAB/CREA/título)"},
+    {"section_number": 5, "name": "FAQ", "content_description": "Responder as 5-7 objeções reais da objection library da persona.", "suggested_copy": "Está caro? O caro é a operação parada. / Vocês são novos? A empresa é nova, eu não — 10+ anos e um grupo de R$ 300M+ sob cuidado. / Já tenho um engenheiro? Licenciamento é metade engenharia, metade direito — aqui é a mesma pessoa. / Não é urgente? Até a notificação chegar. Faça o diagnóstico antes.", "format": "Acordeão de perguntas e respostas", "visual_element": "Ícone de interrogação + acordeão expansível"},
+    {"section_number": 6, "name": "CTA final", "content_description": "Reforço do diagnóstico de risco gratuito, com ancoragem no custo de não fazer e contato direto.", "suggested_copy": "Descubra em 15 minutos se a sua operação está exposta. Se estiver tudo certo, você fica tranquilo. Se não, a gente age antes de virar multa ou embargo.\n[Solicitar diagnóstico de risco gratuito]", "format": "Bloco de CTA full-width + formulário curto", "visual_element": "Formulário de 5 campos + botão WhatsApp + barra de confiança (CNPJ, contato, credenciais)"}
+  ],
+  "transversal_elements": {
+    "trust_bar": true,
+    "whatsapp_floating": true,
+    "exit_intent_popup": false,
+    "exit_intent_offer": "Não recomendado para este ICP B2B (decisão consultiva, não impulsiva). Em vez de popup, usar retargeting de busca e cadência de WhatsApp pós-visita."
+  },
+  "target_conversion_rate": 5.0
+}

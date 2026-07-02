@@ -1,0 +1,201 @@
+{
+  "client_name": "Jioji Cavalera",
+  "skill": "ee-s2-diagnostico-cro",
+  "version": 1,
+  "generated_at": "2026-06-09T19:10:00Z",
+  "segment": "Varejo de moda multimarca de marca (Cavalera âncora masculino + feminino Melissa em saída + Lado Avesso/Yexx/Polay) — B2C, Porto Velho/RO, e-commerce Nuvemshop + 2 lojas físicas.",
+  "url": "https://www.jioji.com.br",
+  "summary": "O e-commerce da Jioji (Nuvemshop, feito com o Gabriel) está tecnicamente OK e tem mais medição do que se imaginava: GTM (GTM-WBLVTS8N) + GA4 (G-65GDQ7D436, disparando page_view e view_item_list) + tag de conversão do Google Ads (AW-10869626227). O PROBLEMA central de conversão/mídia é específico: o Meta Pixel está no código mas QUEBRADO (carrega o fbevents.js mas não dispara PageView — 0 eventos), enquanto a Jioji gasta ~R$ 1.260/mês no Meta — ou seja, todo o investimento em Meta roda sem remarketing nem atribuição. Em paralelo: LGPD NÃO-CONFORME (0/10, sem banner de cookies, trackers disparando antes do consentimento, sem links de privacidade/termos), footer sem CNPJ, e a página tem ratings de produto + logos de marca mas NENHUM depoimento de cliente. A dor declarada (frete) não é tratada no site (sem destaque de 'retira na loja'). 4 fixes P1 destravam atribuição Meta + compliance + confiança sem refazer o site.",
+  "summary_headline": "Site tem GA4/GTM/Google Ads tag OK, mas o Meta Pixel está QUEBRADO (0 PageView) — R$1,26k/mês no Meta sem remarketing. + LGPD 0/10 + sem CNPJ + 0 depoimentos. 4 fixes P1 destravam sem refazer o site.",
+  "summary_highlights": [
+    {"category": "ameaca", "label": "Meta Pixel", "value": "Quebrado", "subtext": "fbevents.js carrega mas 0 PageView/eventos — Meta roda sem remarketing", "tone": "red"},
+    {"category": "vantagem", "label": "Medição Google", "value": "GA4 + GTM OK", "subtext": "G-65GDQ7D436 dispara page_view + view_item_list; tag Google Ads ativa", "tone": "green"},
+    {"category": "risco", "label": "Compliance LGPD", "value": "0/10", "subtext": "Sem CMP; fbevents/GTM/GA4 disparam pré-consentimento. Risco ANPD", "tone": "red"},
+    {"category": "risco", "label": "Confiança", "value": "Sem CNPJ", "subtext": "Footer sem CNPJ nem links de privacidade/termos", "tone": "red"},
+    {"category": "oportunidade", "label": "Prova social", "value": "Ratings sim, 0 depoimento", "subtext": "Tem ratings de produto + logos de marca, mas nenhum depoimento de cliente", "tone": "yellow"},
+    {"category": "oportunidade", "label": "Frete / retira", "value": "Não comunicado", "subtext": "Dor nº1 (frete) sem solução visível — 'retira na loja' não destacado", "tone": "yellow"}
+  ],
+  "summary_key_findings": [
+    {"category": "ameaca", "text": "Correção vs diagnósticos anteriores: o site NÃO está 'sem rastreamento'. Tem GTM (GTM-WBLVTS8N), GA4 (G-65GDQ7D436) disparando page_view e view_item_list, e tag de conversão do Google Ads (AW-10869626227). O que está QUEBRADO é o Meta Pixel: o fbevents.js carrega mas não há ID válido nem PageView (0 eventos) — flag de severidade alta. Como a Jioji gasta ~R$ 1.260/mês no META (não no Google), é justamente a verba de mídia ativa que roda CEGA: sem PageView, não há remarketing nem atribuição de conversão no Meta."},
+    {"category": "vantagem", "text": "A infraestrutura de medição já existe (GTM instalado) — então CONSERTAR o Meta Pixel é trivial: basta configurar fbq('init') + PageView + eventos de e-commerce (ViewContent, AddToCart, Purchase) dentro do GTM que já está no ar. Não precisa de dev de plataforma; é configuração de marketing sobre o que o Gabriel já deixou pronto."},
+    {"category": "ameaca", "text": "LGPD NÃO-CONFORME (0/10): não há CMP/banner de cookies, e fbevents.js + GTM + GA4 (/collect) disparam ANTES de qualquer consentimento. Sem links de Política de Privacidade nem Termos no site. Risco regulatório real (ANPD). Conserto P1: instalar CMP (ex.: Cookiebot/Termly) com Consent Mode v2 + adicionar privacidade/termos."},
+    {"category": "ameaca", "text": "Confiança incompleta para vender online a quem não conhece a loja: footer SEM CNPJ e SEM links de privacidade/termos (tem endereço, telefone e e-mail). E a prova social é parcial — há ratings de produto e logos de marca, mas NENHUM depoimento de cliente. Para a objeção 'é original?', falta a prova humana (depoimento + selo oficial)."},
+    {"category": "acao", "text": "4 fixes P1 (baixo esforço, sem refazer o site): (1) consertar o Meta Pixel via GTM (PageView + eventos de e-commerce); (2) instalar CMP + Consent Mode v2 (LGPD); (3) adicionar CNPJ + links de privacidade/termos no footer; (4) preencher depoimentos de clientes + selo 'Cavalera oficial'. P2: destaque de 'compre online, retire na loja' + FAQ de frete/originalidade (ataca a dor nº1). Isso alimenta direto a S3 (landing page)."}
+  ],
+  "technical_audit": {
+    "fetched_at": null,
+    "pagespeed": {"mobile_scores": null, "desktop_scores": null, "mobile_cwv_lab": null, "desktop_cwv_lab": null, "mobile_cwv_field": null, "desktop_cwv_field": null, "mobile_top_opportunities": [], "mobile_top_opportunities_note": "PSI não rodado (sem API key).", "desktop_top_opportunities": [], "desktop_top_opportunities_note": "PSI não rodado (sem API key).", "unavailable_reason": "PageSpeed Insights NÃO rodado — falta a API key do Google (.credentials/google.json). Core Web Vitals e Lighthouse pendentes. Site é Nuvemshop + Cloudflare (performance base provavelmente adequada, a confirmar)."},
+    "unavailable_reason": "PageSpeed Insights NÃO rodado — falta a API key do Google (.credentials/google.json não configurado neste ambiente). Core Web Vitals e Lighthouse pendentes. Observação: o site roda em Nuvemshop (plataforma SaaS gerenciada) atrás de Cloudflare CDN — performance base tende a ser adequada, mas a confirmar com PSI quando a key for configurada.",
+    "tested": false
+  },
+  "onpage_seo": {
+    "mobile": null,
+    "desktop": null,
+    "unavailable_reason": "Parser on-page (page_audit.sh) não rodado — depende da mesma API key/setup do PSI. Title/meta/schema/H1/alt pendentes de auditoria. Nuvemshop entrega sitemap, URLs amigáveis e schema.org de produto por padrão; confirmar quando a key for configurada."
+  },
+  "security_headers": {
+    "https": true,
+    "server": "Cloudflare",
+    "hsts": null,
+    "csp": null,
+    "x_frame_options": null,
+    "x_content_type_options": null,
+    "referrer_policy": null,
+    "permissions_policy": null,
+    "score": null,
+    "issues": ["Auditoria completa de headers pendente (page_audit.sh / PSI key). HTTPS confirmado (Cloudflare). Demais headers a verificar."],
+    "unavailable_reason": "Headers de segurança completos dependem do page_audit.sh (PSI key). HTTPS confirmado via deep audit."
+  },
+  "technical_diagnosis": {
+    "pagespeed_mobile": null,
+    "pagespeed_desktop": null,
+    "lcp_mobile_s": null,
+    "cls_mobile": null,
+    "inp_mobile_ms": null,
+    "critical_issues": [
+      "Meta Pixel quebrado (fbevents.js carrega, mas 0 PageView/eventos) — flag de severidade alta. É o gargalo nº1 de mídia/conversão, não a performance.",
+      "LGPD non_compliant (0/10): sem CMP, trackers disparando pré-consentimento, sem links de privacidade/termos.",
+      "Performance/Core Web Vitals NÃO medidos (sem API key PSI) — mas o site é Nuvemshop + Cloudflare, então performance provavelmente não é o gargalo principal.",
+      "On-page SEO (title/meta/schema/H1/alt) não auditado nesta rodada (depende da key PSI)."
+    ],
+    "estimated_conversion_loss": "A performance técnica provavelmente NÃO é o gargalo (Nuvemshop + Cloudflare). Os gargalos REAIS de conversão são: (1) Meta Pixel quebrado → toda a verba de Meta (~R$ 1.260/mês) roda sem remarketing nem atribuição (não é perda direta de conversão na página, mas perda de eficiência da aquisição que traz o tráfego); (2) confiança incompleta (sem CNPJ, 0 depoimentos) → fricção na objeção 'é original?'; (3) frete/retira não comunicados → abandono na dor nº1 declarada; (4) LGPD → risco regulatório. Sem tracking de conversão do Meta e sem PSI, a taxa de conversão atual não é medível com precisão — estimativa de baseline 0,5-1,0% (e-commerce de moda regional sem otimização).",
+    "estimated": true,
+    "tested": false,
+    "psi_score_summary": "PSI não rodado (sem API key). Diagnóstico técnico focado nos blocos do deep audit (Playwright), que rodou com sucesso."
+  },
+  "tracking_stack": {
+    "tools_detected": {"gtm": {"name": "Google Tag Manager", "category": "tracking"}, "ga4": {"name": "Google Analytics 4", "category": "analytics"}, "meta_pixel": {"name": "Meta Pixel", "category": "ads"}, "google_ads_conversion": {"name": "Google Ads Conversion", "category": "ads"}, "whatsapp_widget": {"name": "WhatsApp Click-to-Chat", "category": "chat"}, "nuvemshop": {"name": "Nuvemshop", "category": "ecommerce"}, "cloudflare": {"name": "Cloudflare", "category": "hosting"}},
+    "ids_found": {"gtm": ["GTM-WBLVTS8N"], "ga4": ["G-65GDQ7D436"], "ua": [], "google_ads": ["AW-10869626227"], "meta_pixel": [], "tiktok_pixel": [], "linkedin_partner": []},
+    "categories_summary": {"tracking": ["Google Tag Manager"], "analytics": ["Google Analytics 4"], "ads": ["Google Ads Conversion", "Meta Pixel (quebrado)"], "chat": ["WhatsApp Click-to-Chat"], "ecommerce": ["Nuvemshop"], "hosting": ["Cloudflare"]},
+    "total_tools": 7,
+    "setup_diagnosis": "Stack: Nuvemshop (SaaS) + Cloudflare. Medição do GOOGLE está montada e funcionando: GTM-WBLVTS8N como container, GA4 G-65GDQ7D436 disparando page_view e view_item_list (e-commerce parcialmente instrumentado), e tag de conversão Google Ads AW-10869626227. O Meta Pixel é o ponto cego: o fbevents.js é carregado mas NÃO há ID válido nem PageView (0 eventos). Resultado: a Jioji gasta ~R$ 1.260/mês no Meta sem pixel funcional — zero remarketing, zero atribuição de conversão no Meta, otimização impossível por compra. Como o GTM já existe, consertar o Pixel é configuração (não desenvolvimento). WhatsApp widget presente (canal de venda)."
+  },
+  "events_fired": {
+    "ga4_event_count": 4,
+    "meta_event_count": 0,
+    "ga4_event_names": ["page_view", "view_item_list"],
+    "meta_event_names": [],
+    "events_diagnosis": "GA4 dispara page_view e view_item_list (bom — já há instrumentação de e-commerce no Google). Faltam eventos de fundo de funil no GA4 (add_to_cart, begin_checkout, purchase) para fechar a jornada. No META: 0 eventos — o Pixel não dispara nem PageView. Para mídia de conversão funcionar, é obrigatório PageView + ViewContent + AddToCart + Purchase no Pixel.",
+    "expected_events_missing": ["PageView (Meta Pixel) — CRÍTICO", "ViewContent (Meta Pixel)", "AddToCart (Meta Pixel)", "Purchase (Meta Pixel)", "add_to_cart (GA4)", "begin_checkout (GA4)", "purchase (GA4)"]
+  },
+  "quality_flags": [
+    {"severity": "high", "flag": "pixel_no_pageview", "title": "Meta Pixel instalado mas não dispara PageView", "detail": "Eventos de remarketing não vão contar. Checar fbq('init') + fbq('track','PageView') no código ou GTM. Crítico porque a verba de mídia da Jioji está no Meta (~R$ 1.260/mês)."},
+    {"severity": "high", "flag": "lgpd_non_compliant", "title": "Trackers disparando antes do consentimento (LGPD)", "detail": "fbevents.js + GTM + GA4 (/collect) carregam pré-consentimento; sem CMP. Risco ANPD."}
+  ],
+  "cro_elements_deep": {
+    "desktop": {
+      "cta_count": 17,
+      "cta_above_fold": 8,
+      "cta_diagnosis": "17 CTAs/links (8 acima da dobra) — predominantemente navegação de categorias (Masculino, Calçados, Chinelos Cavalera, etc.), padrão de home de e-commerce Nuvemshop. Falta um CTA de conversão dominante e claro acima da dobra (ex.: oferta/coleção em destaque com 'Comprar'). A navegação está ok; o foco de conversão está difuso.",
+      "forms": [{"action": "/search/", "field_count": 1, "fields": ["q (busca)"]}, {"action": "/comprar/", "field_count": 1, "fields": ["zipcode/CEP (cálculo de frete)"]}],
+      "form_diagnosis": "Formulários padrão Nuvemshop: busca + cálculo de frete por CEP. O form de CEP confirma que o FRETE é uma etapa explícita do funil — alinhado com a dor nº1 declarada (frete alto). Não há formulário de captura de lead/newsletter com consentimento (has_consent_checkbox=false).",
+      "social_proof": {"has_testimonials": false, "has_ratings": true, "has_numbers": false, "has_certifications": false, "has_logos_clients": true},
+      "social_proof_diagnosis": "Há ratings de produto e logos de marca (Cavalera/Melissa/etc.), mas NENHUM depoimento de cliente e nenhum número de prova (ex.: 'X mil clientes', '17 anos'). Para um varejo online onde a objeção é originalidade, faltam depoimentos humanos + selo de loja oficial. (Corrige o que diagnósticos anteriores chamaram de 'prova social vazia' — há ratings, falta depoimento.)",
+      "trust": {"has_address": true, "has_cnpj": false, "has_phone": true, "has_email": true, "has_privacy_link": false, "has_terms_link": false},
+      "trust_diagnosis": "Tem endereço, telefone e e-mail (bom), mas FALTA CNPJ e os links de Política de Privacidade e Termos de Uso. Para quem compra de fora de Porto Velho, CNPJ visível e políticas claras reduzem o medo de golpe/réplica. Gap de confiança + de compliance ao mesmo tempo.",
+      "urgency": {"has_countdown": false, "has_limited": false, "has_discount": true},
+      "urgency_diagnosis": "Há descontos/promoções (gatilho de preço), mas sem urgência real (contagem regressiva, estoque limitado) — oportunidade em datas/coleção."
+    }
+  },
+  "compliance_lgpd": {
+    "status": "non_compliant",
+    "score": 0,
+    "has_cmp": false,
+    "cmps_detected": [],
+    "pre_consent_trackers": {"facebook.net/fbevents.js": ["https://connect.facebook.net/en_US/fbevents.js"], "googletagmanager.com/gtm.js": ["https://www.googletagmanager.com/gtm.js?id=GTM-WBLVTS8N"], "google-analytics.com/collect": ["https://www.google-analytics.com/g/collect?tid=G-65GDQ7D436"]},
+    "pre_consent_tracker_count": 3,
+    "issues": ["Sem CMP detectado — sem mecanismo de consentimento.", "3 famílias de trackers disparam ANTES de qualquer consentimento (Meta fbevents, GTM, GA4).", "Sem link de Política de Privacidade nem Termos de Uso (confirmado em trust signals)."],
+    "recommendation": "URGENTE: instalar CMP (Cookiebot grátis até 500k pageviews/mês ou Termly até 5k) com Consent Mode v2 + gtag consent default 'denied', bloqueando GTM/GA4/Meta até opt-in. Adicionar links 'Política de Privacidade' e 'Termos de Uso' no footer. Risco de multa ANPD até R$ 50M. Bônus: Consent Mode v2 melhora a atribuição do Google."
+  },
+  "copy_audit": {
+    "above_fold": {
+      "value_prop_clear": true,
+      "value_prop_detail": "A loja comunica a marca/atitude ('Atitude, irreverência e estilo. Tudo em um só lugar!') e gatilhos de e-commerce (frete grátis, 6x). Mas NÃO comunica o diferencial estratégico do posicionamento — 'Cavalera oficial de Porto Velho' (originalidade + local) nem a conveniência 'compre online, retire na loja' (que resolve a dor de frete). [Avaliação baseada no deep audit + research — sem screenshots, layout exato a confirmar.]",
+      "headline_complete": false,
+      "current_headline": "Atitude, irreverência e estilo. Tudo em um só lugar! (+ gatilhos: frete grátis, 6x)",
+      "suggested_headline": "Cavalera original em Porto Velho — compre online e retire na loja, ou receba na região.",
+      "cta_visible": true,
+      "current_cta": "Navegação de categorias + carrinho (padrão Nuvemshop); CTA de conversão difuso",
+      "suggested_cta": "CTA de conversão dominante acima da dobra (coleção/oferta) + reforço 'Retire na loja sem frete'.",
+      "visitor_impression": "[E, sem screenshot] O cliente de PV reconhece a marca e os gatilhos (frete grátis/6x), mas não vê o que diferencia a Jioji do e-commerce nacional da Cavalera nem do marketplace: originalidade local + retirar na loja. A objeção 'é original?' e a dor 'frete' não são respondidas acima da dobra."
+    },
+    "sections": [
+      {"name": "Hero / banner", "exists": true, "evaluation": 3, "main_problem": "Comunica marca + gatilhos, mas não o posicionamento (original + local + retira na loja). [E layout exato pendente de print.]"},
+      {"name": "Categorias / vitrine", "exists": true, "evaluation": 4, "main_problem": "Navegação de e-commerce Nuvemshop funcional (Masculino, Calçados, etc.). Falta curadoria editorial (ex.: 'Novidades Cavalera', 'Feminino')."},
+      {"name": "Prova social (depoimentos)", "exists": false, "evaluation": 2, "main_problem": "Há ratings de produto + logos de marca, mas NENHUM depoimento de cliente. Falta prova humana para a objeção de originalidade."},
+      {"name": "FAQ", "exists": false, "evaluation": 1, "main_problem": "Sem FAQ que responda originalidade, frete para o Norte, prazo, troca/devolução — dúvidas decisivas antes do checkout."},
+      {"name": "Frete / retira na loja", "exists": true, "evaluation": 2, "main_problem": "Há cálculo de frete por CEP, mas a conveniência 'compre online, retire na loja' (alavanca contra a dor de frete) não é comunicada/destacada."},
+      {"name": "Footer institucional", "exists": true, "evaluation": 2, "main_problem": "Tem endereço/telefone/e-mail, mas SEM CNPJ e SEM links de privacidade/termos. Fragiliza confiança + LGPD."}
+    ],
+    "missing_sections": [
+      "Bloco de posicionamento acima/abaixo do hero: 'Cavalera oficial de Porto Velho — original, com retirada na loja'.",
+      "Depoimentos de clientes reais (a loja tem ratings, mas nenhum depoimento humano).",
+      "FAQ: originalidade, frete região Norte, prazo, troca/devolução, retira na loja.",
+      "Footer com CNPJ + Política de Privacidade + Termos de Uso.",
+      "Banner de cookies (CMP) — bloqueador legal de LGPD."
+    ],
+    "unnecessary_sections": [],
+    "unnecessary_sections_note": "Nenhuma seção desnecessária identificada — o e-commerce Nuvemshop é enxuto; o trabalho é ADICIONAR (posicionamento, depoimentos, FAQ, CNPJ), não remover."
+  },
+  "trust_analysis": {
+    "trust_signals": [
+      {"signal": "CNPJ visível", "present": false},
+      {"signal": "Endereço físico", "present": true},
+      {"signal": "Telefone", "present": true},
+      {"signal": "Email corporativo", "present": true},
+      {"signal": "Fotos reais", "present": true},
+      {"signal": "Depoimentos de clientes", "present": false},
+      {"signal": "Ratings de produto", "present": true},
+      {"signal": "Certificações", "present": false},
+      {"signal": "SSL ativo", "present": true},
+      {"signal": "Link Política de Privacidade", "present": false},
+      {"signal": "Link Termos de Uso", "present": false}
+    ],
+    "ssl_active": true,
+    "professional_appearance": true,
+    "professional_appearance_detail": "Loja Nuvemshop com layout profissional, fotos de produto, ratings e logos de marca. Identidade puxa a da Cavalera. [Aparência detalhada a confirmar com screenshots.]",
+    "trust_score": 5,
+    "biggest_trust_gap": "Ausência de CNPJ + links de privacidade/termos no footer, somada à falta de depoimentos de clientes. Para vender Cavalera ORIGINAL online a quem está fora de Porto Velho (contra réplica de marketplace), faltam justamente as provas de legitimidade (CNPJ, loja oficial, depoimentos humanos). A loja tem ratings de produto, mas isso não substitui a prova de que é a loja oficial e idônea."
+  },
+  "test_hypotheses": [
+    {"hypothesis": "Consertar o Meta Pixel via GTM: fbq('init') + PageView (todas as páginas) + ViewContent + AddToCart + Purchase", "element": "Tagueamento / Meta", "expected_impact": "high", "difficulty": "easy", "priority": "P1", "current_version": "fbevents.js carrega mas 0 PageView/eventos — Pixel quebrado", "proposed_version": "Pixel disparando PageView + eventos de e-commerce via GTM-WBLVTS8N (já instalado)", "success_metric": "Eventos Meta ≥ PageView + ViewContent populando audiências em 7 dias; re-audit deep com meta_event_count > 0", "expected_impact_detail": "Destrava remarketing e atribuição de conversão no Meta — onde está toda a verba (~R$ 1.260/mês). Pré-requisito para migrar a mídia de engajamento para CONVERSÃO (ver diagnóstico de mídia). É o fix de maior alavancagem."},
+    {"hypothesis": "Instalar CMP (Cookiebot/Termly) com Consent Mode v2 + bloqueio de tags pré-opt-in + links de privacidade/termos", "element": "Compliance LGPD", "expected_impact": "high", "difficulty": "easy", "priority": "P1", "current_version": "non_compliant 0/10, sem CMP, 3 trackers pré-consentimento, sem privacidade/termos", "proposed_version": "CMP com banner bloqueando GTM/GA4/Meta até opt-in + páginas de Política de Privacidade e Termos linkadas no footer", "success_metric": "Re-audit compliance_lgpd ≥ 8/10 + status compliant", "expected_impact_detail": "Elimina risco ANPD (até R$ 50M) e melhora atribuição (Consent Mode v2 reconhecido pelo Google)."},
+    {"hypothesis": "Adicionar CNPJ + razão social no footer (com endereço/contatos já existentes)", "element": "Trust / Footer", "expected_impact": "high", "difficulty": "easy", "priority": "P1", "current_version": "Footer com endereço/telefone/e-mail, mas sem CNPJ", "proposed_version": "Footer com CNPJ + razão social + dados das 2 lojas + 'Cavalera oficial em Porto Velho'", "success_metric": "Trust signals: CNPJ presente; trust_score ≥ 7", "expected_impact_detail": "Reduz fricção de quem compra de fora da cidade (medo de golpe/réplica). Reforça legitimidade da loja oficial."},
+    {"hypothesis": "Preencher depoimentos de clientes reais + selo 'Cavalera oficial'", "element": "Prova social", "expected_impact": "high", "difficulty": "easy", "priority": "P1", "current_version": "Tem ratings de produto + logos, mas 0 depoimento de cliente", "proposed_version": "4-6 depoimentos reais (print de WhatsApp/Instagram autorizado, nome + foto) + selo 'Loja oficial Cavalera — original com nota e troca na loja'", "success_metric": "Bloco de depoimentos publicado; ataque direto à objeção 'é original?'", "expected_impact_detail": "Prova humana que ratings não dão — decisiva contra a comparação com réplica de marketplace."},
+    {"hypothesis": "Destacar 'Compre online, retire na loja' + criar FAQ (originalidade, frete região Norte, prazo, troca)", "element": "Copy / Conveniência", "expected_impact": "high", "difficulty": "medium", "priority": "P2", "current_version": "Cálculo de frete por CEP existe, mas retira na loja não é comunicada; sem FAQ", "proposed_version": "Banner/realce de 'retire na loja sem frete' + página/accordion de FAQ", "success_metric": "Taxa de conclusão de checkout +; menos abandono na etapa de frete", "expected_impact_detail": "Ataca a dor nº1 (frete). A retirada na loja é a alavanca que o e-commerce nacional não tem."},
+    {"hypothesis": "Completar eventos de e-commerce no GA4 (add_to_cart, begin_checkout, purchase) via GTM", "element": "Tagueamento / GA4", "expected_impact": "medium", "difficulty": "easy", "priority": "P2", "current_version": "GA4 dispara page_view e view_item_list; faltam eventos de fundo de funil", "proposed_version": "Funil GA4 completo (view_item, add_to_cart, begin_checkout, purchase) com valor", "success_metric": "Funil completo no GA4 + ROAS calculável", "expected_impact_detail": "Fecha a medição da jornada no Google e permite calcular conversão/ROAS reais do e-commerce."},
+    {"hypothesis": "Bloco de posicionamento acima da dobra: 'Cavalera oficial de Porto Velho — original + retira na loja'", "element": "Hero / Posicionamento", "expected_impact": "medium", "difficulty": "medium", "priority": "P2", "current_version": "Hero comunica marca/gatilhos, não o posicionamento estratégico", "proposed_version": "Faixa/bloco com a PUV (original + local + conveniência) + CTA de conversão dominante", "success_metric": "CTR no CTA principal + tempo na página", "expected_impact_detail": "Diferencia a Jioji do e-commerce nacional e do marketplace já na primeira dobra."}
+  ],
+  "wireframe_improvements": [
+    {"section_number": 1, "name": "Barra de confiança (slim, topo)", "content_description": "Faixa fina acima do menu: 'Cavalera oficial de Porto Velho · Original com nota · Retire na loja sem frete · 6x sem juros'. Comunica originalidade + local + conveniência antes do hero."},
+    {"section_number": 2, "name": "Banner de cookies (CMP)", "content_description": "Banner de consentimento (Cookiebot/Termly) bloqueando trackers até opt-in. Obrigatório LGPD."},
+    {"section_number": 3, "name": "Hero / coleção em destaque", "content_description": "Banner de coleção/oferta com headline de posicionamento ('A Cavalera de verdade, aqui em Porto Velho') + CTA dominante 'Comprar' + reforço 'compre online, retire na loja'."},
+    {"section_number": 4, "name": "Categorias / vitrine", "content_description": "Manter navegação Nuvemshop (Masculino, Feminino, Calçados, Melissa enquanto houver estoque, Acessórios). Adicionar bloco 'Feminino' em destaque (recompor pós-Melissa)."},
+    {"section_number": 5, "name": "Prova social — depoimentos", "content_description": "Bloco de 4-6 depoimentos reais de clientes (nome + foto + frase) + selo 'Loja oficial Cavalera' + '17 anos em Porto Velho'. Manter os ratings de produto."},
+    {"section_number": 6, "name": "Conveniência / como comprar", "content_description": "Bloco explicando 'Compre online e retire na loja (sem frete)' ou 'Receba na sua região' — com os endereços das 2 lojas. Ataca a dor de frete."},
+    {"section_number": 7, "name": "FAQ", "content_description": "Accordion: 'Os produtos são originais?', 'Entregam na minha cidade? Quanto custa o frete?', 'Posso retirar na loja?', 'Qual o prazo?', 'Como faço troca/devolução?'"},
+    {"section_number": 8, "name": "Footer institucional completo", "content_description": "CNPJ + razão social + endereços das 2 lojas + WhatsApp/telefone/e-mail + Política de Privacidade + Termos de Uso + redes (@jiojicavalera). Horário de atendimento."}
+  ],
+  "transversal_elements": {
+    "trust_bar": true,
+    "trust_bar_content": "Slim bar: 'Cavalera oficial de Porto Velho · Original com nota · Retire na loja sem frete · 6x sem juros'",
+    "whatsapp_floating": true,
+    "whatsapp_floating_detail": "Manter WhatsApp (widget já detectado). Padronizar 1 número oficial + UTM para diferenciar origem (site vs anúncio).",
+    "exit_intent_popup": true,
+    "exit_intent_offer": "'Vai sair? Ganhe um cupom na primeira compra + receba novidades da Cavalera no WhatsApp.' Captura com consentimento (LGPD)."
+  },
+  "target_conversion_rate": 2.0,
+  "target_conversion_rate_note": "Meta 1,5-2,5% (visitante → compra) no e-commerce de moda. Atual NÃO medível com precisão (Meta Pixel quebrado; GA4 sem eventos de purchase; sem PSI). Baseline estimado 0,5-1,0%. Com fixes P1 (Pixel + CMP + CNPJ + depoimentos) + P2 (retira na loja/FAQ + funil GA4) — e o redesenho da S3 (landing page) — meta realista em 30-60 dias.",
+  "completed_at": "2026-06-09T19:10:00Z",
+  "key_insight": {
+    "headline": "O site mede o Google (GA4/GTM/tag de conversão OK) mas o Meta Pixel está QUEBRADO — e é justamente no Meta que a Jioji gasta ~R$ 1.260/mês. Consertar o Pixel (via GTM, que já existe) é o fix de maior alavancagem.",
+    "context": "A leitura inicial de que 'o site não tem rastreamento' estava errada: GTM, GA4 (page_view, view_item_list) e a tag do Google Ads estão ativos. O ponto cego é específico e crítico: o Meta Pixel carrega mas não dispara PageView (0 eventos), então toda a verba de mídia — que está no Meta — roda sem remarketing nem atribuição. Como o GTM já está no ar, consertar o Pixel é configuração de marketing (minutos/horas), não desenvolvimento. Esse único fix conecta o diagnóstico de mídia (migrar engajamento→conversão) ao site: sem Pixel, não há conversão de Meta para medir nem otimizar.",
+    "numbered_reasons": [
+      "(1) Evidência: deep audit (Playwright) detectou fbevents.js carregando mas 0 eventos Meta e nenhum ID de Pixel — flag 'pixel_no_pageview' severidade alta. GA4 (G-65GDQ7D436) dispara normalmente.",
+      "(2) Causa-raiz: o Pixel não foi inicializado corretamente (sem fbq init/PageView) — provavelmente referência ao fbevents sem configuração no GTM. Conserto é dentro do GTM-WBLVTS8N já instalado.",
+      "(3) Upside: destrava remarketing + atribuição no Meta (a verba ativa), pré-requisito para a migração engajamento→conversão do diagnóstico de mídia. Junto com CMP (LGPD) e trust (CNPJ/depoimentos), são fixes P1 de horas que não exigem refazer o site."
+    ],
+    "discussion_anchor": "Com a Sandra/Gabriel: priorizar os 4 fixes P1 antes do próximo ciclo de mídia — (1) consertar o Meta Pixel no GTM, (2) instalar CMP (LGPD), (3) CNPJ + privacidade/termos no footer, (4) depoimentos + selo oficial. São rápidos, não mexem no design e destravam a aquisição que já está sendo paga. A S3 (landing page) entra depois com o redesenho de conversão."
+  },
+  "honesty_alert": "Diagnóstico baseado no DEEP AUDIT real (Playwright rodou com sucesso — tracking, eventos, CRO elements, LGPD são fatos do navegador). DUAS limitações: (1) PageSpeed Insights NÃO rodou (falta API key Google) — Core Web Vitals, Lighthouse e o parser on-page (title/meta/schema/H1/alt) ficaram pendentes; performance e SEO técnico não foram medidos (mas o site é Nuvemshop+Cloudflare, provavelmente adequado). (2) Sem screenshots, a auditoria de copy/layout (above-the-fold, contraste, seções) é parcial e marcada [E] — confirmar com prints. CORREÇÃO IMPORTANTE: diagnósticos anteriores (maturidade, auditoria, mídia, SWOT, persona) afirmaram 'site sem pixel/GA4/GTM' — o deep audit mostra que GTM+GA4+tag Google Ads ESTÃO ativos; o que está quebrado é só o Meta Pixel. Recomendo atualizar esses outputs para refletir o dado real (o ponto cego é o Meta, não o site inteiro)."
+}

@@ -1,0 +1,130 @@
+{
+  "client_name": "Jioji Cavalera",
+  "skill": "ee-s2-posicionamento",
+  "version": 1,
+  "generated_at": "2026-06-09T00:00:00Z",
+  "data_source": "persona-icp v2 + pesquisa-mercado v1 + swot v2 + maturidade v3 (dados Meta) + base-de-conhecimento (kickoff, call, briefing).",
+  "summary": "Posicionamento da Jioji Cavalera: ocupar o território 'Original. Daqui. Fácil.' — a loja oficial Cavalera de Porto Velho que torna fácil comprar moda de marca original, com a conveniência que nenhum concorrente junta (compre online e retire na loja, ou receba na região). PUV: 'a Jioji é a loja oficial Cavalera de Porto Velho que torna fácil ter o original — compre online e retire na loja (ou receba na região), sem risco de réplica e sem frete que inviabiliza'. Tagline recomendada: 'A Cavalera de verdade, aqui em Porto Velho.' O território é defensável porque o e-commerce nacional (cavalera.com.br) não tem vínculo local, o marketplace é preço/réplica e o varejo local não tem marca-âncora nem e-commerce com tração. Ressalva: o território só vira real quando o e-commerce tracionar (medição + frete + recompra) — hoje fatura ~zero.",
+  "summary_headline": "Território 'Original. Daqui. Fácil.' vago no mapa — a Jioji é a única que junta Cavalera original + presença local + e-commerce com retira na loja. Janela: a saída da Melissa força a tração agora.",
+  "summary_highlights": [
+    {"category": "posicao", "label": "Território", "value": "Original. Daqui. Fácil.", "subtext": "Cavalera oficial + local + conveniência omnichannel", "tone": "blue"},
+    {"category": "competicao", "label": "Território cavalera.com.br", "value": "Catálogo nacional", "subtext": "Marca completa, mas sem vínculo nem atendimento local", "tone": "yellow"},
+    {"category": "oportunidade", "label": "Alavanca-chave", "value": "Retira na loja", "subtext": "Conveniência que vence o frete e o player só-online", "tone": "green"},
+    {"category": "janela", "label": "Janela", "value": "Saída da Melissa", "subtext": "Força tracionar e-commerce/feminino agora (2º sem/2026)", "tone": "yellow"},
+    {"category": "oportunidade", "label": "Tagline recomendada", "value": "'A Cavalera de verdade, aqui em Porto Velho.'", "subtext": "Original + local em uma frase", "tone": "green"},
+    {"category": "risco", "label": "Território aspiracional", "value": "E-commerce ~0", "subtext": "Sem tracionar (medição/frete/recompra), 'a loja que entrega' fica promessa", "tone": "red"}
+  ],
+  "summary_key_findings": [
+    {"category": "vantagem", "text": "O território 'Original. Daqui. Fácil.' combina 3 ativos REAIS da Jioji que nenhum concorrente junta: (1) Cavalera ORIGINAL oficial em Porto Velho (vs réplica de marketplace); (2) presença e atendimento LOCAL — 2 lojas, 25 anos (vs e-commerce nacional sem vínculo); (3) conveniência omnichannel — compre online e retire na loja (vs player só-online travado pelo frete). É o cruzamento vazio do mapa competitivo."},
+    {"category": "contexto", "text": "A PUV ataca as duas dores reais do consumidor: 'é original?' (resolvida pela loja oficial física) e 'o frete acaba com a venda' (resolvida pela retirada na loja + frete regional claro). Não compete por preço com marketplace nem por catálogo com a cavalera.com.br — joga onde a Jioji é única."},
+    {"category": "ameaca", "text": "O território é hoje parcialmente ASPIRACIONAL: a promessa 'a loja que entrega' só é verdadeira quando o e-commerce tracionar — e ele fatura ~zero. Sem instalar medição, resolver frete e ativar recompra, o posicionamento vira slogan. A saída da Melissa (30-40% do shopping) é o relógio que força a execução."},
+    {"category": "acao", "text": "3 movimentos que tornam o território real: (a) e-commerce com 'retira na loja' em destaque + frete regional claro; (b) comunicar 'Cavalera oficial de Porto Velho' (originalidade + local) no site, GMB e anúncios; (c) redirecionar a mídia do Meta de engajamento para venda, mirando o raio viável. Tudo apoiado no cashback para recompra."}
+  ],
+  "positioning_map": {
+    "axis_x": "Nacional / só-online (sem vínculo local) ↔ Local com presença física + atendimento + retira na loja",
+    "axis_y": "Preço / commodity (variedade) ↔ Marca original + experiência/curadoria",
+    "client_position": "Local + Marca original COM e-commerce/omnichannel funcionando (quadrante VAZIO)",
+    "justification": "Nenhum concorrente ocupa 'Local + Marca original + e-commerce que funciona'. cavalera.com.br e marketplaces são nacionais; o varejo local não tem marca-âncora nem e-commerce com tração; Aramis é local+marca mas única e premium/formal. A Jioji tem marca (Cavalera) + 2 lojas + e-commerce próprio + 25 anos — é o único player que pode conjugar os três e oferecer 'compre online, retire na loja'.",
+    "competitor_positions": [
+      {"name": "cavalera.com.br", "quadrant": "Nacional + Marca original — catálogo completo, zero vínculo local"},
+      {"name": "Marketplaces (Shopee/ML)", "quadrant": "Nacional + Preço/commodity — réplicas e variedade, sem marca/experiência"},
+      {"name": "Aramis (Porto Velho Shopping)", "quadrant": "Local + Marca original (premium masculino) — mas marca única e mais formal"},
+      {"name": "Varejo local multimarca (Lojas Avenida, Divas, Moda Ativa)", "quadrant": "Local + Preço/casual — presença local, sem marca-âncora nem e-commerce"},
+      {"name": "Jioji Cavalera", "quadrant": "Local + Marca original COM e-commerce/omnichannel (POSIÇÃO RECOMENDADA — quadrante VAZIO)"}
+    ]
+  },
+  "positioning_statements": [
+    {
+      "label": "A loja oficial que entrega (RECOMENDADA)",
+      "statement": "Para quem é de Porto Velho e curte moda de marca (Cavalera e cia) mas não quer arriscar réplica nem esperar frete eterno, a Jioji é a loja oficial da cidade que entrega de verdade — compre online e retire na loja, ou receba aqui na região, com a Cavalera original e o atendimento de quem está na cidade há 25 anos.",
+      "justification": "Combina os 3 ativos reais (Cavalera original + presença local + e-commerce com retira na loja) e resolve as 2 dores do consumidor (originalidade + frete). Ocupa o quadrante vazio do mapa. Funciona para o público masculino (Cavalera) e o feminino (a recompor), e dá ao e-commerce um motivo de existir que o nacional não tem.",
+      "bet": "Conveniência omnichannel (online + retira na loja) + originalidade local como diferenciais centrais — transformar a loja física em vantagem do e-commerce, não em concorrente dele.",
+      "risk": "É parcialmente aspiracional: depende de o e-commerce tracionar (medição, frete regional, recompra). Sem execução, 'a loja que entrega' fica como promessa não cumprida."
+    },
+    {
+      "label": "A vitrine de marca de Porto Velho",
+      "statement": "Para o consumidor de Porto Velho que quer marcas de verdade num só lugar, a Jioji é a multimarca que reúne Cavalera, Lado Avesso, Yexx e mais — curadoria de moda de marca com a confiança de uma loja local consolidada.",
+      "justification": "Foca na curadoria multimarca e na confiança local. Mais amplo, bom para o posicionamento institucional das lojas físicas.",
+      "bet": "Curadoria + variedade de marca como diferencial.",
+      "risk": "Não resolve diretamente a dor de frete/e-commerce nem dá um motivo forte para comprar online; é mais genérico e mais facilmente imitável pelo varejo local."
+    },
+    {
+      "label": "Atitude Cavalera",
+      "statement": "Para o público jovem urbano de Porto Velho, a Jioji é a casa da atitude Cavalera — estilo, irreverência e as marcas que combinam com quem você é.",
+      "justification": "Aposta na estética da marca-mãe (a tagline atual: 'atitude, irreverência e estilo'). Forte em identidade/lifestyle.",
+      "bet": "Lifestyle/atitude da marca Cavalera como território.",
+      "risk": "Compete no terreno da própria marca-mãe (cavalera.com.br faz isso melhor e nacionalmente) e não diferencia a LOJA local; não cria razão para escolher a Jioji em vez da fonte nacional. Não recomendada como direção principal."
+    }
+  ],
+  "chosen_statement": "Para quem é de Porto Velho e curte moda de marca (Cavalera e cia) mas não quer arriscar réplica nem esperar frete eterno, a Jioji é a loja oficial da cidade que entrega de verdade — compre online e retire na loja, ou receba aqui na região, com a Cavalera original e o atendimento de quem está na cidade há 25 anos.",
+  "puv": "A Jioji é a loja oficial Cavalera de Porto Velho que torna fácil ter o original: compre online e retire na loja (ou receba na região), sem risco de réplica e sem frete que inviabiliza.",
+  "canvas_4p": {
+    "product": {
+      "delivers": "Moda de marca original: Cavalera (âncora, forte no masculino) + Lado Avesso, IX/Yexx, Polay + feminino (Cavalera fem e curadoria, recompondo a saída da Melissa). Experiência omnichannel: e-commerce (Nuvemshop) + 2 lojas físicas + WhatsApp, com 'compre online e retire na loja'. Programa de cashback. Atendimento local de uma loja com 25 anos de cidade. Parcelamento em 6x.",
+      "transformation": "ANTES: o cliente de Porto Velho que quer Cavalera arrisca réplica no marketplace, ou paga frete caro/espera muito na cavalera.com.br nacional, ou só encontra na loja física dentro do horário. DEPOIS: compra o original fácil — pelo site com retirada na loja (zero frete) ou recebendo na região com frete claro, com cashback e o atendimento de quem ele conhece. A loja física vira a vantagem do e-commerce, não o seu concorrente.",
+      "doesnt_deliver": "NÃO compete preço com réplica de marketplace (não vamos cobrir 'achei mais barato na Shopee'). NÃO promete frete grátis nacional — o frete é honesto e calibrado para o raio viável, com retirada na loja como alternativa. NÃO é moda formal/social (fora do mix). NÃO vende para destinos onde o frete inviabiliza sem deixar isso claro. NÃO finge ser a marca-mãe — é a LOJA oficial que dá acesso e conveniência local."
+    },
+    "price": {
+      "positioning": "mid-market",
+      "justification": "Preço de moda de marca (Cavalera e cia), nem premium de boutique nem preço de marketplace/réplica. O que justifica pagar pela Jioji em vez do marketplace é originalidade garantida + conveniência local (retira na loja) + atendimento + cashback. Comunicação NÃO entra em guerra de preço com réplica — traduz o valor de comprar original e fácil, com 6x sem juros.",
+      "anchoring": "Ancorar pela ORIGINALIDADE e pela CONVENIÊNCIA, não pelo menor preço: 'original, parcelado em 6x, retire hoje na loja ou receba na região'. O cashback ancora a recompra ('volte e use seu cashback'). Lançamentos/coleção Cavalera funcionam como âncora de desejo."
+    },
+    "place": {
+      "main_channel": "E-commerce próprio (Nuvemshop) — a ser tracionado — integrado às 2 lojas físicas via 'compre online, retire na loja'. Instagram (@jiojicavalera consolidado) + WhatsApp Business como canais de descoberta e fechamento. Meta Ads redirecionado de engajamento para VENDA, geo-segmentado no raio viável.",
+      "main_channel_justification": "A Jioji precisa fazer o e-commerce funcionar (meta R$ 30k/mês) para compensar a Melissa — e o trunfo é usar as lojas físicas como ponte (retirada/prova de originalidade). O Meta já tem verba (~R$1,26k/mês) e demanda barata; falta apontar para conversão e para a geografia onde a entrega é viável.",
+      "support_channel": "GMB otimizado das 2 lojas ('Cavalera oficial em Porto Velho' — captura busca local de alta intenção). TikTok/Facebook como apoio orgânico, consolidados sob a marca-mãe @jiojicavalera. Cashback + base do PDV como motor de recompra (régua simples).",
+      "avoid_channels": [
+        {"channel": "Marketplaces (Shopee/ML) como canal de posicionamento", "reason": "Empurram para guerra de preço contra réplica e comprimem margem; minam o diferencial de originalidade/experiência. Podem servir só como vitrine pontual de saldo, nunca como território."},
+        {"channel": "Mídia paga de ENGAJAMENTO (objetivo atual dominante)", "reason": "Consome a verba sem gerar venda/medição — exatamente o que trava o e-commerce hoje. Redirecionar para conversão/tráfego qualificado pro site."},
+        {"channel": "Aquisição online para destinos de frete inviável", "reason": "O frete alto 'acaba com a venda' (dor declarada). Investir em público fora do raio viável queima verba; focar PV + entorno + Norte alcançável."},
+        {"channel": "Competir por catálogo/lançamento contra a cavalera.com.br nacional", "reason": "A fonte nacional sempre terá mais variedade e lançamentos primeiro. A Jioji vence em local + conveniência + atendimento, não em amplitude de catálogo."}
+      ]
+    },
+    "promotion": {
+      "tone": "A atitude/estilo da Cavalera (jovem, descontraído, com personalidade) + prático e local + confiável. Fala como gente de Porto Velho, sem corporativês e sem apelo de preço de marketplace. Reforça 'oficial/original' e 'aqui na cidade'.",
+      "top_funnel_message": "Descoberta: 'A Cavalera de verdade tá aqui em Porto Velho.' / 'Cavalera, Lado Avesso e mais — original, na sua cidade.' (Instagram, Meta, GMB).",
+      "bottom_funnel_message": "Conversão: 'Compre no site e retire na loja hoje — original, em 6x, com cashback.' / 'Recebe na sua região com frete certinho. É original, é da Jioji.' (site, WhatsApp Business, remarketing)."
+    }
+  },
+  "brand_territory": {
+    "three_words": ["Original", "Daqui", "Fácil"],
+    "description": "A Jioji ocupa o território da moda de marca ORIGINAL (Cavalera oficial, sem réplica), DAQUI (de Porto Velho, com 2 lojas e 25 anos de cidade, atendimento de quem te conhece) e FÁCIL (compre online e retire na loja, ou receba na região — conveniência que resolve a dor do frete). NÃO é a fonte nacional sem vínculo local (cavalera.com.br); NÃO é preço/réplica (marketplace); NÃO é casual de bairro sem marca (varejo local); NÃO é premium formal de marca única (Aramis). É a loja local que dá acesso fácil e confiável ao original.",
+    "competitor_territories": [
+      {"competitor": "cavalera.com.br", "territory": "Catálogo nacional. A fonte. (completo, mas distante e impessoal)"},
+      {"competitor": "Marketplaces (Shopee/ML)", "territory": "Preço. Variedade. (barato, com risco de réplica)"},
+      {"competitor": "Aramis", "territory": "Premium masculino clássico. (marca única, formal)"},
+      {"competitor": "Varejo local multimarca", "territory": "Casual acessível de bairro. (local, mas sem marca-âncora nem e-commerce)"}
+    ],
+    "availability_justification": "O território 'Original. Daqui. Fácil.' está vago porque (1) os players de marca (cavalera.com.br) são nacionais — não montam presença/atendimento local nem oferecem retirada na loja em Porto Velho; (2) os marketplaces jogam preço/variedade, não originalidade/experiência; (3) o varejo local tem presença mas não tem marca-âncora forte nem e-commerce com tração. Só a Jioji tem os três (marca Cavalera + local + e-commerce próprio). A janela é AGORA: a saída da Melissa força a tração do e-commerce, e o canal de e-commerce de moda está crescendo (+35% em 2025) — quem ocupar o 'original + local + fácil' primeiro fideliza o cliente online da região."
+  },
+  "taglines": [
+    {"tagline": "A Cavalera de verdade, aqui em Porto Velho.", "tone": "Direto, local, confiável", "justification": "Sintetiza 'original' (de verdade) + 'daqui' (Porto Velho) em 6 palavras. Ataca a objeção 'é original?' e o vínculo local de uma vez. Funciona em bio, GMB, anúncio e capa do site.", "best_use": "RECOMENDADA. Assinatura institucional, bio do @jiojicavalera, descrição do GMB, headline de anúncio de marca, capa do site."},
+    {"tagline": "Compre online, retire na loja. Original e fácil.", "tone": "Funcional, conveniência", "justification": "Comunica o diferencial omnichannel que resolve a dor do frete. Mais transacional — ótima para conversão e remarketing.", "best_use": "Checkout/banner do site, remarketing, WhatsApp Business, anúncios de conversão."},
+    {"tagline": "Atitude, irreverência e estilo — pertinho de você.", "tone": "Lifestyle + local", "justification": "Pega a tagline atual da marca ('atitude, irreverência e estilo') e adiciona o ângulo local ('pertinho de você'). Mantém a identidade existente com o twist do posicionamento.", "best_use": "Campanha de marca, Instagram/Reels, comunicação institucional — quando o foco é identidade, não conversão."}
+  ],
+  "recommended_tagline": "A Cavalera de verdade, aqui em Porto Velho.",
+  "operator_direction": {
+    "strongest_differential": "Ser a loja Cavalera OFICIAL de Porto Velho com presença física (2 lojas, 25 anos) E e-commerce próprio — podendo oferecer 'compre online, retire na loja', algo que nem a fonte nacional nem o marketplace nem o varejo local entregam. (A validar/aprofundar o diferencial que o cliente mais sente no dia a dia.)",
+    "desired_position": "Local + Marca original com e-commerce/omnichannel funcionando — quadrante vazio do mapa. Defende-se porque conjuga marca + local + conveniência, que nenhum concorrente reúne.",
+    "positioning_restrictions": [
+      "NÃO competir por preço com réplica de marketplace — competir por originalidade + conveniência",
+      "NÃO se posicionar como 'mais uma loja online de Cavalera' (a fonte nacional vence catálogo) — o ângulo é LOCAL + fácil",
+      "NÃO prometer frete grátis nacional — frete honesto no raio viável + retira na loja",
+      "NÃO abandonar o feminino com a saída da Melissa — comunicar a recomposição (Cavalera fem + curadoria)",
+      "Cuidar a linguagem sobre o e-commerce (construído pelo Gabriel) — o posicionamento depende de tracioná-lo, é evolução, não conserto"
+    ],
+    "desired_tone": "Atitude/estilo Cavalera + prático + local + confiável. Voz de Porto Velho, sem corporativês nem apelo de preço. (Tom de voz declarado a confirmar com a Sandra.)"
+  },
+  "key_insight": {
+    "headline": "O território 'Original. Daqui. Fácil.' está vago — e a saída da Melissa é o relógio que força a Jioji a ocupá-lo AGORA, tracionando o e-commerce que já está pronto.",
+    "context": "O mapa mostra o quadrante 'Local + Marca original + e-commerce funcionando' vazio: os nacionais (cavalera.com.br, marketplace) não têm o local; o varejo local não tem marca nem e-commerce. A Jioji tem os três ativos, mas o e-commerce fatura ~zero — o território é uma promessa até ele tracionar. A urgência não é hipotética: a Melissa (30-40% do shopping) sai no 2º semestre, e o e-commerce de moda cresce +35% ao ano. Quem ocupar 'original + local + fácil' primeiro fideliza o cliente online da região.",
+    "numbered_reasons": [
+      "(1) Evidência de vago: nenhum concorrente comunica 'Cavalera oficial de Porto Velho com compre-online-retire-na-loja'. Os nacionais não localizam; o local não tem e-commerce com tração. O cruzamento é livre.",
+      "(2) O que fecha a janela: o e-commerce de moda cresce +35%/ano e a cavalera.com.br/marketplaces ganham hábito de compra online a cada mês. Quanto mais o cliente da região aprende a comprar online da fonte nacional, mais caro fica reconquistá-lo.",
+      "(3) O que a Jioji ganha ao ocupar primeiro: compensa a saída da Melissa com venda online + recompra (cashback), usando as lojas físicas como vantagem (retira na loja) que os concorrentes online não têm — diferenciação difícil de copiar."
+    ],
+    "discussion_anchor": "Com a Sandra: aprovar o território 'Original. Daqui. Fácil.' e a tagline 'A Cavalera de verdade, aqui em Porto Velho.' E entender que o posicionamento SÓ vira real com os quick wins que destravam o e-commerce (medição, frete + retira na loja em destaque, mídia redirecionada para venda, recompra com cashback). Aprovar o posicionamento sem executar a tração = slogan. A saída da Melissa não deixa espaço para esperar.",
+    "feasibility": "alta — os ativos (marca, lojas, e-commerce, cashback) já existem; depende de execução de quick wins de baixo custo, não de orçamento novo."
+  },
+  "honesty_alert": "O território 'Original. Daqui. Fácil.' é defensável e baseado em ativos reais — MAS é hoje parcialmente ASPIRACIONAL no eixo 'Fácil': o e-commerce fatura ~zero e o frete trava a entrega. O posicionamento só se torna verdadeiro quando os quick wins forem executados (pixel/medição, política de frete + retira na loja, mídia redirecionada para venda, recompra via cashback). Risco real: aprovar o posicionamento e a produção da S3 (brandbook, LP, criativos) sem destravar o e-commerce — aí a comunicação promete 'fácil' e a experiência não entrega, corroendo confiança. Pendências que ainda calibram o posicionamento: demografia fina do ICP (% masculino vs feminino, faixa etária — PDV), faturamento total real (só a loja maior confirmada) e o tom de voz declarado pela Sandra. Recomendação: validar o território com a Sandra na próxima call e amarrar a S3 à execução dos quick wins de e-commerce — posicionamento e tração andam juntos, ou nenhum entrega."
+}

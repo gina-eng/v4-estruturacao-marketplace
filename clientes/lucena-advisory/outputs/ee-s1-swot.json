@@ -1,0 +1,417 @@
+{
+  "client_name": "Lucena Advisory",
+  "skill": "ee-s1-swot",
+  "version": 1,
+  "generated_at": "2026-06-19T00:00:00Z",
+  "data_source": "mixed",
+  "summary": "SWOT da Lucena Advisory revela forças institucionais fortes (autoridade técnica tripla do Aldo, conversão de 50% proposta→venda, cliente-âncora de R$ 300M+ com 26 CNPJs e, sobretudo, a herança da MC Consultoria — 15 anos de marca, 400+ clientes e 6 técnicos) contra fraquezas operacionais e digitais (zero presença digital, vazamento de follow-up em planilha, centralização no dono). A meta foi travada no Kick-Off em R$ 50k/mês. A jogada mais inteligente (SO) é dupla: consolidar e reativar a base herdada da MC (transformando serviços pontuais em SGI recorrente) e expandir dentro da âncora Rei dos Bons Amigos, enquanto fecha o vazamento de follow-up com CRM e ocupa o vácuo digital do nicho — ancorando a marca na previsibilidade do processo, o diferencial que o próprio Aldo nomeou.",
+  "summary_headline": "Lucena Advisory tem autoridade técnica rara e uma âncora de R$ 300M+ já aberta (forças institucionais), mas vende em planilha e perde leads no follow-up (fraqueza que sangra caixa hoje). Jogada SO: expandir dentro da âncora e fechar o vazamento antes da concorrência acordar pro digital.",
+  "summary_highlights": [
+    {
+      "category": "posicao",
+      "label": "Forças × Fraquezas",
+      "value": "6 × 6",
+      "subtext": "Forças institucionais sólidas vs fraquezas operacionais críticas",
+      "tone": "yellow"
+    },
+    {
+      "category": "oportunidade",
+      "label": "Expansão na âncora",
+      "value": "26 CNPJs",
+      "subtext": "ABM dentro do Rei dos Bons Amigos — maior ROI, menor CAC",
+      "tone": "green"
+    },
+    {
+      "category": "risco",
+      "label": "Concentração de receita",
+      "value": "100% em 2 contratos",
+      "subtext": "Saída do âncora derruba ~76% da receita (R$ 16k de R$ 21k)",
+      "tone": "red"
+    },
+    {
+      "category": "janela",
+      "label": "Vácuo digital do nicho",
+      "value": "~12 meses",
+      "subtext": "Antes de FRTB/Moura/Aurora profissionalizarem (a confirmar na S2)",
+      "tone": "blue"
+    },
+    {
+      "category": "oportunidade",
+      "label": "Top ação: CRM + cadência",
+      "value": "ROI ~7x/90d",
+      "subtext": "Recupera leads que somem — motivo #1 de perda declarado",
+      "tone": "green"
+    }
+  ],
+  "summary_key_findings": [
+    {
+      "category": "vantagem",
+      "text": "A Lucena já tem o mais difícil: autoridade e fechamento. O decisor Aldo é advogado + engenheiro ambiental + mestre em direito ambiental com 10+ anos de mercado, e a operação converte ~50% das propostas em venda em ciclo de 15 dias (10 propostas → 5 vendas/mês). Isso não se compra com mídia — é o ativo que a estratégia deve alavancar."
+    },
+    {
+      "category": "contexto",
+      "text": "CNPJ aberto em janeiro/2026 (4 meses) e Zero Digital absoluto: sem site, Instagram, GMB ou LinkedIn institucional, CRM em planilha. Não é estagnação — é fase de fundação, uma janela rara de estruturar do zero sem vícios. A meta operacional (R$ 50k/mês em 6m vs R$ 100k declarado no V4MOS) precisa ser travada no Kick-Off, pois calibra o ritmo de toda a SWOT."
+    },
+    {
+      "category": "ameaca",
+      "text": "Dois riscos externos pesam: a concentração de 100% da receita em 2 contratos (sobretudo o âncora de R$ 16k) torna a saída do Rei dos Bons Amigos um evento quase existencial; e o vácuo digital do nicho é uma janela que fecha — se FRTB, Moura ou Aurora profissionalizarem SEO/conteúdo primeiro, a vantagem de pioneirismo evapora."
+    },
+    {
+      "category": "acao",
+      "text": "A SWOT confirma a inversão do playbook V4: nos próximos 90 dias, atacar (1) o vazamento de follow-up com CRM + cadência, (2) a expansão ABM dentro dos 26 CNPJs da âncora e (3) o alicerce digital (LP + GMB + LinkedIn) — deixando mídia paga para depois do diagnóstico da S2/S3. Encher o topo antes de fechar o meio só amplifica o desperdício."
+    }
+  ],
+  "strengths": [
+    {
+      "title": "Autoridade técnica tripla e rara do decisor",
+      "description": "Aldo Lucena Júnior é advogado, engenheiro ambiental E mestre em direito ambiental, com 10+ anos de mercado. Em um nicho onde a venda é confiança técnica e jurídica simultânea, essa combinação é difícil de igualar — nenhum dos concorrentes declarados (FRTB, Moura, Ocidental, Aurora) tem, em uma só pessoa, o repertório jurídico + de engenharia que a Lucena oferece.",
+      "implication": "É a matéria-prima de toda a estratégia de marca e conteúdo: posicionar o Aldo como a autoridade de licenciamento ambiental do Amazonas (LinkedIn, artigos, pareceres comentados) custa quase zero e cria barreira de entrada que mídia paga não compra.",
+      "source": "briefing"
+    },
+    {
+      "title": "Máquina de fechamento que já funciona (50% de conversão)",
+      "description": "Mesmo sem nenhuma estrutura, a operação converte ~50% das propostas em venda (10 propostas → 5 vendas no último mês, V4MOS Q24/Q30) em ciclo curto de 15 dias. Para consultoria B2B — onde o ciclo costuma ser de 30-90 dias — isso é acima da média e prova que o produto e o pitch fecham quando chegam à mesa.",
+      "implication": "O gargalo da Lucena NÃO é fechamento, é volume e cadência de leads. Qualquer ganho de meio de funil (parar de perder lead) converte quase direto em receita, porque a saída do funil já está calibrada.",
+      "source": "v4mos"
+    },
+    {
+      "title": "Cliente-âncora de R$ 300M+/ano com porta já aberta",
+      "description": "O grupo Rei dos Bons Amigos (26 CNPJs, faturamento >R$ 300M/ano em postos, estaleiros e embarcações) já é cliente e responde por boa parte da receita. O Aldo declarou na FPS o desejo de apresentar a V4 ao diretor executivo do grupo — relacionamento quente, não prospecção fria.",
+      "implication": "Expandir dentro do grupo (mais CNPJs, mais serviços) tem taxa de fechamento ordens de grandeza acima de captar cliente novo. É a alavanca de crescimento mais barata e mais provável disponível hoje — base de um plano ABM.",
+      "source": "briefing"
+    },
+    {
+      "title": "Time multidisciplinar estruturado para cross-sell técnico",
+      "description": "Para além do Aldo, a sociedade já reúne Direito Administrativo, Arquitetura e Urbanismo, Engenharia de Segurança e Administração. Isso amplia a entrega para além do licenciamento puro — abre Compliance e Saúde e Segurança do Trabalho (SST) como novas linhas para a mesma base de clientes.",
+      "implication": "Permite aumentar o ticket por cliente (cross-sell de SST/compliance dentro da carteira atual e do grupo âncora) sem precisar captar leads novos — alavanca de receita de baixo custo de aquisição.",
+      "source": "briefing"
+    },
+    {
+      "title": "Demanda validada por indicação espontânea recorrente",
+      "description": "100% da receita vem de indicação/passivo, e o cliente declarou no V4MOS (Q23) que clientes indicam espontaneamente 'com frequência — é um canal relevante'. Indicação espontânea recorrente é o sinal mais forte de que o serviço entrega valor real e gera satisfação.",
+      "implication": "Existe um motor de boca a boca funcionando que hoje não é capturado nem sistematizado. Formalizar um programa de indicação + provas sociais (cases, depoimentos) transforma um ativo passivo em canal de aquisição rastreável.",
+      "source": "v4mos"
+    },
+    {
+      "title": "Herança da MC Consultoria — 15 anos, 400+ clientes e equipe técnica",
+      "description": "Fato novo do Kick-Off: a mãe do Aldo está saindo do mercado e ele vai herdar a carteira da MC Consultoria Ambiental — 15 anos de marca consolidada, 400+ clientes registrados, 6 técnicos em operação, sendo ela a engenheira que mais emitiu ART (responsabilidade técnica) no Amazonas nos últimos 5 anos. Aldo avalia unificar tudo sob uma sociedade limitada com o CNPJ da MC. A consolidação está pendente de auditoria contábil (~1 mês). Some-se a vantagem de estruturar o DIGITAL do zero, sem vícios (a MC nunca fez marketing — 100% orgânico/indicação).",
+      "implication": "Muda o jogo: a Lucena deixa de ser uma startup de 4 meses para herdar uma operação madura. A base de 400+ clientes é matéria-prima imediata para o modelo recorrente (SGI terceirizado) e para o cross-sell — crescimento sem custo de aquisição. Prioridade: auditar e segmentar essa base e reativá-la com a nova oferta antes de buscar topo de funil novo.",
+      "source": "operador"
+    }
+  ],
+  "weaknesses": [
+    {
+      "title": "Invisibilidade digital absoluta (maturidade 8/100)",
+      "description": "Sem site, sem Instagram, sem GMB, sem LinkedIn institucional, sem GA4/GTM. O diagnóstico de maturidade marcou 8/100 (crítico extremo), 24 pontos abaixo da média do setor (~32). Um comitê de compra B2B que pesquisar 'Lucena Advisory' hoje não encontra nada.",
+      "implication": "Risco: invisibilidade é veto silencioso à expansão B2B — decisores qualificam fornecedor pesquisando. Mitigação: erguer alicerce mínimo (LP institucional + GMB + LinkedIn) na S3, antes de qualquer aquisição ativa, para dar destino e credibilidade ao relacionamento.",
+      "severity": "critical",
+      "source": "diagnostico"
+    },
+    {
+      "title": "Vazamento de follow-up — leads somem na planilha",
+      "description": "O motivo #1 de perda declarado é 'o lead sumiu sem dar retorno' (V4MOS Q27), e leads param de responder 'com frequência' (Q32). O CRM é uma planilha (Q10), o padrão de follow-up 'existe mas nem sempre é seguido' (Q33). É vazamento estrutural dentro de uma operação que converteria metade desses leads.",
+      "implication": "Risco: cada lead perdido é receita direta perdida (ticket ~R$ 10,5k recorrente). Amplifica qualquer ameaça de aquisição futura. Mitigação imediata: CRM com pipeline de 5 etapas + automação de cadência no WhatsApp (3 toques em 7 dias) + etiqueta de origem.",
+      "severity": "critical",
+      "source": "v4mos"
+    },
+    {
+      "title": "Operação 100% dependente do dono (bus factor = 1)",
+      "description": "Aldo acumula decisor + único vendedor + executor técnico + comunicação. Não há equipe comercial dedicada (V4MOS Q8) nem de marketing (Q9). Os sócios estão focados em entrega técnica, não em vendas.",
+      "implication": "Risco: se o Aldo sair de cena 30 dias, o pipeline trava — e nenhum plano de crescimento escala enquanto a venda depender só dele. Mitigação: documentar o processo comercial no CRM e, na S4/S5, dimensionar um LDR/prospector ou comercial dedicado.",
+      "severity": "high",
+      "source": "briefing"
+    },
+    {
+      "title": "Concentração de 100% da receita em 2 contratos",
+      "description": "A receita de R$ 21k/mês vem inteiramente de 2 contratos fixos (R$ 16k + R$ 5k), com o maior atrelado ao grupo âncora. Não há diversificação de carteira ativa que dê fôlego a perdas.",
+      "implication": "Risco existencial: a saída do contrato de R$ 16k derruba ~76% da receita. Mitigação: a estratégia precisa diversificar (novos clientes industriais + cross-sell) em paralelo à expansão da âncora — nunca amplificar a concentração.",
+      "severity": "high",
+      "source": "briefing"
+    },
+    {
+      "title": "Zero previsibilidade — sem forecast, MoM, CAC ou LTV",
+      "description": "Não acompanha faturamento mês a mês (V4MOS Q29), não calcula CAC/LTV (Q28), não faz forecast integrado de marketing e vendas (Q36). O próprio Aldo 'não sabe quanto vai entrar no próximo mês' (call SDR).",
+      "implication": "Risco: sem instrumentação, a empresa pilota no escuro e só percebe problemas de caixa quando já estouraram. Mitigação: dashboard mínimo de MoM + pipeline + forecast simples na S1/S2 — pré-requisito para qualquer meta operacional.",
+      "severity": "high",
+      "source": "v4mos"
+    },
+    {
+      "title": "Sem capacidade interna de produção de marketing",
+      "description": "Sem equipe de marketing (V4MOS Q9), sem identidade visual/logo (has_logo=false), sem banco de imagens, frequência de publicação 'não publico' (Q43). Toda a comunicação depende do Aldo, que já está sobrecarregado na operação.",
+      "implication": "Risco: planos de conteúdo/criativos morrem na falta de executor. Mitigação: a V4 assume a produção na S3 (identidade + LP + criativos), e o conteúdo de autoridade fica em formato de baixo esforço (LinkedIn do Aldo, 1-2h/semana) até haver capacidade dedicada.",
+      "severity": "medium",
+      "source": "diagnostico"
+    }
+  ],
+  "opportunities": [
+    {
+      "title": "Vácuo digital do nicho ambiental em Manaus",
+      "description": "A hipótese (a confirmar na ee-s2-pesquisa-mercado) é que os concorrentes diretos — FRTB, Moura, Ocidental, Aurora — têm baixa maturidade digital, típica de consultoria ambiental B2B regional. Se confirmado, há espaço para a Lucena ser a primeira marca digitalmente forte do nicho no Amazonas.",
+      "implication": "Capturar a posição de referência digital do nicho (SEO local + conteúdo de autoridade + GMB) antes da concorrência cria barreira difícil de reverter. É a oportunidade de pioneirismo — mas tem prazo.",
+      "time_sensitivity": "urgent",
+      "source": "market_trend"
+    },
+    {
+      "title": "Expansão ABM dentro do grupo Rei dos Bons Amigos",
+      "description": "O grupo tem 26 CNPJs e a Lucena atende parte dele. Cada CNPJ adicional (postos, estaleiros, embarcações) é uma oportunidade de licenciamento, compliance e SST com relacionamento já estabelecido e confiança comprovada.",
+      "implication": "Mapear o comitê de compra do grupo e desenhar um plano ABM de expansão é o caminho de menor CAC e maior taxa de fechamento disponível. Usar a reunião com o diretor executivo (já sinalizada na FPS) como pivô.",
+      "time_sensitivity": "urgent",
+      "source": "briefing"
+    },
+    {
+      "title": "Drivers regulatórios de demanda crescente no Amazonas",
+      "description": "Manaus concentra Zona Franca, indústria (Honda, Yamaha), estaleiros, postos de combustíveis e logística fluvial — todos sujeitos a licenciamento ambiental e urbanístico crescente (IPAAM, IBAMA, SEMMAS). A pressão regulatória estrutural sustenta demanda de longo prazo (a quantificar na S2).",
+      "implication": "A demanda não depende de moda — é regulatória e recorrente. Posicionar a Lucena como destravadora de empreendimentos (não 'mais uma consultoria') captura essa demanda inelástica.",
+      "time_sensitivity": "medium_term",
+      "source": "market_trend"
+    },
+    {
+      "title": "Busca local de alta intenção via Google Meu Negócio",
+      "description": "Termos como 'licenciamento ambiental Manaus', 'consultoria ambiental AM' e 'IPAAM licenciamento' têm alta intenção comercial e baixa disputa. Sem GMB reivindicado, a Lucena perde 100% dessa busca local hoje.",
+      "implication": "Reivindicar e otimizar o GMB (fotos, descrição, 5-10 reviews da carteira atual) é uma ação de baixo custo e payback rápido que destrava leads inbound de altíssima qualificação. Ação de curto prazo na S3.",
+      "time_sensitivity": "urgent",
+      "source": "diagnostico"
+    },
+    {
+      "title": "Compliance e SST como nova linha de receita",
+      "description": "Com a entrada de sócios de Engenharia de Segurança e Direito Administrativo, a Lucena pode oferecer Compliance e Saúde e Segurança do Trabalho — serviços recorrentes que a mesma base de clientes (postos, estaleiros, indústria) consome obrigatoriamente.",
+      "implication": "Cross-sell na carteira existente e no grupo âncora aumenta o ticket médio e o LTV sem custo de aquisição novo. Empacotar 'licenciamento + compliance + SST' como solução única reforça o posicionamento de tranquilidade burocrática.",
+      "time_sensitivity": "medium_term",
+      "source": "briefing"
+    },
+    {
+      "title": "LinkedIn como canal B2B subexplorado no nicho",
+      "description": "O comitê de compra B2B (engenheiros, gestores, diretores) vive no LinkedIn, e o nicho de licenciamento ambiental local quase não produz conteúdo de autoridade ali. O Aldo tem repertório técnico de sobra e o tipo de credencial que gera credibilidade imediata na plataforma.",
+      "implication": "Conteúdo de autoridade no LinkedIn do Aldo (casos de licenciamento, exigências IPAAM/IBAMA) é canal de aquisição inbound B2B de custo quase zero — e prepara terreno para o ABM. Começar imediatamente, em paralelo ao alicerce.",
+      "time_sensitivity": "medium_term",
+      "source": "market_trend"
+    }
+  ],
+  "threats": [
+    {
+      "title": "Concorrência pode profissionalizar o digital primeiro",
+      "description": "FRTB, Moura, Ocidental e Aurora já operam no mesmo nicho. Se qualquer um investir em SEO, conteúdo e GMB antes da Lucena, a janela de pioneirismo digital fecha e a Lucena passa a correr atrás de uma posição que poderia ter ocupado.",
+      "implication": "A oportunidade de vácuo digital tem prazo. Proteção: ocupar GMB + busca local + LinkedIn de autoridade nos próximos 90 dias, antes de a concorrência acordar. Quanto mais a Lucena demorar, maior o gap a recuperar.",
+      "probability": "medium",
+      "impact": "high",
+      "source": "market_trend"
+    },
+    {
+      "title": "Saída ou redução do cliente-âncora",
+      "description": "O contrato de R$ 16k atrelado ao grupo Rei dos Bons Amigos sustenta ~76% da receita. Mudança de gestão, internalização do serviço ou insatisfação no grupo derrubaria a operação. É a maior exposição da empresa hoje.",
+      "implication": "Risco quase existencial. Proteção dupla: (1) blindar a conta com cross-sell de compliance/SST e excelência de entrega, tornando a Lucena indispensável; (2) diversificar a carteira urgentemente para que a saída do âncora não seja fatal.",
+      "probability": "low",
+      "impact": "high",
+      "source": "briefing"
+    },
+    {
+      "title": "Simplificação regulatória do licenciamento",
+      "description": "Mudanças na legislação de licenciamento ambiental (ex: Lei Geral do Licenciamento Ambiental e modalidades de autolicenciamento/LAC) podem reduzir a complexidade de alguns processos e, com isso, a necessidade de intermediação em segmentos de menor risco. (A monitorar na pesquisa de mercado.)",
+      "implication": "Parte da demanda transacional simples pode encolher. Proteção: posicionar a Lucena no licenciamento complexo/de alto risco e em serviços recorrentes (compliance, SST, gestão de exigências) — onde a expertise jurídica + engenharia continua indispensável.",
+      "probability": "medium",
+      "impact": "medium",
+      "source": "market_trend"
+    },
+    {
+      "title": "Pressão de caixa da meta agressiva sabota a estruturação",
+      "description": "A meta declarada (R$ 50k/mês em 6 meses, ~2,4x o faturamento atual) é ambiciosa. A urgência de bater meta pode pressionar o Aldo a abandonar a estruturação e voltar ao modo 'apagar incêndio' / vender no improviso — exatamente o que o projeto veio resolver.",
+      "implication": "Proteção: travar a meta operacional realista no Kick-Off e instalar métricas (MoM, pipeline, forecast) para mostrar progresso incremental — para que a estruturação seja vista como o caminho da meta, não um desvio dela.",
+      "probability": "medium",
+      "impact": "medium",
+      "source": "briefing"
+    },
+    {
+      "title": "Dependência futura de plataformas para aquisição paga",
+      "description": "Quando a Lucena entrar em mídia paga, ficará exposta a custos crescentes e mudanças de algoritmo de Google/Meta. Pior: para um ICP B2B industrial que 'não está em redes sociais', mídia paga tradicional pode ter ROI marginal — risco de investir no canal errado.",
+      "implication": "Proteção: o diagnóstico de mídia (S2) e o forecast (S3) devem decidir entre mídia paga vs LDR/prospector com dados, não por inércia de playbook. Reduz a exposição a um canal único e ao custo de leilão.",
+      "probability": "medium",
+      "impact": "medium",
+      "source": "market_trend"
+    }
+  ],
+  "strategic_synthesis": {
+    "leverage": "A aposta principal cruza as forças institucionais com as oportunidades de menor CAC. A Lucena tem três ativos que dinheiro não compra rápido — a autoridade técnica tripla do Aldo (F1), uma máquina de fechamento de 50% (F2) e uma âncora de R$ 300M+ com porta aberta (F3) — e duas oportunidades de altíssima conversão esperando: expandir dentro dos 26 CNPJs do grupo (O2) e ocupar o vácuo digital/busca local do nicho (O1, O4) antes da concorrência. A jogada SO é direcionar a autoridade do Aldo para dois alvos simultâneos: para dentro (plano ABM de expansão na âncora, com cross-sell de compliance/SST) e para o digital de autoridade (GMB + LinkedIn + LP institucional), transformando reputação técnica em pipeline rastreável. Nenhuma dessas jogadas exige mídia paga — exige estrutura e direção.",
+    "protection": "O risco principal nasce do encontro entre as fraquezas operacionais e as ameaças externas. A concentração de 100% da receita em 2 contratos (W4) combinada com a possibilidade de saída do âncora (T2) é a vulnerabilidade mais grave: se o contrato de R$ 16k cair antes de a carteira diversificar, não há fôlego. Em paralelo, o vazamento de follow-up (W2) somado à invisibilidade digital (W1) significa que, mesmo se a concorrência acordar para o digital primeiro (T1), a Lucena não tem hoje nem como capturar nem como reter os leads que disputaria. E a meta agressiva (T4) pressiona a abandonar a estruturação justamente quando ela é mais necessária. Não tratar W2 e W4 transforma ameaças de probabilidade média em danos altos.",
+    "recommended_strategy": "Nos próximos 90 dias, a Lucena deve executar uma estratégia de 'fundação antes de escala', em três frentes paralelas e uma adiada. (1) Fechar o vazamento: CRM mínimo + pipeline de 5 etapas + cadência automatizada de follow-up — ataca o motivo #1 de perda e instala as métricas que faltam. (2) Crescer onde já é forte: mapear o comitê de compra do Rei dos Bons Amigos e rodar um plano ABM de expansão (novos CNPJs + cross-sell de compliance/SST), o caminho de maior ROI disponível. (3) Erguer o alicerce de credibilidade: identidade visual + LP institucional + GMB + LinkedIn de autoridade do Aldo, para ser achável e crível pelo comitê B2B. (4) Adiar deliberadamente a mídia paga até o diagnóstico da S2/S3 decidir entre ads e LDR/prospector. Tudo isso só calibra corretamente depois de travar a meta operacional única no Kick-Off."
+  },
+  "tows_matrix": {
+    "description": "Cruzamento estratégico dos quadrantes SWOT da Lucena Advisory. Cada estratégia conecta uma força ou fraqueza interna a uma oportunidade ou ameaça externa, transformando a análise em ação.",
+    "so_strategies": [
+      {
+        "id": "SO1",
+        "strategy": "Plano ABM de expansão dentro do Rei dos Bons Amigos: usar a autoridade do Aldo (F1) e a porta aberta na âncora (F3) para mapear o comitê de compra do grupo e prospectar os CNPJs ainda não atendidos (O2).",
+        "rationale": "Relacionamento quente + autoridade técnica + 26 CNPJs com demanda regulatória recorrente = maior taxa de fechamento e menor CAC possível. A reunião com o diretor executivo (sinalizada na FPS) é o gatilho.",
+        "expected_outcome": "1-3 novos contratos dentro do grupo em 90 dias, diversificando a receita sem depender de captação fria."
+      },
+      {
+        "id": "SO2",
+        "strategy": "Transformar a conversão de 50% (F2) em pipeline previsível dando destino digital à demanda: capturar a busca local de alta intenção (O4) com GMB + LP institucional, qualificando o lead antes de chegar ao Aldo.",
+        "rationale": "A saída do funil já fecha metade; falta volume qualificado de entrada. Busca local tem alta intenção e baixa disputa — alimenta a máquina que já comprovadamente converte.",
+        "expected_outcome": "Leads inbound rastreáveis e qualificados chegando por canal próprio, reduzindo a dependência exclusiva de indicação."
+      },
+      {
+        "id": "SO3",
+        "strategy": "Ocupar o vácuo de conteúdo do nicho (O1, O6) publicando a autoridade do Aldo (F1) no LinkedIn e no GMB: casos de licenciamento, exigências IPAAM/IBAMA, situações reais de regularização.",
+        "rationale": "O comitê B2B vive no LinkedIn e o nicho local quase não produz conteúdo. Autoridade já existe — falta publicar. Custo quase zero, barreira de entrada alta.",
+        "expected_outcome": "Lucena vira referência digital do licenciamento ambiental no AM; inbound B2B qualificado em 3-6 meses."
+      }
+    ],
+    "wo_strategies": [
+      {
+        "id": "WO1",
+        "strategy": "Implementar CRM + cadência automatizada de follow-up (resolve W2) para não desperdiçar os leads da expansão da âncora e da busca local (O2, O4).",
+        "rationale": "Não adianta gerar mais leads (oportunidades) jogando-os numa planilha que já perde o que entra. CRM é pré-condição para ABM rastreável e para qualquer aquisição.",
+        "expected_outcome": "Zero lead perdido por esquecimento; visibilidade de pipeline e recuperação de 2-3 oportunidades/mês hoje vazadas."
+      },
+      {
+        "id": "WO2",
+        "strategy": "Erguer o alicerce digital institucional (resolve W1) — LP + GMB + LinkedIn institucional — para ser achável e crível pelo comitê de compra B2B (O2, O4).",
+        "rationale": "A invisibilidade digital veta a expansão B2B: decisor qualificado pesquisa antes de contratar. Sem alicerce, o ABM e a busca local não têm onde aterrissar.",
+        "expected_outcome": "Comitê de compra encontra uma Lucena profissional ao pesquisar; ABM e busca local passam a ter destino de conversão."
+      },
+      {
+        "id": "WO3",
+        "strategy": "Documentar o processo comercial dentro do CRM (mitiga W3) para liberar o Aldo da operação transacional e concentrá-lo em relacionamento estratégico de alto valor com a âncora (O2).",
+        "rationale": "Enquanto o Aldo for o único vendedor-executor, o crescimento é limitado por sua agenda. Processo documentado é o primeiro passo para delegar e escalar.",
+        "expected_outcome": "Aldo gasta menos tempo apagando incêndio e mais tempo na expansão da âncora; base para contratar comercial/LDR na S4/S5."
+      }
+    ],
+    "st_strategies": [
+      {
+        "id": "ST1",
+        "strategy": "Blindar a conta-âncora com cross-sell: usar a multidisciplinaridade do time (F4) e a autoridade (F1) para empacotar licenciamento + compliance + SST dentro do grupo (defende contra T2).",
+        "rationale": "Quanto mais serviços recorrentes a Lucena entrega ao grupo, mais cara e arriscada fica a troca de fornecedor — torna-se indispensável, reduzindo a chance de saída do âncora.",
+        "expected_outcome": "Maior ticket e LTV no grupo + redução da probabilidade de churn do contrato de R$ 16k."
+      },
+      {
+        "id": "ST2",
+        "strategy": "Erguer barreira de entrada digital primeiro: usar a autoridade do Aldo (F1) para dominar conteúdo e busca local antes que os concorrentes profissionalizem (neutraliza T1).",
+        "rationale": "Pioneirismo em SEO/conteúdo de autoridade cria vantagem cumulativa (backlinks, reviews, ranking) difícil de reverter depois. É correr na frente enquanto a corrida ainda não começou.",
+        "expected_outcome": "Lucena ocupa a primeira página do nicho no Google/LinkedIn local antes da concorrência reagir."
+      },
+      {
+        "id": "ST3",
+        "strategy": "Usar o case do Rei dos Bons Amigos (F3) como prova social para captar novos clientes industriais (Honda, Yamaha, estaleiros), diversificando a carteira (reduz exposição a T2).",
+        "rationale": "Atender um grupo de R$ 300M+ é credencial poderosa. Transformá-lo em case (com autorização) acelera a confiança de novos prospects B2B de grande porte.",
+        "expected_outcome": "Novos contratos fora do grupo âncora, reduzindo a concentração de receita."
+      }
+    ],
+    "wt_strategies": [
+      {
+        "id": "WT1",
+        "strategy": "Diversificar a receita com urgência (ataca W4) montando um pipeline ativo de novos clientes industriais antes que a saída do âncora (T2) somada à ausência de aquisição (W1) deixe a empresa sem fôlego.",
+        "rationale": "A concentração de 100% em 2 contratos é a vulnerabilidade fatal. Mesmo crescendo na âncora, é preciso construir uma segunda perna de receita independente — sobrevivência, não só crescimento.",
+        "expected_outcome": "Carteira menos concentrada: meta de reduzir o peso do maior contrato de ~76% para <50% da receita em 6-12 meses."
+      },
+      {
+        "id": "WT2",
+        "strategy": "Instalar métricas mínimas — MoM, pipeline, forecast simples (ataca W5) — para detectar cedo a pressão de caixa e provar progresso, evitando que a meta agressiva (T4) faça o Aldo abandonar a estruturação.",
+        "rationale": "Sem instrumentação, problemas de caixa só aparecem quando já estouraram, e o progresso da estruturação fica invisível — alimentando a ansiedade que sabota o projeto.",
+        "expected_outcome": "Aldo enxerga o funil e o caixa em tempo real; decisões baseadas em dado, não em pânico."
+      }
+    ]
+  },
+  "priority_actions": [
+    {
+      "action": "Implementar CRM mínimo (RD Station Free, Kommo ou Pipefy) com pipeline B2B de 5 etapas (Lead → Qualificado → Proposta → Negociação → Fechado/Perdido), automação de follow-up no WhatsApp (3 toques em 7 dias) e etiqueta de origem do lead. Migrar os 10 clientes ativos + leads em aberto das planilhas.",
+      "swot_basis": "Ataca W2 (vazamento de follow-up) e W5 (sem métricas); executa WO1; habilita O2 e O4.",
+      "impact": "high",
+      "suggested_timeline": "Semana 1-2",
+      "dependencies": ["Travar meta operacional no Kick-Off (calibra metas de pipeline)"],
+      "financial_impact": {
+        "investment_brl": 1500,
+        "monthly_return_brl": 10500,
+        "payback_days": 20,
+        "roi_multiple": 7.0,
+        "note": "Investimento = setup + ferramenta por 3 meses (plano free/baixo custo). Retorno = recuperar ~1 negócio/mês hoje perdido por 'lead sumiu', ao ticket recorrente médio de R$ 10,5k."
+      },
+      "risk_adjusted_score": {"impact": 9, "probability_of_success": 8, "reversibility": 9, "score": 8.7}
+    },
+    {
+      "action": "Mapear o comitê de compra do grupo Rei dos Bons Amigos (sementinha técnica, multiplicador operacional, decisor executivo) e desenhar um plano ABM de expansão pelos CNPJs ainda não atendidos, usando a reunião com o diretor executivo (já sinalizada na FPS) como pivô. Incluir oferta de cross-sell de compliance/SST.",
+      "swot_basis": "Alavanca F1, F3 e F4; captura O2 e O5; executa SO1 e ST1.",
+      "impact": "high",
+      "suggested_timeline": "Semana 1-3",
+      "dependencies": ["Persona/Comitê de Compra (ee-s1-persona-icp)"],
+      "financial_impact": {
+        "investment_brl": 0,
+        "monthly_return_brl": 8000,
+        "payback_days": 30,
+        "roi_multiple": 999,
+        "note": "Custo de aquisição ~zero (relacionamento existente). Retorno estimado conservador de 1 novo CNPJ/contrato no trimestre dentro do grupo (R$ 5-16k); ROI efetivamente infinito por não exigir investimento de mídia."
+      },
+      "risk_adjusted_score": {"impact": 9, "probability_of_success": 7, "reversibility": 9, "score": 8.3}
+    },
+    {
+      "action": "Erguer o alicerce digital institucional na S3: identidade visual (logo + paleta + tipografia), landing page B2B 1-page (PUV + serviços + case da âncora + CTA WhatsApp + formulário de qualificação + GA4/GTM) e Google Meu Negócio reivindicado em Manaus com fotos, descrição do nicho e 5-10 reviews da carteira atual.",
+      "swot_basis": "Ataca W1 (invisibilidade); captura O1 e O4; executa WO2 e ST2.",
+      "impact": "high",
+      "suggested_timeline": "Semana 2-3",
+      "dependencies": ["PUV na ee-s2-posicionamento", "Persona na ee-s1-persona-icp"],
+      "financial_impact": {
+        "investment_brl": 3000,
+        "monthly_return_brl": 10500,
+        "payback_days": 30,
+        "roi_multiple": 10.5,
+        "note": "Investimento único de produção (dentro do escopo S3). Retorno = busca local de alta intenção destravada + destino de conversão para ABM; estimativa conservadora de 1 contrato/mês incremental no médio prazo."
+      },
+      "risk_adjusted_score": {"impact": 8, "probability_of_success": 8, "reversibility": 7, "score": 7.8}
+    },
+    {
+      "action": "Iniciar conteúdo de autoridade quinzenal no LinkedIn do Aldo (casos de licenciamento no Norte, exigências IPAAM/IBAMA, regularizações reais) e replicar no LinkedIn institucional assim que criado. Esforço de 1-2h/semana, custo zero.",
+      "swot_basis": "Alavanca F1; captura O1 e O6; executa SO3 e ST2.",
+      "impact": "medium",
+      "suggested_timeline": "Semana 1 (contínuo)",
+      "dependencies": [],
+      "financial_impact": {
+        "investment_brl": 0,
+        "monthly_return_brl": 4000,
+        "payback_days": 90,
+        "roi_multiple": 999,
+        "note": "Custo de tempo apenas. Retorno inbound B2B amadurece em 3-6 meses; acelera o ABM ao aquecer o terreno com decisores que vivem no LinkedIn."
+      },
+      "risk_adjusted_score": {"impact": 6, "probability_of_success": 7, "reversibility": 10, "score": 7.0}
+    },
+    {
+      "action": "Montar um pipeline ativo de diversificação: lista-alvo de novos clientes industriais B2B (postos, estaleiros, indústria de grande porte) usando o case da âncora como prova social, com a decisão entre mídia paga vs LDR/prospector definida pelo diagnóstico de mídia (S2) e forecast (S3).",
+      "swot_basis": "Ataca W4 (concentração); executa WT1 e ST3; mitiga T2.",
+      "impact": "high",
+      "suggested_timeline": "Semana 3+ (após diagnóstico de mídia)",
+      "dependencies": ["ee-s2-diagnostico-midia", "ee-s4-diagnostico-comercial"],
+      "financial_impact": {
+        "investment_brl": 5000,
+        "monthly_return_brl": 12000,
+        "payback_days": 45,
+        "roi_multiple": 2.4,
+        "note": "Investimento mensal hipotético (budget aceito sem objeção na SDR) em LDR júnior + ferramentas OU mídia, a confirmar no diagnóstico. Retorno estimado de 1-2 contratos novos/mês fora do grupo, reduzindo a concentração de receita."
+      },
+      "risk_adjusted_score": {"impact": 8, "probability_of_success": 6, "reversibility": 8, "score": 6.8}
+    },
+    {
+      "action": "Instalar instrumentação financeira mínima: dashboard de faturamento MoM, acompanhamento de pipeline (valor por etapa) e um forecast simples integrado de marketing + vendas, revisado mensalmente com o Aldo.",
+      "swot_basis": "Ataca W5 (sem previsibilidade); executa WT2; mitiga T4.",
+      "impact": "medium",
+      "suggested_timeline": "Semana 1-2",
+      "dependencies": ["CRM implementado (ação #1)"],
+      "financial_impact": {
+        "investment_brl": 0,
+        "monthly_return_brl": 0,
+        "payback_days": 0,
+        "roi_multiple": 0,
+        "note": "Retorno indireto: não gera receita direta, mas previne perdas de caixa e mantém o Aldo comprometido com a estruturação ao tornar o progresso visível. Habilitador, não gerador."
+      },
+      "risk_adjusted_score": {"impact": 6, "probability_of_success": 8, "reversibility": 9, "score": 6.5}
+    }
+  ],
+  "key_insight": {
+    "headline": "A jogada mais barata e mais provável de fechar não está lá fora — está dentro de casa: 26 CNPJs do Rei dos Bons Amigos já confiam na Lucena.",
+    "context": "Diante de um cliente Zero Digital, o instinto é gerar demanda nova com mídia. Mas a combinação F×O mais assimétrica da Lucena é interna: a autoridade técnica tripla do Aldo + a porta já aberta na âncora de R$ 300M+ (forças) cruzadas com a oportunidade de expandir ABM pelos 26 CNPJs do grupo e fazer cross-sell de compliance/SST. É crescimento de altíssima conversão e CAC quase zero, que nenhuma campanha de topo de funil supera.",
+    "numbered_reasons": [
+      "(1) Força rara e não-copiável: Aldo concentra credencial jurídica + de engenharia + acadêmica (mestre) que os concorrentes não têm — confiança instantânea no comitê técnico do grupo.",
+      "(2) Oportunidade quente e dimensionada: 26 CNPJs do mesmo grupo, todos sujeitos a licenciamento/compliance/SST recorrente, com relacionamento já estabelecido e a reunião com o diretor executivo já sinalizada na FPS.",
+      "(3) Timing: a expansão na âncora financia e dá fôlego para a diversificação — e precisa acontecer antes que a concentração de receita vire vulnerabilidade fatal se o contrato principal oscilar."
+    ],
+    "discussion_anchor": "A decisão do stakeholder é de foco e ritmo: aceitar priorizar a expansão dentro da âncora + fechamento do vazamento de follow-up nos primeiros 90 dias, em vez de correr para mídia paga? É a aposta de maior ROI e menor risco — mas exige o Aldo dedicando tempo de relacionamento estratégico, não só de operação."
+  },
+  "honesty_alert": "Três fragilidades estruturais precisam ser nomeadas, não suavizadas. (1) Concentração de receita: 100% em 2 contratos, com ~76% atrelado ao grupo âncora — a saída do Rei dos Bons Amigos seria quase existencial, e a estratégia deve diversificar, nunca amplificar a dependência. (2) Operação 100% dependente do Aldo (decisor + vendedor + executor + comunicação): nenhum plano escala enquanto a venda depender só dele; delegar a operação comercial é pré-requisito, não detalhe. (3) Conflito de meta não resolvido: V4MOS declara R$ 100k em 12 meses, a call SDR declara R$ 50k/mês em 6 meses (≈ R$ 600k/ano) — diferença de ~6x que muda a calibragem de toda a SWOT. A premissa de trabalho adotada aqui é R$ 50k/mês em 6 meses (o R$ 100k do V4MOS é provavelmente erro de preenchimento, pois ficaria abaixo do run-rate atual de ~R$ 252k/ano), mas isso PRECISA ser confirmado com o Aldo no Kick-Off antes de a Persona/ICP e o Forecast serem finalizados."
+}

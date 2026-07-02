@@ -278,7 +278,7 @@
     }
   },
   "progress": {
-    "current_week": 1,
+    "current_week": 2,
     "skills": {
       "ee-s1-diagnostico-maturidade": {
         "status": "completed",
@@ -287,46 +287,46 @@
         "completed_at": "2026-05-28T00:00:00Z"
       },
       "ee-s1-swot": {
-        "status": "pending",
-        "checkpoint": 0,
-        "started_at": null,
-        "completed_at": null
+        "status": "completed",
+        "checkpoint": 1,
+        "started_at": "2026-06-19T00:00:00Z",
+        "completed_at": "2026-06-19T00:00:00Z"
       },
       "ee-s1-persona-icp": {
-        "status": "pending",
-        "checkpoint": 0,
-        "started_at": null,
-        "completed_at": null
+        "status": "completed",
+        "checkpoint": 1,
+        "started_at": "2026-06-19T00:00:00Z",
+        "completed_at": "2026-06-19T00:00:00Z"
       },
       "ee-s1-auditoria-comunicacao": {
-        "status": "pending",
-        "checkpoint": 0,
-        "started_at": null,
-        "completed_at": null
+        "status": "completed",
+        "checkpoint": 1,
+        "started_at": "2026-06-19T00:00:00Z",
+        "completed_at": "2026-06-19T00:00:00Z"
       },
       "ee-s2-pesquisa-mercado": {
-        "status": "pending",
-        "checkpoint": 0,
-        "started_at": null,
-        "completed_at": null
+        "status": "completed",
+        "checkpoint": 1,
+        "started_at": "2026-06-19T00:00:00Z",
+        "completed_at": "2026-06-19T00:00:00Z"
       },
       "ee-s2-posicionamento": {
-        "status": "pending",
-        "checkpoint": 0,
-        "started_at": null,
-        "completed_at": null
+        "status": "completed",
+        "checkpoint": 1,
+        "started_at": "2026-06-19T00:00:00Z",
+        "completed_at": "2026-06-19T00:00:00Z"
       },
       "ee-s2-diagnostico-midia": {
-        "status": "pending",
-        "checkpoint": 0,
-        "started_at": null,
-        "completed_at": null
+        "status": "completed",
+        "checkpoint": 1,
+        "started_at": "2026-06-19T00:00:00Z",
+        "completed_at": "2026-06-19T00:00:00Z"
       },
       "ee-s2-diagnostico-cro": {
-        "status": "pending",
-        "checkpoint": 0,
-        "started_at": null,
-        "completed_at": null
+        "status": "completed",
+        "checkpoint": 1,
+        "started_at": "2026-06-19T00:00:00Z",
+        "completed_at": "2026-06-19T00:00:00Z"
       },
       "ee-s3-identidade-visual": {
         "status": "pending",
@@ -396,6 +396,48 @@
       "skill": "ee-s1-diagnostico-maturidade",
       "checkpoint": 1,
       "decision": "Diagnóstico de Maturidade Digital aprovado pelo operador (Gina) em primeira passada — v1. Score geral 8/100 (Crítico extremo): Mídia Paga 5, Criativos 5, CRO 5, CRM 18, SEO 5. Setor benchmark 32 — gap -24. Sem ajustes solicitados. Decisões-chave consolidadas no output: (1) Inversão do playbook V4 padrão — CRM + LP institucional + GMB + ABM no Rei dos Bons Amigos ANTES de mídia paga. Motivo: 50% conversão proposta→venda em 15 dias já existe, motivo #1 de perda é 'lead sumiu' (vazamento de follow-up, não objeção de preço). (2) Honesty alerts mantidos: conflito de meta 6× (R$ 100k V4MOS vs R$ 600k SDR), operação 100% dependente do Aldo, concentração total no cliente-âncora. (3) Próxima skill da S1: ee-s1-swot, que vai consumir este diagnóstico como input. Resolver conflito de meta no Kick-Off antes da Persona/ICP é Priority #1 documentada."
+    },
+    {
+      "ts": "2026-06-19T00:00:00Z",
+      "skill": "ee-s1-swot",
+      "checkpoint": 1,
+      "decision": "SWOT gerada (v1, aguardando validação conjunta). 6 forças (autoridade tripla do Aldo, conversão 50%, âncora R$ 300M+, time multidisciplinar, indicação espontânea, CNPJ novo sem vícios), 6 fraquezas (invisibilidade digital, vazamento de follow-up, dependência do dono, concentração de receita, sem previsibilidade, sem produção de marketing), 6 oportunidades, 5 ameaças. Matriz TOWS + 6 priority_actions ordenadas por risk_adjusted_score: #1 CRM+cadência (8.7), #2 ABM na âncora (8.3), #3 alicerce digital (7.8). key_insight = F×O mais assimétrico = expansão dentro dos 26 CNPJs do Rei dos Bons Amigos. honesty_alert mantém os 3 riscos: concentração de receita, dependência do Aldo, conflito de meta não resolvido (premissa de trabalho adotada: R$ 50k/mês da SDR; R$ 100k do V4MOS tratado como provável erro)."
+    },
+    {
+      "ts": "2026-06-19T00:00:00Z",
+      "skill": "ee-s1-persona-icp",
+      "checkpoint": 1,
+      "decision": "ICP e Persona gerados (v1, aguardando validação). ICP = B2B com comitê de compra de 3 papéis (responsável ambiental/iniciador, gestor/multiplicador, diretor/decisor), movido por risco regulatório, não por preço. Persona-síntese: Ricardo Tavares, gestor operacional de empresa com postos/logística fluvial sob exigência do IPAAM. JTBD funcional/emocional/social, 5 dores, 5 ganhos, anti-persona (3 perfis), buyer journey (6 estágios), WTP por 5 serviços, objection library (7 objeções). Mensagem-chave escolhida (combined): 'Segurança jurídica e ambiental para sua operação nunca parar.' Decisão de mensagem marcada para validação. honesty_alert: persona é síntese de comitê (não reduzir ABM a 1 pessoa), não validada com cliente real (validar no Kick-Off), WTP estimada de amostra pequena."
+    },
+    {
+      "ts": "2026-06-19T00:00:00Z",
+      "skill": "ee-s1-auditoria-comunicacao",
+      "checkpoint": 1,
+      "decision": "Auditoria de Comunicação gerada (v1, aguardando validação). É auditoria da AUSÊNCIA: 1 de 6 canais ativo (só WhatsApp pessoal, score ~38; site/IG/anúncios/GMB/LinkedIn ausentes). Score de comunicação ~9/100. Vazamento duplo: invisibilidade na busca + ausência de cadência ('lead sumiu' = 50% das propostas). Benchmark contra FRTB (benchmark digital) e Norte Ambiental (teto) vs Moura/Aurora/Ocidental (fracos). 5 quick wins de custo zero/horas: cadência WhatsApp, GMB, WhatsApp Business, LinkedIn institucional, página 'em construção'. honesty_alert: scores refletem ausência (não má execução); maioria das recomendações é escopo de produção S3; scores de concorrentes são direcionais (verificar seguidores/reviews manualmente)."
+    },
+    {
+      "ts": "2026-06-19T00:00:00Z",
+      "skill": "ee-s2-pesquisa-mercado",
+      "checkpoint": 1,
+      "decision": "Pesquisa de Mercado gerada (v1, aguardando validação) — baseada em pesquisa web real (subagente). Mercado fragmentado (43+ consultorias em Manaus, sem líder), digitalmente fraco (só FRTB e Norte Ambiental fazem marketing), leilão de mídia paga vazio. 6 concorrentes analisados com digital_score. TAM ~R$ 9bi [E], SAM ~R$ 120M [E] (AM B2B), SOM ~R$ 3M [E] (triangulado por 3 métodos), enderecável ~R$ 45M. Drivers: Lei 15.190/2025 (em vigor fev/2026), R$ 7,96bi no PIM em 2025. Ameaças: renovação automática via IA do IPAAM + LAC (erodem transacional simples). Oportunidade não explorada: território 'advisory jurídico-técnica' + domínio da nova lei. Diferencial real confirmado: formação tripla do Aldo (mas é pessoal = risco). Metas registradas: V4MOS R$100k (provável erro) vs SDR R$600k. Sizing majoritariamente [E] — ordem de grandeza."
+    },
+    {
+      "ts": "2026-06-19T00:00:00Z",
+      "skill": "ee-s2-posicionamento",
+      "checkpoint": 1,
+      "decision": "Posicionamento gerado (v1, aguardando validação) — a skill mais crítica, alimenta toda a S3. Território: 'Blindagem · Autoridade · Advisory'. PUV: 'A única assessoria ambiental do AM onde o advogado e o engenheiro são a mesma pessoa — para blindar sua operação, não só tirar a licença.' Sacada estratégica: ataca o flanco do FRTB (líder digital), que usa 'segurança jurídica' na tagline mas é casa de engenheiras sem advogado — a Lucena É o jurídico de verdade. 3 declarações (escolhida: A Advisory Jurídico-Técnica). Canvas 4P: preço premium ancorado no custo do risco; canal ABM+busca local (NÃO Instagram). Tagline recomendada: 'Licenciamento ambiental com a lei do seu lado.' Decisões de declaração e tagline marcadas para validação. honesty_alert: depende da autoridade pessoal do Aldo (virar marca) + FRTB tem vantagem de audiência (agir rápido)."
+    },
+    {
+      "ts": "2026-06-19T00:00:00Z",
+      "skill": "ee-s2-diagnostico-midia",
+      "checkpoint": 1,
+      "decision": "Diagnóstico de Mídia gerado (v1, aguardando validação) — is_launch_plan=true (0 campanhas em 90 dias, R$ 0 investido). Recomendação central: NÃO começar por Meta (ICP não está em redes); priorizar ABM/LDR + busca local; mídia paga só como teste enxuto de Google Search de nicho (leilão vazio = CPC baixo) e SOMENTE após LP+CRM+tracking. 3 cenários de alocação (A orgânico, B recomendado = Search nicho R$ 1,8k + orgânico, C agressivo = +LDR/prospector). 5 keyword clusters, 5 hipóteses de teste, daypart B2B horário comercial. Meta 90d de lançamento/validação (CPL ~R$ 110 [E]). Decisão mídia vs LDR fica para o forecast (S3). honesty_alert: todos os números são [E] de setor; mídia depende do alicerce; Search sozinho não bate R$ 50k/mês — motor é ABM."
+    },
+    {
+      "ts": "2026-06-19T00:00:00Z",
+      "skill": "ee-s2-diagnostico-cro",
+      "checkpoint": 1,
+      "decision": "Diagnóstico de CRO gerado (v1, aguardando validação) — sem site, então é o BLUEPRINT da LP que alimenta direto a ee-s3-landing-page. Blocos técnicos (PageSpeed/tracking/LGPD) zerados/N/A honestos (page_audit não rodado por ausência de URL), viram especificação: LP deve nascer com GA4+GTM+Consent Mode v2. Wireframe de 6 seções (Hero PUV → Problema → Solução → Prova Social → FAQ → CTA) com copy ancorada no posicionamento. Maior alavanca = prova social inexistente (case R$ 300M+ + credenciais do Aldo). 5 hipóteses de teste, formulário ≤5 campos + WhatsApp flutuante. Fecha a S2. honesty_alert implícito: tudo é greenfield; conversão depende de documentar o case e coletar reviews."
     }
   ]
 }

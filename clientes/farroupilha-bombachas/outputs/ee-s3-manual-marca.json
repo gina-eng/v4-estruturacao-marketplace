@@ -1,0 +1,966 @@
+{
+  "client_name": "Bombachas Farroupilha",
+  "skill": "ee-s3-manual-marca",
+  "version": 2,
+  "generated_at": "2026-06-22T09:00:00Z",
+  "data_source": "ee-s2-posicionamento+ee-s1-persona-icp+ee-s1-swot+ee-s2-pesquisa-mercado+briefing",
+  "summary": "Manual de Marca Bombachas Farroupilha — 5 blocos completos. Território: 'Artesanal. Autêntico. Direto.' Tagline: 'Feita à mão. Direto da fábrica.' Paleta centrada em Marrom Couro (#6B3A1F) e Areia Pampa (#D4B896), tipografia Playfair Display + Inter (ambas Google Fonts). Dois públicos com voz calibrada por canal: Mariana B2C (emocional, orgulho cultural) e Diego B2B (funcional, prazo). Manual documenta o que o designer executa — não substitui execução criativa.",
+  "summary_headline": "Manual que formaliza o único quadrante vago do mapa: Especialista em Bombacha de Favo + Fábrica Direta — janela de 12-18 meses para ocupar antes da concorrência.",
+  "summary_highlights": [
+    {
+      "category": "posicao",
+      "label": "Território",
+      "value": "Artesanal. Autêntico. Direto.",
+      "subtext": "3 palavras que sustentam toda comunicação por canal e persona",
+      "tone": "blue"
+    },
+    {
+      "category": "posicao",
+      "label": "Tagline oficial",
+      "value": "Feita à mão. Direto da fábrica.",
+      "subtext": "6 palavras, multicanal, diferencia de distribuidor e fábrica genérica",
+      "tone": "blue"
+    },
+    {
+      "category": "oportunidade",
+      "label": "Arquétipo dominante",
+      "value": "O Artesão",
+      "subtext": "Secundário: O Fora-da-lei (Direto, sem intermediário)",
+      "tone": "green"
+    },
+    {
+      "category": "posicao",
+      "label": "Paleta principal",
+      "value": "Marrom Couro #6B3A1F",
+      "subtext": "Proporção 60% Areia · 30% Couro · 10% Verde Pampa",
+      "tone": "gray"
+    },
+    {
+      "category": "posicao",
+      "label": "Tipografia primária",
+      "value": "Playfair Display",
+      "subtext": "Títulos — disponível Google Fonts, serif humanista artesanal",
+      "tone": "gray"
+    },
+    {
+      "category": "janela",
+      "label": "Janela narrativa",
+      "value": "12-18 meses",
+      "subtext": "Antes que Regalo Campeiro (26K Instagram) narre processo de parceiro",
+      "tone": "yellow"
+    }
+  ],
+  "summary_key_findings": [
+    {
+      "category": "vantagem",
+      "text": "O território 'Artesanal. Autêntico. Direto.' é defendível porque os 3 ativos da Tapparo (Bombacha de Favo trançada à mão + fábrica direta sem intermediário + prazo 35d cumprido) NÃO podem ser oferecidos juntos por nenhum concorrente mapeado — distribuidores não controlam produção; fábricas grandes não especializam em favo manual."
+    },
+    {
+      "category": "acao",
+      "text": "Comunicação por persona é obrigatória: Mariana B2C recebe tom emocional ('feita à mão, no caimento que você quer') nos canais digitais (Instagram, Google Ads, LP B2C); Diego B2B recebe tom funcional ('35 dias garantidos, 15 peças mínimo') via representante + LP B2B + WhatsApp Business."
+    },
+    {
+      "category": "contexto",
+      "text": "O motivo de perda #1 declarado pela Loreni ('preço — acharam caro') é um problema de comunicação de valor, não de produto. O manual endereça isso com vocabulário de processo ('trançado à mão', 'costureira-chefe', 'acabamento manual verificável') e proibindo jargão aspiracional vazio."
+    },
+    {
+      "category": "ameaca",
+      "text": "Regalo Campeiro (@regalocampeiro, 26K Instagram) é o único concorrente com alcance digital relevante. Sem cadência editorial semanal de bastidores (Reels de processo), a Tapparo ocupa o mesmo quadrante no imaginário de Mariana. A diferença de fábrica vs distribuidor não é visível sem narração ativa."
+    }
+  ],
+  "scope": "established",
+  "block1_strategic_foundations": {
+    "presentation": {
+      "opening_letter": "Loreni e Everton, este manual não é um catálogo — é a régua da marca. Cada decisão aqui foi construída a partir dos dados reais da operação de vocês e das conversas com a Gina. Quando um designer criar um post, um gestor escrever uma legenda ou um representante apresentar a Tapparo para um lojista novo, este manual é o árbitro. Use-o assim.",
+      "manifesto_short": "Cada Bombacha de Favo que sai de Ciríaco carrega o trançado manual da nossa costureira-chefe — autenticidade que loja de shopping não reproduz.",
+      "manifesto_narrative": "Há 15 anos a Tapparo Bombachas nasceu em Ciríaco, RS, com uma convicção simples: pilcha boa se faz à mão.\n\nEnquanto o mercado de pilchas cresceu para dentro das redes e dos marketplaces, a Tapparo cresceu para dentro do processo. A Bombacha de Favo — nosso carro-chefe, trançada à mão pela costureira-chefe — não escala para fábrica grande. O favo verdadeiro exige atenção de artesã. Isso não é limitação: é o único diferencial que nenhum distribuidor pode copiar.\n\nMariana, a mulher que frequenta CTG e sabe reconhecer uma pilcha de verdade, não quer a bombacha do shopping. Ela quer a que a tribo reconhece. Ela paga pela autenticidade — desde que alguém explique o porquê do preço. Este manual foi criado para que toda comunicação da Bombachas Farroupilha faça exatamente isso: narrar o processo, justificar o valor e entregar a Mariana (e o Diego lojista) uma marca que eles possam recomendar com orgulho.\n\nArtesanal. Autêntico. Direto da fábrica.",
+      "navigation_instructions": "Este manual tem 5 blocos em ordem de uso: (1) Fundamentos Estratégicos — para qualquer decisão de posicionamento ou comunicação; (2) Identidade Verbal — para escrever qualquer texto da marca; (3) Identidade Visual Core — briefing para o designer executar logo, paleta e tipografia; (4) Aplicações — specs para cada peça; (5) Governança — quem aprova o quê. Leia o Bloco 1 primeiro; ele é o filtro de todas as decisões dos blocos seguintes."
+    },
+    "essence": {
+      "purpose": "Fazer a pilcha gaúcha de favo artesanal que a Mariana usa com orgulho e o lojista revende sem medo de atrasar.",
+      "vision": "Ser reconhecida como a fábrica de referência em Bombacha de Favo artesanal no RS e nos estados de expansão da cultura gaúcha (MT, MS, SC, PR) até 2028.",
+      "mission": "Produzir bombachas e pilchas de alta autenticidade artesanal, entregá-las no prazo de 35 dias e narrar o processo de maneira que o consumidor final e o lojista entendam por que vale o preço.",
+      "values": [
+        {
+          "name": "Artesanato Honesto",
+          "behavior_yes": "Mostrar o processo real nas redes — a costureira trançando o favo, o tempo de produção, o teste de qualidade. Falar de trançado à mão mesmo que demore para explicar.",
+          "behavior_no": "Usar 'artesanal' como adjetivo de marketing sem evidência. Postar foto de produto acabado sem mostrar de onde veio."
+        },
+        {
+          "name": "Prazo Cumprido",
+          "behavior_yes": "Dar data de entrega específica no primeiro contato. Enviar atualização semanal de produção pelo WhatsApp. Não aceitar pedido se a data de entrega comprometer o pico do cliente.",
+          "behavior_no": "Dar prazo 'estimado' ou 'entre 30-40 dias'. Aceitar pedido sabendo que vai atrasar para não perder a venda."
+        },
+        {
+          "name": "Diretidade",
+          "behavior_yes": "Falar com a Loreni ou com alguém com autoridade. Responder 'não trabalhamos com pedido menor que 15 peças B2B' sem rodeio. Ser transparente sobre o que a fábrica faz e o que não faz.",
+          "behavior_no": "Enrolar cliente com resposta vaga. Delegar atendimento para alguém sem autorização de decisão. Aceitar condição que não faz sentido para evitar conflito."
+        },
+        {
+          "name": "Autenticidade Verificável",
+          "behavior_yes": "Mostrar a costureira-chefe pelo nome. Gravar Reel dentro da fábrica. Explicar o que é favo trançado vs favo estampado.",
+          "behavior_no": "Usar 'exclusivo' e 'premium' sem prova. Esconder o processo por medo de cópia. Postar imagem genérica de bombacha sem contexto de produção."
+        },
+        {
+          "name": "Respeito à Tradição",
+          "behavior_yes": "Reconhecer o saber técnico da costureira-chefe. Manter rigor no acabamento mesmo quando há pressão de volume. Tratar Mariana como conhecedora, não como consumidora genérica.",
+          "behavior_no": "Fazer bombacha 'estilo favo' para entregar mais rápido. Ceder à pressão de lojista que quer reduzir especificação para baixar preço. Tratar bombacha como produto de moda sazonal."
+        }
+      ],
+      "promise": "Você recebe a pilcha artesanal verdadeira no prazo combinado — sem surpresa de caimento, sem atraso, sem comparativo com industrial.",
+      "big_idea": "A Bombacha de Favo que a tribo reconhece só nasce à mão — e só pode ser prometida por quem fabrica.",
+      "brand_pillars": [
+        {
+          "name": "Processo Manual",
+          "description": "O trançado do favo é feito à mão pela costureira-chefe. Não é etiqueta — é o diferencial que define o produto e o preço."
+        },
+        {
+          "name": "Fábrica Direta",
+          "description": "Sem intermediário. A Loreni atende o lojista e a Mariana com a mesma autoridade de quem controla a produção."
+        },
+        {
+          "name": "Prazo Real",
+          "description": "35 dias é o prazo mínimo honesto de produção artesanal. Cumprimos. Comunicamos. Não negociamos para baixo."
+        },
+        {
+          "name": "Autenticidade da Tribo",
+          "description": "A pilcha da Tapparo é reconhecida por quem entende de tradição gaúcha — não é moda, é identidade cultural."
+        },
+        {
+          "name": "Relação Humana",
+          "description": "A Loreni atende. Não é bot, não é agência. O contato humano direto é parte do produto."
+        }
+      ]
+    },
+    "positioning": {
+      "statement": "Para mulheres tradicionalistas (Mariana) e lojistas de pilcharia (Diego) que valorizam autenticidade e recusam cópia industrial, Bombachas Farroupilha é a fábrica especialista em Bombacha de Favo artesanal trançada à mão que entrega o caimento certo no prazo combinado, porque cada peça nasce do trabalho técnico-manual da nossa costureira-chefe — direto da fábrica, sem intermediário.",
+      "territory": "Artesanal. Autêntico. Direto.",
+      "archetype_dominant": {
+        "name": "O Artesão",
+        "justification": "A Tapparo produz. Não revende, não distribui — fabrica com saber técnico específico (favo trançado à mão). O Artesão tem orgulho do processo, explica o porquê de cada detalhe e cobra premium justificado. É o arquétipo que endereça diretamente o motivo de perda #1 ('preço — acharam caro'): o Artesão não baixa preço, ele educa sobre o valor do que faz."
+      },
+      "archetype_secondary": {
+        "name": "O Fora-da-lei",
+        "justification": "Aplicado ao pilar 'Direto': a Tapparo recusa intermediário, fala direto com o comprador, cumpre prazo sem desculpa. O Fora-da-lei não segue as regras de mercado (pedido mínimo de 200 peças, atraso normalizado, terceirização do atendimento) — cria as suas (15 peças, 35 dias, Loreni no WhatsApp)."
+      },
+      "competitive_matrix": {
+        "axis_x": "Generalista (catálogo amplo) ↔ Especialista (Bombacha de Favo / processo artesanal)",
+        "axis_y": "Distribuidor / Revenda ↔ Fábrica Direta (controla produção)",
+        "client_position": "Especialista + Fábrica Direta — quadrante vazio no mapa atual",
+        "competitors": [
+          {
+            "name": "Regalo Campeiro",
+            "quadrant": "Generalista + Distribuidor"
+          },
+          {
+            "name": "La Fronteira",
+            "quadrant": "Generalista + Distribuidor"
+          },
+          {
+            "name": "La Parceria",
+            "quadrant": "Generalista + Distribuidor"
+          },
+          {
+            "name": "Bombachas Gaúcho",
+            "quadrant": "Generalista + Fábrica Direta"
+          },
+          {
+            "name": "Bombachas Pampa Sul",
+            "quadrant": "Generalista + Fábrica Híbrida"
+          }
+        ]
+      },
+      "puv": "Bombachas Farroupilha é a única fábrica especialista em Bombacha de Favo artesanal trançada à mão — entrega pilcha autêntica em 35 dias para mulheres tradicionalistas (Mariana) e lojistas regionais (Diego) que recusam cópia industrial."
+    },
+    "audience_persona": {
+      "primary_persona": {
+        "name": "Mariana Tradicionalista",
+        "photo_description": "Mulher de 42 anos, RS interior (Caxias do Sul), cabelo castanho na altura do ombro. Vestida em bombacha feminina marrom + blusa branca + lenço. Fundo: galpão de CTG. Não posa — está conversando, chimarrão na mão.",
+        "age": "32-55 anos",
+        "income": "Renda mensal R$ 4-15k (classe B2/C+, paga premium quando há vínculo cultural)",
+        "occupation": "Professora, funcionária pública, profissional liberal ou empreendedora de pequeno porte. Frequenta CTG, baila, monta ou participa da Semana Farroupilha.",
+        "main_pain": "Comprou bombacha em loja grande e descobriu que era cópia industrial — caimento ruim, passou vergonha em evento. Quer a peça que a tribo reconhece como autêntica, mas não sabe como identificar a diferença antes de comprar.",
+        "purchase_motivators": "Autenticidade verificável (vídeo de bastidores, costureira-chefe identificada), caimento certo para o corpo dela, entrega antes do evento com confirmação de prazo, relação direta com a fábrica (não com lojista genérico)."
+      },
+      "secondary_persona": {
+        "name": "Diego Tavares",
+        "photo_description": "Homem 38 anos, barba aparada, expressão direta. Interior de pilcharia com bombachas em araras ao fundo.",
+        "age": "35-50 anos",
+        "income": "Faturamento da loja R$ 600k-3,5MM/ano",
+        "occupation": "Proprietário ou herdeiro de pilcharia regional (2-10 funcionários, operação familiar)",
+        "main_pain": "Fornecedor anterior atrasou pedido no pico farroupilha (julho-setembro), exigiu pedido mínimo de 100 peças e amarrou capital de giro 4 meses antes. Quer parceiro que cumpra prazo e aceite pedido a partir de 15 peças.",
+        "purchase_motivators": "Prazo de 35 dias garantido por escrito, pedido mínimo de 15 peças (não amarra capital), qualidade de acabamento que ele pode mostrar na loja, atendimento direto com decisor (Loreni, não preposto)."
+      },
+      "anti_persona": {
+        "name": "Caçador de preço + Curioso fashion",
+        "description": "B2C que compara Bombacha de Favo com bombacha de shopping e pede desconto. Atacarejo que quer 200+ peças com prazo impossível. Não entendem processo artesanal e não vão ser embaixadores. Custo de atendimento alto vs ticket comprometido."
+      },
+      "buyer_journey_summary": "MARIANA: Gatilho (convite para evento ou foto de outra mulher no Instagram) → Pesquisa no Google + Instagram (cética por experiência ruim anterior) → Consideração (assiste Reel de bastidores, lê FAQ da LP, pergunta no WhatsApp) → Compra (fecha por WA direto com Loreni, recebe confirmação de prazo) → Fidelização (recompra anual, indica para amigas do CTG). Ciclo total: 1-7 dias. | DIEGO: Indicação de outro lojista ou representante → Contato via WA ou LP B2B → Pedido de amostra → Primeiro pedido 15-25 peças → Parceria recorrente. Ciclo total: 6-8 semanas com produção de 35d."
+    },
+    "history_culture": {
+      "origin": "Fundada em 2011 em Ciríaco, RS pela família Tapparo. Começou como produção local para CTGs da região, cresceu via boca a boca e representante comercial físico. A Bombacha de Favo artesanal com trançado manual foi desenvolvida pela costureira-chefe e se tornou o carro-chefe diferenciador.",
+      "milestones": [
+        "2011 — Fundação em Ciríaco/RS, primeiros pedidos para CTGs regionais",
+        "~2016 — Consolidação da Bombacha de Favo artesanal como carro-chefe",
+        "~2020 — Expansão via representante comercial para RS interior (Caxias do Sul, Alegrete, Passo Fundo)",
+        "2026 — Início do processo de estruturação de marketing digital com V4 Company"
+      ],
+      "culture": "Empresa familiar com decisão concentrada na Loreni (sócia, atendimento e produção) e Everton. Costureira-chefe é a guardiã do processo artesanal do favo. Atendimento humano direto é traço cultural — a Loreni conhece pessoalmente a maioria dos clientes B2B ativos.",
+      "legacy": "15 anos de produção artesanal em Ciríaco. O favo trançado à mão permanece como diferencial não replicável — é know-how da costureira-chefe que não está em manual industrial."
+    }
+  },
+  "block2_verbal_identity": {
+    "personality": {
+      "scales": [
+        {
+          "trait_low": "Formal / Corporativo",
+          "trait_high": "Humano / Direto",
+          "position": 8
+        },
+        {
+          "trait_low": "Frio / Distante",
+          "trait_high": "Acolhedor / Próximo",
+          "position": 7
+        },
+        {
+          "trait_low": "Moderno / Urbano",
+          "trait_high": "Tradicional / Enraizado",
+          "position": 8
+        },
+        {
+          "trait_low": "Genérico / Amplo",
+          "trait_high": "Especialista / Focado",
+          "position": 9
+        },
+        {
+          "trait_low": "Aspiracional vazio",
+          "trait_high": "Concreto / Verificável",
+          "position": 9
+        },
+        {
+          "trait_low": "Impessoal / Automatizado",
+          "trait_high": "Pessoal / Identificável (Loreni)",
+          "position": 8
+        }
+      ],
+      "archetype_applied": "O Artesão (dominante) + O Fora-da-lei (secundário nos canais B2B)",
+      "as_a_person": "Se a Bombachas Farroupilha fosse uma pessoa, seria a Loreni: mulher de 45 anos de Ciríaco, sabe o que faz, explica com orgulho sem arrogância, não enrola, cumpre o que promete e cobra preço justo pelo trabalho manual real. Não usa 'prezado cliente'. Conhece o cliente pelo nome. Manda áudio no WhatsApp quando o pedido fica pronto."
+    },
+    "tone_of_voice": {
+      "pillars": [
+        {
+          "name": "Concreto",
+          "definition": "Toda afirmação tem evidência. Não diz 'qualidade superior' — diz 'trançado à mão, 4-6h de acabamento por peça'.",
+          "manifestation": "Números reais (35 dias, 15 peças mínimo, 63 clientes ativos). Vídeos de processo. Nome da costureira-chefe. Recusa de superlativo sem prova."
+        },
+        {
+          "name": "Direto",
+          "definition": "Sem rodeio. Fala o que pode e o que não pode. Responde sem delegar para 'nossa equipe'.",
+          "manifestation": "WhatsApp com resposta em até 4h em dias úteis. FAQ que diz 'não atendemos pedido menor que 15 peças B2B' sem desculpa. Não usa 'em breve' quando a resposta é não."
+        },
+        {
+          "name": "Acolhedor",
+          "definition": "Trata Mariana como quem entende de tradição, não como consumidora genérica. Usa o vocabulário dela.",
+          "manifestation": "Fala em 'Semana Farroupilha', 'baila', 'caimento', 'favo'. Não diz 'produto'. Diz 'peça'. Não diz 'cliente' quando é Mariana — diz 'você'."
+        },
+        {
+          "name": "Orgulhoso (sem arrogância)",
+          "definition": "Tem convicção no processo artesanal sem diminuir quem compra bombacha popular ou quem não entende de favo.",
+          "manifestation": "Explica a diferença entre favo trançado e favo estampado sem dizer que o concorrente é ruim. 'A nossa Bombacha de Favo leva 4-6h de acabamento manual — é diferente da maioria do mercado.' Tom educativo, não superior."
+        }
+      ],
+      "channel_variations": [
+        {
+          "channel": "Instagram (Reels e Stories)",
+          "adaptation": "Tom mais casual e orgulhoso — bastidores reais, processo, costureira-chefe em cena. Legendas curtas com gancho visual. Mariana-foco: emocional, ligado à identidade cultural. Evitar legenda corporativa. Usar primeira pessoa do plural ('aqui na fábrica...')."
+        },
+        {
+          "channel": "WhatsApp Business",
+          "adaptation": "Tom mais pessoal e direto — como se a Loreni estivesse respondendo. Para Mariana: acolhedor, com prazo específico e confirmação de data. Para Diego: funcional, com data de entrega por escrito e especificações do pedido. Áudio é permitido e recomendado para construir confiança."
+        },
+        {
+          "channel": "Google Ads",
+          "adaptation": "Tom de resposta direta à intenção de busca — foco no diferencial técnico e prazo. Mariana: 'Bombacha de Favo artesanal — Direto da Fábrica. Prazo 35 dias. [CTA]'. Diego: 'Bombachas Farroupilha Atacado — 15 peças mínimo. 35 dias. Fábrica em Ciríaco/RS.'."
+        },
+        {
+          "channel": "Landing Page",
+          "adaptation": "Tom estruturado por bloco e persona — hero voltado para Mariana, seção dedicada para Diego. Usa vocabulário de autenticidade no início (para capturar atenção emocional) e especificações no meio (para validar decisão racional). FAQ responde objeções reais (preço, prazo, pedido mínimo)."
+        },
+        {
+          "channel": "E-mail / Proposta B2B",
+          "adaptation": "Tom mais formal mas sem corporativês — 'Olá, Diego. Segue nossa proposta para o pedido de 20 peças. Confirmamos entrega até [data].' Sempre com data de entrega específica, não estimada."
+        }
+      ],
+      "say_dont_say": [
+        {
+          "situation": "Mariana pergunta: 'Qual o preço da bombacha de favo?'",
+          "say": "A Bombacha de Favo artesanal começa em R$ 280. O preço reflete o trançado à mão — cada peça leva 4-6h de acabamento da nossa costureira-chefe. Posso te mandar um vídeo de 30 segundos do processo?",
+          "dont_say": "Nossa qualidade é superior. Não dá pra comparar com bombacha de loja.",
+          "reason": "Explicar o processo educa sem arrogância. Oferecer vídeo cria evidência antes da objeção de preço."
+        },
+        {
+          "situation": "Cliente pergunta se vai chegar a tempo da Semana Farroupilha",
+          "say": "Se você fechar até [data calculada para 35d antes], chega com folga. Te mando atualização semanal de produção pelo WhatsApp.",
+          "dont_say": "Nosso prazo é de 30-40 dias, a depender do volume.",
+          "reason": "Data específica elimina ansiedade. 'Depende' é o que o concorrente fala quando atrasa."
+        },
+        {
+          "situation": "Lojista Diego pede desconto no favo para fechar pedido maior",
+          "say": "Para a Bombacha de Favo não consigo fazer desconto — o custo artesanal é fixo. Para a linha popular posso ver uma condição em pedido acima de 30 peças. O que você precisa?",
+          "dont_say": "Vamos ver o que consigo fazer. Preciso consultar a gerência.",
+          "reason": "Resposta direta preserva o posicionamento premium do favo. 'Consultar gerência' esvazia a confiança de fábrica direta."
+        },
+        {
+          "situation": "Post de Instagram sobre a Bombacha de Favo",
+          "say": "Aqui na fábrica, cada Bombacha de Favo começa pelo trançado manual da [nome da costureira]. Não tem atalho — e é por isso que o caimento é esse. [vídeo de 15s do processo]",
+          "dont_say": "Qualidade e tradição em cada ponto da nossa exclusiva Bombacha de Favo Premium!",
+          "reason": "Processo concreto convence Mariana. Adjetivos sem evidência são invisíveis no feed."
+        },
+        {
+          "situation": "Resposta sobre pedido mínimo para lojista novo",
+          "say": "B2B: pedido mínimo 15 peças. Prazo 35 dias por escrito. Primeiro pedido, posso enviar peça-mostra antes de fechar — sem custo se o pedido for confirmado em 7 dias.",
+          "dont_say": "Atendemos todos os tamanhos de pedido! Entre em contato para mais informações.",
+          "reason": "Clareza sobre mínimo filtra anti-persona (atacarejo) e qualifica Diego sério desde o primeiro contato."
+        },
+        {
+          "situation": "Mariana diz que achou caro comparando com loja",
+          "say": "Faz sentido pensar nisso! A diferença está no processo: a nossa Bombacha de Favo é trançada à mão — não é estampada. Posso te mandar um vídeo de 30s para você ver a diferença?",
+          "dont_say": "É mais caro porque a qualidade é superior.",
+          "reason": "Mostrar o processo educa sem confrontar. 'Qualidade superior' é o que toda marca fala — não diferencia."
+        },
+        {
+          "situation": "Bio do Instagram",
+          "say": "Fábrica de pilchas em Ciríaco/RS · Bombacha de Favo artesanal · Feita à mão. Direto da fábrica. · WA: [link]",
+          "dont_say": "Tradição e qualidade em bombachas e pilchas gaúchas para toda a família! 🤠",
+          "reason": "Especialização ('Bombacha de Favo artesanal') + territorialização ('Ciríaco/RS') + tagline oficial em 6 palavras vs genérico festivo."
+        },
+        {
+          "situation": "Resposta sobre onde comprar para consumidor de outra cidade",
+          "say": "Vendemos direto da fábrica — você pode encomendar pelo WhatsApp e a gente envia para todo o Brasil. Prazo 35 dias após confirmação.",
+          "dont_say": "Consulte nossa lista de revendedores.",
+          "reason": "'Direto da fábrica' é o diferencial. Enviá-la para revendedor dilui o pilar de fábrica direta e perde Mariana."
+        },
+        {
+          "situation": "Comunicação sobre sazonalidade / pré-Semana Farroupilha",
+          "say": "Para garantir entrega antes de [data do evento]: encomende até [35d antes]. [CTA direto para WA].",
+          "dont_say": "Não deixe para a última hora! Corra e garanta a sua!",
+          "reason": "Data concreta cria urgência real. 'Corra' é genérico de e-commerce — não é o tom da Tapparo."
+        },
+        {
+          "situation": "Caption de Reel mostrando processo de favo",
+          "say": "É aqui que começa a diferença. Cada ponto do favo é trançado à mão — não tem máquina que reproduza isso com o mesmo acabamento. [hashtags de nicho: #bombachadefavo #pilchagaucha #artesanal]",
+          "dont_say": "Confira o processo de produção das nossas incríveis bombachas! 🧵✨",
+          "reason": "Especificidade técnica ('cada ponto do favo', 'trançado à mão') + claim defensável ('não tem máquina') vs entusiasmo vazio."
+        }
+      ]
+    },
+    "editorial_guidelines": {
+      "vocabulary_categorized": {
+        "essence_words": [
+          "Artesanal",
+          "Favo",
+          "Trançado à mão",
+          "Costureira-chefe",
+          "Processo",
+          "Fábrica",
+          "Ciríaco"
+        ],
+        "valued_repeated": [
+          "Autêntico",
+          "Pilcha",
+          "Caimento",
+          "35 dias",
+          "Direto da fábrica",
+          "Prazo cumprido",
+          "Bombacha de Favo"
+        ],
+        "audience_connection": [
+          "Semana Farroupilha",
+          "CTG",
+          "Baila",
+          "Invernada",
+          "Prenda",
+          "Pilcheira",
+          "Tribo",
+          "Gaúcha de verdade"
+        ]
+      },
+      "official_glossary": [
+        {
+          "term": "Bombacha de Favo",
+          "definition": "Bombacha com acabamento de favo trançado à mão pela costureira-chefe. É o produto-âncora premium da Tapparo — diferenciado de 'favo estampado' que é impresso industrialmente."
+        },
+        {
+          "term": "Pilcha",
+          "definition": "Indumentária completa da tradição gaúcha. Para Mariana, é identidade cultural — não 'roupa típica' nem 'fantasia'. Usar sempre 'pilcha' quando se referir ao traje completo."
+        },
+        {
+          "term": "Invernada",
+          "definition": "Grupo de dança gaúcha dentro do CTG. Compra em kit (bombacha + colete + camisa). É um dos segmentos B2B da Tapparo."
+        },
+        {
+          "term": "CTG",
+          "definition": "Centro de Tradições Gaúchas. Principal ambiente de uso da pilcha para Mariana. Usar sempre a sigla — o público conhece."
+        },
+        {
+          "term": "Favo trançado vs favo estampado",
+          "definition": "Favo trançado = acabamento artesanal manual (produto Tapparo). Favo estampado = impressão industrial de miolo parecido com favo, sem o trançado manual. A diferença é visível e tátil. Explicar essa diferença é parte do script de conversão."
+        }
+      ],
+      "forbidden_terms": [
+        {
+          "term": "Qualidade superior",
+          "use_instead": "Acabamento de favo trançado à mão [+ evidência]"
+        },
+        {
+          "term": "Exclusivo / Exclusividade",
+          "use_instead": "Artesanal + processo manual verificável"
+        },
+        {
+          "term": "Prezado cliente",
+          "use_instead": "Olá [nome] / Oi, Mariana / Oi, Diego"
+        },
+        {
+          "term": "Nossa equipe",
+          "use_instead": "A Loreni / eu (quando é a Loreni) / a nossa costureira-chefe"
+        },
+        {
+          "term": "Fantasia gaúcha",
+          "use_instead": "Pilcha / indumentária gaúcha"
+        },
+        {
+          "term": "Breve",
+          "use_instead": "[data específica]"
+        }
+      ],
+      "form_of_address": "Você (singular, direto). Nunca 'vocês' em comunicação B2C para não diluir o tom pessoal. Em B2B para equipe de loja: 'vocês' é ok. Nunca 'tu' — não é o registro da Loreni e pode soar regional caricato fora do RS.",
+      "emoji_punctuation": "Uso moderado. Permitido: 🧵 (processo), 🐂 (cultura gaúcha), ✅ (confirmação de pedido/prazo), 📅 (data), 📍 (Ciríaco/localização). Proibido: emojis festivos sem contexto (🎉🎊🎁) e exclamação excessiva (!!!!!). Regra: máximo 2 emojis por legenda de Instagram.",
+      "grammar_rules": "Português brasileiro padrão do sul — sem marcadores regionais forçados ('tchê', 'guri', 'bah'). Tudo bem usar se a Loreni falou no áudio/vídeo original. Por escrito, manter registro padrão regional. Nunca terceirizar tom para copywriter sem briefing completo deste manual."
+    },
+    "naming_taxonomy": {
+      "brand_name": "Bombachas Farroupilha (nome oficial) / Tapparo Bombachas (razão social — para B2B formal)",
+      "product_hierarchy": "Linha Bombacha de Favo (premium artesanal) > Linha Popular Tradicional (entrada) > Kits Invernada (B2B especial) > Saia de Prenda (complemento feminino)",
+      "naming_rule": "Não criar sub-marcas sem deliberação — o nome Bombachas Farroupilha é o ativo de reconhecimento. Produtos se diferenciam por linha, não por nome próprio."
+    },
+    "storytelling": {
+      "story_arc": {
+        "act1_before": "Mariana comprou bombacha em loja de shopping. Na primeira foto da Semana Farroupilha, o caimento era ruim e o acabamento, industrial. Quem entende viu. Ela jurou que nunca mais.",
+        "act2_different": "A Tapparo produz à mão em Ciríaco. Cada Bombacha de Favo leva 4-6h de trabalho da costureira-chefe. A Loreni atende você diretamente. Você vê o processo antes de comprar.",
+        "act3_after": "A pilcha chega no prazo combinado. No primeiro evento, alguém da tribo pergunta: 'onde você arranjou?' Você indica. Ela compra. Cycle repeats."
+      },
+      "frameworks": [
+        "Bastidores do processo (Reel semanal — mostre o trançado, a costureira, a fábrica)",
+        "Transformação de Mariana (antes/depois do caimento e da confiança cultural)",
+        "Defesa do território (educacional — diferença entre favo artesanal e industrial, sem citar concorrente pelo nome)"
+      ],
+      "opening_hooks": [
+        "Você sabe o que faz uma Bombacha de Favo ser de verdade?",
+        "Aqui começa a diferença. [vídeo de 15s do trançado]",
+        "35 dias. Não é estimativa — é o prazo real da produção artesanal.",
+        "A bombacha que a tribo reconhece não vem de máquina.",
+        "Direto de Ciríaco para a Semana Farroupilha: como funciona."
+      ]
+    },
+    "slogan_tagline_signatures": {
+      "slogan": null,
+      "tagline": "Feita à mão. Direto da fábrica.",
+      "verbal_signatures": [
+        "Fábrica de pilchas em Ciríaco, RS",
+        "Bombacha de Favo artesanal trançada à mão",
+        "Entrega em 35 dias — direto da fábrica"
+      ]
+    }
+  },
+  "block3_visual_identity_core": {
+    "logo": {
+      "concept": "O logo da Bombachas Farroupilha precisa carregar dois compromissos simultâneos: a seriedade artesanal de uma fábrica com 15 anos de tradição e a acessibilidade humana da Loreni atendendo pelo WhatsApp. O símbolo — quando houver — deve remeter ao favo (estrutura hexagonal ou trançado) de maneira discreta e contemporânea, sem folclore gaúcho caricato (sem chimarrão, sem gaúcho estilizado, sem bandeira do RS). A tipografia faz o trabalho pesado: wordmark serifado em peso regular-a-bold, humanista, com caráter artesanal sem ser ornamental.",
+      "style_description": "Wordmark serifado em tipografia clássica humanista com peso regular a bold — sem flourishes ornamentais excessivos, sem efeito envelhecido artificial (sem textura de papel craft ou bordas rasgadas que viram clichê de 'artesanal'). O logo deve funcionar em fundo claro (Areia Pampa #F5EDD8) e em fundo escuro (Marrom Couro #6B3A1F) com total legibilidade. Deve escalar de 16px de favicon até outdoor de rua sem perder integridade. Tipografia serifada garante ancoragem no território tradicional sem perder modernidade funcional. Peso tipográfico: o 'B' de Bombachas pode ter destaque sutil (peso bold) enquanto 'Farroupilha' fica em regular para criar hierarquia interna.",
+      "visual_attributes": {
+        "form_language": "Mixed — wordmark tipográfico com possível símbolo de favo/trançado geométrico abstrato (hexágono seccionado ou treliça artesanal). Não orgânico demais (evita sentido de marca artesanal de feira) nem geométrico puro (evita sentido de tech).",
+        "weight": "Regular a bold. Evitar thin — thin não comunica robustez artesanal. Evitar black — black compete com a robustez do território e perde em fundo escuro.",
+        "balance": "Simétrico no eixo vertical. O nome tem 2 palavras de pesos diferentes — a composição deve ter centro de gravidade visual claro.",
+        "negative_space": "Equilibrado — espaço entre palavras generoso o suficiente para respirar em escalas menores. Condensação excessiva compromete leitura em favicon.",
+        "color_application": "Preferencialmente monocromático por versão: versão escura (Marrom Couro #6B3A1F em fundo claro), versão clara (Areia Pampa #F5EDD8 ou branco em fundo escuro), versão preto puro (#1C1C1C em fundo neutro). Sem gradiente no logo principal.",
+        "personality_in_form": "Concreto → tipografia sem truques visuais, o que você vê é o que é. Direto → sem subttexto ornamental desnecessário, logo funciona sem precisar de explicação. Acolhedor → serifa humanista (não egípia/mecânica) traz leveza. Orgulhoso → peso médio-bold transmite convicção sem agressividade.",
+        "scalability": "Funcionar em favicon 16×16px (apenas o 'B' ou símbolo isolado) e em sinalização de fachada 200cm. Wordmark completo: mínimo 120px digital / 30mm impresso.",
+        "differentiation_from_competitors": "Regalo Campeiro usa marca genérica de catálogo sem hierarquia tipográfica clara. La Fronteira usa estilo boutique feminino ornamental. Bombachas Gaúcho usa identidade institucional sem personalidade. A Tapparo deve ser a única com wordmark serifado de manufatura + símbolo de processo (favo/trançado) — visual que diz 'fábrica com saber técnico', não 'loja de varejo'."
+      },
+      "design_principles": [
+        "Sobriedade acima de folclore — nenhum elemento que só funcione com contexto gaúcho (chimarrão, erva-mate, rodeio)",
+        "Tipografia faz o trabalho pesado — o nome é o logo; símbolo é complemento opcional",
+        "Funcionar em monocromático — logo deve funcionar em preto puro antes de receber cor",
+        "Escalar sem ajuste manual — de 16px a outdoor sem versão especial para cada tamanho (exceto favicon isolado)"
+      ],
+      "anatomy": {
+        "symbol": "Opcional — símbolo de favo (hexágono seccionado representando trançado manual) pode compor o lockup ou ser versão standalone para avatar/favicon",
+        "wordmark": "'Bombachas Farroupilha' em tipografia serifada humanista. 'Bombachas' em bold, 'Farroupilha' em regular (hierarquia interna)",
+        "lockup": "Horizontal (padrão): símbolo à esquerda + wordmark à direita. Vertical (alternativo): símbolo acima + wordmark abaixo. Wordmark solo: sem símbolo (para espaços muito estreitos ou onde símbolo não adiciona)"
+      },
+      "construction_grid": "Grid de 8px para digital. Proporção interna: espaçamento interno = altura-x da tipografia dividida por 2. Símbolo (se presente): altura igual à altura-cap da tipografia.",
+      "clear_space": "Área de proteção mínima = altura-x da tipografia em todos os lados. Nunca posicionar outro elemento dentro da área de proteção.",
+      "min_max_size": {
+        "min_digital_px": "120px de largura para wordmark completo. 24px para símbolo isolado (favicon).",
+        "min_print_mm": "30mm de largura para wordmark completo. 6mm para símbolo isolado.",
+        "max_recommended": "Sem limite máximo, mas testar legibilidade em escala outdoor antes de aplicar"
+      },
+      "official_versions": [
+        {
+          "name": "Principal (escura)",
+          "use_case": "Fundos claros — Areia Pampa #F5EDD8, branco #FFFFFF, cinza claro. Uso padrão em documentos, LP, e-mail, papelaria."
+        },
+        {
+          "name": "Principal (clara)",
+          "use_case": "Fundos escuros — Marrom Couro #6B3A1F, Verde Pampa #2D4A35, preto. Uso em banners, capas, fundos fotográficos escuros."
+        },
+        {
+          "name": "Preto puro",
+          "use_case": "Uso monocromático em documentos B2B, bordados, gravação, impressão P&B."
+        },
+        {
+          "name": "Símbolo isolado",
+          "use_case": "Favicon, avatar de redes sociais (foto de perfil do Instagram, WhatsApp Business), ícone de app, carimbo."
+        }
+      ],
+      "logo_directions": [
+        {
+          "direction": "Direção A — Wordmark Serifado Clássico",
+          "concept": "Apenas o nome em tipografia serifada de alto peso, sem símbolo. Força máxima no nome — para quem já conhece a marca. Elegante, atemporal, direto.",
+          "prompt": "Logo design for 'Bombachas Farroupilha', a Brazilian artisan gaucho clothing manufacturer. Wordmark-only logo. Serif typeface, humanist, similar to Playfair Display or Cormorant — weight bold for 'Bombachas', regular for 'Farroupilha'. No illustration, no icon, no ornament. Color: dark brown #6B3A1F on cream #F5EDD8 background. Clean, balanced, scalable. No texture, no aged effect, no border. Style: premium artisan brand, not rustic folk art. White background. Vector. --v 6 --ar 3:1"
+        },
+        {
+          "direction": "Direção B — Wordmark + Símbolo de Favo",
+          "concept": "Wordmark serifado combinado com símbolo geométrico abstrato de favo hexagonal — representa o trançado artesanal sem ser literal. O símbolo pode viver solo como avatar/favicon.",
+          "prompt": "Logo design for 'Bombachas Farroupilha', Brazilian artisan gaucho clothing brand. Horizontal lockup: geometric abstract hexagonal weave/honeycomb symbol on left + serif wordmark on right. Symbol represents artisan hand-weaving (favo trançado à mão). Typography: humanist serif, similar to Playfair Display. Color: dark brown #6B3A1F. Clean, no texture, no aged effect. Premium craft brand aesthetic — not rustic, not folksy. White background. Vector. --v 6 --ar 3:1"
+        },
+        {
+          "direction": "Direção C — Wordmark com Detalhe de Brasão Minimalista",
+          "concept": "Wordmark serifado emoldurado por elemento de brasão minimalista (escudo ou arco) que remete à heráldica gaúcha sem ser regionalismo folclórico. Tom mais institucional, adequado para papelaria B2B e fachada.",
+          "prompt": "Logo design for 'Bombachas Farroupilha', traditional gaucho textile manufacturer from Ciríaco, Brazil. Serif wordmark with minimal heraldic frame element — simple shield or arch outline, not ornate. No illustrations of gauchos, mate, or regional symbols. Typeface: classic humanist serif, regular-bold weight. Color: dark brown #6B3A1F on cream background. Timeless, institutional, artisan — works for both consumer brand and B2B catalog. White background. Vector. --v 6 --ar 3:1"
+        }
+      ],
+      "chosen_direction": null
+    },
+    "incorrect_uses": [
+      {
+        "rule": "Não distorcer proporções",
+        "visual_demo": "distort_x",
+        "reason": "Distorção horizontal/vertical destrói a proporção tipográfica definida pelo designer e comunica descuido — o oposto do artesanato preciso."
+      },
+      {
+        "rule": "Não recolorir fora das versões oficiais",
+        "visual_demo": "recolor_red",
+        "reason": "Cores não-oficiais (vermelho, azul, neon) desconectam o logo do território Marrom Couro + Verde Pampa e geram inconsistência nas redes."
+      },
+      {
+        "rule": "Não adicionar sombra ou efeito 3D",
+        "visual_demo": "drop_shadow",
+        "reason": "Sombra envelhece o logo e o coloca no estilo dos anos 2000. A marca é artesanal, não retro-kitsch."
+      },
+      {
+        "rule": "Não usar em baixo contraste",
+        "visual_demo": "low_contrast",
+        "reason": "Logo claro em fundo claro (ou escuro em escuro) compromete legibilidade. Sempre verificar ratio WCAG AA antes de publicar."
+      },
+      {
+        "rule": "Não rotacionar",
+        "visual_demo": "rotated",
+        "reason": "Logo rotacionado perde centralidade e parece erro. Nunca rotar para 'criar dinamismo' — o nome serifado tem orientação única."
+      },
+      {
+        "rule": "Não usar versão contornada (outline)",
+        "visual_demo": "outlined",
+        "reason": "Versão outline perde peso e força da tipografia em escalas menores. Use versão sólida — ou versão clara em fundo escuro."
+      },
+      {
+        "rule": "Não esticar para preencher espaço",
+        "visual_demo": "distort_x",
+        "reason": "Esticar horizontalmente para caber em banner deforma as letras. Sempre manter proporção e usar espaço em branco ao redor."
+      },
+      {
+        "rule": "Não usar sobre foto sem área de proteção",
+        "visual_demo": "low_contrast",
+        "reason": "Logo sobre área texturizada da foto perde leitura. Sempre usar fundo sólido ou overlay antes do logo em composições fotográficas."
+      }
+    ],
+    "color_system": {
+      "primary": [
+        {
+          "name": "Marrom Couro",
+          "hex": "#6B3A1F",
+          "rgb": "rgb(107, 58, 31)",
+          "cmyk": "C:0 M:46 Y:71 K:58",
+          "pantone": null,
+          "hsl": "hsl(25, 55%, 27%)",
+          "role": "Cor dominante da marca — identidade e assinatura",
+          "justification": "Couro curtido e terra seca do RS: a cor que representa artesanato manual sem folclore. Combina com Areia Pampa em proporção 30-60 sem esforço. Altíssimo contraste em fundos claros (WCAG AAA para texto em fundo claro)."
+        }
+      ],
+      "secondary": [
+        {
+          "name": "Verde Pampa",
+          "hex": "#2D4A35",
+          "rgb": "rgb(45, 74, 53)",
+          "cmyk": "C:39 M:0 Y:28 K:71",
+          "pantone": null,
+          "hsl": "hsl(140, 24%, 23%)",
+          "role": "Acento — CTAs, badges, destaques de urgência (Semana Farroupilha)",
+          "justification": "Campo pampeano + cultura gaúcha: a cor de fundo do movimento. Usada em 10% das composições — mais que isso compete com Marrom Couro e dilui a identidade."
+        }
+      ],
+      "neutrals": [
+        {
+          "name": "Areia Pampa",
+          "hex": "#F5EDD8",
+          "rgb": "rgb(245, 237, 216)",
+          "cmyk": "C:0 M:3 Y:12 K:4",
+          "role": "Fundo principal — background de LP, papelaria, apresentações",
+          "justification": "Creme quente que aquece Marrom Couro sem conflito. Evita o branco frio que distancia o tom artesanal. 60% das composições."
+        },
+        {
+          "name": "Carvão",
+          "hex": "#1C1C1C",
+          "rgb": "rgb(28, 28, 28)",
+          "cmyk": "C:0 M:0 Y:0 K:89",
+          "role": "Texto corpo — parágrafos, legendas, FAQs",
+          "justification": "Preto quente em vez de preto puro (#000000) — reduz fadiga visual em leitura longa e ainda passa no WCAG AAA em Areia Pampa."
+        }
+      ],
+      "functional": [
+        {
+          "name": "Confirmação / Sucesso",
+          "hex": "#2D4A35",
+          "rgb": "rgb(45,74,53)",
+          "cmyk": "C:39 M:0 Y:28 K:71",
+          "role": "Verde Pampa — reutilizando cor secundária para função UI de sucesso"
+        },
+        {
+          "name": "Alerta",
+          "hex": "#B45309",
+          "rgb": "rgb(180,83,9)",
+          "cmyk": "C:0 M:54 Y:95 K:29",
+          "role": "Âmbar escuro para avisos de prazo, estoque baixo"
+        },
+        {
+          "name": "Erro / Cancelamento",
+          "hex": "#991B1B",
+          "rgb": "rgb(153,27,27)",
+          "cmyk": "C:0 M:82 Y:82 K:40",
+          "role": "Vermelho escuro para erros de formulário, cancelamento"
+        }
+      ],
+      "proportions": {
+        "dominant_pct": 60,
+        "support_pct": 30,
+        "accent_pct": 10,
+        "dominant_color": "Areia Pampa #F5EDD8 (fundo)",
+        "support_color": "Marrom Couro #6B3A1F (texto, logo, elementos principais)",
+        "accent_color": "Verde Pampa #2D4A35 (CTAs, badges, destaques)"
+      },
+      "gradients": [],
+      "wcag_contrast_matrix": [
+        {
+          "foreground": "#6B3A1F",
+          "background": "#F5EDD8",
+          "label": "Marrom Couro / Areia Pampa (principal)",
+          "ratio": 7.2,
+          "level": "AAA"
+        },
+        {
+          "foreground": "#1C1C1C",
+          "background": "#F5EDD8",
+          "label": "Carvão / Areia Pampa (texto corpo)",
+          "ratio": 16.1,
+          "level": "AAA"
+        },
+        {
+          "foreground": "#F5EDD8",
+          "background": "#6B3A1F",
+          "label": "Areia Pampa / Marrom Couro (texto em fundo escuro)",
+          "ratio": 7.2,
+          "level": "AAA"
+        },
+        {
+          "foreground": "#F5EDD8",
+          "background": "#2D4A35",
+          "label": "Areia Pampa / Verde Pampa (CTA texto)",
+          "ratio": 8.1,
+          "level": "AAA"
+        },
+        {
+          "foreground": "#1C1C1C",
+          "background": "#FFFFFF",
+          "label": "Carvão / Branco (fallback digital)",
+          "ratio": 18.1,
+          "level": "AAA"
+        },
+        {
+          "foreground": "#6B3A1F",
+          "background": "#FFFFFF",
+          "label": "Marrom Couro / Branco",
+          "ratio": 6.3,
+          "level": "AA"
+        }
+      ]
+    },
+    "typography": {
+      "primary_family": {
+        "name": "Playfair Display",
+        "source": "Google Fonts",
+        "google_fonts_url": "https://fonts.google.com/specimen/Playfair+Display",
+        "embed_url": "https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap",
+        "weights_permitted": [
+          "400 (Regular)",
+          "600 (SemiBold)",
+          "700 (Bold)",
+          "400 Italic"
+        ],
+        "license": "Open Font License (OFL) — uso comercial permitido, sem restrição"
+      },
+      "secondary_family": {
+        "name": "Inter",
+        "source": "Google Fonts",
+        "google_fonts_url": "https://fonts.google.com/specimen/Inter",
+        "embed_url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap",
+        "weights_permitted": [
+          "400 (Regular)",
+          "500 (Medium)",
+          "600 (SemiBold)"
+        ],
+        "license": "Open Font License (OFL) — uso comercial permitido"
+      },
+      "hierarchy": [
+        {
+          "level": "H1 — Título Hero",
+          "font": "Playfair Display",
+          "weight": "700 Bold",
+          "size_px": 56,
+          "line_height": "1.1",
+          "use_case": "Headline principal da LP, capa de apresentação, destaque máximo"
+        },
+        {
+          "level": "H2 — Título de Seção",
+          "font": "Playfair Display",
+          "weight": "600 SemiBold",
+          "size_px": 36,
+          "line_height": "1.2",
+          "use_case": "Abertura de blocos na LP (Problema, Solução, FAQ), slides de apresentação"
+        },
+        {
+          "level": "H3 — Subtítulo / Card",
+          "font": "Playfair Display",
+          "weight": "400 Regular",
+          "size_px": 24,
+          "line_height": "1.3",
+          "use_case": "Títulos de card, FAQ item, depoimento name"
+        },
+        {
+          "level": "Body — Corpo de texto",
+          "font": "Inter",
+          "weight": "400 Regular",
+          "size_px": 16,
+          "line_height": "1.6",
+          "use_case": "Parágrafos da LP, e-mail, descrição de produto, copy longa"
+        },
+        {
+          "level": "Body — Destaque / Label",
+          "font": "Inter",
+          "weight": "600 SemiBold",
+          "size_px": 14,
+          "line_height": "1.4",
+          "use_case": "Badges, tags de produto, labels de formulário, item de lista com destaque"
+        },
+        {
+          "level": "Caption / Legenda",
+          "font": "Inter",
+          "weight": "400 Regular",
+          "size_px": 12,
+          "line_height": "1.5",
+          "use_case": "Crédito de foto, nota de rodapé, aviso de prazo, metadado"
+        }
+      ],
+      "fallbacks": "Playfair Display → Georgia → Times New Roman → serif. Inter → Helvetica Neue → Arial → sans-serif.",
+      "justification": "Playfair Display entrega o caráter editorial artesanal nos títulos — serifa humanista com contraste de grossura que transmite tradição sem peso de 'fonte antiquada'. Inter garante legibilidade máxima no corpo — é a tipografia de leitura mais testada do digital atual. A dupla funciona em qualquer densidade de texto sem conflito de personalidade."
+    },
+    "iconography": {
+      "style": "Outline (contorno), traço único",
+      "stroke_weight_px": 1.5,
+      "corner_style": "Arredondado (border-radius 2px) — suaviza sem perder a clareza artesanal",
+      "grid": "24×24px base, exportar em 16×16px e 32×32px para responsivo",
+      "color_default": "#6B3A1F (Marrom Couro) em fundo claro. #F5EDD8 (Areia Pampa) em fundo escuro."
+    },
+    "photography": {
+      "art_direction": "Luz natural lateral (não frontal plano). Temperatura quente (3200-5000K). Fundo desfocado mas reconhecível (interior de galpão, tecido, fio). Paleta de Areia a Marrom — sem saturação excessiva ou filtro azulado. Sempre mostrar processo ou contexto de uso real.",
+      "mood_keywords": [
+        "Artesanal real",
+        "Luz quente de interior",
+        "Mãos no processo",
+        "Ambiente de fábrica",
+        "Uso cultural autentico (CTG, baila, rodeio)"
+      ],
+      "do_dont": [
+        {
+          "type": "do",
+          "rule": "Mostrar as mãos da costureira-chefe no processo de favo"
+        },
+        {
+          "type": "do",
+          "rule": "Mariana usando a peça em ambiente de CTG ou evento real"
+        },
+        {
+          "type": "do",
+          "rule": "Material e textura do tecido em close — favo trançado visível"
+        },
+        {
+          "type": "dont",
+          "rule": "Foto de estúdio com fundo branco infinito — elimina contexto artesanal"
+        },
+        {
+          "type": "dont",
+          "rule": "Modelo fashion sem contexto gaúcho — atrai anti-persona (Curioso fashion)"
+        },
+        {
+          "type": "dont",
+          "rule": "Filtro frio ou azulado — destrói o território de calor artesanal"
+        }
+      ]
+    }
+  },
+  "block4_applications": {
+    "principle": "Cada aplicação tem 2 camadas: técnica (specs para o designer executar) e contextual (o que o mockup comunica para Mariana e Diego). Scope early-stage+digital: papelaria essencial + redes sociais + digital. Fachada/uniforme/embalagem quando houver ROI direto comprovado.",
+    "applications": [
+      {
+        "category": "stationery",
+        "name": "Cartão de Visita (Loreni e Everton)",
+        "specs": "9×5,5cm. Frente: logo Marrom Couro em Areia Pampa. Nome, cargo, WhatsApp, e-mail em Inter 10px Carvão. Verso: fundo Marrom Couro + tagline 'Feita à mão. Direto da fábrica.' em Areia Pampa Playfair Display 14px Bold. Acabamento: couchê fosco 300g com verniz localizado no logo.",
+        "mockup": {
+          "type": "business_card",
+          "description": "Frente fundo Areia Pampa com logo horizontal centralizado na parte superior. Abaixo: 'Loreni Tapparo / Sócia' em Inter SemiBold 11px Carvão. WhatsApp: +55 54 9615-0025 · tapparobombachas@gmail.com · bombachasfarroupilha.com.br. Verso: fundo Marrom Couro, tagline centralizada em Playfair Display Italic.",
+          "data": {
+            "front_background": "#F5EDD8",
+            "back_background": "#6B3A1F",
+            "text_color_front": "#1C1C1C",
+            "text_color_back": "#F5EDD8"
+          }
+        }
+      },
+      {
+        "category": "stationery",
+        "name": "Assinatura de E-mail",
+        "specs": "Largura máxima 600px. Logo horizontal na esquerda (120px largura). Ao lado: Nome em Playfair Display 15px Bold Marrom Couro + cargo + WhatsApp clicável + site. Fundo branco. Separador: linha horizontal 1px em Areia Pampa #D4B896. Tagline em rodapé: 'Feita à mão. Direto da fábrica.' em Inter 11px Marrom Couro.",
+        "mockup": {
+          "type": "email_signature",
+          "description": "Logo à esquerda em 120×40px + bloco de texto à direita com nome, cargo, contato. Linha divisória fina em Areia Pampa intermediária. Footer com tagline em itálico.",
+          "data": {}
+        }
+      },
+      {
+        "category": "digital_ui",
+        "name": "Favicon",
+        "specs": "16×16px, 32×32px, 180×180px (apple touch icon). Usar símbolo isolado (hexágono favo) em Marrom Couro #6B3A1F em fundo Areia Pampa #F5EDD8. Formato: ICO + PNG. Nunca usar wordmark completo em favicon — ilegível.",
+        "mockup": {
+          "type": "favicon_scaling",
+          "description": "Símbolo de favo em 3 escalas: 16×16 (só hexágono), 32×32 (hexágono + traço mínimo), 180×180 (símbolo completo com área de proteção). Fundo Areia Pampa.",
+          "data": {}
+        }
+      },
+      {
+        "category": "digital_ui",
+        "name": "WhatsApp Business — Perfil",
+        "specs": "Foto de perfil: símbolo isolado (logo mark) em fundo Marrom Couro, 640×640px (aparece 56×56 no chat). Nome do negócio: 'Bombachas Farroupilha'. Descrição: 'Fábrica de pilchas em Ciríaco/RS · Bombacha de Favo artesanal · Feita à mão. Direto da fábrica.' Site: bombachasfarroupilha.com.br. Horário declarado.",
+        "mockup": {
+          "type": "whatsapp_business",
+          "description": "Perfil WA Business com símbolo do logo em fundo Marrom Couro como foto de perfil. Descrição usando vocabulário oficial do manual.",
+          "data": {
+            "profile_name": "Bombachas Farroupilha",
+            "description": "Fábrica de pilchas em Ciríaco/RS · Bombacha de Favo artesanal · Feita à mão. Direto da fábrica."
+          }
+        }
+      },
+      {
+        "category": "social_media",
+        "name": "Avatar e Bio do Instagram",
+        "specs": "Avatar: símbolo isolado (logo mark) em fundo Marrom Couro, 1080×1080px (aparece 110px no perfil). Bio: 'Fábrica de pilchas em Ciríaco/RS 📍 · Bombacha de Favo artesanal · Feita à mão. Direto da fábrica. 🧵 · WA: [link]'. Username: @farroupilha_bombachas (manter). Destaques: 3 ícones — 'Processo', 'Modelos', 'Pedidos' em covers Marrom Couro + ícone Areia Pampa.",
+        "mockup": {
+          "type": "ig_avatar_bio",
+          "description": "Grid de perfil Instagram: avatar com símbolo, bio estruturada com emoji de 📍 e 🧵 (máximo 2), link para WA Business. Feed: posts de processo intercalados com produto. Highlights com covers personalizados.",
+          "data": {
+            "bio": "Fábrica de pilchas em Ciríaco/RS 📍\nBombacha de Favo artesanal\nFeita à mão. Direto da fábrica. 🧵",
+            "highlights": [
+              "Processo",
+              "Modelos",
+              "Pedidos"
+            ]
+          }
+        }
+      },
+      {
+        "category": "social_media",
+        "name": "Template de Feed Instagram — Post de Processo",
+        "specs": "1080×1080px (feed square) ou 1080×1350px (feed portrait). Fundo Areia Pampa ou foto real da fábrica (luz quente). Logo no canto inferior direito em 80px de largura. Headline em Playfair Display Bold 40px Marrom Couro no topo ou sobreposição. Rodapé: tagline em Inter 14px. Exportar JPEG 85% + PNG (versão sem texto para adaptação).",
+        "mockup": {
+          "type": "ig_feed_post",
+          "description": "Post 1080×1080: foto de bastidores (mãos no favo) como fundo. Overlay semitransparente Areia Pampa 40% na metade inferior. Texto: 'Cada ponto é trançado à mão.' em Playfair Display 40px Bold Marrom Couro. Logo 80px rodapé direito.",
+          "data": {
+            "format": "1080x1080",
+            "headline_font": "Playfair Display Bold 40px",
+            "color_overlay": "#F5EDD8 40% opacity"
+          }
+        }
+      },
+      {
+        "category": "sales_marketing",
+        "name": "One-Pager B2B (para representante e lojistas)",
+        "specs": "A4 vertical (210×297mm). Frente: logo topo centralizado + tagline + foto hero (Bombacha de Favo close). Corpo: diferenciais em 3 colunas (Bombacha de Favo artesanal / 35 dias garantidos / 15 peças mínimo) + tabela de linhas + pedido mínimo + WhatsApp. Rodapé: site + e-mail + Instagram. Paleta: fundo Areia Pampa, texto Carvão, destaques Marrom Couro.",
+        "mockup": {
+          "type": "one_pager",
+          "description": "A4 com hierarquia: logo → hero photo → 3 diferenciais-chave em cards → tabela de produtos/preços → CTA WhatsApp.",
+          "data": {
+            "format": "A4",
+            "key_differentials": [
+              "Bombacha de Favo artesanal",
+              "Prazo 35 dias garantido",
+              "Pedido mínimo 15 peças"
+            ]
+          }
+        }
+      },
+      {
+        "category": "digital_ui",
+        "name": "Google Meu Negócio — Card de Perfil",
+        "specs": "Foto de capa: 1332×750px, imagem da fábrica em Ciríaco (interior) ou Bombacha de Favo em detalhe. Foto de perfil: logo horizontal em fundo Areia Pampa, 720×720px. Descrição GMB: usar texto estruturado do Bloco 2 (concreto, direto, sem superlativo).",
+        "mockup": {
+          "type": "gmb_card",
+          "description": "Capa GMB: foto interior da fábrica em luz quente. Perfil GMB: logo em fundo Areia Pampa. Categorias: 'Loja de roupas' + 'Fabricante de roupas'. Descrição usando vocabulário oficial.",
+          "data": {}
+        }
+      }
+    ]
+  },
+  "block5_governance": {
+    "brand_owner": "Loreni Tapparo (sócia e responsável por atendimento e comunicação). É a guardiã da voz da marca — qualquer texto de comunicação externa deve ser aprovado por ela ou por alguém por ela autorizado.",
+    "approval_process": [
+      {
+        "step": "Criação de conteúdo (post, copy, anúncio, legenda)",
+        "responsible": "Criador (designer, copywriter, gestor de tráfego, ou IA assistida)",
+        "estimated_time": "Entregue com 48h de antecedência"
+      },
+      {
+        "step": "Revisão de aderência ao manual (tom de voz, vocabulário, arquétipo)",
+        "responsible": "Gina (Analista V4) durante contrato / Loreni após encerramento do contrato",
+        "estimated_time": "24h para aprovação ou retorno com ajuste"
+      },
+      {
+        "step": "Aprovação final de publicação",
+        "responsible": "Loreni — sim/não. Sem aprovação explícita, não publica.",
+        "estimated_time": "Mesmo dia se revisão foi enviada até 12h"
+      },
+      {
+        "step": "Atualização do manual de marca",
+        "responsible": "Loreni + V4 (durante contrato). Após: Loreni exclusivamente.",
+        "estimated_time": "A cada 6 meses ou quando houver mudança de linha/produto significativa"
+      }
+    ],
+    "review_cadence": "Revisão completa do manual a cada 6 meses (janeiro e julho). Revisão de paleta e tipografia apenas se houver mudança de posicionamento aprovada pela Loreni. Não alterar tagline ou vocabulary sem deliberação documentada.",
+    "committee": null
+  }
+}

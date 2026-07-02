@@ -834,12 +834,21 @@
     .logout svg { display: block; }
     @media print { .logout { display: none !important; } }
 
-    /* Consolidated View Button */
-    .consolidated-btn {
+    /* Header action buttons wrapper (Apresentação + Consolidada) */
+    .portal-actions {
       position: fixed;
       top: 1rem;
       right: 4rem;
       z-index: 9200;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    @media print { .portal-actions { display: none !important; } }
+
+    /* Consolidated View Button */
+    .consolidated-btn {
+      position: relative;
       height: 36px;
       padding: 0 0.875rem;
       border: 1px solid rgba(0,0,0,0.08);
@@ -873,6 +882,44 @@
     @media (max-width: 640px) {
       .consolidated-btn .consolidated-btn__label { display: none; }
       .consolidated-btn { padding: 0; width: 36px; justify-content: center; border-radius: 50%; }
+    }
+
+    /* Presentation (deck) Button */
+    .apresentacao-btn {
+      position: relative;
+      height: 36px;
+      padding: 0 0.875rem;
+      border: 1px solid rgba(251,46,10,0.25);
+      border-radius: 18px;
+      background: rgba(251,46,10,0.06);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      color: #FB2E0A;
+      font-family: inherit;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      letter-spacing: -0.005em;
+      cursor: pointer;
+      display: none;
+      align-items: center;
+      gap: 0.4rem;
+      text-decoration: none;
+      transition: background 0.15s, color 0.15s, border-color 0.15s, transform 0.1s, box-shadow 0.15s;
+      box-shadow: 0 2px 8px rgba(251,46,10,0.10);
+    }
+    body:not(.gate-locked) .apresentacao-btn { display: inline-flex; }
+    .apresentacao-btn:hover {
+      background: #FB2E0A;
+      color: #FFFFFF;
+      border-color: #FB2E0A;
+      box-shadow: 0 4px 12px rgba(251,46,10,0.25);
+    }
+    .apresentacao-btn:active { transform: translateY(1px); }
+    .apresentacao-btn svg { display: block; }
+    @media print { .apresentacao-btn { display: none !important; } }
+    @media (max-width: 640px) {
+      .apresentacao-btn .apresentacao-btn__label { display: none; }
+      .apresentacao-btn { padding: 0; width: 36px; justify-content: center; border-radius: 50%; }
     }
 
     .gate__card--shake { animation: gateShake 0.4s; }
@@ -921,17 +968,28 @@
     </div>
   </div>
 
-  <!-- Consolidated View Button -->
-  <a href="./consolidated.html" id="consolidatedBtn" class="consolidated-btn" target="_blank" rel="noopener" aria-label="Abrir visão consolidada" title="Abrir visão consolidada">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-      <polyline points="14 2 14 8 20 8"></polyline>
-      <line x1="8" y1="13" x2="16" y2="13"></line>
-      <line x1="8" y1="17" x2="16" y2="17"></line>
-      <line x1="8" y1="9" x2="10" y2="9"></line>
-    </svg>
-    <span class="consolidated-btn__label">Visão Consolidada</span>
-  </a>
+  <!-- Header Action Buttons (Apresentação + Consolidada) -->
+  <div class="portal-actions" id="portalActions">
+    <a href="./apresentacao.html" id="apresentacaoBtn" class="apresentacao-btn" target="_blank" rel="noopener" aria-label="Abrir apresentação" title="Abrir apresentação (slide deck)">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect x="2" y="3" width="20" height="14" rx="2"></rect>
+        <line x1="8" y1="21" x2="16" y2="21"></line>
+        <line x1="12" y1="17" x2="12" y2="21"></line>
+        <polygon points="10 8 15.5 10.5 10 13"></polygon>
+      </svg>
+      <span class="apresentacao-btn__label">Apresentação</span>
+    </a>
+    <a href="./consolidated.html" id="consolidatedBtn" class="consolidated-btn" target="_blank" rel="noopener" aria-label="Abrir visão consolidada" title="Abrir visão consolidada">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+        <polyline points="14 2 14 8 20 8"></polyline>
+        <line x1="8" y1="13" x2="16" y2="13"></line>
+        <line x1="8" y1="17" x2="16" y2="17"></line>
+        <line x1="8" y1="9" x2="10" y2="9"></line>
+      </svg>
+      <span class="consolidated-btn__label">Visão Consolidada</span>
+    </a>
+  </div>
 
   <!-- Logout Button -->
   <button type="button" id="logoutBtn" class="logout" aria-label="Sair" title="Sair">
@@ -979,7 +1037,6 @@ const WEEKS = [
     {id:'ee-s2-diagnostico-criativos', name:'Diagnóstico de Criativos'},
     {id:'ee-s2-diagnostico-organico-ig', name:'Diagnóstico de Conteúdo Orgânico (Instagram)'},
     {id:'ee-s2-diagnostico-cro', name:'Diagnóstico de CRO'},
-    {id:'ee-revisao-semanal', name:'Revisão Semanal — evoluções, divergências e atualizações'},
   ]},
   { n:3, title:'Produção', desc:'Criação de ativos estratégicos', skills:[
     {id:'ee-s3-manual-marca', name:'Manual de Marca (Brandbook + MIV)'},
@@ -1880,25 +1937,30 @@ const R = {
     const names = {midia_paga:'Mídia Paga',criativos:'Criativos',cro:'CRO',crm:'CRM',seo:'SEO'};
     const scColor = c => (c==='critical'||c==='low') ? 'var(--danger)' : 'var(--text-primary)';
 
-    // RADAR de pilares vs benchmark
+    const isNum = v => typeof v === 'number' && !isNaN(v);
+    const scored = d.pillar_scores.filter(p => isNum(p.score)); // só pilares medidos entram em radar/insight
+
+    // RADAR de pilares vs benchmark (apenas pilares medidos)
     const bmMap = {};
     (bm?.pillar_comparison||[]).forEach(p=>{ bmMap[p.pillar] = p.sector_average; });
-    const radarAxes = d.pillar_scores.map(p=>({name: names[p.pillar]||p.pillar, value: p.score, benchmark: bmMap[p.pillar]}));
-    const weakest = [...d.pillar_scores].sort((a,b)=>a.score-b.score)[0];
-    const strongest = [...d.pillar_scores].sort((a,b)=>b.score-a.score)[0];
+    const radarAxes = scored.map(p=>({name: names[p.pillar]||p.pillar, value: p.score, benchmark: bmMap[p.pillar]}));
+    const weakest = [...scored].sort((a,b)=>a.score-b.score)[0];
+    const strongest = [...scored].sort((a,b)=>b.score-a.score)[0];
     const radarInsight = weakest && strongest
       ? 'Pilar mais fraco: '+(names[weakest.pillar]||weakest.pillar)+' ('+weakest.score+'/100). Mais forte: '+(names[strongest.pillar]||strongest.pillar)+' ('+strongest.score+'/100). '
         +'Gap de '+(strongest.score-weakest.score)+' pontos concentra o maior espaço para ganho rápido.'
       : '';
-    h += sc('Visão Geral — Pilares vs Setor',
+    if (radarAxes.length) h += sc('Visão Geral — Pilares vs Setor',
       insight(chartRadar(radarAxes,{title:'Radar de Maturidade Digital', tone: d.overall_score>=60?'green':d.overall_score>=40?'yellow':'red'}),
         radarInsight, weakest?.score<40?'bad':weakest?.score<60?'warn':'good'));
 
     h += sc('Scores por Pilar', d.pillar_scores.map(p => {
+      const sNum = isNum(p.score);
+      const scoreLabel = sNum ? (N(p.score)+'/100') : (E(String(p.score==null?'?':p.score))+'/100');
       let pi = '<div class="pillar"><div class="pillar__row"><span class="pillar__name">'+E(names[p.pillar]||p.pillar)+'</span>'
-        +'<span class="pillar__score" style="color:'+scColor(p.classification)+'">'
-        +N(p.score)+'/100 '+tg(CLS[p.classification]||'',cc(p.classification))+(p.estimated?' '+tg('Estimado','gray'):'')+'</span></div>'
-        +pb(p.score,cc(p.classification)||'red')
+        +'<span class="pillar__score" style="color:'+(sNum?scColor(p.classification):'var(--text-muted)')+'">'
+        +scoreLabel+' '+tg(CLS[p.classification]||(sNum?'':'Não medido'),cc(p.classification)||'gray')+(p.estimated?' '+tg('Estimado','gray'):'')+'</span></div>'
+        +pb(sNum?p.score:0,cc(p.classification)||'red')
         +(p.highlight?'<p style="font-size:.8125rem;color:var(--text-muted);margin:.25rem 0 0">'+E(p.highlight)+'</p>':'');
       if (p.details?.strengths?.length) pi += '<div style="margin-top:.5rem">'+p.details.strengths.map(s=>'<div style="font-size:.75rem;color:var(--success)">&#10003; '+E(s)+'</div>').join('')+'</div>';
       if (p.details?.weaknesses?.length) pi += '<div>'+p.details.weaknesses.map(w=>'<div style="font-size:.75rem;color:var(--danger)">&#10007; '+E(w)+'</div>').join('')+'</div>';
@@ -5230,6 +5292,17 @@ const R = {
   // Tipografia — VISUALIZADA (escala REAL)
   if (b3.typography) {
     const tp = b3.typography;
+    // Carrega as webfonts do manual (senão o preview cai no fallback Georgia)
+    [tp.primary_family, tp.secondary_family].forEach(function(fam){
+      if (fam && fam.embed_url && !document.querySelector('link[data-mf="'+fam.name+'"]')) {
+        var lk = document.createElement('link');
+        lk.rel = 'stylesheet'; lk.href = fam.embed_url; lk.setAttribute('data-mf', fam.name);
+        document.head.appendChild(lk);
+      }
+    });
+    // Amostra do specimen = nome da marca do cliente (nunca de outro cliente)
+    // PORTAL_DATA é const de escopo de módulo (não está em window) — referência direta
+    const typeSample = (PORTAL_DATA && PORTAL_DATA.client && PORTAL_DATA.client.name) || d.client_name || 'Tipografia da marca';
     if (tp.primary_family || tp.secondary_family) {
       const fontCard = (f, role, color, fontWeight, fontFamilyFallback) => {
         if (!f) return '';
@@ -5237,7 +5310,7 @@ const R = {
         if (f.google_fonts_url) links.push('<a href="'+esc(f.google_fonts_url)+'" target="_blank" rel="noopener" style="color:'+PURPLE+';text-decoration:none;font-weight:600;display:inline-flex;align-items:center;gap:.25rem"><span style="font-size:.875rem">&#x1F517;</span> Ver no Google Fonts</a>');
         if (f.embed_url) links.push('<details style="display:inline-block;vertical-align:top;margin-left:.5rem"><summary style="cursor:pointer;color:'+TURQ+';font-size:.75rem;font-weight:600">Embed CSS &#8594;</summary><pre style="background:var(--bg-elevated);padding:.5rem;border-radius:4px;font-size:.625rem;line-height:1.4;color:var(--text-secondary);white-space:pre-wrap;word-wrap:break-word;margin-top:.375rem;font-family:ui-monospace,monospace">&lt;link href="'+esc(f.embed_url)+'" rel="stylesheet"&gt;</pre></details>');
         return '<div class="cd'+(role==='primary'?' cd--red':'')+'">'
-          + '<div style="font-family:'+f.name+','+fontFamilyFallback+';font-size:3rem;font-weight:'+fontWeight+';line-height:1;color:'+color+';margin-bottom:.5rem">Aa</div>'
+          + '<div style="font-family:\''+f.name+'\','+fontFamilyFallback+';font-size:3rem;font-weight:'+fontWeight+';line-height:1;color:'+color+';margin-bottom:.5rem">Aa</div>'
           + '<div class="cd__title">'+esc(f.name)+' <span style="color:var(--text-muted);font-weight:400">&middot; '+(role==='primary'?'primária (títulos)':'secundária (corpo)')+'</span></div>'
           + '<div class="cd__body">'+esc(f.source||'')+' &middot; '+(f.weights_permitted||[]).join(', ')+'</div>'
           + (links.length ? '<div style="margin-top:.625rem;font-size:.8125rem">'+links.join('')+'</div>' : '')
@@ -5258,7 +5331,7 @@ const R = {
             const previewSize = Math.min(lvl.size_px, 56);
             return '<div style="display:grid;grid-template-columns:90px 1fr 220px;gap:1.5rem;align-items:baseline;padding:.875rem 0;border-bottom:1px solid var(--border)">'
               + '<div style="font-size:.6875rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.06em;font-weight:700">'+esc(lvl.level)+'</div>'
-              + '<div style="font-family:'+lvl.font+',Georgia,serif;font-weight:'+w+';font-size:'+previewSize+'px;line-height:1.2;color:#2E2E33">Seu gato merece</div>'
+              + '<div style="font-family:\''+lvl.font+'\',Georgia,serif;font-weight:'+w+';font-size:'+previewSize+'px;line-height:1.2;color:#2E2E33">'+esc(typeSample)+'</div>'
               + '<div style="font-size:.6875rem;color:var(--text-muted);text-align:right;line-height:1.4">'+esc(lvl.font+' '+lvl.weight)+'<br>'+lvl.size_px+'px / lh '+esc(lvl.line_height||'1.5')+'<br><span style="color:var(--text-muted);font-style:italic">'+esc(lvl.use_case)+'</span></div>'
               + '</div>';
           }).join('')

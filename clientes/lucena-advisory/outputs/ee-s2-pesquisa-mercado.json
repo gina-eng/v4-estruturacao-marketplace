@@ -1,0 +1,283 @@
+{
+  "client_name": "Lucena Advisory",
+  "skill": "ee-s2-pesquisa-mercado",
+  "version": 1,
+  "generated_at": "2026-06-19T00:00:00Z",
+  "completed_at": "2026-06-19T00:00:00Z",
+  "data_source": "web_research",
+  "summary": "O mercado de consultoria ambiental no Amazonas é fragmentado (43+ empresas em Manaus, nenhum líder de marca) e digitalmente fraco — só FRTB e Norte Ambiental fazem marketing sério, e o leilão de mídia paga do nicho está praticamente vazio. A demanda foi reaquecida pela nova Lei Geral do Licenciamento (15.190/2025, em vigor desde fev/2026) e pelos R$ 7,96 bi em projetos aprovados no Polo Industrial de Manaus em 2025. O diferencial real e não-copiável da Lucena é a formação tripla do Aldo (advogado + engenheiro ambiental + mestre em direito ambiental) numa só pessoa — abrindo a janela para ocupar o território 'advisory jurídico-técnica de licenciamento' que nenhum concorrente domina.",
+  "summary_headline": "Nicho ambiental no AM: 43+ players fragmentados e digitalmente fracos (só FRTB e Norte fazem marketing). Com a Lei 15.190/2025 reaquecendo a demanda, há janela para a Lucena ocupar o território 'advisory jurídico-técnica' que ninguém domina.",
+  "summary_highlights": [
+    {
+      "category": "competicao",
+      "label": "Concorrentes diretos",
+      "value": "43+ em Manaus",
+      "subtext": "Mercado fragmentado, sem líder de marca dominante",
+      "tone": "yellow"
+    },
+    {
+      "category": "janela",
+      "label": "Driver regulatório",
+      "value": "Lei 15.190/2025",
+      "subtext": "Em vigor desde fev/2026 — reaquece toda a base B2B",
+      "tone": "green"
+    },
+    {
+      "category": "oportunidade",
+      "label": "Maturidade digital do setor",
+      "value": "Baixa",
+      "subtext": "Só 2 de 43+ fazem marketing sério — vácuo a ocupar",
+      "tone": "green"
+    },
+    {
+      "category": "posicao",
+      "label": "SOM (teto de mercado) [E]",
+      "value": "~R$ 3M/ano",
+      "subtext": "Cliente captura ~0,2% do SAM hoje (R$ 252k/ano)",
+      "tone": "blue"
+    },
+    {
+      "category": "oportunidade",
+      "label": "Mídia paga no nicho",
+      "value": "Leilão vazio",
+      "subtext": "Nenhuma consultoria anuncia no Google em Manaus",
+      "tone": "green"
+    },
+    {
+      "category": "risco",
+      "label": "Ameaça regulatória",
+      "value": "Renovação via IA",
+      "subtext": "IPAAM automatiza renovação — erode receita repetitiva",
+      "tone": "red"
+    }
+  ],
+  "summary_key_findings": [
+    {
+      "category": "contexto",
+      "text": "O mercado é fragmentado (43+ consultorias em Manaus, ~100 no AM, sem líder de marca), digitalmente imaturo (só FRTB e Norte Ambiental investem em conteúdo/SEO/LinkedIn) e movido por demanda regulatória quase inelástica — agora reaquecida pela Lei Geral do Licenciamento (15.190/2025) e por R$ 7,96 bi aprovados no Polo Industrial em 2025. Não é um mercado a 'criar', é um mercado a 'ocupar melhor'."
+    },
+    {
+      "category": "vantagem",
+      "text": "O diferencial real e confirmado é a formação tripla do Aldo (advogado + engenheiro ambiental + mestre em direito ambiental) numa só pessoa — a maioria dos concorrentes é de engenheiros, sem a perna jurídica forte. Somado ao track record com o grupo Rei dos Bons Amigos (R$ 300M+), dá à Lucena um ângulo de 'advisory jurídico-técnica' que ninguém articula no AM."
+    },
+    {
+      "category": "ameaca",
+      "text": "Dois ventos contrários reais: a renovação automática de Licença de Operação via IA do IPAAM (IN 001/2026) erode a receita de renovação repetitiva, e a modalidade LAC (licenciamento por adesão) da nova lei reduz a intermediação em atividades de baixo impacto. A Lucena deve migrar o discurso para licenciamento complexo, recorrência (compliance/SST) e advisory de enquadramento — não para o transacional simples."
+    },
+    {
+      "category": "acao",
+      "text": "Ocupar rápido os espaços que ninguém domina: busca local via GMB (subexplorado por todos), conteúdo sobre a Lei 15.190/2025 e a modalidade LAC (cauda longa quente e quase vazia, que nem o FRTB cobre ainda) e autoridade pessoal do Aldo no LinkedIn. É uma corrida em que a maioria dos competidores ainda nem saiu da largada — mas a janela fecha se FRTB ou Norte avançarem primeiro."
+    }
+  ],
+  "segment": "Consultoria/Assessoria Ambiental B2B — licenciamento ambiental e urbanístico (serviços profissionais regulados)",
+  "region": "Manaus e Amazonas / região Norte, com foco no Polo Industrial de Manaus, eixo de postos de combustíveis e logística fluvial",
+  "tam_sam_som": {
+    "tam": {
+      "value_brl": 9000000000,
+      "description": "TAM — mercado brasileiro de consultoria ambiental (licenciamento, estudos, compliance). Estimativa [E] ancorada no mercado global de consultoria ambiental (US$ 46,5 bi em 2025, Mordor Intelligence) aplicando a participação aproximada do Brasil (~3-4% do global ≈ US$ 1,5-1,8 bi ≈ R$ 8-10 bi/ano ao câmbio de ~R$ 5,4/US$). Não há número público isolado para o Brasil — valor é ordem de grandeza, não precisão."
+    },
+    "sam": {
+      "value_brl": 120000000,
+      "description": "SAM — mercado de consultoria/assessoria ambiental servido no Amazonas, segmento B2B (empresas com ativos licenciáveis). Estimativa [E] triangulada por: (a) ~43 consultorias em Manaus + interior, com faturamento médio estimado de R$ 1,5-3M/ano (a maioria é ME, ex: Moura com capital social R$ 500k) ≈ R$ 80-130M; (b) demanda industrial do PIM (indústrias lideram ~30% das licenças do IPAAM) + postos, estaleiros, construção e mineração.",
+      "filters": [
+        "Recorte geográfico: Amazonas (foco em Manaus e RM)",
+        "Recorte de cliente: B2B com ativos físicos licenciáveis (exclui pessoa física e microdemanda pontual de mínimo impacto)",
+        "Recorte de serviço: licenciamento, estudos ambientais, compliance e SST (exclui obras de engenharia ambiental pesada/execução)"
+      ]
+    },
+    "som": {
+      "value_brl": 3000000,
+      "description": "SOM — teto de receita anual que a Lucena pode capturar do SAM dado o posicionamento e a dinâmica competitiva (NÃO é a meta da cliente, NÃO é limitado pela capacidade atual). Triangulado por 3 métodos independentes que convergem para ~R$ 3M/ano: (1) Market share top-down: 2-4% do SAM de R$ 120M = R$ 2,4-4,8M; (2) Subsegmento B2B recorrente/complexo: ~R$ 45M do SAM, com captura realista de 6-10% = R$ 2,7-4,5M; (3) Bottom-up âncora + expansão: base atual R$ 252k + expansão nos 26 CNPJs do Rei dos Bons Amigos + diversificação industrial ≈ R$ 2-4M. Média das triangulações ≈ R$ 3M.",
+      "assumptions": [
+        "Lucena ocupa o nicho de licenciamento complexo + recorrência B2B (não o transacional de baixo impacto)",
+        "Posicionamento de autoridade jurídico-técnica diferenciado, capturando prêmio sobre concorrentes generalistas",
+        "Mercado fragmentado e digitalmente fraco permite ganho de share via presença digital + ABM",
+        "Não considera horizonte temporal nem cenário — é o teto tangível de mercado, não forecast"
+      ],
+      "operational_ceiling_note": "Restrição INTERNA separada do SOM: a estrutura atual (Aldo + sócios técnicos, sem equipe comercial dedicada e com operação 100% dependente do dono) tem capacidade de entrega muito abaixo de R$ 3M/ano. Atingir o SOM exige escalar entrega (delegar operação técnica e comercial) — é gargalo de capacidade, não de mercado.",
+      "related_but_separate": {
+        "client_annual_revenue_goal_brl_v4mos": 100000,
+        "client_annual_revenue_goal_source_v4mos": "Formulário V4MOS — campo 'Meta de faturamento próximos 12 meses' preenchido pelo Aldo (R$ 100.000). Provável erro de preenchimento: fica ABAIXO do run-rate atual (~R$ 252k/ano), então não é uma meta de crescimento coerente — a interpretar como mensal ou equívoco.",
+        "client_monthly_revenue_goal_kickoff": "R$ 50.000/mês em 6 meses = ~R$ 600.000/ano (declarado na call de vendas SDR, 2026-04-28)",
+        "note": "Há DUAS metas declaradas em fontes diferentes, com divergência de ~6x. A premissa de trabalho adotada (a confirmar no Kick-Off) é a meta da SDR: R$ 50k/mês (~R$ 600k/ano). Mesmo essa meta operacional (~R$ 600k) fica MUITO abaixo do SOM de mercado (~R$ 3M), o que é o esperado: a meta é aspiração operacional de curto prazo; o SOM é o teto de mercado de médio/longo prazo. A folga entre meta e SOM confirma que não há restrição de tamanho de mercado — a restrição é de capacidade interna e de máquina de aquisição."
+      }
+    },
+    "methodology": "mixed",
+    "sources": [
+      {"name": "Mordor Intelligence — Environmental Consulting Market (global US$ 46,5 bi, CAGR ~5,94%)", "url": "https://www.mordorintelligence.com/industry-reports/environmental-consulting-market", "year": 2025},
+      {"name": "Econodata — Consultorias ambientais em Manaus/AM (fragmentação: 43+ em Manaus)", "url": "https://www.econodata.com.br/maiores-empresas/am-manaus/busca-consultoria-ambiental", "year": 2026},
+      {"name": "Governo do Amazonas — Indústrias do PIM lideram ranking de licenciamento do IPAAM (~30%)", "url": "http://www.amazonas.am.gov.br/2019/12/industrias-do-polo-industrial-de-manaus-lideram-ranking-de-licenciamento-ambiental/", "year": 2024},
+      {"name": "CODAM — R$ 7,96 bi em investimentos aprovados no PIM em 2025", "url": "https://tveradioencontrodasaguas.com.br/codam-aprova-r-8109-milhoes-em-investimentos-para-o-polo-industrial-de-manaus/", "year": 2025}
+    ]
+  },
+  "competitors": [
+    {
+      "name": "FRTB Consultoria Ambiental",
+      "positioning": "'Regularização ambiental com segurança jurídica e continuidade operacional' / 'Consultoria que entrega resultado, não só relatório.' É o benchmark digital do nicho — e, atenção, já usa o discurso de 'segurança jurídica' que seria o território natural da Lucena.",
+      "channels": ["Site profissional multipágina", "Blog SEO local (rankeia para 'PGRS Manaus')", "LinkedIn", "Instagram (@frtbconsultoria)", "WhatsApp/e-mail"],
+      "strengths": ["Único do set nomeado com marketing de conteúdo claro (blog SEO)", "10+ anos, +60 projetos, +30 empresas, +12 setores", "Fundadoras engenheiras com experiência no INPA e pós em perícia/auditoria", "Atuação nacional (escritório no RJ)"],
+      "weaknesses": ["Posicionamento ancorado na engenharia ambiental, sem a perna jurídica forte (advogado/mestre) que a Lucena tem", "Ainda não ocupou o discurso da nova Lei 15.190/2025 nem da modalidade LAC", "Marca corporativa, sem a autoridade pessoal de um especialista-rosto"],
+      "estimated_pricing": "Recorrente ~R$ 3-15k/mês; projetos/estudos R$ 8-40k [E]",
+      "digital_score": 8,
+      "digital_details": {"website": "https://www.frtbconsultoria.com.br/", "instagram": "@frtbconsultoria (seguidores não verificáveis via web)", "google": "Rankeia 1º para o próprio nome e para 'PGRS Manaus' via blog", "active_ads": "Nenhum anúncio identificado (leilão vazio no nicho)"}
+    },
+    {
+      "name": "Norte Ambiental",
+      "positioning": "'Sua jornada sustentável, nosso compromisso.' Especialista em resíduos perigosos, posicionada como 'referência no Norte'. É o teto de maturidade digital do nicho.",
+      "channels": ["Site", "LinkedIn", "YouTube", "Blog técnico ativo", "Instagram", "Facebook"],
+      "strengths": ["Presença digital mais completa do nicho (inclui YouTube e blog técnico)", "Capilaridade regional: escritórios em RR, RO, AC e PI além do AM", "Especialização clara em resíduos perigosos"],
+      "weaknesses": ["Sede em Iranduba (não em Manaus capital)", "Foco operacional/técnico em resíduos, não no advisory jurídico de licenciamento", "Conteúdo técnico, sem ângulo de autoridade jurídica"],
+      "estimated_pricing": "Recorrente ~R$ 4-18k/mês; projetos R$ 10-50k [E]",
+      "digital_score": 9,
+      "digital_details": {"website": "https://norteambiental.com.br/", "instagram": "Ativo (seguidores não verificáveis)", "google": "Boa presença orgânica regional", "active_ads": "Nenhum anúncio identificado"}
+    },
+    {
+      "name": "Moura Ambiental",
+      "positioning": "'Consultoria ambiental pioneira', 'referência no setor'. Forte em licenciamento mineral (areia, argila, ouro) e treinamentos.",
+      "channels": ["Site (datado, com keyword stuffing)", "Instagram", "Facebook (~1.699 curtidas)"],
+      "strengths": ["~14 anos de mercado (CNPJ 2012; diz 18 anos)", "Especialização em mineração (DNPM/ANM) e cursos desde 2015", "Oferece terceirização de mão de obra técnica"],
+      "weaknesses": ["Site datado, SEO de ~2015 (keyword stuffing)", "Sem LinkedIn", "Marketing de conteúdo inexistente", "Porte ME (capital social R$ 500k)"],
+      "estimated_pricing": "Recorrente ~R$ 2-10k/mês; projetos R$ 5-30k [E]",
+      "digital_score": 4,
+      "digital_details": {"website": "https://www.mouraambiental.com.br/", "instagram": "instagram.com/mouraambiental (seguidores não verificáveis)", "google": "Aparece na 1ª página para 'consultoria ambiental Manaus'", "active_ads": "Nenhum identificado"}
+    },
+    {
+      "name": "Aurora Ambiental",
+      "positioning": "'Viva Melhor' — especializada em desenvolver projetos na área ambiental. Cobre mineração, piscicultura e manejo florestal.",
+      "channels": ["Site (keyword stuffing)", "LinkedIn (perfil)", "Instagram/Facebook referenciados"],
+      "strengths": ["Amplitude de serviços (LP/LI/LO, EIA/RIMA, mineração, piscicultura, manejo florestal)", "Cita atuação junto a SEMMAS, IPAAM, IMPLURB, Bombeiros e Vigilância Sanitária"],
+      "weaknesses": ["Porte ME", "Site com SEO datado", "Sem estratégia de conteúdo", "Posicionamento genérico ('Viva Melhor' não comunica diferencial)"],
+      "estimated_pricing": "Recorrente ~R$ 2-9k/mês; projetos R$ 5-25k [E]",
+      "digital_score": 3,
+      "digital_details": {"website": "https://auroraambiental.com.br/", "instagram": "Referenciado no site (não verificável)", "google": "Aparece na 1ª página para 'consultoria ambiental Manaus'", "active_ads": "Nenhum identificado"}
+    },
+    {
+      "name": "Ocidental Consultoria e Projetos",
+      "positioning": "'Compromisso com o Meio Ambiente.' Posicionamento institucional genérico, sem diferencial articulado.",
+      "channels": ["Site básico", "Facebook", "WhatsApp"],
+      "strengths": ["Portfólio técnico amplo (licenciamento, recursos hídricos, fauna/flora, EIA, PRAD, passivos)"],
+      "weaknesses": ["O mais fraco digitalmente do set nomeado", "Sem Instagram nem LinkedIn localizados", "Porte e tempo de mercado não informados (baixa transparência)", "Possível confusão de razão social com outra 'Ocidental' — marca pouco consolidada"],
+      "estimated_pricing": "Recorrente ~R$ 2-8k/mês; projetos R$ 5-25k [E]",
+      "digital_score": 2,
+      "digital_details": {"website": "https://ocidentalconsultoria.com.br/", "instagram": "Não encontrado", "google": "Presença mínima", "active_ads": "Nenhum identificado"}
+    },
+    {
+      "name": "Protege Engenharia",
+      "positioning": "Consultoria/engenharia ambiental consolidada, atuação desde 1998 (player mais antigo da praça). Forte em licenciamento, regularização (Habite-se/AVCB), análise de risco e EIA.",
+      "channels": ["Site próprio", "Presença orgânica"],
+      "strengths": ["25+ anos de mercado — o mais consolidado/antigo da praça em Manaus", "Amplitude técnica (engenharia + ambiental)", "Reputação de longevidade"],
+      "weaknesses": ["Marketing digital pouco desenvolvido apesar do porte", "Foco em engenharia, sem ângulo de advisory jurídico", "Marca tradicional, pouco ativa em conteúdo/LinkedIn"],
+      "estimated_pricing": "Recorrente ~R$ 3-15k/mês; projetos R$ 8-40k [E]",
+      "digital_score": 4,
+      "digital_details": {"website": "https://www.protege-engenharia.com.br/", "instagram": "Não confirmado", "google": "Presença orgânica para nome/serviços", "active_ads": "Nenhum identificado"}
+    }
+  ],
+  "competitive_map": {
+    "axis_x": "Foco da entrega: Generalista técnico (engenharia) ←→ Advisory jurídico-técnico integrado",
+    "axis_y": "Presença/autoridade digital: Baixa ←→ Alta",
+    "positions": [
+      {"name": "FRTB Consultoria Ambiental", "quadrant": "Alta digital + Generalista técnico (engenharia com discurso de segurança jurídica, mas sem perna jurídica real)"},
+      {"name": "Norte Ambiental", "quadrant": "Alta digital + Generalista técnico (foco operacional/resíduos)"},
+      {"name": "Protege Engenharia", "quadrant": "Média-baixa digital + Generalista técnico consolidado"},
+      {"name": "Moura Ambiental", "quadrant": "Baixa digital + Generalista técnico (mineração/cursos)"},
+      {"name": "Aurora Ambiental", "quadrant": "Baixa digital + Generalista técnico"},
+      {"name": "Ocidental Consultoria", "quadrant": "Baixa digital + Generalista técnico"},
+      {"name": "Lucena Advisory (posição-alvo)", "quadrant": "Alta digital (a construir) + Advisory jurídico-técnico — quadrante vazio"}
+    ],
+    "empty_spaces": "O cruzamento 'Advisory jurídico-técnico integrado + Alta autoridade digital' está VAZIO. Ninguém combina a credencial jurídica forte (advogado/mestre em direito ambiental) com a engenharia E uma marca digital de autoridade. É exatamente onde a Lucena pode se posicionar, alavancando a formação tripla do Aldo.",
+    "crowded_spaces": "O quadrante 'Generalista técnico de engenharia' está lotado (Moura, Aurora, Ocidental, Protege e parcialmente FRTB/Norte). Competir ali é guerra de preço contra MEs estabelecidas — território a evitar."
+  },
+  "trends": [
+    {
+      "trend": "Nova Lei Geral do Licenciamento Ambiental (Lei 15.190/2025) reaquece o mercado",
+      "evidence": "Sancionada em ago/2025 e em vigor desde 04/02/2026, é o primeiro marco federal unificado: cria/sistematiza modalidades (LP, LI, LO, LAU, LAC, LOC, LAE). Toda a base de empresas precisa reentender seu enquadramento — onda de demanda por advisory. Fontes: ConJur (https://www.conjur.com.br/2026-fev-03/novas-licencas-ambientais-e-hipoteses-de-dispensa-a-partir-do-marco-legal-do-licenciamento/), Manucci Law."
+    },
+    {
+      "trend": "Investimento recorde no Polo Industrial de Manaus impulsiona licenciamento novo",
+      "evidence": "Em 2025 o CODAM aprovou 320 projetos, R$ 7,96 bi em investimentos e +9.000 empregos projetados; indústrias do PIM já lideram ~30% das licenças do IPAAM. Cada nova planta exige licenciamento trifásico (LP/LI/LO). Fonte: gov.am e TV Encontro das Águas."
+    },
+    {
+      "trend": "ESG e exigências de cadeia de fornecedores empurram PMEs à regularização",
+      "evidence": "O subsetor de ESG cresce a CAGR ~24,8% (Mordor), e grandes empresas passam a exigir conformidade ambiental de fornecedores — ampliando a base de PMEs que precisam se regularizar. Fonte: GreenView (https://greenviewgv.com.br/tendencias-de-mercado-em-consultoria-ambiental-para-2025/), Mordor Intelligence."
+    },
+    {
+      "trend": "Setor digitalmente imaturo — janela de diferenciação por conteúdo/SEO",
+      "evidence": "Pesquisa direta (jun/2026): de 43+ consultorias em Manaus, só FRTB e Norte Ambiental fazem marketing de conteúdo; nenhuma anuncia no Google Ads (leilão vazio); diretórios (Econodata, CNPJ.biz) dominam o orgânico — ninguém ocupa o SEO próprio. Espaço aberto para quem produzir conteúdo de qualidade."
+    }
+  ],
+  "threats": [
+    {
+      "threat": "Renovação automática de Licença de Operação via IA do IPAAM (IN 001/2026)",
+      "potential_impact": "Lançada em fev/2026 para 21 atividades industriais com SGA, reduz a fricção (e a receita) de renovação repetitiva. Parte do trabalho transacional de renovação que sustenta consultorias pode encolher nos próximos 12 meses — empurrando o valor para licenciamento novo, estudos complexos e advisory de enquadramento."
+    },
+    {
+      "threat": "Modalidade LAC (Licença por Adesão e Compromisso) simplifica baixo impacto",
+      "potential_impact": "A LAC, da nova lei, permite licenciamento por autodeclaração para atividades de baixo-médio impacto, reduzindo a necessidade de intermediação em parte do mercado de menor complexidade. Ameaça os serviços de menor ticket; reforça a necessidade de a Lucena focar em complexidade e recorrência."
+    },
+    {
+      "threat": "Concorrentes digitalmente maduros (FRTB, Norte) podem ocupar o SEO/conteúdo primeiro",
+      "potential_impact": "FRTB já rankeia para termos locais e usa o discurso de 'segurança jurídica'. Se FRTB ou Norte acelerarem conteúdo sobre a Lei 15.190/2025 e busca local antes da Lucena, a janela de pioneirismo digital fecha e a Lucena passa a correr atrás de posição cumulativa (ranking, backlinks, reviews)."
+    }
+  ],
+  "unexploited_opportunity": {
+    "description": "Ocupar o território \"A advisory de licenciamento ambiental do Amazonas que une direito + engenharia e domina a nova Lei 15.190/2025\" — um posicionamento que cruza autoridade jurídica forte, competência técnica de engenharia e presença digital de conteúdo, ancorado no rosto e nas credenciais do Aldo. Concretamente: dominar a busca local (GMB) e produzir o conteúdo de referência sobre a nova lei e a modalidade LAC, que está quente e quase sem concorrência de conteúdo.",
+    "why_nobody_does_it": "(1) A maioria dos concorrentes é de engenheiros ambientais, sem a perna jurídica forte (advogado + mestre em direito ambiental) que sustente o ângulo 'advisory jurídica'. (2) Os dois players digitalmente maduros (FRTB e Norte Ambiental) focam em conteúdo técnico/operacional e ainda não ocuparam o discurso da nova lei nem da LAC. (3) O mercado é fragmentado e regional, com baixíssima cultura de marketing — ninguém investiu em construir uma marca de autoridade pessoal no nicho.",
+    "feasibility": "alta"
+  },
+  "market_jtbd": {
+    "current_solutions": "A maioria das empresas resolve contratando uma consultoria ambiental técnica (em geral de engenheiros) por projeto/exigência, ou tentando resolver internamente — com um engenheiro próprio, o contador, ou um 'contato' no órgão. O processo costuma ser reativo: corre-se atrás quando chega a notificação.",
+    "alternatives": [
+      {"type": "direct", "description": "Outras consultorias ambientais da praça (FRTB, Moura, Aurora, Ocidental, Protege, Norte) — a maioria com foco técnico de engenharia."},
+      {"type": "indirect", "description": "Contratar engenheiro ambiental E advogado separadamente, com custo e ruído de coordenação; ou usar o contador para 'dar um jeito' burocrático."},
+      {"type": "diy", "description": "Tentar protocolar e responder às exigências sozinho junto ao IPAAM/SEMMAS — viável só para casos simples, com alto risco de erro de enquadramento na nova lei."},
+      {"type": "inaction", "description": "Adiar a regularização até receber uma exigência, multa ou embargo — a 'solução' mais comum e a mais cara."}
+    ],
+    "cost_of_inaction": "Embargo e paralisação da operação, multas, perda de contratos e licitações que exigem regularidade ambiental, e responsabilização (inclusive criminal) dos gestores. Para empresas com ativos relevantes, o custo de não regularizar supera em muito o da consultoria — é o argumento central de venda da Lucena."
+  },
+  "real_differentials": [
+    {
+      "differential": "Formação tripla do decisor numa só pessoa: advogado + engenheiro ambiental + mestre em direito ambiental, com 10+ anos de mercado",
+      "status": "confirmed",
+      "icp_relevance": "Responde diretamente à dor do ICP de 'preciso de quem entenda o direito E a engenharia' — elimina o ruído de coordenar engenheiro + advogado separados e dá segurança jurídica real, não só técnica. Nenhum concorrente nomeado tem essa combinação numa só pessoa."
+    },
+    {
+      "differential": "Track record e acesso ao grupo Rei dos Bons Amigos (26 CNPJs, R$ 300M+/ano)",
+      "status": "confirmed",
+      "icp_relevance": "Prova social poderosa para o ICP B2B de grande porte: atender um conglomerado desse porte é credencial que reduz o risco percebido de contratar uma empresa nova. Base para case e para ABM de expansão.",
+      "action_needed": "Documentar o case (com autorização) e transformá-lo em prova social na LP, GMB e propostas."
+    },
+    {
+      "differential": "Autoridade em licenciamento na nova Lei 15.190/2025 e na modalidade LAC",
+      "status": "potential",
+      "icp_relevance": "Tema novo, quente e gerador de insegurança em toda a base B2B — quem dominar o discurso primeiro vira a referência consultada. Gancho de aquisição inbound de alta intenção.",
+      "action_needed": "Produzir conteúdo (LinkedIn, blog, GMB) e um serviço de 'diagnóstico de enquadramento na nova lei' como isca de aquisição."
+    },
+    {
+      "differential": "Solução integrada licenciamento + compliance + SST com time multidisciplinar",
+      "status": "potential",
+      "icp_relevance": "Permite ser o fornecedor único de toda a conformidade ambiental e de segurança — aumenta ticket e LTV e responde ao desejo do gestor de não ter que coordenar vários fornecedores.",
+      "action_needed": "Empacotar e precificar a oferta integrada com a entrada dos novos sócios (engenharia de segurança, direito administrativo)."
+    },
+    {
+      "differential": "Ser a marca digital de referência do nicho ambiental no AM",
+      "status": "aspirational",
+      "icp_relevance": "O setor é digitalmente fraco; ser a marca mais visível e crível no digital captura o lead que pesquisa antes de pedir indicação — hoje 100% perdido.",
+      "action_needed": "Construir e manter consistentemente site/LP + SEO + GMB + LinkedIn (S3 em diante). É aspiracional até haver consistência de produção."
+    }
+  ],
+  "market_share": {
+    "current_revenue_brl": 252000,
+    "current_share_of_sam_pct": 0.21,
+    "target_share_of_sam_pct": 2.5,
+    "gap_to_som_brl": 2748000,
+    "gap_to_som_pct": 1090,
+    "commentary": "A Lucena captura hoje ~0,21% do SAM estimado (R$ 252k de ~R$ 120M). O SOM de mercado (~R$ 3M, 2,5% do SAM) representa um teto ~11x acima do faturamento atual — confirmando que NÃO há restrição de tamanho de mercado. O fator limitante é interno (capacidade de entrega e máquina de aquisição), não a demanda. Em um mercado fragmentado e digitalmente fraco, ganhar share via presença digital + ABM na âncora é factível; o desafio é escalar a operação sem depender só do Aldo.",
+    "client_annual_revenue_goal_brl": 600000,
+    "client_annual_revenue_goal_source": "Call de vendas SDR (2026-04-28) — meta declarada de R$ 50.000/mês em 6 meses (≈ R$ 600.000/ano). Adotada como meta operacional de trabalho, a confirmar no Kick-Off.",
+    "client_goal_vs_som_note": "Há DUAS metas em fontes distintas: (1) V4MOS = R$ 100.000 em 12 meses — provável erro de preenchimento, pois fica abaixo do run-rate atual de ~R$ 252k/ano; (2) Call SDR = R$ 50k/mês em 6 meses ≈ R$ 600k/ano. Ambas são metas operacionais (aspiração de curto prazo), distintas do SOM (~R$ 3M, teto de mercado de médio/longo prazo). A meta de R$ 600k equivale a ~0,5% do SAM e ~20% do SOM — agressiva no curto prazo (2,4x o atual em 6 meses) mas pequena diante do potencial de mercado. Resolver qual é a meta verdadeira no Kick-Off é pré-requisito para o forecast (S3).",
+    "enderecavel_value_brl": 45000000,
+    "enderecavel_composition": "Subset do SAM onde a oferta da Lucena é mais relevante: B2B com licenciamento complexo + recorrência (gestão ambiental, compliance, SST), estimado em ~R$ 45M [E] — o que sobra do SAM de R$ 120M depois de excluir a microdemanda pontual de baixo impacto (cada vez mais autosserviço via LAC) e os serviços puramente operacionais (coleta de resíduos, análises de laboratório) que não são o foco da Lucena.",
+    "enderecavel_note": "O SAM de R$ 120M tem perfis heterogêneos: de microempresas que precisam de uma única LAU de baixo impacto (cada vez mais resolvidas por autosserviço com a LAC) a grandes indústrias com licenciamento complexo e recorrente. A Lucena escolhe, por estratégia, NÃO perseguir o transacional de baixo valor — foca no licenciamento complexo, recorrência e advisory jurídico-técnico (~R$ 45M endereçáveis). Por isso o SOM (~R$ 3M) não é uma fatia do SAM inteiro: primeiro há a barreira de ESCOLHA (SAM → endereçável, ~R$ 45M, decisão de perfil) e só depois a barreira COMPETITIVA (endereçável → SOM, ~R$ 3M, dinâmica de mercado e capacidade)."
+  },
+  "honesty_alert": "Três ressalvas honestas. (1) O diferencial real mais forte (formação tripla) é PESSOAL do Aldo, não institucional — concentra valor e risco na pessoa dele (mesmo bus factor apontado na SWOT). A estratégia deve transformar parte dessa autoridade pessoal em ativo de marca (conteúdo, processo, equipe) para que a Lucena não seja 'só o Aldo'. (2) O sizing TAM/SAM/SOM é majoritariamente estimado [E]: não existe número público isolado para consultoria ambiental no Amazonas/Norte. Os valores foram triangulados a partir de proxies (mercado global, nº de consultorias locais, demanda do PIM) e devem ser lidos como ORDEM DE GRANDEZA, não precisão contábil. (3) Os scores digitais e preços dos concorrentes são direcionais — números de seguidores de Instagram e notas de reviews do GMB não foram verificáveis via web e devem ser conferidos manualmente antes de citados ao cliente como dado fechado."
+}

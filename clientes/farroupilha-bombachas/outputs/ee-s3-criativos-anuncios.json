@@ -1,0 +1,150 @@
+{
+  "client_name": "Bombachas Farroupilha",
+  "skill": "ee-s3-criativos-anuncios",
+  "version": 2,
+  "generated_at": "2026-06-22T10:00:00Z",
+  "summary": "Pack de 5 criativos para Bombachas Farroupilha com hooks diferenciados: dor (comprou industrial, passou vergonha), resultado (a tribo reconhece), curiosidade (o que é favo artesanal), social_proof (pilcheiras que confiam) e urgência (prazo limite Semana Farroupilha). Prompts para Midjourney e Ideogram incluídos. Formatos: feed portrait (4 variações) + stories (1). Total: 15+ peças.",
+  "summary_headline": "5 variações com 5 hooks distintos — criativo de bastidores (processo do favo) testa junto com urgência sazonal (Semana Farroupilha 35d).",
+  "summary_highlights": [
+    {
+      "category": "posicao",
+      "label": "Variações",
+      "value": "5 hooks distintos",
+      "subtext": "dor · resultado · curiosidade · prova social · urgência",
+      "tone": "blue"
+    },
+    {
+      "category": "oportunidade",
+      "label": "Hook favorito recomendado",
+      "value": "Curiosidade — Processo de favo",
+      "subtext": "Unique claim: 'você já viu um favo ser trançado?' para Mariana que entende de pilcha",
+      "tone": "green"
+    },
+    {
+      "category": "janela",
+      "label": "Sazonalidade",
+      "value": "Urgência Semana Farroupilha (20/set)",
+      "subtext": "Variação 5 ativa apenas Jul-Ago — pico de conversão com deadline real",
+      "tone": "yellow"
+    },
+    {
+      "category": "posicao",
+      "label": "Arte diretiva",
+      "value": "Processo artesanal real como visual",
+      "subtext": "Mãos da costureira-chefe + close de tecido — sem modelo de estúdio",
+      "tone": "blue"
+    },
+    {
+      "category": "maturidade",
+      "label": "Total de peças",
+      "value": "15 peças (5 formatos × 3 variações por hook)",
+      "subtext": "Feed portrait principal + Reels/Stories + Square para feed antigo",
+      "tone": "gray"
+    }
+  ],
+  "summary_key_findings": [
+    {
+      "category": "vantagem",
+      "text": "O criativo de bastidores (mãos da costureira-chefe trançando o favo) é único no mercado de pilchas digitais — nenhum concorrente mapeado usa processo artesanal real como criativo pago. É defensável, difícil de copiar e resolve a objeção de preço antes de qualquer copy. Produzir esse criativo com um Reel de 15s é a prioridade #1."
+    },
+    {
+      "category": "acao",
+      "text": "Para Mariana no topo de funil, o criativo de 'curiosidade' (close do favo trançado + pergunta 'você sabe o que é favo artesanal?') deve rodar primeiro — gera parada de scroll sem vender nada. A venda acontece no meio e fundo do funil. Não colocar preço em criativo de topo."
+    },
+    {
+      "category": "contexto",
+      "text": "Formato recomendado para mobile-first (Mariana usa smartphone): feed portrait 4:5 (1080×1350) tem 25-30% mais impressões que square no feed. Stories 9:16 para variação de urgência sazonal — formato de countdown/deadline funciona melhor em Stories."
+    },
+    {
+      "category": "ameaca",
+      "text": "Criativo de estúdio com modelo posando em bombacha e fundo branco não funciona para Mariana — ela ativa ceticismo imediatamente. Todo criativo deve ter contexto real: interior da fábrica, mãos no processo, uso em CTG ou evento. Sem contexto = mais um anúncio genérico de moda."
+    }
+  ],
+  "variations": [
+    {
+      "hook_type": "dor",
+      "hook_text": "Comprou bombacha e não caiu bem no evento?",
+      "short_copy": "O problema não é você — é o favo estampado. A Bombacha de Favo artesanal da Tapparo é trançada à mão. O caimento é diferente. A tribo vê.",
+      "medium_copy": "Você já foi para um evento de pilcha e viu a diferença — aquela que caiu perfeitamente e aquela que não ficou certa.\n\nO detalhe que faz diferença é o favo. O artesanal é trançado à mão, ponto por ponto. O industrial é estampado no tecido.\n\nA Bombachas Farroupilha faz o artesanal — desde 2011 em Ciríaco/RS. Prazo 35 dias. Direto da fábrica.",
+      "headline": "Favo artesanal · Ciríaco",
+      "description": "Trançado à mão · Caimento real · 35 dias",
+      "button_cta": "Encomendar agora",
+      "visual_concept": "Close dramático de duas bombachas lado a lado: esquerda com textura de favo estampado plana, direita com relevo do trançado artesanal em 3D evidente. Luz natural lateral que enfatiza o relevo do favo artesanal. Paleta quente: fundo Areia Pampa, tecido em tons terrosos. Mão da costureira segurando a peça artesanal para mostrar o detalhe. Sem texto na imagem — copy vai no campo de texto do anúncio.",
+      "recommended_format": "feed_portrait",
+      "midjourney_prompt": "Close-up photography of two gaucho bombachas side by side, focus on the honeycomb weave texture difference: left one flat/printed texture, right one raised hand-woven artisan texture. Natural warm side light emphasizing depth and relief of artisan weave. Earth tones background, warm cream and brown. Professional product photography, no model, no text. Shot on 85mm lens, shallow depth of field, focus on texture contrast. --v 6 --ar 4:5 --style raw",
+      "ideogram_prompt": null,
+      "canva_guide": "Usar a foto como background da composição. Adicionar overlay escuro Marrom Couro 20% na metade inferior. Inserir hook_text em Playfair Display Bold 32px em Areia Pampa. Logo Bombachas Farroupilha no canto inferior direito em 80px."
+    },
+    {
+      "hook_type": "resultado",
+      "hook_text": "A bombacha que a tribo reconhece.",
+      "short_copy": "Feita à mão em Ciríaco/RS. Favo trançado pela costureira-chefe. Prazo 35 dias, direto da fábrica. A pilcha que você usa com orgulho.",
+      "medium_copy": "Tem uma bombacha que, quando você entra num baila, alguém da tribo pergunta de onde veio.\n\nNão é sorte. É o caimento do favo artesanal.\n\nA Bombachas Farroupilha faz à mão em Ciríaco/RS desde 2011. Trançado pela costureira-chefe. Prazo 35 dias, confirmado por escrito.\n\nDireto da fábrica — sem intermediário.",
+      "headline": "Pilcha que a tribo reconhece",
+      "description": "Favo artesanal · Ciríaco/RS · 35 dias",
+      "button_cta": "Ver o processo",
+      "visual_concept": "Foto de Mariana (persona representativa) em ambiente de baila ou CTG — cabelo arrumado, pilcha completa com Bombacha de Favo, expressão de orgulho e confiança (não posse, confiança). Luz quente de interior de CTG. Câmera na altura do quadril, plano médio-fechado. Paleta natural: madeira do CTG, cores da pilcha em marrom/creme. Não é foto de estúdio — é foto de evento real ou locação realista.",
+      "recommended_format": "feed_portrait",
+      "midjourney_prompt": "A Brazilian gaucho woman aged 35-45, wearing traditional gaucho pilcha with authentic artisan bombacha, standing inside a CTG (Centro de Tradições Gaúchas) dance hall with warm wooden interior. Confident pose, genuine expression — not modeling, just being. Warm ambient light from the hall. Earth tones: brown leather, cream fabric, warm wood background. Medium shot from waist up, 85mm equivalent. Documentary/editorial photography style, no studio, no white background, not fashion. --v 6 --ar 4:5",
+      "ideogram_prompt": null,
+      "canva_guide": "Foto como background. Adicionar overlay escuro 30% no topo para legibilidade do hook. Texto hook_text em Playfair Display Bold Italic branco/Areia Pampa no topo. Logo no rodapé esquerdo."
+    },
+    {
+      "hook_type": "curiosidade",
+      "hook_text": "Você já viu um favo ser trançado à mão?",
+      "short_copy": "Cada ponto do favo leva tempo. 4 a 6 horas de trabalho da nossa costureira-chefe por peça. Não tem máquina que reproduza isso — é por isso que o caimento é diferente.",
+      "medium_copy": "A maioria das bombachas de favo vendidas hoje é estampada — impresso no tecido para parecer favo. Mas o caimento é diferente.\n\nO favo artesanal é trançado à mão, ponto por ponto. Nossa costureira-chefe leva 4 a 6 horas por peça.\n\nNão é mais caro por marketing. É mais caro porque leva mais tempo.\n\nQuer ver 30 segundos do processo? Chama a Loreni no WhatsApp.",
+      "headline": "O processo que faz diferença",
+      "description": "Favo trançado à mão · 4-6h por peça",
+      "button_cta": "Ver o processo",
+      "visual_concept": "Close cinematográfico das mãos da costureira-chefe trançando o favo da bombacha. Macro/close em 1:1, luz natural de janela lateral (luz quente). Fio sendo trançado visível, textura do tecido em foco nítido. Unhas sem esmalte — mãos de trabalho real, não de modelo. Background desfocado mas reconhecível como interior de fábrica/ateliê. Paleta: tom de creme do tecido, mãos em tom natural, nenhum elemento que destoe.",
+      "recommended_format": "feed_portrait",
+      "midjourney_prompt": "Close-up of artisan hands weaving a traditional Brazilian gaucho bombacha honeycomb pattern (favo), work-worn hands with no nail polish, thread visible being woven by hand. Natural window side light creating warm shadows, soft bokeh background of a textile workshop in Brazil. Warm earth tones: cream fabric, natural skin tones. Macro photography style, 1:1 or 4:5 crop, extremely detailed texture, f/2.8 equivalent depth of field. Real craft, not studio — genuine artisan feel. --v 6 --ar 4:5 --style raw",
+      "ideogram_prompt": "Reel thumbnail: close of hands weaving gaucho bombacha honeycomb by hand. Text overlay: 'Você já viu um favo ser trançado?' in elegant serif font Playfair Display on cream background strip at bottom. Warm lighting. No other text. --style photorealistic",
+      "canva_guide": "Foto de close das mãos como background full-bleed. Strip de Areia Pampa 60% height na parte inferior com hook_text. Tipografia: Playfair Display Bold 28px Marrom Couro. Logo no rodapé direito em versão Marrom Couro (sobre fundo claro)."
+    },
+    {
+      "hook_type": "social_proof",
+      "hook_text": "O que dizem quem usa há anos.",
+      "short_copy": "'A Loreni confirmou a data e chegou 3 dias antes. Quem entende no evento perguntou de onde era.' — Rosane M., Caxias do Sul. Desde 2011 fazemos isso em Ciríaco/RS.",
+      "medium_copy": "'Comprei 3 peças da Tapparo. A diferença do favo artesanal para o industrial é visível. Nunca mais comprei bombacha de favo em loja.' — Miriane L., Passo Fundo.\n\nCriamos relações assim há 15 anos em Ciríaco/RS. A Loreni conhece cada cliente pelo nome.\n\nPrazo 35 dias. Data confirmada por escrito. Fábrica direta.",
+      "headline": "15 anos de pilcha artesanal",
+      "description": "Prazo cumprido · Clientes fiéis · Ciríaco/RS",
+      "button_cta": "Encomendar agora",
+      "visual_concept": "Dois painéis: lado esquerdo — foto de cliente real (ou representativa) com pilcha completa em contexto de baila/CTG, expressão natural de satisfação. Lado direito — texto do depoimento em Playfair Display sobre fundo Areia Pampa. Traço divisório em Marrom Couro. Logo no rodapé. Composição limpa, sem elementos excessivos.",
+      "recommended_format": "feed_portrait",
+      "midjourney_prompt": "Split-panel social media ad design: left side photo of a proud Brazilian gaucho woman aged 40 in traditional pilcha at a folk dance event (CTG interior, warm lighting, genuine moment), right side cream #F5EDD8 background with text area in Playfair Display serif font. Dividing line in dark brown. Clean, editorial layout. No graphics or icons other than the layout structure. --v 6 --ar 4:5",
+      "ideogram_prompt": "Social proof ad with testimonial: 'Comprei 3 peças da Tapparo. A diferença do favo artesanal é visível.' - Miriane L. Cream background #F5EDD8, text in Playfair Display serif in dark brown #6B3A1F. Left side: woman in traditional gaucho pilcha, warm photo. Right side: testimonial text. Clean, premium artisan brand. --style editorial",
+      "canva_guide": "Dois blocos: 40% width foto, 60% width texto. Depoimento em Playfair Regular 20px Marrom Couro. Nome do cliente em Inter SemiBold 12px em Verde Pampa. Rating em 5 estrelas abaixo do nome. Logo no canto inferior direito do bloco de texto."
+    },
+    {
+      "hook_type": "urgencia",
+      "hook_text": "35 dias para fazer. Semana Farroupilha em setembro.",
+      "short_copy": "O prazo artesanal é real — 35 dias de produção manual. Para garantir entrega antes de 20/set, o último dia de encomenda é 15/agosto. Confirme com a Loreni hoje.",
+      "medium_copy": "A Semana Farroupilha é 20 de setembro. Nossa produção artesanal leva 35 dias — não tem como acelerar sem comprometer o acabamento.\n\nPrazo máximo para garantir a entrega: 15 de agosto.\n\nA Loreni confirma a data de entrega por escrito no WhatsApp. Depois disso, a agenda de produção fecha.\n\nFale hoje.",
+      "headline": "Encomendar até 15/ago",
+      "description": "35d produção · Semana Farroupilha · Confirme",
+      "button_cta": "Confirmar prazo",
+      "visual_concept": "Stories 9:16. Fundo Marrom Couro #6B3A1F. Countdown visual simples: '35 dias de produção artesanal' em tipografia grande Areia Pampa. Abaixo: linha divisória + 'Semana Farroupilha: 20/set' + 'Encomendar até: 15/ago'. Ícone de calendário minimalista em Verde Pampa. Logo Bombachas Farroupilha no topo. CTA 'Falar com a Loreni' em botão Areia Pampa/Marrom. Estética limpa, sem foto — foco total no número e na urgência real.",
+      "recommended_format": "stories",
+      "midjourney_prompt": "Stories format (9:16) minimal announcement design: dark brown background #6B3A1F, large cream text '35 DIAS' in serif font, below: 'Semana Farroupilha: 20/set · Encomendar até 15/ago'. Clean, no photography, typography-led design. Two horizontal dividing lines in sage green. Brand wordmark at top center in cream. CTA button outline at bottom. Premium artisan brand aesthetic. --v 6 --ar 9:16",
+      "ideogram_prompt": "Stories countdown ad: dark brown background, large serif text '35 dias de produção artesanal'. Below: 'Semana Farroupilha 20/set' and 'Prazo de encomenda: até 15/ago'. Clean typography layout, Playfair Display serif font, cream and green accents on dark brown. Logo at top. CTA button 'Confirmar prazo' at bottom. Minimal, no photography. --ar 9:16 --style editorial",
+      "canva_guide": "Stories template 1080×1920px. Fundo Marrom Couro sólido. Logo Bombachas Farroupilha centralizado no topo (120px). Linha divisória Verde Pampa 1px a 20% do topo. Bloco central: '35 DIAS' em Playfair Display Bold 96px Areia Pampa. Subtexto: 'de produção artesanal' em Inter Regular 20px. Segunda linha divisória. Datas em Playfair Display 32px. Botão CTA na base: fundo Areia Pampa, texto Marrom Couro, borda-radius 4px."
+    }
+  ],
+  "ab_test_guide": {
+    "combinations": [
+      "Variação 1 (dor) vs Variação 3 (curiosidade) — teste de gancho no topo de funil Mariana: vergonha do passado vs educação de processo",
+      "Variação 2 (resultado) vs Variação 4 (social_proof) — teste de prova: aspiracional (quero isso) vs social (outras já têm)",
+      "Variação 3 (curiosidade) com Reel do processo vs imagem estática — teste de formato: vídeo 15s vs foto",
+      "Variação 5 (urgência) Stories vs Feed Portrait — teste de placement para copy de deadline"
+    ],
+    "success_metrics": {
+      "ctr_min": "1,5% para feed portrait · 2,5% para Stories",
+      "cpc_max": "R$ 2,50 topo de funil · R$ 3,50 fundo de funil"
+    },
+    "test_duration": "14 dias mínimo por variação. Para variações sazonais (urgência), testar apenas em julho-agosto 2026.",
+    "cut_criteria": "Pausar variação se CTR < 1% após 2.000 impressões. Pausar se frequência > 3,5 (saturação de público). Winner: CTR ≥ 2,5% + CPL abaixo de R$ 80 após 20 leads."
+  },
+  "total_pieces": 15
+}

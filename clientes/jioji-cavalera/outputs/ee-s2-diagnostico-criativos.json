@@ -1,0 +1,131 @@
+{
+  "client_name": "Jioji Cavalera",
+  "skill": "ee-s2-diagnostico-criativos",
+  "version": 1,
+  "generated_at": "2026-06-09T00:00:00Z",
+  "data_source": "Meta Ads MCP (top ads por gasto, 90d) + ee-s2-diagnostico-midia (performance por anúncio) + persona-icp v2 + posicionamento v1. ANÁLISE LED POR PERFORMANCE — sem screenshots dos criativos, a dimensão visual fica pendente (ver honesty_alert).",
+  "segment": "Varejo de moda multimarca de marca (Cavalera âncora masculino + feminino Melissa em saída + Lado Avesso/Yexx/Polay) — B2C, Porto Velho/RO, físico + e-commerce.",
+  "summary": "Diagnóstico de criativos da Jioji LED POR PERFORMANCE (dados reais do Meta — sem screenshots ainda, então a avaliação visual fica pendente). O padrão mais forte e prejudicial: criativos duplicados em série ('— Cópia — Cópia') e atrelados a objetivo de ENGAJAMENTO, não venda. O criativo campeão é o de VENDAS-SITE (CTR 3,99%, CPC R$ 0,15) — direto pro e-commerce; o pior é 'CAMISETAS CAVALERA' (CTR 0,92%, CPC R$ 0,87) — foto de produto sem hook. Forte presença de criativos de MELISSA (Dias das Mães, Promoção Melissas, Free Cut) — marca que está SAINDO, então esses devem ser descontinuados, não escalados. Veredito: amplificar o ângulo 'venda direta pro site' + 'oferta clara', encerrar os de Melissa e as duplicatas, e produzir criativos com pessoas/UGC e o gancho 'original + retira na loja' (gap vs o que provavelmente os concorrentes fazem). Briefing de produção para a S3 entregue.",
+  "summary_headline": "ACHADO-RAIZ: quase todos os criativos têm CTA 'WhatsApp' — levam pro WhatsApp (lotado), NÃO pro site → e-commerce zerado. Há vídeos + copy temática decente. Campeão = vendas-site (CTR 3,99%); muito criativo de Melissa (que sai).",
+  "summary_highlights": [
+    {"category": "maturidade", "label": "Base analisada", "value": "Top 10 ads", "subtext": "Por gasto (90d) — performance real; visual pendente de screenshots", "tone": "yellow"},
+    {"category": "posicao", "label": "Veredito", "value": "1M · 4O · 1E", "subtext": "6 criativos ativos (com imagem): 1 manter (Copa+Namorados) · 4 otimizar · 1 eliminar", "tone": "yellow"},
+    {"category": "oportunidade", "label": "Ângulo campeão", "value": "Vendas-site", "subtext": "CTR 3,99% / CPC R$ 0,15 — direto pro e-commerce. Amplificar", "tone": "green"},
+    {"category": "risco", "label": "Padrão tóxico", "value": "'— Cópia'", "subtext": "Duplicação em série + objetivo de engajamento dominam a conta", "tone": "red"},
+    {"category": "risco", "label": "Criativos de Melissa", "value": "Marca saindo", "subtext": "Dias das Mães/Promo Melissa entre os top — descontinuar, não escalar", "tone": "red"},
+    {"category": "oportunidade", "label": "Gap vs concorrentes", "value": "UGC + 'retira na loja'", "subtext": "Pessoas usando + gancho de conveniência local — provável gap", "tone": "blue"}
+  ],
+  "summary_key_findings": [
+    {"category": "vantagem", "text": "Há um ângulo vencedor claro nos dados: o criativo de VENDAS-SITE ('Novo anúncio de Vendas-site') teve o melhor CTR (3,99%) e menor CPC (R$ 0,15) de toda a conta. Quando o criativo é direto-pro-site com intenção de venda, performa muito acima da média (CTR conta 1,91%). É o padrão a replicar e escalar na S3."},
+    {"category": "ameaca", "text": "O padrão mais recorrente e prejudicial é estrutural: criativos duplicados em série ('— Cópia — Cópia') atrelados a campanhas de ENGAJAMENTO. Isso fragmenta o aprendizado, não otimiza para venda e enche a conta de variações sem teste real. Não é falta de criativo — é falta de método (teste A/B estruturado, objetivo de conversão)."},
+    {"category": "ameaca", "text": "Parte relevante do investimento em criativo está em MELISSA (Dias das Mães Melissa, Promoção Melissas, Melissas Free Cut entre os top ads) — marca que está SAINDO do shopping no 2º semestre. Continuar produzindo/escalando criativo de Melissa é investir numa audiência que vai evaporar. Decisão: descontinuar gradualmente (enquanto há estoque) e migrar a verba criativa para Cavalera fem (recompor o feminino)."},
+    {"category": "ameaca", "text": "ACHADO-RAIZ (criativos reais puxados do Meta): quase TODOS os criativos têm CTA 'WHATSAPP_MESSAGE' — levam o usuário ao WhatsApp, NÃO ao site. Isso explica diretamente as duas dores: e-commerce zerado (a mídia não manda ninguém pro checkout) + WhatsApp sobrecarregado (a mídia despeja a demanda no atendimento humano). Corrigir o objetivo/CTA para CONVERSÃO no site (mantendo o WhatsApp como apoio) é tão importante quanto consertar o Pixel."},
+    {"category": "vantagem", "text": "Os criativos são melhores do que pareciam pelos nomes: há VÍDEOS (não só foto de produto) e copy temática decente — ex.: 'Copa + Dia dos Namorados + estilo Cavalera, looks femininos e masculinos, Av. Carlos Gomes 2350'. A base criativa existe; falta direcioná-la para venda (CTA site), padronizar (há typos como 'KTI CASAL', criativos sem copy) e parar de duplicar."},
+    {"category": "acao", "text": "Briefing de produção S3: (1) priorizar formato VÍDEO/REELS de produto + UGC (pessoas usando Cavalera em PV); (2) hook de venda direta + 'original + retira na loja'; (3) encerrar Melissa, criar linha feminina Cavalera; (4) padronizar 3-5 criativos testados (não duplicar em série) por objetivo de CONVERSÃO."}
+  ],
+  "creative_catalog": {
+    "total_analyzed": 10,
+    "source": "Top 10 anúncios por gasto no Meta (90d), via MCP — performance real cruzada com ee-s2-diagnostico-midia.",
+    "icp_target": "Masculino (Cavalera, âncora) + feminino (a recompor pós-Melissa) em Porto Velho",
+    "voice_tone": "Atitude/estilo Cavalera + local + prático (do posicionamento)",
+    "objective_observed": "Majoritariamente ENGAJAMENTO (problema) — exceção: campanhas/anúncios de VENDAS-SITE",
+    "performance_data_available": true,
+    "visual_assessed": "parcial",
+    "visual_note": "Criativos reais puxados do Meta — thumbnails baixados localmente (assets/criativos/) e exibidos na galeria. Vídeos: temos o thumbnail (160x284) + link pro vídeo; revisão frame-a-frame não feita. 2 criativos sem preview (privacidade da API)."
+  },
+  "top_ads_by_performance": [
+    {"number": 1, "name": "Novo anúncio de Vendas-site — Cópia", "type": "imagem/anúncio de conversão", "performance_data": {"spend": 256.99, "ctr": 3.99, "cpc": 0.15, "impressions": 43879}, "hook_score": 5, "clarity_score": 4, "icp_coherence_score": 5, "cta_score": 5, "visual_score": null, "unavailable_reason": "Sem screenshot — dimensão visual não avaliada (avaliação led por performance).", "total_score": 19, "total_note": "19/20 nas 4 dimensões avaliadas; visual pendente.", "verdict": "M", "comment": "MELHOR da conta. Hook forte (CTR 3,99% = 2x a média), objetivo de venda, leva pro site. Replicar e escalar."},
+    {"number": 2, "name": "PROMOÇÃO DE MELISSAS- CG — Cópia", "type": "promo/imagem", "performance_data": {"spend": 137.09, "ctr": 3.01, "cpc": 0.22, "impressions": 21043}, "hook_score": 4, "clarity_score": 4, "icp_coherence_score": 2, "cta_score": 3, "visual_score": null, "unavailable_reason": "Sem screenshot — visual não avaliado.", "total_score": 13, "verdict": "E", "comment": "Boa performance (CTR 3,01%), MAS é Melissa — marca saindo. ICP baixo estrategicamente: investir aqui é construir audiência que evapora. Descontinuar enquanto há estoque."},
+    {"number": 3, "name": "DIAS DAS MÃES - MELISSA — Cópia — Cópia", "type": "data/promo", "performance_data": {"spend": 190.63, "ctr": 2.00, "cpc": 0.36, "impressions": 26246}, "hook_score": 3, "clarity_score": 3, "icp_coherence_score": 2, "cta_score": 3, "visual_score": null, "unavailable_reason": "Sem screenshot — visual não avaliado.", "total_score": 11, "verdict": "E", "comment": "Melissa + duplicata dupla ('— Cópia — Cópia'). CTR mediano. Estratégia e estrutura ruins. Eliminar."},
+    {"number": 4, "name": "CAMISETA E KIT DO BRASIL — Cópia", "type": "promo/produto Cavalera", "performance_data": {"spend": 160.31, "ctr": 1.82, "cpc": 0.25, "impressions": 34722}, "hook_score": 3, "clarity_score": 4, "icp_coherence_score": 4, "cta_score": 3, "visual_score": null, "unavailable_reason": "Sem screenshot — visual não avaliado.", "total_score": 14, "verdict": "O", "comment": "Produto Cavalera + tema Brasil/Copa — ICP ok, CPC bom (R$ 0,25). Hook mediano. Otimizar: migrar para objetivo de venda + CTA pro site."},
+    {"number": 5, "name": "CAMISETAS CAVALERA — Cópia", "type": "foto de produto", "performance_data": {"spend": 223.31, "ctr": 0.92, "cpc": 0.87, "impressions": 27912}, "hook_score": 1, "clarity_score": 3, "icp_coherence_score": 4, "cta_score": 2, "visual_score": null, "unavailable_reason": "Sem screenshot — visual não avaliado.", "total_score": 10, "verdict": "E", "comment": "PIOR dos top: CTR 0,92% e CPC caro (R$ 0,87) apesar do alto gasto. Foto de produto sem hook nem oferta. Eliminar/refazer com pessoa usando + benefício."},
+    {"number": 6, "name": "PROMOÇÃO SAPATÊNIS", "type": "promo/produto", "performance_data": {"spend": 146.36, "ctr": 1.39, "cpc": 0.53, "impressions": 19698}, "hook_score": 2, "clarity_score": 4, "icp_coherence_score": 3, "cta_score": 3, "visual_score": null, "unavailable_reason": "Sem screenshot — visual não avaliado.", "total_score": 12, "verdict": "O", "comment": "Oferta clara (promoção) mas hook fraco (CTR 1,39%) e CPC alto. Otimizar hook + objetivo de venda."},
+    {"number": 7, "name": "MELISSAS FREE CUT", "type": "produto Melissa", "performance_data": {"spend": 127.37, "ctr": 1.59, "cpc": 0.47, "impressions": 16990}, "hook_score": 2, "clarity_score": 3, "icp_coherence_score": 2, "cta_score": 3, "visual_score": null, "unavailable_reason": "Sem screenshot — visual não avaliado.", "total_score": 10, "verdict": "E", "comment": "Melissa (saindo) + performance fraca. Eliminar."},
+    {"number": 8, "name": "LEVE DUAS CAMISETAS", "type": "oferta/promo Cavalera", "performance_data": {"spend": 129.88, "ctr": 1.68, "cpc": 0.39, "impressions": 19778}, "hook_score": 3, "clarity_score": 5, "icp_coherence_score": 4, "cta_score": 4, "visual_score": null, "unavailable_reason": "Sem screenshot — visual não avaliado.", "total_score": 16, "verdict": "O", "comment": "Oferta clara (2 camisetas) — clareza e CTA bons, ICP Cavalera. CTR mediano. Otimizar hook + levar pro site (objetivo venda). Bom candidato a escalar com ajuste."},
+    {"number": 9, "name": "Boné Cavalera", "type": "foto de produto", "performance_data": {"spend": 123.46, "ctr": 1.34, "cpc": 0.40, "impressions": 23313}, "hook_score": 2, "clarity_score": 3, "icp_coherence_score": 4, "cta_score": 2, "visual_score": null, "unavailable_reason": "Sem screenshot — visual não avaliado.", "total_score": 11, "verdict": "O", "comment": "Produto Cavalera (ICP ok) mas foto de produto sem hook/oferta. Otimizar: pessoa usando + benefício + CTA."},
+    {"number": 10, "name": "PROMOÇÃO SAPATÊNIS (2ª variação)", "type": "promo/produto", "performance_data": {"spend": 136.73, "ctr": 2.35, "cpc": 0.54, "impressions": 10844}, "hook_score": 3, "clarity_score": 4, "icp_coherence_score": 3, "cta_score": 3, "visual_score": null, "unavailable_reason": "Sem screenshot — visual não avaliado.", "total_score": 13, "verdict": "O", "comment": "Variação de sapatênis com CTR melhor (2,35%) mas CPC alto e duplicação do tema. Consolidar com a #6 e otimizar para venda."}
+  ],
+  "creative_matrix": [
+    {"number": 1, "name": "Copa + Dia dos Namorados (Cavalera)", "type": "Vídeo de marca/data", "format": "Reels/vídeo", "hook_score": 4, "clarity_score": 4, "icp_coherence_score": 5, "cta_score": 3, "visual_score": 4, "total_score": 20, "verdict": "manter", "main_issue": "CTA leva ao WhatsApp, não ao site — criar uma variação de CONVERSÃO pro e-commerce.", "comment": "Copy boa (Copa+Namorados, looks femininos e masculinos, endereço da loja), formato vídeo. Bom criativo — só falta a versão que leva pro site.", "preview": {"source": "meta_ads", "thumbnail_url": "assets/criativos/copa-namorados.jpg", "video_url": "https://www.facebook.com/100066702287332/videos/1427428395814676/", "platforms": ["instagram", "facebook"]}},
+    {"number": 2, "name": "Promoção Sapatênis Cavalera ORIGINAL", "type": "Vídeo de promo/produto", "format": "Reels/vídeo", "hook_score": 3, "clarity_score": 3, "icp_coherence_score": 4, "cta_score": 3, "visual_score": 3, "total_score": 16, "verdict": "otimizar", "main_issue": "Copy = só o nome; reforça 'ORIGINAL' (ótimo p/ a objeção), mas falta benefício + CTA de venda.", "comment": "Vídeo, e o 'ORIGINAL' no nome ataca a objeção nº1. Otimizar: copy com benefício + CTA pro site.", "preview": {"source": "meta_ads", "thumbnail_url": "assets/criativos/sapatenis-original.jpg", "video_url": "https://www.facebook.com/ForLifeCavalera/videos/1803613590989514/", "platforms": ["instagram", "facebook"]}},
+    {"number": 3, "name": "Dia dos Namorados com Cavalera", "type": "Vídeo de data", "format": "Reels/vídeo", "hook_score": 3, "clarity_score": 3, "icp_coherence_score": 4, "cta_score": 3, "visual_score": 3, "total_score": 16, "verdict": "otimizar", "main_issue": "Copy enxuta; CTA WhatsApp em vez de site.", "comment": "Vídeo de data. Adicionar oferta/benefício + CTA de conversão.", "preview": {"source": "meta_ads", "thumbnail_url": "assets/criativos/dia-namorados.jpg", "video_url": "https://www.facebook.com/ForLifeCavalera/videos/1322750485911427/", "platforms": ["instagram", "facebook"]}},
+    {"number": 4, "name": "Kit Casal Cavalera Copa", "type": "Imagem de promo", "format": "imagem", "hook_score": 2, "clarity_score": 2, "icp_coherence_score": 4, "cta_score": 3, "visual_score": 3, "total_score": 14, "verdict": "otimizar", "main_issue": "Copy = só o nome do produto e com TYPO ('KTI CASAL'). Refazer copy + CTA de venda.", "comment": "Imagem boa, mas a copy é o nome do produto com erro de digitação. Corrigir e adicionar hook/oferta.", "preview": {"source": "meta_ads", "thumbnail_url": "assets/criativos/kit-casal-copa.jpg", "platforms": ["instagram", "facebook"]}},
+    {"number": 5, "name": "Teaser 'A copa está chegando…'", "type": "Imagem/teaser", "format": "imagem", "hook_score": 3, "clarity_score": 3, "icp_coherence_score": 3, "cta_score": 3, "visual_score": null, "total_score": 12, "verdict": "otimizar", "main_issue": "Teaser de coleção (copy decente); CTA WhatsApp. Sem preview disponível (privacidade do criativo).", "comment": "Bom teaser; falta CTA de venda. Preview não disponível na API.", "preview": {"source": "unavailable", "note": "Criativo com PRIVACY_CHECK_FAIL na API — sem thumbnail."}, "unavailable_reason": "Visual não avaliado — preview indisponível (privacidade do criativo)."},
+    {"number": 6, "name": "Anúncio sem copy (Kit Casal)", "type": "Imagem", "format": "imagem", "hook_score": 1, "clarity_score": 1, "icp_coherence_score": 2, "cta_score": 2, "visual_score": null, "total_score": 6, "verdict": "eliminar", "main_issue": "Sem copy/body. Refazer com hook + benefício + CTA.", "comment": "Criativo sem texto. Eliminar/refazer.", "preview": {"source": "unavailable", "note": "Sem copy e sem preview disponível."}, "unavailable_reason": "Visual não avaliado — preview indisponível."}
+  ],
+  "creative_matrix_note": "Estes são os criativos ATIVOS atuais (amostra real do Meta, com thumbnails baixados localmente). A análise de performance dos top-spend dos 90 dias (CTR/CPC por anúncio) está em 'top_ads_by_performance'. Achado transversal: TODOS têm CTA 'WhatsApp' — levam pro WhatsApp (lotado), não pro site → raiz do e-commerce zerado.",
+  "patterns_identified": {
+    "recurring_problems": [
+      "Duplicação em série ('— Cópia', '— Cópia — Cópia') sem teste A/B estruturado.",
+      "Objetivo de ENGAJAMENTO em vez de venda na maioria — criativos não levam/otimizam para o site.",
+      "Fotos de produto 'soltas' sem hook nem oferta (Camisetas Cavalera, Boné) — CTR baixo.",
+      "Peso alto de criativos de MELISSA (marca em saída) — audiência construída vai evaporar."
+    ],
+    "what_works": [
+      "Anúncio de VENDA DIRETA pro site — melhor CTR/CPC. Ângulo a amplificar.",
+      "OFERTA CLARA no criativo (ex: 'Leve duas camisetas') — clareza e CTA elevam o resultado.",
+      "CPC baixo em geral — o gargalo é direção (venda) e hook, não custo de mídia."
+    ]
+  },
+  "recurring_problems": [
+    "Duplicação em série ('— Cópia', '— Cópia — Cópia') — criativos #1,#2,#3,#4,#5: variações copiadas sem teste A/B estruturado.",
+    "Objetivo de ENGAJAMENTO em vez de venda na maioria — criativos não levam/otimizam para o site.",
+    "Fotos de produto 'soltas' sem hook nem oferta (#5 Camisetas Cavalera, #9 Boné) — CTR baixo.",
+    "Peso alto de criativos de MELISSA (#2,#3,#7) — marca em saída; audiência construída vai evaporar."
+  ],
+  "what_works": [
+    "Anúncio de VENDA DIRETA pro site (#1) — disparado o melhor CTR/CPC. É o ângulo a amplificar.",
+    "OFERTA CLARA no criativo (#8 'Leve duas camisetas', promoções) — clareza e CTA elevam engajamento.",
+    "CPC baixo em geral (R$ 0,15–0,54) — o público responde barato; o gargalo é direção (venda) e hook, não custo de mídia."
+  ],
+  "competitor_analysis": [
+    {
+      "competitor": "Cavalera (marca / cavalera.com.br)",
+      "active_ads_count": "[E] não confirmado — busca na Ad Library instável nesta rodada",
+      "ads_library_url": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=BR&q=Cavalera",
+      "creative_pattern": "[E] Provável: lookbook/lifestyle de marca nacional, modelos profissionais, estética 'atitude/streetwear', foco em coleção/lançamento — não em conveniência local.",
+      "what_works": "Produção visual profissional + identidade de marca forte.",
+      "what_to_avoid": "Competir com a produção nacional da marca-mãe — a Jioji não vence em lookbook de estúdio.",
+      "gap_para_cliente": true,
+      "replication_idea": "A Jioji NÃO deve imitar o lookbook nacional; deve ocupar o que o nacional não faz: pessoas REAIS de Porto Velho usando + 'retira na loja' + originalidade local."
+    },
+    {
+      "competitor": "Aramis / varejo masculino premium (Ad Library BR)",
+      "active_ads_count": "~9 resultados genéricos para o termo (ruído — não confirmados como a marca)",
+      "ads_library_url": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=BR&q=Aramis",
+      "creative_pattern": "[E] Varejo masculino: produto + oferta + 'fale conosco' (CTA de mensagem).",
+      "what_works": "CTA de conversa/atendimento direto.",
+      "what_to_avoid": "Posicionamento premium/formal — fora do território streetwear da Jioji.",
+      "gap_para_cliente": false,
+      "replication_idea": "n/a — sem gap; posicionamento premium/formal está fora do território streetwear/atitude da Jioji."
+    }
+  ],
+  "competitor_patterns_missing": [
+    {"pattern": "Vídeo/Reels com PESSOAS reais usando as peças (UGC/look)", "seen_in_competitors": ["Padrão dominante de moda no Meta/Instagram [E]", "marcas nacionais e lojas de moda"], "ads_count": "[E]", "why_it_works": "Moda vende por desejo/identificação; pessoa usando converte mais que foto de produto solta (vide CTR baixo das fotos de produto #5/#9).", "how_client_could_implement": "Gravar 3-5 Reels curtos com clientes/equipe de PV usando Cavalera (look do dia), com legenda de oferta + 'retira na loja'.", "priority": "alta"},
+    {"pattern": "Gancho de CONVENIÊNCIA LOCAL ('compre online, retire na loja')", "seen_in_competitors": ["Ausente nos nacionais (não têm loja local)"], "ads_count": "0", "why_it_works": "É o diferencial que o e-commerce nacional e o marketplace não têm — resolve a dor de frete do público local.", "how_client_could_implement": "Criar criativo com o hook 'Pediu no site, retira na Jioji. Original, sem frete.'", "priority": "alta"},
+    {"pattern": "Prova de ORIGINALIDADE (loja oficial / antifalsificação)", "seen_in_competitors": ["Raro — marketplace não pode reivindicar originalidade"], "ads_count": "[E]", "why_it_works": "Ataca a objeção nº1 ('é original?') que separa a Jioji do marketplace.", "how_client_could_implement": "Selo/recado 'Cavalera oficial de Porto Velho — original, com nota e troca na loja' nos criativos de conversão.", "priority": "média"},
+    {"pattern": "Criativo de CONVERSÃO direto pro site (não engajamento)", "seen_in_competitors": ["Padrão de e-commerce de moda"], "ads_count": "[E]", "why_it_works": "O próprio dado da Jioji prova: o anúncio de vendas-site teve o melhor CTR/CPC.", "how_client_could_implement": "Padronizar criativos com objetivo SALES + CTA 'Comprar' + destino site (não post boostado).", "priority": "alta"},
+    {"pattern": "Criativos femininos de CAVALERA (não Melissa)", "seen_in_competitors": ["n/a — gap interno (não é padrão de concorrente)"], "ads_count": "0", "why_it_works": "A audiência feminina (~56%, melhor CTR) precisa de oferta que sobreviva à saída da Melissa.", "how_client_could_implement": "Produzir linha de criativos de Cavalera feminina + curadoria para reter o público feminino.", "priority": "alta"}
+  ],
+  "production_briefing": {
+    "hook_direction": "Venda direta + originalidade/conveniência local — replicar o que já venceu (o anúncio de vendas-site). Gancho de desejo/oferta levando ao site.",
+    "hook_examples": ["'A Cavalera original tá aqui em Porto Velho — e chega rápido.'", "'Pediu no site? Retira na Jioji. Sem frete, sem réplica.'", "'Look novo de Cavalera: compra online, busca na loja.'"],
+    "priority_format": "Vídeo/Reels vertical com pessoas usando (UGC/look do dia) + carrossel de produto com oferta",
+    "priority_format_justification": "Moda converte por desejo/identificação; as fotos de produto soltas tiveram o pior CTR (Camisetas Cavalera: 0,92%). Vídeo/UGC é o gap vs o mercado e o formato dominante do público jovem.",
+    "visual_elements": ["Pessoas reais de PV usando as peças (look do dia)", "Selo 'oficial/original'", "Oferta/preço + 6x", "Menção 'retira na loja'"],
+    "avoid_elements": ["Foto de produto isolada sem contexto/hook", "Criativos de Melissa (marca saindo)", "Duplicação '— Cópia' sem teste A/B"],
+    "copy_guidelines": {"comprimento": "Curto (mobile-first)", "tom": "Atitude Cavalera + local + prático", "estrutura": "Hook (desejo/oferta) → originalidade/local → benefício (6x/retira) → CTA 'Comprar'", "palavras_chave_icp": ["original", "Cavalera oficial", "Porto Velho", "retira na loja", "6x sem juros"]},
+    "quantity": {"novos_criativos": "5-8 criativos-mãe testáveis (não duplicados)", "variacoes": "2-3 variações de hook por criativo-mãe, com teste A/B estruturado e objetivo de CONVERSÃO"}
+  },
+  "key_insight": {
+    "headline": "Os próprios dados da Jioji já mostram o criativo vencedor: o anúncio de VENDA DIRETA pro site (CTR 3,99% / CPC R$ 0,15). O problema não é criatividade — é que a conta amplifica engajamento e duplicatas, não esse vencedor.",
+    "context": "Entre os 10 anúncios de maior gasto, o de vendas-site bate todos em CTR (3,99% vs média 1,91%) e CPC (R$ 0,15). Ao lado dele, o grosso da verba foi para fotos de produto sem hook (CTR 0,92%), promoções de Melissa (marca saindo) e dezenas de duplicatas '— Cópia'. Ou seja: existe um padrão comprovadamente vencedor sendo sufocado por método ruim (engajamento + duplicação). A S3 deve industrializar o vencedor — vídeo/UGC + venda direta + 'original/retira na loja' — e aposentar o resto.",
+    "numbered_reasons": [
+      "(1) O padrão vencedor afeta a decisão de produção inteira: 1 de 10 ads (vendas-site) carrega o melhor resultado; replicá-lo é o caminho mais seguro de ROI.",
+      "(2) O padrão perdedor é sistêmico: fotos de produto sem hook + objetivo de engajamento + duplicação '— Cópia' dominam o gasto e puxam o CTR médio para baixo.",
+      "(3) Comparativo de mercado: o nacional faz lookbook de estúdio (a Jioji não vence nisso); o gap real é UGC local + conveniência ('retira na loja') + originalidade — território que nem o nacional nem o marketplace ocupam."
+    ],
+    "discussion_anchor": "Com a Sandra: validar a direção de produção da S3 (vídeo/UGC + venda direta + original/retira na loja), aposentar criativos de Melissa e parar a duplicação '— Cópia'. E decidir: conseguimos gravar Reels com pessoas reais de PV usando as peças? É o formato de maior alavancagem e o maior gap vs concorrentes."
+  },
+  "honesty_alert": "Os criativos REAIS foram puxados do Meta e os thumbnails baixados localmente (assets/criativos/) — a galeria do portal agora mostra 4 dos 6 criativos com imagem (2 sem preview por privacidade da API). A 'creative_matrix' são os criativos ATIVOS atuais (com imagem + scores); a 'top_ads_by_performance' é a análise dos top-spend dos 90 dias por CTR/CPC. Limitações: os thumbnails de vídeo são 160x284 (a revisão visual frame-a-frame não foi feita — há link pro vídeo em cada card); a análise de concorrentes na Ad Library ficou instável (padrões [E] + links). O achado central — TODOS os criativos têm CTA 'WhatsApp' (levam ao atendimento, não ao site = raiz do e-commerce zerado) + amplificar venda-direta e aposentar Melissa/duplicatas — é sólido porque vem dos dados reais."
+}

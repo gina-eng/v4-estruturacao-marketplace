@@ -1,0 +1,432 @@
+{
+  "client_name": "Lucena Advisory",
+  "skill": "ee-s1-persona-icp",
+  "version": 1,
+  "generated_at": "2026-06-19T00:00:00Z",
+  "data_source": "mixed",
+  "summary": "O ICP da Lucena Advisory é B2B industrial/comercial sob risco regulatório no Amazonas (postos de combustíveis, estaleiros e embarcações, indústria do Polo Industrial, construção, mineração) — não é consumidor final e não está nas redes sociais. A compra é decidida em comitê (responsável ambiental/operacional inicia e qualifica; diretor executivo aprova orçamento), movida por RISCO (evitar embargo, multa, paralisação) e não por preço. A persona-síntese é Ricardo Tavares, gestor operacional que recebeu uma exigência do IPAAM e só quer 'poder tocar a operação em paz' com um responsável que domine direito E engenharia ambiental.",
+  "summary_headline": "ICP B2B industrial sob risco regulatório (postos, estaleiros, indústria do PIM): compra em comitê, por medo de embargo, não por preço. Persona: Ricardo, o gestor que só quer 'tocar a operação em paz'.",
+  "summary_highlights": [
+    {
+      "category": "posicao",
+      "label": "Perfil de compra",
+      "value": "B2B / Comitê",
+      "subtext": "Decisão técnica + orçamentária, racional e movida por risco",
+      "tone": "blue"
+    },
+    {
+      "category": "oportunidade",
+      "label": "Gatilho de busca",
+      "value": "Exigência regulatória",
+      "subtext": "Lei 15.190/2025 e fiscalização IPAAM disparam a procura",
+      "tone": "green"
+    },
+    {
+      "category": "risco",
+      "label": "Motivo nº 1 de perda",
+      "value": "'O lead sumiu'",
+      "subtext": "Vaza entre proposta e fechamento — não é objeção de preço",
+      "tone": "red"
+    },
+    {
+      "category": "janela",
+      "label": "Ciclo de decisão",
+      "value": "~15 dias",
+      "subtext": "Curto quando há urgência regulatória concreta",
+      "tone": "yellow"
+    },
+    {
+      "category": "competicao",
+      "label": "Onde encontrá-lo",
+      "value": "Google + indicação",
+      "subtext": "NÃO está no Instagram; vive em LinkedIn e busca local",
+      "tone": "blue"
+    }
+  ],
+  "summary_key_findings": [
+    {
+      "category": "contexto",
+      "text": "O ICP da Lucena é categoricamente B2B com comitê de compra — três papéis: o responsável ambiental/operacional que sente a dor e inicia a busca (sementinha), o gestor/diretor operacional que valida (multiplicador) e o diretor executivo/sócio que libera o orçamento (decisor). Reduzir isso a uma persona B2C de redes sociais seria o erro estratégico fatal: o próprio Aldo declarou que o alvo são 'empresas que não estão em redes sociais'."
+    },
+    {
+      "category": "vantagem",
+      "text": "A demanda é regulatória e quase inelástica: a empresa não escolhe se vai licenciar, a lei obriga. Isso significa willingness-to-pay alta quando o custo de NÃO fazer (embargo, multa, operação parada) fica claro. A persona é pragmática e técnica — reage a 'sua operação pode parar', não a 'qualidade e compromisso'. O diferencial não-copiável do Aldo (advogado + engenheiro ambiental + mestre numa só pessoa) responde exatamente à dor de 'preciso de quem entenda o direito E a engenharia'."
+    },
+    {
+      "category": "ameaca",
+      "text": "Há dois pontos de vazamento. (1) Quando o lead NÃO vem por indicação direta, a Lucena é invisível — não aparece no Google nem tem prova social, então o lead morno escolhe um concorrente achável. (2) Já dentro do funil, o motivo nº 1 de perda ('o lead sumiu') acontece entre proposta e fechamento, por falta de cadência — exatamente onde uma persona pragmática, ocupada e sem urgência percebida, esquece e não retorna."
+    },
+    {
+      "category": "acao",
+      "text": "Toda a comunicação, canais e criativos devem ser B2B: LinkedIn de autoridade, busca local (GMB + SEO 'licenciamento ambiental Manaus'), associações setoriais (CIEAM, FIEAM, Sindicombustíveis) — e NUNCA tratar o cliente como B2C de Instagram. A mensagem-chave precisa ancorar em segurança jurídica e continuidade operacional, e o follow-up precisa ser sistematizado para não perder a persona que 'vai pensar e te retorna'."
+    }
+  ],
+  "icp": {
+    "demographics": {
+      "type": "B2B",
+      "age_range": "Empresas de médio a grande porte — faturamento estimado de ~R$ 5M a R$ 300M+/ano [E]",
+      "income_or_revenue": "Faturamento anual a partir de ~R$ 5M; característica-chave é o alto custo de paralisação (cada dia de operação embargada custa muito mais que a consultoria).",
+      "location": "Manaus e Região Metropolitana, interior do Amazonas e região Norte — com concentração no Polo Industrial de Manaus, no eixo de postos/combustíveis e na logística/transporte fluvial.",
+      "company_size": "De ~20 a 500+ funcionários; o traço definidor não é o nº de pessoas, mas possuir ativos físicos licenciáveis (planta industrial, posto, estaleiro, embarcação, empreendimento) sujeitos a fiscalização.",
+      "decision_maker_role": "Comitê de compra de 3 papéis: (1) iniciador/sementinha = responsável ambiental, engenheiro ou gestor operacional que recebe a exigência; (2) multiplicador = diretor/gerente operacional que valida a necessidade; (3) decisor = diretor executivo ou sócio-proprietário que aprova o orçamento.",
+      "education": "Decisores com formação superior (engenharia, administração, direito); responsáveis técnicos com formação ambiental, de segurança ou administrativa.",
+      "other": {
+        "setores_alvo": "Postos de combustíveis, estaleiros e produção de embarcações, indústria do Polo Industrial de Manaus, construção civil, mineração (areia/argila/saibro/ouro), agronegócio/piscicultura, logística fluvial.",
+        "gatilho_regulatorio": "Sujeitos a licenciamento do IPAAM (estadual), SEMMAS/Manaus (municipal — 64 de 131 atividades, incl. postos) e IBAMA (federal).",
+        "ancora_referencia": "Arquétipo já comprovado na carteira: grupo Rei dos Bons Amigos (26 CNPJs, R$ 300M+/ano em postos, estaleiros e embarcações)."
+      }
+    },
+    "behavior": {
+      "decision_process": "Racional, técnico e decidido em comitê. O responsável ambiental/operacional identifica a necessidade e faz a qualificação técnica do fornecedor; o diretor executivo aprova o orçamento. A decisão é movida por mitigação de risco (evitar embargo/multa/paralisação) mais do que por preço — por isso o ciclo é curto (~15 dias) quando há uma exigência ou prazo regulatório concreto na mesa.",
+      "research_channels": [
+        "Busca no Google ('licenciamento ambiental Manaus', 'exigência IPAAM como responder')",
+        "Indicação de pares do setor — outros gestores, contadores, advogados, fornecedores",
+        "LinkedIn (perfis de especialistas, consultorias e responsáveis técnicos)",
+        "Associações e sindicatos setoriais (CIEAM, FIEAM, Sindicombustíveis-AM)",
+        "Contato direto por WhatsApp/telefone logo após receber a indicação"
+      ],
+      "main_objections": [
+        "'Quanto custa pra tirar a licença?' (trata como commodity)",
+        "'Eu mesmo resolvo com o IPAAM / tenho contato lá'",
+        "'Já tenho um engenheiro/contador que cuida disso'",
+        "'Vocês são novos, como sei que entregam?'",
+        "'Vou pensar e te retorno' (o sumiço)"
+      ],
+      "switching_triggers": "Exigência mal respondida que resultou em multa/embargo; demora ou silêncio na tramitação; falta de comunicação sobre o status do processo; ou consultor que domina só a engenharia OU só o direito e deixa lacunas que viram retrabalho.",
+      "purchase_frequency": "Mix de projeto pontual sob demanda regulatória (licença nova, estudo, resposta a exigência) e recorrência mensal (gestão ambiental contínua, compliance, SST, atendimento a exigências). Ciclo médio do primeiro contato ao fechamento: ~15 dias (declarado V4MOS)."
+    },
+    "jobs": {
+      "functional": "Quando minha empresa recebe uma exigência do órgão ambiental ou precisa licenciar uma nova operação, eu quero entregar toda a parte ambiental e jurídica a um responsável de confiança, para que minha operação continue funcionando sem risco de multa, embargo ou paralisação.",
+      "emotional": "Quero sentir segurança e tranquilidade de estar 100% em conformidade — parar de perder o sono com a possibilidade de uma fiscalização aparecer e parar tudo.",
+      "social": "Quero ser visto pela diretoria e pelos sócios como o gestor competente que mantém a empresa protegida e regularizada — não como o responsável que deixou a operação exposta a um problema legal."
+    },
+    "pains": [
+      {
+        "pain": "Risco de embargo, multa ou paralisação da operação por pendência ambiental — um auto de infração do IPAAM/IBAMA pode parar a empresa e custar muito mais do que qualquer consultoria.",
+        "intensity": "critical",
+        "current_workaround": "Resolve de forma reativa, correndo atrás só quando a notificação chega — geralmente já em cima do prazo."
+      },
+      {
+        "pain": "Ficar no escuro sobre o andamento — manda o documento pro órgão e não sabe em que pé está, sem previsibilidade de prazo nem de próximos passos.",
+        "intensity": "high",
+        "current_workaround": "Liga e cobra o contato no órgão ou o consultor de tempos em tempos, sem retorno padronizado."
+      },
+      {
+        "pain": "Insegurança com a nova legislação (Lei 15.190/2025) — não sabe em qual modalidade (LAC, LO, LAU) a empresa se enquadra agora e teme fazer o pedido errado.",
+        "intensity": "high",
+        "current_workaround": "Adia a decisão ou pergunta informalmente a conhecidos, sem base jurídica segura."
+      },
+      {
+        "pain": "Depender de um profissional que entende só da engenharia ou só do direito, mas não dos dois — exigências mal respondidas viram retrabalho e atraso.",
+        "intensity": "medium",
+        "current_workaround": "Contrata engenheiro e advogado separados, com custo e ruído de coordenação entre eles."
+      },
+      {
+        "pain": "Falta de tempo e de equipe interna para acompanhar a burocracia ambiental enquanto toca a operação do dia a dia.",
+        "intensity": "medium",
+        "current_workaround": "Deixa a pendência acumular até virar urgência inadiável."
+      }
+    ],
+    "gains": [
+      {
+        "gain": "Operação 100% regularizada e licenças em dia, com zero risco de paralisação por questão ambiental.",
+        "type": "tangible"
+      },
+      {
+        "gain": "Tramitação ágil e previsível, com prazo e próximo passo claros em cada etapa do processo.",
+        "type": "tangible"
+      },
+      {
+        "gain": "Enquadramento correto na nova legislação, aproveitando modalidades simplificadas (como a LAC) sempre que couber.",
+        "type": "tangible"
+      },
+      {
+        "gain": "Tranquilidade de ter um único responsável técnico-jurídico cuidando de tudo, de ponta a ponta.",
+        "type": "intangible"
+      },
+      {
+        "gain": "Confiança da diretoria de que a parte ambiental está sob controle e não vai virar crise.",
+        "type": "intangible"
+      }
+    ]
+  },
+  "persona": {
+    "name": "Ricardo Tavares",
+    "photo_description": "Homem de ~45 anos, gestor operacional, expressão séria e confiante, vestindo camisa polo ou social de manga dobrada (não terno). Em ambiente industrial/administrativo — galpão, posto de combustível ou escritório operacional ao fundo — segurando documentos ou um tablet. Aparência prática de quem está no 'chão' da operação, não de executivo de corporação.",
+    "story": "Ricardo é gerente de operações de uma rede regional com postos de combustíveis e participação em logística fluvial em Manaus. Acabou de receber uma exigência do IPAAM sobre o licenciamento de uma das unidades e sabe que, se não responder corretamente no prazo, a unidade pode ser embargada — parando o faturamento e respingando direto na diretoria. Ele entende de operação, não de legislação ambiental, e o engenheiro que costumava resolver mudou de cidade. Pra piorar, com a nova Lei 15.190/2025 ele nem tem certeza de qual licença a empresa precisa agora. Ricardo busca alguém que domine a engenharia E o direito ambiental, resolva a pendência sem enrolação e o mantenha informado do andamento — para ele poder voltar a tocar a operação em paz, sem medo de aparecer fiscal e parar tudo.",
+    "quote": "Eu não entendo de lei ambiental, eu entendo de operação. Só preciso de alguém de confiança que resolva isso direito e me diga 'pode tocar, está tudo certo' — sem eu ter que ficar com medo de aparecer um fiscal e parar tudo."
+  },
+  "where_to_find": {
+    "digital_channels": [
+      "LinkedIn — perfis e publicações de gestores operacionais, engenheiros e responsáveis ambientais de empresas do AM",
+      "Busca no Google e Google Maps/GMB para 'licenciamento ambiental Manaus' e termos de exigência regulatória",
+      "Sites e canais de associações industriais e comerciais do Amazonas (CIEAM, FIEAM, ACA)",
+      "Grupos de WhatsApp setoriais (gestores de postos, síndicos de condomínios industriais, associações de classe)",
+      "E-mail corporativo (canal de prospecção ABM direta para o comitê de compra)"
+    ],
+    "keywords": [
+      "licenciamento ambiental Manaus",
+      "consultoria ambiental Amazonas",
+      "como responder exigência IPAAM",
+      "licença de operação posto de combustível Manaus",
+      "LAC licenciamento por adesão e compromisso",
+      "Lei 15.190/2025 enquadramento licenciamento",
+      "embargo ambiental o que fazer",
+      "PGRS Manaus",
+      "licenciamento Polo Industrial de Manaus"
+    ],
+    "influencers": [
+      "Comunicados e agenda do IPAAM e da SEMMAS/Manaus (fontes oficiais que a persona acompanha)",
+      "CIEAM e FIEAM (entidades de referência da indústria local)",
+      "Escritórios e advogados de direito ambiental com presença no LinkedIn local",
+      "Especialistas em licenciamento e ESG que publicam sobre a nova Lei Geral do Licenciamento (15.190/2025)",
+      "O próprio Aldo Lucena, posicionado como autoridade técnica-jurídica do nicho no AM (a construir)"
+    ],
+    "communities": [
+      "CIEAM — Centro da Indústria do Estado do Amazonas",
+      "FIEAM — Federação das Indústrias do Estado do Amazonas",
+      "Sindicombustíveis-AM (sindicato dos postos de combustíveis)",
+      "Associação Comercial do Amazonas (ACA)",
+      "Eventos e feiras industriais/logísticas de Manaus e ecossistema Suframa/Zona Franca"
+    ]
+  },
+  "anti_persona": {
+    "description": "Perfis que consomem recurso, geram atrito e não sustentam o posicionamento de segurança jurídica da Lucena — onde o time deve dizer 'não' ou redirecionar.",
+    "profiles": [
+      {
+        "profile_name": "Caçador de protocolo barato",
+        "description": "Empresa ou pessoa que enxerga licenciamento como commodity de papel: quer 'só o documento' pelo menor preço possível, sem valorizar a segurança jurídica nem o risco de uma exigência mal respondida.",
+        "why_not": "Margem baixa, alta sensibilidade a preço, e tende a culpar a consultoria se o processo emperrar por dados que ele mesmo sonegou. Atrai a Lucena para uma guerra de preço onde os concorrentes ME já operam mais barato.",
+        "signals": [
+          "Pergunta o preço antes mesmo de explicar a atividade/empreendimento",
+          "Compara abertamente com 'o cara que faz por metade'",
+          "Resiste a fazer o diagnóstico antes da proposta",
+          "Quer só protocolar, não quer assessoria de acompanhamento"
+        ],
+        "operational_rule": "Se pedir preço antes do diagnóstico, conduzir para a etapa de diagnóstico e ancorar no custo do risco; se insistir só em preço, encaminhar para escopo mínimo padrão sem customização."
+      },
+      {
+        "profile_name": "Atalho fora da lei",
+        "description": "Cliente que quer 'dar um jeito' de contornar a exigência, burlar o órgão ou maquiar a situação para operar sem regularizar de fato.",
+        "why_not": "Risco reputacional e jurídico direto para a Lucena, cujo diferencial é justamente segurança jurídica e a credencial do Aldo. Um caso assim contamina a marca e o registro profissional do sócio.",
+        "signals": [
+          "Pergunta se 'tem como agilizar por fora' ou 'dar um jeitinho'",
+          "Quer operar sem licença e só 'se proteger no papel'",
+          "Minimiza a gravidade de autos de infração existentes",
+          "Pressiona por garantia de resultado que depende do órgão"
+        ],
+        "operational_rule": "Recusar educadamente. Reposicionar para o caminho legal correto; se o cliente insistir no atalho, declinar o projeto — não há ticket que pague o risco à reputação."
+      },
+      {
+        "profile_name": "Microdemanda pontual de baixo valor",
+        "description": "Micro empreendedor com uma única necessidade pontual, simples e de baixíssimo ticket (ex: uma LAU de atividade de mínimo impacto), sem nenhuma perspectiva de recorrência nem de comitê.",
+        "why_not": "Custo de atendimento desproporcional ao ticket, sem LTV. Ocupa a agenda do Aldo (recurso mais escasso) que renderia muito mais em uma conta B2B recorrente ou na expansão da âncora.",
+        "signals": [
+          "Atividade de mínimo/baixo impacto com licença única",
+          "Não tem ativos relevantes nem operação contínua a proteger",
+          "Sem horizonte de recorrência (compliance, SST, novas unidades)"
+        ],
+        "operational_rule": "Atender com pacote padronizado e autoatendível (futuro), ou encaminhar — nunca alocar tempo consultivo do sócio em demanda transacional de baixo valor."
+      }
+    ],
+    "operational_rule": "Regra-mãe: a Lucena vende segurança jurídica e continuidade operacional para quem tem operação real a proteger — não vende papel barato, não vende atalho ilegal e não troca tempo de sócio por ticket de microdemanda. Quando o lead não se encaixa, redirecionar com elegância e proteger a agenda do Aldo para o B2B recorrente e a expansão da âncora."
+  },
+  "buyer_journey": {
+    "description": "Jornada do comitê de compra B2B da Lucena, do gatilho regulatório à recorrência. O lead qualificado quase sempre nasce de uma pressão externa concreta (exigência, fiscalização, novo projeto), não de uma 'vontade de comprar marketing'.",
+    "stages": [
+      {
+        "stage": "Gatilho",
+        "trigger": "Chega uma exigência/notificação do IPAAM, SEMMAS ou IBAMA, uma fiscalização, um embargo, ou surge um novo projeto/expansão que exige licença.",
+        "mental_state": "Urgência e ansiedade — 'isso pode parar minha operação'.",
+        "primary_channel": "Documento oficial do órgão / aviso interno da diretoria.",
+        "dominant_question": "Qual o tamanho do problema e quanto tempo eu tenho?",
+        "client_intervention": "Estar achável no exato momento da busca (GMB + site + autoridade no LinkedIn) e ter conteúdo que explique a exigência e o prazo.",
+        "friction_today": "A Lucena é invisível no digital — se o gestor não tiver uma indicação direta na ponta da língua, nem cogita a Lucena.",
+        "duration_estimate": "Imediato (horas a 1-2 dias)"
+      },
+      {
+        "stage": "Pesquisa",
+        "trigger": "O responsável decide buscar quem resolve.",
+        "mental_state": "Avaliando risco e competência; quer alguém que 'entenda disso de verdade'.",
+        "primary_channel": "Google, indicação de pares do setor, LinkedIn.",
+        "dominant_question": "Quem entende disso e resolve sem me dar mais dor de cabeça?",
+        "client_intervention": "Conteúdo de autoridade do Aldo + prova social (case da âncora) + facilidade de contato (WhatsApp/formulário de qualificação).",
+        "friction_today": "Sem presença digital, a Lucena depende 100% de indicação; o lead morno que pesquisa no Google encontra FRTB/Moura/Aurora, não a Lucena.",
+        "duration_estimate": "1 a 7 dias"
+      },
+      {
+        "stage": "Consideração",
+        "trigger": "Selecionou 2-3 fornecedores potenciais para comparar.",
+        "mental_state": "Cético e cauteloso; quer prova de competência técnica E jurídica.",
+        "primary_channel": "Reunião/WhatsApp, site, materiais enviados.",
+        "dominant_question": "Esse fornecedor tem competência jurídica E técnica pra me proteger de verdade?",
+        "client_intervention": "Diagnóstico inicial gratuito que demonstra domínio; destacar a formação tripla do Aldo e o case Rei dos Bons Amigos; clareza de escopo, prazo e risco.",
+        "friction_today": "Sem material de prova social estruturado (cases, depoimentos, números de licenças aprovadas) — a credibilidade depende só da conversa com o Aldo.",
+        "duration_estimate": "2 a 7 dias"
+      },
+      {
+        "stage": "Decisão",
+        "trigger": "Comitê alinhado; diretor executivo precisa aprovar o orçamento.",
+        "mental_state": "Quer segurança de prazo, escopo e do que acontece se NÃO fizer.",
+        "primary_channel": "Proposta + WhatsApp; eventual reunião com o decisor.",
+        "dominant_question": "Qual o prazo, o que está incluso e qual o risco real se eu não fechar agora?",
+        "client_intervention": "Proposta clara ancorada no custo do risco (embargo/multa) vs investimento; facilitar o aval do decisor com material objetivo.",
+        "friction_today": "Etapa relativamente forte — a Lucena já converte ~50% das propostas. O problema não é fechar, é não deixar o lead esfriar antes daqui.",
+        "duration_estimate": "2 a 5 dias"
+      },
+      {
+        "stage": "Execução / Pós-venda",
+        "trigger": "Contrato assinado; processo entra em tramitação nos órgãos.",
+        "mental_state": "Ansioso por status; quer sentir que está sob controle.",
+        "primary_channel": "WhatsApp (comunicação direta com a Lucena).",
+        "dominant_question": "Em que pé está o meu processo e o que eu preciso fazer agora?",
+        "client_intervention": "Atualizações proativas de status, checklist de pendências, gestão das exigências do órgão com prazos visíveis.",
+        "friction_today": "Sem CRM, o follow-up de status é manual e irregular — gera a sensação de 'fui abandonado' que corrói a confiança e o boca a boca.",
+        "duration_estimate": "Semanas a meses (depende do órgão)"
+      },
+      {
+        "stage": "Recorrência / Expansão",
+        "trigger": "Nova unidade, renovação, nova exigência ou necessidade de compliance/SST.",
+        "mental_state": "Confia na Lucena; quer um parceiro contínuo, não uma cotação nova a cada vez.",
+        "primary_channel": "Relacionamento direto com o Aldo / gestor de conta.",
+        "dominant_question": "O que mais eu preciso regularizar ou prevenir antes de virar problema?",
+        "client_intervention": "Plano de gestão ambiental recorrente, cross-sell de compliance/SST, e expansão ABM (outras unidades/CNPJs do grupo).",
+        "friction_today": "A recorrência e o cross-sell não são sistematizados — dependem da memória do Aldo, não de um processo de conta.",
+        "duration_estimate": "Contínuo (recorrência mensal)"
+      }
+    ],
+    "critical_leakage_point": "O maior vazamento NÃO é no fechamento (a indicação traz lead qualificado e a Lucena converte ~50%) — são dois pontos antes e depois dele. (1) Entre Gatilho e Pesquisa, o lead morno que não vem por indicação direta nunca encontra a Lucena, porque ela é invisível no Google/Maps; (2) Entre Decisão e Execução, o motivo nº 1 de perda declarado — 'o lead sumiu' — acontece quando a persona pragmática e ocupada diz 'vou pensar e te retorno' e ninguém puxa de volta com cadência. Fechar esses dois buracos (alicerce digital + CRM com follow-up) é o caminho de maior ROI antes de qualquer mídia."
+  },
+  "willingness_to_pay": {
+    "description": "Faixas estimadas a partir dos 2 contratos atuais (R$ 16k e R$ 5k/mês) e do balizamento da call SDR (projetos pontuais ~R$ 30k, budget mensal de R$ 5k aceito sem objeção). Amostra pequena — validar com a carteira no Kick-Off. [E]",
+    "services": [
+      {
+        "service": "Gestão ambiental recorrente (acompanhamento contínuo, exigências, renovações)",
+        "current_ticket_range": "R$ 5.000–16.000/mês",
+        "perceived_fair_range": "R$ 5.000–12.000/mês",
+        "premium_ceiling": "R$ 16.000+/mês quando inclui múltiplas unidades/CNPJs e resposta a exigências sob SLA",
+        "elasticity": "baixa — movida por risco operacional; aceita pagar mais se o custo de paralisação for grande",
+        "pricing_lever": "Escopo recorrente + SLA de atendimento a exigências + segurança jurídica (não só técnica)"
+      },
+      {
+        "service": "Licenciamento (LP/LI/LO/LAU) — projeto pontual",
+        "current_ticket_range": "R$ 8.000–30.000 por projeto [E]",
+        "perceived_fair_range": "R$ 8.000–25.000 conforme porte e complexidade",
+        "premium_ceiling": "R$ 30.000+ para empreendimentos de maior porte/risco com prazo apertado",
+        "elasticity": "baixa — o custo de não licenciar (não operar) domina a decisão",
+        "pricing_lever": "Complexidade do empreendimento, urgência do prazo regulatório, garantia de condução técnica-jurídica integral"
+      },
+      {
+        "service": "Estudos ambientais complexos (EIA/RIMA, PGRS, pareceres técnicos)",
+        "current_ticket_range": "R$ 10.000–40.000 por estudo [E]",
+        "perceived_fair_range": "R$ 10.000–35.000",
+        "premium_ceiling": "R$ 40.000+ para estudos de alto impacto exigidos por órgão",
+        "elasticity": "baixa — exigido por lei, sem substituto",
+        "pricing_lever": "Profundidade técnica, responsabilidade pela aprovação junto ao órgão, equipe multidisciplinar"
+      },
+      {
+        "service": "Compliance ambiental e SST recorrente (nova linha com os sócios)",
+        "current_ticket_range": "a definir — serviço em estruturação",
+        "perceived_fair_range": "R$ 3.000–10.000/mês [E]",
+        "premium_ceiling": "R$ 10.000+/mês em pacote integrado licenciamento + compliance + SST",
+        "elasticity": "média — recorrente e preventivo; mais sensível a preço que o licenciamento reativo",
+        "pricing_lever": "Bundle com a gestão ambiental (cross-sell na base), redução de risco trabalhista + ambiental num só fornecedor"
+      },
+      {
+        "service": "Advisory de enquadramento na nova Lei 15.190/2025 (LAC/LO/LAU)",
+        "current_ticket_range": "novo — sem preço praticado ainda",
+        "perceived_fair_range": "R$ 3.000–8.000 por diagnóstico de enquadramento [E]",
+        "premium_ceiling": "R$ 8.000+ quando vira porta de entrada para gestão recorrente",
+        "elasticity": "média — alto interesse por ser tema novo e incerto; bom isca de aquisição",
+        "pricing_lever": "Ineditismo (poucos dominam a lei nova), redução de incerteza, posicionamento de autoridade"
+      }
+    ]
+  },
+  "objection_library": {
+    "description": "Objeções reais do comitê de compra B2B da Lucena, na linguagem do cliente, com o subtexto e a resposta que funciona. Alimenta copy, SDR, scripts de atendimento e FAQ do site.",
+    "objections": [
+      {
+        "objection": "Quanto custa pra tirar a licença?",
+        "subtext": "Trata licenciamento como commodity de papel e quer comparar só preço — ainda não enxerga o risco que está comprando.",
+        "bad_response": "Dar um preço seco na hora. Vira leilão com os concorrentes ME, que operam mais barato.",
+        "good_response": "Reframe para o custo do risco: 'O preço depende do porte e do risco da sua operação — por isso começo com um diagnóstico rápido. O que costuma sair caro de verdade não é a consultoria, é a unidade embargada parada esperando uma exigência ser respondida do jeito certo.'",
+        "when_to_use": "Primeiro contato por WhatsApp ou telefone, antes de enviar proposta."
+      },
+      {
+        "objection": "Eu mesmo resolvo direto com o IPAAM, tenho um contato lá.",
+        "subtext": "Acha que é só protocolar um documento e que conhecer alguém resolve.",
+        "bad_response": "Insistir que ele não consegue. Soa arrogante e bate de frente com o ego do gestor.",
+        "good_response": "'Ótimo ter contato lá, ajuda mesmo. O detalhe é que, com a nova Lei 15.190/2025, mudou o enquadramento das atividades — uma exigência respondida na modalidade errada volta e atrasa tudo. Meu papel é garantir que o pedido entre certo da primeira vez, juridicamente blindado.'",
+        "when_to_use": "Quando o gestor demonstra que já tem alguma relação com o órgão."
+      },
+      {
+        "objection": "Já tenho um engenheiro (ou contador) que cuida disso pra mim.",
+        "subtext": "Já tem um fornecedor parcial e não vê por que trocar/somar.",
+        "bad_response": "Falar mal do profissional atual. Coloca o gestor na defensiva.",
+        "good_response": "'Faz sentido. A pergunta é se ele cobre a parte jurídica também — porque licenciamento hoje é metade engenharia, metade direito ambiental. Eu sou as duas coisas na mesma pessoa, então a exigência não fica jogada entre o engenheiro e o advogado, que é onde o processo costuma travar.'",
+        "when_to_use": "Consideração, quando há fornecedor incumbente."
+      },
+      {
+        "objection": "Vocês são novos, como eu sei que entregam?",
+        "subtext": "CNPJ novo gera desconfiança — medo de entregar um problema sério a quem não tem track record.",
+        "bad_response": "Prometer mundos e fundos ou inflar o tamanho da empresa. Soa falso.",
+        "good_response": "'A empresa é nova, eu não. São 10+ anos atuando em licenciamento ambiental — sou advogado, engenheiro ambiental e mestre em direito ambiental. Hoje cuido da regularização de um grupo com 26 CNPJs e mais de R$ 300 milhões em operação. A Lucena é a estrutura nova pra esse trabalho que já faço.'",
+        "when_to_use": "Consideração/Decisão, sempre que o tempo de mercado da empresa for questionado."
+      },
+      {
+        "objection": "Está caro — a outra consultoria cobra menos.",
+        "subtext": "Comparando como commodity; não atribuiu ainda valor à segurança jurídica.",
+        "bad_response": "Dar desconto na hora. Sinaliza que o preço era inflado e desvaloriza o serviço.",
+        "good_response": "'Entendo a comparação. A diferença é o que está por trás do preço: o barato que responde a exigência errado custa a operação parada e a multa. Você está contratando a segurança de que o processo entra certo e a sua operação não para — e isso eu coloco no papel.'",
+        "when_to_use": "Negociação, após a proposta."
+      },
+      {
+        "objection": "Não é urgente agora, vou deixar pra depois.",
+        "subtext": "Subestima o risco enquanto não há uma notificação na mesa.",
+        "bad_response": "Aceitar e esperar ele voltar. É justamente assim que o lead 'some'.",
+        "good_response": "'Posso te mostrar em 10 minutos os pontos da sua operação que hoje estão expostos a uma fiscalização? Se estiver tudo certo, você fica tranquilo de graça. Se não, a gente age antes de virar auto de infração — que é quando deixa de ser barato.'",
+        "when_to_use": "Pesquisa/Consideração, para criar urgência legítima e agendar o próximo passo."
+      },
+      {
+        "objection": "Vou pensar e te retorno.",
+        "subtext": "Sem urgência percebida e ocupado — vai esquecer. Este é o caminho direto para o motivo nº 1 de perda ('o lead sumiu').",
+        "bad_response": "'Tá bom, fico no aguardo!' — e nunca mais puxar. Perde-se a venda por inércia.",
+        "good_response": "'Perfeito. Pra não cair no esquecimento da correria, já deixo agendado um retorno meu na [dia], e te mando até lá um resumo de 1 página do que conversamos. Se mudar algo, é só me avisar.' — sempre fechando com um próximo passo concreto e data.",
+        "when_to_use": "Fim de qualquer contato sem fechamento — é a objeção que o CRM + cadência existem para resolver."
+      }
+    ]
+  },
+  "key_message": {
+    "chosen_message": "Segurança jurídica e ambiental para sua operação nunca parar.",
+    "approach": "combined",
+    "usage_context": "Headline do site/LP institucional, bio do LinkedIn institucional, abertura de propostas e pitch do Aldo. Combina o resultado funcional (operação não para) com o gatilho emocional (segurança/tranquilidade) que o ICP busca.",
+    "alternatives": [
+      {
+        "message": "Licenciamento ambiental resolvido com segurança jurídica — sua operação nunca para.",
+        "approach": "functional",
+        "rationale": "Foco no resultado prático e no risco evitado. Forte para a persona pragmática (Ricardo), mas puramente racional — não captura a tranquilidade que é parte do que ele compra."
+      },
+      {
+        "message": "Durma tranquilo: sua empresa 100% regularizada, sem medo de embargo.",
+        "approach": "emotional",
+        "rationale": "Ataca o job emocional (parar de perder o sono). Memorável, mas sozinha pode soar leve demais para um comitê técnico que precisa justificar a decisão no racional do risco."
+      },
+      {
+        "message": "A assessoria que protege quem move a indústria do Amazonas.",
+        "approach": "social",
+        "rationale": "Posiciona status e pertencimento ao ecossistema industrial local. Boa para marca/LinkedIn, mas menos eficaz como gatilho de conversão direta do que a dor concreta do risco."
+      }
+    ]
+  },
+  "key_insight": {
+    "headline": "Ricardo não compra 'licença' — compra o direito de não parar a operação. E ninguém no mercado vende segurança jurídica + engenharia na mesma pessoa.",
+    "context": "A dor real do ICP é risco operacional (embargo, multa, paralisação), não preço. Os concorrentes vendem 'serviço ambiental' como entrega técnica de commodity; a Lucena pode vender tranquilidade jurídica-operacional ancorada na formação tripla do Aldo — exatamente o que o comitê de compra busca e ninguém articula com clareza no Amazonas.",
+    "numbered_reasons": [
+      "(1) A persona é pragmática e movida por risco — reage a 'sua operação pode parar', não a 'qualidade e compromisso'. A willingness-to-pay é alta quando o custo de NÃO fazer (embargo) está explícito.",
+      "(2) O diferencial não-copiável (advogado + engenheiro ambiental + mestre numa só pessoa) responde diretamente à dor 'preciso de quem entenda o direito E a engenharia' — que os concorrentes, em geral só técnicos, não cobrem.",
+      "(3) A Lei 15.190/2025, em vigor há ~4 meses, abriu um gatilho fresco de insegurança e reenquadramento em toda a base B2B — janela para posicionar a Lucena como a 'advisory' que decifra a nova lei antes que a concorrência ocupe esse discurso."
+    ],
+    "discussion_anchor": "A decisão do stakeholder é assumir, em TODA a comunicação, o posicionamento de 'segurança jurídica que mantém a operação funcionando' (não 'mais uma consultoria ambiental') — e bancar essa promessa com o repertório e a credencial do Aldo, inclusive colocando o risco e o prazo no papel das propostas."
+  },
+  "honesty_alert": "Três ressalvas honestas. (1) Esta é uma persona-síntese de um comitê de compra de 3 papéis (técnico, operacional, decisor) — útil para alinhar a comunicação, mas o plano ABM precisará endereçar os três com ênfases diferentes; não reduzir o ABM a 'falar com o Ricardo'. (2) A persona 'Ricardo' e o ICP são hipóteses fundamentadas nos dados do briefing + pesquisa de mercado, mas NÃO foram validados com entrevista a cliente real — recomenda-se fortemente validar com 2-3 clientes atuais (incluindo contatos do grupo Rei dos Bons Amigos) no Kick-Off antes de travar copy e mídia. (3) A willingness-to-pay foi estimada a partir de apenas 2 contratos e do balizamento da call SDR — é direcional, não estatística; refinar conforme a carteira crescer."
+}

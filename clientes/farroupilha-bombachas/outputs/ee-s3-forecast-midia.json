@@ -1,0 +1,337 @@
+{
+  "client_name": "Bombachas Farroupilha",
+  "summary": "Forecast de mídia de 6 meses (Julho-Dezembro 2026) para Bombachas Farroupilha. Cenário CONSERVADOR com budget mensal de R$ 2.500 — aproveitando pico sazonal Jul-Set (Semana Farroupilha). Split: 60% Google Ads (demanda existente, histórico de campanha) + 40% Meta Ads (novo canal B2C Mariana). Projeção conservadora: 280 leads qualificados em 6 meses com CPL médio de R$ 53,5.",
+  "summary_headline": "R$ 2.500/mês com split Google 60% + Meta 40% — pico em agosto pronto para Semana Farroupilha de setembro.",
+  "summary_highlights": [
+    {
+      "category": "oportunidade",
+      "label": "Budget mensal",
+      "value": "R$ 2.500/mês",
+      "subtext": "Cenário conservador — R$ 15.000 total em 6 meses",
+      "tone": "blue"
+    },
+    {
+      "category": "oportunidade",
+      "label": "Google Ads (existente)",
+      "value": "60% — R$ 1.500/mês",
+      "subtext": "Canal com histórico — manter + expandir para Bombacha de Favo",
+      "tone": "green"
+    },
+    {
+      "category": "janela",
+      "label": "Meta Ads (novo)",
+      "value": "40% — R$ 1.000/mês",
+      "subtext": "Canal novo para Mariana B2C via Instagram/Reels de bastidores",
+      "tone": "yellow"
+    },
+    {
+      "category": "oportunidade",
+      "label": "Leads projetados (6 meses)",
+      "value": "~280 leads",
+      "subtext": "CPL médio R$ 53,5 — conservador para pré-compra de pilcha premium",
+      "tone": "green"
+    },
+    {
+      "category": "janela",
+      "label": "Pico sazonal",
+      "value": "Ago/Set 2026",
+      "subtext": "65-75% da receita anual concentrada Jul-Set — budget de pico em agosto",
+      "tone": "yellow"
+    },
+    {
+      "category": "maturidade",
+      "label": "Prazo para resultados estáveis",
+      "value": "3-4 meses",
+      "subtext": "Meta Ads precisa de 30-45 dias de aprendizado antes de otimizar",
+      "tone": "gray"
+    }
+  ],
+  "summary_key_findings": [
+    {
+      "category": "vantagem",
+      "text": "O Google Ads já roda (GTM-M7WTSW9C instalado, campanhas ativas confirmadas) — o canal tem histórico de conversão real. A prioridade é (1) auditar o que já roda, (2) adicionar grupo de anúncios específico para 'Bombacha de Favo artesanal' que hoje provavelmente não existe, e (3) ajustar landing page destino antes de escalar budget."
+    },
+    {
+      "category": "janela",
+      "text": "A Semana Farroupilha (20 de setembro) é a data mais crítica do calendário. Budget de pico deve estar ativo em AGOSTO — não em setembro, quando já é tarde para produção de 35 dias. Recomendação: dobrar budget Google Ads em agosto (R$ 2.000 no canal) e criar campanha específica de urgência 'Prazo limite de encomenda'."
+    },
+    {
+      "category": "contexto",
+      "text": "Meta Ads para pilchas premium (Mariana B2C, R$ 280-450/peça) tem CPL naturalmente mais alto que produto de impulso. O benchmark realista é R$ 60-80/lead qualificado em Meta após aprendizado. Nos primeiros 30 dias, o Meta vai 'gastar' mais aprendendo — é esperado e não é sinal de mal desempenho."
+    },
+    {
+      "category": "acao",
+      "text": "A landing page B2C deve estar no ar ANTES de ligar o Meta Ads. Sem LP específica, o tráfego pago vai para o Instagram ou WhatsApp sem rastreamento — CPL se torna opaco e o pixel não aprende. Dependência crítica: ee-s3-landing-page deve ser implementada antes do mês 2 deste forecast."
+    }
+  ],
+  "horizon": "Julho/2026 — Dezembro/2026 (6 meses)",
+  "currency": "BRL",
+  "scenario_stance": "CONSERVADOR — baseline mínimo para fase de estruturação de canal. Budget de R$ 2.500/mês é 30-40% abaixo do que o mercado recomendaria para um e-commerce B2C de ticket R$ 280-450, mas adequado para estágio atual (sem LP validada, Meta Ads sem histórico, operação artesanal com capacidade de produção limitada). Escalar após mês 3 quando: Meta tiver CPL estável, LP estiver convertendo >3% e a capacidade de produção da Loreni suportar incremento de pedidos.",
+  "channel_split": {
+    "total_monthly_budget": 2500,
+    "rationale": "Google Ads tem histórico de conversão (já rodava antes da estruturação) — mantém posição dominante no split (60%). Meta Ads (Instagram) é canal novo para Mariana B2C, com aprendizado de 30-45 dias — 40% do budget é adequado para fase de testes sem comprometer o canal que já converte. Não há budget para TikTok ou YouTube neste forecast — banda de gestão insuficiente para terceiro canal simultâneo com a equipe atual.",
+    "channels": [
+      {
+        "channel": "Google Ads",
+        "percentage": 60,
+        "monthly_value": 1500,
+        "primary_intent": "Capturar demanda existente (busca ativa por 'bombacha de favo', 'bombacha artesanal RS', 'pilcha gaúcha') + retargeting de visitantes da LP. Canal com histórico — manter e expandir com novos grupos de anúncio para Bombacha de Favo especificamente."
+      },
+      {
+        "channel": "Meta Ads (Instagram/Facebook)",
+        "percentage": 40,
+        "monthly_value": 1000,
+        "primary_intent": "Gerar demanda para Mariana B2C via criativo de bastidores (processo artesanal, costureira-chefe, Reels). Público: mulheres 28-55, RS + estados gaúchos na diáspora (SC, PR, MT, MS), interesse em pilcha/CTG/tradição gaúcha. Fase 1: aprendizado (mês 1-2). Fase 2: otimização (mês 3+)."
+      }
+    ]
+  },
+  "campaigns": {
+    "concentration_note": "Split em 2 canais — Google Ads (demanda existente) e Meta Ads (geração de demanda). Prioridade de implementação: (1) auditar campanhas Google Ads existentes + adicionar grupo Bombacha de Favo; (2) criar campanha Meta Ads com objetivo Leads/Mensagens + criativo de Reel de bastidores; (3) ativar pixel Meta na LP assim que ela estiver no ar.",
+    "google_ads": {
+      "existing_campaigns": "Auditar campanhas atuais antes de criar novas — risco de duplicação e conflito de lances.",
+      "new_ad_groups": [
+        {
+          "name": "Bombacha de Favo Artesanal",
+          "keywords": [
+            "bombacha de favo artesanal",
+            "bombacha de favo RS",
+            "bombacha artesanal gaúcha",
+            "bombacha trançada à mão"
+          ],
+          "match_type": "Frase e Exata",
+          "bid_strategy": "CPC Manual no início → tCPA após 30 conversões acumuladas"
+        },
+        {
+          "name": "Semana Farroupilha (Sazonal)",
+          "keywords": [
+            "bombacha semana farroupilha",
+            "pilcha semana farroupilha",
+            "encomenda bombacha setembro"
+          ],
+          "match_type": "Frase",
+          "bid_strategy": "Aumentar CPC manual em 50% durante agosto/setembro",
+          "schedule": "Ativo: julho-outubro. Pausar: novembro-junho"
+        },
+        {
+          "name": "Atacado Pilcharia (B2B Diego)",
+          "keywords": [
+            "bombacha atacado RS",
+            "fornecedor pilcharia",
+            "bombacha fabricante RS",
+            "bombachas atacado"
+          ],
+          "match_type": "Frase e Ampla modificada",
+          "bid_strategy": "CPC Manual com ajuste de lances +30% para horário comercial (seg-sex 9h-18h)"
+        }
+      ]
+    },
+    "meta_ads": {
+      "objective": "Leads / Mensagens (WhatsApp)",
+      "audience_b2c_mariana": {
+        "demographics": "Mulheres 28-55 anos",
+        "locations": "RS (foco: Caxias do Sul, Passo Fundo, Santa Maria, Porto Alegre, Pelotas) + SC + PR",
+        "interests": [
+          "Tradições gaúchas",
+          "CTG",
+          "Pilcha",
+          "Semana Farroupilha",
+          "Rodeio gaúcho",
+          "Artesanato"
+        ],
+        "exclusions": "Lookalike de anti-persona (compradores de fast fashion, renda muito baixa)"
+      },
+      "creative_direction": "Reel de bastidores (15-30s) mostrando o trançado do favo em close + texto: 'A bombacha que a tribo reconhece. Feita à mão em Ciríaco/RS. Link na bio.' CTA: Enviar mensagem no WhatsApp.",
+      "budget_allocation": "R$ 700/mês em conversão + R$ 300/mês em retargeting de visitantes da LP (ativar retargeting apenas após LP no ar)"
+    }
+  },
+  "tracking_metrics": {
+    "description": "Dashboard semanal de acompanhamento com 6 métricas-chave. Revisão mensal com a Loreni para ajuste de budget e criativos. Benchmark de CPL: Google Ads R$ 35-50, Meta Ads R$ 60-80 (após aprendizado).",
+    "metrics": [
+      {
+        "id": "m1",
+        "metric": "CPL (Custo por Lead)",
+        "definition": "Custo médio para gerar 1 lead qualificado (contato no WhatsApp Business ou preenchimento de formulário na LP). Meta: Google ≤ R$ 50, Meta ≤ R$ 80.",
+        "source": "Google Ads Manager + Meta Ads Manager + rastreamento de conversão via GTM",
+        "frequency": "Semanal"
+      },
+      {
+        "id": "m2",
+        "metric": "Taxa de Conversão da LP",
+        "definition": "Percentual de visitantes da landing page que clicam em WhatsApp ou preenchem formulário. Meta: ≥ 3% (benchmark conservador para produto de alto valor). Alerta se < 1,5%.",
+        "source": "GA4 + GTM (evento click_whatsapp ou form_submit)",
+        "frequency": "Semanal"
+      },
+      {
+        "id": "m3",
+        "metric": "Volume de Leads / mês",
+        "definition": "Total de contatos novos qualificados por canal (Google Ads, Meta Ads, orgânico). Meta mínima mês 1: 20 leads. Meta mês 4+: 55 leads.",
+        "source": "Google Ads + Meta Ads + relatório manual da Loreni (WhatsApp)",
+        "frequency": "Mensal"
+      },
+      {
+        "id": "m4",
+        "metric": "ROAS / Receita por canal (aproximado)",
+        "definition": "Receita atribuída a cada canal pelo relatório manual da Loreni: 'de onde veio esse cliente?'. Não é tracking automático no início — é pergunta ativa da Loreni no fechamento do pedido.",
+        "source": "Planilha manual de pedidos da Loreni + UTM params na LP",
+        "frequency": "Mensal"
+      },
+      {
+        "id": "m5",
+        "metric": "CTR (Taxa de Clique)",
+        "definition": "Percentual de impressões que geram clique nos anúncios. Benchmark: Google Search ≥ 5%, Meta Feed ≥ 1,5%, Meta Reels ≥ 2%. CTR abaixo desses valores indica necessidade de troca de criativo ou headline.",
+        "source": "Google Ads Manager / Meta Ads Manager",
+        "frequency": "Semanal"
+      },
+      {
+        "id": "m6",
+        "metric": "Frequência de Anúncio (Meta)",
+        "definition": "Quantas vezes em média o mesmo usuário viu o anúncio. Alerta: frequência > 3,5 indica saturação de público — necessário expandir audiência ou trocar criativo.",
+        "source": "Meta Ads Manager (coluna Frequência)",
+        "frequency": "Quinzenal"
+      }
+    ]
+  },
+  "forecast_6_months": {
+    "description": "Projeção mês a mês de Julho a Dezembro 2026. Fase 1 (Jul-Ago): estruturação e pico sazonal — Google Ads no ar, Meta Ads em aprendizado, LP publicada. Fase 2 (Set-Out): colheita sazonal + otimização — pico da Semana Farroupilha, Meta começa a converter. Fase 3 (Nov-Dez): consolidação e baixa sazonal — manter presença com budget reduzido, planejar 2027.",
+    "evolution_logic": "Meses 1-2: Meta Ads em fase de aprendizado (CPL alto, menor volume de leads por real investido). Meses 3-4: Meta otimizando (CPL cai 20-30%). Google Ads cresce 25% no budget em agosto para capturar pico. Meses 5-6: baixa sazonal pós-setembro, redução do budget Meta, manutenção do Google. CTR melhora progressivamente com otimização de criativos e palavras negativas.",
+    "monthly_evolution": [
+      {
+        "month": 1,
+        "label": "Julho/2026",
+        "phase": "Estruturação — Google Ads auditado + Meta Ads lançado. LP no ar.",
+        "impressions": 28000,
+        "clicks": 840,
+        "ctr_pct": 3.0,
+        "cpc": 2.98,
+        "leads": 25,
+        "cpl": 100.0,
+        "mql_rate_pct": 60,
+        "mqls": 15,
+        "appointments": null,
+        "show_rate_pct": null,
+        "served_clients": 12,
+        "cac_media": 208.33
+      },
+      {
+        "month": 2,
+        "label": "Agosto/2026",
+        "phase": "Pico sazonal — budget Google +25%. Meta Ads ainda em aprendizado. Campanha urgência 'prazo limite farroupilha'.",
+        "impressions": 42000,
+        "clicks": 1260,
+        "ctr_pct": 3.0,
+        "cpc": 2.78,
+        "leads": 45,
+        "cpl": 77.78,
+        "mql_rate_pct": 65,
+        "mqls": 29,
+        "appointments": null,
+        "show_rate_pct": null,
+        "served_clients": 22,
+        "cac_media": 159.09
+      },
+      {
+        "month": 3,
+        "label": "Setembro/2026",
+        "phase": "Semana Farroupilha (20/set) — conversões de pedidos feitos em agosto chegam. Meta otimizando.",
+        "impressions": 38000,
+        "clicks": 1140,
+        "ctr_pct": 3.0,
+        "cpc": 2.63,
+        "leads": 50,
+        "cpl": 50.0,
+        "mql_rate_pct": 70,
+        "mqls": 35,
+        "appointments": null,
+        "show_rate_pct": null,
+        "served_clients": 28,
+        "cac_media": 89.29
+      },
+      {
+        "month": 4,
+        "label": "Outubro/2026",
+        "phase": "Pós-pico — manutenção. Meta com CPL estável. Início de planejamento para Natal/fim de ano.",
+        "impressions": 30000,
+        "clicks": 900,
+        "ctr_pct": 3.0,
+        "cpc": 2.78,
+        "leads": 55,
+        "cpl": 45.45,
+        "mql_rate_pct": 65,
+        "mqls": 36,
+        "appointments": null,
+        "show_rate_pct": null,
+        "served_clients": 29,
+        "cac_media": 86.21
+      },
+      {
+        "month": 5,
+        "label": "Novembro/2026",
+        "phase": "Baixa sazonal — budget reduzido. Manter presença no Google. Meta pausado ou em baixa frequência.",
+        "impressions": 20000,
+        "clicks": 600,
+        "ctr_pct": 3.0,
+        "cpc": 2.5,
+        "leads": 55,
+        "cpl": 45.45,
+        "mql_rate_pct": 60,
+        "mqls": 33,
+        "appointments": null,
+        "show_rate_pct": null,
+        "served_clients": 26,
+        "cac_media": 96.15
+      },
+      {
+        "month": 6,
+        "label": "Dezembro/2026",
+        "phase": "Fim de ano / gifting — bombacha como presente natalino. Testar criativo de presente.",
+        "impressions": 22000,
+        "clicks": 660,
+        "ctr_pct": 3.0,
+        "cpc": 2.65,
+        "leads": 50,
+        "cpl": 50.0,
+        "mql_rate_pct": 60,
+        "mqls": 30,
+        "appointments": null,
+        "show_rate_pct": null,
+        "served_clients": 24,
+        "cac_media": 104.17
+      }
+    ],
+    "totals_6_months": {
+      "total_investment": 15000,
+      "total_impressions": 180000,
+      "total_clicks": 5400,
+      "avg_ctr_pct": 3.0,
+      "avg_cpc": 2.78,
+      "total_leads": 280,
+      "avg_cpl": 53.57,
+      "avg_mql_rate_pct": 63.3,
+      "total_mqls": 178,
+      "total_appointments": null,
+      "avg_show_rate_pct": null,
+      "total_served_clients": 141,
+      "avg_cac_media": 106.38
+    }
+  },
+  "assumptions_and_dependencies": [
+    "DEPENDÊNCIA CRÍTICA: Landing page (ee-s3-landing-page) deve estar publicada ANTES de ativar Meta Ads. Sem LP, o pixel Meta não aprende e o CPL fica opaco. Budget Meta dos meses 1-2 pode ser alocado 100% em Google Ads se a LP atrasar.",
+    "PREMISSA: Capacidade de produção da Loreni suporta incremento de ~25 pedidos/mês acima do baseline atual. Se a fábrica já estiver no limite de produção artesanal, escalar budget antes de contratar nova costureira gera leads que não convertem — revisar com a Loreni antes do mês 3.",
+    "PREMISSA: O Google Ads existente tem pelo menos R$ 500/mês de histórico. Campanhas zeradas ou pausadas há mais de 90 dias precisam de fase de reaquecimento de 30-45 dias antes de atingir CPL do forecast.",
+    "SAZONALIDADE: 65-75% da receita concentra-se em Julho-Setembro. Forecast reflete esse pico com budget de R$ 3.000/mês em agosto (aumento de 20% do baseline mensal). Se o budget total não puder ser aumentado em agosto, redistribuir reduzindo novembro-dezembro.",
+    "DISCLAIMER: Este forecast não modela ROAS financeiro (receita gerada por real investido). O CAC médio projetado (R$ 86-208 dependendo do mês) é calculado sobre budget de mídia — não inclui fee de gestão ou produção de criativos. Receita por cliente não modelada pois o mix Favo (R$ 280-450) vs Popular (R$ 90-150) é variável.",
+    "META ADS APRENDIZADO: Os primeiros 30-45 dias do Meta Ads terão CPL acima do projetado (potencialmente 2-3x maior) enquanto o pixel aprende. É esperado. Não parar o Meta nas primeiras 2 semanas por CPL alto — isso destrói o aprendizado e reinicia o ciclo.",
+    "REVISÃO: Forecast deve ser revisado mensalmente com a Gina (Analista V4). Se ao final do mês 2 o CPL Meta estiver acima de R$ 120/lead, revisar público e criativo antes de escalar budget."
+  ],
+  "_metadata": {
+    "skill": "ee-s3-forecast-midia",
+    "version": 2,
+    "generated_at": "2026-06-22T09:30:00Z",
+    "depends_on": [
+      "ee-s2-pesquisa-mercado",
+      "ee-s1-persona-icp",
+      "ee-s2-diagnostico-midia"
+    ],
+    "next_iteration": "Revisão após mês 3 com dados reais de CPL por canal"
+  }
+}

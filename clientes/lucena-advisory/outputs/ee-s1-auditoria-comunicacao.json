@@ -1,0 +1,323 @@
+{
+  "client_name": "Lucena Advisory",
+  "skill": "ee-s1-auditoria-comunicacao",
+  "version": 1,
+  "generated_at": "2026-06-19T00:00:00Z",
+  "data_source": "mixed",
+  "summary": "A auditoria de comunicação da Lucena Advisory é, na prática, uma auditoria da AUSÊNCIA de comunicação: 0 site, 0 Instagram, 0 anúncios, 0 Google Meu Negócio, sem LinkedIn institucional — o único ponto de contato ativo é um WhatsApp pessoal (+55 92 8220-2492), não configurado como Business, mas que converte ~50% das propostas. O vazamento é duplo: a Lucena é invisível quando o ICP pesquisa (perde o lead morno para concorrentes acháveis) e não tem cadência de follow-up (perde o lead que esfria — motivo nº 1 declarado, 'o lead sumiu'). Ambos os buracos se fecham com quick wins de horas (reivindicar GMB, configurar WhatsApp Business, criar LinkedIn, padronizar cadência), antes de qualquer construção da S3 e muito antes de mídia paga.",
+  "summary_headline": "Lucena Advisory não tem o que auditar — 0 site, IG, anúncios e GMB; só um WhatsApp pessoal que converte 50%. Vazamento duplo: invisível na busca + sem cadência no follow-up, ambos fecháveis em horas.",
+  "summary_highlights": [
+    {
+      "category": "maturidade",
+      "label": "Canais ativos",
+      "value": "1 de 6",
+      "subtext": "Só WhatsApp pessoal; site, IG, GMB, anúncios e LinkedIn ausentes",
+      "tone": "red"
+    },
+    {
+      "category": "maturidade",
+      "label": "Score de comunicação",
+      "value": "~9/100",
+      "subtext": "Reflete ausência de canais, não má execução",
+      "tone": "red"
+    },
+    {
+      "category": "risco",
+      "label": "Maior vazamento",
+      "value": "50% das propostas",
+      "subtext": "Metade some entre proposta e fechamento ('o lead sumiu')",
+      "tone": "red"
+    },
+    {
+      "category": "oportunidade",
+      "label": "Quick win nº 1",
+      "value": "GMB + cadência",
+      "subtext": "Horas de trabalho, custo zero — destrava busca local e follow-up",
+      "tone": "green"
+    },
+    {
+      "category": "competicao",
+      "label": "Gap vs benchmark (FRTB)",
+      "value": "−70 pts",
+      "subtext": "FRTB tem site, blog SEO e LinkedIn; a Lucena tem zero",
+      "tone": "red"
+    }
+  ],
+  "summary_key_findings": [
+    {
+      "category": "contexto",
+      "text": "Não há screenshots a analisar porque não há canais: a Lucena Advisory é Zero Digital absoluto. Esta auditoria não mede má execução — mede ausência. Por isso ela funciona como um mapa do que precisa ser CONSTRUÍDO (alicerce da S3) e do que pode ser destravado HOJE (quick wins), não como uma lista de correções de algo existente."
+    },
+    {
+      "category": "vantagem",
+      "text": "O único canal ativo já é eficaz: o WhatsApp pessoal do Aldo converte ~50% das propostas (10 → 5/mês). Isso significa que a comunicação 1-a-1 do Aldo funciona — o problema não é a mensagem quando ele conversa, é (a) não ser encontrado para iniciar a conversa e (b) não puxar de volta quem esfria. É um ponto de partida raro: a 'voz' que converte já existe, falta instrumentá-la e dar-lhe volume."
+    },
+    {
+      "category": "ameaca",
+      "text": "O vazamento é duplo e invisível. Na entrada: quando o ICP pesquisa 'licenciamento ambiental Manaus' no Google/Maps, encontra FRTB, Moura, Aurora e Protege — nunca a Lucena. Na saída: sem CRM nem cadência, o lead que diz 'vou pensar e te retorno' some (motivo nº 1 de perda). Os concorrentes digitalmente maduros (FRTB com blog SEO, Norte Ambiental com LinkedIn/YouTube) capturam exatamente o lead que a Lucena nem vê chegar."
+    },
+    {
+      "category": "acao",
+      "text": "Antes de construir a LP e a identidade (S3) e muito antes de mídia, executar 5 quick wins de horas e custo zero: reivindicar o Google Meu Negócio, configurar o WhatsApp Business (perfil + saudação + etiquetas), criar o LinkedIn institucional + otimizar a bio do Aldo com as credenciais, subir uma página 'em construção' de 1 dobra no domínio, e padronizar uma cadência de 3 toques no WhatsApp. Isso ataca o vazamento duplo imediatamente."
+    }
+  ],
+  "icp_reference": "ICP B2B industrial/comercial sob risco regulatório no AM (postos, estaleiros, indústria do PIM), com compra em comitê movida por risco de embargo, não por preço. Persona-síntese: Ricardo Tavares, gestor operacional que pesquisa no Google e pede indicação, e quer 'poder tocar a operação em paz'. Canais do ICP: LinkedIn, busca local (Google/GMB), associações setoriais — NUNCA Instagram.",
+  "channels_audited": [
+    {
+      "name": "site",
+      "url_or_handle": "—",
+      "score": 3,
+      "classification": "critical",
+      "screenshots_analyzed": false,
+      "audit_details": {
+        "value_proposition": {"present": false, "clear": false, "aligned_with_icp": false, "notes": "Não há site nem landing page. A PUV ('segurança jurídica que mantém a operação funcionando') existe apenas como conceito, sem nenhum ponto digital que a comunique."},
+        "social_proof": {"present": false, "type": "—", "quality": "none", "notes": "Nenhuma prova social publicada. O case mais forte (grupo Rei dos Bons Amigos, 26 CNPJs, R$ 300M+) não está documentado em lugar nenhum acessível ao prospect."},
+        "cta": {"present": false, "visible": false, "action_oriented": false, "notes": "Sem destino digital, sem CTA. O ICP que pesquisa não tem para onde ir."},
+        "visual_consistency": {"consistent": false, "professional": false, "notes": "Sem identidade visual (logo, paleta, tipografia) — has_logo=false no briefing."},
+        "mobile_experience": {"responsive": false, "speed": "—", "notes": "N/A — não há site para avaliar responsividade."},
+        "additional_notes": "Concorrentes diretos (FRTB, Moura, Aurora, Ocidental, Protege) TODOS têm site próprio. A ausência de site é um veto silencioso à qualificação B2B: o comitê de compra pesquisa antes de contratar e não encontra a Lucena."
+      },
+      "gaps": [
+        {"gap": "Inexistência de site/landing page institucional", "evidence": "website=null no briefing; 'Zero Digital' confirmado no V4MOS e na call SDR.", "impact": "high"},
+        {"gap": "Case de maior autoridade (Rei dos Bons Amigos) não documentado digitalmente", "evidence": "Nenhuma página, PDF ou prova social publicada do principal ativo de credibilidade.", "impact": "high"}
+      ],
+      "recommendations": [
+        {"action": "Subir imediatamente uma página 'em construção' de 1 dobra (PUV + serviços + WhatsApp) no domínio, enquanto a LP completa é produzida na S3.", "priority": "immediate", "effort": "low"},
+        {"action": "Produzir a landing page institucional B2B 1-page na S3 (PUV + serviços + case da âncora + CTA WhatsApp + formulário de qualificação + GA4/GTM).", "priority": "short_term", "effort": "high"}
+      ]
+    },
+    {
+      "name": "instagram",
+      "url_or_handle": "—",
+      "score": 2,
+      "classification": "critical",
+      "screenshots_analyzed": false,
+      "audit_details": {
+        "content_quality": {"speaks_to_icp": false, "frequency": "nunca", "engagement_level": "nenhum", "notes": "Sem conta. V4MOS Q43/Q44: 'Não publico' / 'Não usamos'."},
+        "additional_notes": "Avaliação estratégica: para ESTE ICP, o Instagram é DELIBERADAMENTE de baixa prioridade. O alvo é B2B industrial que 'não está em redes sociais' (declarado pelo Aldo). Instagram não deve ser priorizado — o canal social relevante é o LinkedIn. O score baixo aqui NÃO é um problema a corrigir com urgência; é uma confirmação de que o esforço social deve ir para LinkedIn."
+      },
+      "gaps": [
+        {"gap": "Sem perfil no Instagram", "evidence": "instagram=null no briefing.", "impact": "low"}
+      ],
+      "recommendations": [
+        {"action": "NÃO priorizar Instagram. Se criar, usar apenas como vitrine institucional secundária (autoridade/bastidores técnicos), nunca como canal principal de aquisição.", "priority": "medium_term", "effort": "low"}
+      ]
+    },
+    {
+      "name": "anuncios",
+      "url_or_handle": "—",
+      "score": 2,
+      "classification": "critical",
+      "screenshots_analyzed": false,
+      "audit_details": {
+        "additional_notes": "Zero anúncios. Connectors V4MOS confirmam 0 campanhas Google Ads e 0 Meta Ads em 90 dias. A pesquisa de mercado indica que o leilão de mídia paga no nicho de licenciamento em Manaus está praticamente vazio — nenhuma consultoria anunciando. Não há nada a auditar e a decisão de SE/QUANDO entrar em mídia fica para o diagnóstico de mídia (S2) e o forecast (S3)."
+      },
+      "gaps": [
+        {"gap": "Sem anúncios ativos em qualquer plataforma", "evidence": "0 campanhas nos connectors V4MOS (período 2026-02-24 a 2026-05-25).", "impact": "low"}
+      ],
+      "recommendations": [
+        {"action": "Não iniciar mídia paga agora. Decidir entre Google Ads de nicho (leilão vazio) vs LDR/prospector no diagnóstico de mídia (S2).", "priority": "medium_term", "effort": "medium"}
+      ]
+    },
+    {
+      "name": "google_meu_negocio",
+      "url_or_handle": "—",
+      "score": 3,
+      "classification": "critical",
+      "screenshots_analyzed": false,
+      "audit_details": {
+        "additional_notes": "Sem GMB reivindicado. Para um negócio local de Manaus cujo ICP pesquisa 'consultoria ambiental Manaus', isso significa perder 100% da busca local de alta intenção. É o gap de maior ROI imediato da auditoria: reivindicar é gratuito e leva horas."
+      },
+      "gaps": [
+        {"gap": "Google Meu Negócio inexistente/não reivindicado", "evidence": "gmb=null no briefing; empresa não aparece no Maps para o próprio nome.", "impact": "high"}
+      ],
+      "recommendations": [
+        {"action": "Reivindicar e otimizar o GMB: categoria correta, descrição com palavras-chave do nicho, endereço/horário, fotos da equipe/escritório e 5-10 reviews iniciais pedidos à carteira atual.", "priority": "immediate", "effort": "low"}
+      ]
+    },
+    {
+      "name": "whatsapp",
+      "url_or_handle": "+55 92 8220-2492",
+      "score": 38,
+      "classification": "low",
+      "screenshots_analyzed": false,
+      "audit_details": {
+        "cta": {"present": true, "visible": true, "action_oriented": false, "notes": "Número funcional e operado pelo decisor, mas é o WhatsApp pessoal do Aldo — sem perfil Business, sem saudação automática, sem mensagem de ausência, sem catálogo nem etiquetas."},
+        "content_quality": {"speaks_to_icp": true, "frequency": "sob demanda", "engagement_level": "alto na conversa 1-a-1", "notes": "Quando o Aldo conversa, converte (~50% proposta→venda). A voz que fecha já existe aqui."},
+        "additional_notes": "É o único canal ativo e o mais valioso da operação — mas é o ponto de maior perda também, porque não há cadência: o lead que não fecha na hora some. Instrumentar este canal (Business + etiquetas + cadência) é pré-CRM e quick win."
+      },
+      "gaps": [
+        {"gap": "WhatsApp pessoal, não configurado como Business", "evidence": "Sem perfil comercial, saudação, ausência ou catálogo (briefing).", "impact": "medium"},
+        {"gap": "Sem cadência de follow-up — leads que não fecham na hora somem", "evidence": "Motivo nº 1 de perda no V4MOS (Q27): 'o lead sumiu'; padrão de follow-up 'existe mas nem sempre é seguido' (Q33).", "impact": "high"}
+      ],
+      "recommendations": [
+        {"action": "Migrar para WhatsApp Business: perfil completo, saudação, mensagem de ausência, etiquetas de etapa (Lead/Qualificado/Proposta/Negociação).", "priority": "immediate", "effort": "low"},
+        {"action": "Padronizar um script de resposta inicial + cadência de 3 toques em 7 dias para todo lead que não fecha na hora.", "priority": "immediate", "effort": "low"}
+      ]
+    },
+    {
+      "name": "linkedin",
+      "url_or_handle": "— (institucional inexistente; perfil pessoal do Aldo a confirmar)",
+      "score": 8,
+      "classification": "critical",
+      "screenshots_analyzed": false,
+      "audit_details": {
+        "additional_notes": "LinkedIn é O canal social relevante para este ICP B2B (engenheiros, gestores, diretores). Não há página institucional da Lucena; o perfil pessoal do Aldo precisa ser confirmado e otimizado. A pesquisa mostra que só FRTB e Norte Ambiental usam LinkedIn no nicho — vácuo de autoridade a ocupar. O Aldo tem repertório técnico-jurídico de sobra (advogado + engenheiro + mestre) para virar referência local."
+      },
+      "gaps": [
+        {"gap": "Sem LinkedIn institucional e perfil pessoal do Aldo não otimizado para autoridade", "evidence": "Briefing não registra LinkedIn institucional; perfil pessoal a confirmar no Kick-Off.", "impact": "medium"}
+      ],
+      "recommendations": [
+        {"action": "Criar a página institucional da Lucena e otimizar a bio do Aldo (credenciais + mensagem-chave) imediatamente; iniciar publicação quinzenal de autoridade.", "priority": "immediate", "effort": "low"}
+      ]
+    }
+  ],
+  "gap_matrix": [
+    {"rank": 1, "channel": "whatsapp", "gap": "Sem cadência de follow-up — 'o lead sumiu' é o motivo nº 1 de perda", "impact": "high", "effort": "low", "recommended_action": "Padronizar resposta inicial + cadência de 3 toques em 7 dias (template), depois migrar para CRM.", "quadrant": "quick_win"},
+    {"rank": 2, "channel": "google_meu_negocio", "gap": "GMB inexistente — 100% da busca local perdida", "impact": "high", "effort": "low", "recommended_action": "Reivindicar e otimizar o GMB em Manaus com fotos, descrição de nicho e 5-10 reviews da carteira.", "quadrant": "quick_win"},
+    {"rank": 3, "channel": "whatsapp", "gap": "WhatsApp pessoal sem configuração Business", "impact": "medium", "effort": "low", "recommended_action": "Migrar para WhatsApp Business com perfil, saudação, ausência e etiquetas de etapa.", "quadrant": "quick_win"},
+    {"rank": 4, "channel": "linkedin", "gap": "Sem LinkedIn institucional / autoridade do Aldo subexplorada", "impact": "medium", "effort": "low", "recommended_action": "Criar página institucional + otimizar bio do Aldo + iniciar conteúdo quinzenal de autoridade.", "quadrant": "quick_win"},
+    {"rank": 5, "channel": "site", "gap": "Sem nenhum destino digital quando o ICP pesquisa", "impact": "high", "effort": "low", "recommended_action": "Subir página 'em construção' de 1 dobra (PUV + WhatsApp) no domínio enquanto a LP é produzida.", "quadrant": "quick_win"},
+    {"rank": 6, "channel": "site", "gap": "Sem landing page institucional B2B completa", "impact": "high", "effort": "high", "recommended_action": "Produzir a LP 1-page com PUV, serviços, case da âncora, CTA WhatsApp, formulário e GA4/GTM (S3).", "quadrant": "strategic_project"},
+    {"rank": 7, "channel": "marca", "gap": "Sem identidade visual (logo, paleta, tipografia)", "impact": "medium", "effort": "high", "recommended_action": "Construir identidade visual + manual de marca na S3.", "quadrant": "strategic_project"},
+    {"rank": 8, "channel": "site/seo", "gap": "Zero conteúdo/SEO — concorrentes (FRTB) já rankeiam para 'PGRS Manaus'", "impact": "medium", "effort": "medium", "recommended_action": "Iniciar blog/conteúdo de autoridade mirando termos locais e a Lei 15.190/2025 (cauda longa quase vazia).", "quadrant": "strategic_project"},
+    {"rank": 9, "channel": "instagram", "gap": "Sem Instagram", "impact": "low", "effort": "low", "recommended_action": "Deprioritizar — ICP B2B não está no Instagram. Reavaliar só após alicerce B2B pronto.", "quadrant": "deprioritize"}
+  ],
+  "executive_summary": {
+    "overall_assessment": "A comunicação digital da Lucena Advisory não está mal feita — ela simplesmente não existe. Dos seis pontos de contato auditados, cinco estão ausentes (site, Instagram, anúncios, GMB, LinkedIn institucional) e apenas um está ativo: o WhatsApp pessoal do Aldo, que, apesar de não instrumentado, sustenta uma operação que converte ~50% das propostas em venda. Esse contraste define o diagnóstico: a Lucena tem uma 'voz' que fecha negócio na conversa 1-a-1, mas não tem nenhuma camada que (a) faça o ICP chegar até essa conversa e (b) recupere o lead que esfria depois dela. O resultado é uma operação que vive de indicação porque é literalmente impossível encontrá-la de outra forma. A boa notícia é que, num cenário Zero Digital, quase tudo é quick win: cada ponto de contato que sobe melhora um patamar que hoje é zero, e os dois maiores buracos (invisibilidade na busca e ausência de cadência) se fecham com horas de trabalho e custo zero, antes mesmo da construção da S3.",
+    "top_problems": [
+      {
+        "problem": "Invisibilidade total na busca — a Lucena não é encontrada quando o ICP pesquisa",
+        "evidence": "Sem site e sem GMB; a pesquisa de mercado mostra FRTB, Moura, Aurora, Ocidental e Protege ocupando a 1ª página do Google para 'consultoria ambiental Manaus'.",
+        "impact": "Todo lead que pesquisa em vez de pedir indicação é capturado por um concorrente. A Lucena fica restrita ao teto do boca a boca (~15 leads/mês), sem nenhum canal de aquisição escalável.",
+        "action": "Reivindicar GMB + subir página 'em construção' + criar LinkedIn institucional (quick wins), depois LP completa + SEO na S3."
+      },
+      {
+        "problem": "Ausência de cadência de follow-up — o lead que esfria some",
+        "evidence": "Motivo nº 1 de perda declarado no V4MOS: 'o lead sumiu sem dar retorno'; follow-up 'existe mas nem sempre é seguido'. Tudo gerido por WhatsApp pessoal + planilha.",
+        "impact": "Dentro de uma operação que converte 50%, cada lead perdido por esquecimento é receita direta. Recuperar 1-2/mês ao ticket de ~R$ 10,5k = +R$ 10k-21k MRR potencial.",
+        "action": "Padronizar cadência de 3 toques no WhatsApp imediatamente (quick win), depois CRM com automação (S1/S2)."
+      },
+      {
+        "problem": "Zero prova social e credibilidade digital para um CNPJ novo",
+        "evidence": "CNPJ de 4 meses, sem site, sem reviews, sem LinkedIn institucional; o case mais forte (Rei dos Bons Amigos, R$ 300M+) não está documentado em lugar algum acessível ao prospect.",
+        "impact": "O comitê de compra B2B qualifica fornecedor pesquisando. Sem prova, a desconfiança do 'vocês são novos' não tem como ser respondida antes da conversa — e muitos nem chegam à conversa.",
+        "action": "Documentar o case da âncora (com autorização), coletar 5-10 reviews no GMB e estruturar provas (números de licenças, depoimentos) para a LP da S3."
+      }
+    ],
+    "communication_score": 9
+  },
+  "competitor_benchmark": {
+    "description": "Benchmark canal-a-canal da Lucena contra dois grupos de concorrentes reais do nicho ambiental em Manaus/AM, com base na pesquisa de mercado (junho/2026). Scores dos concorrentes são estimativas direcionais a partir da presença digital observada. [E]",
+    "groups": [
+      {
+        "name": "Referências digitais do nicho",
+        "members": ["FRTB Consultoria Ambiental", "Norte Ambiental"],
+        "positioning": "Os únicos do nicho com marketing digital sério. FRTB: site profissional + blog SEO local (rankeia para 'PGRS Manaus') + LinkedIn + IG, posicionamento 'segurança jurídica e continuidade operacional'. Norte Ambiental: o mais completo — LinkedIn, YouTube e blog técnico ativos. São o benchmark a igualar e o teto a perseguir."
+      },
+      {
+        "name": "Concorrentes diretos tradicionais",
+        "members": ["Moura Ambiental", "Aurora Ambiental", "Ocidental Consultoria e Projetos"],
+        "positioning": "Players estabelecidos mas digitalmente datados: sites antigos com keyword stuffing (Moura ~14 anos, Aurora ME), presença mínima e sem estratégia de conteúdo. Ocidental é o mais fraco digitalmente. Representam a maioria do mercado fragmentado (43+ consultorias em Manaus, sem líder de marca)."
+      }
+    ],
+    "benchmark_by_channel": [
+      {"channel": "site", "client_score": 3, "best_in_class_score": 78, "gap": 75, "best_practice_observed": "FRTB tem site multipágina profissional com seção de notícias/blog e CTAs de WhatsApp/email em cada artigo.", "opportunity_for_client": "LP 1-page B2B com PUV de segurança jurídica + case da âncora supera o site datado de Moura/Aurora rapidamente; mirar a estrutura do FRTB como referência."},
+      {"channel": "seo_conteudo", "client_score": 2, "best_in_class_score": 75, "gap": 73, "best_practice_observed": "FRTB rankeia para 'PGRS em Manaus' com artigo otimizado; Norte Ambiental mantém blog técnico (aterros, ISO 14001).", "opportunity_for_client": "Conteúdo mirando a Lei 15.190/2025 e termos LAC (cauda longa quase vazia, quentíssima pós-fev/2026) coloca a Lucena à frente em um tema que nem o FRTB cobre ainda."},
+      {"channel": "google_meu_negocio", "client_score": 3, "best_in_class_score": 55, "gap": 52, "best_practice_observed": "Concorrentes têm presença local no Maps (a confirmar reviews manualmente).", "opportunity_for_client": "GMB ainda é subexplorado por todos — reivindicar e acumular reviews da carteira coloca a Lucena rapidamente entre os melhores da busca local."},
+      {"channel": "linkedin", "client_score": 8, "best_in_class_score": 70, "gap": 62, "best_practice_observed": "Norte Ambiental e FRTB mantêm LinkedIn ativo; a maioria dos concorrentes não usa.", "opportunity_for_client": "Autoridade pessoal do Aldo (advogado + engenheiro + mestre) supera qualquer página institucional genérica — vácuo de autoridade pessoal a ocupar."},
+      {"channel": "anuncios", "client_score": 2, "best_in_class_score": 10, "gap": 8, "best_practice_observed": "Nenhuma consultoria do nicho anuncia no Google Ads em Manaus — leilão praticamente vazio.", "opportunity_for_client": "Se/quando entrar em mídia, o CPC tende a ser baixo e a disputa quase nula — mas só após o alicerce de conversão existir."},
+      {"channel": "whatsapp", "client_score": 38, "best_in_class_score": 50, "gap": 12, "best_practice_observed": "GMAIA usa copy comercial afiada ('Deixe a burocracia com a gente') como gancho de contato.", "opportunity_for_client": "WhatsApp Business + cadência + script ancorado em 'tranquilidade burocrática' já coloca a Lucena no nível dos melhores neste canal — é onde ela está mais perto da concorrência."}
+    ],
+    "strategic_read": "A Lucena está muito atrás em tudo que é 'ser encontrada' (site, SEO, GMB, LinkedIn) — gaps de 50 a 75 pontos contra FRTB/Norte Ambiental. Mas o mercado todo é fraco: 43+ consultorias fragmentadas, sem líder de marca, e só dois players fazem marketing digital sério. O leilão de mídia paga está vazio e o GMB é subexplorado por todos. A leitura estratégica: a Lucena não precisa vencer o FRTB no jogo deles de uma vez — precisa ocupar rápido os espaços que NINGUÉM domina (GMB local, conteúdo sobre a Lei 15.190/2025, autoridade pessoal do Aldo no LinkedIn) e, no único canal onde já está perto (WhatsApp), profissionalizar para fechar o gap de 12 pontos imediatamente. É uma corrida onde a maioria dos competidores ainda não saiu da largada."
+  },
+  "journey_friction_map": {
+    "description": "Funil real estimado da persona Ricardo, do gatilho ao fechamento. Volumes baseados no V4MOS (~15 leads/mês, 10 propostas, 5 vendas) — estimativas, pois não há rastreamento hoje. [E]",
+    "stages": [
+      {"stage": "Descoberta / Gatilho", "current_volume": "~15 leads/mês [E]", "leakage_pct": 0, "root_cause": "Quase todo lead chega por indicação/passivo. O lead que NÃO tem indicação e pesquisa no Google nunca chega — vazamento invisível (não medido), pois a Lucena não aparece na busca.", "fix_effort": "medium", "fix_impact_estimate": "GMB + LP + SEO podem destravar leads inbound hoje inexistentes; meta declarada de subir de 15 para 25 leads/mês."},
+      {"stage": "Qualificação", "current_volume": "~15 leads → 10 propostas [E]", "leakage_pct": 33, "root_cause": "Sem qualificação estruturada nem etiqueta de etapa; parte dos leads não evolui por falta de triagem (comitê de compra não mapeado) e por tudo passar pela agenda do Aldo.", "fix_effort": "medium", "fix_impact_estimate": "Formulário de qualificação + CRM aumentam a taxa lead→proposta e liberam o tempo do Aldo."},
+      {"stage": "Proposta", "current_volume": "10 propostas/mês", "leakage_pct": 0, "root_cause": "Etapa funcional — a proposta é enviada. Mas não há gatilho de próximo passo agendado.", "fix_effort": "low", "fix_impact_estimate": "Anexar próximo passo + data a cada proposta reduz o esfriamento."},
+      {"stage": "Fechamento", "current_volume": "10 propostas → 5 vendas/mês", "leakage_pct": 50, "root_cause": "MAIOR VAZAMENTO. Metade das propostas não fecha, e o motivo nº 1 declarado é 'o lead sumiu' — falta de cadência de follow-up. Não é objeção de preço (cliente sem objeção a R$ 5k/mês na SDR).", "fix_effort": "low", "fix_impact_estimate": "Cadência de 3 toques + CRM podem recuperar 1-2 vendas/mês = +R$ 10k-21k MRR ao ticket de R$ 10,5k."},
+      {"stage": "Pós-venda / Recorrência", "current_volume": "5 vendas/mês + 10 clientes ativos", "leakage_pct": 0, "root_cause": "Sem comunicação proativa de status durante a tramitação (gera sensação de abandono) e sem sistematização de cross-sell/expansão — depende da memória do Aldo.", "fix_effort": "medium", "fix_impact_estimate": "Updates proativos + plano de conta elevam LTV, recompra e indicação espontânea (que já é frequente)."}
+    ],
+    "biggest_leakage_summary": "O maior buraco mensurável é o Fechamento: 50% das propostas (5 de 10/mês) não viram venda, e a causa nº 1 declarada é 'o lead sumiu' — vazamento de cadência, não de preço. Ao ticket recorrente de ~R$ 10,5k, recuperar apenas 1-2 dessas propostas/mês vale +R$ 10k a 21k de MRR. Em paralelo, há um vazamento INVISÍVEL e provavelmente maior na Descoberta: todo lead que pesquisaria no Google em vez de pedir indicação simplesmente não existe para a Lucena hoje, porque ela não é encontrável.",
+    "projected_funnel_90d_realistic": "Com os quick wins (cadência no WhatsApp + GMB + LinkedIn + página 'em construção') e o CRM mínimo nos primeiros 60-90 dias: recuperar a conversão de proposta→venda de ~50% para ~65% (cadência fecha o vazamento) e iniciar um fluxo inbound de busca local que comece a somar 3-5 leads/mês além das indicações. Projeção realista: de 5 para 7-8 vendas/mês mantido o mesmo topo de indicação, antes mesmo de qualquer mídia paga ou da LP completa entrar no ar."
+  },
+  "tone_of_voice_analysis": {
+    "description": "Como quase não há canais publicados, esta análise mede sobretudo AUSÊNCIA de voz, não incoerência entre vozes. A 'voz' real da marca só existe hoje na conversa 1-a-1 do Aldo no WhatsApp.",
+    "brand_voice_target": {
+      "pillars": ["Técnico e preciso", "Pragmático e direto", "Autoridade jurídica + de engenharia", "Confiável / transmite segurança", "Tranquilizador (resolve a burocracia para o cliente)"],
+      "avoid": ["Jocoso ou informal demais", "Sensacionalista / promessas vazias", "Genérico de 'mais uma consultoria'", "Tom B2C fofo/emocional raso", "Jargão jurídico que afasta o gestor leigo"]
+    },
+    "channel_drift": [
+      {"channel": "whatsapp", "actual_tone": "Técnico, pessoal e direto — a voz do próprio Aldo, que converte. Ex (reconstruído do perfil): conversa consultiva, foca na solução do problema regulatório.", "target_alignment": "bom", "drift_notes": "Alinhado em essência, mas inconsistente e não documentado — depende 100% do Aldo, sem script nem padrão que o time possa replicar.", "fix": "Documentar a voz num guia rápido + script de resposta inicial para garantir consistência quando houver mais de uma pessoa atendendo.", "example": "Voz consultiva 1-a-1 que ancora em 'resolver a pendência sem a operação parar'."},
+      {"channel": "site", "actual_tone": "Inexistente — não há site.", "target_alignment": "nenhum", "drift_notes": "Nenhuma voz publicada. A PUV precisa nascer já no tom-alvo na LP da S3.", "example": "—"},
+      {"channel": "linkedin", "actual_tone": "Inexistente como institucional; perfil pessoal do Aldo a confirmar.", "target_alignment": "nenhum", "drift_notes": "Canal mais estratégico para o ICP está mudo. A voz de autoridade técnica-jurídica do Aldo deveria viver aqui.", "fix": "Iniciar conteúdo quinzenal no tom 'autoridade que descomplica' (técnico mas acessível ao gestor).", "example": "—"},
+      {"channel": "google_meu_negocio", "actual_tone": "Inexistente — sem GMB.", "target_alignment": "nenhum", "drift_notes": "Descrição e posts do GMB precisam nascer no tom-alvo, com palavras-chave do nicho.", "example": "—"},
+      {"channel": "instagram", "actual_tone": "Inexistente — sem perfil.", "target_alignment": "nenhum", "drift_notes": "Não prioritário para este ICP; quando existir, manter o tom técnico-institucional, nunca B2C raso.", "example": "—"}
+    ],
+    "coherence_score": 15
+  },
+  "url_audit": {
+    "description": "A Lucena não possui URLs ativas a auditar. Esta lista registra os ativos digitais a CRIAR e o único canal existente a verificar.",
+    "urls": [
+      {"url": "https://wa.me/559282202492", "purpose": "WhatsApp — único canal de contato ativo", "status_expected": "Verificar se está em WhatsApp Business; se pessoal, migrar.", "verify_checklist": ["Está como WhatsApp Business?", "Tem saudação e mensagem de ausência?", "Usa etiquetas de etapa?", "Há link wa.me com mensagem pré-preenchida para divulgar?"]},
+      {"url": "(a registrar) lucenaadvisory.com.br", "purpose": "Domínio institucional / futura LP", "status_expected": "Registrar domínio e subir página 'em construção' de 1 dobra.", "verify_checklist": ["Domínio disponível e registrado?", "Página no ar com PUV + CTA WhatsApp?", "GA4/GTM instalados desde o início?", "Aponta para o WhatsApp correto?"]},
+      {"url": "(a criar) Google Meu Negócio — Lucena Advisory, Manaus", "purpose": "Busca local de alta intenção", "status_expected": "Reivindicar perfil, otimizar e coletar reviews.", "verify_checklist": ["Categoria 'Consultoria ambiental' correta?", "Endereço/horário/telefone preenchidos?", "Fotos da equipe/escritório?", "5-10 reviews iniciais solicitados à carteira?"]},
+      {"url": "(a criar) linkedin.com/company/lucena-advisory", "purpose": "Autoridade B2B e canal do ICP", "status_expected": "Criar página institucional + otimizar perfil pessoal do Aldo.", "verify_checklist": ["Página institucional criada?", "Bio do Aldo com credenciais + mensagem-chave?", "Primeiro post de autoridade publicado?", "Link para o WhatsApp/site?"]}
+    ]
+  },
+  "quick_wins": [
+    {
+      "action": "Padronizar a cadência de follow-up no WhatsApp para todo lead que não fecha na hora: um script de resposta inicial + 3 toques em 7 dias (dia 1, dia 3, dia 7), sempre fechando com próximo passo e data.",
+      "channel": "whatsapp",
+      "time_estimate": "1h",
+      "expected_impact": "Ataca diretamente o motivo nº 1 de perda ('o lead sumiu'). Potencial de recuperar 1-2 vendas/mês (+R$ 10k-21k MRR) antes mesmo do CRM.",
+      "who_does_it": "operator",
+      "steps": ["Escrever o template de resposta inicial ancorado em segurança jurídica", "Definir os 3 toques (dia 1/3/7) com gatilhos de valor (não só 'tudo bem?')", "Treinar o Aldo a sempre agendar o próximo passo", "Registrar em planilha/etiqueta até o CRM entrar"]
+    },
+    {
+      "action": "Reivindicar e otimizar o Google Meu Negócio da Lucena Advisory em Manaus.",
+      "channel": "google_meu_negocio",
+      "time_estimate": "2h + coleta de reviews",
+      "expected_impact": "Destrava 100% da busca local de alta intenção ('consultoria ambiental Manaus') que hoje vai para concorrentes. ROI imediato e custo zero.",
+      "who_does_it": "operator",
+      "steps": ["Reivindicar o perfil com a categoria correta", "Preencher descrição com palavras-chave do nicho + endereço/horário", "Subir fotos da equipe/escritório", "Pedir 5-10 reviews à carteira atual (incluindo contatos do grupo âncora)"]
+    },
+    {
+      "action": "Configurar o WhatsApp Business: perfil comercial completo, saudação, mensagem de ausência e etiquetas de etapa do funil.",
+      "channel": "whatsapp",
+      "time_estimate": "1h",
+      "expected_impact": "Profissionaliza o único canal ativo e cria a base de etiquetas que vira o pipeline pré-CRM.",
+      "who_does_it": "client",
+      "steps": ["Migrar o número para WhatsApp Business", "Preencher perfil (nome, descrição, endereço, horário)", "Configurar saudação e ausência", "Criar etiquetas: Lead / Qualificado / Proposta / Negociação / Fechado"]
+    },
+    {
+      "action": "Criar a página institucional da Lucena no LinkedIn e otimizar a bio do perfil pessoal do Aldo com as credenciais (advogado + engenheiro ambiental + mestre) e a mensagem-chave.",
+      "channel": "linkedin",
+      "time_estimate": "2h",
+      "expected_impact": "Torna a Lucena achável e crível no canal onde o comitê de compra B2B realmente está, ocupando um vácuo de autoridade do nicho.",
+      "who_does_it": "operator",
+      "steps": ["Criar a company page com logo provisório e descrição no tom-alvo", "Reescrever a bio do Aldo com credenciais + 'segurança jurídica que mantém a operação funcionando'", "Publicar o primeiro post de autoridade (ex: o que muda com a Lei 15.190/2025)", "Conectar com gestores/engenheiros do ecossistema industrial do AM"]
+    },
+    {
+      "action": "Registrar o domínio e subir uma página 'em construção' de 1 dobra (PUV + serviços + botão WhatsApp + GA4/GTM) enquanto a LP completa é produzida na S3.",
+      "channel": "site",
+      "time_estimate": "2-3h",
+      "expected_impact": "Deixa de retornar 'nada' no Google para quem busca a Lucena pelo nome; dá um destino mínimo e mensurável (GA4) para indicações e LinkedIn.",
+      "who_does_it": "operator",
+      "steps": ["Registrar lucenaadvisory.com.br", "Montar 1 dobra com PUV + 3 serviços + CTA WhatsApp", "Instalar GA4 + GTM desde já", "Apontar todos os perfis (GMB, LinkedIn) para essa página"]
+    }
+  ],
+  "key_insight": {
+    "headline": "A Lucena perde lead em duas pontas invisíveis: não é achada quando pesquisam, e não puxa de volta quando o lead esfria. Os dois buracos se fecham com quick wins de horas — antes de qualquer mídia.",
+    "context": "O instinto seria 'fazer site e anunciar'. Mas o funil mostra que a operação já converte 50% quando o Aldo conversa — o dinheiro está vazando ANTES (lead que pesquisa e não acha a Lucena) e DEPOIS (lead que diz 'te retorno' e some). Nenhum desses dois exige a LP completa nem campanha: exige GMB reivindicado, WhatsApp instrumentado e uma cadência de 3 toques.",
+    "numbered_reasons": [
+      "(1) Vazamento mensurável: 50% das propostas (5 de 10/mês) não fecham, e a causa nº 1 declarada é 'o lead sumiu' — cadência, não preço. Ao ticket de ~R$ 10,5k, recuperar 1-2/mês vale +R$ 10k-21k MRR.",
+      "(2) Causa-raiz dupla: invisibilidade na busca (sem GMB/site, concorrentes ocupam a 1ª página) + ausência de follow-up sistematizado (WhatsApp pessoal + planilha).",
+      "(3) Quick wins que destravam: GMB (2h), WhatsApp Business + cadência (2h) e LinkedIn institucional (2h) — custo zero, executáveis nesta semana, com impacto antes de a S3 sequer começar."
+    ],
+    "discussion_anchor": "O stakeholder precisa aprovar a sequência: executar os 5 quick wins JÁ e implantar o CRM/cadência ANTES de investir em LP completa, identidade e mídia. Gastar em aquisição enquanto o funil vaza nas duas pontas é encher um balde furado — e os furos custam horas para tapar, não orçamento."
+  },
+  "honesty_alert": "Esta não é, com rigor, uma auditoria de comunicação — é uma auditoria da AUSÊNCIA de comunicação. Não há screenshots porque não há canais; os scores baixos refletem ativos inexistentes, não execução ruim. Duas implicações honestas: (1) Como quase tudo precisa ser construído do zero, a maior parte das 'recomendações' é, na verdade, escopo de produção da S3 (LP, identidade, manual de marca) — o que esta auditoria entrega de imediato são os quick wins de custo zero e o mapa de prioridades, não correções de algo que já existe. (2) Os scores dos concorrentes no benchmark são estimativas direcionais a partir da presença digital observada na pesquisa de mercado — números de seguidores de Instagram e notas de reviews do GMB não foram verificáveis via web e devem ser conferidos manualmente antes de serem citados ao cliente como dado fechado."
+}

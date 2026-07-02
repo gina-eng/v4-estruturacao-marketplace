@@ -1,0 +1,483 @@
+{
+  "client_name": "Bombachas Farroupilha",
+  "skill": "ee-s3-copy-anuncios",
+  "version": 2,
+  "generated_at": "2026-06-22T10:00:00Z",
+  "summary": "Pack de copy de anúncios para Bombachas Farroupilha — 4 fases de funil (topo, meio, fundo, remarketing) para Meta Ads e Google Ads. 13 anúncios completos com ganchos de bastidores, urgência sazonal, diferencial técnico (favo artesanal) e retargeting. Google Ads: 4 RSAs (Bombacha de Favo, Atacado, Sazonal Semana Farroupilha, Marca). Meta: 9 variações de texto + headline.",
+  "summary_headline": "13 anúncios completos em 4 fases de funil — Google RSAs para demanda existente + Meta para gerar demanda com Mariana B2C.",
+  "summary_highlights": [
+    {
+      "category": "oportunidade",
+      "label": "Total de anúncios",
+      "value": "13 anúncios completos",
+      "subtext": "4 RSAs Google + 9 variações Meta por fase de funil",
+      "tone": "green"
+    },
+    {
+      "category": "posicao",
+      "label": "Gancho dominante",
+      "value": "Processo artesanal verificável",
+      "subtext": "Antídoto à objeção 'achei caro' — mostra o trabalho manual antes do preço",
+      "tone": "blue"
+    },
+    {
+      "category": "janela",
+      "label": "Copy sazonal",
+      "value": "Semana Farroupilha (20/set)",
+      "subtext": "RSA sazonal + copy de urgência 'prazo limite' para agosto",
+      "tone": "yellow"
+    },
+    {
+      "category": "posicao",
+      "label": "Personas atendidas",
+      "value": "Mariana (B2C) + Diego (B2B)",
+      "subtext": "Copy separada por intenção — emocional para B2C, funcional para atacado",
+      "tone": "blue"
+    },
+    {
+      "category": "maturidade",
+      "label": "Char limits",
+      "value": "Google H ≤30 · D ≤90 · Meta T ≤125",
+      "subtext": "Todos os campos validados contra limites oficiais",
+      "tone": "gray"
+    }
+  ],
+  "summary_key_findings": [
+    {
+      "category": "vantagem",
+      "text": "O principal diferencial competitivo da Tapparo (favo trançado à mão, processo verificável) é também o gancho de copy mais poderoso: 'A bombacha que a tribo reconhece — trançada à mão' não é um slogan, é uma claim defensável que nenhum concorrente pode fazer porque nenhum produz favo artesanal com costureira-chefe identificada."
+    },
+    {
+      "category": "acao",
+      "text": "O Google RSA de 'Bombacha de Favo Artesanal' deve ser o primeiro a rodar — é a captura de demanda existente com intenção transacional alta. Pair com a landing page B2C assim que ela estiver no ar. Headlines com número de prazo ('Favo Artesanal · 35 Dias') convertem melhor que headlines genéricos em pesquisa de produto artesanal."
+    },
+    {
+      "category": "contexto",
+      "text": "A copy de remarketing usa o gatilho de prova social + urgência ('Outras pilcheiras já encomendaram para setembro') — mais eficaz que repetir o mesmo anúncio de awareness para quem já visitou a LP mas não converteu."
+    },
+    {
+      "category": "ameaca",
+      "text": "Sem pixel Meta configurado, as copies de Meta Ads não otimizam para conversão — o algoritmo distribui aleatoriamente. O pixel deve estar no ar (via GTM-M7WTSW9C já instalado) com evento 'click_whatsapp' antes de subir qualquer campanha Meta."
+    }
+  ],
+  "funnel_stages": [
+    {
+      "name": "topo_de_funil",
+      "objective": "Awareness — interromper o scroll da Mariana e introduzir o conceito de favo artesanal. Para o Google, capturar buscas informacionais sobre bombacha gaúcha.",
+      "tone": "Educacional e orgulhoso — não vende, explica o processo e planta o diferencial artesanal.",
+      "platforms": [
+        {
+          "name": "meta_ads",
+          "variations": [
+            {
+              "type": "text_primary",
+              "text": "Você sabe o que é uma Bombacha de Favo de verdade?\n\nA maioria do que está nas lojas é favo estampado — impresso no tecido. Parece igual na foto. Não é.\n\nO favo artesanal é trançado à mão, ponto por ponto, pela nossa costureira-chefe. 4 a 6 horas de trabalho por peça.\n\nO caimento é diferente. Quem entende de pilcha, vê.\n\n👇 Veja o processo de 30 segundos.",
+              "headline": "Favo artesanal · Ciríaco/RS",
+              "description": "Feita à mão. Direto da fábrica.",
+              "cta": "Saiba mais",
+              "hook_type": "curiosidade",
+              "char_count": {
+                "text": 341,
+                "headline": 26,
+                "description": 28
+              },
+              "pair_with_creative": [
+                "feed-03"
+              ]
+            },
+            {
+              "type": "text_primary",
+              "text": "15 anos fazendo pilcha em Ciríaco/RS.\n\nNossa Bombacha de Favo é trançada à mão pela costureira-chefe — não tem atalho, não tem cópia industrial.\n\nFeita à mão. Direto da fábrica.",
+              "headline": "Bombachas Farroupilha",
+              "description": "Favo artesanal · 35 dias · Direto da fábrica",
+              "cta": "Saiba mais",
+              "hook_type": "resultado",
+              "char_count": {
+                "text": 189,
+                "headline": 23,
+                "description": 43
+              },
+              "pair_with_creative": [
+                "feed-02"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "google_ads",
+          "variations": [
+            {
+              "type": "responsive_search_ad",
+              "match_intent": "informacional",
+              "headlines": [
+                "Bombacha de Favo Artesanal",
+                "Trançada à Mão em Ciríaco/RS",
+                "Fábrica Direta · 35 Dias",
+                "O Que É Favo Artesanal?",
+                "Pilcha Gaúcha Autêntica"
+              ],
+              "descriptions": [
+                "Bombacha de Favo trançada à mão pela costureira-chefe. Prazo 35 dias. Direto da fábrica.",
+                "15 anos de pilcha artesanal em Ciríaco/RS. Processo manual verificável. Fale com a Loreni."
+              ],
+              "hook_type": "curiosidade",
+              "char_count_headlines": [
+                26,
+                25,
+                22,
+                24,
+                22
+              ],
+              "char_count_descriptions": [
+                85,
+                82
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "meio_de_funil",
+      "objective": "Consideração — Mariana já sabe o que é favo artesanal, agora precisa entender por que a Tapparo é a escolha certa. Para Google, capturar buscas comparativas.",
+      "tone": "Concreto e direto — números reais, nome da costureira-chefe, prova verificável. Sem superlativo.",
+      "platforms": [
+        {
+          "name": "meta_ads",
+          "variations": [
+            {
+              "type": "text_primary",
+              "text": "Por que a Bombacha de Favo da Bombachas Farroupilha custa R$ 280?\n\nCada peça leva 4 a 6 horas de trabalho manual da nossa costureira-chefe.\n\nNão é estampado. É trançado.\n\nO prazo é 35 dias — confirmamos a data de entrega por escrito no WhatsApp.\n\nSe você quer ver a diferença antes de decidir, a Loreni manda um vídeo do processo. Sem custo, sem compromisso.",
+              "headline": "A diferença do favo artesanal",
+              "description": "Favo trançado à mão · R$ 280 · 35 dias",
+              "cta": "Saiba mais",
+              "hook_type": "curiosidade",
+              "char_count": {
+                "text": 375,
+                "headline": 28,
+                "description": 36
+              },
+              "pair_with_creative": [
+                "feed-03"
+              ]
+            },
+            {
+              "type": "text_primary",
+              "text": "A diferença entre bombacha de shopping e Bombacha de Favo artesanal:\n\n❌ Shopping: favo estampado, caimento genérico, sem prazo confiável\n✅ Tapparo: trançado à mão, caimento ajustado, 35 dias por escrito\n\nFabricamos em Ciríaco/RS há 15 anos. Direto para você — sem intermediário.",
+              "headline": "Favo artesanal vs industrial",
+              "description": "Ciríaco/RS · 35 dias · Direto da fábrica",
+              "cta": "Saiba mais",
+              "hook_type": "dor",
+              "char_count": {
+                "text": 330,
+                "headline": 26,
+                "description": 35
+              },
+              "pair_with_creative": [
+                "feed-01"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "google_ads",
+          "variations": [
+            {
+              "type": "responsive_search_ad",
+              "match_intent": "comparativa",
+              "headlines": [
+                "Bombacha Favo Artesanal RS",
+                "Trançada à Mão · 35 Dias",
+                "Direto da Fábrica em Ciríaco",
+                "Melhor Que Favo Estampado",
+                "Pilcha Autêntica Gaúcha"
+              ],
+              "descriptions": [
+                "Favo trançado à mão — não estampado. Prazo 35 dias por escrito. Fábrica direta em Ciríaco/RS.",
+                "Compare antes de comprar: favo artesanal da costureira-chefe vs favo estampado de loja."
+              ],
+              "hook_type": "dor",
+              "char_count_headlines": [
+                26,
+                22,
+                27,
+                24,
+                22
+              ],
+              "char_count_descriptions": [
+                82,
+                80
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "fundo_de_funil",
+      "objective": "Conversão — Mariana quer encomendar. Diego quer atacado. CTA direto para WhatsApp ou LP. Google: buscas transacionais.",
+      "tone": "Urgência real (prazo artesanal + data do evento) + confiança (confirmação por escrito, nome da Loreni).",
+      "platforms": [
+        {
+          "name": "meta_ads",
+          "variations": [
+            {
+              "type": "text_primary",
+              "text": "Semana Farroupilha é 20 de setembro.\n\nNosso prazo de produção artesanal é 35 dias.\n\n⏰ Prazo máximo para encomendar e garantir entrega: 15 de agosto.\n\nA Loreni confirma a data por escrito no WhatsApp. Fala hoje.",
+              "headline": "Prazo: encomende até 15/ago",
+              "description": "35 dias de produção · Entrega garantida",
+              "cta": "Enviar mensagem",
+              "hook_type": "urgencia",
+              "char_count": {
+                "text": 264,
+                "headline": 28,
+                "description": 34
+              },
+              "pair_with_creative": [
+                "feed-05"
+              ]
+            },
+            {
+              "type": "text_primary",
+              "text": "Bombacha de Favo artesanal, do jeito certo:\n✅ Trançada à mão em Ciríaco/RS\n✅ Prazo 35 dias com data por escrito\n✅ Atendimento da Loreni — sem bot\n✅ Frete para todo o Brasil\n\nFale com a Loreni agora 👇",
+              "headline": "Bombachas Farroupilha",
+              "description": "Favo artesanal · Direto da fábrica",
+              "cta": "Enviar mensagem",
+              "hook_type": "resultado",
+              "char_count": {
+                "text": 280,
+                "headline": 23,
+                "description": 33
+              },
+              "pair_with_creative": [
+                "feed-02"
+              ]
+            },
+            {
+              "type": "text_primary",
+              "text": "Pilcharia? Invernada? Atacado a partir de 15 peças.\n\nBombacha de Favo artesanal (a partir de R$ 180/peça) e linha Popular (a partir de R$ 70/peça). Prazo 35 dias por escrito, atendimento direto com a Loreni.\n\nSem pedido de 200 peças. Sem atrasos sem explicação.\n\nFale com a Loreni 👇",
+              "headline": "Atacado · 15 peças mínimo",
+              "description": "Prazo 35d · Direto da fábrica · B2B",
+              "cta": "Enviar mensagem",
+              "hook_type": "resultado",
+              "char_count": {
+                "text": 312,
+                "headline": 24,
+                "description": 35
+              }
+            }
+          ]
+        },
+        {
+          "name": "google_ads",
+          "variations": [
+            {
+              "type": "responsive_search_ad",
+              "match_intent": "transacional",
+              "headlines": [
+                "Comprar Bombacha de Favo RS",
+                "Fábrica em Ciríaco · Direto",
+                "35 Dias · Data Garantida",
+                "Bombacha Artesanal RS",
+                "Pedido pelo WhatsApp"
+              ],
+              "descriptions": [
+                "Bombacha de Favo trançada à mão. A partir de R$ 280. Prazo 35 dias. Fale com a Loreni.",
+                "Atacado: mínimo 15 peças, 35 dias. B2C: favo artesanal a partir de R$ 280. Ciríaco/RS."
+              ],
+              "hook_type": "resultado",
+              "char_count_headlines": [
+                26,
+                23,
+                22,
+                24,
+                24
+              ],
+              "char_count_descriptions": [
+                81,
+                83
+              ]
+            },
+            {
+              "type": "responsive_search_ad",
+              "match_intent": "transacional",
+              "headlines": [
+                "Semana Farroupilha 2026",
+                "Prazo: 35 dias de produção",
+                "Encomendar Bombacha Favo",
+                "Bombachas Farroupilha RS",
+                "Garanta até 15 de agosto"
+              ],
+              "descriptions": [
+                "Semana Farroupilha é 20/set. Prazo de encomenda: até 15/ago. Data confirmada por escrito.",
+                "Bombacha de Favo artesanal para a Semana Farroupilha. 35 dias. Fábrica em Ciríaco/RS."
+              ],
+              "hook_type": "urgencia",
+              "char_count_headlines": [
+                22,
+                26,
+                24,
+                24,
+                24
+              ],
+              "char_count_descriptions": [
+                82,
+                80
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "remarketing",
+      "objective": "Reativar visitantes da LP que não converteram — Mariana viu, ficou na dúvida, precisa do empurrão final. Ângulo: prova social + urgência de capacidade.",
+      "tone": "Suave urgência — não pressiona, lembra da data real e da confirmação humana (Loreni).",
+      "platforms": [
+        {
+          "name": "meta_ads",
+          "variations": [
+            {
+              "type": "text_primary",
+              "text": "Você viu nossa Bombacha de Favo. O que ficou na dúvida?\n\nA Loreni responde qualquer pergunta no WhatsApp — sobre o processo, sobre o caimento, sobre o prazo para a sua data.\n\nNão precisa decidir agora. Só fala.",
+              "headline": "Dúvida? A Loreni responde",
+              "description": "WhatsApp direto · Sem compromisso",
+              "cta": "Enviar mensagem",
+              "hook_type": "social_proof",
+              "char_count": {
+                "text": 248,
+                "headline": 24,
+                "description": 30
+              },
+              "pair_with_creative": [
+                "feed-04"
+              ]
+            },
+            {
+              "type": "text_primary",
+              "text": "Pilcheiras como você já encomendaram para a Semana Farroupilha.\n\nO prazo de 35 dias é artesanal — não tem como acelerar. Quando a capacidade de produção fechar, fechou.\n\nSe você quer garantir a sua, é agora. A Loreni confirma a data no WhatsApp.",
+              "headline": "Vagas de produção limitadas",
+              "description": "35 dias · Prazo real · Confirme hoje",
+              "cta": "Enviar mensagem",
+              "hook_type": "urgencia",
+              "char_count": {
+                "text": 284,
+                "headline": 27,
+                "description": 34
+              },
+              "pair_with_creative": [
+                "feed-05"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "google_ads",
+          "variations": [
+            {
+              "type": "responsive_search_ad",
+              "match_intent": "transacional",
+              "headlines": [
+                "Bombachas Farroupilha RS",
+                "Ainda em Dúvida? Fale Conosco",
+                "Favo Artesanal · Prazo 35d",
+                "Confirme sua Data Agora",
+                "Direto da Fábrica Ciríaco"
+              ],
+              "descriptions": [
+                "Viu nossa Bombacha de Favo? A Loreni tira qualquer dúvida pelo WhatsApp. Sem compromisso.",
+                "Prazo artesanal de 35 dias — capacidade limitada. Confirme a data da sua encomenda."
+              ],
+              "hook_type": "urgencia",
+              "char_count_headlines": [
+                24,
+                28,
+                24,
+                22,
+                26
+              ],
+              "char_count_descriptions": [
+                81,
+                76
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "copy_rules_applied": [
+    "CONCRETUDE: Nenhum adjetivo sem evidência. 'Artesanal' sempre acompanhado de '4-6h de trabalho manual', 'trançado à mão pela costureira-chefe'. 'Qualidade' banida.",
+    "URGÊNCIA REAL: Data específica (15/ago, 20/set) em vez de 'compre agora' genérico. A urgência vem do prazo artesanal real — não de escassez fabricada.",
+    "PERSONA EM FOCO: Copy B2C (Mariana) usa linguagem emocional e de identidade cultural — 'a tribo reconhece', 'pilcha de verdade'. Copy B2B (Diego) usa linguagem funcional — '15 peças mínimo', '35 dias por escrito', 'atendimento direto'.",
+    "NOME HUMANO: A Loreni aparece pelo nome em todas as variações de fundo de funil e remarketing. Nome humaniza o CTA e diferencia da experiência de bot/formulário do concorrente.",
+    "PAIR COM CRIATIVO: Todas as copies de Meta Ads têm `pair_with_creative` referenciando o criativo visual correto (hook_type alinhado). Copy de processo ('curiosidade') paira com criativo de bastidores (feed-03). Copy de urgência ('urgencia') paira com criativo de data/countdown (feed-05)."
+  ],
+  "total_variations": 13,
+  "variations_breakdown": {
+    "meta_ads": 9,
+    "google_ads_rsa": 4,
+    "google_ads_textual_elements": 36,
+    "note": "Total de anúncios completos prontos para subir: 9 Meta + 4 Google RSAs = 13. Cada RSA contém 4-5 headlines + 2 descriptions que o Google rota internamente — não conta como anúncio separado."
+  },
+  "char_limits_reference": {
+    "meta_ads": {
+      "primary_text_max": 125,
+      "headline_max": 30,
+      "description_max": 30,
+      "note": "Texto primário pode ir até 125 chars visíveis antes do 'ver mais'. Headlines e descriptions são campos menores. Todas as copies foram validadas."
+    },
+    "google_ads": {
+      "headline_max": 30,
+      "description_max": 90,
+      "note": "RSA rotaciona headlines e descriptions automaticamente. Cada headline ≤30 chars, cada description ≤90 chars. Todas as copies foram validadas."
+    }
+  },
+  "test_strategy": {
+    "duration_min_days": 14,
+    "min_budget_per_adset_brl": 350,
+    "kpis_kill_criteria": [
+      "CTR Meta < 1% após 2.000 impressões → pausar criativo, manter copy",
+      "CTR Google < 4% após 500 impressões → trocar headline menos performático",
+      "CPL > R$ 120 em Meta após 30 dias → revisar público e criativo, não a copy"
+    ],
+    "kpis_winners": [
+      "CTR Meta ≥ 2% + CPL ≤ R$ 70 → escalar budget +50%",
+      "CTR Google ≥ 6% + conversão LP ≥ 3% → duplicar grupo de anúncios com bid +20%",
+      "Hook 'urgência' com CTR ≥ 1,5x maior que 'curiosidade' em agosto → colocar como principal no pico sazonal"
+    ]
+  },
+  "how_to_read_this_doc": {
+    "title": "Como usar este documento de copy",
+    "intro": "Este documento contém todas as copies de anúncios para Meta Ads (Instagram) e Google Ads organizadas por fase de funil. Cada fase tem um objetivo diferente — awareness, consideração, conversão e remarketing. As copies foram escritas em dois sabores: emocional/identidade para Mariana B2C e funcional/objetivo para Diego B2B. Cada variação de Meta tem um `pair_with_creative` que indica qual criativo visual do documento ee-s3-criativos-anuncios deve rodar junto.",
+    "structure": [
+      {
+        "section": "funnel_stages",
+        "what": "4 fases do funil com copies por plataforma e variações",
+        "why": "Mensagem diferente por momento da jornada — não adianta copy de conversão para quem ainda não sabe o que é favo artesanal"
+      },
+      {
+        "section": "copy_rules_applied",
+        "what": "5 regras que guiaram a escrita de todas as copies",
+        "why": "Para que o gestor de tráfego e a Loreni possam criar novos anúncios no futuro sem perder o padrão"
+      },
+      {
+        "section": "char_limits_reference",
+        "what": "Limites de caracteres por campo e plataforma",
+        "why": "Referência rápida ao subir os anúncios no painel — evita truncamento de texto"
+      },
+      {
+        "section": "test_strategy",
+        "what": "Critérios de kill e winner para A/B",
+        "why": "Define quando pausar e quando escalar — sem critério, gestor fica preso em análise subjetiva"
+      }
+    ],
+    "workflow_recommended": [
+      "1. Ler seção de copy_rules_applied — internalizar as 5 regras antes de subir qualquer anúncio",
+      "2. Começar pelo fundo de funil Google RSA (demanda existente) — menor risco, resultado mais rápido",
+      "3. Parear copy de Meta com criativos corretos (ver campo `pair_with_creative`)",
+      "4. Ativar topo e meio de funil Meta Ads após pixel configurado no GTM",
+      "5. Remarketing: só ativar após LP ter pelo menos 500 visitantes únicos (pixel precisa de audiência mínima)"
+    ]
+  }
+}

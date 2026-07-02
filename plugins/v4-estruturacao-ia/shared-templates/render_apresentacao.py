@@ -14,6 +14,7 @@ Resultado: deck cresce conforme a Estruturação avança (S1 → S2 → S3).
 import json
 import os
 import sys
+import base64
 import html as _html
 from datetime import datetime
 
@@ -134,6 +135,14 @@ def fill_for_score(score):
     return cls.replace("cls-", "fill-")
 
 
+def score_pct(score):
+    """Largura numérica da barra (0-100). Score não-numérico (ex: '?') → 0 (barra vazia)."""
+    try:
+        return max(0, min(100, float(score)))
+    except Exception:
+        return 0
+
+
 def label_for_classification(cls_):
     return {
         "critical": "gap crítico",
@@ -148,7 +157,38 @@ def label_for_classification(cls_):
 # Slide constants
 # ---------------------------------------------------------------------------
 
-LOGO = '<div class="slide__header"><span class="logo-v4"><img src="assets/logo-v4-vermelho.png" alt="V4"></span></div>'
+def _logo_src():
+    """Embute o logo V4 como data URI (deck autossuficiente — não depende de assets/ no deploy).
+    Fallback para o caminho relativo se o arquivo não for encontrado."""
+    path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets", "logo-v4-vermelho.png")
+    try:
+        with open(path, "rb") as f:
+            return "data:image/png;base64," + base64.b64encode(f.read()).decode("ascii")
+    except Exception:
+        return "assets/logo-v4-vermelho.png"
+
+
+# Diretório do cliente em render — usado para embutir imagens locais (criativos) como data URI.
+_CLIENT_DIR = ""
+
+
+def _local_img_src(rel_path):
+    """Embute uma imagem local (relativa ao client_dir, ex.: 'assets/criativos/x.jpg') como data URI.
+    Mantém o deck autossuficiente. Fallback para o caminho relativo (que também resolve no deploy,
+    pois render_portal.sh copia assets/ para o diretório publicado)."""
+    if not rel_path:
+        return ""
+    try:
+        path = os.path.join(_CLIENT_DIR, rel_path)
+        ext = os.path.splitext(path)[1].lower()
+        mime = "image/png" if ext == ".png" else ("image/webp" if ext == ".webp" else "image/jpeg")
+        with open(path, "rb") as f:
+            return f"data:{mime};base64," + base64.b64encode(f.read()).decode("ascii")
+    except Exception:
+        return rel_path
+
+
+LOGO = f'<div class="slide__header"><span class="logo-v4"><img src="{_logo_src()}" alt="V4"></span></div>'
 
 # Ordem canônica de slides (a IDs ↔ função builder)
 # Builder é chamado se a skill correspondente está completa (existe em outputs).
@@ -167,6 +207,7 @@ SLIDE_PLAN = [
     ("posicionamento", "build_posicionamento", "ee-s2-posicionamento"),
     ("midia_atual", "build_midia_atual", "ee-s2-diagnostico-midia"),
     ("midia_cenarios", "build_midia_cenarios", "ee-s2-diagnostico-midia"),
+    ("criativos", "build_criativos", "ee-s2-diagnostico-criativos"),
     ("organico_comparativo", "build_organico_comparativo", "ee-s2-diagnostico-organico-ig"),
     ("organico_padroes", "build_organico_padroes", "ee-s2-diagnostico-organico-ig"),
     ("cro_tecnico", "build_cro_tecnico", "ee-s2-diagnostico-cro"),
@@ -232,6 +273,8 @@ def build_pauta(client, outputs):
         items.append("Posicionamento aprovado")
     if "ee-s2-diagnostico-midia" in outputs:
         items.append("Diagnóstico de mídia paga")
+    if "ee-s2-diagnostico-criativos" in outputs:
+        items.append("Diagnóstico de criativos")
     if "ee-s2-diagnostico-organico-ig" in outputs:
         items.append("Conteúdo orgânico — Instagram")
     if "ee-s2-diagnostico-cro" in outputs:
@@ -290,11 +333,24 @@ def build_onde_estamos(client, outputs):
         return f"{num} {unit_norm}"
 
     kpis = []
-    if ident.get("annual_revenue"):
+    # Faturamento: prefere o MENSAL quando informado (rótulo honesto com período),
+    # senão cai no anual. Evita rotular um valor mensal como "anual".
+    rev_month = ident.get("monthly_revenue_avg")
+    rev_annual = ident.get("annual_revenue")
+    rev_note = ident.get("revenue_note")
+    if rev_month or rev_annual:
+        if rev_month:
+            rev_label = "Faturamento/mês"
+            rev_value = parse_money_from_text(rev_month)
+            rev_hint = rev_note or rev_annual or "—"
+        else:
+            rev_label = "Faturamento anual"
+            rev_value = parse_money_from_text(rev_annual)
+            rev_hint = rev_note or rev_month or "—"
         kpis.append({
-            "label": "Faturamento anual",
-            "value": esc(parse_money_from_text(ident["annual_revenue"])),
-            "hint": esc(truncate(ident.get("monthly_revenue_avg"), 50, "")) if ident.get("monthly_revenue_avg") else "—",
+            "label": rev_label,
+            "value": esc(rev_value),
+            "hint": esc(truncate(rev_hint, 60, "")),
         })
     if product.get("active_customers"):
         num = _first_number(product["active_customers"])
@@ -374,8 +430,8 @@ def build_maturidade(client, outputs):
         pillar_cards.append(f"""
           <div class="pillar-card">
             <div class="pillar-card__name">{esc(name)}</div>
-            <div class="pillar-card__score {cls}">{esc(score)}</div>
-            <div class="pillar-card__bar"><div class="pillar-card__bar-fill {fill}" style="width:{esc(score or 0)}%;"></div></div>
+            <div class="pillar-card__score {cls}">{esc(score if score is not None else "?")}</div>
+            <div class="pillar-card__bar"><div class="pillar-card__bar-fill {fill}" style="width:{score_pct(score)}%;"></div></div>
             <div class="pillar-card__class {cls}">{esc(classification_label)}</div>
           </div>""")
 
@@ -438,13 +494,16 @@ def _swot_quad(label, items, modifier):
 
 
 def _swot_items(raw):
-    """Normaliza item de SWOT (string ou {text|description}) para string."""
+    """Normaliza item de SWOT para string curta de slide.
+    Prefere campos curtos (title/strategy) ao texto longo (description) — num slide
+    cabe a manchete do item, não o parágrafo. Cobre SWOT (title/description),
+    TOWS (strategy) e itens em string pura."""
     out = []
     for it in (raw or []):
         if isinstance(it, str):
             out.append(it)
         elif isinstance(it, dict):
-            out.append(it.get("text") or it.get("description") or it.get("title") or "")
+            out.append(it.get("title") or it.get("strategy") or it.get("text") or it.get("description") or "")
     return [x for x in out if x]
 
 
@@ -975,7 +1034,7 @@ def build_organico_comparativo(client, outputs):
             </tr>"""
 
     rows = [_row(me, is_me=True)]
-    for c in comps[:3]:
+    for c in comps[:6]:
         if isinstance(c, dict):
             rows.append(_row(c))
 
@@ -1277,6 +1336,73 @@ def build_fechamento(client, outputs):
 # Composition
 # ---------------------------------------------------------------------------
 
+def build_criativos(client, outputs):
+    d = outputs.get("ee-s2-diagnostico-criativos")
+    if not d:
+        return ""
+    matrix = d.get("creative_matrix") or []
+    if not matrix:
+        return ""
+
+    vmap = {"manter": 0, "otimizar": 0, "eliminar": 0}
+    for c in matrix:
+        v = (c.get("verdict") or "").strip().lower()
+        if v in vmap:
+            vmap[v] += 1
+
+    VSTYLE = {
+        "manter":   ("Manter",   "background:#1FA463;color:#fff;"),
+        "otimizar": ("Otimizar", "background:#FFD0A8;color:#5a0802;"),
+        "eliminar": ("Eliminar", "background:#2b0a06;color:#ffb3a3;border:1px solid #ff8a7a;"),
+    }
+
+    featured = [c for c in matrix if ((c.get("preview") or {}).get("thumbnail_url"))]
+    cards = []
+    for c in featured[:4]:
+        v = (c.get("verdict") or "").strip().lower()
+        vlabel, vstyle = VSTYLE.get(v, (v or "—", "background:rgba(255,255,255,.2);color:#fff;"))
+        img = _local_img_src((c.get("preview") or {}).get("thumbnail_url"))
+        name = c.get("name") or c.get("title") or "Criativo"
+        score = c.get("total_score")
+        score_str = f"{score}/25" if score is not None else "—"
+        issue = truncate(c.get("main_issue") or c.get("comment") or "", 110)
+        cards.append(f"""
+        <div class="glass" style="padding:0;overflow:hidden;display:flex;flex-direction:column;">
+          <div style="position:relative;height:26vh;background:#000;">
+            <img src="{img}" alt="{esc(name)}" style="width:100%;height:100%;object-fit:cover;display:block;">
+            <span style="position:absolute;top:.55rem;left:.55rem;{vstyle}font-weight:700;font-size:.72rem;letter-spacing:.04em;text-transform:uppercase;padding:.3rem .7rem;border-radius:100px;box-shadow:0 2px 8px rgba(0,0,0,.25);">{esc(vlabel)}</span>
+          </div>
+          <div style="padding:.8rem .95rem;display:flex;flex-direction:column;gap:.3rem;">
+            <div class="strong" style="font-size:.98rem;line-height:1.2;">{esc(name)}</div>
+            <div style="font-size:.78rem;color:#ffd0a8;font-weight:700;">Score {esc(score_str)}</div>
+            <div style="font-size:.82rem;line-height:1.32;color:rgba(255,245,230,.9);">{esc(issue)}</div>
+          </div>
+        </div>""")
+
+    headline = truncate((d.get("key_insight") or {}).get("headline") or d.get("summary_headline", ""), 240)
+    chips = (
+        f'<span class="pill" style="background:#1FA463;">Manter · {vmap["manter"]}</span> '
+        f'<span class="pill" style="background:#FFD0A8;color:#5a0802;">Otimizar · {vmap["otimizar"]}</span> '
+        f'<span class="pill" style="background:#2b0a06;color:#ffb3a3;">Eliminar · {vmap["eliminar"]}</span>'
+    )
+
+    return f"""
+    <section class="slide slide--diag">
+      {LOGO}
+      <div class="slide__content">
+        <span class="eyebrow">Diagnóstico de mídia · Criativos</span>
+        <h2 class="title-section">Os criativos em campanha</h2>
+        <div style="display:flex;gap:.55rem;flex-wrap:wrap;margin-bottom:1.6vh;">{chips}</div>
+        <div class="row-4">{''.join(cards)}</div>
+        <div class="highlight-box" style="margin-top:2.4vh;">
+          <div class="highlight-box__label">Achado-raiz V4</div>
+          <div class="highlight-box__text">{esc(headline)}</div>
+        </div>
+      </div>
+    </section>
+    """
+
+
 BUILDERS = {
     "build_cover": build_cover,
     "build_pauta": build_pauta,
@@ -1291,6 +1417,7 @@ BUILDERS = {
     "build_posicionamento": build_posicionamento,
     "build_midia_atual": build_midia_atual,
     "build_midia_cenarios": build_midia_cenarios,
+    "build_criativos": build_criativos,
     "build_organico_comparativo": build_organico_comparativo,
     "build_organico_padroes": build_organico_padroes,
     "build_cro_tecnico": build_cro_tecnico,
@@ -1468,17 +1595,17 @@ SHELL_HTML = """<!DOCTYPE html>
     background: rgba(255,255,255,0.08);
     border: 1px solid rgba(255,255,255,0.16);
     backdrop-filter: blur(14px); border-radius: 14px;
-    padding: 20px 22px; overflow: hidden;
-    display: flex; flex-direction: column;
+    padding: 14px 18px; overflow: hidden;
+    display: flex; flex-direction: column; min-height: 0;
   }}
   .swot-quad__label {{
-    font-size: 0.9rem; letter-spacing: 0.1em; text-transform: uppercase;
-    color: #ffd0a8; font-weight: 700; margin-bottom: 12px;
+    font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase;
+    color: #ffd0a8; font-weight: 700; margin-bottom: 8px; flex: 0 0 auto;
   }}
-  .swot-quad ul {{ list-style: none; padding: 0; }}
+  .swot-quad ul {{ list-style: none; padding: 0; margin: 0; flex: 1 1 auto; min-height: 0; overflow-y: auto; }}
   .swot-quad ul li {{
-    font-size: clamp(0.95rem, 1.05vw, 1.05rem);
-    line-height: 1.4; padding: 6px 0 6px 18px;
+    font-size: clamp(0.8rem, 0.95vw, 0.98rem);
+    line-height: 1.3; padding: 4px 0 4px 18px;
     position: relative; color: rgba(255,245,230,0.95);
   }}
   .swot-quad ul li::before {{
@@ -1653,6 +1780,8 @@ SHELL_HTML = """<!DOCTYPE html>
 # ---------------------------------------------------------------------------
 
 def render(client_dir):
+    global _CLIENT_DIR
+    _CLIENT_DIR = client_dir
     client = load_client(client_dir)
     outputs = load_outputs(client_dir)
 

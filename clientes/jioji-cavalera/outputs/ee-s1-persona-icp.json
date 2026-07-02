@@ -1,0 +1,165 @@
+{
+  "client_name": "Jioji Cavalera",
+  "skill": "ee-s1-persona-icp",
+  "version": 3,
+  "generated_at": "2026-06-09T00:00:00Z",
+  "data_source": "base-de-conhecimento (call vendas 26/05, briefing SPICED, kickoff 01/06) + research. Negócio confirmado; DEMOGRAFIA detalhada do consumidor ainda não levantada — persona aterrada nos fatos conhecidos, com lacunas marcadas.",
+  "summary": "Persona dupla aterrada nos dados reais (não mais 'streetwear jovem' genérico). A Jioji atende dois públicos de moda DE MARCA em Porto Velho: (A) MASCULINO, ancorado na Cavalera — a marca principal e forte da loja; (B) FEMININO, que era servido principalmente pela Melissa — e que precisa ser RECOMPOSTO, porque a franquia Melissa sai do shopping no 2º semestre/2026. Ambos compram majoritariamente na loja física, mas há comportamento real de comprar online e retirar na loja. A dor central do consumidor no digital é o FRETE (alto para longas distâncias) e a confiança/disponibilidade. A mensagem-chave recomendada combina ORIGINALIDADE + PRESENÇA LOCAL + CONVENIÊNCIA (Cavalera oficial em Porto Velho, com retirada na loja e frete claro no entorno). IMPORTANTE: a demografia fina (faixa etária, renda, % masculino vs feminino, ticket por perfil) ainda NÃO foi levantada — a Sandra vai puxar dados do PDV; até lá, esses pontos são hipótese.",
+  "summary_headline": "Dois públicos de marca em Porto Velho: masculino (âncora Cavalera) + feminino (que a Melissa servia — a recompor com a saída dela). Compram na loja, mas online+retira já acontece. Dor digital nº1 = frete. Demografia fina a validar.",
+  "summary_highlights": [
+    {"category": "posicao", "label": "Público A", "value": "Masculino (Cavalera)", "subtext": "Âncora da loja — marca forte no masculino", "tone": "blue"},
+    {"category": "posicao", "label": "Público B", "value": "Feminino (a recompor)", "subtext": "Era atendido pela Melissa, que sai do shopping no 2º sem/2026", "tone": "yellow"},
+    {"category": "oportunidade", "label": "Online + retira", "value": "Já acontece", "subtext": "Comprar no site e retirar na loja — conveniência local real", "tone": "green"},
+    {"category": "risco", "label": "Dor digital nº1", "value": "Frete", "subtext": "'O frete acaba com a venda' — barreira de conversão online", "tone": "red"},
+    {"category": "competicao", "label": "Concorrência online", "value": "cavalera.com.br + marketplace", "subtext": "Disputam o mesmo cliente por variedade/preço", "tone": "red"},
+    {"category": "janela", "label": "Demografia fina", "value": "A validar", "subtext": "Faixa etária/renda/ticket por perfil — Sandra puxa do PDV", "tone": "gray"}
+  ],
+  "summary_key_findings": [
+    {"category": "contexto", "text": "São dois públicos, não um: o MASCULINO ancorado na Cavalera (marca principal, forte no masculino) e o FEMININO que a Melissa atendia. Com a saída da Melissa do shopping (2º sem/2026), o público feminino precisa ser recomposto — com Cavalera feminina, remanescente de Melissa e as outras marcas (Lado Avesso, IX/Yexx). Tratar como um público só dilui a comunicação."},
+    {"category": "vantagem", "text": "O território defensável é ORIGINALIDADE + LOCAL + CONVENIÊNCIA: a Jioji é Cavalera oficial em Porto Velho, com 2 lojas físicas (25+ anos) e a opção de comprar online e retirar na loja (comportamento que JÁ existe). Isso ganha do e-commerce nacional (sem vínculo local) e do marketplace (sem garantia/atendimento) — sem competir em preço/variedade."},
+    {"category": "ameaca", "text": "A dor central do consumidor no digital é o FRETE: a Sandra declarou que 'o frete acaba com a venda' para destinos distantes. Some-se a comparação com cavalera.com.br/marketplace e a sobrecarga de atendimento no WhatsApp. O cliente que não encontra frete viável ou atendimento ágil desiste ou compra de outro canal."},
+    {"category": "acao", "text": "Mensagem-chave recomendada: 'Cavalera original em Porto Velho — compre online e retire na loja, ou receba com frete pra região.' Combina originalidade (vs marketplace), presença local (vs nacional) e conveniência (resolve a dor de frete). Para o público feminino em recomposição, comunicar a curadoria multimarca além da Melissa."},
+    {"category": "acao", "text": "VALIDAÇÃO pendente: a Sandra vai puxar do PDV a taxa de recompra e o histórico de clientes. Precisamos detalhar faixa etária, % masculino vs feminino, ticket por perfil e o que mais recompra — para sair de hipótese e calibrar mídia, recompra e comunicação."}
+  ],
+  "icp": {
+    "demographics": {
+      "type": "mixed",
+      "age_range": "[A VALIDAR no PDV] Adultos consumidores de moda de marca em Porto Velho. Masculino (Cavalera) e feminino (linha que a Melissa servia). Faixa etária e renda detalhadas ainda não levantadas.",
+      "income_or_revenue": "[A validar] Classe B/C com poder de compra para marca (Cavalera, Melissa). Ticket médio existe no PDV mas não foi informado.",
+      "location": "Porto Velho/RO e entorno (onde o frete é viável). Há clientes que compram online e retiram na loja.",
+      "company_size": "n/a (B2C varejo)",
+      "decision_maker_role": "Próprio consumidor (uso ou presente). Decisão individual.",
+      "education": "[A validar]",
+      "other": {
+        "publico_masculino": "Ancorado na Cavalera — marca principal e forte no masculino. Base mais consolidada da loja.",
+        "publico_feminino": "Historicamente atendido pela Melissa (saindo do shopping no 2º sem/2026). A recompor com Cavalera feminina, remanescente Melissa, Lado Avesso, IX/Yexx.",
+        "comportamento_omnichannel": "Comportamento real de comprar online e retirar na loja física (declarado no kickoff).",
+        "fidelizacao": "Programa de cashback ativo; clientes de 25+ anos de relacionamento (alguns ainda citam nomes antigos da loja)."
+      }
+    },
+    "behavior": {
+      "decision_process": "[Parcialmente hipótese] Compra de moda de marca — emocional (identidade/estilo) com filtro de preço e confiança. No físico, decisão rápida na loja. No online, sensível a frete, prazo e confiança (é original? chega bem?).",
+      "research_channels": [
+        "Instagram (@jiojicavalera + perfis da loja), WhatsApp (canal forte de atendimento/venda)",
+        "Loja física (maior parte das vendas) — shopping e rua",
+        "Site jioji.com.br (Nuvemshop) — ainda com baixa tração",
+        "Comparação com cavalera.com.br nacional e marketplaces (preço/variedade)"
+      ],
+      "main_objections": [
+        "Frete: 'fica caro pra minha cidade / não compensa' (barreira nº1 declarada)",
+        "'É original?' (vs réplica de marketplace)",
+        "'Acho mais barato/variado na cavalera.com.br ou no marketplace'",
+        "Demora no atendimento (WhatsApp sobrecarregado)",
+        "Disponibilidade de tamanho/modelo"
+      ],
+      "switching_triggers": "[Parcial] Lançamento/coleção, data comemorativa, presente, necessidade. Troca por preço, frete inviável, falta de tamanho ou atendimento lento.",
+      "purchase_frequency": "[A validar no PDV] Recompra existe (cashback), mas a taxa não foi medida — Sandra vai verificar."
+    },
+    "jobs": {
+      "functional": "Masculino: 'Quando quero uma peça da Cavalera (ou renovar meu look de marca), quero encontrá-la original, com preço justo e sem dor de cabeça de frete, para vestir o estilo que curto.' Feminino: 'Quando procuro moda feminina de marca em Porto Velho, quero variedade e confiança — agora que a Melissa está saindo, quero saber o que a loja passa a oferecer.'",
+      "emotional": "Confiança (é original, vai servir, vai chegar) + identificação com a marca/estilo. Segurança de comprar de uma loja local conhecida.",
+      "social": "Vestir marca reconhecida (Cavalera) e ser visto com estilo; pertencer à clientela de uma loja local estabelecida."
+    },
+    "pains": [
+      {"pain": "Frete alto para a minha cidade/bairro inviabiliza a compra online ('o frete acaba com a venda')", "intensity": "critical", "current_workaround": "Compra na loja física, ou desiste do online, ou pede para retirar na loja."},
+      {"pain": "Insegurança se o produto é original (vs marketplace) e se vai chegar bem", "intensity": "high", "current_workaround": "Compra na loja física onde vê o produto; no online, hesita sem prova social/FAQ."},
+      {"pain": "Atendimento no WhatsApp demora (canal sobrecarregado)", "intensity": "high", "current_workaround": "Insiste, vai à loja, ou desiste."},
+      {"pain": "[Feminino] Com a saída da Melissa, não sabe o que a loja oferece de feminino", "intensity": "medium", "current_workaround": "Busca outras lojas/marcas para o feminino."},
+      {"pain": "Nem sempre encontra o tamanho/modelo desejado", "intensity": "medium", "current_workaround": "Procura em outra loja ou online."}
+    ],
+    "gains": [
+      {"gain": "Comprar Cavalera original com a segurança de uma loja local de 25+ anos", "type": "intangible"},
+      {"gain": "Conveniência: comprar online e retirar na loja, ou receber com frete viável no entorno", "type": "tangible"},
+      {"gain": "Cashback na compra (recompensa de recompra)", "type": "tangible"},
+      {"gain": "Atendimento humano próximo (loja/WhatsApp)", "type": "intangible"},
+      {"gain": "[Feminino] Encontrar boas opções de feminino mesmo após a saída da Melissa", "type": "tangible"}
+    ]
+  },
+  "persona": {
+    "name": "Público masculino (âncora Cavalera) + Público feminino (a recompor) — Porto Velho. Nomes/demografia a validar.",
+    "photo_description": "MASCULINO: consumidor de Porto Velho que curte a marca Cavalera — look casual/urbano, valoriza vestir marca original. Compra na loja (shopping ou rua) e, cada vez mais, pesquisa online. | FEMININO: consumidora que comprava Melissa/feminino na loja; com a saída da Melissa, busca o que a Jioji passa a oferecer de feminino (Cavalera fem, Lado Avesso, etc.). [Descrições baseadas no perfil de negócio — demografia visual a confirmar.]",
+    "story": "MASCULINO (âncora): cliente de moda de marca em Porto Velho, fiel à Cavalera, que é o forte da loja. Compra presencialmente, mas já experimenta comprar online e retirar na loja. Hesita no e-commerce quando o frete pesa ou não tem certeza da entrega. | FEMININO (a recompor): comprava Melissa na unidade do shopping; com a franquia saindo no 2º semestre, é um público que a Jioji precisa reter oferecendo alternativas femininas (Cavalera fem, multimarca) e comunicando isso. [Histórias ancoradas nos fatos do kickoff; a aprofundar com dados do PDV e, idealmente, conversa com clientes reais.]",
+    "quote": "MASCULINO: 'Curto a Cavalera, mas se o frete vier caro eu prefiro passar na loja.' | FEMININO: 'Eu comprava Melissa aqui — o que vocês vão ter de feminino agora?' [citações ilustrativas a validar]"
+  },
+  "where_to_find": {
+    "digital_channels": [
+      "Instagram @jiojicavalera (perfil-mãe a consolidar) + perfis da loja",
+      "WhatsApp (canal forte de atendimento e venda)",
+      "Google: 'Cavalera Porto Velho', 'loja Cavalera RO'",
+      "Loja física (shopping + rua) — ponto de contato principal",
+      "[A mapear] influenciadores/comunidades locais de moda em Porto Velho"
+    ],
+    "keywords": [
+      "MASCULINO: cavalera porto velho, camiseta cavalera, loja cavalera RO, moda masculina porto velho",
+      "FEMININO: moda feminina porto velho, melissa porto velho (residual), [marcas femininas do mix]"
+    ],
+    "influencers": [
+      "[A mapear] influenciadores de moda de Porto Velho/região Norte (micro), perfis locais",
+      "Conta oficial @cavalera como referência de lançamento/estética"
+    ],
+    "communities": [
+      "[A mapear] grupos e comunidades de Porto Velho; público dos 2 pontos (Porto Velho Shopping + Av. Carlos Gomes)",
+      "Base de clientes do cashback (relacionamento existente)"
+    ]
+  },
+  "anti_persona": {
+    "description": "Perfis que NÃO são prioridade — consomem atendimento/frete sem retorno ou comprometem margem. [Aterrado nos fatos; refinar com a operação.]",
+    "profiles": [
+      {"profile_name": "Comprador online de longa distância inviável", "description": "Cliente fora do raio onde o frete é viável; o custo de envio inviabiliza a compra ou a margem.", "signals": ["CEP distante", "pergunta só frete", "desiste no valor do frete"], "why_not": "Frete alto mata a venda/margem (dor declarada). Não é onde a Jioji compete hoje.", "operational_rule": "Focar mídia e oferta no raio de frete viável + retirada na loja. Para fora do raio, comunicar prazo/custo honesto, sem subsidiar margem."},
+      {"profile_name": "Caçador de réplica/preço", "description": "Quer 'Cavalera' pelo menor preço, compara com réplica de marketplace, não valoriza originalidade/atendimento.", "signals": ["só pergunta preço", "'na Shopee tem mais barato'", "some ao ouvir preço de original"], "why_not": "Não paga pela originalidade nem fideliza; margem comprometida.", "operational_rule": "Não mirar mídia em preço. Reforçar originalidade + local + cashback; redirecionar para promoções quando houver."},
+      {"profile_name": "Busca moda formal/social", "description": "Procura alfaiataria/social, fora do mix da Jioji.", "signals": ["pede social/terno"], "why_not": "Fora do portfólio — gera frustração.", "operational_rule": "Esclarecer o posicionamento (moda de marca casual/urbana + feminino multimarca)."}
+    ],
+    "operational_rule": "Triagem no WhatsApp/atendimento: identificar (a) cliente do raio viável / que retira na loja (prioridade) vs (b) longa distância inviável / caçador de preço (rota de saída ou condição honesta). Mídia paga mira o raio viável + público de marca."
+  },
+  "buyer_journey": {
+    "description": "Jornada B2C de varejo de moda, com físico predominante e e-commerce em tração. Aterrada nos fatos do kickoff (online+retira, frete, WhatsApp). Percentuais de leakage são hipóteses a confirmar com medição.",
+    "stages": [
+      {"stage": "Descoberta", "trigger": "Lançamento/coleção, data comemorativa, necessidade/presente, anúncio no Meta", "mental_state": "Interesse na marca/estilo", "primary_channel": "Instagram, Meta Ads, loja física, indicação", "dominant_question": "Que peça/marca eu quero — e onde acho?", "client_intervention": "Anúncios no Meta (R$1-1,5k/mês) + conteúdo orgânico (disperso em 4 perfis)", "friction_today": "Com o Meta Pixel quebrado, não se mede o que a descoberta paga no Meta gera; marca própria ainda fraca (citam nomes antigos)", "duration_estimate": "minutos a dias"},
+      {"stage": "Consideração / Pesquisa", "trigger": "Decide buscar a peça", "mental_state": "Comparando preço, originalidade e frete (vs cavalera.com.br/marketplace)", "primary_channel": "Site jioji.com.br, Instagram, WhatsApp, Google", "dominant_question": "É original? Quanto fica com o frete? Vale a pena vs marketplace/cavalera.com.br?", "client_intervention": "Site Nuvemshop pronto (com GTM+GA4), mas sem prova social/FAQ e com o Meta Pixel quebrado", "friction_today": "Dúvida de originalidade (sem depoimentos/FAQ) + frete que assusta; quem sai não é reimpactado pela verba do Meta (Pixel quebrado)", "duration_estimate": "minutos a dias"},
+      {"stage": "Decisão (online, retira ou loja)", "trigger": "Decide comprar", "mental_state": "Sensível a frete, prazo, disponibilidade", "primary_channel": "Checkout Nuvemshop / WhatsApp / loja física", "dominant_question": "Compro online e pago frete, retiro na loja, ou vou até a loja? Tem meu tamanho?", "client_intervention": "Frete grátis/6x no site; opção de retirar na loja (já acontece); WhatsApp para fechar", "friction_today": "Frete alto para longa distância mata a venda; WhatsApp sobrecarregado atrasa o fechamento", "duration_estimate": "minutos a 1 dia"},
+      {"stage": "Pós-compra / Uso", "trigger": "Recebe/retira e usa", "mental_state": "Satisfação se correu bem", "primary_channel": "Loja/entrega + redes", "dominant_question": "Valeu a pena? Vou postar/indicar? Tenho cashback?", "client_intervention": "Cashback creditado; oportunidade de UGC (subaproveitada)", "friction_today": "Sem programa de UGC nem régua de pós-compra estruturada", "duration_estimate": "dias"},
+      {"stage": "Recompra", "trigger": "Nova coleção/data/necessidade", "mental_state": "Aberto a voltar, especialmente com cashback", "primary_channel": "WhatsApp, Instagram, loja", "dominant_question": "O que tem de novo? Tenho cashback pra usar?", "client_intervention": "Cashback existe, mas sem régua de reativação; recompra não medida", "friction_today": "Sem CRM/régua, a recompra depende da memória do cliente — taxa não medida (Sandra vai puxar do PDV)", "duration_estimate": "semanas a meses"}
+    ],
+    "critical_leakage_point": "Maior vazamento (hipótese a confirmar com medição): entre Consideração e Decisão no e-commerce. O cliente compara originalidade/frete, e a Jioji perde por (1) frete alto para longa distância, (2) falta de prova social/FAQ que resolva 'é original?/chega bem?', e (3) com o Meta Pixel quebrado, a verba do Meta não reimpacta quem saiu. Mitigação: política de frete regional + retirada na loja em destaque + prova social/FAQ + corrigir o Meta Pixel. O e-commerce fatura ~zero hoje — esse é o estágio a destravar."
+  },
+  "willingness_to_pay": {
+    "description": "WTP por categoria. SEM ticket real do PDV — faixas a confirmar. O ponto decisivo no online não é só preço da peça: é o FRETE somado.",
+    "services": [
+      {"service": "Cavalera masculino (camiseta/polo/moletom)", "current_ticket_range": "[A confirmar no PDV]", "perceived_fair_range": "valor de marca nacional", "premium_ceiling": "aceita pagar por original + lançamento", "elasticity": "media — paga pela marca, mas frete somado pode quebrar a compra online", "pricing_lever": "Originalidade Cavalera + atendimento local + cashback + retirada na loja (zera frete)."},
+      {"service": "Feminino (Cavalera fem / multimarca, pós-Melissa)", "current_ticket_range": "[A confirmar]", "perceived_fair_range": "valor de marca", "premium_ceiling": "depende do mix que substituir a Melissa", "elasticity": "media — público em recomposição; comunicar a nova oferta é chave", "pricing_lever": "Curadoria feminina + marca + conveniência local."},
+      {"service": "Melissa (residual, até finalizar estoque)", "current_ticket_range": "[A confirmar]", "perceived_fair_range": "preço de tabela Melissa", "premium_ceiling": "limitado — saindo do mix", "elasticity": "alta — queima de estoque", "pricing_lever": "Promoção de saída para liberar capital e reter cliente feminino."}
+    ]
+  },
+  "objection_library": {
+    "description": "Objeções reais (kickoff/call). Alimentam copy, FAQ do site, WhatsApp Business. Refinar com atendimento real.",
+    "objections": [
+      {"objection": "'O frete pra minha cidade ficou caro demais.'", "subtext": "Barreira nº1 declarada — o frete somado inviabiliza a compra.", "bad_response": "É o valor da transportadora, não temos como mudar.", "good_response": "Entendo! Pra sua região eu vejo a melhor opção de frete — e, se preferir, dá pra comprar pelo site e retirar aqui na loja sem frete. Me passa seu CEP que eu calculo a melhor forma.", "when_to_use": "WhatsApp + FAQ do site. Sempre oferecer retirada na loja como alternativa."},
+      {"objection": "'É original mesmo? Na Shopee tem mais barato.'", "subtext": "Insegurança de réplica + comparação de preço.", "bad_response": "Lá é tudo falso.", "good_response": "100% original — somos Cavalera oficial em Porto Velho, com loja física que você pode visitar. Compra com nota e troca na loja. O barato do marketplace costuma ser réplica.", "when_to_use": "FAQ + WhatsApp + GMB."},
+      {"objection": "'Vocês têm meu tamanho/o modelo X?'", "subtext": "Disponibilidade.", "bad_response": "Dá uma passada que a gente vê.", "good_response": "Já confiro pra você! Me diz o modelo e tamanho — se não tiver, vejo no site/na outra loja e te aviso. Posso reservar.", "when_to_use": "WhatsApp Business com catálogo."},
+      {"objection": "[Feminino] 'Vocês não vão ter mais Melissa?'", "subtext": "Público feminino preocupado com a saída da marca.", "bad_response": "Não, a Melissa vai sair.", "good_response": "A franquia Melissa do shopping vai mudar, mas seguimos com moda feminina — Cavalera feminina e outras marcas. Quer que eu te mostre as novidades de feminino?", "when_to_use": "WhatsApp + loja — reter o público feminino."},
+      {"objection": "'Demora pra responder no WhatsApp.'", "subtext": "Canal sobrecarregado.", "bad_response": "Estamos com muito movimento.", "good_response": "(Via WhatsApp Business) Saudação automática + respostas rápidas para as dúvidas comuns (frete, original, tamanho) reduzem a espera enquanto um atendente assume.", "when_to_use": "Configuração de WhatsApp Business."},
+      {"objection": "'Comprei online, posso retirar na loja?'", "subtext": "Conveniência (comportamento já existe).", "bad_response": "Só entregamos por frete.", "good_response": "Pode sim! Compra no site e retira na loja, sem frete. É uma das formas que nossos clientes mais usam.", "when_to_use": "Site (destaque) + WhatsApp."}
+    ]
+  },
+  "key_message": {
+    "chosen_message": "PRINCIPAL: 'Cavalera original em Porto Velho — compre online e retire na loja, ou receba com frete pra região.' | FEMININO (transição): 'Moda feminina de marca continua aqui — Cavalera fem e mais, mesmo com a saída da Melissa.'",
+    "approach": "combined",
+    "usage_context": "Principal (originalidade + local + conveniência): bio do @jiojicavalera, headline do site, copy de anúncio, GMB. Resolve a dor de frete (retirada na loja) e diferencia de cavalera.com.br/marketplace. | Feminino: comunicação dirigida à base feminina para retê-la na transição da Melissa.",
+    "alternatives": [
+      {"message": "Cavalera original em Porto Velho — compre online e retire na loja, ou receba com frete pra região.", "approach": "functional", "rationale": "PRINCIPAL. Ataca a dor nº1 (frete) com a solução real (retirada/região), afirma originalidade (vs marketplace) e local (vs nacional). Conveniência concreta."},
+      {"message": "A Cavalera de verdade, com a loja aqui do seu lado.", "approach": "social", "rationale": "Reforço de pertencimento + originalidade + local. Boa para marca/retargeting."},
+      {"message": "Moda feminina de marca continua aqui — mesmo com a saída da Melissa.", "approach": "emotional", "rationale": "FEMININO em transição — retém o público que a Melissa atendia, comunicando a nova oferta."}
+    ]
+  },
+  "key_insight": {
+    "headline": "Não é um público 'streetwear jovem': são dois públicos de marca em Porto Velho — masculino (Cavalera) e feminino (a recompor pós-Melissa) — e o que decide a venda online é resolver o FRETE com presença local.",
+    "context": "Os documentos do cliente corrigem a leitura inicial: a Jioji vende moda masculina (Cavalera, âncora) E feminina (que a Melissa servia). O e-commerce fatura zero não por falta de público, mas porque a dor concreta — frete alto para longa distância — não está resolvida, e a confiança (original? chega bem?) não está comunicada. O trunfo da Jioji é exatamente o que o e-commerce nacional e o marketplace não têm: loja física local, originalidade garantida e a opção de comprar online e retirar na loja (que já acontece). A mensagem e a operação devem girar em torno disso.",
+    "numbered_reasons": [
+      "(1) São dois públicos com lógicas diferentes (masculino Cavalera consolidado; feminino em recomposição pela saída da Melissa) — comunicação e mídia precisam separá-los.",
+      "(2) A dor que decide a venda online é o FRETE, não o preço da peça. Resolver com política regional + retirada na loja destrava o e-commerce que hoje fatura zero.",
+      "(3) O território defensável é originalidade + local + conveniência — onde a Jioji ganha do cavalera.com.br (sem vínculo local) e do marketplace (sem garantia/atendimento)."
+    ],
+    "discussion_anchor": "Com a Sandra: (a) confirmar/aprofundar os dois públicos e puxar do PDV a demografia e a recompra reais; (b) aprovar o território 'original + local + conveniência (retira na loja / frete regional)' como mensagem principal — que ataca a dor de frete e diferencia dos concorrentes online. É o que transforma a persona de hipótese em base de mídia e comunicação."
+  },
+  "honesty_alert": "Persona agora aterrada em dados reais do cliente (call + kickoff), mas com uma lacuna importante: a DEMOGRAFIA detalhada do consumidor (faixa etária, renda, % masculino vs feminino, ticket por perfil, recompra) NÃO foi levantada nas reuniões — a Sandra vai puxar do PDV. Até lá, esses pontos são hipótese. O que é FATO: dois públicos (masculino Cavalera + feminino que a Melissa servia), físico predominante com online+retira real, frete como dor central, e o objetivo de tracionar o e-commerce e fortalecer a marca própria. Próximo passo para sair de hipótese: (1) extrair do PDV idade/gênero/ticket/recompra; (2) idealmente, ouvir 3-5 clientes reais. Use a persona para orientar a comunicação (frete/local/originalidade) e a recompra — mas valide a demografia antes de decisões finas de mídia."
+}

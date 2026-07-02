@@ -1,0 +1,397 @@
+{
+  "client_name": "Lucena Advisory",
+  "skill": "ee-s2-diagnostico-midia",
+  "version": 1,
+  "generated_at": "2026-06-19T00:00:00Z",
+  "completed_at": "2026-06-19T00:00:00Z",
+  "is_launch_plan": true,
+  "summary": "A Lucena Advisory não investe um real em mídia paga — os connectors V4MOS confirmam 0 campanhas no Google Ads e 0 no Meta nos últimos 90 dias. Não há, portanto, performance a diagnosticar: este é um PLANO DE LANÇAMENTO. A recomendação central, alinhada à própria FPS, é NÃO começar por Meta (ICP B2B não está em redes sociais) e priorizar ABM/LDR e busca local; mídia paga entra apenas como teste enxuto de Google Search de nicho — onde o leilão está praticamente vazio (CPC baixo, alta intenção) — e somente depois de a landing page, o CRM e o tracking existirem.",
+  "summary_headline": "Lucena tem 0 campanhas em 90 dias — não há mídia a diagnosticar, há a lançar. Recomendação: pular Meta, testar Google Search de nicho (leilão vazio) e priorizar ABM/LDR sobre tráfego pago, como a FPS já levantou.",
+  "summary_highlights": [
+    {
+      "category": "maturidade",
+      "label": "Investimento atual",
+      "value": "R$ 0/mês",
+      "subtext": "0 campanhas Google e Meta em 90 dias (V4MOS)",
+      "tone": "red"
+    },
+    {
+      "category": "oportunidade",
+      "label": "Leilão de mídia no nicho",
+      "value": "Vazio",
+      "subtext": "Nenhuma consultoria anuncia em Manaus — CPC tende a ser baixo",
+      "tone": "green"
+    },
+    {
+      "category": "posicao",
+      "label": "Budget aceito",
+      "value": "R$ 5k/mês",
+      "subtext": "Sem objeção na SDR — a alocar em Search + ABM/LDR",
+      "tone": "blue"
+    },
+    {
+      "category": "oportunidade",
+      "label": "Canal recomendado",
+      "value": "ABM + Google Search",
+      "subtext": "Meta de interrupção não atinge o comitê de compra B2B",
+      "tone": "yellow"
+    },
+    {
+      "category": "janela",
+      "label": "Pré-requisito",
+      "value": "LP + CRM + tracking",
+      "subtext": "Mídia só depois do alicerce de conversão existir",
+      "tone": "yellow"
+    }
+  ],
+  "summary_key_findings": [
+    {
+      "category": "contexto",
+      "text": "Não há mídia a diagnosticar: 0 campanhas em 90 dias (V4MOS), R$ 0 investido. Isto é um plano de lançamento, não um diagnóstico de performance. E o ICP é B2B industrial que 'não está em redes sociais' — o que muda completamente a escolha de canal em relação a um cliente B2C."
+    },
+    {
+      "category": "vantagem",
+      "text": "O leilão de mídia paga do nicho de licenciamento ambiental em Manaus está praticamente vazio — a pesquisa não encontrou nenhuma consultoria anunciando no Google. Isso significa CPC potencialmente baixo e pouca disputa para quem entrar primeiro em termos de alta intenção como 'licenciamento ambiental Manaus' ou 'exigência IPAAM'."
+    },
+    {
+      "category": "acao",
+      "text": "Recomendação: NÃO começar por Meta Ads. Priorizar ABM/relacionamento + busca local orgânica (GMB/SEO), e usar mídia paga apenas como teste enxuto de Google Search de nicho (~R$ 1,5-2,5k/mês). O budget de R$ 5k aceito na SDR rende mais em um LDR/prospector + ferramentas do que em tráfego de interrupção — hipótese a validar, como a própria FPS já apontou."
+    },
+    {
+      "category": "ameaca",
+      "text": "O maior risco é começar mídia antes do alicerce: sem landing page, CRM e tracking (GA4/GTM), qualquer verba de aquisição cai num funil que já vaza 50% das propostas por falta de follow-up. Investir em topo de funil agora seria turbinar o vazamento, não a receita."
+    }
+  ],
+  "segment": "Consultoria/Assessoria Ambiental B2B (serviços profissionais regulados)",
+  "data_source": "no_data",
+  "data_period": "Últimos 90 dias (2026-02-24 a 2026-05-25, connectors V4MOS) — 0 campanhas em ambos os canais",
+  "monthly_budget": 0,
+  "platforms_active": [],
+  "integrations_status": {
+    "meta_ads": "not_configured",
+    "google_ads": "not_configured",
+    "google_analytics": "not_configured"
+  },
+  "current_metrics": {
+    "cpl": null,
+    "ctr": null,
+    "conversion_rate": null,
+    "roas": null,
+    "cpc": null,
+    "total_investment": 0,
+    "total_leads": null,
+    "total_clicks": 0,
+    "impressions": 0,
+    "frequency": null
+  },
+  "benchmarks": {
+    "cpl": 90,
+    "ctr": 4.0,
+    "conversion_rate": 5.0,
+    "roas": null,
+    "cpc": 4.5,
+    "source": "Benchmarks de referência [E] para Google Search B2B de serviços profissionais/jurídicos no Brasil — CPL R$ 60-150, CTR Search 3-5%, conversão de LP B2B 3-8%, CPC R$ 2-8 em nicho de baixa concorrência. ROAS não aplicável de forma direta a serviço de ticket alto e ciclo consultivo; usar CAC vs LTV. Valores a calibrar com dados reais após o lançamento."
+  },
+  "diagnosis_by_dimension": {
+    "account_structure": {
+      "organization": "nonexistent",
+      "segmentation": "Inexistente — não há conta de mídia configurada (sem Meta Business Manager, sem Google Ads ativo). Quando lançar, segmentar por intenção (keywords de alta intenção no Search), não por interesse demográfico.",
+      "budget_allocation": "concentrated",
+      "observation": "N/A hoje (R$ 0 investido). Recomendação ao lançar: começar CONCENTRADO em um único canal (Google Search de nicho), não pulverizar — dado o budget enxuto e o objetivo de aprender rápido com pouca verba."
+    },
+    "creatives": {
+      "active_count": 0,
+      "ab_testing_active": false,
+      "average_frequency": null,
+      "fatigue_detected": false,
+      "evaluation": "Nenhum criativo ativo. A produção dos primeiros criativos/anúncios está prevista na S3 (ee-s3-criativos-anuncios e ee-s3-copy-anuncios). O repertório técnico-jurídico do Aldo é a matéria-prima de autoridade para esses criativos."
+    },
+    "landing_pages": {
+      "lp_count": 0,
+      "coherence_with_ads": "low",
+      "estimated_bounce_rate": null,
+      "evaluation": "Sem landing page. Esta é a dependência nº 1 de qualquer mídia: não há destino para onde mandar o clique. A LP institucional B2B será produzida na S3 (ee-s3-landing-page) com PUV, case da âncora, formulário de qualificação e GA4/GTM."
+    },
+    "audiences": {
+      "types_used": [],
+      "overlap_detected": null,
+      "retargeting_active": false,
+      "evaluation": "Nenhum público configurado. Para Google Search, o 'público' nasce da intenção (palavras-chave de quem busca solução). Para ABM, os 'públicos' são as listas-alvo mapeadas do comitê de compra (Rei dos Bons Amigos + indústria/postos/estaleiros). Não há base para lookalike/retargeting até haver tráfego no site."
+    }
+  },
+  "top_problems": [
+    {
+      "problem": "Não existe alicerce de conversão para receber tráfego",
+      "data_evidence": "Sem landing page, sem CRM (planilhas), sem GA4/GTM. 0 pontos de conversão digital no briefing.",
+      "impact": "Qualquer real investido em mídia hoje cairia num funil sem destino e sem rastreamento — desperdício total. Bloqueia o início responsável de qualquer canal pago.",
+      "dimension": "landing_pages"
+    },
+    {
+      "problem": "Risco de investir no canal errado (Meta) para um ICP que não está em redes sociais",
+      "data_evidence": "ICP B2B industrial declarado como 'empresas que não estão em redes sociais' (V4MOS/FPS). Meta Ads é interrupção social — incompatível com decisão de compra por risco regulatório, em comitê.",
+      "impact": "Orçamento aplicado em Meta tende a gerar leads desqualificados (B2C/curiosos) e CAC alto, reforçando a percepção errada de que 'mídia não funciona' para a Lucena.",
+      "dimension": "audiences"
+    },
+    {
+      "problem": "Ausência total de tracking impede medir qualquer mídia futura",
+      "data_evidence": "Sem GA4, sem GTM, sem pixel, sem conversões definidas. Não há como atribuir lead a canal.",
+      "impact": "Sem tracking, mesmo um bom canal vira 'achismo' — impossível otimizar CPL/CAC ou decidir entre mídia e LDR com dados.",
+      "dimension": "account_structure"
+    }
+  ],
+  "action_plan": [
+    {
+      "action": "Instalar a base de mensuração ANTES de qualquer verba: LP institucional no ar (S3) com GA4 + GTM, eventos de conversão (clique WhatsApp, envio de formulário) e WhatsApp Business com etiqueta de origem.",
+      "priority": "high",
+      "expected_impact": "Torna qualquer mídia futura mensurável e atribuível; pré-requisito inegociável.",
+      "responsible": "Executor V4 + cliente (acessos)",
+      "deadline": "Semana 2-3"
+    },
+    {
+      "action": "Reivindicar GMB e iniciar SEO local + conteúdo sobre a Lei 15.190/2025 (orgânico, custo zero de mídia) para capturar a busca de alta intenção sem leilão.",
+      "priority": "high",
+      "expected_impact": "Leads inbound qualificados de busca local sem custo de clique; ocupa o vácuo de SEO do nicho.",
+      "responsible": "Executor V4 + Aldo (conteúdo)",
+      "deadline": "Semana 2-4"
+    },
+    {
+      "action": "Lançar campanha enxuta de Google Search de nicho (R$ 1,5-2,5k/mês) mirando termos de alta intenção ('licenciamento ambiental Manaus', 'exigência IPAAM', 'licença posto combustível'), com lances manuais/CPA alvo e a LP como destino.",
+      "priority": "medium",
+      "expected_impact": "Testa o canal pago de menor risco (leilão vazio, alta intenção) e valida CPL real do nicho.",
+      "responsible": "Gestor de tráfego V4",
+      "deadline": "Semana 4 (após LP)"
+    },
+    {
+      "action": "Estruturar e iniciar o motor de ABM/outbound: lista-alvo do comitê de compra (Rei dos Bons Amigos + indústria/postos/estaleiros) e cadência de prospecção (LinkedIn + e-mail + WhatsApp), avaliando a contratação de um LDR/prospector com o budget que iria para Meta.",
+      "priority": "high",
+      "expected_impact": "Ataca o ICP B2B no canal certo (relacionamento dirigido), com CAC menor que mídia de interrupção.",
+      "responsible": "Aldo + V4 (estratégia) / futuro LDR",
+      "deadline": "Semana 3-5"
+    },
+    {
+      "action": "Definir a decisão mídia paga vs LDR no forecast da S3 (ee-s3-forecast-midia) com base nos primeiros dados de Search e no custo/retorno do outbound — não por inércia de playbook.",
+      "priority": "medium",
+      "expected_impact": "Aloca o budget de aquisição no canal de melhor ROI comprovado, não no canal default.",
+      "responsible": "V4 (planejamento) + Aldo",
+      "deadline": "Semana 5-6"
+    }
+  ],
+  "keyword_clusters": [
+    {
+      "cluster": "Marca",
+      "keywords": ["lucena advisory", "lucena advisory manaus", "lucena consultoria ambiental"],
+      "intent": "navigational",
+      "budget_allocation_pct": 5,
+      "expected_cpc_range": "R$ 0,50-1,50",
+      "bid_strategy": "Manual baixo / proteção de marca",
+      "copy_angle": "Confirmar autoridade (advogado + engenheiro ambiental) e facilitar contato.",
+      "risk": "Volume baixíssimo no início (marca nova) — manter só para proteção e captura de quem já ouviu falar."
+    },
+    {
+      "cluster": "Licenciamento local (transacional)",
+      "keywords": ["licenciamento ambiental Manaus", "consultoria ambiental Manaus", "consultoria ambiental Amazonas", "licença ambiental Manaus"],
+      "intent": "transactional",
+      "budget_allocation_pct": 40,
+      "expected_cpc_range": "R$ 3-8",
+      "bid_strategy": "CPA alvo / maximizar conversões após dados",
+      "copy_angle": "'Licenciamento com a lei do seu lado' — advogado + engenheiro na mesma assessoria.",
+      "risk": "Concorrência orgânica (FRTB, Moura, Aurora) na 1ª página; no pago o leilão está vazio — vantagem de quem entrar primeiro."
+    },
+    {
+      "cluster": "Reativo / Exigência (alta urgência)",
+      "keywords": ["como responder exigência IPAAM", "embargo ambiental o que fazer", "auto de infração ambiental Manaus", "regularização ambiental Amazonas"],
+      "intent": "transactional",
+      "budget_allocation_pct": 30,
+      "expected_cpc_range": "R$ 2-6",
+      "bid_strategy": "CPA alvo agressivo (alta intenção/urgência)",
+      "copy_angle": "Urgência + segurança: 'Recebeu uma exigência? Responda do jeito certo antes de virar multa.'",
+      "risk": "Volume sazonal/imprevisível (depende de fiscalização), mas conversão altíssima quando ocorre."
+    },
+    {
+      "cluster": "Nova Lei / Reenquadramento (educacional-comercial)",
+      "keywords": ["Lei 15.190/2025 licenciamento", "LAC licenciamento por adesão", "nova lei licenciamento ambiental", "reenquadramento licença ambiental"],
+      "intent": "commercial",
+      "budget_allocation_pct": 15,
+      "expected_cpc_range": "R$ 1-4",
+      "bid_strategy": "Maximizar cliques (topo) + remarketing para a LP",
+      "copy_angle": "Autoridade na lei nova: 'Sua empresa precisa se reenquadrar? Veja em qual modalidade você está agora.'",
+      "risk": "Intenção mais informacional — nutrir com conteúdo, não esperar conversão direta imediata."
+    },
+    {
+      "cluster": "Setorial / Vertical",
+      "keywords": ["licença ambiental posto de combustível Manaus", "PGRS Manaus", "licenciamento indústria Polo Industrial", "licenciamento estaleiro embarcação AM"],
+      "intent": "transactional",
+      "budget_allocation_pct": 10,
+      "expected_cpc_range": "R$ 3-7",
+      "bid_strategy": "CPA alvo por vertical",
+      "copy_angle": "Especialista no seu setor: linguagem do segmento (posto, estaleiro, indústria).",
+      "risk": "FRTB já mira 'PGRS Manaus' no orgânico — diferenciar pelo ângulo jurídico e pela vertical de postos/estaleiros (âncora)."
+    }
+  ],
+  "budget_reallocation_scenarios": {
+    "description": "Como não há budget atual, estes são 3 cenários de ALOCAÇÃO de lançamento para o investimento que o Aldo sinalizou aceitar (~R$ 5k/mês, sem objeção na SDR). Meta Ads fica em R$ 0 em todos — o ICP não está em redes sociais. A escolha é sobre a intensidade do go-to-market e o peso entre mídia paga, orgânico e outbound/ABM.",
+    "scenario_a_conservative": {
+      "name": "A. Conservador — Orgânico + ABM manual",
+      "total_budget_monthly": 600,
+      "google_split": 0,
+      "meta_split": 0,
+      "campaigns_structure": [
+        {"campaign": "Ferramentas (CRM free/baixo custo, GMB, agendador de conteúdo)", "platform": "Stack", "budget_monthly": 600, "objective": "Alicerce orgânico"},
+        {"campaign": "ABM manual conduzido pelo Aldo (sem LDR)", "platform": "Outbound", "budget_monthly": 0, "objective": "Relacionamento/expansão âncora"}
+      ],
+      "expected_leads_monthly": 4,
+      "expected_cpl": 0,
+      "expected_roas": null,
+      "delta_leads": "+2-4/mês (orgânico)",
+      "effort_weeks": 4,
+      "confidence": "media",
+      "risk_assessment": "Risco baixo de verba, mas crescimento lento e ainda 100% dependente do tempo do Aldo. Bom para os primeiros 30-60 dias enquanto a LP não está pronta; insuficiente para a meta de R$ 50k/mês."
+    },
+    "scenario_b_realistic": {
+      "name": "B. Realista — Google Search de nicho + orgânico (RECOMENDADO)",
+      "total_budget_monthly": 2500,
+      "google_split": 1800,
+      "meta_split": 0,
+      "campaigns_structure": [
+        {"campaign": "Search nicho (licenciamento + reativo + setorial)", "platform": "Google Ads", "budget_monthly": 1800, "objective": "Conversão / leads de alta intenção"},
+        {"campaign": "SEO local + conteúdo Lei 15.190/2025", "platform": "Orgânico", "budget_monthly": 400, "objective": "Inbound sem leilão"},
+        {"campaign": "Ferramentas + GMB", "platform": "Stack", "budget_monthly": 300, "objective": "Alicerce"}
+      ],
+      "expected_leads_monthly": 10,
+      "expected_cpl": 110,
+      "expected_roas": null,
+      "delta_leads": "+8-12/mês",
+      "effort_weeks": 6,
+      "confidence": "media",
+      "risk_assessment": "Equilíbrio recomendado: captura a busca de alta intenção (leilão vazio = CPC baixo) sem apostar tudo em mídia, mantendo o foco no orgânico e na âncora. Exige a LP no ar (S3). CPL estimado [E] — calibrar com dados reais."
+    },
+    "scenario_c_aggressive": {
+      "name": "C. Agressivo — Search + LDR/prospector dedicado",
+      "total_budget_monthly": 6000,
+      "google_split": 2000,
+      "meta_split": 0,
+      "campaigns_structure": [
+        {"campaign": "Search nicho (ampliado)", "platform": "Google Ads", "budget_monthly": 2000, "objective": "Conversão"},
+        {"campaign": "LDR/prospector júnior + ferramentas (Apollo, LinkedIn Sales Navigator)", "platform": "Outbound/ABM", "budget_monthly": 3500, "objective": "Prospecção ativa B2B do comitê de compra"},
+        {"campaign": "SEO + conteúdo + GMB", "platform": "Orgânico", "budget_monthly": 500, "objective": "Inbound"}
+      ],
+      "expected_leads_monthly": 20,
+      "expected_cpl": 130,
+      "expected_roas": null,
+      "delta_leads": "+15-25/mês",
+      "effort_weeks": 10,
+      "confidence": "baixa",
+      "risk_assessment": "Maior alcance no canal certo para B2B (outbound/ABM ativo), mas exige contratar e gerenciar um LDR e ter processo comercial estruturado (CRM + cadência). Só faz sentido depois de A/B validados e com o vazamento de follow-up resolvido. É o caminho mais próximo da meta de R$ 50k/mês, mas o de maior complexidade operacional."
+    },
+    "recommendation": "Começar pelo A nos primeiros 30-60 dias (enquanto a LP e o CRM ficam prontos), migrar para o B assim que a LP estiver no ar (captura a busca de alta intenção a baixo custo), e escalar para o C — trocando o que iria para mídia social por um LDR/prospector — quando o processo comercial estiver estruturado e os dados de Search indicarem o CPL real. A decisão final mídia vs LDR sai do forecast (ee-s3-forecast-midia)."
+  },
+  "creative_testing_hypotheses": {
+    "description": "Hipóteses de teste para o lançamento (Google Search RSAs, LP e LinkedIn) — não há criativos atuais, então cada hipótese é um teste de ângulo/copy a validar nas primeiras 4-6 semanas.",
+    "hypotheses": [
+      {
+        "id": "H1",
+        "hypothesis": "Se o anúncio de Search liderar com 'blindagem jurídica' (advogado + engenheiro), então o CTR e a qualificação superam o ângulo genérico de 'consultoria ambiental', porque diferencia da concorrência só-engenharia.",
+        "angle": "Diferencial jurídico-técnico",
+        "format": "Google Search RSA",
+        "hook": "Advogado E engenheiro ambiental na mesma assessoria",
+        "body": "Licenciamento com a lei do seu lado. Resolva exigências sem o risco de parar a operação.",
+        "cta": "Fale com um especialista",
+        "target_audience": "Busca transacional 'licenciamento ambiental Manaus' / 'consultoria ambiental AM'",
+        "success_criteria": "CTR > 5% E custo por lead qualificado < R$ 150",
+        "testing_budget": 600,
+        "testing_duration_days": 21
+      },
+      {
+        "id": "H2",
+        "hypothesis": "Se o anúncio mirar a urgência reativa ('recebeu uma exigência do IPAAM?'), então a taxa de conversão supera o anúncio institucional, porque captura a dor no pico de urgência.",
+        "angle": "Urgência regulatória",
+        "format": "Google Search RSA",
+        "hook": "Recebeu uma exigência do IPAAM?",
+        "body": "Responda do jeito certo, no prazo, antes de virar multa ou embargo. Diagnóstico de risco com advogado + engenheiro.",
+        "cta": "Resolver agora no WhatsApp",
+        "target_audience": "Busca reativa 'como responder exigência IPAAM' / 'embargo ambiental'",
+        "success_criteria": "Conversão de clique→lead > 8%",
+        "testing_budget": 500,
+        "testing_duration_days": 21
+      },
+      {
+        "id": "H3",
+        "hypothesis": "Se a LP destacar o case do grupo Rei dos Bons Amigos (R$ 300M+) como prova social, então a taxa de conversão da LP supera a versão sem prova, porque reduz o medo de contratar uma empresa nova.",
+        "angle": "Prova social de autoridade",
+        "format": "Landing page (teste A/B de bloco)",
+        "hook": "Cuidamos da regularização de um grupo com 26 CNPJs e R$ 300M+ em operação",
+        "body": "A mesma autoridade que blinda grandes operações, agora disponível para a sua.",
+        "cta": "Solicitar diagnóstico de risco",
+        "target_audience": "Visitantes da LP vindos de Search e indicação",
+        "success_criteria": "Conversão da LP > 6%",
+        "testing_budget": 0,
+        "testing_duration_days": 30
+      },
+      {
+        "id": "H4",
+        "hypothesis": "Se o CTA for 'diagnóstico de risco gratuito' em vez de 'fale conosco', então o volume de leads sobe sem cair a qualificação, porque oferece valor concreto e de baixo compromisso.",
+        "angle": "Oferta de entrada de baixo atrito",
+        "format": "LP + anúncio",
+        "hook": "Sua operação está exposta a uma fiscalização? Descubra em 15 minutos.",
+        "body": "Diagnóstico de risco gratuito conduzido por advogado + engenheiro ambiental.",
+        "cta": "Quero meu diagnóstico gratuito",
+        "target_audience": "Topo/meio de funil (Search comercial + LinkedIn)",
+        "success_criteria": "+30% de leads vs CTA 'fale conosco', mantendo taxa de qualificação",
+        "testing_budget": 400,
+        "testing_duration_days": 21
+      },
+      {
+        "id": "H5",
+        "hypothesis": "Se o Aldo publicar no LinkedIn um caso real de licenciamento comentado, então o engajamento e os contatos inbound superam um post explicativo genérico, porque autoridade demonstrada > autoridade declarada.",
+        "angle": "Autoridade demonstrada (storytelling técnico)",
+        "format": "LinkedIn (post orgânico)",
+        "hook": "Uma empresa quase parou a operação por uma exigência mal respondida. Veja o que faltou.",
+        "body": "Caso real (anonimizado) + o que a nova Lei 15.190/2025 muda nesse cenário.",
+        "cta": "Comente / chame no direct",
+        "target_audience": "Gestores, engenheiros e diretores do ecossistema industrial do AM",
+        "success_criteria": "≥ 2 conversas qualificadas iniciadas por post",
+        "testing_budget": 0,
+        "testing_duration_days": 30
+      }
+    ],
+    "testing_budget_total_week_1": 750
+  },
+  "daypart_optimization": {
+    "description": "Ajustes de lance pensados para o comportamento B2B da persona (gestor que pesquisa no expediente). Aplicar após a campanha de Search acumular dados.",
+    "adjustments": [
+      {"day_time": "Segunda a sexta, 8h-12h", "bid_adjustment_pct": 15, "rationale": "Pico de atividade do gestor operacional resolvendo pendências no início do expediente — maior intenção e melhor qualificação."},
+      {"day_time": "Segunda a sexta, 14h-18h", "bid_adjustment_pct": 10, "rationale": "Segundo bloco de expediente, ainda alta intenção B2B."},
+      {"day_time": "Dias úteis, 18h-22h", "bid_adjustment_pct": -20, "rationale": "Queda da decisão B2B fora do expediente; reduzir para preservar budget."},
+      {"day_time": "Sábado, domingo e feriados", "bid_adjustment_pct": -40, "rationale": "Decisão de licenciamento é corporativa e ocorre em dia útil; minimizar gasto, mantendo presença residual para urgências."}
+    ]
+  },
+  "realistic_goal": {
+    "target_cpl": 110,
+    "target_roas": null,
+    "justification": "Como não há histórico, a meta de 90 dias é de LANÇAMENTO e validação, não de performance otimizada. Objetivo realista: estruturar o alicerce (LP + GMB + tracking + CRM) nas primeiras 4 semanas, lançar o Search de nicho na semana 4 e atingir um CPL de lead qualificado em torno de R$ 110 [E] no canal pago — calibrável dado o leilão vazio do nicho. ROAS direto não é a métrica certa para serviço de ticket alto e ciclo consultivo; acompanhar CAC vs LTV e a recuperação da conversão proposta→venda (hoje 50%) via CRM/cadência.",
+    "assumptions": [
+      "LP institucional com GA4/GTM no ar até a Semana 3",
+      "GMB reivindicado e WhatsApp Business configurado nas primeiras 2 semanas",
+      "CRM mínimo + cadência de follow-up implantados (resolve o vazamento que hoje custaria leads pagos)",
+      "Budget de teste de Search de R$ 1,5-2,5k/mês aprovado",
+      "Conteúdo de autoridade do Aldo (LinkedIn + Lei 15.190/2025) iniciado em paralelo"
+    ],
+    "risk_factors": [
+      "Iniciar mídia antes da LP/CRM = verba desperdiçada num funil que vaza",
+      "Volume de busca do nicho pode ser baixo — Search sozinho não bate a meta de R$ 50k/mês; depende do ABM/outbound",
+      "Decisão mídia vs LDR ainda em aberto — não escalar mídia por inércia antes do forecast (S3)",
+      "Sem tracking, qualquer otimização vira achismo — a base de mensuração é pré-condição"
+    ]
+  },
+  "key_insight": {
+    "headline": "Não é um diagnóstico de mídia — é a decisão de não desperdiçar a primeira verba. O dinheiro do Aldo rende mais em Google Search de nicho (leilão vazio) e em um LDR do que em Meta Ads.",
+    "context": "A leitura instintiva de um cliente Zero Digital seria 'abrir Meta e Google e anunciar'. Mas o ICP é B2B industrial que não está em redes sociais, e o leilão de Search do nicho está vazio. A jogada certa é cirúrgica: capturar a busca de alta intenção a baixo custo e investir o resto em relacionamento dirigido (ABM/LDR), não em interrupção social.",
+    "numbered_reasons": [
+      "(1) Evidência do gap: R$ 0 investido, 0 campanhas — toda a verba futura é 'primeira impressão'. Errar o primeiro canal cria a narrativa de que 'mídia não funciona' e atrasa a estruturação.",
+      "(2) Causa-raiz da escolha: o ICP decide por risco, em comitê, e não está em redes — Meta de interrupção não o alcança; Google Search captura quem JÁ está procurando solução, no leilão vazio do nicho.",
+      "(3) Upside: o budget de R$ 5k aceito sem objeção rende mais em 1 LDR/prospector + Search enxuto (CAC B2B menor) do que em ads sociais — mas só depois de LP + CRM + tracking existirem."
+    ],
+    "discussion_anchor": "O stakeholder precisa aprovar a sequência: alicerce primeiro (LP/CRM/tracking), depois Search de nicho enxuto, e a decisão mídia vs LDR baseada em dados no forecast da S3 — em vez de abrir Meta agora por inércia de playbook."
+  },
+  "honesty_alert": "Este é um PLANO DE LANÇAMENTO, não um diagnóstico: não há nenhum dado de performance (0 campanhas em 90 dias), então TODOS os números (CPL alvo, leads/mês, CPC) são estimativas [E] de referência de setor B2B, a calibrar com dados reais após o lançamento. Três alertas: (1) mídia paga NÃO deve começar antes de LP + CRM + tracking — caso contrário, queima verba num funil que já vaza 50% das propostas; (2) a decisão entre mídia paga e LDR/prospector deve ser tomada com dados no forecast da S3, não por inércia — para um ICP B2B de nicho, o ROI do outbound dirigido tende a superar o do tráfego de interrupção; (3) o volume de busca do nicho em Manaus pode ser pequeno, então o Search sozinho dificilmente sustenta a meta de R$ 50k/mês — o motor de crescimento é o ABM na âncora + diversificação, com a mídia como apoio."
+}
